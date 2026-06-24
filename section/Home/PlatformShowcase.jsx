@@ -10,19 +10,24 @@ const platforms = [
     tag: "Portfolio",
   },
   {
+    src: "/images/Automic-by-broadcom.webp",
+    alt: "Automic by Broadcom",
+    tag: "Orchestration",
+  },
+  {
     src: "/images/rally.svg",
     alt: "Rally by Broadcom",
     tag: "Delivery",
   },
   {
-    src: "/images/stb.svg",
-    alt: "Stonebranch",
-    tag: "Automation",
-  },
-  {
     src: "/images/ca.svg",
     alt: "ConnectALL by Broadcom",
     tag: "Integration",
+  },
+  {
+    src: "/images/stb.svg",
+    alt: "Stonebranch",
+    tag: "Automation",
   },
 ];
 
@@ -33,13 +38,13 @@ function PlatformLogo({ platform, index, inView }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={`group relative flex flex-col items-center transition-all duration-700 ease-out ${
+      className={`group relative flex w-[200px] shrink-0 flex-col items-center transition-all duration-700 ease-out sm:w-[220px] ${
         inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
       style={{ transitionDelay: `${300 + index * 120}ms` }}
     >
       <div
-        className={`relative flex h-[88px] w-full max-w-[200px] items-center justify-center rounded-2xl border px-6 py-5 transition-all duration-500 sm:h-[100px] sm:max-w-[220px] ${
+        className={`relative flex h-[88px] w-full items-center justify-center rounded-2xl border px-6 py-5 transition-all duration-500 sm:h-[100px] ${
           hovered
             ? "border-[#ff403a]/50 bg-white/[0.04] shadow-[0_0_35px_rgba(255,64,58,0.15)] -translate-y-1"
             : "border-white/[0.08] bg-white/[0.02]"
@@ -72,6 +77,7 @@ function PlatformLogo({ platform, index, inView }) {
 
 export default function PlatformShowcase() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const marqueeItems = [...platforms, ...platforms];
 
   return (
     <section className="relative overflow-hidden bg-black py-14 md:py-20">
@@ -108,20 +114,42 @@ export default function PlatformShowcase() {
           </p>
         </div>
 
-        {/* Logo grid */}
-        <div className="mt-12 md:mt-16">
-          <div className="grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-4 lg:gap-8">
-            {platforms.map((platform, index) => (
+        {/* Auto-scroll logo strip */}
+        <div className="relative mt-12 overflow-hidden md:mt-16">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-black to-transparent sm:w-24" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-black to-transparent sm:w-24" />
+
+          <div className="platform-marquee flex w-max gap-5 sm:gap-6 lg:gap-8">
+            {marqueeItems.map((platform, index) => (
               <PlatformLogo
-                key={platform.alt}
+                key={`${platform.alt}-${index}`}
                 platform={platform}
-                index={index}
+                index={index % platforms.length}
                 inView={inView}
               />
             ))}
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .platform-marquee {
+          animation: platform-marquee 32s linear infinite;
+        }
+
+        .platform-marquee:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes platform-marquee {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }

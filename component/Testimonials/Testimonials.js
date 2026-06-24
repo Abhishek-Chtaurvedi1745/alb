@@ -81,7 +81,7 @@ function TestimonialSlider() {
             </p>
 
             <h2 className="text-white text-[45px] font-semibold leading-tight">
-              What People Say
+              What Employees Say
               <br />
               <span className="text-[#ff403a]">About Us.</span>
             </h2>
