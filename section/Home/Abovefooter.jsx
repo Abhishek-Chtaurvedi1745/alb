@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Testimonials from "../Home/Testimonials"
+import HomeTestimonials from "../Home/HomeTestimonials"
 import Faqsection from "../Home/Faq"
 import BlogSlider from "../Home/Blog"
 import ContactSection from "../Home/Form"
@@ -141,7 +141,7 @@ const certifications = [
 
   </div>
 </section>
-     <Testimonials />
+     <HomeTestimonials />
      <Faqsection />
      <BlogSlider />
      <ContactSection />
