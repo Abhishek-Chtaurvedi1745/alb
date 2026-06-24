@@ -70,7 +70,7 @@ function FooterLink({ href, children }) {
   return (
     <Link
       href={href}
-      className="text-[14px] text-[#bbbbbb] transition-colors duration-200 hover:text-[#ff403a]"
+      className="inline-block break-words text-[12px] leading-relaxed text-[#bbbbbb] transition-colors duration-200 hover:text-[#ff403a] sm:text-[13px] md:text-[14px]"
     >
       {children}
     </Link>
@@ -96,22 +96,24 @@ export default function Footer() {
 
       <div className="relative z-10">
         {/* Main content */}
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10 md:px-12 lg:px-16 lg:py-10">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-2 gap-x-5 gap-y-8 px-5 py-8 sm:gap-x-8 md:px-10 lg:grid-cols-12 lg:gap-10 lg:px-16 lg:py-10">
           {/* Logo */}
-          <div className="flex items-start">
+          <div className="col-span-2 flex items-start justify-center lg:col-span-3 lg:justify-start">
             <Link href="/" className="inline-flex transition-opacity hover:opacity-90">
               <img
                 src="/images/nla.svg"
                 alt="Albatroz Solutions"
-                className="h-[50px] w-auto md:h-[58px]"
+                className="h-[44px] w-auto sm:h-[50px] md:h-[58px]"
               />
             </Link>
           </div>
 
           {/* Quick Links */}
-          <div className="sm:pl-4 lg:pl-8">
-            <h3 className="mb-4 text-[16px] font-bold text-white">Quick Links</h3>
-            <ul className="space-y-2.5">
+          <div className="col-span-1 min-w-0 lg:col-span-2 lg:pl-6">
+            <h3 className="mb-3 text-[15px] font-bold text-white sm:mb-4 sm:text-[16px]">
+              Quick Links
+            </h3>
+            <ul className="space-y-2 sm:space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -121,9 +123,11 @@ export default function Footer() {
           </div>
 
           {/* Other Links */}
-          <div className="lg:pl-2">
-            <h3 className="mb-4 text-[16px] font-bold text-white">Other Links</h3>
-            <ul className="space-y-2.5">
+          <div className="col-span-1 min-w-0 lg:col-span-3">
+            <h3 className="mb-3 text-[15px] font-bold text-white sm:mb-4 sm:text-[16px]">
+              Other Links
+            </h3>
+            <ul className="space-y-2 sm:space-y-2.5">
               {otherLinks.map((link, index) => (
                 <li key={`${link.label}-${index}`}>
                   <FooterLink href={link.href}>{link.label}</FooterLink>
@@ -133,14 +137,16 @@ export default function Footer() {
           </div>
 
           {/* Contact Us */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <h3 className="mb-4 text-[16px] font-bold text-white">Contact Us</h3>
+          <div className="col-span-2 lg:col-span-4">
+            <h3 className="mb-3 text-[15px] font-bold text-white sm:mb-4 sm:text-[16px]">
+              Contact Us
+            </h3>
 
             <div className="mb-3.5 flex items-start gap-3">
               <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e53935] text-white">
                 <LocationIcon />
               </span>
-              <span className="text-[14px] leading-relaxed text-[#bbbbbb]">
+              <span className="min-w-0 text-[13px] leading-relaxed text-[#bbbbbb] sm:text-[14px]">
                 DC-43, Development Center, 4th Floor,
                 <br />
                 TIDEL Park, ELCOSEZ, Civil Aerodrome Post,
@@ -149,32 +155,42 @@ export default function Footer() {
               </span>
             </div>
 
-            <div className="mb-3.5 flex items-center gap-3">
-              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e53935] text-white">
+            <div className="mb-3.5 flex items-start gap-3">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e53935] text-white">
                 <PhoneIcon />
               </span>
-              <a
-                href="tel:+919384812035"
-                className="text-[14px] text-[#bbbbbb] transition-colors hover:text-[#ff403a]"
-              >
-                +91 93848 12035/93848 12039
-              </a>
+              <div className="min-w-0 text-[13px] leading-relaxed text-[#bbbbbb] sm:text-[14px]">
+                <a
+                  href="tel:+919384812035"
+                  className="block transition-colors hover:text-[#ff403a]"
+                >
+                  +91 93848 12035
+                </a>
+                <a
+                  href="tel:+919384812039"
+                  className="block transition-colors hover:text-[#ff403a]"
+                >
+                  +91 93848 12039
+                </a>
+              </div>
             </div>
 
-            <div className="mb-6 flex items-center gap-3">
-              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e53935] text-white">
+            <div className="mb-6 flex items-start gap-3">
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e53935] text-white">
                 <EmailIcon />
               </span>
               <a
                 href="mailto:info@albatrozsolutions.com"
-                className="text-[14px] text-[#bbbbbb] transition-colors hover:text-[#ff403a]"
+                className="min-w-0 break-all text-[13px] text-[#bbbbbb] transition-colors hover:text-[#ff403a] sm:text-[14px]"
               >
                 info@albatrozsolutions.com
               </a>
             </div>
 
-            <h3 className="mb-4 text-[16px] font-bold text-white">Follow on Us</h3>
-            <div className="flex items-center gap-4 text-[#e53935]">
+            <h3 className="mb-3 text-[15px] font-bold text-white sm:mb-4 sm:text-[16px]">
+              Follow on Us
+            </h3>
+            <div className="flex flex-wrap items-center gap-4 text-[#e53935]">
               <a href="#instagram" aria-label="Instagram" className="transition-opacity hover:opacity-75">
                 <InstagramIcon />
               </a>
@@ -194,17 +210,17 @@ export default function Footer() {
         <div className="h-px w-full bg-[#333333]" />
 
         {/* Policy links */}
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center gap-3 px-6 py-4 md:px-12 lg:px-16">
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-center gap-2 px-5 py-4 sm:justify-start md:px-10 lg:px-16">
           <Link
             href="/privacy-policy"
-            className="text-[13px] text-[#bbbbbb] transition-colors hover:text-[#ff403a]"
+            className="text-center text-[12px] text-[#bbbbbb] transition-colors hover:text-[#ff403a] sm:text-[13px]"
           >
             Privacy Policy
           </Link>
           <span className="text-[#555555]">|</span>
           <Link
             href="/privacy-policy"
-            className="text-[13px] text-[#bbbbbb] transition-colors hover:text-[#ff403a]"
+            className="text-center text-[12px] text-[#bbbbbb] transition-colors hover:text-[#ff403a] sm:text-[13px]"
           >
             Terms & Conditions
           </Link>
@@ -213,11 +229,11 @@ export default function Footer() {
         <div className="h-px w-full bg-[#333333]" />
 
         {/* Bottom copyright */}
-        <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-3 px-6 py-4 sm:flex-row sm:items-center md:px-12 lg:px-16">
-          <span className="text-[13px] text-[#888888]">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-3 px-5 py-4 text-center sm:flex-row sm:items-center sm:text-left md:px-10 lg:px-16">
+          <span className="max-w-full text-[11px] leading-relaxed text-[#888888] sm:text-[13px]">
             © Copyright 2026 Albatroz (India) Private Limited. All Rights Reserved.
           </span>
-          <span className="text-[13px] text-[#888888]">
+          <span className="text-[11px] text-[#888888] sm:text-[13px]">
             Web Design by <strong className="font-bold text-white">Razobyte</strong>
           </span>
         </div>
