@@ -197,7 +197,7 @@ export function SolutionsMegaMenuMobile({ onClose }) {
   const [openSection, setOpenSection] = useState(null);
 
   return (
-    <div className="mt-2 overflow-hidden rounded-xl border border-[#93c5fd]/50 bg-white">
+    <div className="mt-2 rounded-xl border border-[#93c5fd]/50 bg-white">
       {responsiveSolutionsMenu.map((section) => {
         const isOpen = openSection === section.id;
         const hasProducts = section.products?.length > 0;
@@ -218,7 +218,7 @@ export function SolutionsMegaMenuMobile({ onClose }) {
             </button>
 
             {isOpen && (
-              <div className="space-y-4 px-4 pb-5">
+              <div className="space-y-4 px-4 pb-6">
                 <p className="text-[13px] leading-relaxed text-[#6b7280]">{section.description}</p>
 
                 {hasProducts &&

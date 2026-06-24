@@ -43,10 +43,19 @@ function page() {
                 className="bg-transparent border border-gray-400 rounded-3xl px-8 py-5 text-white outline-none"
               />
               <div className="relative">
-                <select className="w-full bg-transparent border border-gray-400 rounded-3xl px-8 py-5 text-white appearance-none outline-none">
-                  <option className="text-black">USA</option>
-                  <option className="text-black">India</option>
-                  <option className="text-black">UK</option>
+                <select
+                  defaultValue="India"
+                  className="w-full bg-transparent border border-gray-400 rounded-3xl px-8 py-5 text-white appearance-none outline-none"
+                >
+                  <option value="India" className="text-black">
+                    India
+                  </option>
+                  <option value="USA" className="text-black">
+                    USA
+                  </option>
+                  <option value="UK" className="text-black">
+                    UK
+                  </option>
                 </select>
 
                 <ChevronRight
@@ -104,7 +113,7 @@ function page() {
     href="tel:+919384812036"
     className="block hover:underline"
   >
-    +91 93848 12036
+    +91 93848 12039
   </a>
 </div>
               </div>

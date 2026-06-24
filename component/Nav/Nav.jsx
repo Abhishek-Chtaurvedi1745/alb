@@ -75,7 +75,7 @@ function Nav() {
   }, [showSolutions]);
 
   return (
-    <header className="relative">
+    <header className="relative z-[999]">
       <nav
         className={`fixed top-0 left-0 w-full z-[999] transition-all duration-500 ease-out ${
           scrolled
@@ -225,22 +225,20 @@ function Nav() {
             </Link>
           </div>
         </div>
+      </nav>
 
-        {/* Mobile Menu Overlay */}
-        <div
-          className={`fixed inset-0 top-[80px] z-[998] bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
-            isOpen ? "opacity-100" : "pointer-events-none opacity-0"
-          }`}
-          onClick={() => setIsOpen(false)}
-        />
+      {/* Mobile Menu Overlay */}
+      <div
+        className={`fixed inset-0 top-[80px] z-[998] bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+          isOpen ? "opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        onClick={() => setIsOpen(false)}
+      />
 
-        {/* Mobile Navigation */}
-        <div
-          className={`absolute left-0 top-full z-[1000] w-full overflow-hidden border-b border-white/10 bg-black/95 backdrop-blur-xl transition-all duration-400 ease-out md:hidden ${
-            isOpen ? "max-h-[85vh] opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          <ul className="flex flex-col gap-1 px-5 py-6">
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="fixed inset-x-0 top-[80px] bottom-0 z-[1000] overflow-y-auto overscroll-y-contain border-b border-white/10 bg-black/95 [-webkit-overflow-scrolling:touch] md:hidden">
+          <ul className="flex flex-col gap-1 px-5 py-6 pb-10">
             <li>
               <Link
                 href="/"
@@ -307,7 +305,7 @@ function Nav() {
             </li>
           </ul>
         </div>
-      </nav>
+      )}
     </header>
   );
 }
