@@ -12,7 +12,7 @@ const platforms = [
   {
     src: "/images/Automic-by-broadcom.webp",
     alt: "Automic by Broadcom",
-    tag: "Orchestration",
+    tag: "Service Orchestration",
   },
   {
     src: "/images/rally.svg",

@@ -1,6 +1,6 @@
 import React from 'react'
 import Number from "@/component/Number/Number"
-import TestimonialSlider from '../../component/Testimonials/Testimonials'
+import CareerTestimonials from '../../section/Career/CareerTestimonials'
 import CommonBanner from '../../component/common/Banner'
 
 
@@ -65,7 +65,7 @@ we are known for. If this resonates with you, hit us with your resume for the op
     </div>
   </div>
 </section>
-<TestimonialSlider />
+<CareerTestimonials />
     </div>
   )
 }
