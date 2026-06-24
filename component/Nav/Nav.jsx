@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { ChevronDownIcon } from "lucide-react";
 
@@ -32,7 +32,9 @@ function NavLink({ href, children, className = "" }) {
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
+  const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const solutionsRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -47,6 +49,31 @@ function Nav() {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) setMobileSolutionsOpen(false);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!showSolutions) return;
+
+    const handleClickOutside = (event) => {
+      if (solutionsRef.current && !solutionsRef.current.contains(event.target)) {
+        setShowSolutions(false);
+      }
+    };
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") setShowSolutions(false);
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [showSolutions]);
 
   return (
     <header className="relative">
@@ -104,8 +131,8 @@ function Nav() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex flex-1 items-center justify-center">
-            <ul className="flex items-center gap-1 lg:gap-2">
+          <div className="hidden md:flex flex-1 items-center justify-center overflow-visible">
+            <ul className="flex items-center gap-1 overflow-visible lg:gap-2">
               {/* Home */}
               <li>
                 <Link
@@ -134,13 +161,20 @@ function Nav() {
 
               {/* Solutions Dropdown */}
               <li
+                ref={solutionsRef}
                 className="relative px-2 lg:px-3"
                 onMouseEnter={() => setShowSolutions(true)}
                 onMouseLeave={() => setShowSolutions(false)}
               >
                 <button
                   type="button"
-                  className="group flex items-center gap-1.5 py-1 text-[17px] font-medium tracking-wide text-white/90 transition-colors duration-300 hover:text-white"
+                  aria-expanded={showSolutions}
+                  aria-haspopup="true"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowSolutions((prev) => !prev);
+                  }}
+                  className="relative flex items-center gap-1.5 py-1 text-[17px] font-medium tracking-wide text-white/90 transition-colors duration-300 hover:text-white"
                 >
                   Solutions
                   <ChevronDownIcon
@@ -151,26 +185,27 @@ function Nav() {
                     }`}
                   />
                   <span
-                    className={`absolute -bottom-0.5 left-2 lg:left-3 h-[2px] rounded-full bg-gradient-to-r from-[#ff403a] to-[#e52e2e] transition-all duration-300 ${
-                      showSolutions ? "w-[calc(100%-1rem)]" : "w-0"
+                    className={`absolute -bottom-0.5 left-0 h-[2px] rounded-full bg-gradient-to-r from-[#ff403a] to-[#e52e2e] transition-all duration-300 ${
+                      showSolutions ? "w-full" : "w-0"
                     }`}
                   />
                 </button>
 
                 <div
-                  className={`absolute top-[calc(100%+12px)] left-1/2 -translate-x-1/2 transition-all duration-300 ${
+                  className={`absolute left-1/2 top-full z-[1001] -translate-x-1/2 pt-3 transition-all duration-200 ${
                     showSolutions
-                      ? "pointer-events-auto translate-y-0 opacity-100"
-                      : "pointer-events-none -translate-y-2 opacity-0"
+                      ? "visible translate-y-0 opacity-100"
+                      : "invisible -translate-y-1 opacity-0"
                   }`}
                 >
-                  <div className="w-72 overflow-hidden rounded-xl border border-white/10 bg-black/95 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl">
+                  <div className="w-72 overflow-hidden rounded-xl border border-white/10 bg-black shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl">
                     <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#ff403a] to-transparent" />
                     <ul className="py-2">
                       {solutionLinks.map((item) => (
                         <li key={item.href}>
                           <Link
                             href={item.href}
+                            onClick={() => setShowSolutions(false)}
                             className="group flex items-center gap-3 px-5 py-3.5 text-[15px] font-medium text-white/80 transition-all duration-200 hover:bg-[#ff403a]/10 hover:text-white"
                           >
                             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff403a]/40 transition-all duration-200 group-hover:bg-[#ff403a] group-hover:shadow-[0_0_8px_#ff403a]" />
@@ -249,22 +284,38 @@ function Nav() {
             ))}
 
             <li>
-              <p className="px-4 pt-3 pb-1 text-xs font-semibold uppercase tracking-widest text-white/40">
+              <button
+                type="button"
+                onClick={() => setMobileSolutionsOpen((prev) => !prev)}
+                className="flex w-full items-center justify-between rounded-xl px-4 py-3 text-[17px] font-medium text-white/90 transition-colors hover:bg-white/5 hover:text-white"
+              >
                 Solutions
-              </p>
-              <ul className="flex flex-col gap-0.5">
-                {solutionLinks.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="block rounded-xl px-4 py-2.5 pl-7 text-[15px] font-medium text-[#ff403a]/90 transition-colors hover:bg-[#ff403a]/10 hover:text-[#ff403a]"
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+                <ChevronDownIcon
+                  size={18}
+                  className={`transition-transform duration-300 ${
+                    mobileSolutionsOpen ? "rotate-180 text-[#ff403a]" : ""
+                  }`}
+                />
+              </button>
+
+              {mobileSolutionsOpen && (
+                <ul className="mt-1 flex flex-col gap-0.5 pl-2">
+                  {solutionLinks.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setMobileSolutionsOpen(false);
+                        }}
+                        className="block rounded-xl px-4 py-2.5 pl-5 text-[15px] font-medium text-[#ff403a]/90 transition-colors hover:bg-[#ff403a]/10 hover:text-[#ff403a]"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
 
             <li className="mt-4 px-2">
