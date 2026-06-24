@@ -60,7 +60,7 @@ WhatsApp
           {/* Right Column: Let's Connect Form */}
           <div className="lg:col-span-7 w-full">
             <h2 className="text-4xl md:text-[40px] font-bold tracking-tight mb-8">
-              Let's <span className="text-[#ff3b30]">Connect</span>
+              Let's <span className="text-[#ff3b30]">Cginnnect</span>
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-4">
