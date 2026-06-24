@@ -1,6 +1,4 @@
 import Link from "next/link";
-import Nav from "@/component/Nav/Nav"
-import Footer from "@/component/Footer/Footer"
 
 
 
@@ -33,7 +31,6 @@ export default async function Page({ params }) {
 
   return (
     <>
-    <Nav />
     <section className="bg-[#000000] py-14">
       <div className="max-w-7xl mx-auto px-4">
 
@@ -143,7 +140,6 @@ export default async function Page({ params }) {
         </div>
       </div>
     </section>
-    <Footer />
     </>
   );
 }

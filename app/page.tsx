@@ -1,8 +1,6 @@
 "use client"
 import Image from "next/image";
-import Nav from "../component/Nav/Nav"
 import Middle from "../component/Middle/Middle"
-import Footer from "../component/Footer/Footer"
 import Abovefooter from "../section/Home/Abovefooter"
 import { useEffect, useState, useRef } from "react";
 import BannerSlider from "../component/banner/Banner"

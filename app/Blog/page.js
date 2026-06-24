@@ -1,9 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Nav from "@/component/Nav/Nav";
 import Link from "next/link";
-import Footer from "@/component/Footer/Footer";
 
 export default function Page() {
   const [blogs, setBlogs] = useState([]);
@@ -32,8 +30,6 @@ export default function Page() {
 
   return (
     <>
-      <Nav />
-
       <section className="min-h-screen bg-black py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
@@ -93,8 +89,6 @@ export default function Page() {
           )}
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }

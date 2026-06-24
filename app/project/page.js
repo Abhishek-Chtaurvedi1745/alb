@@ -1,9 +1,7 @@
 "use client"
 import React from 'react'
-import Nav from "@/component/Nav/Nav"
 import Number from "@/component/Number/Number"
 import { Check } from "lucide-react";
-import Footer from "@/component/Footer/Footer"
 
 
 import { Play, BriefcaseBusiness, ChevronRight } from "lucide-react";
@@ -88,7 +86,6 @@ const benefits = [
 function page() {
   return (
     <div>
-        <Nav />
         <section className="bg-[#000000] py-16 px-6">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
@@ -389,7 +386,6 @@ individual projects, influencing the organization’s overall efficiency, compet
       </div>
     </section>
         <FAQSection />
-        <Footer />
     </div>
   )
 }

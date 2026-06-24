@@ -1,12 +1,9 @@
 import React from 'react'
-import Footer from "@/component/Footer/Footer"
-import Nav from "@/component/Nav/Nav"
 import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
 
 function page() {
   return (
     <div>
-      <Nav />
          <section className="bg-black py-10 px-4">
        <h2 className='text-[45px] py-5 text-center font-semibold text-[#ffffff]'>Contact <span className='text-[#ff403a]'>Us</span></h2>
       <div className="max-w-6xl mx-auto relative">
@@ -149,7 +146,6 @@ function page() {
         </div>
       </div>
     </section>
-    <Footer />
     </div>
   )
 }

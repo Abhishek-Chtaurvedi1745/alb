@@ -58,10 +58,10 @@ const quickLinks = [
 
 const otherLinks = [
   { label: "Project Prortfolio Management", href: "/project-management" },
-  { label: "Enterprise Automation", href: "/project" },
+  { label: "Enterprise IT Automation", href: "/project" },
   { label: "Project Management as a Service", href: "/project-management" },
   { label: "Clarity", href: "/project" },
-  { label: "Enterprise Automation", href: "/project" },
+  { label: "Enterprise IT Automation", href: "/project" },
   { label: "Automic Automation", href: "/project" },
   { label: "Stonebranch UAC", href: "/project" },
 ];
@@ -109,8 +109,6 @@ export default function Footer() {
             </p>
           </Link>
         </div>
-
-        <div className="h-px w-full bg-[#333333]" />
 
         {/* Main content */}
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 md:px-12 lg:px-16 lg:py-10">

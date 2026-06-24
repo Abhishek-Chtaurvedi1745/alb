@@ -23,8 +23,6 @@ export default function ContactSection() {
        
         <div className="absolute top-0 left-0 w-32 h-[2px] bg-white pointer-events-none"></div>
         <div className="absolute top-0 left-0 w-[2px] h-40 bg-gradient-to-b from-white via-white to-transparent pointer-events-none"></div>
-        <div className="absolute bottom-0 right-0 w-44 h-[2px] bg-white pointer-events-none"></div>
-        <div className="absolute bottom-0 right-0 w-[2px] h-32 bg-gradient-to-t from-white via-white to-transparent pointer-events-none"></div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
           
          

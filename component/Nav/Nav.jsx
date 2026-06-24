@@ -3,18 +3,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { ChevronDownIcon } from "lucide-react";
+import {
+  SolutionsMegaMenuDesktop,
+  SolutionsMegaMenuWide,
+  SolutionsMegaMenuMobile,
+} from "./SolutionsMegaMenu";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
   { href: "/career", label: "Careers" },
   { href: "/blog", label: "Blog" },
   { href: "/contact-us", label: "Contact Us" },
-];
-
-const solutionLinks = [
-  { href: "/web-development", label: "Project & Portfolio Management" },
-  { href: "/app-development", label: "Enterprise IT Automation" },
-  { href: "/digital-marketing", label: "AI Services for Enterprise" },
 ];
 
 function NavLink({ href, children, className = "" }) {
@@ -192,28 +191,17 @@ function Nav() {
                 </button>
 
                 <div
-                  className={`absolute left-1/2 top-full z-[1001] -translate-x-1/2 pt-3 transition-all duration-200 ${
+                  className={`absolute left-1/2 top-full z-[1001] -translate-x-1/2 pt-4 transition-all duration-300 ${
                     showSolutions
                       ? "visible translate-y-0 opacity-100"
-                      : "invisible -translate-y-1 opacity-0"
+                      : "invisible -translate-y-2 opacity-0 pointer-events-none"
                   }`}
                 >
-                  <div className="w-72 overflow-hidden rounded-xl border border-white/10 bg-black shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-xl">
-                    <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-[#ff403a] to-transparent" />
-                    <ul className="py-2">
-                      {solutionLinks.map((item) => (
-                        <li key={item.href}>
-                          <Link
-                            href={item.href}
-                            onClick={() => setShowSolutions(false)}
-                            className="group flex items-center gap-3 px-5 py-3.5 text-[15px] font-medium text-white/80 transition-all duration-200 hover:bg-[#ff403a]/10 hover:text-white"
-                          >
-                            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ff403a]/40 transition-all duration-200 group-hover:bg-[#ff403a] group-hover:shadow-[0_0_8px_#ff403a]" />
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="hidden lg:block">
+                    <SolutionsMegaMenuWide onClose={() => setShowSolutions(false)} />
+                  </div>
+                  <div className="lg:hidden">
+                    <SolutionsMegaMenuDesktop onClose={() => setShowSolutions(false)} />
                   </div>
                 </div>
               </li>
@@ -299,22 +287,12 @@ function Nav() {
               </button>
 
               {mobileSolutionsOpen && (
-                <ul className="mt-1 flex flex-col gap-0.5 pl-2">
-                  {solutionLinks.map((item) => (
-                    <li key={item.href}>
-                      <Link
-                        href={item.href}
-                        onClick={() => {
-                          setIsOpen(false);
-                          setMobileSolutionsOpen(false);
-                        }}
-                        className="block rounded-xl px-4 py-2.5 pl-5 text-[15px] font-medium text-[#ff403a]/90 transition-colors hover:bg-[#ff403a]/10 hover:text-[#ff403a]"
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <SolutionsMegaMenuMobile
+                  onClose={() => {
+                    setIsOpen(false);
+                    setMobileSolutionsOpen(false);
+                  }}
+                />
               )}
             </li>
 

@@ -1,13 +1,10 @@
 import React from "react";
-import Footer from "@/component/Footer/Footer"
-import Nav from "@/component/Nav/Nav"
 
 
 
 function Page() {
   return (
     <>
-    <Nav />
      <section className="bg-black text-white py-16 px-5 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-10">
@@ -229,7 +226,6 @@ described in our Cookie Policy.
         </div>
       </div>
     </section>
-    <Footer />
     </>
   );
 }
