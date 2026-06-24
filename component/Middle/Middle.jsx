@@ -47,11 +47,22 @@ const features1 = [
 
 const logos = [
     { src: "/images/brd.svg", alt: 'Broadcom' },
-    { src: "/images/stb.svg", alt: 'Stonebranch' },
+    { src: "/images/stb.svg", alt: 'Stonebranch', preserveColors: true },
     { src: "/images/hcl.svg", alt: 'HCLTech' },
     { src: "/images/ibm.svg", alt: 'IBM' },
     { src: "/images/iggt.svg", alt: 'Ignite Technology' },
   ];
+
+function getPartnerLogoClassName(logo) {
+  const base =
+    "h-[20px] md:h-auto w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-200 w-24 md:w-auto";
+
+  if (logo.preserveColors) {
+    return base;
+  }
+
+  return `${base} brightness-0 invert`;
+}
 
 const features = [
   {
@@ -143,12 +154,7 @@ function Middle() {
             key={index}
             src={logo.src}
             alt={logo.alt}
-            className="
-              h-[20px] md:h-auto w-auto object-contain
-              brightness-0 invert opacity-80
-              hover:opacity-100 transition-opacity duration-200
-              w-24 md:w-auto
-            "
+            className={getPartnerLogoClassName(logo)}
           />
         ))}
 
@@ -158,11 +164,7 @@ function Middle() {
             key={`duplicate-${index}`}
             src={logo.src}
             alt={logo.alt}
-            className="
-              h-[20px] md:h-auto w-auto object-contain
-              brightness-0 invert opacity-80
-              w-24 md:w-auto
-            "
+            className={getPartnerLogoClassName(logo)}
           />
         ))}
 
