@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
 import Testimonials from "../Home/Testimonials"
 import Faqsection from "../Home/Faq"
 import BlogSlider from "../Home/Blog"
@@ -14,14 +12,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 function Abovefooter() {
-
-  const images = [
-    "images/oc1.png",
-    "images/oc2.png",
-    "images/oc3.png",
-    "images/oc4.png",
-    "images/oc5.png",
-  ];
 
 const certifications = [
   {
@@ -59,52 +49,6 @@ const certifications = [
 
   return (
     <div>
-      <section className="w-full overflow-hidden py-10 pb-5 md:pb-10  bg-black">
-<div className="text-center  mb-10">
-          <h2 className="text-3xl md:text-[45px] font-semibold text-white -mb-6">
-            Our End  <span className="text-[#ff403a]">Customers</span>
-          </h2>
-        </div>
-        <div className="relative flex overflow-hidden">
-
-          {/* SLIDER */}
-          <div className="flex animate-marquee gap-6">
-
-            {[...images, ...images].map((img, index) => (
-             <div
-  key={index}
-  className="w-[100px] md:w-[220px] h-[40px] md:h-[80px]  rounded-2xl flex items-center justify-center p-2 py-0 flex-shrink-0"
->
-  <img
-    src={img}
-    alt=""
-    className="max-w-full max-h-full object-contain"
-  />
-</div>
-            ))}
-
-          </div>
-        </div>
-
-        {/* CUSTOM CSS */}
-        <style jsx>{`
-          .animate-marquee {
-            width: max-content;
-            animation: marquee 25s linear infinite;
-          }
-
-          @keyframes marquee {
-            from {
-              transform: translateX(0);
-            }
-
-            to {
-              transform: translateX(-50%);
-            }
-          }
-        `}</style>
-
-      </section>
         <section className="bg-[#000000] py-6 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-0">
 
