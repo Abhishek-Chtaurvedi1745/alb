@@ -95,25 +95,21 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#ff403a]/[0.04] via-transparent to-transparent" aria-hidden />
 
       <div className="relative z-10">
-        {/* Logo section */}
-        <div className="mx-auto max-w-[1400px] px-6 py-6 md:px-12 lg:px-16">
-          <Link href="/" className="inline-flex flex-col gap-2 transition-opacity hover:opacity-90">
-            <img
-              src="/images/nla.svg"
-              alt="Albatroz Solutions"
-              className="h-[50px] w-auto md:h-[58px]"
-            />
-            <p className="pl-[3px] text-[11px] tracking-wide">
-              <span className="text-[#e53935]">Business Outcomes.</span>{" "}
-              <span className="text-white">Delivered.</span>
-            </p>
-          </Link>
-        </div>
-
         {/* Main content */}
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12 md:px-12 lg:px-16 lg:py-10">
+        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-6 py-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10 md:px-12 lg:px-16 lg:py-10">
+          {/* Logo */}
+          <div className="flex items-start">
+            <Link href="/" className="inline-flex transition-opacity hover:opacity-90">
+              <img
+                src="/images/nla.svg"
+                alt="Albatroz Solutions"
+                className="h-[50px] w-auto md:h-[58px]"
+              />
+            </Link>
+          </div>
+
           {/* Quick Links */}
-          <div>
+          <div className="sm:pl-4 lg:pl-8">
             <h3 className="mb-4 text-[16px] font-bold text-white">Quick Links</h3>
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
@@ -125,7 +121,7 @@ export default function Footer() {
           </div>
 
           {/* Other Links */}
-          <div>
+          <div className="lg:pl-2">
             <h3 className="mb-4 text-[16px] font-bold text-white">Other Links</h3>
             <ul className="space-y-2.5">
               {otherLinks.map((link, index) => (
