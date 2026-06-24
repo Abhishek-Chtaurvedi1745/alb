@@ -17,7 +17,7 @@ const platforms = [
   {
     src: "/images/rally.svg",
     alt: "Rally by Broadcom",
-    tag: "Delivery",
+    tag: "Agile",
   },
   {
     src: "/images/ca.svg",
