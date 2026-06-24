@@ -4,7 +4,7 @@ import Number from "@/component/Number/Number"
 import { Check } from "lucide-react";
 
 
-import { Play, BriefcaseBusiness, ChevronRight } from "lucide-react";
+import { MonitorPlay, BriefcaseBusiness, ChevronRight } from "lucide-react";
 import FAQSection from '../../component/Faq/Faqsection';
 
 const features = [
@@ -15,7 +15,7 @@ const features = [
 ];
 const solutions = [
   {
-    icon: <Play size={20} />,
+    icon: <MonitorPlay size={20} strokeWidth={2.2} />,
     title: "Interactive PPM Demos",
     description:
       "Request a personalized demonstration of enterprise PPM solutions such as Broadcom’s Clarity and Planview to witness firsthand how it can revolutionize your PPM strategy.",

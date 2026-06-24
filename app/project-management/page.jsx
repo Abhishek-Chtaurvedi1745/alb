@@ -240,10 +240,40 @@ Get my AI readiness report
             {/* Interactive PPM Demos */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-full bg-[#FF403A] flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4" viewBox="0 0 16 16" fill="white">
-                    <path d="M5 3l9 5-9 5V3z"/>
+                <div className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FF403A] to-[#d9322d] shadow-lg shadow-[#FF403A]/25">
+                  <svg
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      x="3"
+                      y="4"
+                      width="18"
+                      height="12"
+                      rx="2"
+                      stroke="white"
+                      strokeWidth="1.6"
+                    />
+                    <path
+                      d="M9 20h6M12 16v4"
+                      stroke="white"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                    />
+                    <rect x="7" y="11" width="2.2" height="3" rx="0.4" fill="white" opacity="0.85" />
+                    <rect x="10.9" y="9" width="2.2" height="5" rx="0.4" fill="white" />
+                    <rect x="14.8" y="7" width="2.2" height="7" rx="0.4" fill="white" />
+                    <path
+                      d="M17.2 6.2l2.3 4.8-2.1-1.1-1.2 1.9z"
+                      fill="white"
+                    />
                   </svg>
+                  <span className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-black bg-white">
+                    <span className="absolute inset-0 animate-ping rounded-full bg-[#FF403A] opacity-60" />
+                    <span className="absolute inset-0.5 rounded-full bg-[#FF403A]" />
+                  </span>
                 </div>
                 <h3 className="text-white text-[30px] font-semibold">Interactive PPM Demos</h3>
               </div>
@@ -281,12 +311,47 @@ Get my AI readiness report
             {/* Expert PPM Consultations */}
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 bg-[#FF403A]/15 border border-[#FF403A]/40 rounded flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5" viewBox="0 0 20 20" fill="none">
-                    <rect x="2" y="5" width="16" height="11" rx="1.5" stroke="#FF403A" strokeWidth="1.5"/>
-                    <path d="M6 5V4a4 4 0 018 0v1" stroke="#FF403A" strokeWidth="1.5" strokeLinecap="round"/>
-                    <path d="M7 11h6M7 13.5h4" stroke="#FF403A" strokeWidth="1.2" strokeLinecap="round"/>
+                <div className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FF403A] to-[#d9322d] shadow-lg shadow-[#FF403A]/25">
+                  <svg
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      x="3"
+                      y="8"
+                      width="18"
+                      height="12"
+                      rx="2"
+                      stroke="white"
+                      strokeWidth="1.6"
+                    />
+                    <path
+                      d="M8 8V6.5a4 4 0 018 0V8"
+                      stroke="white"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                    />
+                    <path d="M3 13h18" stroke="white" strokeWidth="1.6" />
+                    <path
+                      d="M8 16.5h2.5M13.5 16.5H16"
+                      stroke="white"
+                      strokeWidth="1.4"
+                      strokeLinecap="round"
+                    />
+                    <circle cx="18" cy="5.5" r="2.2" stroke="white" strokeWidth="1.4" />
+                    <path
+                      d="M15.8 9.8c.45-1.1 1.35-1.8 2.2-1.8s1.75.7 2.2 1.8"
+                      stroke="white"
+                      strokeWidth="1.2"
+                      strokeLinecap="round"
+                    />
                   </svg>
+                  <span className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-black bg-white">
+                    <span className="absolute inset-0 animate-ping rounded-full bg-[#FF403A] opacity-60" />
+                    <span className="absolute inset-0.5 rounded-full bg-[#FF403A]" />
+                  </span>
                 </div>
                 <h3 className="text-white text-[30px] font-semibold">Expert PPM Consultations</h3>
               </div>
