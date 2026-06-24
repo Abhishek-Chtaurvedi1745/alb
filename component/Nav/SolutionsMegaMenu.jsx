@@ -31,9 +31,7 @@ function ProductBlock({ product, onNavigate }) {
       <h4 className="text-[18px] font-bold text-[#ef4444] transition-colors group-hover:text-[#dc2626]">
         {product.title}
       </h4>
-      <p className="mt-1.5 max-w-[300px] text-[14px] leading-relaxed text-[#6b7280]">
-        {product.description}
-      </p>
+      <Description text={product.description} className="mt-1.5 max-w-[300px] text-[14px] leading-relaxed text-[#6b7280]" />
     </Link>
   );
 }
@@ -71,9 +69,7 @@ function MainSectionBlock({ section, onNavigate }) {
   return (
     <Link href={section.href} onClick={onNavigate} className="group block">
       <SectionTitle title={section.title} underlineWord={section.underlineWord} />
-      <p className="mt-3 max-w-[300px] text-[14px] leading-relaxed text-[#6b7280]">
-        {section.description}
-      </p>
+      <Description text={section.description} className="mt-3 max-w-[300px] text-[14px] leading-relaxed text-[#6b7280]" />
     </Link>
   );
 }
@@ -82,11 +78,17 @@ function SecondaryMainBlock({ block, onNavigate }) {
   return (
     <Link href={block.href} onClick={onNavigate} className="group block">
       <SectionTitle title={block.title} underlineWord={block.underlineWord} />
-      <p className="mt-3 max-w-[300px] text-[14px] leading-relaxed text-[#6b7280]">
-        {block.description}
-      </p>
+      <Description text={block.description} className="mt-3 max-w-[300px] text-[14px] leading-relaxed text-[#6b7280]" />
     </Link>
   );
+}
+
+function Description({ text, className }) {
+  if (typeof text === "string") {
+    return <p className={className} dangerouslySetInnerHTML={{ __html: text }} />;
+  }
+
+  return <p className={className}>{text}</p>;
 }
 
 function SolutionsColumn({ section, onNavigate }) {
@@ -219,7 +221,7 @@ export function SolutionsMegaMenuMobile({ onClose }) {
 
             {isOpen && (
               <div className="space-y-4 px-4 pb-6">
-                <p className="text-[13px] leading-relaxed text-[#6b7280]">{section.description}</p>
+                <Description text={section.description} className="text-[13px] leading-relaxed text-[#6b7280]" />
 
                 {hasProducts &&
                   section.products.map((product) => (
@@ -230,7 +232,7 @@ export function SolutionsMegaMenuMobile({ onClose }) {
                       className="block"
                     >
                       <p className="text-[14px] font-bold text-[#ef4444]">{product.title}</p>
-                      <p className="mt-1 text-[13px] text-[#6b7280]">{product.description}</p>
+                      <Description text={product.description} className="mt-1 text-[13px] text-[#6b7280]" />
                     </Link>
                   ))}
 
@@ -256,7 +258,7 @@ export function SolutionsMegaMenuMobile({ onClose }) {
                 {section.trailingProduct && (
                   <Link href={section.trailingProduct.href} onClick={onClose} className="block">
                     <p className="text-[14px] font-bold text-[#ef4444]">{section.trailingProduct.title}</p>
-                    <p className="mt-1 text-[13px] text-[#6b7280]">{section.trailingProduct.description}</p>
+                    <Description text={section.trailingProduct.description} className="mt-1 text-[13px] text-[#6b7280]" />
                   </Link>
                 )}
               </div>

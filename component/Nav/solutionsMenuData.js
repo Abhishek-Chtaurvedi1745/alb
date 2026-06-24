@@ -19,22 +19,22 @@ export const solutionsMegaMenu = [
       {
         title: "Clarity",
         description:
-          "A powerful PPM platform to manage projects, resources, investments, and business outcomes.",
+          "A powerful PPM platform to manage projects, resources, investments, and business outcomes. (+ <span class=\"text-[#ef4444]\">Clearity services</span>)",
         href: "/project",
       },
     ],
     secondaryMain: aiServicesSection,
-    services: {
-      title: "Clarity Services",
-      items: [
-        { label: "Implementation", href: "/contact-us" },
-        { label: "Installations & Upgrades", href: "/contact-us" },
-        { label: "Migration to Modern UX", href: "/contact-us" },
-        { label: "Integrations", href: "/contact-us" },
-        { label: "Jaspersoft Reports", href: "/contact-us" },
-        { label: "Business Intelligence", href: "/contact-us" },
-      ],
-    },
+    // services: {
+    //   title: "Clarity Services",
+    //   items: [
+    //     { label: "Implementation", href: "/contact-us" },
+    //     { label: "Installations & Upgrades", href: "/contact-us" },
+    //     { label: "Migration to Modern UX", href: "/contact-us" },
+    //     { label: "Integrations", href: "/contact-us" },
+    //     { label: "Jaspersoft Reports", href: "/contact-us" },
+    //     { label: "Business Intelligence", href: "/contact-us" },
+    //   ],
+    // },
   },
   {
     id: "automation",
@@ -47,24 +47,24 @@ export const solutionsMegaMenu = [
       {
         title: "Automic Automation",
         description:
-          "Automate workflows, applications, and IT processes with a scalable enterprise automation platform.",
+          "Automate workflows, applications, and IT processes with a scalable enterprise automation platform. (+ <span class=\"text-[#ef4444]\">Automic Automation Services</span>)",
         href: "/project",
       },
     ],
-    services: {
-      title: "Automic Automation Services",
-      items: [
-        { label: "Implementation", href: "/contact-us" },
-        { label: "Installation & Upgrades", href: "/contact-us" },
-        { label: "Education/Training", href: "/contact-us" },
-        { label: "Staff Augmentation", href: "/contact-us" },
-        { label: "Support & Maintenance", href: "/contact-us" },
-      ],
-    },
+    // services: {
+    //   title: "Automic Automation Services",
+    //   items: [
+    //     { label: "Implementation", href: "/contact-us" },
+    //     { label: "Installation & Upgrades", href: "/contact-us" },
+    //     { label: "Education/Training", href: "/contact-us" },
+    //     { label: "Staff Augmentation", href: "/contact-us" },
+    //     { label: "Support & Maintenance", href: "/contact-us" },
+    //   ],
+    // },
     trailingProduct: {
       title: "Stonebranch",
       description:
-        "Modern workload automation solutions to simplify IT operations and improve business agility.",
+        "Modern workload automation solutions to simplify IT operations and improve business agility. (+ <span class=\"text-[#ef4444]\">Stonebranch Services</span>)",
       href: "/project",
     },
   },
