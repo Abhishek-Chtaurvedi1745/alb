@@ -62,7 +62,7 @@ const certifications = [
       <section className="w-full overflow-hidden py-10 pb-5 md:pb-10  bg-black">
 <div className="text-center  mb-10">
           <h2 className="text-3xl md:text-[45px] font-semibold text-white -mb-6">
-            Our End  <span className="text-[#ff403a]">Customer</span>
+            Our End  <span className="text-[#ff403a]">Customers</span>
           </h2>
         </div>
         <div className="relative flex overflow-hidden">
