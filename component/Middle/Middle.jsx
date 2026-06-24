@@ -146,28 +146,24 @@ function Middle() {
     </h2>
 
     {/* Infinite Slider */}
-    <div className="relative mt-4 ">
-      <div className="flex w-max items-center gap-10 md:gap-16 lg:gap-20 animate-slide">
+    <div className="relative mt-4 overflow-hidden">
+      <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-black to-transparent sm:w-16 md:w-20" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-black to-transparent sm:w-16 md:w-20" />
 
-        {logos.map((logo, index) => (
-          <img
-            key={index}
-            src={logo.src}
-            alt={logo.alt}
-            className={getPartnerLogoClassName(logo)}
-          />
+      <div className="partner-marquee flex w-max items-center">
+        {[...logos, ...logos].map((logo, index) => (
+          <div
+            key={`${logo.alt}-${index}`}
+            className="flex shrink-0 items-center justify-center px-8 md:px-12 lg:px-16"
+          >
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className={getPartnerLogoClassName(logo)}
+              draggable={false}
+            />
+          </div>
         ))}
-
-        {/* Duplicate logos for seamless loop */}
-        {logos.map((logo, index) => (
-          <img
-            key={`duplicate-${index}`}
-            src={logo.src}
-            alt={logo.alt}
-            className={getPartnerLogoClassName(logo)}
-          />
-        ))}
-
       </div>
     </div>
 

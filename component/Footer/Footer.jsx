@@ -59,9 +59,9 @@ const quickLinks = [
 const otherLinks = [
   { label: "Project Prortfolio Management", href: "/project-management" },
   { label: "Enterprise IT Automation", href: "/project" },
-  { label: "Project Management as a Service", href: "/project-management" },
+  // { label: "Project Management as a Service", href: "/project-management" },
   { label: "Clarity", href: "/project" },
-  { label: "Enterprise IT Automation", href: "/project" },
+  // { label: "Enterprise IT Automation", href: "/project" },
   { label: "Automic Automation", href: "/project" },
   { label: "Stonebranch UAC", href: "/project" },
 ];
