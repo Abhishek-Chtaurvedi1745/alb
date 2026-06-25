@@ -127,16 +127,16 @@ Get my AI readiness report
 
       </div>
     </section>
-    <section className="bg-black pt-10 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-black px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-16 md:pb-20">
+      <div className="mx-auto max-w-6xl">
 
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-white text-3xl md:text-[40px] font-semibold mb-3 leading-tight">
+        <div className="mb-8 text-center sm:mb-10 md:mb-12">
+          <h2 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[40px]">
             Transformative Benefits of{" "}
             <span className="text-[#e02b20]">Implementing PPM</span>
           </h2>
-          <p className="text-[#FFFFFF] text-base mx-auto text-[20px] font-medium leading-relaxed">
+          <p className="mx-auto max-w-3xl text-sm font-medium leading-relaxed text-white sm:text-base md:text-[18px] lg:text-[20px]">
             Implementing modern Project and Portfolio Management (PPM) practices
             can yield several transformative benefits for organizations. Here are
             some key advantages
@@ -144,7 +144,7 @@ Get my AI readiness report
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-10">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
           {ppmBenefits.map((benefit) => (
             <PPMBenefitHoverCard key={benefit.title} benefit={benefit} />
           ))}
