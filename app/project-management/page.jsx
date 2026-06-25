@@ -1,4 +1,5 @@
 import React from 'react'
+import Faqsection from "../Home/Faq"
 const benefits = [
   {
     icon: "/images/1.svg",
@@ -47,7 +48,7 @@ const features = [
 
 const features1 = [
   {
-    title: "Product Vision and Strategy",
+    title: "Product Vision and Strategy.",
     desc: "Defining the long-term vision and strategy for digital products, aligning them with market needs and company objectives.",
   },
   {
@@ -316,8 +317,8 @@ Get my AI readiness report
         </div>
       </div>
     </section>
-    <section className="bg-black pt-15 overflow-hidden max-w-[1600px]">
-  <div className=" mx-auto">
+    <section className="bg-black pt-15 overflow-hidden">
+  <div className=" mx-auto max-w-[1600px]">
 
     <div className="grid lg:grid-cols-[55%_45%] items-start gap-10">
 
@@ -392,8 +393,8 @@ Get my AI readiness report
 
   </div>
 </section>
- <section className="bg-black py-15 overflow-hidden pt-20 max-w-[1600px]">
-  <div className=" mx-auto">
+ <section className="bg-black py-15 overflow-hidden pt-20">
+  <div className=" mx-auto max-w-[1600px]">
 
     <div className="grid lg:grid-cols-[55%_45%] items-start gap-10">
 
@@ -472,7 +473,7 @@ across an organization to deliver value to customers efficiently. It encompasses
       <div className="max-w-4xl mx-auto">
         
         {/* Top Section: Button aligned right */}
-       <div className="flex mb-0" style={{ justifyContent: 'end' }}>
+       <div className="flex mb-0" style={{ justifyContent: 'center' }}>
           <button className="bg-[#FF3B30] hover:bg-[#E03126] text-white font-semibold py-3 px-8 text-lg rounded-sm transition-colors duration-200 shadow-lg cursor-pointer">
             Book free Consultation
           </button>
@@ -482,16 +483,17 @@ across an organization to deliver value to customers efficiently. It encompasses
         <hr className="border-t border-gray-800 mb-10 w-full" />
 
         {/* Content Paragraph */}
-        <p className="text-center text-[#FFFFFF] text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
+        {/* <p className="text-center text-[#FFFFFF] text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
           These management areas often intersect and complement each other, especially 
           in organizations aiming for digital transformation or seeking to enhance their 
           agility and competitiveness in today's rapidly evolving business landscape. 
           Integrating these practices can lead to more streamlined operations, improved 
           decision-making, and ultimately, better outcomes for the organization.
-        </p>
+        </p> */}
         
       </div>
     </section>
+    <Faqsection />
     </div>
   )
 }
