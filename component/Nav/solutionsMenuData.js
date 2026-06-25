@@ -24,17 +24,18 @@ export const solutionsMegaMenu = [
       },
     ],
     secondaryMain: aiServicesSection,
-    // services: {
-    //   title: "Clarity Services",
-    //   items: [
-    //     { label: "Implementation", href: "/contact-us" },
-    //     { label: "Installations & Upgrades", href: "/contact-us" },
-    //     { label: "Migration to Modern UX", href: "/contact-us" },
-    //     { label: "Integrations", href: "/contact-us" },
-    //     { label: "Jaspersoft Reports", href: "/contact-us" },
-    //     { label: "Business Intelligence", href: "/contact-us" },
-    //   ],
-    // },
+    services: {
+      title: "Clarity Services",
+      href: "/clarity/services",
+      items: [
+        { label: "Implementation", href: "/clarity/services" },
+        { label: "Installations & Upgrades", href: "/clarity/services" },
+        { label: "Migration to Modern UX", href: "/clarity/services" },
+        { label: "Integrations", href: "/clarity/services" },
+        { label: "Jaspersoft Reports", href: "/clarity/services" },
+        { label: "Business Intelligence", href: "/clarity/services" },
+      ],
+    },
   },
   {
     id: "automation",
