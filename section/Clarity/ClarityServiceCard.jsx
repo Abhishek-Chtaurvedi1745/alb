@@ -22,7 +22,7 @@ export default function ClarityServiceCard({ service }) {
 
         <div className="flex items-center justify-center gap-4 sm:gap-6">
           <Link
-            href={`/contact-us?service=${service.slug}`}
+            href={service.href || `/clarity/services/${service.slug}`}
             className="text-sm font-semibold text-[#ff403a] transition-opacity hover:opacity-80 sm:text-base"
           >
             Read More

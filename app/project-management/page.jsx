@@ -2,6 +2,8 @@
 import React from 'react'
 import { Plus, X } from "lucide-react";
 import { useState } from "react";
+import PPMBenefitHoverCard from "@/section/ProjectManagement/PPMBenefitHoverCard";
+import { ppmBenefits } from "@/section/ProjectManagement/ppmBenefitsData";
 
 const faqData = [
   {
@@ -37,45 +39,6 @@ const faqData = [
       "Can Albatroz customize these solutions for my business?",
     answer:
       "Yes, Albatroz provides customized enterprise solutions tailored according to business size, goals, industry requirements, and operational workflows.",
-  },
-];
-
-const benefits = [
-  {
-    icon: "/images/1.svg",
-    title: "Enhanced Project Prioritization & Alignment",
-  },
-  {
-    icon: "/images/2.svg",
-    title: "Improved Decision Making & Visibility",
-  },
-  {
-     icon: "/images/3.svg",
-    title: "Resource Optimization & Capacity Planning",
-  },
-  {
-     icon: "/images/4.svg",
-    title: "Adaptability to Agile & Hybrid Methodologies",
-  },
-  {
-     icon: "/images/5.svg",
-    title: "Cost Control & Budget Management",
-  },
-  {
-    icon: "/images/6.svg",
-    title: "Enhanced Collaboration & Communication",
-  },
-  {
-     icon: "/images/7.svg",
-    title: "Risk Mitigation & Issue Management",
-  },
-  {
-     icon: "/images/8.svg",
-    title: "Faster Time-to-Market & Delivery",
-  },
-  {
-     icon: "/images/9.svg",
-    title: "Strategic Portfolio Optimization",
   },
 ];
 
@@ -181,33 +144,9 @@ Get my AI readiness report
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="flex flex-col gap-4">
-              {/* Icon */}
-              <div className="mb-2">
-                <img src={benefit.icon} alt="" />
-              </div>
-
-              {/* Title */}
-              <h3 className="text-white text-[25px] font-medium leading-snug">
-                {benefit.title}
-              </h3>
-
-              {/* Divider — white line with red accent */}
-              <div className="flex items-center gap-1">
-                <div className="w-16 h-px bg-white"></div>
-                <div className="w-4 h-px bg-[#e02b20]"></div>
-              </div>
-
-              {/* View More */}
-              <a
-                href="#"
-                className="text-[#FF403A] text-[18px] font-medium hover:opacity-75 transition-opacity w-fit"
-              >
-                View More
-              </a>
-            </div>
+        <div className="grid grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-10">
+          {ppmBenefits.map((benefit) => (
+            <PPMBenefitHoverCard key={benefit.title} benefit={benefit} />
           ))}
         </div>
 
