@@ -148,9 +148,9 @@ we help organizations manage work with structure,
 visibility and control.
           </p>
           <p className="text-[#FFFFFF] text-upercase text-[24px]">Talk to Our Team</p>
-          <button className="px-6 py-3 bg-[#FF403A] transition text-[#FFFFFF] text-[25px] mt-[28px] font-semibold cursor-pointer rounded-lg">
+          {/* <button className="px-6 py-3 bg-[#FF403A] transition text-[#FFFFFF] text-[25px] mt-[28px] font-semibold cursor-pointer rounded-lg">
 Get my AI readiness report
-          </button>
+          </button> */}
         </div>
 
       
@@ -691,6 +691,7 @@ across an organization to deliver value to customers efficiently. It encompasses
 
       </div>
     </section>
+  
     </div>
   )
 }
