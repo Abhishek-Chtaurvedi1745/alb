@@ -4,6 +4,7 @@ import { Plus, X } from "lucide-react";
 import { useState } from "react";
 import PPMBenefitHoverCard from "@/section/ProjectManagement/PPMBenefitHoverCard";
 import { ppmBenefits } from "@/section/ProjectManagement/ppmBenefitsData";
+import BlendedSectionImage from "@/component/Media/BlendedSectionImage";
 
 const faqData = [
   {
@@ -353,45 +354,34 @@ Get my AI readiness report
           </div>
 
           {/* Right Side */}
-          <div className="">
-            <img
+          <div className="relative">
+            <BlendedSectionImage
               src="/images/newcrt.png"
               alt="Strategic Portfolio"
-              className="w-full "
+              fade="left"
             />
-
-          
           </div>
 
         </div>
       </div>
     </section>
-    <section className="bg-black pt-15 overflow-hidden ">
-  <div className=" mx-auto max-w-[1600px]">
+    <section className="overflow-hidden bg-black px-4 pt-10 sm:px-6 md:pt-14">
+  <div className="mx-auto max-w-[1600px]">
 
-    <div className="grid lg:grid-cols-[55%_45%] items-start gap-10">
+    <div className="grid items-center gap-8 lg:grid-cols-[55%_45%] lg:gap-10">
 
       {/* LEFT IMAGE */}
       <div className="relative">
-
-        {/* Glow */}
-        {/* <div className="absolute inset-0 bg-[#FF403A]/10 blur-[120px]"></div> */}
-
-        <img
+        <BlendedSectionImage
           src="/images/crt1.png"
-          alt=""
-          className="
-            relative
-            w-full
-            object-contain
-            animate-[float_6s_ease-in-out_infinite]
-          "
+          alt="Digital Product Management"
+          fade="right"
+          animate
         />
-
       </div>
 
       {/* RIGHT CONTENT */}
-      <div className="pt-2 pr-[50px]">
+      <div className="pt-2 lg:pr-8 xl:pr-[50px]">
 
         <h2 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
           Digital Product{" "}
@@ -442,16 +432,13 @@ Get my AI readiness report
 
   </div>
 </section>
- <section className="bg-black py-15 overflow-hidden pt-20 ">
-  <div className=" mx-auto max-w-[1600px]">
+ <section className="overflow-hidden bg-black px-4 py-10 pt-16 sm:px-6 md:pt-20">
+  <div className="mx-auto max-w-[1600px]">
 
-    <div className="grid lg:grid-cols-[55%_45%] items-start gap-10">
+    <div className="grid items-center gap-8 lg:grid-cols-[45%_55%] lg:gap-10">
 
-      {/* LEFT IMAGE */}
-     
-
-      {/* RIGHT CONTENT */}
-      <div className="pt-2 pl-[50px]">
+      {/* LEFT CONTENT */}
+      <div className="order-2 pt-2 lg:order-1 lg:pl-8 xl:pl-[50px]">
 
         <h2 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
           Value Stream {" "}
@@ -496,22 +483,13 @@ across an organization to deliver value to customers efficiently. It encompasses
         </div>
 
       </div>
-       <div className="relative">
 
-        {/* Glow */}
-        {/* <div className="absolute inset-0 bg-[#FF403A]/10 blur-[120px]"></div> */}
-
-        <img
+      <div className="relative order-1 lg:order-2">
+        <BlendedSectionImage
           src="/images/newcrt1.png"
-          alt=""
-          className="
-            relative
-            w-full
-            object-contain
-            
-          "
+          alt="Value Stream Management"
+          fade="left"
         />
-
       </div>
 
     </div>
