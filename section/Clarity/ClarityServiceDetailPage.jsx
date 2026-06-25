@@ -1,9 +1,59 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
 
+/**
+ * Merges an orphan "heading-only" section with the very next section
+ * (which carries the subtitle + paragraphs/bullets) into ONE section object.
+ *
+ * Example input (old, flat — two separate objects):
+ *   { title: "Why Choose X?", paragraphs: [], bullets: [] }
+ *   { title: "A successful implementation...", paragraphs: [], bullets: [...] }
+ *
+ * Example output (grouped — one object):
+ *   { title: "Why Choose X?", subtitle: "A successful implementation...",
+ *     paragraphs: [], bullets: [...] }
+ */
+function groupSections(sections) {
+  const grouped = [];
+  let i = 0;
+
+  while (i < sections.length) {
+    const current = sections[i];
+    const isOrphanHeading =
+      current.title &&
+      (!current.paragraphs || current.paragraphs.length === 0) &&
+      (!current.bullets || current.bullets.length === 0);
+
+    const next = sections[i + 1];
+
+    if (isOrphanHeading && next) {
+      grouped.push({
+        type: next.type || current.type,
+        title: current.title,
+        subtitle: next.title || "",
+        paragraphs: next.paragraphs || [],
+        bullets: next.bullets || [],
+      });
+      i += 2; // consumed both current and next
+    } else {
+      grouped.push({
+        type: current.type,
+        title: current.title,
+        subtitle: current.subtitle || "",
+        paragraphs: current.paragraphs || [],
+        bullets: current.bullets || [],
+      });
+      i += 1;
+    }
+  }
+
+  return grouped;
+}
+
 function SectionBlock({ section }) {
   const hasBullets = section.bullets?.length > 0;
   const hasParagraphs = section.paragraphs?.length > 0;
+  const hasSubtitle = Boolean(section.subtitle);
   const isNumbered = /^\d+\./.test(section.title);
   const isWhySection =
     section.title.toLowerCase().startsWith("why ") ||
@@ -19,9 +69,12 @@ function SectionBlock({ section }) {
           : "border-white/10 bg-[#080808]"
       }`}
     >
+      {/* Main heading */}
       {section.title ? (
         <h2
-          className={`mb-4 font-semibold text-white ${
+          className={`font-semibold text-white ${
+            hasSubtitle || hasParagraphs || hasBullets ? "mb-2" : "mb-0"
+          } ${
             isNumbered
               ? "text-xl text-[#ff403a] sm:text-2xl"
               : "text-xl sm:text-[26px]"
@@ -31,8 +84,15 @@ function SectionBlock({ section }) {
         </h2>
       ) : null}
 
+      {/* Subheading, grouped in the same card right under the main heading */}
+      {hasSubtitle ? (
+        <h3 className="mb-4 text-base font-semibold text-white/90 sm:text-lg">
+          {section.subtitle}
+        </h3>
+      ) : null}
+
       {hasParagraphs && (
-        <div className="space-y-4">
+        <div className={`space-y-4 ${hasSubtitle ? "mb-4" : ""}`}>
           {section.paragraphs.map((paragraph) => (
             <p
               key={paragraph}
@@ -69,15 +129,18 @@ function SectionBlock({ section }) {
 }
 
 export default function ClarityServiceDetailPage({ page }) {
+  // Merge orphan heading-only blocks with the content block that follows them
+  const groupedPageSections = groupSections(page.sections);
+
   const intro =
     page.intro.length > 0
       ? page.intro
-      : page.sections
+      : groupedPageSections
           .filter((section) => !section.title && section.paragraphs.length)
           .flatMap((section) => section.paragraphs)
           .slice(0, 3);
 
-  const contentSections = page.sections.filter(
+  const contentSections = groupedPageSections.filter(
     (section) =>
       section.title ||
       (section.paragraphs.length && page.intro.length > 0) ||
@@ -142,7 +205,10 @@ export default function ClarityServiceDetailPage({ page }) {
       <section className="px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24">
         <div className="mx-auto max-w-6xl space-y-6">
           {displaySections.map((section) => (
-            <SectionBlock key={`${section.title}-${section.paragraphs[0] || section.bullets[0]}`} section={section} />
+            <SectionBlock
+              key={`${section.title}-${section.paragraphs[0] || section.bullets[0]}`}
+              section={section}
+            />
           ))}
 
           {page.closing ? (

@@ -1,9 +1,10 @@
 {
+  {
   "implementation": {
     "slug": "implementation",
     "subtitle": "Transform Your Project Portfolio Management with Expert Implementation Services",
     "intro": [
-      "Implementing Broadcom Clarity PPM or Rally is more than deploying software\u2014it's about establishing a modern Project Portfolio Management ecosystem that aligns strategy, execution, governance, and business outcomes.",
+      "Implementing Broadcom Clarity PPM or Rally is more than deploying software—it's about establishing a modern Project Portfolio Management ecosystem that aligns strategy, execution, governance, and business outcomes.",
       "As India's Broadcom Tier-1 Expert Advantage Partner, Albatroz Solutions delivers end-to-end implementation services that help organizations successfully adopt, configure, and optimize Clarity PPM and Rally. Our consultants combine deep product expertise with industry best practices to deliver scalable solutions tailored to your business processes, governance model, and delivery methodology.",
       "From initial discovery and solution design to implementation, integration, reporting, and user enablement, we ensure your Clarity or Rally platform delivers measurable business value from day one."
     ],
@@ -11,12 +12,7 @@
       {
         "type": "block",
         "title": "Why Choose Clarity & Rally Implementation?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "type": "block",
-        "title": "A successful implementation enables organizations to",
+        "subtitle": "A successful implementation enables organizations to",
         "paragraphs": [],
         "bullets": [
           "Align projects and investments with business strategy",
@@ -35,22 +31,17 @@
           "Every organization operates differently. Rather than implementing generic templates, we design solutions that reflect your business processes, governance standards, financial controls, and delivery methodology.",
           "Our implementation consultants have successfully delivered Clarity and Rally solutions across industries including pharmaceuticals, biotechnology, banking, financial services, manufacturing, retail, telecommunications, and public sector organizations. Using proven implementation methodologies, we minimize project risk while accelerating business value and user adoption."
         ],
-        "bullets": [
-          "Our Implementation Services"
-        ]
-      },
-      {
-        "type": "numbered",
-        "title": "1. Discovery & Solution Design",
-        "paragraphs": [
-          "Every implementation begins with a detailed assessment of your business objectives and operating model."
-        ],
         "bullets": []
       },
       {
-        "type": "block",
-        "title": "Our consultants work closely with stakeholders to",
+        "type": "numbered",
+        "subtitle": " Discovery & Solution Design",
+        "title": "Our Implementation Services",
+        
+        
         "paragraphs": [
+          "Our consultants work closely with stakeholders to",
+          "Every implementation begins with a detailed assessment of your business objectives and operating model.",
           "This ensures the solution is aligned with your organization's current needs and future growth."
         ],
         "bullets": [
@@ -65,15 +56,9 @@
       {
         "type": "numbered",
         "title": "2. Clarity PPM Implementation",
+        "subtitle": "Our services include",
         "paragraphs": [
-          "We provide end-to-end implementation services across all major Clarity capabilities."
-        ],
-        "bullets": []
-      },
-      {
-        "type": "block",
-        "title": "Our services include",
-        "paragraphs": [
+          "We provide end-to-end implementation services across all major Clarity capabilities.",
           "Every implementation is configured to align with your business processes and governance standards."
         ],
         "bullets": [
@@ -93,15 +78,9 @@
       {
         "type": "numbered",
         "title": "3. Rally Implementation",
+        "subtitle": "Our Rally implementation services include",
         "paragraphs": [
-          "For organizations adopting Agile delivery, we implement Rally to support enterprise-scale Agile execution."
-        ],
-        "bullets": []
-      },
-      {
-        "type": "block",
-        "title": "Our Rally implementation services include",
-        "paragraphs": [
+          "For organizations adopting Agile delivery, we implement Rally to support enterprise-scale Agile execution.",
           "We help organizations establish a scalable Agile delivery platform that supports continuous planning and execution."
         ],
         "bullets": [
@@ -118,15 +97,9 @@
       {
         "type": "numbered",
         "title": "4. Enterprise Integrations",
+        "subtitle": "Typical integrations include",
         "paragraphs": [
-          "We integrate Clarity and Rally with enterprise applications to enable seamless information flow across your business."
-        ],
-        "bullets": []
-      },
-      {
-        "type": "block",
-        "title": "Typical integrations include",
-        "paragraphs": [
+          "We integrate Clarity and Rally with enterprise applications to enable seamless information flow across your business.",
           "These integrations eliminate manual effort while improving data consistency and operational efficiency."
         ],
         "bullets": [
@@ -142,15 +115,10 @@
       {
         "type": "numbered",
         "title": "5. Reporting & Analytics",
+        "subtitle": "Our services include",
         "paragraphs": [
           "We implement modern reporting solutions that provide real-time visibility into project and portfolio performance."
         ],
-        "bullets": []
-      },
-      {
-        "type": "block",
-        "title": "Our services include",
-        "paragraphs": [],
         "bullets": [
           "Executive dashboards",
           "Portfolio reporting",
@@ -165,38 +133,28 @@
       {
         "type": "numbered",
         "title": "6. User Adoption & Go-Live Support",
+        "subtitle": "We provide",
         "paragraphs": [
-          "A successful implementation depends on user adoption as much as technical delivery."
+          "A successful implementation depends on user adoption as much as technical delivery.",
+          "This ensures a smooth transition and long-term platform success."
         ],
-        "bullets": []
-      },
-      {
-        "type": "block",
-        "title": "We provide",
-        "paragraphs": [
+        "bullets": [
           "End-user training",
           "Administrator training",
           "Knowledge transfer",
           "User Acceptance Testing (UAT) support",
           "Go-live planning",
           "Hypercare support",
-          "Post-implementation optimization",
-          "This ensures a smooth transition and long-term platform success."
-        ],
-        "bullets": []
+          "Post-implementation optimization"
+        ]
       },
       {
         "type": "block",
         "title": "Structured Implementation Service Packs",
+        "subtitle": "Installation Pack",
         "paragraphs": [
           "To provide flexibility and faster deployment, our implementation services are available as modular service packs that can be engaged independently or combined based on your business priorities."
         ],
-        "bullets": []
-      },
-      {
-        "type": "block",
-        "title": "Installation Pack",
-        "paragraphs": [],
         "bullets": [
           "Platform installation",
           "Environment setup",
@@ -206,6 +164,7 @@
       {
         "type": "block",
         "title": "Project Management Pack",
+        "subtitle": "",
         "paragraphs": [],
         "bullets": [
           "Project management",
@@ -217,6 +176,7 @@
       {
         "type": "block",
         "title": "Financial Management Pack",
+        "subtitle": "",
         "paragraphs": [],
         "bullets": [
           "Budget planning",
@@ -228,6 +188,7 @@
       {
         "type": "block",
         "title": "Strategic Portfolio Pack",
+        "subtitle": "",
         "paragraphs": [],
         "bullets": [
           "Demand management",
@@ -239,6 +200,7 @@
       {
         "type": "block",
         "title": "Agile Readiness Pack",
+        "subtitle": "",
         "paragraphs": [
           "Our modular approach allows organizations to begin with their highest-priority capabilities while expanding the platform over time without redesigning existing solutions."
         ],
@@ -252,12 +214,7 @@
       {
         "type": "block",
         "title": "Our Implementation Methodology",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "type": "block",
-        "title": "Every implementation follows a proven delivery framework that includes",
+        "subtitle": "Every implementation follows a proven delivery framework that includes",
         "paragraphs": [],
         "bullets": [
           "Discovery and business assessment",
@@ -271,8 +228,10 @@
         ]
       }
     ],
-    "closing": "Delivering Successful Digital Transformation with Clarity & Rally Albatroz helps organizations successfully implement Broadcom Clarity PPM and Rally through a structured, business-focused approach that combines deep product expertise, industry best practices, and proven delivery methodologies. Our implementations enable organizations to improve governance, optimize resource utilization, strengthen financial control, and accelerate strategic decision-making while maximizing the long-term value of their Project Portfolio Management investment."
-  },
+    "closingTitle": "Delivering Successful Digital Transformation with Clarity & Rally",
+    "closing": "Albatroz helps organizations successfully implement Broadcom Clarity PPM and Rally through a structured, business-focused approach that combines deep product expertise, industry best practices, and proven delivery methodologies. Our implementations enable organizations to improve governance, optimize resource utilization, strengthen financial control, and accelerate strategic decision-making while maximizing the long-term value of their Project Portfolio Management investment."
+  }
+},
   "installations-upgrades": {
     "slug": "installations-upgrades",
     "subtitle": "Upgrade to the Latest Version of Clarity with Confidence",
