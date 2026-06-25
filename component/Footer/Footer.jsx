@@ -61,6 +61,7 @@ const otherLinks = [
   { label: "Enterprise IT Automation", href: "/project" },
   // { label: "Project Management as a Service", href: "/project-management" },
   { label: "Clarity", href: "/project" },
+  { label: "Clarity Services", href: "/clarity/services" },
   // { label: "Enterprise IT Automation", href: "/project" },
   { label: "Automic Automation", href: "/project" },
   { label: "Stonebranch UAC", href: "/project" },
