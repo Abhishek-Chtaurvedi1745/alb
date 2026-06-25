@@ -21,6 +21,17 @@ const fadeConfig = {
       </>
     ),
   },
+  all: {
+    mask: "[mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.95)_72%,transparent_100%)]",
+    overlays: (
+      <>
+        <div className="absolute inset-y-0 left-0 w-[32%] bg-gradient-to-r from-black via-black/75 to-transparent" />
+        <div className="absolute inset-y-0 right-0 w-[28%] bg-gradient-to-l from-black via-black/75 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black via-black/80 to-transparent sm:h-24" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black via-black/80 to-transparent sm:h-24" />
+      </>
+    ),
+  },
 };
 
 export default function BlendedSectionImage({

@@ -96,33 +96,30 @@ function page() {
   };
   return (
     <div>
-      <section className="bg-[#000000] py-16 px-6 mt-[83px]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <section className="mt-[83px] bg-black px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:gap-10">
 
-   
-        <div className="w-full ">
-          <h2 className="text-3xl md:text-[45px] font-bold text-[#FFFFFF] mb-4">
-            Project Portfolio  <span className="text-[#FF403A]"><br />  
-secure AI into your PMO? </span>
+        <div className="w-full">
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-[45px]">
+            Project Portfolio{" "}
+            <span className="text-[#FF403A]">
+              <br />
+              secure AI into your PMO?
+            </span>
           </h2>
 
-          <p className="text-[20px] text-[#FFFFFF] mb-6">
-            From portfolio planning to automation and analytics,
-we help organizations manage work with structure,
-visibility and control.
+          <p className="mb-6 text-base text-white sm:text-lg md:text-[20px]">
+            From portfolio planning to automation and analytics, we help
+            organizations manage work with structure, visibility and control.
           </p>
-          <p className="text-[#FFFFFF] text-upercase text-[24px]">Talk to Our Team</p>
-          {/* <button className="px-6 py-3 bg-[#FF403A] transition text-[#FFFFFF] text-[25px] mt-[28px] font-semibold cursor-pointer rounded-lg">
-Get my AI readiness report
-          </button> */}
+          <p className="text-lg text-white uppercase sm:text-[24px]">Talk to Our Team</p>
         </div>
 
-      
-        <div className="w-full flex justify-center">
-          <img
+        <div className="w-full">
+          <BlendedSectionImage
             src="/images/ppm.png"
-            alt="Contact"
-            className="rounded-xl shadow-lg w-full "
+            alt="Project Portfolio Management"
+            fade="all"
           />
         </div>
 
