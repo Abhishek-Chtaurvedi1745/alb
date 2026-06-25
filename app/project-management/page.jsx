@@ -4,6 +4,7 @@ import { Plus, X } from "lucide-react";
 import { useState } from "react";
 import PPMBenefitHoverCard from "@/section/ProjectManagement/PPMBenefitHoverCard";
 import { ppmBenefits } from "@/section/ProjectManagement/ppmBenefitsData";
+import BlendedSectionImage from "@/component/Media/BlendedSectionImage";
 
 const faqData = [
   {
@@ -95,48 +96,45 @@ function page() {
   };
   return (
     <div>
-      <section className="bg-[#000000] py-16 px-6 mt-[83px]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <section className="mt-[83px] bg-black px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:gap-10">
 
-   
-        <div className="w-full ">
-          <h2 className="text-3xl md:text-[45px] font-bold text-[#FFFFFF] mb-4">
-            Project Portfolio  <span className="text-[#FF403A]"><br />  
-secure AI into your PMO? </span>
+        <div className="w-full">
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-[45px]">
+            Project Portfolio{" "}
+            <span className="text-[#FF403A]">
+              <br />
+              secure AI into your PMO?
+            </span>
           </h2>
 
-          <p className="text-[20px] text-[#FFFFFF] mb-6">
-            From portfolio planning to automation and analytics,
-we help organizations manage work with structure,
-visibility and control.
+          <p className="mb-6 text-base text-white sm:text-lg md:text-[20px]">
+            From portfolio planning to automation and analytics, we help
+            organizations manage work with structure, visibility and control.
           </p>
-          <p className="text-[#FFFFFF] text-upercase text-[24px]">Talk to Our Team</p>
-          {/* <button className="px-6 py-3 bg-[#FF403A] transition text-[#FFFFFF] text-[25px] mt-[28px] font-semibold cursor-pointer rounded-lg">
-Get my AI readiness report
-          </button> */}
+          <p className="text-lg text-white uppercase sm:text-[24px]">Talk to Our Team</p>
         </div>
 
-      
-        <div className="w-full flex justify-center">
-          <img
+        <div className="w-full">
+          <BlendedSectionImage
             src="/images/ppm.png"
-            alt="Contact"
-            className="rounded-xl shadow-lg w-full "
+            alt="Project Portfolio Management"
+            fade="all"
           />
         </div>
 
       </div>
     </section>
-    <section className="bg-black pt-10 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-black px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-16 md:pb-20">
+      <div className="mx-auto max-w-6xl">
 
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-white text-3xl md:text-[40px] font-semibold mb-3 leading-tight">
+        <div className="mb-8 text-center sm:mb-10 md:mb-12">
+          <h2 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[40px]">
             Transformative Benefits of{" "}
             <span className="text-[#e02b20]">Implementing PPM</span>
           </h2>
-          <p className="text-[#FFFFFF] text-base mx-auto text-[20px] font-medium leading-relaxed">
+          <p className="mx-auto max-w-3xl text-sm font-medium leading-relaxed text-white sm:text-base md:text-[18px] lg:text-[20px]">
             Implementing modern Project and Portfolio Management (PPM) practices
             can yield several transformative benefits for organizations. Here are
             some key advantages
@@ -144,7 +142,7 @@ Get my AI readiness report
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-10">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
           {ppmBenefits.map((benefit) => (
             <PPMBenefitHoverCard key={benefit.title} benefit={benefit} />
           ))}
@@ -353,45 +351,34 @@ Get my AI readiness report
           </div>
 
           {/* Right Side */}
-          <div className="">
-            <img
+          <div className="relative">
+            <BlendedSectionImage
               src="/images/newcrt.png"
               alt="Strategic Portfolio"
-              className="w-full "
+              fade="left"
             />
-
-          
           </div>
 
         </div>
       </div>
     </section>
-    <section className="bg-black pt-15 overflow-hidden ">
-  <div className=" mx-auto max-w-[1600px]">
+    <section className="overflow-hidden bg-black px-4 pt-10 sm:px-6 md:pt-14">
+  <div className="mx-auto max-w-[1600px]">
 
-    <div className="grid lg:grid-cols-[55%_45%] items-start gap-10">
+    <div className="grid items-center gap-8 lg:grid-cols-[55%_45%] lg:gap-10">
 
       {/* LEFT IMAGE */}
       <div className="relative">
-
-        {/* Glow */}
-        {/* <div className="absolute inset-0 bg-[#FF403A]/10 blur-[120px]"></div> */}
-
-        <img
+        <BlendedSectionImage
           src="/images/crt1.png"
-          alt=""
-          className="
-            relative
-            w-full
-            object-contain
-            animate-[float_6s_ease-in-out_infinite]
-          "
+          alt="Digital Product Management"
+          fade="right"
+          animate
         />
-
       </div>
 
       {/* RIGHT CONTENT */}
-      <div className="pt-2 pr-[50px]">
+      <div className="pt-2 lg:pr-8 xl:pr-[50px]">
 
         <h2 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
           Digital Product{" "}
@@ -442,16 +429,13 @@ Get my AI readiness report
 
   </div>
 </section>
- <section className="bg-black py-15 overflow-hidden pt-20 ">
-  <div className=" mx-auto max-w-[1600px]">
+ <section className="overflow-hidden bg-black px-4 py-10 pt-16 sm:px-6 md:pt-20">
+  <div className="mx-auto max-w-[1600px]">
 
-    <div className="grid lg:grid-cols-[55%_45%] items-start gap-10">
+    <div className="grid items-center gap-8 lg:grid-cols-[45%_55%] lg:gap-10">
 
-      {/* LEFT IMAGE */}
-     
-
-      {/* RIGHT CONTENT */}
-      <div className="pt-2 pl-[50px]">
+      {/* LEFT CONTENT */}
+      <div className="order-2 pt-2 lg:order-1 lg:pl-8 xl:pl-[50px]">
 
         <h2 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
           Value Stream {" "}
@@ -496,22 +480,13 @@ across an organization to deliver value to customers efficiently. It encompasses
         </div>
 
       </div>
-       <div className="relative">
 
-        {/* Glow */}
-        {/* <div className="absolute inset-0 bg-[#FF403A]/10 blur-[120px]"></div> */}
-
-        <img
+      <div className="relative order-1 lg:order-2">
+        <BlendedSectionImage
           src="/images/newcrt1.png"
-          alt=""
-          className="
-            relative
-            w-full
-            object-contain
-            
-          "
+          alt="Value Stream Management"
+          fade="left"
         />
-
       </div>
 
     </div>
