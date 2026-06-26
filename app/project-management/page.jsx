@@ -1,41 +1,45 @@
+"use client";
 import React from 'react'
-import Faqsection from "../Home/Faq"
-const benefits = [
+import { Plus, X } from "lucide-react";
+import { useState } from "react";
+import PPMBenefitHoverCard from "@/section/ProjectManagement/PPMBenefitHoverCard";
+import { ppmBenefits } from "@/section/ProjectManagement/ppmBenefitsData";
+import BlendedSectionImage from "@/component/Media/BlendedSectionImage";
+
+const faqData = [
   {
-    icon: "/images/1.svg",
-    title: "Enhanced Project Prioritization & Alignment",
+    question:
+      "What is Project Portfolio Management (PPM) and how does Albatroz help?",
+    answer:
+      "Project Portfolio Management (PPM) helps organizations manage multiple projects efficiently by aligning them with business goals. Albatroz provides structured PPM solutions to improve visibility, prioritize the right projects, and optimize resource allocation.",
   },
+
   {
-    icon: "/images/2.svg",
-    title: "Improved Decision Making & Visibility",
+    question:
+      "What kind of automation solutions does Albatroz offer?",
+    answer:
+      "Albatroz provides enterprise automation solutions including workflow automation, IT process automation, cloud automation, and operational efficiency tools tailored for businesses.",
   },
+
   {
-     icon: "/images/3.svg",
-    title: "Resource Optimization & Capacity Planning",
+    question:
+      "What is Project Management as a Service (PMaaS)?",
+    answer:
+      "PMaaS allows organizations to outsource project management expertise and processes, helping businesses improve delivery timelines and project success rates.",
   },
+
   {
-     icon: "/images/4.svg",
-    title: "Adaptability to Agile & Hybrid Methodologies",
+    question:
+      "How does Business Intelligence (BI) benefit my organization?",
+    answer:
+      "Business Intelligence helps organizations make data-driven decisions using dashboards, analytics, reporting tools, and predictive insights.",
   },
+
   {
-     icon: "/images/5.svg",
-    title: "Cost Control & Budget Management",
-  },
-  {
-    icon: "/images/6.svg",
-    title: "Enhanced Collaboration & Communication",
-  },
-  {
-     icon: "/images/7.svg",
-    title: "Risk Mitigation & Issue Management",
-  },
-  {
-     icon: "/images/8.svg",
-    title: "Faster Time-to-Market & Delivery",
-  },
-  {
-     icon: "/images/9.svg",
-    title: "Strategic Portfolio Optimization",
+    question:
+      "Can Albatroz customize these solutions for my business?",
+    answer:
+      "Yes, Albatroz provides customized enterprise solutions tailored according to business size, goals, industry requirements, and operational workflows.",
   },
 ];
 
@@ -48,7 +52,7 @@ const features = [
 
 const features1 = [
   {
-    title: "Product Vision and Strategy.",
+    title: "Product Vision and Strategy",
     desc: "Defining the long-term vision and strategy for digital products, aligning them with market needs and company objectives.",
   },
   {
@@ -85,50 +89,52 @@ const features2 = [
 ];
 
 function page() {
+  const [active, setActive] = useState(0);
+
+  const toggleFAQ = (index) => {
+    setActive(active === index ? null : index);
+  };
   return (
     <div>
-      <section className="bg-[#000000] py-16 px-6 mt-[83px]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <section className="mt-[83px] bg-black px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:gap-10">
 
-   
-        <div className="w-full ">
-          <h2 className="text-3xl md:text-[45px] font-bold text-[#FFFFFF] mb-4">
-            Project Portfolio  <span className="text-[#FF403A]"><br />  
-secure AI into your PMO? </span>
+        <div className="w-full">
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-[45px]">
+            Project Portfolio{" "}
+            <span className="text-[#FF403A]">
+              <br />
+              secure AI into your PMO?
+            </span>
           </h2>
 
-          <p className="text-[20px] text-[#FFFFFF] mb-6">
-            From portfolio planning to automation and analytics,
-we help organizations manage work with structure,
-visibility and control.
+          <p className="mb-6 text-base text-white sm:text-lg md:text-[20px]">
+            From portfolio planning to automation and analytics, we help
+            organizations manage work with structure, visibility and control.
           </p>
-          <p className="text-[#FFFFFF] text-upercase text-[24px]">Talk to Our Team</p>
-          <button className="px-6 py-3 bg-[#FF403A] transition text-[#FFFFFF] text-[25px] mt-[28px] font-semibold cursor-pointer rounded-lg">
-Get my AI readiness report
-          </button>
+          <p className="text-lg text-white uppercase sm:text-[24px]">Talk to Our Team</p>
         </div>
 
-      
-        <div className="w-full flex justify-center">
-          <img
+        <div className="w-full">
+          <BlendedSectionImage
             src="/images/ppm.png"
-            alt="Contact"
-            className="rounded-xl shadow-lg w-full "
+            alt="Project Portfolio Management"
+            fade="all"
           />
         </div>
 
       </div>
     </section>
-    <section className="bg-black pt-10 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-black px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-16 md:pb-20">
+      <div className="mx-auto max-w-6xl">
 
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-white text-3xl md:text-[40px] font-semibold mb-3 leading-tight">
+        <div className="mb-8 text-center sm:mb-10 md:mb-12">
+          <h2 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[40px]">
             Transformative Benefits of{" "}
             <span className="text-[#e02b20]">Implementing PPM</span>
           </h2>
-          <p className="text-[#FFFFFF] text-base mx-auto text-[20px] font-medium leading-relaxed">
+          <p className="mx-auto max-w-3xl text-sm font-medium leading-relaxed text-white sm:text-base md:text-[18px] lg:text-[20px]">
             Implementing modern Project and Portfolio Management (PPM) practices
             can yield several transformative benefits for organizations. Here are
             some key advantages
@@ -136,33 +142,9 @@ Get my AI readiness report
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="flex flex-col gap-4">
-              {/* Icon */}
-              <div className="mb-2">
-                <img src={benefit.icon} alt="" />
-              </div>
-
-              {/* Title */}
-              <h3 className="text-white text-[25px] font-medium leading-snug">
-                {benefit.title}
-              </h3>
-
-              {/* Divider — white line with red accent */}
-              <div className="flex items-center gap-1">
-                <div className="w-16 h-px bg-white"></div>
-                <div className="w-4 h-px bg-[#e02b20]"></div>
-              </div>
-
-              {/* View More */}
-              <a
-                href="#"
-                className="text-[#FF403A] text-[18px] font-medium hover:opacity-75 transition-opacity w-fit"
-              >
-                View More
-              </a>
-            </div>
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
+          {ppmBenefits.map((benefit) => (
+            <PPMBenefitHoverCard key={benefit.title} benefit={benefit} />
           ))}
         </div>
 
@@ -195,10 +177,40 @@ Get my AI readiness report
             {/* Interactive PPM Demos */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-9 h-9 rounded-full bg-[#FF403A] flex items-center justify-center flex-shrink-0">
-                  <svg className="w-4 h-4" viewBox="0 0 16 16" fill="white">
-                    <path d="M5 3l9 5-9 5V3z"/>
+                <div className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FF403A] to-[#d9322d] shadow-lg shadow-[#FF403A]/25">
+                  <svg
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      x="3"
+                      y="4"
+                      width="18"
+                      height="12"
+                      rx="2"
+                      stroke="white"
+                      strokeWidth="1.6"
+                    />
+                    <path
+                      d="M9 20h6M12 16v4"
+                      stroke="white"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                    />
+                    <rect x="7" y="11" width="2.2" height="3" rx="0.4" fill="white" opacity="0.85" />
+                    <rect x="10.9" y="9" width="2.2" height="5" rx="0.4" fill="white" />
+                    <rect x="14.8" y="7" width="2.2" height="7" rx="0.4" fill="white" />
+                    <path
+                      d="M17.2 6.2l2.3 4.8-2.1-1.1-1.2 1.9z"
+                      fill="white"
+                    />
                   </svg>
+                  <span className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-black bg-white">
+                    <span className="absolute inset-0 animate-ping rounded-full bg-[#FF403A] opacity-60" />
+                    <span className="absolute inset-0.5 rounded-full bg-[#FF403A]" />
+                  </span>
                 </div>
                 <h3 className="text-white text-[30px] font-semibold">Interactive PPM Demos</h3>
               </div>
@@ -236,12 +248,47 @@ Get my AI readiness report
             {/* Expert PPM Consultations */}
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 bg-[#FF403A]/15 border border-[#FF403A]/40 rounded flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5" viewBox="0 0 20 20" fill="none">
-                    <rect x="2" y="5" width="16" height="11" rx="1.5" stroke="#FF403A" strokeWidth="1.5"/>
-                    <path d="M6 5V4a4 4 0 018 0v1" stroke="#FF403A" strokeWidth="1.5" strokeLinecap="round"/>
-                    <path d="M7 11h6M7 13.5h4" stroke="#FF403A" strokeWidth="1.2" strokeLinecap="round"/>
+                <div className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FF403A] to-[#d9322d] shadow-lg shadow-[#FF403A]/25">
+                  <svg
+                    className="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      x="3"
+                      y="8"
+                      width="18"
+                      height="12"
+                      rx="2"
+                      stroke="white"
+                      strokeWidth="1.6"
+                    />
+                    <path
+                      d="M8 8V6.5a4 4 0 018 0V8"
+                      stroke="white"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                    />
+                    <path d="M3 13h18" stroke="white" strokeWidth="1.6" />
+                    <path
+                      d="M8 16.5h2.5M13.5 16.5H16"
+                      stroke="white"
+                      strokeWidth="1.4"
+                      strokeLinecap="round"
+                    />
+                    <circle cx="18" cy="5.5" r="2.2" stroke="white" strokeWidth="1.4" />
+                    <path
+                      d="M15.8 9.8c.45-1.1 1.35-1.8 2.2-1.8s1.75.7 2.2 1.8"
+                      stroke="white"
+                      strokeWidth="1.2"
+                      strokeLinecap="round"
+                    />
                   </svg>
+                  <span className="absolute -top-0.5 -right-0.5 h-2.5 w-2.5 rounded-full border-2 border-black bg-white">
+                    <span className="absolute inset-0 animate-ping rounded-full bg-[#FF403A] opacity-60" />
+                    <span className="absolute inset-0.5 rounded-full bg-[#FF403A]" />
+                  </span>
                 </div>
                 <h3 className="text-white text-[30px] font-semibold">Expert PPM Consultations</h3>
               </div>
@@ -304,45 +351,34 @@ Get my AI readiness report
           </div>
 
           {/* Right Side */}
-          <div className="">
-            <img
+          <div className="relative">
+            <BlendedSectionImage
               src="/images/newcrt.png"
               alt="Strategic Portfolio"
-              className="w-full "
+              fade="left"
             />
-
-          
           </div>
 
         </div>
       </div>
     </section>
-    <section className="bg-black pt-15 overflow-hidden">
-  <div className=" mx-auto max-w-[1600px]">
+    <section className="overflow-hidden bg-black px-4 pt-10 sm:px-6 md:pt-14">
+  <div className="mx-auto max-w-[1600px]">
 
-    <div className="grid lg:grid-cols-[55%_45%] items-start gap-10">
+    <div className="grid items-center gap-8 lg:grid-cols-[55%_45%] lg:gap-10">
 
       {/* LEFT IMAGE */}
       <div className="relative">
-
-        {/* Glow */}
-        {/* <div className="absolute inset-0 bg-[#FF403A]/10 blur-[120px]"></div> */}
-
-        <img
+        <BlendedSectionImage
           src="/images/crt1.png"
-          alt=""
-          className="
-            relative
-            w-full
-            object-contain
-            animate-[float_6s_ease-in-out_infinite]
-          "
+          alt="Digital Product Management"
+          fade="right"
+          animate
         />
-
       </div>
 
       {/* RIGHT CONTENT */}
-      <div className="pt-2 pr-[50px]">
+      <div className="pt-2 lg:pr-8 xl:pr-[50px]">
 
         <h2 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
           Digital Product{" "}
@@ -393,16 +429,13 @@ Get my AI readiness report
 
   </div>
 </section>
- <section className="bg-black py-15 overflow-hidden pt-20">
-  <div className=" mx-auto max-w-[1600px]">
+ <section className="overflow-hidden bg-black px-4 py-10 pt-16 sm:px-6 md:pt-20">
+  <div className="mx-auto max-w-[1600px]">
 
-    <div className="grid lg:grid-cols-[55%_45%] items-start gap-10">
+    <div className="grid items-center gap-8 lg:grid-cols-[45%_55%] lg:gap-10">
 
-      {/* LEFT IMAGE */}
-     
-
-      {/* RIGHT CONTENT */}
-      <div className="pt-2 pl-[50px]">
+      {/* LEFT CONTENT */}
+      <div className="order-2 pt-2 lg:order-1 lg:pl-8 xl:pl-[50px]">
 
         <h2 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
           Value Stream {" "}
@@ -447,22 +480,13 @@ across an organization to deliver value to customers efficiently. It encompasses
         </div>
 
       </div>
-       <div className="relative">
 
-        {/* Glow */}
-        {/* <div className="absolute inset-0 bg-[#FF403A]/10 blur-[120px]"></div> */}
-
-        <img
+      <div className="relative order-1 lg:order-2">
+        <BlendedSectionImage
           src="/images/newcrt1.png"
-          alt=""
-          className="
-            relative
-            w-full
-            object-contain
-            
-          "
+          alt="Value Stream Management"
+          fade="left"
         />
-
       </div>
 
     </div>
@@ -480,7 +504,7 @@ across an organization to deliver value to customers efficiently. It encompasses
         </div>
 
         {/* Line divider directly beneath the button */}
-        <hr className="border-t border-gray-800 mb-10 w-full" />
+        {/* <hr className="border-t border-gray-800 mb-10 w-full" /> */}
 
         {/* Content Paragraph */}
         {/* <p className="text-center text-[#FFFFFF] text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
@@ -489,11 +513,99 @@ across an organization to deliver value to customers efficiently. It encompasses
           agility and competitiveness in today's rapidly evolving business landscape. 
           Integrating these practices can lead to more streamlined operations, improved 
           decision-making, and ultimately, better outcomes for the organization.
-        </p> */}
-        
+        </p>
+         */}
       </div>
     </section>
-    <Faqsection />
+    <section className="w-full bg-black  py-3 md:py-13 pb-13 px-4 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
+
+          {/* LEFT SIDE */}
+          <div className="flex flex-col items-center lg:items-center">
+
+           <h2 className="text-white text-3xl md:text-[40px] font-semibold leading-tight mt-0 md:mt-0 mb-7">
+  Frequently 
+  <br className="hidden md:block" /> 
+  
+    Asked
+  <br className="hidden md:block" />
+  <span className="text-[#ff403a]"> Questions </span>
+</h2>
+            {/* IMAGE */}
+            <div className="mt-10 hidden md:block">
+              <img
+                src="images/faqs.png"
+                alt=""
+                className="w-full object-contain h-[400px]"
+              />
+            </div>
+
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="space-y-5">
+
+            {faqData.map((item, index) => (
+              <div
+                key={index}
+                className={`border rounded-2xl overflow-hidden transition-all duration-500
+                ${
+                  active === index
+                    ? "border-[#ff403a] bg-[#111111]"
+                    : "border-gray-700 bg-black"
+                }`}
+              >
+
+                {/* QUESTION */}
+                <button
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex items-center justify-between text-left p-6"
+                >
+
+                  <h3 className="text-white text-[16px] md:text-xl font-medium pr-5">
+                    {item.question}
+                  </h3>
+
+                  <span className="text-white flex-shrink-0">
+                    {active === index ? (
+                      <X size={24} className="text-[#ff403a]" />
+                    ) : (
+                      <Plus size={24} />
+                    )}
+                  </span>
+
+                </button>
+
+                {/* ANSWER */}
+                <div
+                  className={`grid transition-all duration-500 ease-in-out
+                  ${
+                    active === index
+                      ? "grid-rows-[1fr] opacity-100"
+                      : "grid-rows-[0fr] opacity-0"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+
+                    <p className="text-[#FFFFFF] text-[12px] md:text-[14px] leading-relaxed px-6 pb-6 text-sm md:text-base">
+                      {item.answer}
+                    </p>
+
+                  </div>
+                </div>
+
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  
     </div>
   )
 }
