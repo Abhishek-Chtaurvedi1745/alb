@@ -4,7 +4,7 @@ export const aiServicesSection = {
   underlineWord: "AI",
   description:
     "Intelligent solutions to automate processes and improve business efficiency.",
-  href: "/contact-us",
+  href: "/ai-services",
 };
 
 export const solutionsMegaMenu = [

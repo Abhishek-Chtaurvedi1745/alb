@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
 const services = [
@@ -28,6 +29,7 @@ const services = [
   {
     icon: "/images/md3.svg",
     title: "AI Services for Enterprise",
+    href: "/ai-services",
     items: [
       "LLM Engineering & Prompt Design",
       "Multi-Agent Orchestration",
@@ -42,13 +44,13 @@ function ServiceCard({ service, index, inView }) {
   const [hovered, setHovered] = useState(false);
   const active = hovered || service.featured;
 
-  return (
+  const card = (
     <article
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       className={`group relative transition-all duration-700 ease-out ${
         inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-      }`}
+      } ${service.href ? "cursor-pointer" : ""}`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       {/* Outer glow */}
@@ -159,6 +161,16 @@ function ServiceCard({ service, index, inView }) {
       </div>
     </article>
   );
+
+  if (service.href) {
+    return (
+      <Link href={service.href} className="block h-full">
+        {card}
+      </Link>
+    );
+  }
+
+  return card;
 }
 
 export default function WhatWeDo() {

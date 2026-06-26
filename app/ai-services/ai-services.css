@@ -1,0 +1,83 @@
+/* Minimal helpers — hero carousel + flight-path background only */
+
+.ai-hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  pointer-events: none;
+}
+
+.ai-hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+  pointer-events: auto;
+  position: relative;
+}
+
+.ai-hero-dots button.active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ff403a;
+  animation: ai-dot-progress 6.5s linear forwards;
+}
+
+@keyframes ai-dot-progress {
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+.ai-flight-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.45;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.ai-flight-line {
+  fill: none;
+  stroke: url(#aiFlightGradient);
+  stroke-width: 1.5;
+  stroke-dasharray: 10 16;
+  opacity: 0.35;
+  animation: ai-flight-dash 28s linear infinite;
+}
+
+@keyframes ai-flight-dash {
+  to {
+    stroke-dashoffset: -260;
+  }
+}
+
+.ai-flight-marker {
+  filter: drop-shadow(0 0 14px rgba(255, 64, 58, 0.85));
+}
+
+@media (max-width: 1023px) {
+  .ai-flight-svg {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-hero-slide,
+  .ai-hero-dots button.active::after,
+  .ai-flight-line {
+    animation: none !important;
+    transition: none !important;
+  }
+}
