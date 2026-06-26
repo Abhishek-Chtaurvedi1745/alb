@@ -10,9 +10,9 @@ function SectionBlock({ section }) {
 
   const isNumbered = /^\d+\./.test(section.title);
 
-  const isWhySection =
-    section.title.toLowerCase().startsWith("why ") ||
-    section.subtitle?.toLowerCase().includes("enables organizations");
+ const isWhySection =
+  section.title.toLowerCase().startsWith("why ") ||
+  section.subtitle?.toLowerCase().includes("enables organizations");
 
   return (
     <article

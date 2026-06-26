@@ -381,7 +381,7 @@ export const clarityServicePages = {
     text: "At Albatroz, we combine deep Clarity expertise with proven implementation practices to deliver installations and upgrades that are secure, efficient, and future-ready. Our structured approach helps organizations modernize their Clarity environments with minimal business disruption while maximizing performance, user adoption, and long-term value."
   }
 },
-  "migration-to-modern-ux": {
+ "migration-to-modern-ux": {
     "slug": "migration-to-modern-ux",
     "title": "Migration to Modern UX",
     "image": "/images/clarity-services/migration-modern-ux.webp",
@@ -394,11 +394,7 @@ export const clarityServicePages = {
     "sections": [
       {
         "title": "Why Migrate to the Modern UX?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Migrating to the Modern UX enables organizations to",
+        "subtitle": "Migrating to the Modern UX enables organizations to:",
         "paragraphs": [],
         "bullets": [
           "Access the latest Clarity features and continuous product innovations",
@@ -413,99 +409,103 @@ export const clarityServicePages = {
       {
         "title": "Why Choose Albatroz?",
         "paragraphs": [
-          "Migrating from the Classic UI to the Modern UX is more than a technical upgrade\u2014it's a business transformation focused on improving user adoption and operational efficiency.",
+          "Migrating from the Classic UI to the Modern UX is more than a technical upgrade—it's a business transformation focused on improving user adoption and operational efficiency.",
           "The Modern UX is not a one-to-one replacement for Classic functionality. Successful migration requires careful analysis of existing configurations, thoughtful redesign of business processes, and strategic implementation planning.",
           "At Albatroz, we have successfully delivered multiple Classic-to-Modern UX migrations using both phased and enterprise-wide (\"big bang\") migration approaches. Our consultants combine deep Clarity expertise with proven migration methodologies to ensure a smooth transition with minimal disruption to ongoing business operations."
         ],
-        "bullets": [
-          "Our Modern UX Migration Approach"
-        ]
+        "bullets": []
+      },
+      {
+        "title": "Our Modern UX Migration Approach",
+        "paragraphs": [],
+        "bullets": []
       },
       {
         "title": "1. Discovery & Assessment",
+        "subtitle": "Every migration begins with a comprehensive assessment of your existing Clarity environment, including:",
         "paragraphs": [
-          "Every migration begins with a comprehensive assessment of your existing Clarity environment, including:",
+          "Based on this assessment, we define the optimal migration strategy aligned with your organizational goals."
+        ],
+        "bullets": [
           "Current Classic UI usage and business processes",
           "User personas and adoption patterns",
           "Existing configurations and customizations",
           "Workflows, portlets, and integrations",
-          "Business priorities and future requirements",
-          "Based on this assessment, we define the optimal migration strategy aligned with your organizational goals."
-        ],
-        "bullets": []
+          "Business priorities and future requirements"
+        ]
       },
       {
         "title": "2. Migration Strategy & Solution Design",
+        "subtitle": "Our consultants perform a detailed analysis to bridge the gap between Classic and Modern UX capabilities by:",
         "paragraphs": [
-          "Our consultants perform a detailed analysis to bridge the gap between Classic and Modern UX capabilities by:",
+          "Our goal is to maximize business value while minimizing disruption throughout the migration journey."
+        ],
+        "bullets": [
           "Conducting functional gap analysis",
           "Redesigning business processes for the Modern experience",
           "Reconfiguring blueprints, modules, and user experiences",
           "Prioritizing high-value business capabilities",
-          "Developing a phased or enterprise-wide migration roadmap",
-          "Our goal is to maximize business value while minimizing disruption throughout the migration journey."
-        ],
-        "bullets": []
+          "Developing a phased or enterprise-wide migration roadmap"
+        ]
       },
       {
         "title": "3. Automated Migration & Implementation",
+        "subtitle": "To accelerate migration and reduce manual effort, we leverage proven migration accelerators wherever applicable, including:",
         "paragraphs": [
-          "To accelerate migration and reduce manual effort, we leverage proven migration accelerators wherever applicable, including:",
+          "Automation shortens migration timelines, improves consistency, reduces implementation risk, and enables faster user adoption."
+        ],
+        "bullets": [
           "Blueprint migration utilities",
           "View migration tools",
           "Automated configuration migration",
           "User-specific settings migration",
-          "Modern UX configuration and optimization",
-          "Automation shortens migration timelines, improves consistency, reduces implementation risk, and enables faster user adoption."
-        ],
-        "bullets": []
+          "Modern UX configuration and optimization"
+        ]
       },
       {
         "title": "4. Testing & Validation",
-        "paragraphs": [
-          "Before production rollout, we conduct comprehensive testing to ensure the new Modern UX environment meets business expectations, including:",
+        "subtitle": "Before production rollout, we conduct comprehensive testing to ensure the new Modern UX environment meets business expectations, including:",
+        "paragraphs": [],
+        "bullets": [
           "Functional validation",
           "User Acceptance Testing (UAT)",
           "Workflow verification",
           "Integration testing",
           "Performance validation",
           "Production readiness assessment"
-        ],
-        "bullets": []
+        ]
       },
       {
         "title": "5. User Adoption & Change Management",
+        "subtitle": "Technology alone does not guarantee a successful migration. We focus on driving user adoption through structured change management initiatives, including:",
         "paragraphs": [
-          "Technology alone does not guarantee a successful migration. We focus on driving user adoption through structured change management initiatives, including:",
+          "Our adoption-first approach helps users embrace the Modern UX quickly and confidently."
+        ],
+        "bullets": [
           "Establishing business champions and power-user networks",
           "Role-based end-user training",
           "Communication and awareness campaigns",
           "Knowledge transfer sessions",
-          "End-user support during rollout",
-          "Our adoption-first approach helps users embrace the Modern UX quickly and confidently."
-        ],
-        "bullets": []
+          "End-user support during rollout"
+        ]
       },
       {
         "title": "6. Continuous Improvement",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Following deployment, we continue to support organizations by",
-        "paragraphs": [],
+        "subtitle": "Following deployment, we continue to support organizations by:",
+        "paragraphs": [
+          "This continuous improvement approach ensures your Modern UX environment evolves alongside your business."
+        ],
         "bullets": [
           "Collecting user feedback through workshops and surveys",
           "Refining configurations based on business needs",
           "Optimizing user experience",
           "Providing recommendations for future enhancements",
-          "Supporting ongoing adoption and platform maturity",
-          "This continuous improvement approach ensures your Modern UX environment evolves alongside your business.",
-          "Our Migration Methodology"
+          "Supporting ongoing adoption and platform maturity"
         ]
       },
       {
-        "title": "Every Modern UX migration follows a proven framework that includes",
+        "title": "Our Migration Methodology",
+        "subtitle": "Every Modern UX migration follows a proven framework that includes:",
         "paragraphs": [],
         "bullets": [
           "Comprehensive discovery and assessment",
@@ -524,7 +524,7 @@ export const clarityServicePages = {
       "text": "At Albatroz, we help organizations successfully transition from the Classic UI to the Modern UX with confidence. By combining technical expertise, automation, and a user-centric adoption strategy, we deliver migrations that minimize business disruption, accelerate user adoption, and maximize the long-term value of your Clarity investment."
     }
   },
-  "integration": {
+ "integration": {
     "slug": "integration",
     "title": "Integration",
     "image": "/images/clarity-services/integration.webp",
@@ -537,11 +537,7 @@ export const clarityServicePages = {
     "sections": [
       {
         "title": "Why Integrate Clarity?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Enterprise integrations enable organizations to",
+        "subtitle": "Enterprise integrations enable organizations to",
         "paragraphs": [],
         "bullets": [
           "Eliminate duplicate data entry across systems",
@@ -555,38 +551,35 @@ export const clarityServicePages = {
       },
       {
         "title": "Why Choose Albatroz?",
+        "subtitle": "Our Integration Services",
         "paragraphs": [
           "Successful enterprise integrations require more than connecting two applications\u2014they require a deep understanding of Clarity, enterprise architecture, security, and business processes.",
           "Our consultants have extensive experience designing and implementing enterprise integrations for organizations across multiple industries. We leverage industry best practices and our proprietary Integration Framework to simplify integration development, improve maintainability, and accelerate deployment while minimizing operational risk."
         ],
-        "bullets": [
-          "Our Integration Services"
-        ]
+        "bullets": []
       },
       {
         "title": "1. Integration Assessment & Solution Design",
+        "subtitle": "Every integration engagement begins with a detailed assessment of your business and technical landscape, including:",
         "paragraphs": [
-          "Every integration engagement begins with a detailed assessment of your business and technical landscape, including:",
+          "Based on this assessment, we recommend the most suitable integration architecture and implementation approach."
+        ],
+        "bullets": [
           "Existing enterprise applications",
           "Integration requirements",
           "Data flow analysis",
           "Business process mapping",
           "Security and compliance considerations",
-          "Performance and scalability requirements",
-          "Based on this assessment, we recommend the most suitable integration architecture and implementation approach."
-        ],
-        "bullets": []
+          "Performance and scalability requirements"
+        ]
       },
       {
         "title": "2. API-Based Integrations",
+        "subtitle": "Our API integration services include",
         "paragraphs": [
-          "For real-time communication between Clarity and enterprise applications, we develop secure API integrations using Clarity's supported web services."
+          "For real-time communication between Clarity and enterprise applications, we develop secure API integrations using Clarity's supported web services.",
+          "API integrations are ideal for organizations requiring immediate data exchange and business process automation."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our API integration services include",
-        "paragraphs": [],
         "bullets": [
           "REST API integrations",
           "SOAP web service integrations",
@@ -594,27 +587,22 @@ export const clarityServicePages = {
           "Workflow-driven integrations",
           "Project and financial data updates",
           "Resource and user synchronization",
-          "Live reporting and status updates",
-          "API integrations are ideal for organizations requiring immediate data exchange and business process automation."
+          "Live reporting and status updates"
         ]
       },
       {
         "title": "3. File-Based Integrations",
+        "subtitle": "Typical use cases include",
         "paragraphs": [
-          "For high-volume data exchange, we implement robust batch integration solutions using scheduled file transfers and automated processing."
+          "For high-volume data exchange, we implement robust batch integration solutions using scheduled file transfers and automated processing.",
+          "This approach is highly effective for large-scale data movement while maintaining reliability and performance."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Typical use cases include",
-        "paragraphs": [],
         "bullets": [
           "Daily bulk data imports and exports",
           "Resource master synchronization",
           "Financial and transactional data exchange",
           "Legacy system integrations",
-          "Scheduled interface processing",
-          "This approach is highly effective for large-scale data movement while maintaining reliability and performance."
+          "Scheduled interface processing"
         ]
       },
       {
@@ -627,14 +615,10 @@ export const clarityServicePages = {
       },
       {
         "title": "5. Custom Integration Development",
+        "subtitle": "Our services include",
         "paragraphs": [
           "When standard interfaces are not sufficient, our team develops custom integration solutions tailored to your organization's unique business requirements."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our services include",
-        "paragraphs": [],
         "bullets": [
           "Custom API development",
           "Middleware integration",
@@ -646,46 +630,38 @@ export const clarityServicePages = {
       },
       {
         "title": "6. Integration Framework & Operational Management",
+        "subtitle": "Key capabilities include",
         "paragraphs": [
-          "To simplify enterprise integration management, Albatroz leverages its proprietary Integration Framework that enables centralized administration and operational visibility."
+          "To simplify enterprise integration management, Albatroz leverages its proprietary Integration Framework that enables centralized administration and operational visibility.",
+          "This framework reduces implementation effort while improving maintainability and operational efficiency."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Key capabilities include",
-        "paragraphs": [],
         "bullets": [
           "Easy attribute mapping and field configuration",
           "Transformation and validation rule management",
           "Automated notifications and error handling",
           "Centralized monitoring and troubleshooting",
           "Integration administration from within Clarity",
-          "Standardized operational dashboards and management portlets",
-          "This framework reduces implementation effort while improving maintainability and operational efficiency."
+          "Standardized operational dashboards and management portlets"
         ]
       },
       {
         "title": "7. Prebuilt Integration Solutions",
+        "subtitle": "Our solutions include ready-to-deploy integrations such as",
         "paragraphs": [
-          "To accelerate implementation timelines, we offer prebuilt integration plugins that provide immediate business value."
+          "To accelerate implementation timelines, we offer prebuilt integration plugins that provide immediate business value.",
+          "These reusable components significantly reduce deployment time while maintaining flexibility for future enhancements."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our solutions include ready-to-deploy integrations such as",
-        "paragraphs": [],
         "bullets": [
           "Resource and user synchronization",
           "Bulk resource import utilities",
           "File-based integration accelerators",
           "Configurable integration templates",
-          "Extensible web service connectors",
-          "These reusable components significantly reduce deployment time while maintaining flexibility for future enhancements.",
-          "Our Integration Methodology"
+          "Extensible web service connectors"
         ]
       },
       {
-        "title": "Every Clarity integration engagement follows a proven framework that includes",
+        "title": "Our Integration Methodology",
+        "subtitle": "Every Clarity integration engagement follows a proven framework that includes",
         "paragraphs": [],
         "bullets": [
           "Integration assessment and architecture design",
@@ -715,11 +691,7 @@ export const clarityServicePages = {
     "sections": [
       {
         "title": "Why Modernize Your Clarity Reporting?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Modern reporting enables organizations to",
+        "subtitle": "Modern reporting enables organizations to",
         "paragraphs": [],
         "bullets": [
           "Gain real-time visibility into projects, portfolios, resources, and finances",
@@ -733,38 +705,35 @@ export const clarityServicePages = {
       },
       {
         "title": "Why Choose Albatroz?",
+        "subtitle": "Our Reporting & Dashboard Services",
         "paragraphs": [
           "Reporting is more than creating charts\u2014it requires a deep understanding of Clarity's data model, reporting architecture, business processes, and user requirements.",
           "Our consultants have extensive experience delivering enterprise reporting solutions across Clarity environments. Whether you're implementing the Clarity Reporting Workspace, migrating legacy Jaspersoft reports, or developing executive dashboards, we provide end-to-end services that maximize reporting performance and business value."
         ],
-        "bullets": [
-          "Our Reporting & Dashboard Services"
-        ]
+        "bullets": []
       },
       {
         "title": "1. Reporting Assessment & Strategy",
+        "subtitle": "Every engagement begins with a comprehensive assessment of your reporting environment to understand:",
         "paragraphs": [
-          "Every engagement begins with a comprehensive assessment of your reporting environment to understand:",
+          "Based on this assessment, we define a reporting strategy aligned with your organization's business objectives."
+        ],
+        "bullets": [
           "Business reporting requirements",
           "Existing reports and dashboards",
           "User roles and reporting needs",
           "Reporting challenges and performance bottlenecks",
           "Data sources and reporting architecture",
-          "Governance and security requirements",
-          "Based on this assessment, we define a reporting strategy aligned with your organization's business objectives."
-        ],
-        "bullets": []
+          "Governance and security requirements"
+        ]
       },
       {
         "title": "2. Clarity Reporting Workspace Implementation",
+        "subtitle": "Our services include",
         "paragraphs": [
-          "Our consultants design and develop modern reporting solutions using the latest Clarity Reporting Workspace capabilities."
+          "Our consultants design and develop modern reporting solutions using the latest Clarity Reporting Workspace capabilities.",
+          "These reporting solutions provide greater visibility while improving reporting efficiency and user experience."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our services include",
-        "paragraphs": [],
         "bullets": [
           "Executive and operational dashboards",
           "Portfolio and project reporting",
@@ -774,20 +743,16 @@ export const clarityServicePages = {
           "Interactive drill-down reports",
           "Role-based reporting",
           "Scheduled and on-demand reports",
-          "Data model optimization",
-          "These reporting solutions provide greater visibility while improving reporting efficiency and user experience."
+          "Data model optimization"
         ]
       },
       {
         "title": "3. Jaspersoft Report Migration",
+        "subtitle": "Our migration approach includes",
         "paragraphs": [
-          "Organizations using legacy Jaspersoft reports can modernize their reporting environment through our structured migration services."
+          "Organizations using legacy Jaspersoft reports can modernize their reporting environment through our structured migration services.",
+          "Our proven methodology minimizes disruption while improving long-term maintainability and scalability."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our migration approach includes",
-        "paragraphs": [],
         "bullets": [
           "Assessment of existing Jaspersoft reports",
           "Report inventory and dependency analysis",
@@ -797,20 +762,16 @@ export const clarityServicePages = {
           "UI modernization",
           "Security and access control alignment",
           "Performance tuning and optimization",
-          "User training and transition support",
-          "Our proven methodology minimizes disruption while improving long-term maintainability and scalability."
+          "User training and transition support"
         ]
       },
       {
         "title": "4. Dashboard Development & Data Visualization",
+        "subtitle": "Our dashboard solutions include",
         "paragraphs": [
-          "We develop intuitive dashboards that transform complex project data into meaningful business insights."
+          "We develop intuitive dashboards that transform complex project data into meaningful business insights.",
+          "Our focus is on delivering visually compelling dashboards that support informed decision-making across all organizational levels."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our dashboard solutions include",
-        "paragraphs": [],
         "bullets": [
           "Executive portfolio dashboards",
           "Project health dashboards",
@@ -819,20 +780,15 @@ export const clarityServicePages = {
           "Risk and issue reporting",
           "Strategic KPI scorecards",
           "Interactive filtering and drill-down capabilities",
-          "Role-specific dashboards",
-          "Our focus is on delivering visually compelling dashboards that support informed decision-making across all organizational levels."
+          "Role-specific dashboards"
         ]
       },
       {
         "title": "5. Testing & Report Validation",
+        "subtitle": "Our validation process includes",
         "paragraphs": [
           "Every report and dashboard undergoes comprehensive quality assurance to ensure accuracy, reliability, and performance."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our validation process includes",
-        "paragraphs": [],
         "bullets": [
           "Data accuracy verification",
           "Functional testing",
@@ -845,8 +801,11 @@ export const clarityServicePages = {
       },
       {
         "title": "6. Deployment, Training & Continuous Support",
+        "subtitle": "Following implementation, we provide complete deployment assistance and user enablement services, including:",
         "paragraphs": [
-          "Following implementation, we provide complete deployment assistance and user enablement services, including:",
+          "Our support ensures your reporting environment continues to evolve alongside your business requirements."
+        ],
+        "bullets": [
           "Production deployment",
           "End-user training",
           "Knowledge transfer",
@@ -854,14 +813,12 @@ export const clarityServicePages = {
           "Ongoing reporting support",
           "Dashboard enhancements",
           "Performance optimization",
-          "Continuous reporting improvements",
-          "Our support ensures your reporting environment continues to evolve alongside your business requirements.",
-          "Our Reporting Methodology"
-        ],
-        "bullets": []
+          "Continuous reporting improvements"
+        ]
       },
       {
-        "title": "Every reporting engagement follows a structured framework that includes",
+        "title": "Our Reporting Methodology",
+        "subtitle": "Every reporting engagement follows a structured framework that includes",
         "paragraphs": [],
         "bullets": [
           "Reporting discovery and assessment",
@@ -878,8 +835,7 @@ export const clarityServicePages = {
       "title": "Delivering Actionable Insights with Clarity",
       "text": "At Albatroz, we help organizations unlock the full value of their Clarity investment through modern reporting and analytics solutions. By combining deep Clarity expertise with best practices in dashboard design, reporting architecture, and data visualization, we deliver scalable reporting solutions that improve decision-making, increase operational visibility, and empower business leaders with meaningful insights."
     }
-  },
-  "business-intelligence": {
+  },"business-intelligence": {
     "slug": "business-intelligence",
     "title": "Business Intelligence",
     "image": "/images/clarity-services/business-intelligence.webp",
@@ -892,11 +848,7 @@ export const clarityServicePages = {
     "sections": [
       {
         "title": "Why Invest in Business Intelligence?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Business Intelligence enables organizations to",
+        "subtitle": "Business Intelligence enables organizations to",
         "paragraphs": [],
         "bullets": [
           "Transform enterprise data into actionable insights",
@@ -910,38 +862,33 @@ export const clarityServicePages = {
       },
       {
         "title": "Why Choose Albatroz?",
+        "subtitle": "Our Business Intelligence Services",
         "paragraphs": [
           "At Albatroz, we combine business consulting expertise with deep Microsoft Power BI capabilities to deliver Business Intelligence solutions that drive measurable business outcomes.",
           "Our consultants work closely with stakeholders to understand reporting requirements, define meaningful KPIs, and build intuitive dashboards that support strategic and operational decision-making.",
           "Using our collaborative Show & Build methodology, we deliver solutions through regular demonstrations, continuous stakeholder feedback, and iterative development to ensure every dashboard aligns with business expectations."
         ],
-        "bullets": [
-          "Our Business Intelligence Services"
-        ]
+        "bullets": []
       },
       {
         "title": "1. BI Assessment & Strategy",
-        "paragraphs": [
-          "Every engagement begins with a comprehensive assessment of your analytics landscape, including:",
+        "subtitle": "Every engagement begins with a comprehensive assessment of your analytics landscape, including:",
+        "paragraphs": [],
+        "bullets": [
           "Business objectives and reporting requirements",
           "Existing reporting challenges",
           "Data sources and integrations",
           "KPI and performance measurement needs",
           "Data governance and security requirements",
           "Business Intelligence roadmap development"
-        ],
-        "bullets": []
+        ]
       },
       {
         "title": "2. Microsoft Power BI Implementation",
+        "subtitle": "Our implementation services include",
         "paragraphs": [
           "We design and implement enterprise-grade Power BI solutions that provide meaningful business insights."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our implementation services include",
-        "paragraphs": [],
         "bullets": [
           "Power BI workspace setup and configuration",
           "Dashboard and report development",
@@ -954,14 +901,10 @@ export const clarityServicePages = {
       },
       {
         "title": "3. Data Integration & Modeling",
+        "subtitle": "Services include",
         "paragraphs": [
           "Our consultants build optimized data models that ensure reporting accuracy, scalability, and performance."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Services include",
-        "paragraphs": [],
         "bullets": [
           "Data integration from multiple sources",
           "Data transformation using Power Query",
@@ -973,11 +916,7 @@ export const clarityServicePages = {
       },
       {
         "title": "4. Dashboard Development & Analytics",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "We develop business-focused dashboards that provide real-time visibility into",
+        "subtitle": "We develop business-focused dashboards that provide real-time visibility into",
         "paragraphs": [],
         "bullets": [
           "Project and portfolio performance",
@@ -991,46 +930,37 @@ export const clarityServicePages = {
       },
       {
         "title": "5. Show & Build Delivery Methodology",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Our collaborative Show & Build approach ensures successful project delivery through",
-        "paragraphs": [],
+        "subtitle": "Our collaborative Show & Build approach ensures successful project delivery through",
+        "paragraphs": [
+          "This methodology accelerates implementation while ensuring the final solution meets business expectations."
+        ],
         "bullets": [
           "Rapid dashboard prototyping",
           "Regular stakeholder demonstrations",
           "Continuous feedback and refinement",
           "Agile development cycles",
           "User validation and acceptance",
-          "Incremental feature delivery",
-          "This methodology accelerates implementation while ensuring the final solution meets business expectations."
+          "Incremental feature delivery"
         ]
       },
       {
         "title": "6. Deployment, Training & Support",
+        "subtitle": "Following implementation, we provide",
         "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Following implementation, we provide",
-        "paragraphs": [
+        "bullets": [
           "Production deployment",
           "End-user training",
           "Knowledge transfer",
           "Documentation",
           "Dashboard enhancements",
           "Performance optimization",
-          "Ongoing Power BI support",
-          "Our Business Intelligence Methodology"
-        ],
-        "bullets": []
+          "Ongoing Power BI support"
+        ]
       },
       {
-        "title": "Every engagement follows a proven framework that includes",
-        "paragraphs": [
-          "Albatroz helps organizations transform enterprise data into meaningful business insights through Microsoft Power BI. By combining business expertise with modern analytics and visualization capabilities, we deliver Business Intelligence solutions that improve decision-making, increase operational visibility, and maximize the value of your organizational data."
-        ],
+        "title": "Our Business Intelligence Methodology",
+        "subtitle": "Every engagement follows a proven framework that includes",
+        "paragraphs": [],
         "bullets": [
           "Discovery and business assessment",
           "BI strategy and solution design",
@@ -1047,7 +977,7 @@ export const clarityServicePages = {
       "text": "Albatroz helps organizations transform enterprise data into meaningful business insights through Microsoft Power BI. By combining business expertise with modern analytics and visualization capabilities, we deliver Business Intelligence solutions that improve decision-making, increase operational visibility, and maximize the value of your organizational data."
     }
   },
-  "technical-development": {
+ "technical-development": {
     "slug": "technical-development",
     "title": "Technical Development",
     "image": "/images/clarity-services/technical-development.webp",
@@ -1059,11 +989,7 @@ export const clarityServicePages = {
     "sections": [
       {
         "title": "Why Invest in Clarity Technical Development?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Custom technical solutions enable organizations to",
+        "subtitle": "Custom technical solutions enable organizations to",
         "paragraphs": [],
         "bullets": [
           "Automate repetitive business processes",
@@ -1077,24 +1003,20 @@ export const clarityServicePages = {
       },
       {
         "title": "Why Choose Albatroz?",
+        "subtitle": "Our Technical Development Services",
         "paragraphs": [
           "Technical development within Clarity requires deep expertise in the platform's architecture, configuration capabilities, process automation, integrations, and data model.",
           "Our experienced consultants deliver scalable, maintainable, and business-focused solutions that align with your organizational objectives while following Clarity best practices. From workflow automation to custom dashboards and large-scale data migration, we provide end-to-end technical services that help organizations unlock the full potential of Clarity."
         ],
-        "bullets": [
-          "Our Technical Development Services"
-        ]
-      },
-      {
-        "title": "1. Workflow Design & Process Automation",
-        "paragraphs": [
-          "We design and implement configurable workflows that automate critical business processes while improving governance and operational efficiency."
-        ],
         "bullets": []
       },
       {
-        "title": "Our workflow solutions include",
-        "paragraphs": [],
+        "title": "1. Workflow Design & Process Automation",
+        "subtitle": "Our workflow solutions include",
+        "paragraphs": [
+          "We design and implement configurable workflows that automate critical business processes while improving governance and operational efficiency.",
+          "Our workflow designs streamline decision-making, improve transparency, and ensure compliance with organizational policies."
+        ],
         "bullets": [
           "Demand approval workflows",
           "Project approval processes",
@@ -1103,20 +1025,16 @@ export const clarityServicePages = {
           "Resource request approvals",
           "Timesheet approval workflows",
           "Governance and compliance processes",
-          "Custom business process automation",
-          "Our workflow designs streamline decision-making, improve transparency, and ensure compliance with organizational policies."
+          "Custom business process automation"
         ]
       },
       {
         "title": "2. Custom Automation Development",
+        "subtitle": "Our automation services include",
         "paragraphs": [
-          "We develop intelligent automations that reduce manual effort and improve platform efficiency."
+          "We develop intelligent automations that reduce manual effort and improve platform efficiency.",
+          "These automations improve productivity while ensuring data accuracy and consistency across the Clarity environment."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our automation services include",
-        "paragraphs": [],
         "bullets": [
           "Bulk data processing",
           "Scheduled jobs and background processes",
@@ -1125,20 +1043,16 @@ export const clarityServicePages = {
           "Business rule automation",
           "Governance controls",
           "Housekeeping and maintenance activities",
-          "Exception handling and validation",
-          "These automations improve productivity while ensuring data accuracy and consistency across the Clarity environment."
+          "Exception handling and validation"
         ]
       },
       {
         "title": "3. Custom Portlets & Dashboards",
+        "subtitle": "Our solutions include",
         "paragraphs": [
-          "Our consultants develop interactive portlets and dashboards that provide real-time visibility into business performance."
+          "Our consultants develop interactive portlets and dashboards that provide real-time visibility into business performance.",
+          "These dashboards empower executives and business users with meaningful insights for faster, data-driven decision-making."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our solutions include",
-        "paragraphs": [],
         "bullets": [
           "Object-based portlets",
           "Dynamic query-based portlets",
@@ -1147,20 +1061,14 @@ export const clarityServicePages = {
           "Resource management dashboards",
           "Financial dashboards",
           "Grid and graphical visualizations",
-          "Export capabilities for Excel and PowerPoint",
-          "These dashboards empower executives and business users with meaningful insights for faster, data-driven decision-making."
+          "Export capabilities for Excel and PowerPoint"
         ]
       },
       {
         "title": "4. Data Migration Services",
+        "subtitle": "Our migration services include",
         "paragraphs": [
-          "We provide end-to-end data migration services that ensure a smooth transition from legacy systems into Clarity."
-        ],
-        "bullets": []
-      },
-      {
-        "title": "Our migration services include",
-        "paragraphs": [
+          "We provide end-to-end data migration services that ensure a smooth transition from legacy systems into Clarity.",
           "Using proven methodologies and migration accelerators, we help organizations reduce implementation risk while ensuring data quality and business continuity."
         ],
         "bullets": [
@@ -1176,14 +1084,10 @@ export const clarityServicePages = {
       },
       {
         "title": "5. Solution Testing & Quality Assurance",
+        "subtitle": "Our quality assurance process includes",
         "paragraphs": [
           "Every technical solution undergoes comprehensive validation before deployment."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our quality assurance process includes",
-        "paragraphs": [],
         "bullets": [
           "Functional testing",
           "Workflow validation",
@@ -1196,22 +1100,23 @@ export const clarityServicePages = {
       },
       {
         "title": "6. Deployment & Ongoing Support",
+        "subtitle": "Following implementation, we provide complete deployment and post-production support, including:",
         "paragraphs": [
-          "Following implementation, we provide complete deployment and post-production support, including:",
+          "Our continued support ensures your Clarity environment evolves alongside your business needs."
+        ],
+        "bullets": [
           "Production deployment",
           "Technical documentation",
           "Knowledge transfer",
           "User enablement",
           "Performance optimization",
           "Enhancement services",
-          "Ongoing maintenance and support",
-          "Our continued support ensures your Clarity environment evolves alongside your business needs.",
-          "Our Development Methodology"
-        ],
-        "bullets": []
+          "Ongoing maintenance and support"
+        ]
       },
       {
-        "title": "Every technical development engagement follows a structured framework that includes",
+        "title": "Our Development Methodology",
+        "subtitle": "Every technical development engagement follows a structured framework that includes",
         "paragraphs": [
           "Albatroz helps organizations extend the capabilities of Broadcom Clarity through scalable technical development services tailored to their business needs. By combining deep Clarity expertise with proven development methodologies, we deliver workflows, automations, dashboards, and data migration solutions that improve operational efficiency, strengthen governance, and maximize the long-term value of your Clarity investment."
         ],
@@ -1232,6 +1137,7 @@ export const clarityServicePages = {
       "text": "Albatroz helps organizations extend the capabilities of Broadcom Clarity through scalable technical development services tailored to their business needs. By combining deep Clarity expertise with proven development methodologies, we deliver workflows, automations, dashboards, and data migration solutions that improve operational efficiency, strengthen governance, and maximize the long-term value of your Clarity investment."
     }
   },
+
   "staff-augmentation": {
     "slug": "staff-augmentation",
     "title": "Staff Augmentation",
@@ -1244,11 +1150,7 @@ export const clarityServicePages = {
     "sections": [
       {
         "title": "Why Choose Staff Augmentation?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Our staff augmentation services help organizations",
+        "subtitle": "Our staff augmentation services help organizations",
         "paragraphs": [],
         "bullets": [
           "Quickly scale Clarity delivery teams",
@@ -1262,34 +1164,29 @@ export const clarityServicePages = {
       },
       {
         "title": "Why Choose Albatroz?",
+        "subtitle": "Our Staff Augmentation Services",
         "paragraphs": [
           "Albatroz offers a flexible staffing model that enables organizations to augment their internal teams with experienced Clarity professionals for short-term assignments, long-term engagements, managed services, and strategic transformation initiatives.",
           "Our consultants have hands-on experience across Clarity implementations, technical development, integrations, reporting, upgrades, Modern UX migration, and Application Maintenance & Support (AMS), allowing them to contribute effectively from day one."
         ],
-        "bullets": [
-          "Our Staff Augmentation Services"
-        ]
+        "bullets": []
       },
       {
         "title": "1. Project Implementation Support",
-        "paragraphs": [
-          "Our consultants work alongside your project teams to support successful Clarity implementations by providing expertise in:",
+        "subtitle": "Our consultants work alongside your project teams to support successful Clarity implementations by providing expertise in:",
+        "paragraphs": [],
+        "bullets": [
           "Business process analysis",
           "Functional configuration",
           "Technical development",
           "Solution implementation",
           "Testing and deployment",
           "User training and knowledge transfer"
-        ],
-        "bullets": []
+        ]
       },
       {
         "title": "2. Technical & Functional Expertise",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "We provide consultants with expertise across all major Clarity capabilities, including",
+        "subtitle": "We provide consultants with expertise across all major Clarity capabilities, including",
         "paragraphs": [],
         "bullets": [
           "Functional consulting",
@@ -1304,44 +1201,39 @@ export const clarityServicePages = {
       },
       {
         "title": "3. Production Support & AMS",
+        "subtitle": "Our support consultants strengthen your operational support teams through",
         "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Our support consultants strengthen your operational support teams through",
-        "paragraphs": [
+        "bullets": [
           "Level 2 and Level 3 production support",
           "Incident and problem management",
           "Root cause analysis",
           "Service request management",
           "Configuration and data support",
           "Continuous platform improvements"
-        ],
-        "bullets": []
+        ]
       },
       {
         "title": "4. Upgrade & Transformation Support",
+        "subtitle": "Our specialists assist organizations with",
         "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Our specialists assist organizations with",
-        "paragraphs": [
+        "bullets": [
           "Version upgrades",
           "Modern UX migration",
           "Platform modernization",
           "Business process optimization",
           "Enterprise transformation initiatives",
-          "Strategic roadmap execution",
-          "Consultant Profiles",
-          "We provide experienced professionals across multiple levels to match your project requirements.",
-          "Associate Consultant (0\u20132 Years)",
-          "Supports implementation activities under the guidance of senior consultants and architects."
-        ],
+          "Strategic roadmap execution"
+        ]
+      },
+      {
+        "title": "Consultant Profiles",
+        "subtitle": "We provide experienced professionals across multiple levels to match your project requirements.",
+        "paragraphs": [],
         "bullets": []
       },
       {
-        "title": "Typical responsibilities include",
+        "title": "Associate Consultant (0\u20132 Years)",
+        "subtitle": "Supports implementation activities under the guidance of senior consultants and architects. Typical responsibilities include:",
         "paragraphs": [],
         "bullets": [
           "Functional configuration",
@@ -1349,13 +1241,12 @@ export const clarityServicePages = {
           "Testing and validation",
           "Documentation",
           "Deployment assistance",
-          "Day-to-day project support",
-          "Consultant (2\u20135 Years)",
-          "Delivers functional and technical solutions while collaborating with business stakeholders and project teams."
+          "Day-to-day project support"
         ]
       },
       {
-        "title": "Typical responsibilities include",
+        "title": "Consultant (2\u20135 Years)",
+        "subtitle": "Delivers functional and technical solutions while collaborating with business stakeholders and project teams. Typical responsibilities include:",
         "paragraphs": [],
         "bullets": [
           "Functional implementation",
@@ -1363,13 +1254,12 @@ export const clarityServicePages = {
           "Business requirement analysis",
           "Configuration and customization",
           "Process implementation",
-          "Solution delivery",
-          "Senior Consultant (6\u201310 Years)",
-          "Leads complex implementation activities and provides technical leadership across projects."
+          "Solution delivery"
         ]
       },
       {
-        "title": "Typical responsibilities include",
+        "title": "Senior Consultant (6\u201310 Years)",
+        "subtitle": "Leads complex implementation activities and provides technical leadership across projects. Typical responsibilities include:",
         "paragraphs": [],
         "bullets": [
           "Solution design support",
@@ -1377,13 +1267,12 @@ export const clarityServicePages = {
           "Customer workshops",
           "Technical leadership",
           "Team mentoring",
-          "Functional and technical consulting",
-          "Solution Architect (15+ Years)",
-          "Provides strategic leadership for enterprise Clarity programs and digital transformation initiatives."
+          "Functional and technical consulting"
         ]
       },
       {
-        "title": "Typical responsibilities include",
+        "title": "Solution Architect (15+ Years)",
+        "subtitle": "Provides strategic leadership for enterprise Clarity programs and digital transformation initiatives. Typical responsibilities include:",
         "paragraphs": [],
         "bullets": [
           "Business analysis",
@@ -1393,13 +1282,12 @@ export const clarityServicePages = {
           "Stakeholder workshops",
           "User Acceptance Testing (UAT) support",
           "End-user training",
-          "Delivery governance",
-          "Support Consultant (1\u20135 Years)",
-          "Provides operational support to maintain platform stability and business continuity."
+          "Delivery governance"
         ]
       },
       {
-        "title": "Typical responsibilities include",
+        "title": "Support Consultant (1\u20135 Years)",
+        "subtitle": "Provides operational support to maintain platform stability and business continuity. Typical responsibilities include:",
         "paragraphs": [],
         "bullets": [
           "Level 2 and Level 3 support",
@@ -1407,13 +1295,12 @@ export const clarityServicePages = {
           "Issue troubleshooting",
           "Service request fulfillment",
           "Operational support",
-          "ITSM tool management",
-          "Senior Support Consultant (5+ Years)",
-          "Manages complex production support environments and drives continuous operational improvements."
+          "ITSM tool management"
         ]
       },
       {
-        "title": "Typical responsibilities include",
+        "title": "Senior Support Consultant (5+ Years)",
+        "subtitle": "Manages complex production support environments and drives continuous operational improvements. Typical responsibilities include:",
         "paragraphs": [],
         "bullets": [
           "Advanced incident resolution",
@@ -1421,12 +1308,12 @@ export const clarityServicePages = {
           "Root cause analysis",
           "Preventive maintenance",
           "Service improvement initiatives",
-          "Operational governance",
-          "Our Engagement Model"
+          "Operational governance"
         ]
       },
       {
-        "title": "Albatroz offers flexible staffing models to meet your business requirements, including",
+        "title": "Our Engagement Model",
+        "subtitle": "Albatroz offers flexible staffing models to meet your business requirements, including",
         "paragraphs": [
           "Whether you're implementing Clarity, modernizing your platform, executing a strategic initiative, or expanding your support capabilities, Albatroz provides experienced consultants who integrate seamlessly with your organization. Our flexible staff augmentation services help you accelerate delivery, reduce operational risk, and maximize the value of your Clarity investment."
         ],
@@ -1447,6 +1334,7 @@ export const clarityServicePages = {
       "text": "Whether you're implementing Clarity, modernizing your platform, executing a strategic initiative, or expanding your support capabilities, Albatroz provides experienced consultants who integrate seamlessly with your organization. Our flexible staff augmentation services help you accelerate delivery, reduce operational risk, and maximize the value of your Clarity investment."
     }
   },
+
   "support-maintenance": {
     "slug": "support-maintenance",
     "title": "Support & Maintenance",
@@ -1460,11 +1348,7 @@ export const clarityServicePages = {
     "sections": [
       {
         "title": "Why Choose Clarity AMS?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "A well-managed support model enables organizations to",
+        "subtitle": "A well-managed support model enables organizations to",
         "paragraphs": [],
         "bullets": [
           "Ensure high system availability and business continuity",
@@ -1478,24 +1362,19 @@ export const clarityServicePages = {
       },
       {
         "title": "Why Choose Albatroz?",
+        "subtitle": "Our Application Maintenance & Support Services",
         "paragraphs": [
           "Our Application Maintenance & Support services combine deep Clarity expertise with a structured support methodology to deliver reliable operational support across functional, technical, and administrative areas.",
           "We provide Level 1, Level 2, and Level 3 support services backed by experienced consultants, defined Service Level Agreements (SLAs), Resolution Time Objectives (RTOs), and an 8x5 support model. Our services are tailored to your business operations and can be aligned with regional business hours across multiple geographies."
         ],
-        "bullets": [
-          "Our Application Maintenance & Support Services"
-        ]
-      },
-      {
-        "title": "1. Service Request Management",
-        "paragraphs": [
-          "We provide efficient handling of day-to-day service requests to ensure uninterrupted business operations."
-        ],
         "bullets": []
       },
       {
-        "title": "Our services include",
-        "paragraphs": [],
+        "title": "1. Service Request Management",
+        "subtitle": "Our services include",
+        "paragraphs": [
+          "We provide efficient handling of day-to-day service requests to ensure uninterrupted business operations."
+        ],
         "bullets": [
           "User administration and access management",
           "Data maintenance and updates",
@@ -1507,35 +1386,19 @@ export const clarityServicePages = {
       },
       {
         "title": "2. Incident Management (L1, L2 & L3 Support)",
+        "subtitle": "Our structured support model delivers timely issue resolution while minimizing business disruption.",
         "paragraphs": [
-          "Our structured support model delivers timely issue resolution while minimizing business disruption.",
-          "Level 1 Support",
-          "End-user support and service requests",
-          "Basic troubleshooting",
-          "Incident logging and categorization",
-          "SLA-based ticket management",
-          "Escalation to higher support levels",
-          "Level 2 & Level 3 Support",
-          "Functional and technical issue resolution",
-          "Root cause analysis",
-          "Configuration and data corrections",
-          "Performance troubleshooting",
-          "Integration and process support",
-          "Customization and automation support",
-          "Coordination with Broadcom for product-related issues"
+          "Level 1 Support covers end-user support and service requests, basic troubleshooting, incident logging and categorization, SLA-based ticket management, and escalation to higher support levels.",
+          "Level 2 & Level 3 Support covers functional and technical issue resolution, root cause analysis, configuration and data corrections, performance troubleshooting, integration and process support, customization and automation support, and coordination with Broadcom for product-related issues."
         ],
         "bullets": []
       },
       {
         "title": "3. Application Health Monitoring",
+        "subtitle": "Services include",
         "paragraphs": [
           "Our proactive monitoring services help maintain a healthy and high-performing Clarity environment."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Services include",
-        "paragraphs": [],
         "bullets": [
           "Daily health checks before business hours",
           "Monitoring of application and database health",
@@ -1549,14 +1412,9 @@ export const clarityServicePages = {
       },
       {
         "title": "4. Continuous Development & Enhancements",
+        "subtitle": "Our enhancement services include",
         "paragraphs": [
-          "Business requirements continue to evolve, and so should your Clarity platform."
-        ],
-        "bullets": []
-      },
-      {
-        "title": "Our enhancement services include",
-        "paragraphs": [
+          "Business requirements continue to evolve, and so should your Clarity platform.",
           "Organizations can allocate a predefined enhancement effort to continuously improve the platform while maintaining operational stability."
         ],
         "bullets": [
@@ -1571,14 +1429,10 @@ export const clarityServicePages = {
       },
       {
         "title": "5. Clarity Upgrade Support",
+        "subtitle": "Our services include",
         "paragraphs": [
           "For on-premises Clarity environments, we provide planned upgrade services to keep your platform current and fully supported."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our services include",
-        "paragraphs": [],
         "bullets": [
           "Upgrade planning and impact assessment",
           "Environment preparation",
@@ -1590,37 +1444,33 @@ export const clarityServicePages = {
       },
       {
         "title": "6. Infrastructure Support (Optional)",
-        "paragraphs": [
-          "For organizations requiring end-to-end platform management, we offer optional infrastructure support services including:",
+        "subtitle": "For organizations requiring end-to-end platform management, we offer optional infrastructure support services including:",
+        "paragraphs": [],
+        "bullets": [
           "Operating system maintenance",
           "Database monitoring and administration",
           "Backup monitoring and recovery validation",
           "Server health monitoring",
           "Infrastructure performance monitoring",
           "Coordination of infrastructure-related issue resolution"
-        ],
-        "bullets": []
+        ]
       },
       {
         "title": "7. Bug Fixes & Platform Optimization",
+        "subtitle": "Our consultants continuously maintain and optimize your Clarity environment by providing",
         "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Our consultants continuously maintain and optimize your Clarity environment by providing",
-        "paragraphs": [
+        "bullets": [
           "Resolution of defects in custom-developed solutions",
           "Configuration corrections",
           "Performance optimization",
           "Technical debt reduction",
           "Platform optimization recommendations",
-          "Continuous operational improvements",
-          "Our Support Methodology"
-        ],
-        "bullets": []
+          "Continuous operational improvements"
+        ]
       },
       {
-        "title": "Every AMS engagement follows a structured service delivery framework that includes",
+        "title": "Our Support Methodology",
+        "subtitle": "Every AMS engagement follows a structured service delivery framework that includes",
         "paragraphs": [],
         "bullets": [
           "Service onboarding and transition",
@@ -1639,6 +1489,7 @@ export const clarityServicePages = {
       "text": "Albatroz helps organizations maintain a stable, secure, and high-performing Clarity environment through comprehensive Application Maintenance & Support Services. By combining responsive support, proactive monitoring, continuous enhancements, and deep Clarity expertise, we enable organizations to minimize operational risk, improve user satisfaction, and maximize the long-term value of their Clarity investment."
     }
   },
+
   "user-tranings": {
     "slug": "user-tranings",
     "title": "User Trainings",
@@ -1652,11 +1503,7 @@ export const clarityServicePages = {
     "sections": [
       {
         "title": "Why Invest in Clarity Training?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Comprehensive user training helps organizations",
+        "subtitle": "Comprehensive user training helps organizations",
         "paragraphs": [],
         "bullets": [
           "Accelerate user adoption across the enterprise",
@@ -1670,24 +1517,19 @@ export const clarityServicePages = {
       },
       {
         "title": "Why Choose Albatroz?",
+        "subtitle": "Our Training Services",
         "paragraphs": [
           "Our consultants combine deep Clarity expertise with real-world implementation experience to deliver practical, business-focused training programs.",
           "Rather than relying on generic product demonstrations, we tailor every training session using your organization's Clarity environment, business processes, and configurations. This approach ensures users gain relevant, hands-on experience that can be applied immediately within their daily responsibilities."
         ],
-        "bullets": [
-          "Our Training Services"
-        ]
-      },
-      {
-        "title": "1. End User Training",
-        "paragraphs": [
-          "We deliver role-based training designed to help business users effectively perform their day-to-day activities within Clarity."
-        ],
         "bullets": []
       },
       {
-        "title": "Training topics include",
-        "paragraphs": [],
+        "title": "1. End User Training",
+        "subtitle": "Training topics include",
+        "paragraphs": [
+          "We deliver role-based training designed to help business users effectively perform their day-to-day activities within Clarity."
+        ],
         "bullets": [
           "Demand management",
           "Project management",
@@ -1701,14 +1543,10 @@ export const clarityServicePages = {
       },
       {
         "title": "2. Administrator Training",
+        "subtitle": "Training includes",
         "paragraphs": [
           "Our administrator training programs prepare system administrators to effectively manage and maintain the Clarity platform."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Training includes",
-        "paragraphs": [],
         "bullets": [
           "System administration",
           "User and access management",
@@ -1722,14 +1560,10 @@ export const clarityServicePages = {
       },
       {
         "title": "3. Functional Module Training",
+        "subtitle": "Areas include",
         "paragraphs": [
           "We provide focused training sessions covering specific Clarity modules and business processes based on your organization's requirements."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Areas include",
-        "paragraphs": [],
         "bullets": [
           "Project Portfolio Management",
           "Resource Management",
@@ -1743,14 +1577,10 @@ export const clarityServicePages = {
       },
       {
         "title": "4. Technical & Advanced Training",
+        "subtitle": "Topics include",
         "paragraphs": [
           "For technical teams and developers, we provide advanced training covering Clarity architecture and technical capabilities."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Topics include",
-        "paragraphs": [],
         "bullets": [
           "REST and SOAP APIs",
           "Integration best practices",
@@ -1765,8 +1595,8 @@ export const clarityServicePages = {
       },
       {
         "title": "5. Customized Learning Programs",
+        "subtitle": "Every organization has unique business processes and training requirements. Our customized learning programs include:",
         "paragraphs": [
-          "Every organization has unique business processes and training requirements. Our customized learning programs include:",
           "This tailored approach ensures users receive practical training that aligns with their daily responsibilities and organizational processes."
         ],
         "bullets": [
@@ -1783,20 +1613,20 @@ export const clarityServicePages = {
       },
       {
         "title": "6. Post-Training Support",
-        "paragraphs": [
-          "Learning doesn't end when the training session is complete. We continue to support your teams through:",
+        "subtitle": "Learning doesn't end when the training session is complete. We continue to support your teams through:",
+        "paragraphs": [],
+        "bullets": [
           "Knowledge reinforcement sessions",
           "User adoption support",
           "Clarification workshops",
           "Refresher training",
           "Best practice recommendations",
-          "Ongoing guidance for administrators and business users",
-          "Our Training Methodology"
-        ],
-        "bullets": []
+          "Ongoing guidance for administrators and business users"
+        ]
       },
       {
-        "title": "Every training engagement follows a structured learning framework that includes",
+        "title": "Our Training Methodology",
+        "subtitle": "Every training engagement follows a structured learning framework that includes",
         "paragraphs": [
           "Albatroz helps organizations build knowledgeable and confident Clarity users through practical, role-based, and business-focused training programs. By combining deep product expertise with real-world implementation experience, we enable teams to accelerate user adoption, improve operational efficiency, and unlock the full value of their Clarity platform."
         ],
@@ -1816,6 +1646,7 @@ export const clarityServicePages = {
       "text": "Albatroz helps organizations build knowledgeable and confident Clarity users through practical, role-based, and business-focused training programs. By combining deep product expertise with real-world implementation experience, we enable teams to accelerate user adoption, improve operational efficiency, and unlock the full value of their Clarity platform."
     }
   },
+
   "quality-assurance": {
     "slug": "quality-assurance",
     "title": "Quality Assurance",
@@ -1829,11 +1660,7 @@ export const clarityServicePages = {
     "sections": [
       {
         "title": "Why Invest in Clarity Quality Assurance?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "A structured QA strategy enables organizations to",
+        "subtitle": "A structured QA strategy enables organizations to",
         "paragraphs": [],
         "bullets": [
           "Reduce implementation and deployment risks",
@@ -1847,24 +1674,19 @@ export const clarityServicePages = {
       },
       {
         "title": "Why Choose Albatroz?",
+        "subtitle": "Our Quality Assurance Services",
         "paragraphs": [
           "Quality Assurance is an integral part of every Albatroz implementation and support engagement. Our dedicated QA consultants combine technical expertise with deep Clarity domain knowledge to deliver comprehensive testing services aligned with business objectives.",
           "Using proven testing methodologies, structured governance, and robust defect management practices, we help organizations deliver high-quality Clarity solutions while minimizing operational risks and ensuring business continuity."
         ],
-        "bullets": [
-          "Our Quality Assurance Services"
-        ]
-      },
-      {
-        "title": "1. Functional Testing",
-        "paragraphs": [
-          "We perform comprehensive validation of Clarity configurations, business processes, workflows, and customizations to ensure they meet approved business requirements and expected outcomes."
-        ],
         "bullets": []
       },
       {
-        "title": "Our functional testing services include",
-        "paragraphs": [],
+        "title": "1. Functional Testing",
+        "subtitle": "Our functional testing services include",
+        "paragraphs": [
+          "We perform comprehensive validation of Clarity configurations, business processes, workflows, and customizations to ensure they meet approved business requirements and expected outcomes."
+        ],
         "bullets": [
           "Business process validation",
           "Configuration testing",
@@ -1876,14 +1698,10 @@ export const clarityServicePages = {
       },
       {
         "title": "2. Integration Testing",
+        "subtitle": "Our integration testing covers",
         "paragraphs": [
           "We validate integrations between Clarity and enterprise applications to ensure accurate, reliable, and secure data exchange."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our integration testing covers",
-        "paragraphs": [],
         "bullets": [
           "HR system integrations",
           "Financial and ERP integrations",
@@ -1896,14 +1714,10 @@ export const clarityServicePages = {
       },
       {
         "title": "3. Regression Testing",
+        "subtitle": "Regression testing includes",
         "paragraphs": [
           "Our structured regression testing ensures that upgrades, patches, enhancements, and configuration changes do not impact existing business functionality."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Regression testing includes",
-        "paragraphs": [],
         "bullets": [
           "Impact assessment",
           "Test execution",
@@ -1915,14 +1729,10 @@ export const clarityServicePages = {
       },
       {
         "title": "4. User Acceptance Testing (UAT) Support",
+        "subtitle": "Our UAT services include",
         "paragraphs": [
           "We work closely with business stakeholders to facilitate successful User Acceptance Testing."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our UAT services include",
-        "paragraphs": [],
         "bullets": [
           "Test planning and coordination",
           "Test case development",
@@ -1934,45 +1744,37 @@ export const clarityServicePages = {
       },
       {
         "title": "5. Test Automation",
+        "subtitle": "Our automation services include",
         "paragraphs": [
-          "Where appropriate, we help organizations implement automated testing approaches to improve testing efficiency and support continuous delivery."
+          "Where appropriate, we help organizations implement automated testing approaches to improve testing efficiency and support continuous delivery.",
+          "Automation accelerates validation cycles while improving consistency and reducing manual testing effort."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our automation services include",
-        "paragraphs": [],
         "bullets": [
           "Test automation strategy",
           "Automated regression testing",
           "Repeatable test execution",
           "Release validation",
-          "Test maintenance and optimization",
-          "Automation accelerates validation cycles while improving consistency and reducing manual testing effort."
+          "Test maintenance and optimization"
         ]
       },
       {
         "title": "6. Performance & Validation Testing",
+        "subtitle": "Our services include",
         "paragraphs": [
           "We assess system responsiveness, stability, and scalability to ensure optimal performance under expected business workloads."
         ],
-        "bullets": []
-      },
-      {
-        "title": "Our services include",
-        "paragraphs": [],
         "bullets": [
           "Performance testing",
           "Application stability assessment",
           "Load validation",
           "Response time analysis",
           "System health verification",
-          "Performance optimization recommendations",
-          "Our Quality Assurance Methodology"
+          "Performance optimization recommendations"
         ]
       },
       {
-        "title": "Every QA engagement follows a structured testing framework that includes",
+        "title": "Our Quality Assurance Methodology",
+        "subtitle": "Every QA engagement follows a structured testing framework that includes",
         "paragraphs": [
           "Albatroz helps organizations deliver reliable, stable, and business-ready Clarity solutions through comprehensive Quality Assurance services. By combining Clarity expertise with proven testing methodologies, we help reduce implementation risks, improve release quality, and ensure every deployment meets the highest standards of performance, reliability, and business value."
         ],
