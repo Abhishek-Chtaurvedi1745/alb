@@ -1,354 +1,386 @@
 export const clarityServicePages = {
   "implementation": {
-    "slug": "implementation",
-    "title": "Implementation",
-    "image": "/images/clarity-services/implementation.webp",
-    "subtitle": "Transform Your Project Portfolio Management with Expert Implementation Services",
-    "intro": [
-      "Implementing Broadcom Clarity PPM or Rally is more than deploying software\u2014it's about establishing a modern Project Portfolio Management ecosystem that aligns strategy, execution, governance, and business outcomes.",
-      "As India's Broadcom Tier-1 Expert Advantage Partner, Albatroz Solutions delivers end-to-end implementation services that help organizations successfully adopt, configure, and optimize Clarity PPM and Rally. Our consultants combine deep product expertise with industry best practices to deliver scalable solutions tailored to your business processes, governance model, and delivery methodology.",
-      "From initial discovery and solution design to implementation, integration, reporting, and user enablement, we ensure your Clarity or Rally platform delivers measurable business value from day one."
-    ],
-    "sections": [
-      {
-        "title": "Why Choose Clarity & Rally Implementation?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "A successful implementation enables organizations to",
-        "paragraphs": [],
-        "bullets": [
-          "Align projects and investments with business strategy",
-          "Improve project governance and portfolio visibility",
-          "Optimize resource planning and utilization",
-          "Strengthen financial planning and cost control",
-          "Standardize project delivery processes",
-          "Improve executive reporting and decision-making",
-          "Accelerate user adoption and organizational maturity"
-        ]
-      },
-      {
-        "title": "Why Choose Albatroz?",
-        "paragraphs": [
-          "Every organization operates differently. Rather than implementing generic templates, we design solutions that reflect your business processes, governance standards, financial controls, and delivery methodology.",
-          "Our implementation consultants have successfully delivered Clarity and Rally solutions across industries including pharmaceuticals, biotechnology, banking, financial services, manufacturing, retail, telecommunications, and public sector organizations. Using proven implementation methodologies, we minimize project risk while accelerating business value and user adoption."
-        ],
-        "bullets": [
-          "Our Implementation Services"
-        ]
-      },
-      {
-        "title": "1. Discovery & Solution Design",
-        "paragraphs": [
-          "Every implementation begins with a detailed assessment of your business objectives and operating model."
-        ],
-        "bullets": []
-      },
-      {
-        "title": "Our consultants work closely with stakeholders to",
-        "paragraphs": [],
-        "bullets": [
-          "Understand business requirements",
-          "Analyze existing processes",
-          "Define governance models",
-          "Design scalable solution architecture",
-          "Prepare implementation roadmaps",
-          "Develop deployment strategies",
-          "This ensures the solution is aligned with your organization's current needs and future growth."
-        ]
-      },
-      {
-        "title": "2. Clarity PPM Implementation",
-        "paragraphs": [
-          "We provide end-to-end implementation services across all major Clarity capabilities."
-        ],
-        "bullets": []
-      },
-      {
-        "title": "Our services include",
-        "paragraphs": [],
-        "bullets": [
-          "Platform installation and environment setup",
-          "Project and investment management",
-          "Resource management",
-          "Demand management",
-          "Financial planning and budgeting",
-          "Cost and capitalization management",
-          "Strategic portfolio management",
-          "Roadmaps and portfolio prioritization",
-          "Modern UX configuration",
-          "Reporting and analytics",
-          "Security and access management",
-          "Every implementation is configured to align with your business processes and governance standards."
-        ]
-      },
-      {
-        "title": "3. Rally Implementation",
-        "paragraphs": [
-          "For organizations adopting Agile delivery, we implement Rally to support enterprise-scale Agile execution."
-        ],
-        "bullets": []
-      },
-      {
-        "title": "Our Rally implementation services include",
-        "paragraphs": [],
-        "bullets": [
-          "Agile readiness assessment",
-          "Scrum and SAFe configuration",
-          "Team and workspace setup",
-          "Backlog and iteration management",
-          "Release planning",
-          "Workflow configuration",
-          "User onboarding and enablement",
-          "Agile governance and reporting",
-          "We help organizations establish a scalable Agile delivery platform that supports continuous planning and execution."
-        ]
-      },
-      {
-        "title": "4. Enterprise Integrations",
-        "paragraphs": [
-          "We integrate Clarity and Rally with enterprise applications to enable seamless information flow across your business."
-        ],
-        "bullets": []
-      },
-      {
-        "title": "Typical integrations include",
-        "paragraphs": [],
-        "bullets": [
-          "HR systems",
-          "ERP and Financial applications",
-          "ITSM platforms",
-          "ALM and DevOps tools",
-          "Identity management systems",
-          "REST and SOAP APIs",
-          "Custom enterprise applications",
-          "These integrations eliminate manual effort while improving data consistency and operational efficiency."
-        ]
-      },
-      {
-        "title": "5. Reporting & Analytics",
-        "paragraphs": [
-          "We implement modern reporting solutions that provide real-time visibility into project and portfolio performance."
-        ],
-        "bullets": []
-      },
-      {
-        "title": "Our services include",
-        "paragraphs": [],
-        "bullets": [
-          "Executive dashboards",
-          "Portfolio reporting",
-          "Resource analytics",
-          "Financial reporting",
-          "KPI scorecards",
-          "Clarity Reporting Workspace implementation",
-          "Power BI integration",
-          "Custom operational dashboards"
-        ]
-      },
-      {
-        "title": "6. User Adoption & Go-Live Support",
-        "paragraphs": [
-          "A successful implementation depends on user adoption as much as technical delivery."
-        ],
-        "bullets": []
-      },
-      {
-        "title": "We provide",
-        "paragraphs": [
-          "End-user training",
-          "Administrator training",
-          "Knowledge transfer",
-          "User Acceptance Testing (UAT) support",
-          "Go-live planning",
-          "Hypercare support",
-          "Post-implementation optimization",
-          "This ensures a smooth transition and long-term platform success.",
-          "Structured Implementation Service Packs",
-          "To provide flexibility and faster deployment, our implementation services are available as modular service packs that can be engaged independently or combined based on your business priorities.",
-          "Installation Pack",
-          "Platform installation",
-          "Environment setup",
-          "Foundation configuration",
-          "Project Management Pack",
-          "Project management",
-          "Resource management",
-          "Timesheets",
-          "Collaboration capabilities",
-          "Financial Management Pack",
-          "Budget planning",
-          "Cost management",
-          "Financial governance",
-          "Capitalization",
-          "Strategic Portfolio Pack",
-          "Demand management",
-          "Investment planning",
-          "Portfolio prioritization",
-          "Executive dashboards",
-          "Agile Readiness Pack",
-          "Rally implementation",
-          "Agile process configuration",
-          "Team onboarding",
-          "Agile governance",
-          "Our modular approach allows organizations to begin with their highest-priority capabilities while expanding the platform over time without redesigning existing solutions.",
-          "Our Implementation Methodology"
-        ],
-        "bullets": []
-      },
-      {
-        "title": "Every implementation follows a proven delivery framework that includes",
-        "paragraphs": [],
-        "bullets": [
-          "Discovery and business assessment",
-          "Solution architecture and design",
-          "Platform configuration and development",
-          "Integration and data migration",
-          "Testing and quality assurance",
-          "User training and adoption",
-          "Production deployment",
-          "Hypercare and continuous improvement"
-        ]
-      }
-    ],
-    "closing": {
-      "title": "Delivering Successful Digital Transformation with Clarity & Rally",
-      "text": "Albatroz helps organizations successfully implement Broadcom Clarity PPM and Rally through a structured, business-focused approach that combines deep product expertise, industry best practices, and proven delivery methodologies. Our implementations enable organizations to improve governance, optimize resource utilization, strengthen financial control, and accelerate strategic decision-making while maximizing the long-term value of their Project Portfolio Management investment."
+  slug: "implementation",
+  title: "Implementation",
+  image: "/images/clarity-services/implementation.webp",
+  subtitle:
+    "Transform Your Project Portfolio Management with Expert Implementation Services",
+
+  intro: [
+    "Implementing Broadcom Clarity PPM or Rally is more than deploying software—it's about establishing a modern Project Portfolio Management ecosystem that aligns strategy, execution, governance, and business outcomes.",
+    "As India's Broadcom Tier-1 Expert Advantage Partner, Albatroz Solutions delivers end-to-end implementation services that help organizations successfully adopt, configure, and optimize Clarity PPM and Rally. Our consultants combine deep product expertise with industry best practices to deliver scalable solutions tailored to your business processes, governance model, and delivery methodology.",
+    "From initial discovery and solution design to implementation, integration, reporting, and user enablement, we ensure your Clarity or Rally platform delivers measurable business value from day one."
+  ],
+
+  sections: [
+    {
+      title: "Why Choose Clarity & Rally Implementation?",
+      subtitle: "A successful implementation enables organizations to:",
+      paragraphs: [],
+      bullets: [
+        "Align projects and investments with business strategy",
+        "Improve project governance and portfolio visibility",
+        "Optimize resource planning and utilization",
+        "Strengthen financial planning and cost control",
+        "Standardize project delivery processes",
+        "Improve executive reporting and decision-making",
+        "Accelerate user adoption and organizational maturity"
+      ]
+    },
+
+    {
+      title: "Why Choose Albatroz?",
+      paragraphs: [
+        "Every organization operates differently. Rather than implementing generic templates, we design solutions that reflect your business processes, governance standards, financial controls, and delivery methodology.",
+        "Our implementation consultants have successfully delivered Clarity and Rally solutions across industries including pharmaceuticals, biotechnology, banking, financial services, manufacturing, retail, telecommunications, and public sector organizations. Using proven implementation methodologies, we minimize project risk while accelerating business value and user adoption."
+      ],
+      bullets: []
+    },
+{
+  title: "Our Implementation Services",
+  paragraphs: [],
+  bullets: []
+},
+    {
+      title: "1. Discovery & Solution Design",
+      subtitle: "Our consultants work closely with stakeholders to:",
+      paragraphs: [
+        "Every implementation begins with a detailed assessment of your business objectives and operating model.",
+        "This ensures the solution is aligned with your organization's current needs and future growth."
+      ],
+      bullets: [
+        "Understand business requirements",
+        "Analyze existing processes",
+        "Define governance models",
+        "Design scalable solution architecture",
+        "Prepare implementation roadmaps",
+        "Develop deployment strategies"
+      ]
+    },
+
+    {
+      title: "2. Clarity PPM Implementation",
+      subtitle: "Our services include:",
+      paragraphs: [
+        "We provide end-to-end implementation services across all major Clarity capabilities.",
+        "Every implementation is configured to align with your business processes and governance standards."
+      ],
+      bullets: [
+        "Platform installation and environment setup",
+        "Project and investment management",
+        "Resource management",
+        "Demand management",
+        "Financial planning and budgeting",
+        "Cost and capitalization management",
+        "Strategic portfolio management",
+        "Roadmaps and portfolio prioritization",
+        "Modern UX configuration",
+        "Reporting and analytics",
+        "Security and access management"
+      ]
+    },
+
+    {
+      title: "3. Rally Implementation",
+      subtitle: "Our Rally implementation services include:",
+      paragraphs: [
+        "For organizations adopting Agile delivery, we implement Rally to support enterprise-scale Agile execution.",
+        "We help organizations establish a scalable Agile delivery platform that supports continuous planning and execution."
+      ],
+      bullets: [
+        "Agile readiness assessment",
+        "Scrum and SAFe configuration",
+        "Team and workspace setup",
+        "Backlog and iteration management",
+        "Release planning",
+        "Workflow configuration",
+        "User onboarding and enablement",
+        "Agile governance and reporting"
+      ]
+    },
+
+    {
+      title: "4. Enterprise Integrations",
+      subtitle: "Typical integrations include:",
+      paragraphs: [
+        "We integrate Clarity and Rally with enterprise applications to enable seamless information flow across your business.",
+        "These integrations eliminate manual effort while improving data consistency and operational efficiency."
+      ],
+      bullets: [
+        "HR systems",
+        "ERP and Financial applications",
+        "ITSM platforms",
+        "ALM and DevOps tools",
+        "Identity management systems",
+        "REST and SOAP APIs",
+        "Custom enterprise applications"
+      ]
+    },
+
+    {
+      title: "5. Reporting & Analytics",
+      subtitle: "Our services include:",
+      paragraphs: [
+        "We implement modern reporting solutions that provide real-time visibility into project and portfolio performance."
+      ],
+      bullets: [
+        "Executive dashboards",
+        "Portfolio reporting",
+        "Resource analytics",
+        "Financial reporting",
+        "KPI scorecards",
+        "Clarity Reporting Workspace implementation",
+        "Power BI integration",
+        "Custom operational dashboards"
+      ]
+    },
+
+    {
+      title: "6. User Adoption & Go-Live Support",
+      subtitle: "We provide:",
+      paragraphs: [
+        "A successful implementation depends on user adoption as much as technical delivery.",
+        "This ensures a smooth transition and long-term platform success."
+      ],
+      bullets: [
+        "End-user training",
+        "Administrator training",
+        "Knowledge transfer",
+        "User Acceptance Testing (UAT) support",
+        "Go-live planning",
+        "Hypercare support",
+        "Post-implementation optimization"
+      ]
+    },
+
+    {
+      title: "Structured Implementation Service Packs",
+      paragraphs: [
+        "To provide flexibility and faster deployment, our implementation services are available as modular service packs that can be engaged independently or combined based on your business priorities."
+      ],
+      bullets: []
+    },
+
+    {
+      title: "Installation Pack",
+      paragraphs: [],
+      bullets: [
+        "Platform installation",
+        "Environment setup",
+        "Foundation configuration"
+      ]
+    },
+
+    {
+      title: "Project Management Pack",
+      paragraphs: [],
+      bullets: [
+        "Project management",
+        "Resource management",
+        "Timesheets",
+        "Collaboration capabilities"
+      ]
+    },
+
+    {
+      title: "Financial Management Pack",
+      paragraphs: [],
+      bullets: [
+        "Budget planning",
+        "Cost management",
+        "Financial governance",
+        "Capitalization"
+      ]
+    },
+
+    {
+      title: "Strategic Portfolio Pack",
+      paragraphs: [],
+      bullets: [
+        "Demand management",
+        "Investment planning",
+        "Portfolio prioritization",
+        "Executive dashboards"
+      ]
+    },
+
+    {
+      title: "Agile Readiness Pack",
+      paragraphs: [
+        "Our modular approach allows organizations to begin with their highest-priority capabilities while expanding the platform over time without redesigning existing solutions."
+      ],
+      bullets: [
+        "Rally implementation",
+        "Agile process configuration",
+        "Team onboarding",
+        "Agile governance"
+      ]
+    },
+
+    {
+      title: "Our Implementation Methodology",
+      subtitle: "Every implementation follows a proven delivery framework that includes:",
+      paragraphs: [],
+      bullets: [
+        "Discovery and business assessment",
+        "Solution architecture and design",
+        "Platform configuration and development",
+        "Integration and data migration",
+        "Testing and quality assurance",
+        "User training and adoption",
+        "Production deployment",
+        "Hypercare and continuous improvement"
+      ]
     }
-  },
-  "installations-upgrades": {
-    "slug": "installations-upgrades",
-    "title": "Installations & Upgrades",
-    "image": "/images/clarity-services/installation-upgrade.webp",
-    "subtitle": "Upgrade to the Latest Version of Clarity with Confidence",
-    "intro": [
-      "Broadcom releases a new version of Clarity approximately every three months, introducing new features, customer-driven enhancements, performance improvements, security updates, and bug fixes. Staying current with the latest release allows organizations to continuously deliver greater value to users while benefiting from the latest innovations, enhanced performance, and ongoing product support.",
-      "Whether you're planning a fresh implementation or upgrading from an older version, Albatroz provides end-to-end Clarity installation and upgrade services that ensure a smooth, secure, and successful transition."
-    ],
-    "sections": [
-      {
-        "title": "Why Upgrade Your Clarity Environment?",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Organizations upgrade Clarity to",
-        "paragraphs": [],
-        "bullets": [
-          "Stay on a fully supported Broadcom release",
-          "Meet evolving security and compliance requirements",
-          "Upgrade platform components such as Tomcat, JDK, and other dependencies",
-          "Adopt the Modern UX and newly released capabilities",
-          "Resolve known product issues and defects",
-          "Improve system performance, scalability, and stability",
-          "Enhance the overall user experience"
-        ]
-      },
-      {
-        "title": "Why Choose Albatroz?",
-        "paragraphs": [
-          "Upgrading Clarity is much more than a software installation. It requires careful planning, technical expertise, risk management, and coordination across infrastructure, security, database, and business teams.",
-          "Our certified Clarity consultants have successfully delivered installations and upgrades ranging from straightforward version updates to complex multi-version transformations. We follow a structured, proven methodology that minimizes downtime, reduces project risk, and ensures successful delivery within schedule and budget."
-        ],
-        "bullets": [
-          "Our Installation & Upgrade Process"
-        ]
-      },
-      {
-        "title": "1. Discovery & Assessment",
-        "paragraphs": [],
-        "bullets": []
-      },
-      {
-        "title": "Every engagement begins with a detailed assessment questionnaire to understand",
-        "paragraphs": [],
-        "bullets": [
-          "Current Clarity environment",
-          "Existing product version",
-          "Infrastructure landscape",
-          "Business requirements",
-          "Target architecture",
-          "Required modules and integrations",
-          "Based on this assessment, we recommend the most suitable installation or upgrade strategy."
-        ]
-      },
-      {
-        "title": "2. Prerequisites & Environment Readiness",
-        "paragraphs": [
-          "Our team performs a comprehensive readiness assessment and provides detailed prerequisite documentation covering:",
-          "Server infrastructure requirements",
-          "Hardware sizing recommendations",
-          "Software compatibility",
-          "Supported operating systems and databases",
-          "Application server and web server requirements",
-          "Required versions of Tomcat, JDK, and other dependent components",
-          "Network, firewall, and security requirements",
-          "This ensures your environment is fully prepared before implementation begins."
-        ],
-        "bullets": []
-      },
-      {
-        "title": "3. Clarity Installation & Upgrade Execution",
-        "paragraphs": [
-          "Our consultants remotely execute the installation or upgrade using standardized deployment procedures that include:",
-          "Our proven methodology minimizes downtime while ensuring a reliable and seamless transition to the latest version."
-        ],
-        "bullets": [
-          "Environment validation",
-          "Software installation and configuration",
-          "Version upgrade execution",
-          "Database and application verification",
-          "System health checks",
-          "Post-installation validation"
-        ]
-      },
-      {
-        "title": "4. Testing & Quality Assurance",
-        "paragraphs": [
-          "Before production rollout, we perform comprehensive validation to ensure system stability and functionality, including:",
-          "Functional testing",
-          "System validation",
-          "Performance verification",
-          "Integration testing",
-          "Issue resolution",
-          "Production readiness review"
-        ],
-        "bullets": []
-      },
-      {
-        "title": "5. Release Comparison & Knowledge Transfer",
-        "paragraphs": [
-          "Following the successful implementation, we provide detailed release documentation highlighting:",
-          "New features and capabilities",
-          "Product enhancements",
-          "Functional changes",
-          "Component version upgrades",
-          "Deprecated features",
-          "Technical improvements and bug fixes",
-          "Recommendations for adopting new functionality and maximizing business value",
-          "Our Upgrade Methodology"
-        ],
-        "bullets": []
-      },
-      {
-        "title": "Every Clarity installation and upgrade follows a proven framework that includes",
-        "paragraphs": [],
-        "bullets": [
-          "Detailed upgrade planning and impact assessment",
-          "Standardized installation and deployment procedures",
-          "Comprehensive checklists and validation processes",
-          "Quality assurance and testing strategy",
-          "Infrastructure and security coordination",
-          "Risk mitigation and rollback planning",
-          "Post-upgrade verification and optimization"
-        ]
-      }
-    ],
-    "closing": {
-      "title": "Delivering Successful Clarity Upgrades",
-      "text": "At Albatroz, we combine deep Clarity expertise with proven implementation practices to deliver installations and upgrades that are secure, efficient, and future-ready. Our structured approach helps organizations modernize their Clarity environments with minimal business disruption while maximizing performance, user adoption, and long-term value."
+  ],
+
+  closing: {
+    title: "Delivering Successful Digital Transformation with Clarity & Rally",
+    text: "Albatroz helps organizations successfully implement Broadcom Clarity PPM and Rally through a structured, business-focused approach that combines deep product expertise, industry best practices, and proven delivery methodologies. Our implementations enable organizations to improve governance, optimize resource utilization, strengthen financial control, and accelerate strategic decision-making while maximizing the long-term value of their Project Portfolio Management investment."
+  }
+},
+ "installations-upgrades": {
+  slug: "installations-upgrades",
+  title: "Installations & Upgrades",
+  image: "/images/clarity-services/installation-upgrade.webp",
+  subtitle: "Upgrade to the Latest Version of Clarity with Confidence",
+
+  intro: [
+    "Broadcom releases a new version of Clarity approximately every three months, introducing new features, customer-driven enhancements, performance improvements, security updates, and bug fixes. Staying current with the latest release allows organizations to continuously deliver greater value to users while benefiting from the latest innovations, enhanced performance, and ongoing product support.",
+    "Whether you're planning a fresh implementation or upgrading from an older version, Albatroz provides end-to-end Clarity installation and upgrade services that ensure a smooth, secure, and successful transition."
+  ],
+
+  sections: [
+    {
+      title: "Why Upgrade Your Clarity Environment?",
+      subtitle: "Organizations upgrade Clarity to:",
+      paragraphs: [],
+      bullets: [
+        "Stay on a fully supported Broadcom release",
+        "Meet evolving security and compliance requirements",
+        "Upgrade platform components such as Tomcat, JDK, and other dependencies",
+        "Adopt the Modern UX and newly released capabilities",
+        "Resolve known product issues and defects",
+        "Improve system performance, scalability, and stability",
+        "Enhance the overall user experience"
+      ]
+    },
+
+    {
+      title: "Why Choose Albatroz?",
+      paragraphs: [
+        "Upgrading Clarity is much more than a software installation. It requires careful planning, technical expertise, risk management, and coordination across infrastructure, security, database, and business teams.",
+        "Our certified Clarity consultants have successfully delivered installations and upgrades ranging from straightforward version updates to complex multi-version transformations. We follow a structured, proven methodology that minimizes downtime, reduces project risk, and ensures successful delivery within schedule and budget."
+      ],
+      bullets: []
+    },
+
+    {
+      title: "Our Installation & Upgrade Process",
+      paragraphs: [],
+      bullets: []
+    },
+
+    {
+      title: "1. Discovery & Assessment",
+      subtitle: "Every engagement begins with a detailed assessment questionnaire to understand:",
+      paragraphs: [
+        "Based on this assessment, we recommend the most suitable installation or upgrade strategy."
+      ],
+      bullets: [
+        "Current Clarity environment",
+        "Existing product version",
+        "Infrastructure landscape",
+        "Business requirements",
+        "Target architecture",
+        "Required modules and integrations"
+      ]
+    },
+
+    {
+      title: "2. Prerequisites & Environment Readiness",
+      subtitle: "Our team performs a comprehensive readiness assessment and provides detailed prerequisite documentation covering:",
+      paragraphs: [
+        "This ensures your environment is fully prepared before implementation begins."
+      ],
+      bullets: [
+        "Server infrastructure requirements",
+        "Hardware sizing recommendations",
+        "Software compatibility",
+        "Supported operating systems and databases",
+        "Application server and web server requirements",
+        "Required versions of Tomcat, JDK, and other dependent components",
+        "Network, firewall, and security requirements"
+      ]
+    },
+
+    {
+      title: "3. Clarity Installation & Upgrade Execution",
+      subtitle: "Our consultants remotely execute the installation or upgrade using standardized deployment procedures that include:",
+      paragraphs: [
+        "Our proven methodology minimizes downtime while ensuring a reliable and seamless transition to the latest version."
+      ],
+      bullets: [
+        "Environment validation",
+        "Software installation and configuration",
+        "Version upgrade execution",
+        "Database and application verification",
+        "System health checks",
+        "Post-installation validation"
+      ]
+    },
+
+    {
+      title: "4. Testing & Quality Assurance",
+      subtitle: "Before production rollout, we perform comprehensive validation to ensure system stability and functionality, including:",
+      paragraphs: [],
+      bullets: [
+        "Functional testing",
+        "System validation",
+        "Performance verification",
+        "Integration testing",
+        "Issue resolution",
+        "Production readiness review"
+      ]
+    },
+
+    {
+      title: "5. Release Comparison & Knowledge Transfer",
+      subtitle: "Following the successful implementation, we provide detailed release documentation highlighting:",
+      paragraphs: [
+        "Recommendations for adopting new functionality and maximizing business value"
+      ],
+      bullets: [
+        "New features and capabilities",
+        "Product enhancements",
+        "Functional changes",
+        "Component version upgrades",
+        "Deprecated features",
+        "Technical improvements and bug fixes"
+      ]
+    },
+
+    {
+      title: "Our Upgrade Methodology",
+      subtitle: "Every Clarity installation and upgrade follows a proven framework that includes:",
+      paragraphs: [],
+      bullets: [
+        "Detailed upgrade planning and impact assessment",
+        "Standardized installation and deployment procedures",
+        "Comprehensive checklists and validation processes",
+        "Quality assurance and testing strategy",
+        "Infrastructure and security coordination",
+        "Risk mitigation and rollback planning",
+        "Post-upgrade verification and optimization"
+      ]
     }
-  },
+  ],
+
+  closing: {
+    title: "Delivering Successful Clarity Upgrades",
+    text: "At Albatroz, we combine deep Clarity expertise with proven implementation practices to deliver installations and upgrades that are secure, efficient, and future-ready. Our structured approach helps organizations modernize their Clarity environments with minimal business disruption while maximizing performance, user adoption, and long-term value."
+  }
+},
   "migration-to-modern-ux": {
     "slug": "migration-to-modern-ux",
     "title": "Migration to Modern UX",
