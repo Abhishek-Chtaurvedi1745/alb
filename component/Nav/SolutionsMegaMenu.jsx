@@ -27,19 +27,45 @@ function SectionTitle({ title, underlineWord }) {
 
 function ProductBlock({ product, onNavigate }) {
   return (
-    <Link href={product.href} onClick={onNavigate} className="group block">
-      <h4 className="text-[18px] font-bold text-[#ef4444] transition-colors group-hover:text-[#dc2626]">
-        {product.title}
-      </h4>
-      <Description text={product.description} className="mt-1.5 max-w-[300px] text-[14px] leading-relaxed text-[#6b7280]" />
-    </Link>
+    <div className="group block">
+      <Link href={product.href} onClick={onNavigate}>
+        <h4 className="text-[18px] font-bold text-[#ef4444] transition-colors group-hover:text-[#dc2626]">
+          {product.title}
+        </h4>
+      </Link>
+      <p className="mt-1.5 max-w-[300px] text-[14px] leading-relaxed text-[#6b7280]">
+        {product.description}
+        {product.servicesLink && (
+          <>
+            {" "}
+            (+
+            <Link
+              href={product.servicesLink.href}
+              onClick={onNavigate}
+              className="text-[#ef4444] transition-colors hover:text-[#dc2626] hover:underline"
+            >
+              {product.servicesLink.label}
+            </Link>
+            )
+          </>
+        )}
+      </p>
+    </div>
   );
 }
 
 function ServicesBlock({ services, onNavigate }) {
   return (
     <div>
-      <h4 className="text-[18px] font-bold text-[#ef4444]">{services.title}</h4>
+      {services.href ? (
+        <Link href={services.href} onClick={onNavigate}>
+          <h4 className="text-[18px] font-bold text-[#ef4444] transition-colors hover:text-[#dc2626]">
+            {services.title}
+          </h4>
+        </Link>
+      ) : (
+        <h4 className="text-[18px] font-bold text-[#ef4444]">{services.title}</h4>
+      )}
       <ul className="mt-3 space-y-2.5">
         {services.items.map((item, index) => (
           <li key={item.label}>
@@ -97,7 +123,7 @@ function SolutionsColumn({ section, onNavigate }) {
   const hasTrailingProduct = Boolean(section.trailingProduct);
 
   return (
-    <div className="flex min-h-[420px] flex-col px-8 py-7 md:px-9 md:py-8">
+    <div className="flex min-h-0 flex-col px-8 py-7 md:px-9 md:py-8">
       <MainSectionBlock section={section} onNavigate={onNavigate} />
 
       {hasProducts && (
@@ -115,7 +141,7 @@ function SolutionsColumn({ section, onNavigate }) {
       )}
 
       {section.secondaryMain && (
-        <div className="mt-5">
+        <div className={hasProducts ? "mt-4" : "mt-5"}>
           <SecondaryMainBlock block={section.secondaryMain} onNavigate={onNavigate} />
         </div>
       )}
@@ -225,20 +251,39 @@ export function SolutionsMegaMenuMobile({ onClose }) {
 
                 {hasProducts &&
                   section.products.map((product) => (
-                    <Link
-                      key={product.title}
-                      href={product.href}
-                      onClick={onClose}
-                      className="block"
-                    >
-                      <p className="text-[14px] font-bold text-[#ef4444]">{product.title}</p>
-                      <Description text={product.description} className="mt-1 text-[13px] text-[#6b7280]" />
-                    </Link>
+                    <div key={product.title}>
+                      <Link href={product.href} onClick={onClose} className="block">
+                        <p className="text-[14px] font-bold text-[#ef4444]">{product.title}</p>
+                      </Link>
+                      <p className="mt-1 text-[13px] text-[#6b7280]">
+                        {product.description}
+                        {product.servicesLink && (
+                          <>
+                            {" "}
+                            (+
+                            <Link
+                              href={product.servicesLink.href}
+                              onClick={onClose}
+                              className="text-[#ef4444] hover:underline"
+                            >
+                              {product.servicesLink.label}
+                            </Link>
+                            )
+                          </>
+                        )}
+                      </p>
+                    </div>
                   ))}
 
                 {hasServices && (
                   <div>
-                    <p className="text-[14px] font-bold text-[#ef4444]">{section.services.title}</p>
+                    {section.services.href ? (
+                      <Link href={section.services.href} onClick={onClose}>
+                        <p className="text-[14px] font-bold text-[#ef4444]">{section.services.title}</p>
+                      </Link>
+                    ) : (
+                      <p className="text-[14px] font-bold text-[#ef4444]">{section.services.title}</p>
+                    )}
                     <ul className="mt-2 space-y-2">
                       {section.services.items.map((item) => (
                         <li key={item.label}>
@@ -256,10 +301,28 @@ export function SolutionsMegaMenuMobile({ onClose }) {
                 )}
 
                 {section.trailingProduct && (
-                  <Link href={section.trailingProduct.href} onClick={onClose} className="block">
-                    <p className="text-[14px] font-bold text-[#ef4444]">{section.trailingProduct.title}</p>
-                    <Description text={section.trailingProduct.description} className="mt-1 text-[13px] text-[#6b7280]" />
-                  </Link>
+                  <div>
+                    <Link href={section.trailingProduct.href} onClick={onClose} className="block">
+                      <p className="text-[14px] font-bold text-[#ef4444]">{section.trailingProduct.title}</p>
+                    </Link>
+                    <p className="mt-1 text-[13px] text-[#6b7280]">
+                      {section.trailingProduct.description}
+                      {section.trailingProduct.servicesLink && (
+                        <>
+                          {" "}
+                          (+
+                          <Link
+                            href={section.trailingProduct.servicesLink.href}
+                            onClick={onClose}
+                            className="text-[#ef4444] hover:underline"
+                          >
+                            {section.trailingProduct.servicesLink.label}
+                          </Link>
+                          )
+                        </>
+                      )}
+                    </p>
+                  </div>
                 )}
               </div>
             )}

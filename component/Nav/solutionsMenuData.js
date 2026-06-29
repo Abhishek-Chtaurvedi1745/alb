@@ -4,7 +4,7 @@ export const aiServicesSection = {
   underlineWord: "AI",
   description:
     "Intelligent solutions to automate processes and improve business efficiency.",
-  href: "/ai-services",
+  href: "/ai-services-for-enterprise",
 };
 
 export const solutionsMegaMenu = [
@@ -19,23 +19,15 @@ export const solutionsMegaMenu = [
       {
         title: "Clarity",
         description:
-          "A powerful PPM platform to manage projects, resources, investments, and business outcomes. (+ <span class=\"text-[#ef4444]\">Clearity services</span>)",
-        href: "/project",
+          "A powerful PPM platform to manage projects, resources, investments, and business outcomes.",
+        href: "/clarity",
+        servicesLink: {
+          label: "Clarity Services",
+          href: "/clarity/services",
+        },
       },
     ],
     secondaryMain: aiServicesSection,
-    services: {
-      title: "Clarity Services",
-      href: "/clarity/services",
-      items: [
-        { label: "Implementation", href: "/clarity/services/implementation" },
-        { label: "Installations & Upgrades", href: "/clarity/services/installations-upgrades" },
-        { label: "Migration to Modern UX", href: "/clarity/services/migration-to-modern-ux" },
-        { label: "Integrations", href: "/clarity/services/integration" },
-        { label: "Reporting & Dashboards", href: "/clarity/services/clarity-reporting-dashboard-services" },
-        { label: "Business Intelligence", href: "/clarity/services/business-intelligence" },
-      ],
-    },
   },
   {
     id: "automation",
@@ -43,13 +35,17 @@ export const solutionsMegaMenu = [
     underlineWord: "Enterprise",
     description:
       "Streamline complex business processes with intelligent automation across your enterprise.",
-    href: "/project",
+    href: "/enterprise-it-automation",
     products: [
       {
         title: "Automic Automation",
         description:
-          "Automate workflows, applications, and IT processes with a scalable enterprise automation platform. (+ <span class=\"text-[#ef4444]\">Automic Automation Services</span>)",
-        href: "/project",
+          "Automate workflows, applications, and IT processes with a scalable enterprise automation platform.",
+        href: "/enterprise-it-automation",
+        servicesLink: {
+          label: "Automic Automation Services",
+          href: "/contact-us",
+        },
       },
     ],
     // services: {
@@ -65,8 +61,12 @@ export const solutionsMegaMenu = [
     trailingProduct: {
       title: "Stonebranch",
       description:
-        "Modern workload automation solutions to simplify IT operations and improve business agility. (+ <span class=\"text-[#ef4444]\">Stonebranch Services</span>)",
-      href: "/project",
+        "Modern workload automation solutions to simplify IT operations and improve business agility.",
+      href: "/enterprise-it-automation",
+      servicesLink: {
+        label: "Stonebranch Services",
+        href: "/contact-us",
+      },
     },
   },
 ];

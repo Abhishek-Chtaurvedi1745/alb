@@ -2,67 +2,60 @@
 "use client"
 import React from 'react'
 import { useState } from 'react';
-import { Target, Activity, TrendingUp, Coins } from "lucide-react";
-
-import {
-  Settings,
-  Cog,
-  Monitor,
-  Puzzle,
-  Code2,
-  Users,
-  Headset,
-  GraduationCap,
-  BarChart3,
-} from "lucide-react";
+import Link from 'next/link';
 import Claritysection from '../../component/claritypagesection/Claritysection';
 import FAQSection from '../../component/Faq/Faqsection';
 
 const services = [
   {
-    icon: Settings,
     label: "Implementation Services",
     image: "/images/11.svg",
+    href: "/clarity/services/implementation",
   },
   {
-    icon: Cog,
     label: "Installation & Upgrades",
     image: "/images/12.svg",
+    href: "/clarity/services/installations-upgrades",
   },
   {
-    icon: Monitor,
     label: "Migration to Modern UX",
     image: "/images/13.svg",
+    href: "/clarity/services/migration-to-modern-ux",
   },
   {
-    icon: Puzzle,
     label: "Integration Services",
     image: "/images/14.svg",
+    href: "/clarity/services/integration",
   },
   {
-    icon: Code2,
     label: "Technical Development",
     image: "/images/15.svg",
+    href: "/clarity/services/technical-development",
   },
   {
-    icon: Users,
     label: "Staff Augmentation",
     image: "/images/new16.svg",
+    href: "/clarity/services/staff-augmentation",
   },
   {
-    icon: Headset,
     label: "Support & Maintenance",
     image: "/images/17.svg",
+    href: "/clarity/services/support-maintenance",
   },
   {
-    icon: GraduationCap,
     label: "User Trainings",
     image: "/images/18.svg",
+    href: "/clarity/services/user-tranings",
   },
   {
-    icon: BarChart3,
     label: "Reports & Dashboards",
     image: "/images/19.svg",
+    href: "/clarity/services/clarity-reporting-dashboard-services",
+  },
+  {
+    label: "Business Intelligence",
+    image: "/images/md1.svg",
+    href: "/clarity/services/business-intelligence",
   },
 ];
 
@@ -197,28 +190,34 @@ Request a free demo
         </div>
 
         {/* Icon grid with dividers */}
+        {activeTab === "services" && (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
           {services.map((service, index) => {
-            const Icon = service.icon;
             const isLastInRow5 = (index + 1) % 5 === 0;
             const isLastOverall = index === services.length - 1;
 
             return (
-              <div
+              <Link
                 key={service.label}
-                className={`flex flex-col items-center text-center gap-3 px-4 py-8 border-white/10
+                href={service.href}
+                className={`group flex flex-col items-center text-center gap-3 px-4 py-8 border-white/10 transition-colors hover:bg-white/[0.04]
                   ${!isLastInRow5 && !isLastOverall ? "sm:border-r" : ""}
                   ${index < 5 ? "border-b sm:border-b md:border-b" : ""}
                 `}
               >
-                <img src={service.image} />
-                <p className="text-[22px] text-[#FFFFFF] leading-snug max-w-[120px]">
+                <img
+                  src={service.image}
+                  alt={service.label}
+                  className="transition-transform duration-300 group-hover:scale-110"
+                />
+                <p className="text-[22px] text-[#FFFFFF] leading-snug max-w-[120px] transition-colors group-hover:text-[#FF403A]">
                   {service.label}
                 </p>
-              </div>
+              </Link>
             );
           })}
         </div>
+        )}
       </div>
     </section>
     <section className="bg-black py-9 px-6">

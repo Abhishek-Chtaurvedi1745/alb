@@ -58,13 +58,13 @@ const quickLinks = [
 
 const otherLinks = [
   { label: "Project Prortfolio Management", href: "/project-management" },
-  { label: "Enterprise IT Automation", href: "/project" },
+  { label: "Enterprise IT Automation", href: "/enterprise-it-automation" },
   // { label: "Project Management as a Service", href: "/project-management" },
-  { label: "Clarity", href: "/project" },
+  { label: "Clarity", href: "/clarity" },
   { label: "Clarity Services", href: "/clarity/services" },
   // { label: "Enterprise IT Automation", href: "/project" },
-  { label: "Automic Automation", href: "/project" },
-  { label: "Stonebranch UAC", href: "/project" },
+  { label: "Automic Automation", href: "/enterprise-it-automation" },
+  { label: "Stonebranch UAC", href: "/enterprise-it-automation" },
 ];
 
 function FooterLink({ href, children }) {

@@ -19,6 +19,7 @@ const services = [
     icon: "/images/md2.svg",
     title: "Enterprise IT Automation",
     featured: true,
+    href: "/enterprise-it-automation",
     items: [
       "Broadcom Automic Automation",
       "Automation Analytics & Intelligence",
@@ -29,7 +30,7 @@ const services = [
   {
     icon: "/images/md3.svg",
     title: "AI Services for Enterprise",
-    href: "/ai-services",
+    href: "/ai-services-for-enterprise",
     items: [
       "LLM Engineering & Prompt Design",
       "Multi-Agent Orchestration",
