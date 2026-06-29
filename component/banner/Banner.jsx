@@ -25,7 +25,7 @@ export default function BannerSlider() {
   }, []);
 
   return (
-    <section className="relative w-full aspect-[1617/512] overflow-hidden mt-20 bg-black">
+    <section className="relative w-full overflow-hidden mt-20 bg-black h-[clamp(148px,40vw,220px)] md:h-auto md:aspect-[1617/512]">
       
       {/* Slider Track */}
       <div
@@ -46,7 +46,7 @@ export default function BannerSlider() {
               height={512}
               decoding="async"
               fetchPriority={index === 0 ? "high" : "auto"}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[left_center] md:object-center"
             />
           </div>
         ))}
