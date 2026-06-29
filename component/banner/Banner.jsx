@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const banners = [
-  "/images/ab1.png",
-  "/images/ab2.png",
-  "/images/ab3.png",
-  "/images/ab1.png",
+  { src: "/images/banner-trozai.png", alt: "TrozAI – An AI Platform That Works with Your PPM Ecosystem" },
+  { src: "/images/banner-pmo-operations.png", alt: "Meaningful & Secure AI for Smarter PMO Operations" },
+  { src: "/images/banner-ai-agents.png", alt: "Simplify Complex Enterprise Workflows with AI Agents" },
+  { src: "/images/banner-strategic-engine.png", alt: "Transform Your PMO into a Strategic Engine" },
 ];
 
 export default function BannerSlider() {
@@ -25,7 +25,7 @@ export default function BannerSlider() {
   }, []);
 
   return (
-    <section className="relative w-full h-[140px] lg:h-[600px] overflow-hidden mt-20">
+    <section className="relative w-full aspect-[1617/512] overflow-hidden mt-20 bg-black">
       
       {/* Slider Track */}
       <div
@@ -34,14 +34,18 @@ export default function BannerSlider() {
           transform: `translateX(-${current * 100}%)`,
         }}
       >
-        {banners.map((image, index) => (
+        {banners.map((banner, index) => (
           <div
             key={index}
             className="w-full h-full flex-shrink-0"
           >
             <img
-              src={image}
-              alt={`Banner ${index + 1}`}
+              src={banner.src}
+              alt={banner.alt}
+              width={1617}
+              height={512}
+              decoding="async"
+              fetchPriority={index === 0 ? "high" : "auto"}
               className="w-full h-full object-cover"
             />
           </div>
