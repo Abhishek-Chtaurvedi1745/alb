@@ -63,8 +63,8 @@ const otherLinks = [
   { label: "Clarity", href: "/clarity" },
   { label: "Clarity Services", href: "/clarity/services" },
   // { label: "Enterprise IT Automation", href: "/project" },
-  { label: "Automic Automation", href: "/enterprise-it-automation" },
-  { label: "Stonebranch UAC", href: "/enterprise-it-automation" },
+  { label: "Automic Automation", href: "/automic-automation" },
+  { label: "Stonebranch UAC", href: "/stonebranch" },
 ];
 
 function FooterLink({ href, children }) {

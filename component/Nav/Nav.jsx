@@ -191,10 +191,10 @@ function Nav() {
                 </button>
 
                 <div
-                  className={`absolute left-1/2 top-full z-[1001] -translate-x-1/2 pt-4 transition-all duration-300 ${
+                  className={`absolute left-0 top-full z-[1001] overflow-visible pt-4 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
                     showSolutions
                       ? "visible translate-y-0 opacity-100"
-                      : "invisible -translate-y-2 opacity-0 pointer-events-none"
+                      : "pointer-events-none invisible -translate-y-2 opacity-0"
                   }`}
                 >
                   <div className="hidden lg:block">

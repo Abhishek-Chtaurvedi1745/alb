@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { solutionsMegaMenu, getResponsiveSolutionsMenu } from "./solutionsMenuData";
+import { desktopFlyoutMenu, getResponsiveSolutionsMenu } from "./solutionsMenuData";
 
 const responsiveSolutionsMenu = getResponsiveSolutionsMenu();
 
@@ -204,19 +204,158 @@ export function SolutionsMegaMenuDesktop({ onClose }) {
   );
 }
 
-export function SolutionsMegaMenuWide({ onClose }) {
+const FLYOUT_COL1_WIDTH = 300;
+const FLYOUT_COL2_WIDTH = 280;
+const FLYOUT_COL3_WIDTH = 320;
+
+function FlyoutMenuRow({ label, href, isActive, hasChildren, onMouseEnter, onNavigate }) {
   return (
-    <div className="w-[min(94vw,820px)] overflow-hidden rounded-sm border border-[#93c5fd]/80 bg-white shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
-      <div className="grid md:grid-cols-2">
-        {solutionsMegaMenu.map((section, index) => (
-          <div
-            key={section.id}
-            className={index === 0 ? "border-b border-[#e5e7eb] md:border-r md:border-b-0" : ""}
-          >
-            <SolutionsColumn section={section} onNavigate={onClose} />
-          </div>
+    <Link
+      href={href}
+      onClick={onNavigate}
+      onMouseEnter={onMouseEnter}
+      className={`group flex items-center justify-between gap-4 px-5 py-3 text-[15px] font-semibold transition-all duration-200 ease-out ${
+        isActive
+          ? "bg-[#fff1f2] text-[#ef4444]"
+          : "text-[#374151] hover:bg-[#f9fafb] hover:text-[#ef4444]"
+      }`}
+    >
+      <span className="transition-colors duration-200">{label}</span>
+      {hasChildren && (
+        <ChevronRight
+          size={16}
+          strokeWidth={2}
+          className={`shrink-0 transition-all duration-200 ease-out ${
+            isActive
+              ? "translate-x-0.5 text-[#ef4444]"
+              : "text-[#9ca3af] group-hover:translate-x-0.5 group-hover:text-[#ef4444]"
+          }`}
+        />
+      )}
+    </Link>
+  );
+}
+
+function FlyoutServiceRow({ label, href, onNavigate }) {
+  return (
+    <Link
+      href={href}
+      onClick={onNavigate}
+      className="block px-5 py-2.5 text-[12px] font-medium tracking-[0.1em] text-[#6b7280] uppercase transition-all duration-200 ease-out hover:bg-[#f9fafb] hover:text-[#ef4444]"
+    >
+      {label}
+    </Link>
+  );
+}
+
+function FlyoutPanel({ isOpen, left, width, zIndex, children, className = "" }) {
+  return (
+    <div
+      className={`absolute top-0 border-[#e5e7eb] bg-white py-2 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[transform,opacity] ${
+        isOpen
+          ? "pointer-events-auto translate-x-0 opacity-100"
+          : "pointer-events-none translate-x-2 opacity-0"
+      } ${className}`}
+      style={{
+        left,
+        width,
+        zIndex,
+      }}
+      aria-hidden={!isOpen}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function SolutionsMegaMenuWide({ onClose }) {
+  const [activeMainId, setActiveMainId] = useState(null);
+  const [activeSubKey, setActiveSubKey] = useState(null);
+
+  const activeMain = desktopFlyoutMenu.find((item) => item.id === activeMainId);
+  const activeSub = activeMain?.children?.find(
+    (child, index) => activeSubKey === `${activeMainId}-sub-${index}`,
+  );
+
+  const showCol2 = Boolean(activeMain?.children?.length);
+  const showCol3 = Boolean(activeSub?.children?.length);
+
+  const hoverAreaWidth =
+    FLYOUT_COL1_WIDTH +
+    (showCol2 ? FLYOUT_COL2_WIDTH : 0) +
+    (showCol3 ? FLYOUT_COL3_WIDTH : 0);
+
+  const resetPanels = () => {
+    setActiveMainId(null);
+    setActiveSubKey(null);
+  };
+
+  const handleMainEnter = (item) => {
+    setActiveMainId(item.id);
+    setActiveSubKey(null);
+  };
+
+  const handleSubEnter = (mainId, index, child) => {
+    setActiveMainId(mainId);
+    setActiveSubKey(child.children?.length ? `${mainId}-sub-${index}` : null);
+  };
+
+  return (
+    <div
+      className="relative overflow-visible transition-[width] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]"
+      style={{ width: hoverAreaWidth, minWidth: FLYOUT_COL1_WIDTH }}
+      onMouseLeave={resetPanels}
+    >
+      <div className="relative z-30 w-[300px] overflow-hidden rounded-sm border border-[#93c5fd]/80 bg-white py-2 shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
+        {desktopFlyoutMenu.map((item) => (
+          <FlyoutMenuRow
+            key={item.id}
+            label={item.title}
+            href={item.href}
+            isActive={activeMainId === item.id}
+            hasChildren={Boolean(item.children?.length)}
+            onMouseEnter={() => handleMainEnter(item)}
+            onNavigate={onClose}
+          />
         ))}
       </div>
+
+      <FlyoutPanel
+        isOpen={showCol2}
+        left={FLYOUT_COL1_WIDTH}
+        width={FLYOUT_COL2_WIDTH}
+        zIndex={20}
+        className="rounded-r-sm border border-l-0 border-[#93c5fd]/80 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
+      >
+        {activeMain?.children?.map((child, index) => (
+          <FlyoutMenuRow
+            key={child.title}
+            label={child.title}
+            href={child.href}
+            isActive={activeSubKey === `${activeMain.id}-sub-${index}`}
+            hasChildren={Boolean(child.children?.length)}
+            onMouseEnter={() => handleSubEnter(activeMain.id, index, child)}
+            onNavigate={onClose}
+          />
+        ))}
+      </FlyoutPanel>
+
+      <FlyoutPanel
+        isOpen={showCol3}
+        left={FLYOUT_COL1_WIDTH + FLYOUT_COL2_WIDTH}
+        width={FLYOUT_COL3_WIDTH}
+        zIndex={10}
+        className="max-h-[440px] overflow-y-auto rounded-r-sm border border-l-0 border-[#93c5fd]/80 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
+      >
+        {activeSub?.children?.map((service) => (
+          <FlyoutServiceRow
+            key={service.label}
+            label={service.label}
+            href={service.href}
+            onNavigate={onClose}
+          />
+        ))}
+      </FlyoutPanel>
     </div>
   );
 }

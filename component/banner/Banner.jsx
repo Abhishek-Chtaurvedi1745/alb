@@ -2,10 +2,30 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const banners = [
-  { src: "/images/banner-trozai.png", alt: "TrozAI – An AI Platform That Works with Your PPM Ecosystem" },
-  { src: "/images/banner-pmo-operations.png", alt: "Meaningful & Secure AI for Smarter PMO Operations" },
-  { src: "/images/banner-ai-agents.png", alt: "Simplify Complex Enterprise Workflows with AI Agents" },
-  { src: "/images/banner-strategic-engine.png", alt: "Transform Your PMO into a Strategic Engine" },
+  {
+    src: "/images/banner-1-pmo-operations.png",
+    alt: "Meaningful & Secure AI for Smarter PMO Operations",
+    width: 1617,
+    height: 512,
+  },
+  {
+    src: "/images/banner-2-trozai.png",
+    alt: "TrozAI – An AI Platform That Works within Your Enterprise Ecosystem",
+    width: 1617,
+    height: 512,
+  },
+  {
+    src: "/images/banner-3-strategic-engine.png",
+    alt: "Transform Your PMO into a Strategic Engine",
+    width: 1617,
+    height: 512,
+  },
+  {
+    src: "/images/banner-4-orchestrate.png",
+    alt: "Orchestrate complex enterprise workflows with intelligent automation",
+    width: 1617,
+    height: 512,
+  },
 ];
 
 export default function BannerSlider() {
@@ -25,7 +45,7 @@ export default function BannerSlider() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden mt-20 bg-black h-[clamp(148px,40vw,220px)] md:h-auto md:aspect-[1617/512]">
+    <section className="relative w-full aspect-[1617/512] overflow-hidden mt-20 bg-black">
       
       {/* Slider Track */}
       <div
@@ -36,17 +56,17 @@ export default function BannerSlider() {
       >
         {banners.map((banner, index) => (
           <div
-            key={index}
+            key={banner.src}
             className="w-full h-full flex-shrink-0"
           >
             <img
               src={banner.src}
               alt={banner.alt}
-              width={1617}
-              height={512}
+              width={banner.width}
+              height={banner.height}
               decoding="async"
               fetchPriority={index === 0 ? "high" : "auto"}
-              className="w-full h-full object-cover object-[left_center] md:object-center"
+              className="w-full h-full object-cover"
             />
           </div>
         ))}

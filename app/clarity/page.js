@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Claritysection from '../../component/claritypagesection/Claritysection';
 import FAQSection from '../../component/Faq/Faqsection';
+import { prebuiltPlugins } from '@/section/Clarity/prebuiltPluginsData';
 
 const services = [
   {
@@ -101,10 +102,13 @@ const benefits = [
 
           
           <p className="text-[#FFFFFF] text-upercase text-[24px]">Talk to Our Team</p> */}
-          <img src="/images/climg1.svg" />
-          <button className="px-6 py-3 bg-[#FF403A] transition text-[#FFFFFF] text-[25px] mt-[28px] font-semibold cursor-pointer rounded-lg">
-Request a free demo
-          </button>
+          <img src="/images/climg1.svg" alt="Clarity" />
+          <Link
+            href="/contact-us"
+            className="mt-[28px] inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-[25px] font-semibold text-[#FFFFFF] transition hover:opacity-90"
+          >
+            Request a free demo
+          </Link>
         </div>
 
       
@@ -142,9 +146,12 @@ Request a free demo
               managing ideas, projects & resources centrally.
             </p>
 
-            <button className="mt-8 bg-[#FF403A] transition px-8 py-4 rounded-xl font-semibold shadow-lg shadow-red-500/30 cursor-pointer">
+            <Link
+              href="/contact-us"
+              className="mt-8 inline-block rounded-xl bg-[#FF403A] px-8 py-4 font-semibold shadow-lg shadow-red-500/30 transition hover:opacity-90"
+            >
               Get Free Consultation
-            </button>
+            </Link>
           </div>
 
           {/* Right Dashboard */}
@@ -212,6 +219,34 @@ Request a free demo
                 />
                 <p className="text-[22px] text-[#FFFFFF] leading-snug max-w-[120px] transition-colors group-hover:text-[#FF403A]">
                   {service.label}
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+        )}
+
+        {activeTab === "plugins" && (
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          {prebuiltPlugins.map((plugin, index) => {
+            const isLastInRow4 = (index + 1) % 4 === 0;
+            const isLastOverall = index === prebuiltPlugins.length - 1;
+
+            return (
+              <Link
+                key={plugin.slug}
+                href={`/clarity/plugins/${plugin.slug}`}
+                className={`group flex flex-col items-center gap-3 px-4 py-8 text-center transition-colors hover:bg-white/[0.04]
+                  ${!isLastInRow4 && !isLastOverall ? "md:border-r border-white/10" : ""}
+                `}
+              >
+                <img
+                  src={plugin.tabIcon}
+                  alt={plugin.tabLabel}
+                  className="transition-transform duration-300 group-hover:scale-110"
+                />
+                <p className="max-w-[160px] text-[20px] leading-snug text-[#FFFFFF] transition-colors group-hover:text-[#FF403A] md:text-[22px]">
+                  {plugin.tabLabel}
                 </p>
               </Link>
             );
