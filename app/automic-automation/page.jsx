@@ -1,44 +1,11 @@
 import Link from "next/link";
 import FAQSection from "@/component/Faq/Faqsection";
+import SuccessStories from "@/component/SuccessStories/SuccessStories";
 import FunctionalityGrid from "@/section/Automation/FunctionalityGrid";
 import AutomicIntroSection from "@/section/Automation/AutomicIntroSection";
-
-const functionalities = [
-  {
-    title: "Workload Automation & Orchestration",
-    description:
-      "Automate, schedule, and orchestrate complex workloads across on-premises, cloud, and hybrid environments with centralized control and real-time visibility.",
-    featured: true,
-    icon: "/images/md2.svg",
-  },
-  {
-    title: "Hybrid Cloud Automation",
-    image: "/images/ea2.png",
-  },
-  {
-    title: "Business Process Automation",
-    image: "/images/ea1.png",
-  },
-  {
-    title: "DevOps & API Automation",
-    image: "/images/ea3.png",
-  },
-  {
-    title: "Enterprise Application Automation",
-    image: "/images/ea4.png",
-  },
-  {
-    title: "AI-Powered Operations",
-    image: "/images/ea1.png",
-  },
-  {
-    title: "Governance & Operational Visibility",
-    description:
-      "Gain end-to-end visibility into automated processes with dashboards, audit trails, and governance controls that support compliance and operational excellence.",
-    image: "/images/ea.png",
-    fullWidth: true,
-  },
-];
+import { automicFaqData } from "@/section/Automation/automicFaqData";
+import { automicFunctionalities } from "@/section/Automation/automicFunctionalitiesData";
+import { automicSuccessStories } from "@/section/Automation/automicSuccessStoriesData";
 
 export const metadata = {
   title: "Automic Automation | Albatroz Solutions",
@@ -80,10 +47,11 @@ export default function AutomicAutomationPage() {
       <FunctionalityGrid
         title="Key Functionalities of"
         titleAccent="Automic Automation"
-        items={functionalities}
+        items={automicFunctionalities}
       />
 
-      <FAQSection />
+      <SuccessStories stories={automicSuccessStories} />
+      <FAQSection faqs={automicFaqData} />
     </div>
   );
 }

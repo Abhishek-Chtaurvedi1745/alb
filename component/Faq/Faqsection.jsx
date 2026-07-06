@@ -40,7 +40,7 @@ const faqData = [
   },
 ];
 
-function FAQSection() {
+function FAQSection({ faqs = faqData }) {
   const [active, setActive] = useState(0);
 
   const toggleFAQ = (index) => {
@@ -78,7 +78,7 @@ function FAQSection() {
           {/* RIGHT SIDE */}
           <div className="space-y-5">
 
-            {faqData.map((item, index) => (
+            {faqs.map((item, index) => (
               <div
                 key={index}
                 className={`border rounded-2xl overflow-hidden transition-all duration-500
@@ -118,12 +118,18 @@ function FAQSection() {
                       : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
-                  <div className="overflow-hidden">
-
-                    <p className="text-[#FFFFFF] leading-relaxed px-6 pb-6 text-sm md:text-base">
-                      {item.answer}
-                    </p>
-
+                  <div className="overflow-hidden px-6 pb-6">
+                    {item.bullets ? (
+                      <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[#FFFFFF] md:text-base">
+                        {item.bullets.map((bullet) => (
+                          <li key={bullet}>{bullet}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-sm leading-relaxed text-[#FFFFFF] md:text-base">
+                        {item.answer}
+                      </p>
+                    )}
                   </div>
                 </div>
 

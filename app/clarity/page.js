@@ -5,6 +5,8 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Claritysection from '../../component/claritypagesection/Claritysection';
 import FAQSection from '../../component/Faq/Faqsection';
+import SuccessStories from '../../component/SuccessStories/SuccessStories';
+import { claritySuccessStories } from '@/section/Clarity/claritySuccessStoriesData';
 import { prebuiltPlugins } from '@/section/Clarity/prebuiltPluginsData';
 
 const services = [
@@ -284,6 +286,7 @@ const benefits = [
       </div>
     </section>
     <Claritysection />
+    <SuccessStories stories={claritySuccessStories} />
     <FAQSection />
     </div>
   )

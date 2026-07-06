@@ -108,15 +108,16 @@ export default function IndustriesServed() {
               >
                 <img
                   src={industry.image}
-                  alt={`${industry.name} industry`}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div
                   className={`absolute inset-0 transition-colors duration-300 ${
-                    isActive ? "bg-[#FF403A]/30" : "bg-black/55 group-hover:bg-black/45"
+                    isActive ? "bg-[#FF403A]/20" : "bg-black/15 group-hover:bg-black/5"
                   }`}
                 />
-                <span className="relative z-10 flex h-full items-center justify-center text-base md:text-lg font-semibold text-white tracking-wide">
+                <span className="relative z-10 flex h-full items-center justify-center px-2 text-base font-semibold tracking-wide text-white md:text-lg">
                   {industry.name}
                 </span>
               </button>

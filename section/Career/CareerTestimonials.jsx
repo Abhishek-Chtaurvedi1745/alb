@@ -8,8 +8,8 @@ export default function CareerTestimonials() {
     <TestimonialsSection
       testimonials={careerTestimonials}
       eyebrow="Testimonials"
-      title="What Our Team Says"
-      highlight="About Working Here."
+      title="What Our Employees Say"
+      highlight="About Us."
       autoSlideMs={5000}
       sectionClassName="w-full overflow-hidden bg-black px-4 py-10 md:py-20"
     />
