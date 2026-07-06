@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Claritysection from '../../component/claritypagesection/Claritysection';
 import FAQSection from '../../component/Faq/Faqsection';
 import SuccessStories from '../../component/SuccessStories/SuccessStories';
+import { clarityFaqData } from '@/section/Clarity/clarityFaqData';
 import { claritySuccessStories } from '@/section/Clarity/claritySuccessStoriesData';
 import { prebuiltPlugins } from '@/section/Clarity/prebuiltPluginsData';
 
@@ -287,7 +288,7 @@ const benefits = [
     </section>
     <Claritysection />
     <SuccessStories stories={claritySuccessStories} />
-    <FAQSection />
+    <FAQSection faqs={clarityFaqData} />
     </div>
   )
 }

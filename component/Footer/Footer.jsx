@@ -52,8 +52,8 @@ const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Our Teams", href: "/ourteam" },
   { label: "Careers", href: "/career" },
-  { label: "News & Events", href: "/Blog" },
-  { label: "Blogs", href: "/Blog" },
+  { label: "News & Events", href: "/blog" },
+  { label: "Blogs", href: "/blog" },
 ];
 
 const otherLinks = [

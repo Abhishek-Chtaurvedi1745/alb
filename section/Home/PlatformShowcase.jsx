@@ -38,7 +38,7 @@ function PlatformLogo({ platform, index, inView }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={`group relative flex w-[200px] shrink-0 flex-col items-center transition-all duration-700 ease-out sm:w-[220px] ${
+      className={`group relative flex w-[200px] shrink-0 flex-col items-center px-1 pt-3 transition-all duration-700 ease-out sm:w-[220px] ${
         inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
       style={{ transitionDelay: `${300 + index * 120}ms` }}
@@ -115,7 +115,7 @@ export default function PlatformShowcase() {
         </div>
 
         {/* Auto-scroll logo strip */}
-        <div className="relative mt-12 overflow-hidden md:mt-16">
+        <div className="relative mt-12 overflow-x-hidden py-5 md:mt-16">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-black to-transparent sm:w-24" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-black to-transparent sm:w-24" />
 
