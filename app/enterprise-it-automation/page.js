@@ -1,6 +1,6 @@
 import React from 'react'
-import { Fa0 } from 'react-icons/fa6';
 import FAQSection from '../../component/Faq/Faqsection';
+import IndustriesServed from '../../section/Automation/IndustriesServed';
 
  const benefits = [
     {
@@ -20,13 +20,6 @@ import FAQSection from '../../component/Faq/Faqsection';
       desc: 'Handle diverse business demands effortlessly with robust automation tools.',
     },
   ]
-  const industries = [
-    { name: "BFSI", image: "/images/ea5.png" },
-    { name: "Retail", image: "/images/ea6.png" },
-    { name: "Healthcare", image: "/images/ea7.png" },
-    { name: "Manufacturing", image: "/images/ea8.png" },
-    { name: "Telecom", image: "/images/ea9.png" },
-  ];
    const solutions = [
     {
       title: 'Broadcam',
@@ -400,41 +393,7 @@ function page() {
 
         </div>
       </section>
-      <section className="bg-black text-white">
-      {/* Top subtle horizontal gradient divider */}
-      <hr className="border-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-      
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 text-center">
-        {/* Section Heading */}
-        <h2 className="text-3xl md:text-[40px] font-semibold tracking-tight">
-          Industries <span className="text-[#FF403A]">Served</span>
-        </h2>
-
-        {/* Cards Grid */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 justify-center items-center">
-          {industries.map((industry, index) => (
-            <div
-              key={index}
-              className="relative group h-24 md:h-24 w-full overflow-hidden rounded-xl border border-white/10 bg-zinc-900 transition-all duration-300 hover:border-[#FF403A]/40 hover:shadow-[0_0_20px_rgba(255,64,58,0.15)]"
-            >
-              {/* Background Image with Dark Overlay */}
-              <div className="absolute ">
-                <img
-                  src={industry.image}
-                  alt={`${industry.name} industry backdrop`}
-                  className="w-full h-full h-24 md:h-24  transition-transform duration-500 group-hover:scale-105 "
-                />
-                {/* Visual darkening gradient blend to pop text */}
-                <div className="" />
-              </div>
-
-              {/* Centered Industry Title Text */}
-             
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      <IndustriesServed />
     <FAQSection />
     </div>
   )
