@@ -1,5 +1,5 @@
 import React from 'react'
-import { Check, Play } from 'lucide-react'
+import { Play } from 'lucide-react'
 
 const features = [
   {
@@ -103,45 +103,49 @@ const features = [
 ]
 
 function Claritysection() {
-  const leftColumn = features.filter((_, i) => i % 2 === 0)
-  const rightColumn = features.filter((_, i) => i % 2 === 1)
-
   const renderCard = (feature, i) => (
-    <div key={i} className="mb-7">
-      <h3 className="text-white font-semibold text-2xl md:text-[32px] mb-3 leading-snug">
-        {feature.titleWhite} <span className="text-[#FF403A]">{feature.titleRed}</span>
+    <article
+      key={i}
+      className="flex h-full flex-col rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 transition-colors duration-300 hover:border-[#FF403A]/40"
+    >
+      <h3 className="mb-4 text-xl font-semibold leading-snug text-white md:text-2xl">
+        {feature.titleWhite}{" "}
+        <span className="text-[#FF403A]">{feature.titleRed}</span>
       </h3>
-      <ul className="space-y-2 mb-4">
+
+      <ul className="mb-6 flex-1 space-y-3">
         {feature.points.map((point, j) => (
-          <li key={j} className="flex items-start gap-2">
-           <img src="/images/crt.svg"  className='h-[20px]'/>
-            <span className="text-white text-[20px] leading-snug">{point}</span>
+          <li key={j} className="flex items-start gap-2.5">
+            <img src="/images/crt.svg" alt="" className="mt-1 h-4 w-4 shrink-0" />
+            <span className="text-sm leading-relaxed text-white/90 md:text-base">
+              {point}
+            </span>
           </li>
         ))}
       </ul>
-      <button className="flex items-center gap-2 border border-gray-600 rounded px-4 py-2 hover:border-red-500 transition-colors cursor-pointer">
-        <span className="bg-[#FF403A] rounded-sm p-1 flex items-center justify-center">
-          <Play className="w-3 h-3 text-white fill-white" />
+
+      <button className="mt-auto flex w-fit items-center gap-2 rounded border border-gray-600 px-4 py-2 transition-colors hover:border-[#FF403A] cursor-pointer">
+        <span className="flex items-center justify-center rounded-sm bg-[#FF403A] p-1">
+          <Play className="h-3 w-3 fill-white text-white" />
         </span>
-        <span className="text-white text-sm font-medium">Watch video</span>
+        <span className="text-sm font-medium text-white">Watch video</span>
       </button>
-    </div>
-  )
+    </article>
+  );
 
   return (
-    <section className="bg-black py-16 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-[40px] font-semibold text-white mb-10">
+    <section className="bg-black px-6 py-16 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <h2 className="mb-12 text-3xl font-semibold text-white md:text-[40px]">
           Clarity: <span className="text-[#FF403A]">Key Features</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10">
-          <div>{leftColumn.map((feature, i) => renderCard(feature, i))}</div>
-          <div>{rightColumn.map((feature, i) => renderCard(feature, i))}</div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, i) => renderCard(feature, i))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Claritysection

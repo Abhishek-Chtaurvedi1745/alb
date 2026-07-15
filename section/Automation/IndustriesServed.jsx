@@ -82,8 +82,6 @@ export default function IndustriesServed() {
 
   return (
     <section className="bg-black text-white">
-      <hr className="border-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 text-center">
         <h2 className="text-3xl md:text-[40px] font-semibold tracking-tight">
           Industries <span className="text-[#FF403A]">Served</span>
