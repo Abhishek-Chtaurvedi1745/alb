@@ -1,6 +1,4 @@
 import { clarityServices } from "@/section/Clarity/clarityServicesData";
-import { automicServices } from "@/section/Automation/automicServicesData";
-import { stonebranchServices } from "@/section/Automation/stonebranchServicesData";
 
 export const aiServicesSection = {
   id: "ai",
@@ -65,19 +63,17 @@ export const desktopSolutionsColumns = [
       {
         title: "Automic Automation",
         href: "/automic-automation",
-        services: {
-          title: "Automic Automation Services",
+        servicesLink: {
+          label: "Automic Automation Services",
           href: "/automic-automation/services",
-          items: mapServiceItems(automicServices),
         },
       },
       {
         title: "Stonebranch",
         href: "/stonebranch",
-        services: {
-          title: "Stonebranch Services",
+        servicesLink: {
+          label: "Stonebranch Services",
           href: "/stonebranch/services",
-          items: mapServiceItems(stonebranchServices),
         },
       },
     ],

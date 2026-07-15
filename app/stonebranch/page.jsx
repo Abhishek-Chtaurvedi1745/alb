@@ -38,21 +38,44 @@ const capabilities = [
   {
     title: "Workload Automation & Orchestration",
     description:
-      "Coordinate and automate complex workloads across hybrid infrastructure with centralized visibility and control.",
-    featured: true,
+      "Centralize and automate workloads, applications, and business processes across your enterprise from a single platform. Improve efficiency, reduce manual intervention, and ensure reliable execution of critical operations.",
     icon: "/images/md2.svg",
   },
-  { title: "Hybrid Infrastructure Automation", icon: "/images/14.svg" },
-  { title: "DevOps Automation", icon: "/images/15.svg" },
-  { title: "Data Pipeline Orchestration", icon: "/images/13.svg" },
-  { title: "Managed File Transfer", icon: "/images/12.svg" },
-  { title: "Enterprise Integrations", icon: "/images/11.svg" },
+  {
+    title: "Hybrid Infrastructure Automation",
+    description:
+      "Manage and automate workloads across cloud, on-premises, virtualized, and containerized environments with ease. Gain the flexibility to scale operations while maintaining consistency across your hybrid IT landscape.",
+    icon: "/images/14.svg",
+  },
+  {
+    title: "DevOps Automation",
+    description:
+      "Streamline application delivery by automating deployment workflows, release processes, and operational tasks. Accelerate innovation, improve collaboration, and deliver changes faster with greater confidence.",
+    icon: "/images/15.svg",
+  },
+  {
+    title: "Data Pipeline Orchestration",
+    description:
+      "Orchestrate end-to-end data workflows across systems, platforms, and business applications. Ensure timely, accurate data availability while simplifying complex processing dependencies.",
+    icon: "/images/13.svg",
+  },
+  {
+    title: "Managed File Transfer",
+    description:
+      "Securely automate file exchanges across internal systems, cloud platforms, and external business partners. Enhance data security, compliance, and visibility while ensuring reliable file delivery.",
+    icon: "/images/12.svg",
+  },
+  {
+    title: "Enterprise Integrations",
+    description:
+      "Connect seamlessly with enterprise applications, cloud services, databases, and IT operations tools. Eliminate silos and enable connected workflows that support business agility and digital transformation.",
+    icon: "/images/11.svg",
+  },
   {
     title: "AI-Powered Intelligence",
     description:
-      "Leverage intelligent automation capabilities to optimize scheduling, detect anomalies, and improve operational decision-making.",
-    image: "/images/ea3.png",
-    fullWidth: true,
+      "Leverage AI-driven insights and conversational assistance to simplify workflow management, troubleshooting, and operational decision-making. Reduce complexity, accelerate issue resolution, and improve productivity through intelligent automation guidance.",
+    icon: "/images/md3.svg",
   },
 ];
 
@@ -104,7 +127,8 @@ export default function StonebranchPage() {
 
       <FunctionalityGrid
         title="Core Capabilities of Stonebranch"
-        titleAccent="Automation Include"
+        titleAccent="Automation"
+        titleSuffix="Include"
         items={capabilities}
       />
 

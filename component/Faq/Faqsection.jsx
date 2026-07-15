@@ -64,15 +64,6 @@ function FAQSection({ faqs = faqData }) {
               <span className="text-[#ff403a]">Questions</span>
             </h2>
 
-            {/* IMAGE */}
-            <div className="mt-10">
-              <img
-                src="images/faqimg.png"
-                alt=""
-                className="w-[260px] object-contain"
-              />
-            </div>
-
           </div>
 
           {/* RIGHT SIDE */}

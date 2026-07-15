@@ -1,10 +1,11 @@
-export default function FunctionalityGrid({ title, titleAccent, items }) {
+export default function FunctionalityGrid({ title, titleAccent, titleSuffix, items }) {
   return (
     <section className="bg-black px-6 py-16 text-white lg:px-12">
       <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-3xl font-semibold md:text-[40px]">
           {title}{" "}
           {titleAccent ? <span className="text-[#FF403A]">{titleAccent}</span> : null}
+          {titleSuffix ? ` ${titleSuffix}` : null}
         </h2>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

@@ -29,7 +29,7 @@ export default function ClarityServiceCard({ service }) {
           </Link>
 
           <Link
-            href={`/contact-us?service=${service.slug}`}
+            href={`/contact-us?service=${service.contactSlug || service.slug}`}
             className="rounded-md border border-white/80 px-4 py-2 text-sm font-semibold text-white transition-colors hover:border-[#ff403a] hover:bg-[#ff403a]/10 sm:px-5 sm:text-base"
           >
             Request Service

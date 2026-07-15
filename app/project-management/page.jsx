@@ -533,14 +533,6 @@ across an organization to deliver value to customers efficiently. It encompasses
   <br className="hidden md:block" />
   <span className="text-[#ff403a]"> Questions </span>
 </h2>
-            {/* IMAGE */}
-            <div className="mt-10 hidden md:block">
-              <img
-                src="images/faqs.png"
-                alt=""
-                className="w-full object-contain h-[400px]"
-              />
-            </div>
 
           </div>
 

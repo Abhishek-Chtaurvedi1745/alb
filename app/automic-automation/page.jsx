@@ -4,6 +4,7 @@ import FAQSection from "@/component/Faq/Faqsection";
 import SuccessStories from "@/component/SuccessStories/SuccessStories";
 import FunctionalityGrid from "@/section/Automation/FunctionalityGrid";
 import AutomicIntroSection from "@/section/Automation/AutomicIntroSection";
+import AutomicServicesGrid from "@/section/Automation/AutomicServicesGrid";
 import { automicFaqData } from "@/section/Automation/automicFaqData";
 import { automicFunctionalities } from "@/section/Automation/automicFunctionalitiesData";
 import { automicSuccessStories } from "@/section/Automation/automicSuccessStoriesData";
@@ -50,6 +51,8 @@ export default function AutomicAutomationPage() {
         titleAccent="Automic Automation"
         items={automicFunctionalities}
       />
+
+      <AutomicServicesGrid />
 
       <SuccessStories stories={automicSuccessStories} />
       <section className="bg-black px-6 py-16 lg:px-12">

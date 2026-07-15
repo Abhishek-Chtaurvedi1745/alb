@@ -1,4 +1,4 @@
-import AutomationServiceCard from "@/section/Automation/AutomationServiceCard";
+import AutomationServicesTabSection from "@/section/Automation/AutomationServicesTabSection";
 import { automicServices } from "@/section/Automation/automicServicesData";
 
 export const metadata = {
@@ -14,7 +14,8 @@ export default function AutomicAutomationServicesPage() {
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
           <div className="max-w-3xl">
             <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[45px]">
-              Automic Automation <span className="text-[#ff403a]">Services</span>
+              Automic Automation{" "}
+              <span className="text-[#ff403a]">Services</span>
             </h1>
 
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/90 sm:mt-5 sm:text-lg md:text-[20px]">
@@ -31,22 +32,13 @@ export default function AutomicAutomationServicesPage() {
         </div>
       </section>
 
-      <section className="px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-          {automicServices.map((service, index) => (
-            <div
-              key={service.slug}
-              className={
-                index === automicServices.length - 1
-                  ? "md:col-span-2 md:mx-auto md:w-full md:max-w-2xl"
-                  : ""
-              }
-            >
-              <AutomationServiceCard service={service} />
-            </div>
-          ))}
-        </div>
-      </section>
+      <AutomationServicesTabSection
+        title="Comprehensive Automic Automation"
+        titleAccent="Services"
+        services={automicServices}
+        columns={5}
+        className="pt-0"
+      />
     </div>
   );
 }
