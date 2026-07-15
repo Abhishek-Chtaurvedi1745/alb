@@ -1,5 +1,6 @@
 import { clarityServices } from "@/section/Clarity/clarityServicesData";
 import { automicServices } from "@/section/Automation/automicServicesData";
+import { stonebranchServices } from "@/section/Automation/stonebranchServicesData";
 
 export const aiServicesSection = {
   id: "ai",
@@ -25,10 +26,28 @@ export const desktopSolutionsColumns = [
     description:
       "Optimize project planning, execution and portfolio decisions with enterprise-grade PPM solutions.",
     href: "/project-management",
-    product: {
-      title: "Clarity",
-      href: "/clarity",
-    },
+    products: [
+      {
+        title: "Clarity",
+        href: "/clarity",
+        servicesLink: {
+          label: "Clarity Services",
+          href: "/clarity/services",
+        },
+      },
+      {
+        title: "Rally",
+        href: "/rally",
+      },
+      {
+        title: "ConnectALL",
+        href: "/connectall",
+        servicesLink: {
+          label: "ConnectALL Services",
+          href: "/connectall/services",
+        },
+      },
+    ],
     services: {
       title: "Clarity Services",
       href: "/clarity/services",
@@ -42,20 +61,62 @@ export const desktopSolutionsColumns = [
     description:
       "Streamline complex business processes with intelligent automation across your enterprise.",
     href: "/enterprise-it-automation",
-    product: {
-      title: "Automic Automation",
-      href: "/automic-automation",
-    },
-    services: {
-      title: "Automic Automation Services",
-      href: "/automic-automation/services",
-      items: mapServiceItems(automicServices),
-    },
+    products: [
+      {
+        title: "Automic Automation",
+        href: "/automic-automation",
+        services: {
+          title: "Automic Automation Services",
+          href: "/automic-automation/services",
+          items: mapServiceItems(automicServices),
+        },
+      },
+      {
+        title: "Stonebranch",
+        href: "/stonebranch",
+        services: {
+          title: "Stonebranch Services",
+          href: "/stonebranch/services",
+          items: mapServiceItems(stonebranchServices),
+        },
+      },
+    ],
   },
   aiServicesSection,
 ];
 
 export const desktopFlyoutMenu = desktopSolutionsColumns.map((column) => {
+  if (column.products?.length) {
+    return {
+      id: column.id,
+      title: column.title,
+      href: column.href,
+      children: column.products.map((product) => {
+        let children;
+
+        if (product.services?.items?.length) {
+          children = [
+            { label: product.services.title, href: product.services.href },
+            ...product.services.items,
+          ];
+        } else if (product.servicesLink) {
+          children = [
+            {
+              label: product.servicesLink.label,
+              href: product.servicesLink.href,
+            },
+          ];
+        }
+
+        return {
+          title: product.title,
+          href: product.href,
+          ...(children ? { children } : {}),
+        };
+      }),
+    };
+  }
+
   if (!column.product) {
     return {
       id: column.id,
@@ -65,16 +126,22 @@ export const desktopFlyoutMenu = desktopSolutionsColumns.map((column) => {
     };
   }
 
+  const productServiceChildren = column.services?.items?.length
+    ? [
+        { label: column.services.title, href: column.services.href },
+        ...column.services.items,
+      ]
+    : undefined;
+
   return {
     id: column.id,
     title: column.title,
     href: column.href,
     children: [
-      { title: column.product.title, href: column.product.href },
       {
-        title: column.services.title,
-        href: column.services.href,
-        children: column.services.items,
+        title: column.product.title,
+        href: column.product.href,
+        ...(productServiceChildren ? { children: productServiceChildren } : {}),
       },
     ],
   };
@@ -99,6 +166,22 @@ export const solutionsMegaMenu = [
           href: "/clarity/services",
         },
       },
+      {
+        title: "Rally",
+        description:
+          "Enterprise Agile management and Value Stream Management — from team iteration to portfolio strategy.",
+        href: "/rally",
+      },
+      {
+        title: "ConnectALL",
+        description:
+          "Enterprise integration platform that connects Clarity, Rally, Jira, ServiceNow, and your entire toolchain.",
+        href: "/connectall",
+        servicesLink: {
+          label: "ConnectALL Services",
+          href: "/connectall/services",
+        },
+      },
     ],
     secondaryMain: aiServicesSection,
   },
@@ -120,17 +203,17 @@ export const solutionsMegaMenu = [
           href: "/automic-automation/services",
         },
       },
-    ],
-    trailingProduct: {
-      title: "Stonebranch",
-      description:
-        "Modern workload automation solutions to simplify IT operations and improve business agility.",
-      href: "/stonebranch",
-      servicesLink: {
-        label: "Stonebranch Services",
-        href: "/contact-us",
+      {
+        title: "Stonebranch",
+        description:
+          "Modern workload automation solutions to simplify IT operations and improve business agility.",
+        href: "/stonebranch",
+        servicesLink: {
+          label: "Stonebranch Services",
+          href: "/stonebranch/services",
+        },
       },
-    },
+    ],
   },
 ];
 

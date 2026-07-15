@@ -1,4 +1,5 @@
 import Link from "next/link";
+import GetStartedLink from "@/component/GetStartedLink";
 import FAQSection from "@/component/Faq/Faqsection";
 import SuccessStories from "@/component/SuccessStories/SuccessStories";
 import FunctionalityGrid from "@/section/Automation/FunctionalityGrid";
@@ -51,6 +52,11 @@ export default function AutomicAutomationPage() {
       />
 
       <SuccessStories stories={automicSuccessStories} />
+      <section className="bg-black px-6 py-16 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <GetStartedLink product="Automic" />
+        </div>
+      </section>
       <FAQSection faqs={automicFaqData} />
     </div>
   );

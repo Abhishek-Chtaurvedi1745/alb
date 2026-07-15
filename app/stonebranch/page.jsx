@@ -1,6 +1,8 @@
 import Link from "next/link";
 import AlternatingSection from "@/section/Automation/AlternatingSection";
 import FunctionalityGrid from "@/section/Automation/FunctionalityGrid";
+import StonebranchServicesGrid from "@/section/Automation/StonebranchServicesGrid";
+import GetStartedLink from "@/component/GetStartedLink";
 
 const productSections = [
   {
@@ -106,13 +108,10 @@ export default function StonebranchPage() {
         items={capabilities}
       />
 
-      <section className="bg-black px-6 pb-20 pt-4 text-center lg:px-12">
-        <Link
-          href="/contact-us"
-          className="inline-block rounded-xl border border-[#FF403A]/40 bg-[#111111] px-10 py-4 text-lg font-semibold text-white transition hover:border-[#FF403A] hover:text-[#FF403A]"
-        >
-          Services for <span className="text-[#FF403A]">Automation</span>
-        </Link>
+      <StonebranchServicesGrid />
+
+      <section className="bg-black px-6 py-16 text-center lg:px-12">
+        <GetStartedLink product="Stonebranch" />
       </section>
     </div>
   );

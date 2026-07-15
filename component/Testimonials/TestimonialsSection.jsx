@@ -13,6 +13,7 @@ export default function TestimonialsSection({
 }) {
   const [current, setCurrent] = useState(0);
   const [animate, setAnimate] = useState(true);
+  const [paused, setPaused] = useState(false);
 
   const goToSlide = useCallback(
     (direction) => {
@@ -32,17 +33,23 @@ export default function TestimonialsSection({
   );
 
   useEffect(() => {
+    if (paused) return;
+
     const interval = setInterval(() => {
       goToSlide("next");
     }, autoSlideMs);
 
     return () => clearInterval(interval);
-  }, [current, autoSlideMs, goToSlide]);
+  }, [current, autoSlideMs, goToSlide, paused]);
 
   const active = testimonials[current];
 
   return (
-    <section className={sectionClassName}>
+    <section
+      className={sectionClassName}
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 items-center gap-12 px-[30px] lg:grid-cols-2 lg:px-0">
           <div>
@@ -101,7 +108,7 @@ export default function TestimonialsSection({
                 />
               </div>
 
-              <div className="ml-12 pt-2">
+              <div className="px-8 pb-8 pt-2 md:px-12">
                 <p className="text-sm leading-relaxed text-white transition-all duration-700 md:text-base">
                   {active.text}
                 </p>

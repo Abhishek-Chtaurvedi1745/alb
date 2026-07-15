@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { desktopFlyoutMenu, getResponsiveSolutionsMenu } from "./solutionsMenuData";
@@ -213,7 +213,7 @@ function FlyoutMenuRow({ label, href, isActive, hasChildren, onMouseEnter, onNav
     <Link
       href={href}
       onClick={onNavigate}
-      onMouseEnter={onMouseEnter}
+      onMouseEnter={(event) => onMouseEnter?.(event)}
       className={`group flex items-center justify-between gap-4 px-5 py-3 text-[15px] font-semibold transition-all duration-200 ease-out ${
         isActive
           ? "bg-[#fff1f2] text-[#ef4444]"
@@ -248,10 +248,10 @@ function FlyoutServiceRow({ label, href, onNavigate }) {
   );
 }
 
-function FlyoutPanel({ isOpen, left, width, zIndex, children, className = "" }) {
+function FlyoutPanel({ isOpen, left, width, zIndex, top = 0, children, className = "" }) {
   return (
     <div
-      className={`absolute top-0 border-[#e5e7eb] bg-white py-2 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[transform,opacity] ${
+      className={`absolute border-[#e5e7eb] bg-white py-2 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[transform,opacity,top] ${
         isOpen
           ? "pointer-events-auto translate-x-0 opacity-100"
           : "pointer-events-none translate-x-2 opacity-0"
@@ -260,6 +260,7 @@ function FlyoutPanel({ isOpen, left, width, zIndex, children, className = "" }) 
         left,
         width,
         zIndex,
+        top,
       }}
       aria-hidden={!isOpen}
     >
@@ -271,6 +272,8 @@ function FlyoutPanel({ isOpen, left, width, zIndex, children, className = "" }) 
 export function SolutionsMegaMenuWide({ onClose }) {
   const [activeMainId, setActiveMainId] = useState(null);
   const [activeSubKey, setActiveSubKey] = useState(null);
+  const [col3Top, setCol3Top] = useState(0);
+  const containerRef = useRef(null);
 
   const activeMain = desktopFlyoutMenu.find((item) => item.id === activeMainId);
   const activeSub = activeMain?.children?.find(
@@ -288,20 +291,31 @@ export function SolutionsMegaMenuWide({ onClose }) {
   const resetPanels = () => {
     setActiveMainId(null);
     setActiveSubKey(null);
+    setCol3Top(0);
   };
 
   const handleMainEnter = (item) => {
     setActiveMainId(item.id);
     setActiveSubKey(null);
+    setCol3Top(0);
   };
 
-  const handleSubEnter = (mainId, index, child) => {
+  const handleSubEnter = (mainId, index, child, event) => {
     setActiveMainId(mainId);
     setActiveSubKey(child.children?.length ? `${mainId}-sub-${index}` : null);
+
+    if (child.children?.length && event?.currentTarget && containerRef.current) {
+      const rowRect = event.currentTarget.getBoundingClientRect();
+      const containerRect = containerRef.current.getBoundingClientRect();
+      setCol3Top(rowRect.top - containerRect.top);
+    } else {
+      setCol3Top(0);
+    }
   };
 
   return (
     <div
+      ref={containerRef}
       className="relative overflow-visible transition-[width] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]"
       style={{ width: hoverAreaWidth, minWidth: FLYOUT_COL1_WIDTH }}
       onMouseLeave={resetPanels}
@@ -325,7 +339,7 @@ export function SolutionsMegaMenuWide({ onClose }) {
         left={FLYOUT_COL1_WIDTH}
         width={FLYOUT_COL2_WIDTH}
         zIndex={20}
-        className="rounded-r-sm border border-l-0 border-[#93c5fd]/80 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
+        className="top-0 rounded-r-sm border border-l-0 border-[#93c5fd]/80 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
       >
         {activeMain?.children?.map((child, index) => (
           <FlyoutMenuRow
@@ -334,7 +348,9 @@ export function SolutionsMegaMenuWide({ onClose }) {
             href={child.href}
             isActive={activeSubKey === `${activeMain.id}-sub-${index}`}
             hasChildren={Boolean(child.children?.length)}
-            onMouseEnter={() => handleSubEnter(activeMain.id, index, child)}
+            onMouseEnter={(event) =>
+              handleSubEnter(activeMain.id, index, child, event)
+            }
             onNavigate={onClose}
           />
         ))}
@@ -345,6 +361,7 @@ export function SolutionsMegaMenuWide({ onClose }) {
         left={FLYOUT_COL1_WIDTH + FLYOUT_COL2_WIDTH}
         width={FLYOUT_COL3_WIDTH}
         zIndex={10}
+        top={col3Top}
         className="max-h-[440px] overflow-y-auto rounded-r-sm border border-l-0 border-[#93c5fd]/80 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
       >
         {activeSub?.children?.map((service) => (

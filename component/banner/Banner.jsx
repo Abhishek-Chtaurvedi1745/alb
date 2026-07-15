@@ -30,6 +30,7 @@ const banners = [
 
 export default function BannerSlider() {
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % banners.length);
@@ -40,13 +41,18 @@ export default function BannerSlider() {
   };
 
   useEffect(() => {
+    if (paused) return;
+
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [paused]);
 
   return (
-    <section className="relative w-full aspect-[1617/512] overflow-hidden mt-20 bg-black">
-      
+    <section
+      className="relative mt-20 aspect-[1617/512] w-full overflow-hidden bg-black"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       {/* Slider Track */}
       <div
         className="flex h-full transition-transform duration-700 ease-in-out"

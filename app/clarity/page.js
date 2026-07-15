@@ -3,6 +3,7 @@
 import React from 'react'
 import { useState } from 'react';
 import Link from 'next/link';
+import GetStartedLink from '@/component/GetStartedLink';
 import Claritysection from '../../component/claritypagesection/Claritysection';
 import FAQSection from '../../component/Faq/Faqsection';
 import SuccessStories from '../../component/SuccessStories/SuccessStories';
@@ -105,7 +106,11 @@ const benefits = [
 
           
           <p className="text-[#FFFFFF] text-upercase text-[24px]">Talk to Our Team</p> */}
-          <img src="/images/climg1.svg" alt="Clarity" />
+          <img
+            src="/images/climg1.svg"
+            alt="Clarity"
+            className="h-auto w-full max-w-[324px]"
+          />
           <Link
             href="/contact-us"
             className="mt-[28px] inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-[25px] font-semibold text-[#FFFFFF] transition hover:opacity-90"
@@ -288,6 +293,11 @@ const benefits = [
     </section>
     <Claritysection />
     <SuccessStories stories={claritySuccessStories} />
+    <section className="bg-black px-6 py-16 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+        <GetStartedLink product="Clarity" />
+      </div>
+    </section>
     <FAQSection faqs={clarityFaqData} />
     </div>
   )

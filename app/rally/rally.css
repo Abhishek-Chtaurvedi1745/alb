@@ -1,6 +1,4 @@
-.ai-hero-slide {
-  position: absolute;
-  inset: 0;
+.rally-hero-slide {
   opacity: 0;
   visibility: hidden;
   transform: translateX(16px);
@@ -9,23 +7,22 @@
   text-align: left;
 }
 
-.ai-hero-slide.active {
+.rally-hero-slide.active {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
   pointer-events: auto;
-  position: relative;
 }
 
-.ai-hero-dots button.active::after {
+.rally-hero-dots button.active::after {
   content: "";
   position: absolute;
   inset: 0;
   background: #ff403a;
-  animation: ai-dot-progress 6.5s linear forwards;
+  animation: rally-dot-progress 6.5s linear forwards;
 }
 
-@keyframes ai-dot-progress {
+@keyframes rally-dot-progress {
   from {
     transform: scaleX(0);
     transform-origin: left;
@@ -37,8 +34,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ai-hero-slide,
-  .ai-hero-dots button.active::after {
+  .rally-hero-slide,
+  .rally-hero-dots button.active::after {
     animation: none !important;
     transition: none !important;
   }

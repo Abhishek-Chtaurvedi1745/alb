@@ -4,10 +4,17 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import GetStartedLink from "@/component/GetStartedLink";
 import { useInView } from "react-intersection-observer";
-import { aiServicesPageData } from "./aiServicesPageData";
+import {
+  capabilityPanels,
+  capabilitiesHead,
+  closingCta,
+  deliveryHead,
+  deliveryPhases,
+  rallyHeroSlides,
+} from "./rallyPageData";
 
 const SLIDE_INTERVAL = 6500;
-const HERO_IMAGE = "/images/ai.png";
+const HERO_IMAGE = "/images/connectall-hero.png";
 
 const badgeStyles = {
   green: "bg-green-500/10 text-green-400",
@@ -15,39 +22,40 @@ const badgeStyles = {
   blue: "bg-blue-500/10 text-blue-400",
 };
 
-function RichHtml({ html, className = "", as: Tag = "span" }) {
-  const safe = html
-    .replace(/<em>/g, '<em class="text-[#FF403A] not-italic">')
-    .replace(/<span class="ai-accent">/g, '<span class="text-[#FF403A]">')
-    .replace(/<span class="accent">/g, '<span class="text-[#FF403A]">')
-    .replace(/<br>/g, "<br />");
+function TitleWithAccent({ title, accent, className = "", as: Tag = "h2" }) {
+  if (!accent || !title.includes(accent)) {
+    return <Tag className={className}>{title}</Tag>;
+  }
 
-  return <Tag className={className} dangerouslySetInnerHTML={{ __html: safe }} />;
+  const [before, after] = title.split(accent);
+
+  return (
+    <Tag className={className}>
+      {before}
+      <span className="text-[#FF403A]">{accent}</span>
+      {after}
+    </Tag>
+  );
 }
 
-function SectionHeading({ titleHtml, subtitle, className = "", centered = true }) {
+function SectionHeading({ title, titleAccent, subtitle }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
 
   return (
     <div
       ref={ref}
-      className={`mb-0 transition-all duration-700 ${
+      className={`text-center transition-all duration-700 ${
         inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-      } ${centered ? "text-center" : ""} ${className}`}
+      }`}
     >
-      {titleHtml ? (
-        <RichHtml
-          html={titleHtml}
-          className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
-          as="h2"
-        />
-      ) : null}
+      <TitleWithAccent
+        title={`${title} ${titleAccent}`}
+        accent={titleAccent}
+        className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
+        as="h2"
+      />
       {subtitle ? (
-        <p
-          className={`mt-5 max-w-3xl text-base leading-relaxed text-white/90 md:text-[18px] ${
-            centered ? "mx-auto" : ""
-          }`}
-        >
+        <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/90 md:text-[18px]">
           {subtitle}
         </p>
       ) : null}
@@ -110,7 +118,6 @@ function CapabilityRow({ panel, index }) {
       className={`grid items-center gap-8 border-t border-white/10 py-10 transition-all duration-700 first:border-t-0 first:pt-0 lg:grid-cols-2 lg:gap-12 lg:py-12 ${
         inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
-      style={{ transitionDelay: `${(index % 3) * 100}ms` }}
     >
       <div className={reversed ? "lg:order-2" : ""}>
         <h3 className="text-xl font-semibold leading-snug text-white md:text-2xl">
@@ -137,31 +144,29 @@ function CapabilityRow({ panel, index }) {
   );
 }
 
-function TierCard({ tier, index }) {
+function PhaseCard({ phase, index }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
     <article
       ref={ref}
-      className={`group relative transition-all duration-700 ${
+      className={`transition-all duration-700 ${
         inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       }`}
       style={{ transitionDelay: `${index * 120}ms` }}
     >
-      <div className="relative flex h-full flex-col rounded-2xl border border-[#FF403A]/25 bg-[#0a0a0a] p-6 sm:p-7">
+      <div className="flex h-full flex-col rounded-2xl border border-[#FF403A]/25 bg-[#0a0a0a] p-6 sm:p-7">
         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#FF403A]">
-          {tier.kicker}
+          {phase.kicker}
         </p>
-        <RichHtml
-          html={tier.titleHtml}
-          className="mb-3 text-xl font-semibold text-white md:text-2xl"
-          as="h3"
-        />
+        <h3 className="mb-3 text-xl font-semibold text-white md:text-2xl">
+          {phase.title}
+        </h3>
         <p className="mb-5 flex-1 text-base leading-relaxed text-white/90 md:text-[18px]">
-          {tier.desc}
+          {phase.desc}
         </p>
         <div className="flex flex-wrap gap-2">
-          {tier.skills.map((skill) => (
+          {phase.skills.map((skill) => (
             <span
               key={skill}
               className="rounded-md border border-white/10 bg-[#111111] px-2.5 py-1 text-xs text-white/60"
@@ -175,8 +180,7 @@ function TierCard({ tier, index }) {
   );
 }
 
-export default function AIServicesPage() {
-  const { slides, flightHead, panels, skillsHead, tiers, cta } = aiServicesPageData;
+function RallySliderSection() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef(null);
@@ -186,9 +190,9 @@ export default function AIServicesPage() {
     if (paused) return;
 
     timerRef.current = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % slides.length);
+      setActiveSlide((prev) => (prev + 1) % rallyHeroSlides.length);
     }, SLIDE_INTERVAL);
-  }, [slides.length, paused]);
+  }, [paused]);
 
   useEffect(() => {
     startSlideTimer();
@@ -203,97 +207,130 @@ export default function AIServicesPage() {
   };
 
   return (
+    <section
+      className="bg-black px-6 py-16 text-white lg:px-12"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      <div className="mx-auto max-w-7xl">
+        <div className="grid">
+          {rallyHeroSlides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`rally-hero-slide col-start-1 row-start-1 ${
+                index === activeSlide ? "active" : ""
+              }`}
+            >
+              <TitleWithAccent
+                title={slide.title}
+                accent={slide.titleAccent}
+                className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
+                as="h1"
+              />
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/90 md:text-[18px]">
+                {slide.subtitle}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="rally-hero-dots mt-6 flex gap-2">
+          {rallyHeroSlides.map((slide, index) => (
+            <button
+              key={slide.id}
+              type="button"
+              className={`relative h-[3px] w-8 overflow-hidden rounded-sm border-0 bg-white/15 ${
+                index === activeSlide ? "active" : ""
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
+
+        <Link
+          href="/contact-us"
+          className="mt-6 inline-block rounded-xl bg-[#FF403A] px-8 py-4 font-semibold shadow-lg shadow-red-500/30 transition hover:opacity-90"
+        >
+          Get Free Consultation
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+export default function RallyPage() {
+  return (
     <div className="bg-black text-white">
-      <section
-        className="mt-[83px] bg-[#000000] px-6 py-16"
-        onMouseEnter={() => setPaused(true)}
-        onMouseLeave={() => setPaused(false)}
-      >
+      <section className="mt-[83px] bg-[#000000] px-6 py-16">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 md:flex-row">
           <div className="w-full">
-            <div className="relative min-h-[280px] md:min-h-[320px]">
-              {slides.map((slide, index) => (
-                <div
-                  key={slide.eyebrow}
-                  className={`ai-hero-slide ${index === activeSlide ? "active" : ""}`}
-                >
-                  <RichHtml
-                    html={slide.titleHtml}
-                    className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
-                    as="h1"
-                  />
-                  <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/90 md:text-[18px]">
-                    {slide.subtitle}
-                  </p>
-                  <Link
-                    href={slide.href || "/contact-us"}
-                    className="mt-[28px] inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-[25px] font-semibold text-white transition hover:opacity-90"
-                  >
-                    {slide.cta}
-                  </Link>
-                </div>
-              ))}
-            </div>
-
-            <div className="ai-hero-dots mt-8 flex gap-2">
-              {slides.map((slide, index) => (
-                <button
-                  key={slide.eyebrow}
-                  type="button"
-                  className={`relative h-[3px] w-8 overflow-hidden rounded-sm border-0 bg-white/15 ${
-                    index === activeSlide ? "active" : ""
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                  onClick={() => goToSlide(index)}
-                />
-              ))}
-            </div>
+            <img
+              src="/images/rally.svg"
+              alt="Rally by Broadcom"
+              className="h-auto w-full max-w-[324px]"
+            />
+            <Link
+              href="/contact-us"
+              className="mt-[28px] inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-[25px] font-semibold text-white transition hover:opacity-90"
+            >
+              Request a free demo
+            </Link>
           </div>
 
           <div className="flex w-full justify-center">
             <img
               src={HERO_IMAGE}
-              alt="AI services for enterprise"
+              alt="Rally enterprise agile management"
               className="w-full rounded-xl shadow-lg"
             />
           </div>
         </div>
       </section>
 
+      <RallySliderSection />
+
       <section className="px-6 py-16 lg:px-12" id="capabilities">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading titleHtml={flightHead.titleHtml} />
+          <SectionHeading
+            title={capabilitiesHead.title}
+            titleAccent={capabilitiesHead.titleAccent}
+          />
 
           <div className="mt-12">
-            {panels.map((panel, index) => (
+            {capabilityPanels.map((panel, index) => (
               <CapabilityRow key={panel.title} panel={panel} index={index} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-16 lg:px-12" id="skills">
+      <section className="px-6 py-16 lg:px-12" id="delivery">
         <div className="mx-auto max-w-7xl">
-          <SectionHeading titleHtml={skillsHead.titleHtml} subtitle={skillsHead.desc} />
+          <SectionHeading
+            title={deliveryHead.title}
+            titleAccent={deliveryHead.titleAccent}
+            subtitle={deliveryHead.subtitle}
+          />
 
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-7">
-            {tiers.map((tier, index) => (
-              <TierCard key={tier.kicker} tier={tier} index={index} />
+            {deliveryPhases.map((phase, index) => (
+              <PhaseCard key={phase.kicker} phase={phase} index={index} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-6 pb-20 pt-4 lg:px-12" id="contact">
+      <section className="px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-semibold leading-tight md:text-[40px]">
-            {cta.title.replace(".", "")}
+            {closingCta.title}
             <span className="text-[#FF403A]">.</span>
           </h2>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/90 md:text-[18px]">
-            {cta.desc}
+            {closingCta.desc}
           </p>
-          <GetStartedLink product="AI Services" className="mt-10" />
+          <GetStartedLink product="Rally" className="mt-10" />
         </div>
       </section>
     </div>

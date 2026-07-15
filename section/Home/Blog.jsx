@@ -82,7 +82,11 @@ function BlogSlider() {
             slidesPerView={3}
             loop
             speed={1000}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             navigation={{ prevEl: ".blog-prev", nextEl: ".blog-next" }}
             pagination={{ clickable: true }}
             breakpoints={{
