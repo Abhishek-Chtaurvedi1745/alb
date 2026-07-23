@@ -64,9 +64,9 @@ function page() {
     </section>
      <section className="w-full pt-12 bg-black">
       <div className="max-w-7xl mx-auto px-4">      
-        <h2 className="text-3xl md:text-[45px] text-center text-white font-semibold mb-6">
+        <h3 className="text-3xl md:text-[45px] text-center text-white font-semibold mb-6">
           Our Leadership <span className="text-[#FF403A]">Team</span>
-        </h2>
+        </h3>
         <div className="flex flex-col gap-20">
 
           {leaders.map((leader, index) => (
@@ -94,15 +94,15 @@ function page() {
               {/* CONTENT */}
               <div className="flex flex-col justify-center">
                 
-                <h2 className="text-[25px] md:text-[30px] font-semibold text-white leading-tight">
+                <h4 className="text-[25px] md:text-[30px] font-semibold text-white leading-tight">
                   {leader.name}
-                </h2>
+                </h4>
 
                 <h4 className="my-3 text-[17px] md:text-[20px] font-semibold text-[#FF403A]">
                   {leader.role}
                 </h4>
 
-                <p className="text-white text-[14px] md:text-[18px] leading-8">
+                <p className="font-normal text-white text-[13px] md:text-[16px] leading-8">
                   {leader.description}
                 </p>
 

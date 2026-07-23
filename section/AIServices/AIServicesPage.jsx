@@ -39,12 +39,12 @@ function SectionHeading({ titleHtml, subtitle, className = "", centered = true }
         <RichHtml
           html={titleHtml}
           className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
-          as="h2"
+          as="h3"
         />
       ) : null}
       {subtitle ? (
         <p
-          className={`mt-5 max-w-3xl text-base leading-relaxed text-white/90 md:text-[18px] ${
+          className={`font-normal mt-5 max-w-3xl text-base leading-relaxed text-white/90 md:text-[18px] ${
             centered ? "mx-auto" : ""
           }`}
         >
@@ -113,10 +113,10 @@ function CapabilityRow({ panel, index }) {
       style={{ transitionDelay: `${(index % 3) * 100}ms` }}
     >
       <div className={reversed ? "lg:order-2" : ""}>
-        <h3 className="text-xl font-semibold leading-snug text-white md:text-2xl">
+        <h4 className="text-xl font-semibold leading-snug text-white md:text-2xl">
           {panel.title}
-        </h3>
-        <p className="mt-4 text-base leading-relaxed text-white/90 md:text-[18px]">
+        </h4>
+        <p className="font-normal mt-4 text-sm leading-relaxed text-white/90 md:text-[16px]">
           {panel.desc}
         </p>
         <div className="mt-5 flex flex-wrap gap-2">
@@ -155,9 +155,9 @@ function TierCard({ tier, index }) {
         <RichHtml
           html={tier.titleHtml}
           className="mb-3 text-xl font-semibold text-white md:text-2xl"
-          as="h3"
+          as="h4"
         />
-        <p className="mb-5 flex-1 text-base leading-relaxed text-white/90 md:text-[18px]">
+        <p className="font-normal mb-5 flex-1 text-sm leading-relaxed text-white/90 md:text-[16px]">
           {tier.desc}
         </p>
         <div className="flex flex-wrap gap-2">
@@ -222,7 +222,7 @@ export default function AIServicesPage() {
                     className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
                     as="h1"
                   />
-                  <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/90 md:text-[18px]">
+                  <p className="font-normal mt-6 max-w-2xl text-sm leading-relaxed text-white/90 md:text-[16px]">
                     {slide.subtitle}
                   </p>
                   <Link
@@ -286,11 +286,11 @@ export default function AIServicesPage() {
 
       <section className="px-6 pb-20 pt-4 lg:px-12" id="contact">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-semibold leading-tight md:text-[40px]">
+          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
             {cta.title.replace(".", "")}
             <span className="text-[#FF403A]">.</span>
-          </h2>
-          <p className="mt-6 max-w-3xl text-base leading-relaxed text-white/90 md:text-[18px]">
+          </h3>
+          <p className="font-normal mt-6 max-w-3xl text-sm leading-relaxed text-white/90 md:text-[16px]">
             {cta.desc}
           </p>
           <GetStartedLink product="AI Services" className="mt-10" />

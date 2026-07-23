@@ -90,16 +90,12 @@ export const desktopFlyoutMenu = desktopSolutionsColumns.map((column) => {
       children: column.products.map((product) => {
         let children;
 
-        if (product.services?.items?.length) {
-          children = [
-            { label: product.services.title, href: product.services.href },
-            ...product.services.items,
-          ];
-        } else if (product.servicesLink) {
+        if (product.servicesLink) {
           children = [
             {
               label: product.servicesLink.label,
               href: product.servicesLink.href,
+              isSectionTitle: true,
             },
           ];
         }
@@ -122,13 +118,6 @@ export const desktopFlyoutMenu = desktopSolutionsColumns.map((column) => {
     };
   }
 
-  const productServiceChildren = column.services?.items?.length
-    ? [
-        { label: column.services.title, href: column.services.href },
-        ...column.services.items,
-      ]
-    : undefined;
-
   return {
     id: column.id,
     title: column.title,
@@ -137,7 +126,6 @@ export const desktopFlyoutMenu = desktopSolutionsColumns.map((column) => {
       {
         title: column.product.title,
         href: column.product.href,
-        ...(productServiceChildren ? { children: productServiceChildren } : {}),
       },
     ],
   };

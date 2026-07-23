@@ -138,7 +138,7 @@ export default function Home() {
 secure AI into your PMO? </span>
           </h2>
 
-          <p className="text-[20px] text-[#FFFFFF] mb-6">
+          <p className="text-[17px] text-[#FFFFFF] mb-6">
             From portfolio planning to automation and analytics,
 we help organizations manage work with structure,
 visibility and control.
@@ -171,7 +171,7 @@ Get my AI readiness report
 Outcomes, <br /> Not Just Projects. </span>
           </h2>
 
-          <p className="text-[20px] text-[#FFFFFF] mb-6">
+          <p className="text-[17px] text-[#FFFFFF] mb-6">
             From portfolio planning to automation and analytics,
 we help organizations manage work with structure,
 visibility and control.

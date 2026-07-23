@@ -2,11 +2,11 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
   return (
     <section className="bg-black px-6 py-16 text-white lg:px-12">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-center text-3xl font-semibold md:text-[40px]">
+        <h3 className="text-center text-3xl font-semibold md:text-[40px]">
           {title}{" "}
           {titleAccent ? <span className="text-[#FF403A]">{titleAccent}</span> : null}
           {titleSuffix ? ` ${titleSuffix}` : null}
-        </h2>
+        </h3>
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => {
@@ -48,9 +48,9 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
                       }
                     />
                   ) : null}
-                  <h3 className="text-lg font-semibold md:text-xl">{item.title}</h3>
+                  <h4 className="text-lg font-semibold md:text-xl">{item.title}</h4>
                   {item.description ? (
-                    <p className="mt-3 text-sm leading-relaxed text-white/85 md:text-base">
+                    <p className="font-normal mt-3 text-sm leading-relaxed text-white/85 md:text-sm">
                       {item.description}
                     </p>
                   ) : null}

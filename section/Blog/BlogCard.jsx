@@ -23,12 +23,12 @@ export default function BlogCard({ post }) {
         </div>
 
         <Link href={`/blog/${post.slug}`}>
-          <h2 className="text-xl font-semibold leading-snug text-white transition group-hover:text-[#FF403A]">
+          <h4 className="min-h-[3.5rem] text-xl font-semibold leading-snug text-white line-clamp-2 transition group-hover:text-[#FF403A]">
             {post.title}
-          </h2>
+          </h4>
         </Link>
 
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-white/75 line-clamp-3">
+        <p className="font-normal mt-3 flex-1 text-sm leading-relaxed text-white/75 line-clamp-3">
           {post.excerpt}
         </p>
 

@@ -1,48 +1,48 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
+// href only for Solutions → Project Portfolio Management matches
 const platforms = [
   {
     src: "/images/clarity.svg",
     alt: "Clarity by Broadcom",
     tag: "Portfolio",
+    href: "/clarity",
   },
   {
     src: "/images/Automic-by-broadcom.webp",
     alt: "Automic by Broadcom",
     tag: "Service Orchestration",
+    href: "/automic-automation",
   },
   {
     src: "/images/rally.svg",
     alt: "Rally by Broadcom",
     tag: "Agile",
+    href: "/rally",
   },
   {
     src: "/images/ca.svg",
     alt: "ConnectALL by Broadcom",
     tag: "Integration",
+    href: "/connectall",
   },
   {
     src: "/images/stb.svg",
     alt: "Stonebranch",
     tag: "Automation",
+    href: "/stonebranch",
   },
 ];
 
 function PlatformLogo({ platform, index, inView }) {
   const [hovered, setHovered] = useState(false);
 
-  return (
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className={`group relative flex w-[200px] shrink-0 flex-col items-center px-1 pt-3 transition-all duration-700 ease-out sm:w-[220px] ${
-        inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-      }`}
-      style={{ transitionDelay: `${300 + index * 120}ms` }}
-    >
+  const card = (
+    <>
       <div
         className={`relative flex h-[88px] w-full items-center justify-center rounded-2xl border px-6 py-5 transition-all duration-500 sm:h-[100px] ${
           hovered
@@ -71,6 +71,35 @@ function PlatformLogo({ platform, index, inView }) {
       >
         {platform.tag}
       </span>
+    </>
+  );
+
+  const sharedClassName = `group relative flex w-[200px] shrink-0 flex-col items-center px-1 pt-3 transition-all duration-700 ease-out sm:w-[220px] ${
+    inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+  } ${platform.href ? "cursor-pointer" : ""}`;
+
+  if (platform.href) {
+    return (
+      <Link
+        href={platform.href}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        className={sharedClassName}
+        style={{ transitionDelay: `${300 + index * 120}ms` }}
+      >
+        {card}
+      </Link>
+    );
+  }
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className={sharedClassName}
+      style={{ transitionDelay: `${300 + index * 120}ms` }}
+    >
+      {card}
     </div>
   );
 }
@@ -102,12 +131,12 @@ export default function PlatformShowcase() {
             inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <h2 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[40px]">
+          <h3 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[40px]">
             Plan Smarter. Deliver Faster.{" "}
             <span className="text-[#ff403a]">Automate Everything.</span>
-          </h2>
+          </h3>
 
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-relaxed text-white/75 md:text-[20px]">
+          <p className="mx-auto mt-5 max-w-3xl text-sm font-normal leading-relaxed text-white/75 md:text-[16px]">
             Industry-leading platforms that bring strategy, delivery, and
             automation together enabling your teams to move faster with complete
             visibility.

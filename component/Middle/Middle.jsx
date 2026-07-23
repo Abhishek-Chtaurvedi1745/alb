@@ -141,9 +141,9 @@ function Middle() {
   <div className="mx-auto text-center">
 
     {/* Title */}
-    <h2 className="text-3xl md:text-[40px] font-semibold tracking-tight mb-0 md:mb-4">
+    <h3 className="text-3xl md:text-[40px] font-semibold tracking-tight mb-0 md:mb-4">
       Partnership Built <span className="text-[#FF3B30]">On Trust</span>
-    </h2>
+    </h3>
 
     {/* Infinite Slider */}
     <div className="relative mt-4 overflow-hidden">
@@ -185,17 +185,17 @@ function Middle() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
       </div>
 {/* 
-      <p className="text-[16px] md:text-[20px] uppercase tracking-[0.2em] text-[#FFFFFF] mb-2">
+      <p className="text-[16px] md:text-[17px] uppercase tracking-[0.2em] text-[#FFFFFF] mb-2">
         Questions Are Normal
       </p> */}
 
-      <h3 className="text-xl md:text-[30px] font-semibold tracking-wide uppercase mb-1">
+      <h4 className="text-xl md:text-[30px] font-semibold tracking-wide uppercase mb-1">
         Delivering Solutions
-      </h3>
+      </h4>
 
-      <h3 className="text-xl md:text-[30px] font-semibold tracking-wide uppercase text-[#ff3b30] mb-6">
+      <h4 className="text-xl md:text-[30px] font-semibold tracking-wide uppercase text-[#ff3b30] mb-6">
         Is Our Superpower
-      </h3>
+      </h4>
 
       <button className="-mb-4 inline-flex items-center gap-2 px-5 py-4 rounded-full border border-[#ff3b30] bg-transparent text-[20px] cursor-pointer hover:bg-[#ff3b30]/10 transition">
         <span className="text-[#ff3b30]">★</span>
@@ -208,11 +208,11 @@ function Middle() {
     {/* Right Side */}
     <div className="lg:col-span-7 flex flex-col justify-center">
 
-      <h2 className="text-2xl md:text-[45px] font-semibold tracking-tight mb-2">
+      <h3 className="text-2xl md:text-[45px] font-semibold tracking-tight mb-2">
         Why Albatroz <span className="text-[#ff3b30]">Solutions</span> ?
-      </h2>
+      </h3>
 
-      <p className="text-sm md:text-base font-medium text-[#FFFFFF] mb-8">
+      <p className="text-sm md:text-sm font-medium text-[#FFFFFF] mb-8 font-normal">
         Purpose-driven solutions.
         <span className="text-[#ff3b30]"> Built around you.</span>
       </p>
@@ -251,7 +251,7 @@ function Middle() {
 
               <div className="h-8 w-[1px] bg-[#FF3B30] mx-1 hidden sm:block"></div>
 
-              <p className="text-sm md:text-[20px] font-semibold tracking-wide text-white leading-snug">
+              <p className="text-sm md:text-[17px] font-semibold tracking-wide text-white leading-snug">
                 {feature.text}
               </p>
             </div>
@@ -313,7 +313,7 @@ function Middle() {
            Discover how <span className="text-[#FF403A]"> 
  <br /> Rally by Broadcom </span>
           </h2>
-          <p className="text-[20px] text-[#FFFFFF] mb-6">
+          <p className="text-[17px] text-[#FFFFFF] mb-6">
             Rally by Broadcom is designed to improve your delivery
 system, increase teamwork, and enhance the visibility of
 your work. With tools that help you plan, prioritize, and
@@ -348,9 +348,9 @@ the focus of everything.
                 className=" w-[520px]"
               />
             </div>
-            <h5 className="text-[20px] font-regular text-[#FFFFFF]">QUESTIONS ARE NORMAL</h5>
+            <p className="text-[13px] font-regular text-[#FFFFFF]">QUESTIONS ARE NORMAL</p>
             <h4 className="text-[30px] text-[#FFFFFF] font-semibold mt-2">DELIVERING SOLUTIONS</h4>
-            <h5 className="text-[30px] text-[#FF403A] font-semibold">IS OUR SUPERPOWER</h5>
+            <p className="text-[30px] text-[#FF403A] font-semibold">IS OUR SUPERPOWER</p>
             <div className="flex justify-center">
            <button className="mt-5 px-6 py-3 rounded-full border border-[#ff403a] text-white hover:bg-red-600 transition rounded-full p-4 cursor-pointer">
                 ✦ Smart Solutions. <span className="text-red-600"> Real Impact </span>

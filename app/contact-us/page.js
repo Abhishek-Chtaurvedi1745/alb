@@ -30,11 +30,11 @@ function page() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
           {/* Form */}
           <div className="w-full rounded-3xl bg-[#2f2d2d] p-5 shadow-2xl sm:p-8 md:p-10 lg:flex-1">
-            <h2 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[35px]">
+            <h3 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[35px]">
               Let&apos;s Start the{" "}
               <span className="text-[#ff403a]">Conversation</span>
-            </h2>
-            <p className="mb-6 max-w-2xl text-sm leading-relaxed text-white sm:mb-8 sm:text-base md:mb-10 md:text-lg lg:text-[20px]">
+            </h3>
+            <p className="font-normal mb-6 max-w-2xl text-sm leading-relaxed text-white sm:mb-8 sm:text-sm md:mb-10 md:text-sm lg:text-[13px]">
               Share your requirements with us and our team will get back to you
               with the right solution for your business needs.
             </p>
@@ -114,11 +114,11 @@ function page() {
 
           {/* Contact Card */}
           <div className="w-full rounded-3xl bg-[#FF403A] p-5 shadow-2xl sm:p-6 md:p-7 lg:w-[min(100%,420px)] lg:shrink-0">
-            <h3 className="mb-6 text-xl font-semibold leading-tight text-white sm:mb-8 sm:text-2xl md:text-[25px]">
+            <h4 className="mb-6 text-xl font-semibold leading-tight text-white sm:mb-8 sm:text-2xl md:text-[25px]">
               Hi! We are always here
               <br />
               to help you.
-            </h3>
+            </h4>
 
             <div className="space-y-4 sm:space-y-5">
               <ContactInfoCard icon="/images/phn.svg" className="bg-[#CF2721]">
@@ -140,7 +140,7 @@ function page() {
               </ContactInfoCard>
 
               <ContactInfoCard icon="/images/lc.svg" className="bg-[#d92020]">
-                <p>
+                <p className="font-normal">
                   DC-43, Development Center,
                   <br />
                   4th Floor,

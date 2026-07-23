@@ -30,7 +30,7 @@ function ServiceIconGrid({ services, columns }) {
               alt=""
               className="transition-transform duration-300 group-hover:scale-110"
             />
-            <p className="max-w-[140px] text-[20px] leading-snug text-white transition-colors group-hover:text-[#FF403A] md:text-[22px]">
+            <p className="max-w-[140px] text-[17px] leading-snug text-white transition-colors group-hover:text-[#FF403A] md:text-[22px]">
               {service.label || service.title}
             </p>
           </Link>
@@ -55,10 +55,10 @@ export default function AutomationServicesTabSection({
   return (
     <section className={`bg-black px-6 py-16 ${className}`}>
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-8 text-center text-3xl font-semibold text-white md:text-[40px]">
+        <h3 className="mb-8 text-center text-3xl font-semibold text-white md:text-[40px]">
           {title}{" "}
           <span className="text-[#FF403A]">{titleAccent}</span>
-        </h2>
+        </h3>
 
         <div className="mb-12 flex justify-center gap-0">
           <button

@@ -15,9 +15,9 @@ export default function AutomationServiceCard({ service }) {
 
       <div className="relative z-10 flex h-full min-h-[280px] flex-col p-6 sm:min-h-[320px] sm:p-8 md:min-h-[360px]">
         <div className="flex flex-1 items-center justify-center px-2">
-          <h3 className="text-center text-2xl font-semibold leading-tight text-white sm:text-[28px] md:text-[32px]">
+          <h4 className="text-center text-2xl font-semibold leading-tight text-white sm:text-[28px] md:text-[32px]">
             {service.title}
-          </h3>
+          </h4>
         </div>
 
         <div className="flex items-center justify-center gap-5 sm:gap-8">

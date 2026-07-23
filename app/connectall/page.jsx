@@ -1,6 +1,5 @@
 import Link from "next/link";
 import FunctionalityGrid from "@/section/Automation/FunctionalityGrid";
-import GetStartedLink from "@/component/GetStartedLink";
 import ConnectAllIntroSection from "@/section/ConnectAll/ConnectAllIntroSection";
 import ConnectAllServicesGrid from "@/section/ConnectAll/ConnectAllServicesGrid";
 import {
@@ -45,29 +44,25 @@ function CheckItem({ children }) {
 export default function ConnectAllPage() {
   return (
     <div className="bg-black text-white">
-      <section className="mt-[83px] bg-[#000000] px-6 py-16">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 md:flex-row">
-          <div className="w-full">
-            <img
-              src="/images/ca.svg"
-              alt="ConnectALL by Broadcom"
-              className="h-auto w-full max-w-[324px]"
-            />
-            <Link
-              href="/contact-us"
-              className="mt-[28px] inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-[25px] font-semibold text-white transition hover:opacity-90"
-            >
-              Request a free demo
-            </Link>
-          </div>
+      <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
+        <img
+          src="/images/connectall-hero-banner.png"
+          alt="ConnectALL by Broadcom"
+          className="h-full w-full object-cover object-top"
+        />
 
-          <div className="flex w-full justify-center">
-            <img
-              src="/images/connectall-hero.png"
-              alt="ConnectALL enterprise integration platform"
-              className="w-full rounded-xl shadow-lg"
-            />
-          </div>
+        <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
+          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+            ConnectALL{" "}
+            <span className="text-[#FF403A]">by Broadcom</span>
+          </h1>
+
+          <Link
+            href="/contact-us"
+            className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]"
+          >
+            Get Started with Connectall
+          </Link>
         </div>
       </section>
 
@@ -75,10 +70,10 @@ export default function ConnectAllPage() {
 
       <section className="bg-black px-6 py-16 text-white lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-semibold leading-tight md:text-[40px]">
+          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
             Why Implement{" "}
             <span className="text-[#FF403A]">ConnectALL?</span>
-          </h2>
+          </h3>
 
           <ul className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {whyImplementBenefits.map((benefit) => (
@@ -100,15 +95,15 @@ export default function ConnectAllPage() {
 
       <section className="px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-semibold leading-tight md:text-[40px]">
+          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
             Why Choose <span className="text-[#FF403A]">Albatroz?</span>
-          </h2>
+          </h3>
 
           <div className="mt-6 space-y-5">
             {whyChooseAlbatrozParagraphs.map((paragraph) => (
               <p
                 key={paragraph.slice(0, 48)}
-                className="text-base leading-relaxed text-white/90 md:text-[18px]"
+                className="font-normal text-sm leading-relaxed text-white/90 md:text-[16px]"
               >
                 {paragraph}
               </p>
@@ -121,11 +116,11 @@ export default function ConnectAllPage() {
 
       <section className="px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-semibold leading-tight md:text-[40px]">
+          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
             Our Delivery <span className="text-[#FF403A]">Methodology</span>
-          </h2>
+          </h3>
 
-          <p className="mt-5 text-base leading-relaxed text-white/90 md:text-[18px]">
+          <p className="font-normal mt-5 text-sm leading-relaxed text-white/90 md:text-[16px]">
             Every ConnectALL engagement follows a structured implementation
             framework designed to ensure successful project delivery and
             long-term sustainability. Our methodology includes:
@@ -135,19 +130,23 @@ export default function ConnectAllPage() {
             {deliveryMethodology.map((step, index) => (
               <li
                 key={step}
-                className="rounded-2xl border border-[#FF403A]/30 bg-[#0a0a0a] px-5 py-4"
+                className={`rounded-2xl border border-[#FF403A]/30 bg-[#0a0a0a] px-5 py-4${
+                  index === deliveryMethodology.length - 1
+                    ? " sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.5rem)] lg:col-span-1 lg:col-start-2 lg:mx-0 lg:w-full"
+                    : ""
+                }`}
               >
                 <span className="text-sm font-semibold text-[#FF403A]">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                <p className="mt-2 text-sm leading-relaxed text-white/90 md:text-base">
+                <p className="font-normal mt-2 text-sm leading-relaxed text-white/90 md:text-sm">
                   {step}
                 </p>
               </li>
             ))}
           </ul>
 
-          <p className="mt-8 text-base leading-relaxed text-white/80 md:text-[18px]">
+          <p className="font-normal mt-8 text-sm leading-relaxed text-white/80 md:text-[16px]">
             This collaborative approach ensures every integration is aligned with
             business objectives while delivering measurable operational
             improvements.
@@ -157,20 +156,18 @@ export default function ConnectAllPage() {
 
       <section className="px-6 pb-20 pt-4 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-semibold leading-tight md:text-[40px]">
+          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
             Enable a Truly{" "}
             <span className="text-[#FF403A]">Connected Enterprise</span>
-          </h2>
+          </h3>
 
-          <p className="mt-6 text-base leading-relaxed text-white/90 md:text-[18px]">
+          <p className="font-normal mt-6 text-sm leading-relaxed text-white/90 md:text-[16px]">
             {closingParagraph}
           </p>
 
-          <p className="mt-5 text-base leading-relaxed text-white/90 md:text-[18px]">
+          <p className="font-normal mt-5 text-sm leading-relaxed text-white/90 md:text-[16px]">
             {closingParagraph2}
           </p>
-
-          <GetStartedLink product="ConnectALL" className="mt-10" />
         </div>
       </section>
     </div>

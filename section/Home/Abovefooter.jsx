@@ -54,10 +54,10 @@ const certifications = [
 
         {/* Left Side */}
         <div className="w-full lg:w-[75%]">
-          <h2 className="text-3xl text-center md:text-left md:text-[45px] font-bold text-[#FFFFFF] mb-8 md:mb-4">
+          <h3 className="text-3xl text-center md:text-left md:text-[45px] font-bold text-[#FFFFFF] mb-8 md:mb-4">
            Awards &<span className="text-[#FF403A]"> 
  <br className="hidden md:block" /> Recognition </span>
-          </h2>
+          </h3>
         </div>
         {/* Right Side */}
         <div className="w-full flex justify-center gap-10">
@@ -83,10 +83,10 @@ const certifications = [
 
     {/* HEADING */}
     <div className="text-center">
-      <h2 className="text-3xl mb-8 md:mb-10 md:text-[40px] font-semibold text-white">
+      <h3 className="text-3xl mb-8 md:mb-10 md:text-[40px] font-semibold text-white">
         Certifications &{" "}
         <span className="text-[#FF403A]">Accreditations</span>
-      </h2>
+      </h3>
     </div>
 
     {/* Desktop View */}
@@ -96,15 +96,15 @@ const certifications = [
           key={index}
           className="w-full sm:w-[320px] bg-[#111111] rounded-2xl p-6 border border-gray-800 hover:border-[#ff403a] transition-all duration-300"
         >
-          <h3 className="text-white text-[25px] font-bold mb-0">
+          <h4 className="text-white text-[25px] font-bold mb-0">
             {item.title}
-          </h3>
+          </h4>
 
-          <p className="text-[#FF403A] italic text-[18px] font-medium mb-1">
+          <p className="text-[#FF403A] italic text-[13px] font-medium mb-1 font-normal">
             {item.subtitle}
           </p>
 
-          <p className="text-[#FFFFFF] text-[16px] leading-relaxed">
+          <p className="text-[#FFFFFF] text-[13px] font-normal leading-relaxed">
             {item.description}
           </p>
         </div>
@@ -122,15 +122,15 @@ const certifications = [
         {certifications.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="bg-[#111111] rounded-2xl p-6 border border-gray-800 min-h-[220px]">
-              <h3 className="text-white text-[25px] font-bold mb-0">
+              <h4 className="text-white text-[25px] font-bold mb-0">
                 {item.title}
-              </h3>
+              </h4>
 
-              <p className="text-[#FF403A] italic text-[18px] font-medium mb-1">
+              <p className="text-[#FF403A] italic text-[13px] font-medium mb-1 font-normal">
                 {item.subtitle}
               </p>
 
-              <p className="text-[#FFFFFF] text-[16px] leading-relaxed">
+              <p className="text-[#FFFFFF] text-[13px] font-normal leading-relaxed">
                 {item.description}
               </p>
             </div>

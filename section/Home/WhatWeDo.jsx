@@ -49,7 +49,7 @@ function ServiceCard({ service, index, inView }) {
     <article
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={`group relative transition-all duration-700 ease-out ${
+      className={`group relative h-full transition-all duration-700 ease-out ${
         inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       } ${service.href ? "cursor-pointer" : ""}`}
       style={{ transitionDelay: `${index * 150}ms` }}
@@ -64,9 +64,9 @@ function ServiceCard({ service, index, inView }) {
       />
 
       <div
-        className={`relative flex h-full flex-col overflow-hidden rounded-2xl border bg-[#080808] p-7 transition-all duration-500 md:p-8 ${
+        className={`relative flex h-full min-h-full flex-col overflow-hidden rounded-2xl border bg-[#080808] p-7 transition-all duration-500 md:p-8 ${
           active
-            ? "border-[#ff403a]/70 shadow-[0_0_40px_rgba(255,64,58,0.18)] -translate-y-1"
+            ? "border-[#ff403a]/70 shadow-[0_0_40px_rgba(255,64,58,0.18)]"
             : "border-[#ff403a]/20 shadow-none"
         }`}
       >
@@ -87,7 +87,7 @@ function ServiceCard({ service, index, inView }) {
         />
 
         {/* Icon */}
-        <div className="relative mx-auto mb-7 flex h-24 w-24 items-center justify-center">
+        <div className="relative mx-auto mb-7 flex h-24 w-24 shrink-0 items-center justify-center">
           <div
             className={`absolute inset-0 rounded-full border transition-all duration-500 ${
               active
@@ -113,13 +113,13 @@ function ServiceCard({ service, index, inView }) {
           </div>
         </div>
 
-        {/* Title */}
-        <h3 className="text-center text-[20px] font-semibold leading-snug text-white md:text-[22px]">
+        {/* Title — fixed min height so all cards align */}
+        <h4 className="min-h-[56px] text-center text-[20px] font-semibold leading-snug text-white md:min-h-[60px] md:text-[22px]">
           {service.title}
-        </h3>
+        </h4>
 
         {/* Underline */}
-        <div className="mx-auto my-5 flex h-[2px] w-16 items-center justify-center overflow-hidden rounded-full bg-[#ff403a]/20">
+        <div className="mx-auto my-5 flex h-[2px] w-16 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#ff403a]/20">
           <div
             className={`h-full rounded-full bg-[#ff403a] transition-all duration-500 ${
               active ? "w-full" : "w-1/2"
@@ -128,7 +128,7 @@ function ServiceCard({ service, index, inView }) {
         </div>
 
         {/* List */}
-        <ul className="mt-auto space-y-3.5">
+        <ul className="mt-auto flex flex-1 flex-col space-y-3.5">
           {service.items.map((item, i) => (
             <li
               key={item}
@@ -171,7 +171,7 @@ function ServiceCard({ service, index, inView }) {
     );
   }
 
-  return card;
+  return <div className="h-full">{card}</div>;
 }
 
 export default function WhatWeDo() {
@@ -202,10 +202,10 @@ export default function WhatWeDo() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff403a]/80">
             Our Expertise
           </p>
-          <h2 className="text-3xl font-semibold text-white sm:text-4xl md:text-[40px]">
+          <h3 className="text-3xl font-semibold text-white sm:text-4xl md:text-[40px]">
             What <span className="text-[#ff403a]">We Do</span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80 md:text-2xl">
+          </h3>
+          <p className="mx-auto mt-4 max-w-2xl text-sm font-normal text-white/80 md:text-sm">
             Smart Solutions,{" "}
             <span className="text-[#ff403a]">Measurable Results</span>
           </p>
@@ -213,7 +213,7 @@ export default function WhatWeDo() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
+        <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3 lg:gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={service.title}

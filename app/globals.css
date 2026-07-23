@@ -96,3 +96,43 @@ body {
   background: #ff403a !important;
   opacity: 1;
 }
+
+/* Equal-height blog carousel cards */
+.blog-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.blog-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+/* Page scrollbar: track unchanged; red thumb only while scrolling */
+html {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+html.is-scrolling {
+  scrollbar-color: #ff403a transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+html.is-scrolling::-webkit-scrollbar-thumb {
+  background-color: #ff403a;
+}

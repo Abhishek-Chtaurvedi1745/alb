@@ -36,8 +36,9 @@ export const connectAllServicePages = {
       "Assess existing enterprise applications and integrations",
       "Discover the enterprise toolchain and identify integration opportunities",
       "Analyze current-state and future-state integration architecture",
-      "Define an enterprise integration strategy aligned with business objectives",
+      
       "Develop a phased implementation roadmap",
+      "Define an enterprise integration strategy aligned with business objectives",
       "Build business cases for workflow automation and digital transformation",
     ],
     [

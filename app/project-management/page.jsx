@@ -1,47 +1,8 @@
 "use client";
 import React from 'react'
-import { Plus, X } from "lucide-react";
-import { useState } from "react";
 import PPMBenefitHoverCard from "@/section/ProjectManagement/PPMBenefitHoverCard";
 import { ppmBenefits } from "@/section/ProjectManagement/ppmBenefitsData";
 import BlendedSectionImage from "@/component/Media/BlendedSectionImage";
-
-const faqData = [
-  {
-    question:
-      "What is Project Portfolio Management (PPM) and how does Albatroz help?",
-    answer:
-      "Project Portfolio Management (PPM) helps organizations manage multiple projects efficiently by aligning them with business goals. Albatroz provides structured PPM solutions to improve visibility, prioritize the right projects, and optimize resource allocation.",
-  },
-
-  {
-    question:
-      "What kind of automation solutions does Albatroz offer?",
-    answer:
-      "Albatroz provides enterprise automation solutions including workflow automation, IT process automation, cloud automation, and operational efficiency tools tailored for businesses.",
-  },
-
-  {
-    question:
-      "What is Project Management as a Service (PMaaS)?",
-    answer:
-      "PMaaS allows organizations to outsource project management expertise and processes, helping businesses improve delivery timelines and project success rates.",
-  },
-
-  {
-    question:
-      "How does Business Intelligence (BI) benefit my organization?",
-    answer:
-      "Business Intelligence helps organizations make data-driven decisions using dashboards, analytics, reporting tools, and predictive insights.",
-  },
-
-  {
-    question:
-      "Can Albatroz customize these solutions for my business?",
-    answer:
-      "Yes, Albatroz provides customized enterprise solutions tailored according to business size, goals, industry requirements, and operational workflows.",
-  },
-];
 
 const features = [
   "Alignment with Objectives: Ensuring that projects align with strategic goals and priorities.",
@@ -89,26 +50,21 @@ const features2 = [
 ];
 
 function page() {
-  const [active, setActive] = useState(0);
-
-  const toggleFAQ = (index) => {
-    setActive(active === index ? null : index);
-  };
   return (
     <div>
       <section className="mt-[83px] bg-black px-4 py-12 sm:px-6 sm:py-16">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:gap-10">
 
         <div className="w-full">
-          <h2 className="mb-4 text-3xl font-bold text-white md:text-[45px]">
+          <h1 className="mb-4 text-3xl font-bold text-white md:text-[45px]">
             Project Portfolio{" "}
             <span className="text-[#FF403A]">
               <br />
               secure AI into your PMO?
             </span>
-          </h2>
+          </h1>
 
-          <p className="mb-6 text-base text-white sm:text-lg md:text-[20px]">
+          <p className="font-normal mb-6 text-sm text-white sm:text-sm md:text-[16px]">
             From portfolio planning to automation and analytics, we help
             organizations manage work with structure, visibility and control.
           </p>
@@ -130,11 +86,11 @@ function page() {
 
         {/* Header */}
         <div className="mb-8 text-center sm:mb-10 md:mb-12">
-          <h2 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[40px]">
+          <h3 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[40px]">
             Transformative Benefits of{" "}
             <span className="text-[#e02b20]">Implementing PPM</span>
-          </h2>
-          <p className="mx-auto max-w-3xl text-sm font-medium leading-relaxed text-white sm:text-base md:text-[18px] lg:text-[20px]">
+          </h3>
+          <p className="mx-auto max-w-3xl text-sm font-medium leading-relaxed text-white sm:text-sm md:text-[16px] lg:text-[13px]">
             Implementing modern Project and Portfolio Management (PPM) practices
             can yield several transformative benefits for organizations. Here are
             some key advantages
@@ -143,8 +99,15 @@ function page() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
-          {ppmBenefits.map((benefit) => (
-            <PPMBenefitHoverCard key={benefit.title} benefit={benefit} />
+          {ppmBenefits.map((benefit, index) => (
+            <div
+              key={benefit.title}
+              className={
+                index === ppmBenefits.length - 1 ? "lg:col-start-2" : undefined
+              }
+            >
+              <PPMBenefitHoverCard benefit={benefit} />
+            </div>
           ))}
         </div>
 
@@ -155,10 +118,10 @@ function page() {
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-white text-[32px] md:text-[40px] font-bold text-center mb-12 leading-tight">
+        <h3 className="text-white text-[32px] md:text-[40px] font-bold text-center mb-12 leading-tight">
           Engage with Albatroz{" "}
           <span className="text-[#FF403A]">for PPM Solutions</span>
-        </h2>
+        </h3>
 
         <div className="flex flex-col lg:flex-row items-center gap-12">
 
@@ -166,8 +129,8 @@ function page() {
       <div className='z-100'>
   <img
     src="/images/nbnew2.png"
-    alt="Rotating Image"
-    className="animate-spin [animation-duration:8s]  rounded-full h-[300px] md:h-[500px]"
+    alt="PPM Solutions"
+    className="rounded-full h-[300px] md:h-[500px]"
   />
 </div>
 
@@ -212,7 +175,7 @@ function page() {
                     <span className="absolute inset-0.5 rounded-full bg-[#FF403A]" />
                   </span>
                 </div>
-                <h3 className="text-white text-[30px] font-semibold">Interactive PPM Demos</h3>
+                <h4 className="text-white text-[30px] font-semibold">Interactive PPM Demos</h4>
               </div>
 
               {/* Tool logos */}
@@ -290,10 +253,10 @@ function page() {
                     <span className="absolute inset-0.5 rounded-full bg-[#FF403A]" />
                   </span>
                 </div>
-                <h3 className="text-white text-[30px] font-semibold">Expert PPM Consultations</h3>
+                <h4 className="text-white text-[30px] font-semibold">Expert PPM Consultations</h4>
               </div>
 
-              <p className="text-white text-[18px] leading-relaxed mb-5 pl-1">
+              <p className="font-normal text-white text-[13px] leading-relaxed mb-5 pl-1">
                 Leverage expert PPM consultation to address business challenges
                 and maximize the value of your PPM investments.
               </p>
@@ -312,12 +275,12 @@ function page() {
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-[45px] font-semibold">
+          <h3 className="text-3xl md:text-[45px] font-semibold">
             Modern PPM Solutions:
             <span className="text-[#FF403A]">
               {" "}Comprehensive Features
             </span>
-          </h2>
+          </h3>
           <div className="w-full h-px bg-gray-800 mt-8"></div>
         </div>
 
@@ -326,12 +289,12 @@ function page() {
 
           {/* Left Side */}
           <div>
-            <h3 className="text-2xl md:text-[35px] font-semibold mb-6">
+            <h4 className="text-2xl md:text-[35px] font-semibold mb-6">
               Strategic Portfolio{" "}
               <span className="text-red-500">Management</span>
-            </h3>
+            </h4>
 
-            <p className="text-[#FFFFFF] text-[18px] leading-relaxed mb-8">
+            <p className="font-normal text-[#FFFFFF] text-[13px] leading-relaxed mb-8">
               Strategic Portfolio Management involves the oversight and
               management of an organization's portfolio of projects and
               initiatives. Its primary focus is on aligning projects with
@@ -342,7 +305,7 @@ function page() {
               {features.map((item, index) => (
                 <div key={index} className="flex gap-4">
                   <img src="/images/crt.svg" alt="" />
-                  <p className="text-[#FFFFFF] text-[18px] font-regular leading-relaxed">
+                  <p className="text-[#FFFFFF] text-[13px] font-regular leading-relaxed">
                     {item}
                   </p>
                 </div>
@@ -380,14 +343,14 @@ function page() {
       {/* RIGHT CONTENT */}
       <div className="pt-2 lg:pr-8 xl:pr-[50px]">
 
-        <h2 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
+        <h3 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
           Digital Product{" "}
           <span className="text-[#FF403A]">
             Management
           </span>
-        </h2>
+        </h3>
 
-        <p className="text-[#FFFFFF] text-[18px] leading-relaxed mb-8">
+        <p className="font-normal text-[#FFFFFF] text-[13px] leading-relaxed mb-8">
           Digital Product Management involves overseeing the
           development, enhancement, and management of digital products
           or services offered by a company. This includes:
@@ -411,12 +374,12 @@ function page() {
               />
 
               <div>
-                <h3 className="text-[#FF403A] text-[18px] font-medium inline">
+                <h4 className="text-[#FF403A] text-[18px] font-medium inline">
                   {item.title}
                   <span className="text-white font-normal">
                     : {item.desc}
                   </span>
-                </h3>
+                </h4>
               </div>
             </div>
           ))}
@@ -437,14 +400,14 @@ function page() {
       {/* LEFT CONTENT */}
       <div className="order-2 pt-2 lg:order-1 lg:pl-8 xl:pl-[50px]">
 
-        <h2 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
+        <h3 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
           Value Stream {" "}
           <span className="text-[#FF403A]">
             Management
           </span>
-        </h2>
+        </h3>
 
-        <p className="text-[#FFFFFF] text-[18px] leading-relaxed mb-8">
+        <p className="font-normal text-[#FFFFFF] text-[13px] leading-relaxed mb-8">
          Value Stream Management (VSM) involves optimizing the entire flow of work
 across an organization to deliver value to customers efficiently. It encompasses
         </p>
@@ -467,12 +430,12 @@ across an organization to deliver value to customers efficiently. It encompasses
               />
 
               <div>
-                <h3 className="text-[#FF403A] text-[18px] font-medium inline">
+                <h4 className="text-[#FF403A] text-[18px] font-medium inline">
                   {item.title}
                   <span className="text-white font-normal">
                     : {item.desc}
                   </span>
-                </h3>
+                </h4>
               </div>
             </div>
           ))}
@@ -507,7 +470,7 @@ across an organization to deliver value to customers efficiently. It encompasses
         {/* <hr className="border-t border-gray-800 mb-10 w-full" /> */}
 
         {/* Content Paragraph */}
-        {/* <p className="text-center text-[#FFFFFF] text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
+        {/* <p className="text-center text-[#FFFFFF] text-sm md:text-sm leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
           These management areas often intersect and complement each other, especially 
           in organizations aiming for digital transformation or seeking to enhance their 
           agility and competitiveness in today's rapidly evolving business landscape. 
@@ -515,86 +478,6 @@ across an organization to deliver value to customers efficiently. It encompasses
           decision-making, and ultimately, better outcomes for the organization.
         </p>
          */}
-      </div>
-    </section>
-    <section className="w-full bg-black  py-3 md:py-13 pb-13 px-4 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
-
-          {/* LEFT SIDE */}
-          <div className="flex flex-col items-center lg:items-center">
-
-           <h2 className="text-white text-3xl md:text-[40px] font-semibold leading-tight mt-0 md:mt-0 mb-7">
-  Frequently 
-  <br className="hidden md:block" /> 
-  
-    Asked
-  <br className="hidden md:block" />
-  <span className="text-[#ff403a]"> Questions </span>
-</h2>
-
-          </div>
-
-          {/* RIGHT SIDE */}
-          <div className="space-y-5">
-
-            {faqData.map((item, index) => (
-              <div
-                key={index}
-                className={`border rounded-2xl overflow-hidden transition-all duration-500
-                ${
-                  active === index
-                    ? "border-[#ff403a] bg-[#111111]"
-                    : "border-gray-700 bg-black"
-                }`}
-              >
-
-                {/* QUESTION */}
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between text-left p-6"
-                >
-
-                  <h3 className="text-white text-[16px] md:text-xl font-medium pr-5">
-                    {item.question}
-                  </h3>
-
-                  <span className="text-white flex-shrink-0">
-                    {active === index ? (
-                      <X size={24} className="text-[#ff403a]" />
-                    ) : (
-                      <Plus size={24} />
-                    )}
-                  </span>
-
-                </button>
-
-                {/* ANSWER */}
-                <div
-                  className={`grid transition-all duration-500 ease-in-out
-                  ${
-                    active === index
-                      ? "grid-rows-[1fr] opacity-100"
-                      : "grid-rows-[0fr] opacity-0"
-                  }`}
-                >
-                  <div className="overflow-hidden">
-
-                    <p className="text-[#FFFFFF] text-[12px] md:text-[14px] leading-relaxed px-6 pb-6 text-sm md:text-base">
-                      {item.answer}
-                    </p>
-
-                  </div>
-                </div>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div>
-
       </div>
     </section>
   

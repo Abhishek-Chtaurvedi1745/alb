@@ -14,16 +14,16 @@ export const claritySuccessStories = [
     ],
   },
   {
-    title: "First Abu Dhabi Bank — Enterprise PPM Transformation",
+    title: "Leading Middle East Bank — Enterprise PPM Transformation",
     paragraphs: [
-      "Albatroz successfully implemented Clarity as the enterprise Project & Portfolio Management (PPM) platform for First Abu Dhabi Bank (FAB), replacing its legacy project management system with a centralized solution. The implementation included Project, Portfolio, Financial, Resource, and Timesheet Management, along with executive dashboards and reporting for real-time portfolio insights.",
-      "Albatroz also integrated Clarity with the bank's HRMS and financial systems to automate data synchronization, improve accuracy, and eliminate manual processes — covering the complete implementation lifecycle from solution design and configuration to data migration, integrations, testing, deployment, and post-go-live support.",
+      "Albatroz successfully implemented Clarity as the enterprise Project & Portfolio Management (PPM) platform for a leading Middle East bank, replacing its legacy project management system with a centralized solution. The implementation included Project, Portfolio, Financial, Resource, and Timesheet Management, along with executive dashboards and reporting to provide real-time portfolio insights.",
+      "Albatroz also integrated Clarity with the bank's HRMS and financial systems to automate data synchronization, improve accuracy, and eliminate manual processes. The engagement covered the complete implementation lifecycle, including solution design, configuration, data migration, system integrations, testing, deployment, and post-go-live support.",
     ],
   },
   {
-    title: "KAPSARC — Research Portfolio & Demand Management",
+    title: "Leading Research & Energy Organization — Research Portfolio & Demand Management",
     paragraphs: [
-      "Albatroz successfully implemented Clarity as the enterprise PPM platform for KAPSARC, providing a centralized solution for managing research demand, project delivery, and portfolio governance. The implementation included Demand Management, Project Management, Timesheet Management, and Executive Reporting.",
+      "Albatroz successfully implemented Clarity as the enterprise Project & Portfolio Management (PPM) platform for a leading research and energy organization, providing a centralized solution for managing research demand, project delivery, and portfolio governance. The implementation included Demand Management, Project Management, Timesheet Management, and Executive Reporting.",
       "A structured demand management process was established, integrating an external idea submission portal with Clarity to automate proposal evaluation, approvals, and project creation. Albatroz also developed executive dashboards and management reports, delivering real-time insights into project performance, portfolio health, and resource utilization.",
     ],
   },

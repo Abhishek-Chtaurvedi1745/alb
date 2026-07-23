@@ -3,7 +3,6 @@
 import React from 'react'
 import { useState } from 'react';
 import Link from 'next/link';
-import GetStartedLink from '@/component/GetStartedLink';
 import Claritysection from '../../component/claritypagesection/Claritysection';
 import FAQSection from '../../component/Faq/Faqsection';
 import SuccessStories from '../../component/SuccessStories/SuccessStories';
@@ -95,90 +94,63 @@ const benefits = [
     const [activeTab, setActiveTab] = useState("services");
    return (
     <div>
-        <section className="bg-[#000000] py-16 px-6 mt-[83px]">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
+        <img
+          src="/images/clarity-hero.png"
+          alt="Clarity by Broadcom"
+          className="h-full w-full object-cover"
+        />
 
-   
-        <div className="w-full ">
-          {/* <h2 className="text-3xl md:text-[45px] font-bold text-[#FFFFFF] mb-4">
-            Clarity
-          </h2>
+        <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
+          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+            Clarity{" "}
+            <span className="text-[#FF403A]">by Broadcom</span>
+          </h1>
 
-          
-          <p className="text-[#FFFFFF] text-upercase text-[24px]">Talk to Our Team</p> */}
-          <img
-            src="/images/climg1.svg"
-            alt="Clarity"
-            className="h-auto w-full max-w-[324px]"
-          />
           <Link
             href="/contact-us"
-            className="mt-[28px] inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-[25px] font-semibold text-[#FFFFFF] transition hover:opacity-90"
+            className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]"
           >
-            Request a free demo
+            Get started with Clarity
           </Link>
         </div>
+      </section>
 
-      
-        <div className="w-full flex justify-center">
-          <img
-            src="/images/climg.png"
-            alt="Contact"
-            className="rounded-xl shadow-lg w-full "
-          />
+    <section className="w-full overflow-hidden bg-black px-4 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-6 text-center md:mb-8">
+          <h3 className="text-3xl font-semibold leading-tight text-white md:text-[42px]">
+            Transform Project Portfolio Management with{" "}
+            <span className="text-[#FF403A]">Clarity</span>
+          </h3>
+          <div className="mx-auto mt-4 h-[2px] w-24 bg-[#FF403A]" />
         </div>
 
-      </div>
-    </section>
-    <section className=" bg-black text-white flex items-center">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-0 items-center">
-          {/* Left Content */}
-          <div>
-            <h1 className="text-3xl md:text-[40px] font-semibold leading-tight">
-              Transform Project
-              <br />
-              Portfolio Management
-              <br />
-              with <span className="text-[#FF403A]">Clarity</span>
-            </h1>
+        <div className="mx-auto max-w-5xl space-y-4 md:space-y-5">
+          <p className="text-justify text-[13px] font-normal leading-[1.7] text-[#E5E5E5] md:text-[16px]">
+            Clarity, part of the ValueOps domain by Broadcom, is a leader in
+            Project & Portfolio Management solutions. It helps organizations
+            bring strategy, investment, and delivery into one connected system —
+            so teams can prioritize the right work and move faster with clarity.
+          </p>
 
-            <p className="mt-6 text-[18px] text-[#FFFFFF] font-regular">
-              Clarity, part of the ValueOps domain by Broadcom, is a leader in
-              Project & Portfolio Management solutions.
-            </p>
-
-            <p className="mt-4 text-[18px] text-[#FFFFFF] font-regular">
-              The enterprise software is packed with a wide range of features
-              that support organizations from strategic planning & tracking to
-              managing ideas, projects & resources centrally.
-            </p>
-
-            <Link
-              href="/contact-us"
-              className="mt-8 inline-block rounded-xl bg-[#FF403A] px-8 py-4 font-semibold shadow-lg shadow-red-500/30 transition hover:opacity-90"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-
-          {/* Right Dashboard */}
-          <div className="relative">
-            {/* Glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-red-500/30 via-purple-500/20 to-blue-500/30 blur-3xl rounded-3xl"></div>
-
-            <img src="/images/newcl.png" />
-          </div>
+          <p className="text-justify text-[13px] font-normal leading-[1.7] text-[#E5E5E5] md:text-[16px]">
+            The enterprise software is packed with a wide range of features that
+            support organizations from strategic planning & tracking to managing
+            ideas, projects & resources centrally. With Albatroz as your
+            implementation partner, you get practical guidance, proven delivery,
+            and lasting adoption across your Clarity journey.
+          </p>
         </div>
       </div>
     </section>
     <section className="bg-black py-16 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-3xl md:text-[40px] font-semibold text-white mb-8">
+        <h3 className="text-center text-3xl md:text-[40px] font-semibold text-white mb-8">
           Comprehensive Clarity Services{" "}
           <span className="text-[#FF403A]">& Integrations</span>
-        </h2>
+        </h3>
 
         {/* Tabs */}
         <div className="flex justify-center gap-0 mb-12">
@@ -253,7 +225,7 @@ const benefits = [
                   alt={plugin.tabLabel}
                   className="transition-transform duration-300 group-hover:scale-110"
                 />
-                <p className="max-w-[160px] text-[20px] leading-snug text-[#FFFFFF] transition-colors group-hover:text-[#FF403A] md:text-[22px]">
+                <p className="max-w-[160px] text-[17px] leading-snug text-[#FFFFFF] transition-colors group-hover:text-[#FF403A] md:text-[22px]">
                   {plugin.tabLabel}
                 </p>
               </Link>
@@ -266,9 +238,9 @@ const benefits = [
     <section className="bg-black py-9 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-3xl md:text-[40px] font-bold text-white mb-10">
+        <h3 className="text-center text-3xl md:text-[40px] font-bold text-white mb-10">
           Benefits of <span className="text-[#FF403A]">Implementing Clarity</span>
-        </h2>
+        </h3>
 
         {/* Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -279,10 +251,10 @@ const benefits = [
               
                 <img src={benefit.icon} />
                 {/* Text */}
-                <h3 className="text-[#FF403A] font-semibold text-[14px] md:text-[20px] mt-2 mb-0">
+                <h4 className="text-[#FF403A] font-semibold text-[14px] md:text-[20px] mt-2 mb-0">
                   {benefit.title}
-                </h3>
-                <p className="text-[#FFFFFF] text-[10px] md:text-[16px] leading-snug">
+                </h4>
+                <p className="font-normal text-[#FFFFFF] text-[10px] md:text-[16px] leading-snug">
                   {benefit.description}
                 </p>
               </div>
@@ -293,11 +265,6 @@ const benefits = [
     </section>
     <Claritysection />
     <SuccessStories stories={claritySuccessStories} />
-    <section className="bg-black px-6 py-16 lg:px-12">
-      <div className="mx-auto max-w-7xl">
-        <GetStartedLink product="Clarity" />
-      </div>
-    </section>
     <FAQSection faqs={clarityFaqData} />
     </div>
   )

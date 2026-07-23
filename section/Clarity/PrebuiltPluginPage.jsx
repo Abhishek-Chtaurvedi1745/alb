@@ -11,14 +11,14 @@ function SectionBlock({ section }) {
 
   return (
     <article className="rounded-2xl border border-white/10 bg-[#080808] p-6 sm:p-8">
-      <h2 className="text-xl font-semibold text-[#ff403a] sm:text-2xl">{section.title}</h2>
+      <h4 className="text-xl font-semibold text-[#ff403a] sm:text-2xl">{section.title}</h4>
 
       {hasParagraphs && (
         <div className="mt-4 space-y-4">
           {section.paragraphs.map((paragraph, index) => (
             <p
               key={index}
-              className="text-base leading-relaxed text-white/85 sm:text-[17px] md:text-[18px]"
+              className="font-normal text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]"
             >
               {paragraph}
             </p>
@@ -71,11 +71,11 @@ export default function PrebuiltPluginPage({ page }) {
 
       <section className="px-6 py-14">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-semibold text-white md:text-[40px]">
+          <h3 className="text-3xl font-semibold text-white md:text-[40px]">
             {page.title}{" "}
             <span className="text-[#FF403A]">{page.titleAccent}</span>
-          </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-white/85 sm:text-[17px] md:text-[18px]">
+          </h3>
+          <p className="font-normal mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]">
             {page.summary}
           </p>
         </div>
@@ -86,7 +86,7 @@ export default function PrebuiltPluginPage({ page }) {
           {page.intro.map((paragraph, index) => (
             <p
               key={index}
-              className="text-base leading-relaxed text-white/85 sm:text-[17px] md:text-[18px]"
+              className="font-normal text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]"
             >
               {paragraph}
             </p>
@@ -102,10 +102,10 @@ export default function PrebuiltPluginPage({ page }) {
 
           {page.closing && (
             <div className="rounded-2xl border border-[#ff403a]/35 bg-gradient-to-br from-[#ff403a]/10 to-transparent p-6 sm:p-8">
-              <h2 className="text-xl font-semibold text-white sm:text-2xl">
+              <h4 className="text-xl font-semibold text-white sm:text-2xl">
                 {page.closing.title}
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-white/85 sm:text-[17px] md:text-[18px]">
+              </h4>
+              <p className="font-normal mt-4 text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]">
                 {page.closing.text}
               </p>
             </div>
@@ -127,9 +127,9 @@ export default function PrebuiltPluginPage({ page }) {
           </div>
 
           <div className="border-t border-white/10 pt-8">
-            <h3 className="text-lg font-semibold text-white sm:text-xl">
+            <h4 className="text-lg font-semibold text-white sm:text-xl">
               Other <span className="text-[#ff403a]">Prebuilt Plugins</span>
-            </h3>
+            </h4>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
               {otherPlugins.map((plugin) => (
                 <Link

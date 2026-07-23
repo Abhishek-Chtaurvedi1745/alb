@@ -16,12 +16,12 @@ export default function AutomicIntroSection() {
   return (
     <section className="bg-black px-6 py-16 text-white lg:px-12">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-left text-3xl font-semibold leading-tight md:text-[40px]">
+        <h3 className="text-left text-3xl font-semibold leading-tight md:text-[40px]">
           Automic Workload{" "}
           <span className="text-[#FF403A]">Automation (AWA)</span>
-        </h2>
+        </h3>
 
-        <p className="mt-6 max-w-5xl text-left text-base leading-relaxed text-white/90 md:text-[18px]">
+        <p className="font-normal mt-6 max-w-5xl text-left text-sm leading-relaxed text-white/90 md:text-[16px]">
           {introParagraph}
         </p>
 
@@ -29,7 +29,7 @@ export default function AutomicIntroSection() {
           {moreParagraphs.map((paragraph) => (
             <p
               key={paragraph.slice(0, 40)}
-              className="mt-5 text-left text-base leading-relaxed text-white/90 md:text-[18px]"
+              className="font-normal mt-5 text-left text-sm leading-relaxed text-white/90 md:text-[16px]"
             >
               {paragraph}
             </p>

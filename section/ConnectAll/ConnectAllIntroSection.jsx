@@ -16,7 +16,7 @@ export default function ConnectAllIntroSection() {
           <span className="text-[#FF403A]">Simplifying Your Delivery</span>
         </h1>
 
-        <p className="mt-6 text-base leading-relaxed text-white/90 md:text-[18px]">
+        <p className="font-normal mt-6 text-sm leading-relaxed text-white/90 md:text-[16px]">
           {overviewParagraphs[0]}
         </p>
 
@@ -25,7 +25,7 @@ export default function ConnectAllIntroSection() {
             {hiddenParagraphs.map((paragraph) => (
               <p
                 key={paragraph.slice(0, 48)}
-                className="text-base leading-relaxed text-white/90 md:text-[18px]"
+                className="font-normal text-sm leading-relaxed text-white/90 md:text-[16px]"
               >
                 {paragraph}
               </p>

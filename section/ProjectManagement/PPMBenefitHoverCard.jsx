@@ -45,9 +45,9 @@ export default function PPMBenefitHoverCard({ benefit }) {
           />
         </div>
 
-        <h3 className="text-lg font-medium leading-snug text-white sm:text-xl md:text-[25px]">
+        <h4 className="text-lg font-medium leading-snug text-white sm:text-xl md:text-[25px]">
           {benefit.title}
-        </h3>
+        </h4>
 
         <div className="mt-3 flex items-center gap-1 sm:mt-4">
           <div className="h-px w-12 bg-white sm:w-16" />
@@ -65,11 +65,11 @@ export default function PPMBenefitHoverCard({ benefit }) {
           isActive ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
         }`}
       >
-        <h3 className="mb-3 text-base font-semibold leading-snug text-white sm:mb-4 sm:text-lg md:text-xl">
+        <h4 className="mb-3 text-base font-semibold leading-snug text-white sm:mb-4 sm:text-lg md:text-xl">
           {benefit.title}
-        </h3>
+        </h4>
 
-        <p className="text-sm leading-relaxed text-white/85 sm:text-[15px] md:text-[16px] lg:text-[17px]">
+        <p className="font-normal text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px] lg:text-[13px]">
           {benefit.description}
         </p>
 

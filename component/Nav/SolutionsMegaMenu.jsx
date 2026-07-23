@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { desktopFlyoutMenu, getResponsiveSolutionsMenu } from "./solutionsMenuData";
@@ -33,7 +33,7 @@ function ProductBlock({ product, onNavigate }) {
           {product.title}
         </h4>
       </Link>
-      <p className="mt-1.5 max-w-[300px] text-[14px] leading-relaxed text-[#6b7280]">
+      <p className="mt-1.5 max-w-[300px] text-[13px] leading-relaxed text-[#6b7280]">
         {product.description}
         {product.servicesLink && (
           <>
@@ -236,7 +236,19 @@ function FlyoutMenuRow({ label, href, isActive, hasChildren, onMouseEnter, onNav
   );
 }
 
-function FlyoutServiceRow({ label, href, onNavigate }) {
+function FlyoutServiceRow({ label, href, onNavigate, isSectionTitle = false }) {
+  if (isSectionTitle) {
+    return (
+      <Link
+        href={href}
+        onClick={onNavigate}
+        className="block px-5 py-3 text-[15px] font-semibold text-[#ef4444] transition-all duration-200 ease-out hover:bg-[#fff1f2]"
+      >
+        {label}
+      </Link>
+    );
+  }
+
   return (
     <Link
       href={href}
@@ -251,7 +263,7 @@ function FlyoutServiceRow({ label, href, onNavigate }) {
 function FlyoutPanel({ isOpen, left, width, zIndex, top = 0, children, className = "" }) {
   return (
     <div
-      className={`absolute border-[#e5e7eb] bg-white py-2 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[transform,opacity,top] ${
+      className={`absolute border-[#e5e7eb] bg-white transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[transform,opacity,top] ${
         isOpen
           ? "pointer-events-auto translate-x-0 opacity-100"
           : "pointer-events-none translate-x-2 opacity-0"
@@ -272,8 +284,6 @@ function FlyoutPanel({ isOpen, left, width, zIndex, top = 0, children, className
 export function SolutionsMegaMenuWide({ onClose }) {
   const [activeMainId, setActiveMainId] = useState(null);
   const [activeSubKey, setActiveSubKey] = useState(null);
-  const [col3Top, setCol3Top] = useState(0);
-  const containerRef = useRef(null);
 
   const activeMain = desktopFlyoutMenu.find((item) => item.id === activeMainId);
   const activeSub = activeMain?.children?.find(
@@ -291,31 +301,20 @@ export function SolutionsMegaMenuWide({ onClose }) {
   const resetPanels = () => {
     setActiveMainId(null);
     setActiveSubKey(null);
-    setCol3Top(0);
   };
 
   const handleMainEnter = (item) => {
     setActiveMainId(item.id);
     setActiveSubKey(null);
-    setCol3Top(0);
   };
 
-  const handleSubEnter = (mainId, index, child, event) => {
+  const handleSubEnter = (mainId, index, child) => {
     setActiveMainId(mainId);
     setActiveSubKey(child.children?.length ? `${mainId}-sub-${index}` : null);
-
-    if (child.children?.length && event?.currentTarget && containerRef.current) {
-      const rowRect = event.currentTarget.getBoundingClientRect();
-      const containerRect = containerRef.current.getBoundingClientRect();
-      setCol3Top(rowRect.top - containerRect.top);
-    } else {
-      setCol3Top(0);
-    }
   };
 
   return (
     <div
-      ref={containerRef}
       className="relative overflow-visible transition-[width] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]"
       style={{ width: hoverAreaWidth, minWidth: FLYOUT_COL1_WIDTH }}
       onMouseLeave={resetPanels}
@@ -339,7 +338,7 @@ export function SolutionsMegaMenuWide({ onClose }) {
         left={FLYOUT_COL1_WIDTH}
         width={FLYOUT_COL2_WIDTH}
         zIndex={20}
-        className="top-0 rounded-r-sm border border-l-0 border-[#93c5fd]/80 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
+        className="top-0 rounded-r-sm border border-l-0 border-[#93c5fd]/80 py-2 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
       >
         {activeMain?.children?.map((child, index) => (
           <FlyoutMenuRow
@@ -348,8 +347,8 @@ export function SolutionsMegaMenuWide({ onClose }) {
             href={child.href}
             isActive={activeSubKey === `${activeMain.id}-sub-${index}`}
             hasChildren={Boolean(child.children?.length)}
-            onMouseEnter={(event) =>
-              handleSubEnter(activeMain.id, index, child, event)
+            onMouseEnter={() =>
+              handleSubEnter(activeMain.id, index, child)
             }
             onNavigate={onClose}
           />
@@ -361,14 +360,14 @@ export function SolutionsMegaMenuWide({ onClose }) {
         left={FLYOUT_COL1_WIDTH + FLYOUT_COL2_WIDTH}
         width={FLYOUT_COL3_WIDTH}
         zIndex={10}
-        top={col3Top}
-        className="max-h-[440px] overflow-y-auto rounded-r-sm border border-l-0 border-[#93c5fd]/80 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
+        className="top-0 rounded-r-sm border border-l-0 border-[#93c5fd]/80 py-2 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
       >
         {activeSub?.children?.map((service) => (
           <FlyoutServiceRow
             key={service.label}
             label={service.label}
             href={service.href}
+            isSectionTitle={Boolean(service.isSectionTitle)}
             onNavigate={onClose}
           />
         ))}
@@ -409,7 +408,7 @@ export function SolutionsMegaMenuMobile({ onClose }) {
                   section.products.map((product) => (
                     <div key={product.title}>
                       <Link href={product.href} onClick={onClose} className="block">
-                        <p className="text-[14px] font-bold text-[#ef4444]">{product.title}</p>
+                        <p className="text-[13px] font-bold text-[#ef4444]">{product.title}</p>
                       </Link>
                       <p className="mt-1 text-[13px] text-[#6b7280]">
                         {product.description}
@@ -435,10 +434,10 @@ export function SolutionsMegaMenuMobile({ onClose }) {
                   <div>
                     {section.services.href ? (
                       <Link href={section.services.href} onClick={onClose}>
-                        <p className="text-[14px] font-bold text-[#ef4444]">{section.services.title}</p>
+                        <p className="text-[13px] font-bold text-[#ef4444]">{section.services.title}</p>
                       </Link>
                     ) : (
-                      <p className="text-[14px] font-bold text-[#ef4444]">{section.services.title}</p>
+                      <p className="text-[13px] font-bold text-[#ef4444]">{section.services.title}</p>
                     )}
                     <ul className="mt-2 space-y-2">
                       {section.services.items.map((item) => (
@@ -459,7 +458,7 @@ export function SolutionsMegaMenuMobile({ onClose }) {
                 {section.trailingProduct && (
                   <div>
                     <Link href={section.trailingProduct.href} onClick={onClose} className="block">
-                      <p className="text-[14px] font-bold text-[#ef4444]">{section.trailingProduct.title}</p>
+                      <p className="text-[13px] font-bold text-[#ef4444]">{section.trailingProduct.title}</p>
                     </Link>
                     <p className="mt-1 text-[13px] text-[#6b7280]">
                       {section.trailingProduct.description}

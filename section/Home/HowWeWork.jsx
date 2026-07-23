@@ -14,7 +14,7 @@ const steps = [
     glowClass: "shadow-[0_0_30px_rgba(255,64,58,0.12)]",
     textClass: "text-[#ff403a]",
     bgClass: "bg-[#ff403a]",
-    icon: "/images/ww1.svg",
+    icon: "/images/ww1.svg?v=red",
     checkIcon: "/images/aa1.svg",
     list: [
       "Product Installation",
@@ -28,13 +28,13 @@ const steps = [
     number: "02",
     title: "EXTEND",
     desc: "We help you scale your workflow with smart integrations and advanced solutions tailored to your business.",
-    accent: "#4d79ff",
-    borderClass: "border-[#4d79ff]/50",
-    glowClass: "shadow-[0_0_30px_rgba(77,121,255,0.12)]",
-    textClass: "text-[#4d79ff]",
-    bgClass: "bg-[#4d79ff]",
-    icon: "/images/ww2.svg",
-    checkIcon: "/images/aa2.svg",
+    accent: "#ff403a",
+    borderClass: "border-[#ff403a]/50",
+    glowClass: "shadow-[0_0_30px_rgba(255,64,58,0.12)]",
+    textClass: "text-[#ff403a]",
+    bgClass: "bg-[#ff403a]",
+    icon: "/images/ww2.svg?v=red",
+    checkIcon: "/images/aa1.svg",
     list: [
       "Rollout to Other Business Units",
       "Product Upgrades",
@@ -49,13 +49,13 @@ const steps = [
     number: "03",
     title: "MAINTAIN",
     desc: "We provide continuous support and optimization to ensure long-term performance and reliability.",
-    accent: "#22c55e",
-    borderClass: "border-[#22c55e]/50",
-    glowClass: "shadow-[0_0_30px_rgba(34,197,94,0.12)]",
-    textClass: "text-[#22c55e]",
-    bgClass: "bg-[#22c55e]",
-    icon: "/images/ww3.svg",
-    checkIcon: "/images/aa3.svg",
+    accent: "#ff403a",
+    borderClass: "border-[#ff403a]/50",
+    glowClass: "shadow-[0_0_30px_rgba(255,64,58,0.12)]",
+    textClass: "text-[#ff403a]",
+    bgClass: "bg-[#ff403a]",
+    icon: "/images/ww3.svg?v=red",
+    checkIcon: "/images/aa1.svg",
     list: [
       "L2/L3 Solution Support",
       "Managed Support Services",
@@ -119,26 +119,33 @@ function StepCard({ step, index, inView, activeInfo, setActiveInfo }) {
     >
       <div className="flex items-start justify-between gap-4">
         <div className="flex flex-1 gap-4">
+          {/* Favicon: red border, white icon */}
           <div
             className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border ${step.borderClass} transition-transform duration-300 ${
               isActive ? "scale-105" : ""
             }`}
           >
-            <img src={step.icon} alt="" className="h-6 w-6" />
+            <img
+              src={step.icon}
+              alt=""
+              className="h-6 w-6 brightness-0 invert"
+            />
           </div>
 
           <div className="flex-1">
-            <h3 className="flex flex-wrap items-baseline gap-2 text-2xl font-semibold md:text-[30px]">
-              <span className={`${step.textClass} text-2xl md:text-[36px]`}>{step.number}</span>
-              <span className={step.textClass}>{step.title}</span>
-            </h3>
-            <p className="mt-3 text-[15px] leading-relaxed text-white/85 md:text-[17px]">
+            <h4 className="flex flex-wrap items-baseline gap-2 text-2xl font-semibold md:text-[30px]">
+              <span className={`${step.textClass} text-2xl md:text-[36px]`}>
+                {step.number}
+              </span>
+              <span className="text-white">{step.title}</span>
+            </h4>
+            <p className="mt-3 text-[13px] font-normal leading-relaxed text-white/85 md:text-[16px]">
               {step.desc}
             </p>
           </div>
         </div>
 
-        {/* Info icon */}
+        {/* Info icon: white + red border → red on hover */}
         <div
           className="relative -m-3 shrink-0 p-3"
           onMouseEnter={() => {
@@ -157,12 +164,11 @@ function StepCard({ step, index, inView, activeInfo, setActiveInfo }) {
             aria-label={`More information about ${step.title}`}
             aria-expanded={isInfoOpen}
             onClick={() => setActiveInfo(isInfoOpen ? null : index)}
-            className={`flex h-9 w-9 items-center justify-center rounded-full border transition-all duration-300 ${step.borderClass} ${
+            className={`flex h-9 w-9 items-center justify-center rounded-full border bg-transparent transition-all duration-300 ${step.borderClass} ${
               isInfoOpen
-                ? `${step.bgClass} border-transparent text-white`
-                : "bg-transparent hover:bg-white/[0.04]"
+                ? "text-[#ff403a]"
+                : "text-white hover:text-[#ff403a]"
             }`}
-            style={isInfoOpen ? {} : { color: step.accent }}
           >
             <Info size={18} strokeWidth={2.5} />
           </button>
@@ -200,9 +206,9 @@ export default function HowWeWork() {
             inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <h2 className="text-3xl font-semibold text-white md:text-[40px]">
+          <h3 className="text-3xl font-semibold text-white md:text-[40px]">
             How We <span className="text-[#ff403a]">Work</span>
-          </h2>
+          </h3>
         </div>
 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -227,10 +233,10 @@ export default function HowWeWork() {
             }`}
           >
             <div className="absolute h-72 w-72 rounded-full bg-[#ff403a]/15 blur-3xl" />
-            <div className="absolute h-48 w-48 translate-x-16 -translate-y-8 rounded-full bg-[#4d79ff]/10 blur-3xl" />
+            <div className="absolute h-48 w-48 translate-x-16 -translate-y-8 rounded-full bg-[#ff403a]/10 blur-3xl" />
             <img
-              src="/images/hww.png"
-              alt="Team collaboration illustration"
+              src="/images/hww.png?v=2"
+              alt="How we work process illustration"
               className="relative z-0 w-full max-w-[520px] object-contain"
             />
           </div>

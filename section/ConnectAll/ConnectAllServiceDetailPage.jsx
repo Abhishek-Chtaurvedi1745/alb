@@ -17,7 +17,7 @@ function SectionBlock({ section }) {
           : "border-white/10 bg-[#080808]"
       }`}
     >
-      <h2
+      <h4
         className={`font-semibold text-white ${
           isNumbered
             ? "text-xl text-[#ff403a] sm:text-2xl"
@@ -25,12 +25,12 @@ function SectionBlock({ section }) {
         }`}
       >
         {section.title}
-      </h2>
+      </h4>
 
       {hasSubtitle && (
-        <h3 className="mt-2 text-base font-semibold text-white/90 sm:text-lg">
+        <h4 className="mt-2 text-base font-semibold text-white/90 sm:text-lg">
           {section.subtitle}
-        </h3>
+        </h4>
       )}
 
       {hasParagraphs && (
@@ -38,7 +38,7 @@ function SectionBlock({ section }) {
           {section.paragraphs.map((paragraph, index) => (
             <p
               key={index}
-              className="text-base leading-relaxed text-white/85 sm:text-[17px] md:text-[18px]"
+              className="font-normal text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]"
             >
               {paragraph}
             </p>
@@ -47,13 +47,13 @@ function SectionBlock({ section }) {
       )}
 
       {hasBullets && (
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        <ul className="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">
           {section.bullets.map((bullet, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ff403a]/15">
+            <li key={index} className="flex items-center gap-2.5">
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ff403a]/15">
                 <Check size={12} className="text-[#ff403a]" strokeWidth={3} />
               </span>
-              <span className="text-sm leading-relaxed text-white/80 sm:text-[15px] md:text-base">
+              <span className="text-[12px] leading-snug tracking-tight text-white/80 sm:whitespace-nowrap sm:text-[13px] sm:leading-none lg:text-[14px]">
                 {bullet}
               </span>
             </li>
@@ -77,8 +77,8 @@ export default function ConnectAllServiceDetailPage({ page }) {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/80 to-black" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 md:py-20">
-          <nav className="mb-6 text-sm text-white/60">
+        <div className="relative mx-auto max-w-6xl px-4 py-12 text-left sm:px-6 sm:py-16 md:py-20">
+          <nav className="mb-6 text-left text-sm text-white/60">
             <Link
               href="/connectall"
               className="transition-colors hover:text-[#ff403a]"
@@ -96,26 +96,22 @@ export default function ConnectAllServiceDetailPage({ page }) {
             <span className="text-white/90">{page.title}</span>
           </nav>
 
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#ff403a]">
-            ConnectALL Services
-          </p>
-
-          <h1 className="max-w-4xl text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[45px]">
+          <h1 className="text-left text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[45px]">
             {page.title}
           </h1>
 
-          <p className="mt-4 max-w-4xl text-lg font-medium leading-relaxed text-white sm:text-xl md:text-[24px]">
+          <p className="mt-4 text-left text-sm font-medium leading-relaxed text-white sm:text-xl md:text-[24px]">
             {page.subtitle}
           </p>
         </div>
       </section>
 
-      <section className="px-4 pb-10 sm:px-6">
-        <div className="mx-auto max-w-6xl space-y-5">
+      <section className="pb-10">
+        <div className="mx-auto max-w-6xl space-y-5 px-4 text-left sm:px-6">
           {page.intro.map((paragraph, index) => (
             <p
               key={index}
-              className="text-base leading-relaxed text-white/85 sm:text-[17px] md:text-[18px]"
+              className="text-left font-normal text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]"
             >
               {paragraph}
             </p>
@@ -123,18 +119,18 @@ export default function ConnectAllServiceDetailPage({ page }) {
         </div>
       </section>
 
-      <section className="px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24">
-        <div className="mx-auto max-w-6xl space-y-6">
+      <section className="pb-16 sm:pb-20 md:pb-24">
+        <div className="mx-auto max-w-6xl space-y-6 px-4 text-left sm:px-6">
           {page.sections.map((section, index) => (
             <SectionBlock key={index} section={section} />
           ))}
 
           {page.closing && (
             <div className="rounded-2xl border border-[#ff403a]/35 bg-gradient-to-br from-[#ff403a]/10 to-transparent p-6 sm:p-8">
-              <h2 className="text-xl font-semibold text-white sm:text-2xl">
+              <h4 className="text-xl font-semibold text-white sm:text-2xl">
                 {page.closing.title}
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-white/85 sm:text-[17px] md:text-[18px]">
+              </h4>
+              <p className="font-normal mt-4 text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]">
                 {page.closing.text}
               </p>
             </div>

@@ -1,6 +1,6 @@
 export const clarityFaqData = [
   {
-    question: "How do we get started with a Clarity PPM or Rally implementation?",
+    question: "How do we get started with a Clarity PPM ?",
     answer:
       "Implementations typically begin with a discovery conversation to understand current tools, governance processes, and priorities. From there, Albatroz Solutions recommends a starting service pack and implementation roadmap suited to your organization's size and goals.",
   },

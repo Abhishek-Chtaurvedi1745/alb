@@ -36,11 +36,6 @@ const industries = [
     ],
   },
   {
-    name: "Healthcare",
-    image: "/images/ea7.png",
-    items: [],
-  },
-  {
     name: "Manufacturing",
     image: "/images/ea8.png",
     items: [
@@ -82,12 +77,12 @@ export default function IndustriesServed() {
 
   return (
     <section className="bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 text-center">
-        <h2 className="text-3xl md:text-[40px] font-semibold tracking-tight">
+      <div className="mx-auto max-w-7xl px-6 py-16 text-center sm:px-8 lg:px-12">
+        <h3 className="text-3xl font-semibold tracking-tight md:text-[40px]">
           Industries <span className="text-[#FF403A]">Served</span>
-        </h2>
+        </h3>
 
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+        <div className="mx-auto mt-8 grid max-w-5xl grid-cols-2 gap-4 sm:gap-5 md:mt-10 md:grid-cols-4 md:gap-6">
           {industries.map((industry, index) => {
             const isActive = activeIndex === index;
 
@@ -98,7 +93,7 @@ export default function IndustriesServed() {
                 onClick={() => handleTabClick(index)}
                 aria-expanded={isActive}
                 aria-controls="industry-content-panel"
-                className={`relative group h-24 md:h-28 w-full overflow-hidden rounded-xl border transition-all duration-300 cursor-pointer ${
+                className={`group relative h-24 w-full overflow-hidden rounded-xl border transition-all duration-300 cursor-pointer md:h-28 ${
                   isActive
                     ? "border-[#FF403A] shadow-[0_0_20px_rgba(255,64,58,0.25)]"
                     : "border-white/10 bg-zinc-900 hover:border-[#FF403A]/40 hover:shadow-[0_0_20px_rgba(255,64,58,0.15)]"
@@ -112,7 +107,9 @@ export default function IndustriesServed() {
                 />
                 <div
                   className={`absolute inset-0 transition-colors duration-300 ${
-                    isActive ? "bg-[#FF403A]/20" : "bg-black/15 group-hover:bg-black/5"
+                    isActive
+                      ? "bg-[#FF403A]/20"
+                      : "bg-black/40 group-hover:bg-black/25"
                   }`}
                 />
                 <span className="relative z-10 flex h-full items-center justify-center px-2 text-base font-semibold tracking-wide text-white md:text-lg">
@@ -125,7 +122,7 @@ export default function IndustriesServed() {
 
         <div
           id="industry-content-panel"
-          className={`mt-8 text-left overflow-hidden transition-all duration-500 ease-in-out ${
+          className={`mt-8 overflow-hidden text-left transition-all duration-500 ease-in-out ${
             activeIndustry && activeIndustry.items.length > 0
               ? "max-h-[2000px] opacity-100"
               : "max-h-0 opacity-0"
@@ -133,15 +130,15 @@ export default function IndustriesServed() {
         >
           {activeIndustry && activeIndustry.items.length > 0 && (
             <div className="rounded-2xl border border-[#FF403A]/40 bg-[#111111] p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
+              <h4 className="mb-6 text-xl font-semibold text-white md:text-2xl">
                 {activeIndustry.name}{" "}
                 <span className="text-[#FF403A]">Automation</span>
-              </h3>
+              </h4>
 
               <ul className="space-y-5">
                 {activeIndustry.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-4 group">
-                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#FF403A] shadow-lg shadow-red-500/20 group-hover:scale-110 transition duration-200">
+                  <li key={i} className="group flex items-start gap-4">
+                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#FF403A] shadow-lg shadow-red-500/20 transition duration-200 group-hover:scale-110">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -156,7 +153,7 @@ export default function IndustriesServed() {
                       </svg>
                     </span>
 
-                    <p className="text-[14px] md:text-[18px] text-white leading-relaxed">
+                    <p className="font-normal text-[13px] leading-relaxed text-white md:text-[16px]">
                       <span className="font-semibold">{item.title}</span>
                       {" – "}
                       {item.desc}

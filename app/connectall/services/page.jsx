@@ -16,7 +16,7 @@ export default function ConnectAllServicesPage() {
             ConnectALL <span className="text-[#ff403a]">Services</span>
           </h1>
 
-          <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/90 sm:mt-5 sm:text-lg md:text-[20px]">
+          <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/90 sm:mt-5 sm:text-lg md:text-[17px]">
             Connect your enterprise applications, automate workflows, and
             eliminate information silos with expert-driven ConnectALL services.
           </p>

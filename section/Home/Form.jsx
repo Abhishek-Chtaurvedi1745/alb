@@ -27,10 +27,10 @@ export default function ContactSection() {
           
          
           <div className="lg:col-span-5 flex flex-col justify-center h-full">
-            <h2 className="text-3xl md:text-[45px] font-semibold tracking-tight mb-6">
+            <h3 className="text-3xl md:text-[45px] font-semibold tracking-tight mb-6">
               Let's <span className="text-[#ff3b30]">Talk</span>
-            </h2>
-            <p className="text-[#FFFFFF] text-sm md:text-base leading-relaxed tracking-wide max-w-md mb-10">
+            </h3>
+            <p className="text-[#FFFFFF] text-sm md:text-sm font-normal leading-relaxed tracking-wide max-w-md mb-10">
               If you're looking to bring structure to your projects or improve how your teams operate, we'd be glad to understand your requirements and share how we can help.
             </p>
             
@@ -57,9 +57,9 @@ WhatsApp
 
           {/* Right Column: Let's Connect Form */}
           <div className="lg:col-span-7 w-full">
-            <h2 className="text-4xl md:text-[40px] font-bold tracking-tight mb-8">
+            <h3 className="text-4xl md:text-[40px] font-bold tracking-tight mb-8">
               Let's <span className="text-[#ff3b30]">Connect</span>
-            </h2>
+            </h3>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Row 1: Name & Mobile */}

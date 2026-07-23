@@ -56,9 +56,9 @@ function BlogSlider() {
     <section className="w-full overflow-hidden bg-black px-4 pb-10 pt-0">
       <div className="relative mx-auto max-w-7xl">
         <div className="mb-10 text-center">
-          <h2 className="text-3xl font-bold text-white md:text-[40px]">
+          <h3 className="text-3xl font-bold text-white md:text-[40px]">
             Our <span className="text-[#ff403a]">Blogs</span>
-          </h2>
+          </h3>
         </div>
 
         <button
@@ -77,6 +77,7 @@ function BlogSlider() {
 
         <div className="px-1 md:px-14">
           <Swiper
+            className="blog-swiper"
             modules={[Navigation, Autoplay, Pagination]}
             spaceBetween={24}
             slidesPerView={3}
@@ -96,28 +97,28 @@ function BlogSlider() {
             }}
           >
             {blogs.map((blog) => (
-              <SwiperSlide key={blog.slug}>
-                <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
-                  <div className="h-[220px] overflow-hidden">
+              <SwiperSlide key={blog.slug} className="!h-auto">
+                <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
+                  <div className="flex h-[220px] shrink-0 items-center justify-center overflow-hidden bg-[#0a0a0a]">
                     <img
                       src={blog.image}
                       alt={blog.title}
-                      className="h-full w-full object-cover transition-all duration-700 hover:scale-110"
+                      className="h-full w-full object-contain transition-all duration-700 hover:scale-105"
                     />
                   </div>
 
-                  <div className="p-5">
-                    <h3 className="mb-3 line-clamp-2 text-xl font-semibold text-white">
+                  <div className="flex flex-1 flex-col p-5">
+                    <h4 className="mb-3 line-clamp-2 min-h-[3.5rem] text-xl font-semibold text-white">
                       {blog.title}
-                    </h3>
+                    </h4>
 
-                    <p className="line-clamp-3 text-sm leading-relaxed text-white/70">
+                    <p className="line-clamp-3 flex-1 text-sm font-normal leading-relaxed text-white/70">
                       {blog.description}
                     </p>
 
                     <Link
                       href={`/blog/${blog.slug}`}
-                      className="mt-5 inline-block rounded-lg border border-[#ff403a] px-5 py-2 text-[#ff403a] transition-all duration-300 hover:bg-[#ff403a] hover:text-white"
+                      className="mt-5 inline-block w-fit rounded-lg border border-[#ff403a] px-5 py-2 text-[#ff403a] transition-all duration-300 hover:bg-[#ff403a] hover:text-white"
                     >
                       Read More
                     </Link>

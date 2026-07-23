@@ -56,14 +56,14 @@ function FAQSection() {
           {/* LEFT SIDE */}
           <div className="flex flex-col items-center lg:items-center">
 
-           <h2 className="text-white text-3xl md:text-[40px] font-semibold leading-tight mt-0 md:mt-0 mb-7">
+           <h3 className="text-white text-3xl md:text-[40px] font-semibold leading-tight mt-0 md:mt-0 mb-7">
   Frequently 
   <br className="hidden md:block" /> 
   
     Asked
   <br className="hidden md:block" />
   <span className="text-[#ff403a]"> Questions </span>
-</h2>
+</h3>
             {/* IMAGE */}
             <div className="mt-10 hidden md:block">
               <img
@@ -95,9 +95,9 @@ function FAQSection() {
                   className="w-full flex items-center justify-between text-left p-6"
                 >
 
-                  <h3 className="text-white text-[16px] md:text-xl font-medium pr-5">
+                  <h4 className="text-white text-[16px] md:text-xl font-medium pr-5">
                     {item.question}
-                  </h3>
+                  </h4>
 
                   <span className="text-white flex-shrink-0">
                     {active === index ? (
@@ -120,7 +120,7 @@ function FAQSection() {
                 >
                   <div className="overflow-hidden">
 
-                    <p className="text-[#FFFFFF] text-[12px] md:text-[14px] leading-relaxed px-6 pb-6 text-sm md:text-base">
+                    <p className="text-[#FFFFFF] text-[12px] md:text-[16px] font-normal leading-relaxed px-6 pb-6 text-sm md:text-sm">
                       {item.answer}
                     </p>
 

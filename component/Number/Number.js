@@ -46,7 +46,7 @@ function Number() {
         {item.number}
       </h2>
 
-      <p className="text-[#ABB8C3] mt-0 lg:-mt-4  text-[14px] lg:text-[20px]">
+      <p className="text-[#ABB8C3] mt-0 lg:-mt-4  text-[13px] lg:text-[17px]">
         {item.title}
       </p>
     </div>

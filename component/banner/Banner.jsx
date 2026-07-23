@@ -1,30 +1,43 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const banners = [
   {
     src: "/images/banner-1-pmo-operations.png",
     alt: "Meaningful & Secure AI for Smarter PMO Operations",
-    width: 1617,
-    height: 512,
+    width: 3234,
+    height: 1024,
+    cta: "Get my AI Readiness Report",
+    ctaLeft: "5.63%",
+    ctaTop: "72.07%",
   },
   {
     src: "/images/banner-2-trozai.png",
     alt: "TrozAI – An AI Platform That Works within Your Enterprise Ecosystem",
-    width: 1617,
-    height: 512,
+    width: 3234,
+    height: 1024,
+    cta: "Request a Free Demo",
+    ctaLeft: "7.11%",
+    ctaTop: "77.73%",
   },
   {
     src: "/images/banner-3-strategic-engine.png",
     alt: "Transform Your PMO into a Strategic Engine",
-    width: 1617,
-    height: 512,
+    width: 3234,
+    height: 1024,
+    cta: "Get my Trailored Roadmap",
+    ctaLeft: "6.62%",
+    ctaTop: "72.07%",
   },
   {
     src: "/images/banner-4-orchestrate.png",
     alt: "Orchestrate complex enterprise workflows with intelligent automation",
-    width: 1617,
-    height: 512,
+    width: 3234,
+    height: 1024,
+    cta: "Book a Call",
+    ctaLeft: "6.62%",
+    ctaTop: "71.09%",
   },
 ];
 
@@ -63,10 +76,10 @@ export default function BannerSlider() {
         {banners.map((banner, index) => (
           <div
             key={banner.src}
-            className="w-full h-full flex-shrink-0"
+            className="relative w-full h-full flex-shrink-0"
           >
             <img
-              src={banner.src}
+              src={`${banner.src}?v=hq2`}
               alt={banner.alt}
               width={banner.width}
               height={banner.height}
@@ -74,6 +87,24 @@ export default function BannerSlider() {
               fetchPriority={index === 0 ? "high" : "auto"}
               className="w-full h-full object-cover"
             />
+            <Link
+              href="/contact-us"
+              className="absolute z-10 inline-flex items-center justify-center whitespace-nowrap bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90"
+              style={{
+                left: banner.ctaLeft,
+                top: banner.ctaTop,
+                fontFamily: "Arial, Helvetica, sans-serif",
+                fontSize: "clamp(9px, 1.35vw, 22px)",
+                padding:
+                  "clamp(5px, 0.85vw, 13px) clamp(12px, 1.7vw, 28px)",
+                borderRadius: "9999px",
+                letterSpacing: "0.01em",
+                lineHeight: 1.15,
+                WebkitFontSmoothing: "antialiased",
+              }}
+            >
+              {banner.cta}
+            </Link>
           </div>
         ))}
       </div>

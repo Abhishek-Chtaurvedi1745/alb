@@ -8,10 +8,10 @@ export default function ConnectAllServicesGrid({
   return (
     <section className={`bg-black py-16 px-6 ${className}`}>
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-8 text-center text-3xl font-semibold text-white md:text-[40px]">
+        <h3 className="mb-8 text-center text-3xl font-semibold text-white md:text-[40px]">
           Comprehensive ConnectALL{" "}
           <span className="text-[#FF403A]">Services</span>
-        </h2>
+        </h3>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
           {connectAllServices.map((service, index) => {
@@ -32,7 +32,7 @@ export default function ConnectAllServicesGrid({
                   alt=""
                   className="transition-transform duration-300 group-hover:scale-110"
                 />
-                <p className="max-w-[140px] text-[20px] leading-snug text-white transition-colors group-hover:text-[#FF403A] md:text-[22px]">
+                <p className="max-w-[140px] text-[17px] leading-snug text-white transition-colors group-hover:text-[#FF403A] md:text-[22px]">
                   {service.label}
                 </p>
               </Link>

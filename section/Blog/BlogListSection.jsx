@@ -25,7 +25,7 @@ export default function BlogListSection({
           <h1 className="text-3xl font-semibold text-white md:text-[45px]">
             {title}
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm text-white/70 md:text-base">
+          <p className="font-normal mx-auto mt-4 max-w-2xl text-sm text-white/70 md:text-sm">
             {subtitle}
           </p>
           <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-transparent via-[#FF403A] to-transparent" />
@@ -36,7 +36,7 @@ export default function BlogListSection({
           activeSlug={activeCategory}
         />
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3">
           {visiblePosts.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}

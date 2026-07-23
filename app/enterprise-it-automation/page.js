@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import FAQSection from '../../component/Faq/Faqsection';
 import IndustriesServed from '../../section/Automation/IndustriesServed';
 
@@ -63,41 +64,42 @@ function page() {
   return (
     <div className="bg-black text-white">
       {/* Hero */}
-      <section className="mt-[83px]">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center">
-          <div className="px-6 py-16 sm:px-8 lg:px-12">
-            <h1 className="text-3xl md:text-[50px] font-bold leading-tight">
-              Enterprise IT{" "}
-              <span className="text-[#FF403A]">Automation</span>
-            </h1>
+      <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
+        <img
+          src="/images/enterprise-it-automation-hero.png?v=7"
+          alt="Enterprise IT Automation"
+          className="absolute inset-0 h-full w-full object-cover object-[center_68%]"
+        />
 
-            <button className="cursor-pointer mt-9 bg-[#FF403A] transition px-6 py-3 rounded-md font-semibold">
-              Request a free demo
-            </button>
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
 
-          <div className="h-full">
-            <img
-              src="/images/ea.png"
-              alt="Enterprise IT Automation"
-              className="w-full h-full object-cover"
-            />
-          </div>
+        <div className="relative z-10 flex h-full flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
+          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+            Enterprise IT{" "}
+            <span className="text-[#FF403A]">Automation</span>
+          </h1>
+
+          <Link
+            href="/contact-us"
+            className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]"
+          >
+            Talk to our team
+          </Link>
         </div>
       </section>
 
       {/* Workload Automation */}
       <section>
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-          <h2 className="text-3xl md:text-[40px] font-semibold leading-tight">
+          <h3 className="text-3xl md:text-[40px] font-semibold leading-tight">
             Workload Automation
-          </h2>
-
-          <h3 className="mt-3 text-2xl md:text-[40px] font-semibold text-[#FF403A]">
-            Bridging IT Operations with Business Goals
           </h3>
 
-          <p className="mt-5 max-w-5xl text-[15px] md:text-[16px] leading-7 text-gray-300">
+          <h4 className="mt-3 text-2xl md:text-[40px] font-semibold text-[#FF403A]">
+            Bridging IT Operations with Business Goals
+          </h4>
+
+          <p className="font-normal mt-5 max-w-5xl text-[13px] md:text-[16px] leading-7 text-gray-300">
             Workload Automation (WA) redefines business operations by automating,
             scheduling, and executing workflows, processes, and transactions without
             human intervention. This powerful automation platform aligns IT operations
@@ -108,10 +110,10 @@ function page() {
 
           <div className="mt-12 grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-[35px] font-semibold leading-tight">
+              <h3 className="text-3xl md:text-[35px] font-semibold leading-tight">
                 What Workload Automation Brings to{" "}
                 <span className="text-[#FF403A]">Your Business</span>
-              </h2>
+              </h3>
 
               <div className="mt-8 space-y-5">
                 {[
@@ -154,7 +156,7 @@ function page() {
                       </svg>
                     </div>
 
-                    <p className="text-white font-regular leading-7 text-[18px]">
+                    <p className="text-white font-regular leading-7 text-[13px]">
                       <span className="font-semibold text-white">
                         {item.title}
                       </span>{" "}
@@ -175,13 +177,13 @@ function page() {
           </div>
 
           <div className="mt-12">
-            <h2 className="text-3xl md:text-[40px] font-semibold leading-tight">
+            <h3 className="text-3xl md:text-[40px] font-semibold leading-tight">
               Simplify Your IT Operations with Service Orchestration
               <br />
               and <span className="text-[#FF403A]">Automation Platforms (SOAPs)</span>
-            </h2>
+            </h3>
 
-            <p className="mt-6 text-base md:text-[20px] text-white leading-relaxed">
+            <p className="font-normal mt-6 text-sm md:text-[16px] text-white leading-relaxed">
               Service Orchestration simplifies the coordination of complex IT
               workflows across multiple domains with minimal manual intervention.
               Built on advanced IT Orchestration Software, SOAPs unify workflows
@@ -205,13 +207,13 @@ function page() {
           </div>
 
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-[38px] font-semibold leading-tight tracking-tight">
+            <h3 className="text-2xl sm:text-3xl md:text-[38px] font-semibold leading-tight tracking-tight">
               What Service Orchestration
               <br />
               <span className="text-[#FF403A] font-bold">
                 Brings to Your Business
               </span>
-            </h2>
+            </h3>
 
             <ul className="mt-8 space-y-6">
               {benefits.map((item, i) => (
@@ -231,7 +233,7 @@ function page() {
                     </svg>
                   </span>
 
-                  <p className="text-[14px] md:text-[18px] text-white leading-relaxed">
+                  <p className="font-normal text-[13px] md:text-[16px] text-white leading-relaxed">
                     <span className="font-regular text-white">
                       {item.title}
                     </span>{" "}
@@ -248,19 +250,19 @@ function page() {
       <section>
         <hr className="border-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
-          <h2 className="text-center text-2xl md:text-[45px] font-semibold leading-tight">
+          <h3 className="text-center text-2xl md:text-[45px] font-semibold leading-tight">
             Enterprise Automation Solutions{" "}
             <span className="text-[#FF403A]">We Support</span>
-          </h2>
+          </h3>
 
           <div className="mt-12 space-y-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-3xl md:text-[40px] font-semibold leading-snug">
+                <h4 className="text-3xl md:text-[40px] font-semibold leading-snug">
                   Broadcom{" "}
                   <span className="text-[#FF403A]">Automic Automation</span>
-                </h3>
-                <p className="mt-4 text-[18px] text-white leading-relaxed">
+                </h4>
+                <p className="font-normal mt-4 text-[13px] text-white leading-relaxed">
                   Broadcom Automic Automation offers cutting-edge solutions for
                   Workload Automation, Automated Job Scheduling, and Enterprise
                   Automation. With features like Automic Job Scheduling, Automic
@@ -283,11 +285,11 @@ function page() {
 
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-3xl md:text-[40px] font-semibold leading-snug">
+                <h4 className="text-3xl md:text-[40px] font-semibold leading-snug">
                   Stonebranch{" "}
                   <span className="text-[#FF403A]">Universal Automation Center (UAC)</span>
-                </h3>
-                <p className="mt-4 text-[18px] text-white leading-relaxed">
+                </h4>
+                <p className="font-normal mt-4 text-[13px] text-white leading-relaxed">
                   Stonebranch UAC is a versatile tool for Job Scheduling Software
                   and IT workflow automation. It supports Stonebranch Workflow
                   Orchestration, Stonebranch Managed File Transfer, and
@@ -315,13 +317,13 @@ function page() {
         <hr className="border-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16">
           <div className="text-center">
-            <h2 className="text-3xl md:text-[40px] font-semibold leading-tight">
+            <h3 className="text-3xl md:text-[40px] font-semibold leading-tight">
               Transformative Benefits of Implementing
               <br />
               <span className="text-[#FF403A]">Automation</span>
-            </h2>
+            </h3>
 
-            <p className="mt-6 max-w-5xl mx-auto text-base md:text-[20px] text-white/80 leading-relaxed">
+            <p className="font-normal mt-6 max-w-5xl mx-auto text-sm md:text-[16px] text-white/80 leading-relaxed">
               Implementing tools like Broadcom Automic Automation and Stonebranch UAC enables organizations to optimize
               IT processes while aligning them with business objectives. Key benefits include:
             </p>
@@ -354,7 +356,7 @@ function page() {
                     </svg>
                   </span>
 
-                  <p className="text-[14px] md:text-[18px] text-white leading-relaxed font-regular">
+                  <p className="text-[13px] md:text-[16px] text-white leading-relaxed font-regular">
                     <span className="font-semibold text-white">
                       {item.title}
                     </span>{" "}

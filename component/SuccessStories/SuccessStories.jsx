@@ -1,6 +1,6 @@
 export default function SuccessStories({
   stories,
-  eyebrow = "Proven Impact",
+  eyebrow = "",
   title = "Success",
   titleAccent = "Stories",
 }) {
@@ -13,9 +13,11 @@ export default function SuccessStories({
 
       <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-20 lg:px-12">
         <div className="mb-12 flex flex-col items-center gap-4 text-center md:mb-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#FF403A]">
-            {eyebrow}
-          </p>
+          {eyebrow ? (
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#FF403A]">
+              {eyebrow}
+            </p>
+          ) : null}
           <h2 className="text-3xl font-semibold leading-tight md:text-[42px]">
             {title}{" "}
             <span className="text-[#FF403A]">{titleAccent}</span>

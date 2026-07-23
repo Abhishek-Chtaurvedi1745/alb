@@ -16,7 +16,7 @@ export default function StonebranchServicesPage() {
             Stonebranch <span className="text-[#ff403a]">Services</span>
           </h1>
 
-          <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/90 sm:mt-5 sm:text-lg md:text-[20px]">
+          <p className="mt-4 max-w-4xl text-base leading-relaxed text-white/90 sm:mt-5 sm:text-lg md:text-[17px]">
             Leveraging our extensive experience in designing and implementing
             Stonebranch Automation solutions, we help organizations streamline
             enterprise workload automation through industry best practices and
