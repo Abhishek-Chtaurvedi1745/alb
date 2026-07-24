@@ -76,80 +76,114 @@ function page() {
       </section>
 
       {/* Our Mission & Our Approach */}
-      <section className="w-full overflow-hidden bg-black px-4 pb-14 pt-8 md:pb-20 md:pt-10">
+      <section className="w-full overflow-hidden bg-black px-4 pb-16 pt-6 md:pb-24 md:pt-8">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-8 text-center md:mb-12">
-            <h3 className="text-3xl font-semibold leading-[1.2] text-white md:text-[42px]">
+          <div className="mb-10 md:mb-14">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#FF403A]">
+              What drives us
+            </p>
+            <h3 className="max-w-3xl text-3xl font-semibold leading-[1.15] text-white md:text-[42px]">
               Our Mission &{" "}
               <span className="text-[#FF403A]">Our Approach</span>
             </h3>
           </div>
 
-          <div className="flex w-full flex-col gap-6 md:gap-8">
-            {/* Mission card */}
-            <article className="group relative overflow-hidden rounded-2xl border border-[#FF403A]/50 bg-[#080808] transition-all duration-500 hover:border-[#FF403A]">
-              <div className="absolute inset-y-0 left-0 w-[3px] bg-[#FF403A]" />
-              <div className="relative flex flex-col gap-5 p-6 pl-7 md:flex-row md:items-start md:gap-8 md:p-8 md:pl-10">
-                <div className="flex shrink-0 items-center gap-4 md:flex-col md:items-start md:gap-3">
-                  <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full bg-[#ECECEC] transition-transform duration-500 group-hover:scale-105 md:h-[96px] md:w-[96px]">
-                    <img
-                      src="images/ma.svg"
-                      alt=""
-                      className="h-10 w-10 object-contain md:h-12 md:w-12"
-                    />
-                  </div>
-                  <h4 className="text-[22px] font-semibold leading-none text-white md:text-[28px]">
-                    Our
-                    <span className="text-[#FF403A]">{" "}Mission</span>
-                  </h4>
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-12 lg:gap-6">
+            {/* Mission — statement panel */}
+            <article className="relative overflow-hidden rounded-[28px] border border-[#FF403A]/40 bg-[#0c0c0c] lg:col-span-5">
+              <div className="absolute left-0 top-0 h-full w-1.5 bg-[#FF403A]" />
+              <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full border border-[#FF403A]/15" />
+              <div className="absolute -bottom-10 right-8 h-28 w-28 rounded-full border border-[#FF403A]/10" />
+
+              <div className="relative flex h-full flex-col p-7 md:p-9 lg:p-10">
+                <div className="mb-8 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white md:h-[100px] md:w-[100px]">
+                  <img
+                    src="/images/ma.svg"
+                    alt=""
+                    className="h-11 w-11 object-contain md:h-12 md:w-12"
+                  />
                 </div>
 
-                <p className="max-w-3xl text-left text-[13px] font-normal leading-[1.7] text-[#D5D5D5] md:pt-2 md:text-[15px]">
+                <h4 className="mb-6 text-[28px] font-semibold leading-none text-white md:text-[34px]">
+                  Our <span className="text-[#FF403A]">Mission</span>
+                </h4>
+
+                <p className="text-[14px] font-normal leading-[1.75] text-[#D8D8D8] md:text-[16px]">
                   To deliver exceptional services and solutions that empower
                   organizations to optimize the value extracted from their
                   technology investments — helping them achieve business
                   objectives faster, with a skilled team and well-defined
                   delivery processes.
                 </p>
+
+                <div className="mt-auto pt-10">
+                  <div className="h-px w-16 bg-[#FF403A]" />
+                  <p className="mt-4 text-sm text-white/55">
+                    Value from every technology investment.
+                  </p>
+                </div>
               </div>
             </article>
 
-            {/* Approach card */}
-            <article className="group relative overflow-hidden rounded-2xl border border-[#FF403A]/50 bg-[#080808] transition-all duration-500 hover:border-[#FF403A]">
-              <div className="absolute inset-y-0 left-0 w-[3px] bg-[#FF403A]" />
-              <div className="relative flex flex-col gap-5 p-6 pl-7 md:flex-row md:items-start md:gap-8 md:p-8 md:pl-10">
-                <div className="flex shrink-0 items-center gap-4 md:flex-col md:items-start md:gap-3">
-                  <div className="relative flex h-[76px] w-[76px] items-center justify-center rounded-full bg-[#ECECEC] transition-transform duration-500 group-hover:scale-105 md:h-[96px] md:w-[96px]">
+            {/* Approach — three pillars */}
+            <article className="rounded-[28px] border border-white/10 bg-[#0c0c0c] lg:col-span-7">
+              <div className="border-b border-white/10 px-7 py-7 md:px-9 md:py-8">
+                <div className="flex flex-wrap items-center gap-5">
+                  <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-white md:h-[84px] md:w-[84px]">
                     <img
-                      src="images/ma1.svg"
+                      src="/images/ma1.svg"
                       alt=""
-                      className="h-10 w-10 object-contain md:h-12 md:w-12"
+                      className="h-9 w-9 object-contain md:h-10 md:w-10"
                     />
                   </div>
-                  <h4 className="text-[22px] font-semibold leading-none text-white md:text-[28px]">
-                    Our
-                    <span className="text-[#FF403A]">{" "}Approach</span>
-                  </h4>
+                  <div>
+                    <h4 className="text-[28px] font-semibold leading-none text-white md:text-[34px]">
+                      Our <span className="text-[#FF403A]">Approach</span>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3">
+                <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r md:p-7">
+                  <span className="mb-4 block text-[28px] font-semibold leading-none text-[#FF403A]/80">
+                    01
+                  </span>
+                  <h5 className="mb-3 text-base font-semibold text-white">
+                    Align people & process
+                  </h5>
+                  <p className="text-[13px] font-normal leading-[1.7] text-[#C8C8C8] md:text-[14px]">
+                    We don&apos;t implement software in isolation. We understand
+                    your organization&apos;s objectives, processes, and people —
+                    and build solutions that align all three.
+                  </p>
                 </div>
 
-                <div className="max-w-3xl space-y-3 text-left md:pt-2">
-                  <p className="text-[13px] font-normal leading-[1.7] text-[#D5D5D5] md:text-[15px]">
-                    We don’t implement software in isolation. We work to
-                    understand your organization’s objectives, processes, and
-                    people — and build solutions that align all three.
+                <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r md:p-7">
+                  <span className="mb-4 block text-[28px] font-semibold leading-none text-[#FF403A]/80">
+                    02
+                  </span>
+                  <h5 className="mb-3 text-base font-semibold text-white">
+                    Discover before decide
+                  </h5>
+                  <p className="text-[13px] font-normal leading-[1.7] text-[#C8C8C8] md:text-[14px]">
+                    Every engagement begins with thorough discovery of your
+                    business context. Recommendations stay grounded in technical
+                    expertise and real-world delivery experience.
                   </p>
+                </div>
 
-                  <p className="text-[13px] font-normal leading-[1.7] text-[#D5D5D5] md:text-[15px]">
-                    Every engagement begins with a thorough discovery of your
-                    business context, and every recommendation is grounded in
-                    both technical expertise and real-world delivery experience.
-                  </p>
-
-                  <p className="text-[13px] font-normal leading-[1.7] text-[#D5D5D5] md:text-[15px]">
-                    Whether it’s a new implementation, enhancement, ongoing
-                    support, or strategic consulting for a key decision — we
-                    bring the right combination of product depth and business
-                    acumen to the table.
+                <div className="p-6 md:p-7">
+                  <span className="mb-4 block text-[28px] font-semibold leading-none text-[#FF403A]/80">
+                    03
+                  </span>
+                  <h5 className="mb-3 text-base font-semibold text-white">
+                    Depth with judgment
+                  </h5>
+                  <p className="text-[13px] font-normal leading-[1.7] text-[#C8C8C8] md:text-[14px]">
+                    Implementation, enhancement, support, or strategic
+                    consulting — we bring the right mix of product depth and
+                    business acumen to every decision.
                   </p>
                 </div>
               </div>

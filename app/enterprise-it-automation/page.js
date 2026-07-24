@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import BookACallButton from '@/component/BookACall/BookACallButton'
 import FAQSection from '../../component/Faq/Faqsection';
 import IndustriesServed from '../../section/Automation/IndustriesServed';
 
@@ -79,12 +79,9 @@ function page() {
             <span className="text-[#FF403A]">Automation</span>
           </h1>
 
-          <Link
-            href="/contact-us"
-            className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]"
-          >
+          <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
             Talk to our team
-          </Link>
+          </BookACallButton>
         </div>
       </section>
 

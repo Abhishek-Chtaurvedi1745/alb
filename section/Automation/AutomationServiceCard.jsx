@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 
 export default function AutomationServiceCard({ service }) {
   return (
@@ -28,12 +29,9 @@ export default function AutomationServiceCard({ service }) {
             Read More
           </Link>
 
-          <Link
-            href={`/contact-us?service=${service.slug}`}
-            className="text-sm font-semibold text-white transition-opacity hover:opacity-80 sm:text-base"
-          >
+          <BookACallButton className="text-sm font-semibold text-white transition-opacity hover:opacity-80 sm:text-base">
             Request Service
-          </Link>
+          </BookACallButton>
         </div>
       </div>
     </article>

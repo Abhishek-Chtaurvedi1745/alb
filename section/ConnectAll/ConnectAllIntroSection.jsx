@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 import { useState } from "react";
 import { overviewParagraphs } from "./connectAllData";
 
@@ -43,12 +43,9 @@ export default function ConnectAllIntroSection() {
           </button>
         )}
 
-        <Link
-          href="/contact-us"
-          className="mt-10 inline-block rounded-xl bg-[#FF403A] px-8 py-4 font-semibold shadow-lg shadow-red-500/30 transition hover:opacity-90"
-        >
+        <BookACallButton className="mt-10 inline-block rounded-xl bg-[#FF403A] px-8 py-4 font-semibold shadow-lg shadow-red-500/30 transition hover:opacity-90">
           Get Free Consultation
-        </Link>
+        </BookACallButton>
       </div>
     </section>
   );

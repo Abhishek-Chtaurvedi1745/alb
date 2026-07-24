@@ -36,10 +36,41 @@
   }
 }
 
+.ai-flip-card {
+  perspective: 1200px;
+}
+
+.ai-flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ai-flip-card:hover .ai-flip-inner,
+.ai-flip-card:focus-within .ai-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.ai-flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.ai-flip-back {
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ai-hero-slide,
   .ai-hero-dots button.active::after {
     animation: none !important;
+    transition: none !important;
+  }
+
+  .ai-flip-inner {
     transition: none !important;
   }
 }

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import BookACallButton from "@/component/BookACall/BookACallButton";
 
-export default function ConnectAllServiceCard({ service }) {
+export default function AutomicServiceCard({ service }) {
   return (
     <article className="group relative min-h-[280px] overflow-hidden rounded-2xl border border-white/10 sm:min-h-[320px] md:min-h-[360px]">
       <img

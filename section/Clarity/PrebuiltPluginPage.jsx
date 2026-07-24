@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Check } from "lucide-react";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 import SolutionHero from "@/section/Automation/SolutionHero";
 import { prebuiltPlugins } from "@/section/Clarity/prebuiltPluginsData";
 
@@ -54,7 +55,6 @@ export default function PrebuiltPluginPage({ page }) {
         titleAccent={page.titleAccent}
         image={page.heroImage}
         imageAlt={page.heroImageAlt}
-        ctaHref={`/contact-us?plugin=${page.slug}`}
       />
 
       <section className="px-4 pt-4 sm:px-6">
@@ -112,12 +112,9 @@ export default function PrebuiltPluginPage({ page }) {
           )}
 
           <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:items-center">
-            <Link
-              href={`/contact-us?plugin=${page.slug}`}
-              className="inline-flex items-center justify-center rounded-lg bg-[#ff403a] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#cc2f2a] sm:text-lg"
-            >
+            <BookACallButton className="inline-flex items-center justify-center rounded-lg bg-[#ff403a] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#cc2f2a] sm:text-lg">
               Request a free demo
-            </Link>
+            </BookACallButton>
             <Link
               href="/clarity"
               className="inline-flex items-center justify-center rounded-lg border border-white/30 px-7 py-3 text-base font-semibold text-white transition-colors hover:border-[#ff403a] hover:text-[#ff403a] sm:text-lg"

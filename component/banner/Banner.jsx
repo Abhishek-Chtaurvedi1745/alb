@@ -1,6 +1,8 @@
+"use client";
+
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 
 const banners = [
   {
@@ -41,6 +43,19 @@ const banners = [
   },
 ];
 
+const ctaStyle = {
+  fontFamily: "Arial, Helvetica, sans-serif",
+  fontSize: "clamp(9px, 1.35vw, 22px)",
+  padding: "clamp(5px, 0.85vw, 13px) clamp(12px, 1.7vw, 28px)",
+  borderRadius: "9999px",
+  letterSpacing: "0.01em",
+  lineHeight: 1.15,
+  WebkitFontSmoothing: "antialiased",
+};
+
+const ctaClassName =
+  "absolute z-10 inline-flex items-center justify-center whitespace-nowrap bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90";
+
 export default function BannerSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -66,7 +81,6 @@ export default function BannerSlider() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* Slider Track */}
       <div
         className="flex h-full transition-transform duration-700 ease-in-out"
         style={{
@@ -76,7 +90,7 @@ export default function BannerSlider() {
         {banners.map((banner, index) => (
           <div
             key={banner.src}
-            className="relative w-full h-full flex-shrink-0"
+            className="relative h-full w-full flex-shrink-0"
           >
             <img
               src={`${banner.src}?v=hq2`}
@@ -85,56 +99,43 @@ export default function BannerSlider() {
               height={banner.height}
               decoding="async"
               fetchPriority={index === 0 ? "high" : "auto"}
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
-            <Link
-              href="/contact-us"
-              className="absolute z-10 inline-flex items-center justify-center whitespace-nowrap bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90"
+            <BookACallButton
+              className={ctaClassName}
               style={{
                 left: banner.ctaLeft,
                 top: banner.ctaTop,
-                fontFamily: "Arial, Helvetica, sans-serif",
-                fontSize: "clamp(9px, 1.35vw, 22px)",
-                padding:
-                  "clamp(5px, 0.85vw, 13px) clamp(12px, 1.7vw, 28px)",
-                borderRadius: "9999px",
-                letterSpacing: "0.01em",
-                lineHeight: 1.15,
-                WebkitFontSmoothing: "antialiased",
+                ...ctaStyle,
               }}
             >
               {banner.cta}
-            </Link>
+            </BookACallButton>
           </div>
         ))}
       </div>
 
-      {/* Prev */}
       <button
         onClick={prevSlide}
-        className="hidden cursor-pointer md:block p-[10px] absolute left-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/50 text-white flex items-center justify-center"
+        className="absolute top-1/2 left-5 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-black/50 p-[10px] text-white md:flex"
       >
         <ChevronLeft />
       </button>
 
-      {/* Next */}
       <button
         onClick={nextSlide}
-        className="hidden cursor-pointer md:block p-[10px] absolute right-5 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/50 text-white flex items-center justify-center"
+        className="absolute top-1/2 right-5 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-black/50 p-[10px] text-white md:flex"
       >
         <ChevronRight />
       </button>
 
-      {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+      <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-2">
         {banners.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
             className={`h-3 w-3 rounded-full transition-all ${
-              current === index
-                ? "bg-[#ff403a]"
-                : "bg-white/50"
+              current === index ? "bg-[#ff403a]" : "bg-white/50"
             }`}
           />
         ))}

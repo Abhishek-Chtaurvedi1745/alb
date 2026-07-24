@@ -1,5 +1,6 @@
 "use client";
 import React from 'react'
+import BookACallButton from "@/component/BookACall/BookACallButton";
 import PPMBenefitHoverCard from "@/section/ProjectManagement/PPMBenefitHoverCard";
 import { ppmBenefits } from "@/section/ProjectManagement/ppmBenefitsData";
 import BlendedSectionImage from "@/component/Media/BlendedSectionImage";
@@ -114,32 +115,32 @@ function page() {
       </div>
     </section>
   
-    <section className="bg-black py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative z-0 overflow-hidden bg-black px-6 py-16">
+      <div className="mx-auto max-w-6xl">
 
         {/* Heading */}
-        <h3 className="text-white text-[32px] md:text-[40px] font-bold text-center mb-12 leading-tight">
+        <h3 className="mb-12 text-center text-[32px] font-bold leading-tight text-white md:text-[40px]">
           Engage with Albatroz{" "}
           <span className="text-[#FF403A]">for PPM Solutions</span>
         </h3>
 
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start">
 
           {/* ── Left: PPM Wheel ── */}
-      <div className='z-100'>
-  <img
-    src="/images/nbnew2.png"
-    alt="PPM Solutions"
-    className="rounded-full h-[300px] md:h-[500px]"
-  />
-</div>
+          <div className="relative shrink-0">
+            <img
+              src="/images/nbnew2.png"
+              alt="PPM Solutions"
+              className="h-[300px] rounded-full object-contain md:h-[480px]"
+            />
+          </div>
 
           {/* ── Right: Content ── */}
-          <div className="flex-1 flex flex-col gap-8 z-1000">
+          <div className="relative flex flex-1 flex-col gap-8">
 
             {/* Interactive PPM Demos */}
             <div>
-              <div className="flex items-center gap-3 mb-4">
+              <div className="mb-4 flex items-center gap-3">
                 <div className="relative flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#FF403A] to-[#d9322d] shadow-lg shadow-[#FF403A]/25">
                   <svg
                     className="h-5 w-5"
@@ -175,34 +176,34 @@ function page() {
                     <span className="absolute inset-0.5 rounded-full bg-[#FF403A]" />
                   </span>
                 </div>
-                <h4 className="text-white text-[30px] font-semibold">Interactive PPM Demos</h4>
+                <h4 className="text-[30px] font-semibold text-white">Interactive PPM Demos</h4>
               </div>
 
               {/* Tool logos */}
-              <div className="flex items-end gap-6 mb-5 pl-1">
+              <div className="mb-5 flex items-end gap-6 pl-1">
                 <div>
-                  <p className="text-white text-[26px] font-black leading-none tracking-tight">
-                    Clarity<sup className="text-[10px] font-normal align-super">™</sup>
+                  <p className="text-[26px] font-black leading-none tracking-tight text-white">
+                    Clarity<sup className="align-super text-[10px] font-normal">™</sup>
                   </p>
-                  <p className="text-white/50 text-[11px] mt-0.5">by Broadcom</p>
+                  <p className="mt-0.5 text-[11px] text-white/50">by Broadcom</p>
                 </div>
                 <div>
-                  <p className="text-white text-[26px] font-black leading-none tracking-tight">
-                    Rally<sup className="text-[10px] font-normal align-super">®</sup>
+                  <p className="text-[26px] font-black leading-none tracking-tight text-white">
+                    Rally<sup className="align-super text-[10px] font-normal">®</sup>
                   </p>
-                  <p className="text-white/50 text-[11px] mt-0.5">by Broadcom</p>
+                  <p className="mt-0.5 text-[11px] text-white/50">by Broadcom</p>
                 </div>
                 <div>
-                  <p className="text-white text-[26px] font-black leading-none tracking-tight">
+                  <p className="text-[26px] font-black leading-none tracking-tight text-white">
                     ConnectALL
                   </p>
-                  <p className="text-white/50 text-[11px] mt-0.5">by Broadcom</p>
+                  <p className="mt-0.5 text-[11px] text-white/50">by Broadcom</p>
                 </div>
               </div>
 
-              <button className="bg-[#FF403A] hover:bg-[#cc2f2a] transition-colors duration-200 text-white text-[20px] font-semibold px-7 py-2.5 rounded-sm">
+              <BookACallButton className="rounded-sm bg-[#FF403A] px-7 py-2.5 text-[20px] font-semibold text-white transition-colors duration-200 hover:bg-[#cc2f2a]">
                 Request a Demo
-              </button>
+              </BookACallButton>
             </div>
 
             {/* Divider */}
@@ -261,9 +262,9 @@ function page() {
                 and maximize the value of your PPM investments.
               </p>
 
-              <button className="bg-[#FF403A] hover:bg-[#cc2f2a] transition-colors duration-200 text-white text-[20px] font-semibold px-7 py-2.5 rounded-sm">
+              <BookACallButton className="bg-[#FF403A] hover:bg-[#cc2f2a] transition-colors duration-200 text-white text-[20px] font-semibold px-7 py-2.5 rounded-sm">
                 Book Free Consultation
-              </button>
+              </BookACallButton>
             </div>
 
           </div>
@@ -442,6 +443,10 @@ across an organization to deliver value to customers efficiently. It encompasses
 
         </div>
 
+        <BookACallButton className="mt-8 bg-[#FF403A] hover:bg-[#cc2f2a] transition-colors duration-200 text-white text-[18px] md:text-[20px] font-semibold px-7 py-2.5 rounded-sm">
+          Book Free Consultation
+        </BookACallButton>
+
       </div>
 
       <div className="relative order-1 lg:order-2">
@@ -461,9 +466,9 @@ across an organization to deliver value to customers efficiently. It encompasses
         
         {/* Top Section: Button aligned right */}
        <div className="flex mb-0" style={{ justifyContent: 'center' }}>
-          <button className="bg-[#FF3B30] hover:bg-[#E03126] text-white font-semibold py-3 px-8 text-lg rounded-sm transition-colors duration-200 shadow-lg cursor-pointer">
+          <BookACallButton className="bg-[#FF3B30] hover:bg-[#E03126] text-white font-semibold py-3 px-8 text-lg rounded-sm transition-colors duration-200 shadow-lg cursor-pointer">
             Book free Consultation
-          </button>
+          </BookACallButton>
         </div>
 
         {/* Line divider directly beneath the button */}

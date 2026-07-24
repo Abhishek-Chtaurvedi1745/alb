@@ -47,14 +47,11 @@ const otherLinks = [
   { label: "Enterprise IT Automation", href: "/enterprise-it-automation" },
   // { label: "Project Management as a Service", href: "/project-management" },
   { label: "Clarity", href: "/clarity" },
-  { label: "Clarity Services", href: "/clarity/services" },
   { label: "Rally", href: "/rally" },
   { label: "ConnectALL", href: "/connectall" },
-  { label: "ConnectALL Services", href: "/connectall/services" },
   // { label: "Enterprise IT Automation", href: "/project" },
   { label: "Automic Automation", href: "/automic-automation" },
   { label: "Stonebranch UAC", href: "/stonebranch" },
-  { label: "Stonebranch Services", href: "/stonebranch/services" },
 ];
 
 function FooterLink({ href, children }) {

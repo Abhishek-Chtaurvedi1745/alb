@@ -16,13 +16,13 @@ export const homeTestimonials = [
     image: "/images/paulo_naddeo.png",
     text: `Working with Albatroz has been an outstanding experience. Their WLA team brings a strong combination of expertise, reliability, and a clear commitment to excellence across diverse regions. Their deep understanding of our product and focus on quality have played a key role in expanding our service reach, enabling more consistent support for our customers, and extending our global service coverage. We truly value this partnership and confidently recommend Albatroz to any organization looking for a dependable, results-oriented partner.`,
     name: "Paulo Naddeo",
-    role: "CDO - Chief Delivery Officer",
+    role: "CDO - Chief Delivery Officer at Stonebranch",
   },
   {
     image: "/images/nagesh_jaiswal.png",
     text: `As a Broadcom Expert Advantage Partner, Albatroz Solutions consistently demonstrates exceptional expertise in our ValueOps and Automation products. Their deep technical knowledge and highly collaborative approach make them an invaluable extension of our Agile Operations Division. We are proud to partner with Albatroz to deliver transformative enterprise solutions and drive outstanding outcomes for our joint customers.`,
     name: "Nagesh Jaiswal",
-    role: "Partner Leader | Agile Operations Division",
+    role: "Partner Leader | Agile Operations Division at Broadcom",
     region: "APAC, META & Eastern European Territories",
   },
 ];

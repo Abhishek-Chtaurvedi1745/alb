@@ -1,5 +1,4 @@
-import Link from "next/link";
-import GetStartedLink from "@/component/GetStartedLink";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 import FAQSection from "@/component/Faq/Faqsection";
 import SuccessStories from "@/component/SuccessStories/SuccessStories";
 import FunctionalityGrid from "@/section/Automation/FunctionalityGrid";
@@ -18,29 +17,24 @@ export const metadata = {
 export default function AutomicAutomationPage() {
   return (
     <div className="bg-black">
-      <section className="bg-[#000000] px-6 py-16 mt-[83px]">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 md:flex-row">
-          <div className="w-full">
-            <img
-              src="/images/Automic-by-broadcom.webp"
-              alt="Automic by Broadcom"
-              className="h-auto w-auto max-w-[324px]"
-            />
-            <Link
-              href="/contact-us"
-              className="mt-[28px] inline-block cursor-pointer rounded-lg bg-[#FF403A] px-6 py-3 text-[25px] font-semibold text-[#FFFFFF] transition hover:opacity-90"
-            >
-              Request a free demo
-            </Link>
-          </div>
+      <section className="relative mt-20 h-[300px] overflow-hidden bg-black md:h-[450px]">
+        <img
+          src="/images/automic-hero.png"
+          alt="Automic by Broadcom"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
 
-          <div className="flex w-full justify-center">
-            <img
-              src="/images/ea.png"
-              alt="Automic automation platform"
-              className="w-full rounded-xl shadow-lg"
-            />
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
+
+        <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
+          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+            Automic{" "}
+            <span className="text-[#FF403A]">by Broadcom</span>
+          </h1>
+
+          <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
+            Get started with Automic
+          </BookACallButton>
         </div>
       </section>
 
@@ -55,11 +49,6 @@ export default function AutomicAutomationPage() {
       <AutomicServicesGrid />
 
       <SuccessStories stories={automicSuccessStories} />
-      <section className="bg-black px-6 py-16 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <GetStartedLink product="Automic" />
-        </div>
-      </section>
       <FAQSection faqs={automicFaqData} />
     </div>
   );

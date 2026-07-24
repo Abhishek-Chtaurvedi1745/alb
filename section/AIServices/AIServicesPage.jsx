@@ -1,19 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import GetStartedLink from "@/component/GetStartedLink";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 import { useInView } from "react-intersection-observer";
 import { aiServicesPageData } from "./aiServicesPageData";
 
 const SLIDE_INTERVAL = 6500;
 const HERO_IMAGE = "/images/ai.png";
-
-const badgeStyles = {
-  green: "bg-green-500/10 text-green-400",
-  amber: "bg-amber-500/10 text-amber-400",
-  blue: "bg-blue-500/10 text-blue-400",
-};
 
 function RichHtml({ html, className = "", as: Tag = "span" }) {
   const safe = html
@@ -55,120 +48,81 @@ function SectionHeading({ titleHtml, subtitle, className = "", centered = true }
   );
 }
 
-function PanelVisual({ visual }) {
-  if (!visual) return null;
-
-  const shell =
-    "relative overflow-hidden rounded-2xl border border-[#FF403A]/20 bg-[#0a0a0a] p-5 sm:p-6";
-
-  if (visual.type === "chat") {
-    return (
-      <div className={shell}>
-        <div className="ml-auto max-w-[92%] rounded-xl border border-[#FF403A]/25 bg-[#FF403A]/10 px-3 py-2.5 text-sm text-white md:text-[16px]">
-          {visual.user}
-        </div>
-        <div className="mt-2 max-w-[92%] rounded-xl border border-white/10 bg-black px-3 py-2.5 text-sm text-white/75 md:text-[16px]">
-          {visual.ai}
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className={shell}>
-      {visual.rows?.map((row) => (
-        <div
-          key={`${row.icon}-${row.label}`}
-          className="mb-2 flex items-center gap-2.5 rounded-lg border border-white/10 bg-black px-3 py-2.5 text-sm text-white/80 last:mb-0 md:text-[16px]"
-        >
-          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#FF403A]/15 text-[11px] text-[#FF403A]">
-            {row.icon}
-          </span>
-          <span className="min-w-0 flex-1 truncate">{row.label}</span>
-          {row.badge ? (
-            <span
-              className={`shrink-0 rounded px-1.5 py-0.5 font-mono text-[10px] ${
-                badgeStyles[row.badgeVariant] || "bg-[#FF403A]/10 text-[#FF403A]"
-              }`}
-            >
-              {row.badge}
-            </span>
-          ) : null}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-function CapabilityRow({ panel, index }) {
+function CapabilityCard({ panel, index }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
-  const reversed = index % 2 === 1;
 
   return (
     <article
       ref={ref}
-      className={`grid items-center gap-8 border-t border-white/10 py-10 transition-all duration-700 first:border-t-0 first:pt-0 lg:grid-cols-2 lg:gap-12 lg:py-12 ${
+      className={`flex h-full flex-col rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 transition-all duration-700 hover:border-[#FF403A]/40 ${
         inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
-      style={{ transitionDelay: `${(index % 3) * 100}ms` }}
+      style={{ transitionDelay: `${index * 80}ms` }}
     >
-      <div className={reversed ? "lg:order-2" : ""}>
-        <h4 className="text-xl font-semibold leading-snug text-white md:text-2xl">
-          {panel.title}
-        </h4>
-        <p className="font-normal mt-4 text-sm leading-relaxed text-white/90 md:text-[16px]">
-          {panel.desc}
-        </p>
-        <div className="mt-5 flex flex-wrap gap-2">
-          {panel.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-md border border-white/10 bg-[#111111] px-2.5 py-1 text-xs text-white/60"
-            >
+      <h4 className="mb-4 text-xl font-semibold leading-snug text-white md:text-2xl">
+        {panel.title}
+      </h4>
+
+      <p className="mb-5 text-sm leading-relaxed text-white/90 md:text-base">
+        {panel.desc}
+      </p>
+
+      <ul className="mt-auto space-y-3">
+        {panel.tags.map((tag) => (
+          <li key={tag} className="flex items-start gap-2.5">
+            <img src="/images/crt.svg" alt="" className="mt-1 h-4 w-4 shrink-0" />
+            <span className="text-sm leading-relaxed text-white/90 md:text-base">
               {tag}
             </span>
-          ))}
-        </div>
-      </div>
-      <div className={reversed ? "lg:order-1" : ""}>
-        <PanelVisual visual={panel.visual} />
-      </div>
+          </li>
+        ))}
+      </ul>
     </article>
   );
 }
 
 function TierCard({ tier, index }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const layerLabels = ["Layer One", "Layer Two", "Layer Three"];
+  const frontLabel = layerLabels[index] || `Layer ${index + 1}`;
 
   return (
     <article
       ref={ref}
-      className={`group relative transition-all duration-700 ${
+      className={`ai-flip-card h-[360px] transition-all duration-700 sm:h-[380px] ${
         inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       }`}
       style={{ transitionDelay: `${index * 120}ms` }}
     >
-      <div className="relative flex h-full flex-col rounded-2xl border border-[#FF403A]/25 bg-[#0a0a0a] p-6 sm:p-7">
-        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#FF403A]">
-          {tier.kicker}
-        </p>
-        <RichHtml
-          html={tier.titleHtml}
-          className="mb-3 text-xl font-semibold text-white md:text-2xl"
-          as="h4"
-        />
-        <p className="font-normal mb-5 flex-1 text-sm leading-relaxed text-white/90 md:text-[16px]">
-          {tier.desc}
-        </p>
-        <div className="flex flex-wrap gap-2">
-          {tier.skills.map((skill) => (
-            <span
-              key={skill}
-              className="rounded-md border border-white/10 bg-[#111111] px-2.5 py-1 text-xs text-white/60"
-            >
-              {skill}
-            </span>
-          ))}
+      <div className="ai-flip-inner h-full w-full">
+        <div className="ai-flip-face ai-flip-front flex flex-col items-center justify-center rounded-2xl border border-[#FF403A]/40 bg-[#0a0a0a] px-6 text-center">
+          <p className="text-4xl font-bold tracking-tight text-[#FF403A] sm:text-5xl md:text-[52px]">
+            {frontLabel}
+          </p>
+        </div>
+
+        <div className="ai-flip-face ai-flip-back flex flex-col rounded-2xl border border-[#FF403A]/40 bg-[#0a0a0a] p-6 sm:p-7">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#FF403A]">
+            {tier.kicker}
+          </p>
+          <RichHtml
+            html={tier.titleHtml}
+            className="mb-3 text-lg font-semibold leading-snug text-white md:text-xl"
+            as="h4"
+          />
+          <p className="mb-5 flex-1 text-sm leading-relaxed text-white/90 md:text-[15px]">
+            {tier.desc}
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {tier.skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-md border border-white/10 bg-[#111111] px-2.5 py-1 text-xs text-white/60"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </article>
@@ -176,7 +130,7 @@ function TierCard({ tier, index }) {
 }
 
 export default function AIServicesPage() {
-  const { slides, flightHead, panels, skillsHead, tiers, cta } = aiServicesPageData;
+  const { slides, flightHead, panels, skillsHead, tiers } = aiServicesPageData;
   const [activeSlide, setActiveSlide] = useState(0);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef(null);
@@ -225,12 +179,9 @@ export default function AIServicesPage() {
                   <p className="font-normal mt-6 max-w-2xl text-sm leading-relaxed text-white/90 md:text-[16px]">
                     {slide.subtitle}
                   </p>
-                  <Link
-                    href={slide.href || "/contact-us"}
-                    className="mt-[28px] inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-[25px] font-semibold text-white transition hover:opacity-90"
-                  >
+                  <BookACallButton className="mt-7 inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
                     {slide.cta}
-                  </Link>
+                  </BookACallButton>
                 </div>
               ))}
             </div>
@@ -264,9 +215,18 @@ export default function AIServicesPage() {
         <div className="mx-auto max-w-7xl">
           <SectionHeading titleHtml={flightHead.titleHtml} />
 
-          <div className="mt-12">
+          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {panels.map((panel, index) => (
-              <CapabilityRow key={panel.title} panel={panel} index={index} />
+              <div
+                key={panel.title}
+                className={
+                  index === panels.length - 1
+                    ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.75rem)] lg:col-span-1 lg:col-start-2 lg:mx-0 lg:w-full"
+                    : undefined
+                }
+              >
+                <CapabilityCard panel={panel} index={index} />
+              </div>
             ))}
           </div>
         </div>
@@ -281,19 +241,6 @@ export default function AIServicesPage() {
               <TierCard key={tier.kicker} tier={tier} index={index} />
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-20 pt-4 lg:px-12" id="contact">
-        <div className="mx-auto max-w-7xl">
-          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
-            {cta.title.replace(".", "")}
-            <span className="text-[#FF403A]">.</span>
-          </h3>
-          <p className="font-normal mt-6 max-w-3xl text-sm leading-relaxed text-white/90 md:text-[16px]">
-            {cta.desc}
-          </p>
-          <GetStartedLink product="AI Services" className="mt-10" />
         </div>
       </section>
     </div>

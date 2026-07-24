@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/component/Footer/Footer";
 import Nav from "@/component/Nav/Nav";
 import ScrollbarOnScroll from "@/component/ScrollbarOnScroll";
+import BookACallRoot from "@/component/BookACall/BookACallRoot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,10 +32,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-black">
-        <ScrollbarOnScroll />
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <BookACallRoot>
+          <ScrollbarOnScroll />
+          <Nav />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </BookACallRoot>
       </body>
     </html>
   );

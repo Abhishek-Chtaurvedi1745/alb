@@ -8,6 +8,7 @@ import {
   SolutionsMegaMenuWide,
   SolutionsMegaMenuMobile,
 } from "./SolutionsMegaMenu";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
@@ -216,13 +217,10 @@ function Nav() {
 
           {/* Desktop CTA */}
           <div className="hidden md:block shrink-0">
-            <Link
-              href="/contact-us"
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-7 py-2.5 text-[17px] font-bold tracking-wide text-[#c41e1e] shadow-[0_4px_20px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_30px_rgba(255,64,58,0.25)] active:scale-[0.98]"
-            >
+            <BookACallButton className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-7 py-2.5 text-[17px] font-bold tracking-wide text-[#c41e1e] shadow-[0_4px_20px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_30px_rgba(255,64,58,0.25)] active:scale-[0.98]">
               <span className="absolute inset-0 bg-gradient-to-r from-white via-neutral-50 to-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               <span className="relative">Book A Call</span>
-            </Link>
+            </BookACallButton>
           </div>
         </div>
       </nav>
@@ -295,13 +293,12 @@ function Nav() {
             </li>
 
             <li className="mt-4 px-2">
-              <Link
-                href="/contact-us"
+              <BookACallButton
                 onClick={() => setIsOpen(false)}
                 className="flex w-full items-center justify-center rounded-full bg-white py-3.5 text-[17px] font-bold text-[#c41e1e] shadow-lg transition-transform active:scale-[0.98]"
               >
                 Book A Call
-              </Link>
+              </BookACallButton>
             </li>
           </ul>
         </div>

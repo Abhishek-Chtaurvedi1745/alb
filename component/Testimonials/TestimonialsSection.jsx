@@ -114,7 +114,7 @@ export default function TestimonialsSection({
                 </p>
 
                 <div className="mt-8">
-                  <h3 className="text-2xl font-bold text-white">({active.name})</h3>
+                  <h3 className="text-2xl font-bold text-white">{active.name}</h3>
                   <p className="mt-2 text-sm text-white">{active.role}</p>
                   <p className="text-sm text-white">{active.region}</p>
                 </div>

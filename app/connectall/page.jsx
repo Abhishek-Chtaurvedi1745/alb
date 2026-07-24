@@ -1,4 +1,4 @@
-import Link from "next/link";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 import FunctionalityGrid from "@/section/Automation/FunctionalityGrid";
 import ConnectAllIntroSection from "@/section/ConnectAll/ConnectAllIntroSection";
 import ConnectAllServicesGrid from "@/section/ConnectAll/ConnectAllServicesGrid";
@@ -57,12 +57,9 @@ export default function ConnectAllPage() {
             <span className="text-[#FF403A]">by Broadcom</span>
           </h1>
 
-          <Link
-            href="/contact-us"
-            className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]"
-          >
+          <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
             Get Started with Connectall
-          </Link>
+          </BookACallButton>
         </div>
       </section>
 

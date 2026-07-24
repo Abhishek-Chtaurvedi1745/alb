@@ -14,22 +14,22 @@ export default function AutomicIntroSection() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section className="bg-black px-6 py-16 text-white lg:px-12">
-      <div className="mx-auto max-w-7xl">
-        <h3 className="text-left text-3xl font-semibold leading-tight md:text-[40px]">
+    <section className="w-full bg-black px-6 py-16 text-white lg:px-12">
+      <div className="mx-auto w-full max-w-7xl text-left">
+        <h3 className="w-full text-left text-3xl font-semibold leading-tight md:text-[40px]">
           Automic Workload{" "}
           <span className="text-[#FF403A]">Automation (AWA)</span>
         </h3>
 
-        <p className="font-normal mt-6 max-w-5xl text-left text-sm leading-relaxed text-white/90 md:text-[16px]">
+        <p className="mt-6 w-full text-left text-sm font-normal leading-relaxed text-white/90 md:text-[16px]">
           {introParagraph}
         </p>
 
-        <div className={`max-w-5xl md:block ${expanded ? "block" : "hidden"}`}>
+        <div className={`w-full md:block ${expanded ? "block" : "hidden"}`}>
           {moreParagraphs.map((paragraph) => (
             <p
               key={paragraph.slice(0, 40)}
-              className="font-normal mt-5 text-left text-sm leading-relaxed text-white/90 md:text-[16px]"
+              className="mt-5 w-full text-left text-sm font-normal leading-relaxed text-white/90 md:text-[16px]"
             >
               {paragraph}
             </p>

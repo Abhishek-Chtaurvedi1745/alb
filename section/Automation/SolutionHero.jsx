@@ -1,4 +1,4 @@
-import Link from "next/link";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 
 export default function SolutionHero({
   title,
@@ -8,7 +8,6 @@ export default function SolutionHero({
   logo,
   logoAlt,
   reverse = false,
-  ctaHref = "/contact-us",
   ctaLabel = "Request a free demo",
 }) {
   return (
@@ -28,12 +27,9 @@ export default function SolutionHero({
               {titleAccent ? <span className="text-[#FF403A]">{titleAccent}</span> : null}
             </h1>
           ) : null}
-          <Link
-            href={ctaHref}
-            className="mt-8 inline-block rounded-md bg-[#FF403A] px-6 py-3 text-lg font-semibold text-white transition hover:opacity-90"
-          >
+          <BookACallButton className="mt-8 inline-block rounded-md bg-[#FF403A] px-6 py-3 text-lg font-semibold text-white transition hover:opacity-90">
             {ctaLabel}
-          </Link>
+          </BookACallButton>
         </div>
         <div className="flex justify-center">
           <img

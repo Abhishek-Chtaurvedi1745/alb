@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 
 function ServiceIconGrid({ services, columns }) {
   const colClass =
@@ -50,33 +49,15 @@ export default function AutomationServicesTabSection({
   viewAllLabel = "View All Services",
   className = "",
 }) {
-  const [activeTab, setActiveTab] = useState("services");
-
   return (
     <section className={`bg-black px-6 py-16 ${className}`}>
       <div className="mx-auto max-w-6xl">
-        <h3 className="mb-8 text-center text-3xl font-semibold text-white md:text-[40px]">
+        <h3 className="mb-12 text-center text-3xl font-semibold text-white md:text-[40px]">
           {title}{" "}
           <span className="text-[#FF403A]">{titleAccent}</span>
         </h3>
 
-        <div className="mb-12 flex justify-center gap-0">
-          <button
-            type="button"
-            onClick={() => setActiveTab("services")}
-            className={`cursor-pointer px-8 py-3 text-[20px] font-semibold tracking-wide transition-colors ${
-              activeTab === "services"
-                ? "bg-[#FF403A] text-white"
-                : "bg-[#1a1a1d] text-gray-300 hover:bg-[#222226]"
-            }`}
-          >
-            SERVICES
-          </button>
-        </div>
-
-        {activeTab === "services" && (
-          <ServiceIconGrid services={services} columns={columns} />
-        )}
+        <ServiceIconGrid services={services} columns={columns} />
 
         {showViewAllLink && viewAllHref && (
           <div className="mt-10 text-center">

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Check } from "lucide-react";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 
 function SectionBlock({ section }) {
   const hasBullets = section.bullets?.length > 0;
@@ -96,10 +97,6 @@ export default function StonebranchServiceDetailPage({ page }) {
             <span className="text-white/90">{page.title}</span>
           </nav>
 
-          <p className="mb-3 text-left text-xs font-semibold uppercase tracking-[0.2em] text-[#ff403a]">
-            Stonebranch Services
-          </p>
-
           <h1 className="text-left text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[45px]">
             {page.title}
           </h1>
@@ -141,12 +138,9 @@ export default function StonebranchServiceDetailPage({ page }) {
           )}
 
           <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:items-center">
-            <Link
-              href={`/contact-us?service=stonebranch-${page.slug}`}
-              className="inline-flex items-center justify-center rounded-lg bg-[#ff403a] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#cc2f2a] sm:text-lg"
-            >
+            <BookACallButton className="inline-flex items-center justify-center rounded-lg bg-[#ff403a] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#cc2f2a] sm:text-lg">
               Request Service
-            </Link>
+            </BookACallButton>
             <Link
               href="/stonebranch/services"
               className="inline-flex items-center justify-center rounded-lg border border-white/30 px-7 py-3 text-base font-semibold text-white transition-colors hover:border-[#ff403a] hover:text-[#ff403a] sm:text-lg"

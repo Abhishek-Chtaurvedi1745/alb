@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Check } from "lucide-react";
+import BookACallButton from "@/component/BookACall/BookACallButton";
 
 function SectionBlock({ section }) {
   const hasBullets = section.bullets?.length > 0;
@@ -137,12 +138,9 @@ export default function ConnectAllServiceDetailPage({ page }) {
           )}
 
           <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:items-center">
-            <Link
-              href={`/contact-us?service=${page.slug}`}
-              className="inline-flex items-center justify-center rounded-lg bg-[#ff403a] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#cc2f2a] sm:text-lg"
-            >
+            <BookACallButton className="inline-flex items-center justify-center rounded-lg bg-[#ff403a] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#cc2f2a] sm:text-lg">
               Request Service
-            </Link>
+            </BookACallButton>
             <Link
               href="/connectall/services"
               className="inline-flex items-center justify-center rounded-lg border border-white/30 px-7 py-3 text-base font-semibold text-white transition-colors hover:border-[#ff403a] hover:text-[#ff403a] sm:text-lg"

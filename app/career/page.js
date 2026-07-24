@@ -58,6 +58,16 @@ we are known for. If this resonates with you, hit us with your resume for the op
             Clarity PPM Consultant
           </p>
         </div>
+
+        <div className="flex items-start gap-4">
+          <span className="w-[30px] h-[30px] rounded-full border border-[#FF403A] text-white flex items-center justify-center font-semibold">
+            2
+          </span>
+
+          <p className="font-normal text-[#FFFFFF] text-[13px] leading-8">
+            Clarity PPM Consultant
+          </p>
+        </div>
       </div>
       <button className="w-fit px-8 py-3 rounded-full bg-[#FF403A] text-white text-[18px] font-medium hover:scale-105 duration-300 cursor-pointer">
         VIEW JOB/APPLY
