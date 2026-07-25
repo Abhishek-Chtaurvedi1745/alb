@@ -11,7 +11,7 @@ function page() {
         />
 
         <div className="absolute inset-0 flex items-center px-6 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
             About <span className="text-[#FF403A]">Us</span>
           </h1>
         </div>
@@ -75,10 +75,10 @@ function page() {
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#FF403A]">
               What drives us
             </p>
-            <h3 className="max-w-3xl text-3xl font-semibold leading-[1.15] text-white md:text-[42px]">
+            <h1 className="max-w-3xl text-3xl font-semibold leading-[1.15] text-white md:text-[40px]">
               Our Mission &{" "}
               <span className="text-[#FF403A]">Our Approach</span>
-            </h3>
+            </h1>
           </div>
 
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-12 lg:gap-6">

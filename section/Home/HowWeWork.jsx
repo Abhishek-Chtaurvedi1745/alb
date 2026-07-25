@@ -206,9 +206,9 @@ export default function HowWeWork() {
             inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <h3 className="text-3xl font-semibold text-white md:text-[40px]">
+          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
             How We <span className="text-[#ff403a]">Work</span>
-          </h3>
+          </h1>
         </div>
 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">

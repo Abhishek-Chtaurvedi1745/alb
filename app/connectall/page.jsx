@@ -34,7 +34,7 @@ function CheckItem({ children }) {
           />
         </svg>
       </span>
-      <span className="text-sm leading-relaxed text-white/90 md:text-[18px]">
+      <span className="text-sm leading-relaxed text-white/90 md:text-[16px]">
         {children}
       </span>
     </li>
@@ -54,7 +54,7 @@ export default function ConnectAllPage() {
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent" />
 
         <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
             ConnectALL{" "}
             <span className="text-[#FF403A]">by Broadcom</span>
           </h1>

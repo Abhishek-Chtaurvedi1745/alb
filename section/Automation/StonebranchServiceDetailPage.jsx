@@ -97,7 +97,7 @@ export default function StonebranchServiceDetailPage({ page }) {
             <span className="text-white/90">{page.title}</span>
           </nav>
 
-          <h1 className="text-left text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[45px]">
+          <h1 className="text-left text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[40px]">
             {page.title}
           </h1>
 

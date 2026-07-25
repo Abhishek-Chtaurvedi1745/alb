@@ -18,11 +18,10 @@ export default function SuccessStories({
               {eyebrow}
             </p>
           ) : null}
-          <h2 className="text-3xl font-semibold leading-tight md:text-[42px]">
+          <h1 className="text-3xl font-semibold leading-tight md:text-[40px]">
             {title}{" "}
             <span className="text-[#FF403A]">{titleAccent}</span>
-          </h2>
-          <div className="h-1 w-16 rounded-full bg-gradient-to-r from-transparent via-[#FF403A] to-transparent" />
+          </h1>
         </div>
 
         <div className="relative">

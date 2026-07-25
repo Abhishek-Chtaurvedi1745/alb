@@ -45,7 +45,7 @@ export default function PPMBenefitHoverCard({ benefit }) {
           />
         </div>
 
-        <h4 className="text-lg font-medium leading-snug text-white sm:text-xl md:text-[25px]">
+        <h4 className="text-lg font-medium leading-snug text-white sm:text-xl md:text-[20px]">
           {benefit.title}
         </h4>
 

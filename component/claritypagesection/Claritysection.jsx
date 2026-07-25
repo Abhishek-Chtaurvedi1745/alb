@@ -108,7 +108,7 @@ function Claritysection() {
       key={i}
       className="flex h-full flex-col rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 transition-colors duration-300 hover:border-[#FF403A]/40"
     >
-      <h3 className="mb-4 text-xl font-semibold leading-snug text-white md:text-2xl">
+      <h3 className="mb-4 text-[20px] font-semibold leading-snug text-white">
         {feature.titleWhite}{" "}
         <span className="text-[#FF403A]">{feature.titleRed}</span>
       </h3>

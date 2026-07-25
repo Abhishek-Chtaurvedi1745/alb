@@ -22,7 +22,7 @@ function ContactInfoCard({ icon, children, className = "" }) {
 function page() {
   return (
     <section className="mt-20 bg-black px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:px-12">
-      <h1 className="py-4 text-center text-3xl font-semibold text-white sm:py-5 sm:text-4xl md:text-[45px]">
+      <h1 className="py-4 text-center text-3xl font-semibold text-white sm:py-5 sm:text-4xl md:text-[40px]">
         Contact <span className="text-[#ff403a]">Us</span>
       </h1>
 
@@ -30,10 +30,10 @@ function page() {
         <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-10">
           {/* Form */}
           <div className="w-full rounded-3xl bg-[#2f2d2d] p-5 shadow-2xl sm:p-8 md:p-10 lg:flex-1">
-            <h3 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[35px]">
+            <h1 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[35px]">
               Let&apos;s Start the{" "}
               <span className="text-[#ff403a]">Conversation</span>
-            </h3>
+            </h1>
             <p className="font-normal mb-6 max-w-2xl text-sm leading-relaxed text-white sm:mb-8 sm:text-sm md:mb-10 md:text-sm lg:text-[13px]">
               Share your requirements with us and our team will get back to you
               with the right solution for your business needs.
@@ -114,7 +114,7 @@ function page() {
 
           {/* Contact Card */}
           <div className="w-full rounded-3xl bg-[#FF403A] p-5 shadow-2xl sm:p-6 md:p-7 lg:w-[min(100%,420px)] lg:shrink-0">
-            <h4 className="mb-6 text-xl font-semibold leading-tight text-white sm:mb-8 sm:text-2xl md:text-[25px]">
+            <h4 className="mb-6 text-xl font-semibold leading-tight text-white sm:mb-8 sm:text-2xl md:text-[20px]">
               Hi! We are always here
               <br />
               to help you.

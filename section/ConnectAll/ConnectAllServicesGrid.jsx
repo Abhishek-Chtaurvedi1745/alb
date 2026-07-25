@@ -8,10 +8,10 @@ export default function ConnectAllServicesGrid({
   return (
     <section className={`bg-black py-16 px-6 ${className}`}>
       <div className="mx-auto max-w-6xl">
-        <h3 className="mb-8 text-center text-3xl font-semibold text-white md:text-[40px]">
+        <h1 className="mb-8 text-center text-3xl font-semibold text-white md:text-[40px]">
           Comprehensive ConnectALL{" "}
           <span className="text-[#FF403A]">Services</span>
-        </h3>
+        </h1>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
           {connectAllServices.map((service, index) => {

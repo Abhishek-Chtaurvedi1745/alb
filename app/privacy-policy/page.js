@@ -2,7 +2,7 @@ import React from "react";
 
 function PolicyItem({ children }) {
   return (
-    <li className="flex items-start gap-3 text-sm leading-relaxed text-white sm:text-base md:text-[18px] md:leading-8">
+    <li className="flex items-start gap-3 text-sm leading-relaxed text-white sm:text-base md:text-[16px] md:leading-8">
       <img
         src="/images/check.png"
         alt=""
@@ -16,7 +16,7 @@ function PolicyItem({ children }) {
 function PolicySection({ number, title, children }) {
   return (
     <div>
-      <h3 className="mb-2 text-lg font-semibold leading-snug text-white sm:text-xl md:text-[25px]">
+      <h3 className="mb-2 text-lg font-semibold leading-snug text-white sm:text-xl md:text-[20px]">
         <span className="text-[#FF403A]">{number}. </span>
         {title}
       </h3>

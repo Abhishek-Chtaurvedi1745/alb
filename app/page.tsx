@@ -166,7 +166,7 @@ Get my AI readiness report
 
       
         <div className="w-full lg:w-[75%]">
-          <h2 className="text-3xl md:text-[45px] font-bold text-[#FFFFFF] mb-4">
+          <h2 className="text-3xl md:text-[40px] font-bold text-[#FFFFFF] mb-4">
             Build Better <span className="text-[#FF403A]"> 
 Outcomes, <br /> Not Just Projects. </span>
           </h2>
@@ -212,13 +212,13 @@ visibility and control.
     {/* Content */}
     <div className="relative z-10 max-w-3xl">
 
-      <h2 className="text-3xl font-semibold text-white md:text-[40px]">
+      <h1 className="text-3xl font-semibold text-white md:text-[40px]">
         An Established Partner.
-      </h2>
+      </h1>
 
-      <h2 className="mt-3 text-3xl font-semibold text-[#FF403A] md:text-[40px]">
+      <h1 className="mt-3 text-3xl font-semibold text-[#FF403A] md:text-[40px]">
         A Strategic Cost Advantage.
-      </h2>
+      </h1>
 
 
       <p className="mt-6 max-w-xl text-base leading-relaxed text-[#FFFFFF] md:text-lg">

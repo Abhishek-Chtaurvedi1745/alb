@@ -78,9 +78,9 @@ export default function IndustriesServed() {
   return (
     <section className="bg-black text-white">
       <div className="mx-auto max-w-7xl px-6 py-16 text-center sm:px-8 lg:px-12">
-        <h3 className="text-3xl font-semibold tracking-tight md:text-[40px]">
+        <h1 className="text-3xl font-semibold tracking-tight md:text-[40px]">
           Industries <span className="text-[#FF403A]">Served</span>
-        </h3>
+        </h1>
 
         <div className="mx-auto mt-8 grid max-w-5xl grid-cols-2 gap-4 sm:gap-5 md:mt-10 md:grid-cols-4 md:gap-6">
           {industries.map((industry, index) => {

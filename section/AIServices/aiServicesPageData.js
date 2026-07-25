@@ -2,9 +2,9 @@ export const aiServicesPageData = {
   slides: [
     {
       eyebrow: "AI CONCIERGE — BUILT FOR ENTERPRISE PPM",
-      titleHtml: "An AI solution that lives inside your <em>project office.</em>",
+      titleHtml: "TrozAI solution that lives inside your <em>project office.</em>",
       subtitle:
-        "AI Concierge understands your organisation — its standards, its history, its way of working — and acts on that understanding inside your project management application. Every action stays reviewable. Every step keeps a human in the loop.",
+        "TrozAI Concierge understands your organisation — its standards, its history, its way of working — and acts on that understanding inside your project management application. Every action stays reviewable. Every step keeps a human in the loop.",
       cta: "Request a free demo",
       href: "/contact-us",
     },

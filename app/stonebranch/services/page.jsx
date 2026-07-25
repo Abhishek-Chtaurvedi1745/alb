@@ -12,7 +12,7 @@ export default function StonebranchServicesPage() {
     <div className="bg-black">
       <section className="mt-[83px] px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[45px]">
+          <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[40px]">
             Stonebranch <span className="text-[#ff403a]">Services</span>
           </h1>
 

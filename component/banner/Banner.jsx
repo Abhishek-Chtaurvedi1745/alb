@@ -6,6 +6,7 @@ import BookACallButton from "@/component/BookACall/BookACallButton";
 
 const banners = [
   {
+    type: "image",
     src: "/images/banner-1-pmo-operations.png",
     alt: "Meaningful & Secure AI for Smarter PMO Operations",
     width: 3234,
@@ -15,15 +16,23 @@ const banners = [
     ctaTop: "72.07%",
   },
   {
-    src: "/images/banner-2-trozai.png",
+    type: "html",
+    src: "/images/banner-2-trozai-visual.png",
     alt: "TrozAI – An AI Platform That Works within Your Enterprise Ecosystem",
-    width: 3234,
+    width: 1536,
     height: 1024,
     cta: "Request a Free Demo",
-    ctaLeft: "7.11%",
-    ctaTop: "77.73%",
+    title: (
+      <>
+        <span className="text-[#ff3f3a]">TrozAI</span>
+        {" – An AI Platform That Works within Your "}
+        <span className="text-[#ff3f3a]">Enterprise Ecosystem</span>
+      </>
+    ),
+    body: "TrozAI is an AI-powered enterprise platform that integrates seamlessly with your existing systems — from PMO and PPM tools to CRM, SAP, ITSM, DevOps and legacy applications.",
   },
   {
+    type: "image",
     src: "/images/banner-3-strategic-engine.png",
     alt: "Transform Your PMO into a Strategic Engine",
     width: 3234,
@@ -33,6 +42,7 @@ const banners = [
     ctaTop: "72.07%",
   },
   {
+    type: "image",
     src: "/images/banner-4-orchestrate.png",
     alt: "Orchestrate complex enterprise workflows with intelligent automation",
     width: 3234,
@@ -55,6 +65,9 @@ const ctaStyle = {
 
 const ctaClassName =
   "absolute z-10 inline-flex items-center justify-center whitespace-nowrap bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90";
+
+const htmlCtaClassName =
+  "relative z-10 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[#ff3f3a] px-6 py-3 text-[14px] font-bold text-white antialiased transition-opacity hover:opacity-90 md:text-[16px]";
 
 export default function BannerSlider() {
   const [current, setCurrent] = useState(0);
@@ -92,25 +105,93 @@ export default function BannerSlider() {
             key={banner.src}
             className="relative h-full w-full flex-shrink-0"
           >
-            <img
-              src={`${banner.src}?v=hq2`}
-              alt={banner.alt}
-              width={banner.width}
-              height={banner.height}
-              decoding="async"
-              fetchPriority={index === 0 ? "high" : "auto"}
-              className="h-full w-full object-cover"
-            />
-            <BookACallButton
-              className={ctaClassName}
-              style={{
-                left: banner.ctaLeft,
-                top: banner.ctaTop,
-                ...ctaStyle,
-              }}
-            >
-              {banner.cta}
-            </BookACallButton>
+            {banner.type === "html" ? (
+              <div className="relative flex h-full w-full items-center overflow-hidden bg-black">
+                {/* Ambient blue glow — blends robot into dark theme */}
+                <div
+                  aria-hidden
+                  className="pointer-events-none absolute inset-y-0 right-0 z-[1] w-[55%]"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse 70% 65% at 72% 50%, rgba(40,120,220,0.22) 0%, rgba(20,60,140,0.08) 40%, transparent 70%)",
+                  }}
+                />
+
+                {/* Robot visual — soft left fade into black */}
+                <div
+                  className="absolute inset-y-0 right-0 z-0 w-[58%] md:w-[54%]"
+                  style={{
+                    WebkitMaskImage:
+                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 18%, black 42%)",
+                    maskImage:
+                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 18%, black 42%)",
+                  }}
+                >
+                  <img
+                    src={`${banner.src}?v=merge1`}
+                    alt={banner.alt}
+                    width={banner.width}
+                    height={banner.height}
+                    decoding="async"
+                    className="h-full w-full object-contain object-right object-bottom"
+                  />
+                  {/* Bottom fade into page black */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[22%]"
+                    style={{
+                      background:
+                        "linear-gradient(to top, #000 0%, rgba(0,0,0,0.55) 45%, transparent 100%)",
+                    }}
+                  />
+                  {/* Top fade under nav */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-x-0 top-0 h-[14%]"
+                    style={{
+                      background:
+                        "linear-gradient(to bottom, #000 0%, transparent 100%)",
+                    }}
+                  />
+                </div>
+
+                <div className="relative z-10 flex w-[58%] min-w-0 flex-col justify-center py-4 pl-5 pr-4 md:w-[55%] md:pl-10 md:pr-6 lg:pl-14 lg:pr-8">
+                  <h1 className="w-full max-w-none text-[28px] font-bold leading-tight text-white md:text-[40px]">
+                    {banner.title}
+                  </h1>
+                  <p className="mt-3 w-full max-w-none text-[14px] leading-relaxed text-white/90 md:mt-4 md:text-[16px]">
+                    {banner.body}
+                  </p>
+                  <div className="mt-5 md:mt-7">
+                    <BookACallButton className={htmlCtaClassName}>
+                      {banner.cta}
+                    </BookACallButton>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <>
+                <img
+                  src={`${banner.src}?v=hq2`}
+                  alt={banner.alt}
+                  width={banner.width}
+                  height={banner.height}
+                  decoding="async"
+                  fetchPriority={index === 0 ? "high" : "auto"}
+                  className="h-full w-full object-cover object-center"
+                />
+                <BookACallButton
+                  className={ctaClassName}
+                  style={{
+                    left: banner.ctaLeft,
+                    top: banner.ctaTop,
+                    ...ctaStyle,
+                  }}
+                >
+                  {banner.cta}
+                </BookACallButton>
+              </>
+            )}
           </div>
         ))}
       </div>

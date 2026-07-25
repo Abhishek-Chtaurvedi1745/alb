@@ -141,9 +141,9 @@ function Middle() {
   <div className="mx-auto text-center">
 
     {/* Title */}
-    <h3 className="text-3xl md:text-[40px] font-semibold tracking-tight mb-0 md:mb-4">
+    <h1 className="text-3xl md:text-[40px] font-semibold tracking-tight mb-0 md:mb-4">
       Partnership Built <span className="text-[#FF3B30]">On Trust</span>
-    </h3>
+    </h1>
 
     {/* Infinite Slider */}
     <div className="relative mt-4 overflow-hidden">
@@ -208,9 +208,9 @@ function Middle() {
     {/* Right Side */}
     <div className="lg:col-span-7 flex flex-col justify-center">
 
-      <h3 className="text-2xl md:text-[45px] font-semibold tracking-tight mb-2">
+      <h1 className="text-2xl md:text-[40px] font-semibold tracking-tight mb-2">
         Why Albatroz <span className="text-[#ff3b30]">Solutions</span> ?
-      </h3>
+      </h1>
 
       <p className="text-sm md:text-sm font-medium text-[#FFFFFF] mb-8 font-normal">
         Purpose-driven solutions.
@@ -267,7 +267,7 @@ function Middle() {
         
        
         <div className="text-center mb-12">
-          <h2 className="text-[45px] font-bold text-[#FFFFFF] ">
+          <h2 className="text-[40px] font-bold text-[#FFFFFF] ">
             Benefits of <span className="text-[#FF403A]"> Implementing Clarity </span>
           </h2>
           
@@ -309,7 +309,7 @@ function Middle() {
 
        
         <div className="w-full lg:w-[75%]">
-          <h2 className="text-3xl md:text-[45px] font-bold text-[#FFFFFF] mb-4">
+          <h2 className="text-3xl md:text-[40px] font-bold text-[#FFFFFF] mb-4">
            Discover how <span className="text-[#FF403A]"> 
  <br /> Rally by Broadcom </span>
           </h2>
@@ -398,10 +398,10 @@ the focus of everything.
                 Delivering Solutions
               </p>
 
-              <h3 className="text-3xl font-bold text-white mt-2">
+              <h1 className="text-3xl font-bold text-white mt-2">
                 IS OUR{" "}
                 <span className="text-[#ff403a]">SUPERPOWER</span>
-              </h3>
+              </h1>
 
               
             </div>

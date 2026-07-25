@@ -36,7 +36,7 @@ const CommonBanner = ({
         <h1 className="
           text-white 
           text-3xl 
-          md:text-[45px]
+          md:text-[40px]
           font-semibold
           max-w-3xl
         ">

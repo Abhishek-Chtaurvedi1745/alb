@@ -27,7 +27,7 @@ export default function AutomicAutomationPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
 
         <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
             Automic{" "}
             <span className="text-[#FF403A]">by Broadcom</span>
           </h1>

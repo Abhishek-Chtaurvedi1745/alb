@@ -131,10 +131,10 @@ export default function PlatformShowcase() {
             inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <h3 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[40px]">
+          <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[40px]">
             Plan Smarter. Deliver Faster.{" "}
             <span className="text-[#ff403a]">Automate Everything.</span>
-          </h3>
+          </h1>
 
           <p className="mx-auto mt-5 max-w-3xl text-sm font-normal leading-relaxed text-white/75 md:text-[16px]">
             Industry-leading platforms that bring strategy, delivery, and

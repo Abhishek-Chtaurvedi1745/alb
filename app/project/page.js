@@ -91,7 +91,7 @@ function page() {
 
         {/* Left Side */}
         <div className="w-full ">
-          <h1 className="text-3xl md:text-[45px] font-bold text-[#FFFFFF] mb-4">
+          <h1 className="text-3xl md:text-[40px] font-bold text-[#FFFFFF] mb-4">
             Built to Bring Structure <span className="text-[#FF403A]"> <br /> 
 to Complex Work</span>
           </h1>
@@ -139,10 +139,10 @@ using the power of these enterprise solutions.
             Modern Project & Portfolio Management
           </p>
 
-          <h3 className="text-3xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Solutions:
             <span className="text-[#ff403a]"> Comprehensive Features</span>
-          </h3>
+          </h1>
 
           <div className="w-32 h-[2px] bg-[#ff403a] mx-auto mt-6"></div>
         </div>
@@ -152,7 +152,7 @@ using the power of these enterprise solutions.
 
           {/* LEFT CONTENT */}
           <div>
-            <h4 className="text-[45px] text[#FFFFFF] font-semibold mb-6">
+            <h4 className="text-[40px] text[#FFFFFF] font-semibold mb-6">
               Strategic Portfolio Management
             </h4>
 
@@ -185,7 +185,7 @@ using the power of these enterprise solutions.
 
             </div>
          <div>
-            <h4 className="text-[45px] font-semibold mb-6 text-[#FFFFFF]">
+            <h4 className="text-[40px] font-semibold mb-6 text-[#FFFFFF]">
               Strategic Portfolio Management
             </h4>
 
@@ -212,7 +212,7 @@ using the power of these enterprise solutions.
             <div className='mt-15 grid grid-cols-1 md:grid-cols-[1.2fr_0.2fr] '>
             
          <div>
-            <h4 className="text-[45px] font-semibold mb-6">
+            <h4 className="text-[40px] font-semibold mb-6">
               Strategic Portfolio Management
             </h4>
 
@@ -248,12 +248,12 @@ using the power of these enterprise solutions.
 
         {/* HEADING */}
         <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Transformative Benefits of{" "}
             <span className="text-[#ff3b30]">
               implementing PPM
             </span>
-          </h3>
+          </h1>
 
           <p className="font-normal text-[#FFFFFF] text-sm md:text-sm max-w-4xl mx-auto mt-5 leading-7">
             Implementing modern Project and Portfolio Management (PPM)
@@ -284,7 +284,7 @@ using the power of these enterprise solutions.
               </div>
 
               {/* TITLE */}
-              <h4 className="text-[25px] text-[#FFFFFF] font-medium leading-8">
+              <h4 className="text-[20px] text-[#FFFFFF] font-medium leading-8">
                 {item.title}
               </h4>
 
@@ -318,12 +318,12 @@ individual projects, influencing the organization’s overall efficiency, compet
 
         {/* HEADING */}
         <div className="mb-16 text-center">
-          <h3 className="text-3xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight">
             Engage with Albatroz for{" "}
             <span className="text-[#ff403a]">
               PPM Solutions
             </span>
-          </h3>
+          </h1>
         </div>
 
         {/* MAIN CONTENT */}

@@ -22,7 +22,7 @@ export default function SolutionHero({
             <img src={logo} alt={logoAlt || ""} className="mb-8 h-auto w-auto max-w-[324px]" />
           ) : null}
           {title || titleAccent ? (
-            <h1 className="text-3xl font-bold leading-tight md:text-[50px]">
+            <h1 className="text-3xl font-bold leading-tight md:text-[40px]">
               {title}{" "}
               {titleAccent ? <span className="text-[#FF403A]">{titleAccent}</span> : null}
             </h1>

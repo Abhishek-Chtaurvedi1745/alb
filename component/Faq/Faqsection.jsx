@@ -56,13 +56,13 @@ function FAQSection({ faqs = faqData }) {
           {/* LEFT SIDE */}
           <div className="flex flex-col items-center lg:items-center">
 
-            <h2 className="text-white text-[45px] font-semibold leading-tight">
+            <h1 className="text-white text-[40px] font-semibold leading-tight">
               Frequently
               <br />
               Asked
               <br />
               <span className="text-[#ff403a]">Questions</span>
-            </h2>
+            </h1>
 
           </div>
 

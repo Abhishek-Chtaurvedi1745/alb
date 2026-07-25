@@ -52,10 +52,10 @@ export default function AutomationServicesTabSection({
   return (
     <section className={`bg-black px-6 py-16 ${className}`}>
       <div className="mx-auto max-w-6xl">
-        <h3 className="mb-12 text-center text-3xl font-semibold text-white md:text-[40px]">
+        <h1 className="mb-12 text-center text-3xl font-semibold text-white md:text-[40px]">
           {title}{" "}
           <span className="text-[#FF403A]">{titleAccent}</span>
-        </h3>
+        </h1>
 
         <ServiceIconGrid services={services} columns={columns} />
 

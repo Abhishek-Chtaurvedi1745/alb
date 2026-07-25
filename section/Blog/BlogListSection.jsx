@@ -22,7 +22,7 @@ export default function BlogListSection({
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#FF403A]">
             Insights
           </p>
-          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
             {title}
           </h1>
           <p className="font-normal mx-auto mt-4 max-w-2xl text-sm text-white/70 md:text-sm">

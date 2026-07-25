@@ -21,7 +21,7 @@ function page() {
 
       <section className="w-full bg-black py-10">
         <div className="mx-auto max-w-5xl px-4 text-center">
-          <h3 className="text-3xl font-semibold text-white md:text-[45px]">
+          <h3 className="text-3xl font-semibold text-white md:text-[40px]">
             Join Our <span className="text-[#FF403A]">Team!</span>
           </h3>
 
@@ -58,7 +58,7 @@ function page() {
                   <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#FF403A]">
                     We&apos;re hiring
                   </p>
-                  <h3 className="text-[34px] font-semibold leading-tight text-white md:text-[45px]">
+                  <h3 className="text-[34px] font-semibold leading-tight text-white md:text-[40px]">
                     Current Vacancies
                   </h3>
                 </div>

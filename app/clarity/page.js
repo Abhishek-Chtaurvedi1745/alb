@@ -103,7 +103,7 @@ const benefits = [
         />
 
         <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
             Clarity{" "}
             <span className="text-[#FF403A]">by Broadcom</span>
           </h1>
@@ -117,11 +117,10 @@ const benefits = [
     <section className="w-full overflow-hidden bg-black px-4 py-10 md:py-14">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 text-center md:mb-8">
-          <h3 className="text-3xl font-semibold leading-tight text-white md:text-[42px]">
+          <h1 className="text-3xl font-semibold leading-tight text-white md:text-[40px]">
             Transform Project Portfolio Management with{" "}
             <span className="text-[#FF403A]">Clarity</span>
-          </h3>
-          <div className="mx-auto mt-4 h-[2px] w-24 bg-[#FF403A]" />
+          </h1>
         </div>
 
         <div className="mx-auto max-w-5xl space-y-4 md:space-y-5">
@@ -145,10 +144,10 @@ const benefits = [
     <section className="bg-black py-16 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h3 className="text-center text-3xl md:text-[40px] font-semibold text-white mb-8">
+        <h1 className="text-center text-3xl md:text-[40px] font-semibold text-white mb-8">
           Comprehensive Clarity Services{" "}
           <span className="text-[#FF403A]">& Integrations</span>
-        </h3>
+        </h1>
 
         {/* Tabs */}
         <div className="flex justify-center gap-0 mb-12">
@@ -236,9 +235,9 @@ const benefits = [
     <section className="bg-black py-9 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h3 className="text-center text-3xl md:text-[40px] font-bold text-white mb-10">
+        <h1 className="text-center text-3xl md:text-[40px] font-bold text-white mb-10">
           Benefits of <span className="text-[#FF403A]">Implementing Clarity</span>
-        </h3>
+        </h1>
 
         {/* Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">

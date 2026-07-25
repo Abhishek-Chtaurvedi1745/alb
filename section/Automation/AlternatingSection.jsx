@@ -10,10 +10,10 @@ export default function AlternatingSection({ sections }) {
             }`}
           >
             <div className={section.imageRight ? "" : "lg:order-2"}>
-              <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
+              <h1 className="text-3xl font-semibold leading-tight md:text-[40px]">
                 {section.title}{" "}
                 <span className="text-[#FF403A]">{section.titleAccent}</span>
-              </h3>
+              </h1>
               <p className="font-normal mt-5 text-sm leading-relaxed text-white/90 md:text-[16px]">
                 {section.description}
               </p>

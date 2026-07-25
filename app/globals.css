@@ -24,6 +24,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Sitewide body copy: 14px mobile → 16px desktop */
+p {
+  font-size: 14px !important;
+  line-height: 1.65 !important;
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 16px !important;
+  }
+}
+
+/* Consistent page / section main headings */
+h1 {
+  font-weight: 600;
+  line-height: 1.2;
+}
 @keyframes marquee {
   from {
     transform: translateX(0);

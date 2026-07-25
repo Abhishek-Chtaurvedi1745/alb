@@ -57,7 +57,7 @@ export default function PrebuiltPluginPage({ page }) {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/25" />
         <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-[45px]">
+          <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-[40px]">
             {page.title}{" "}
             <span className="text-[#FF403A]">{page.titleAccent}</span>
           </h1>

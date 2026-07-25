@@ -54,10 +54,10 @@ const certifications = [
 
         {/* Left Side */}
         <div className="w-full lg:w-[75%]">
-          <h3 className="text-3xl text-center md:text-left md:text-[45px] font-bold text-[#FFFFFF] mb-8 md:mb-4">
+          <h1 className="text-3xl text-center md:text-left md:text-[40px] font-bold text-[#FFFFFF] mb-8 md:mb-4">
            Awards &<span className="text-[#FF403A]"> 
  <br className="hidden md:block" /> Recognition </span>
-          </h3>
+          </h1>
         </div>
         {/* Right Side */}
         <div className="w-full flex justify-center gap-10">
@@ -83,10 +83,10 @@ const certifications = [
 
     {/* HEADING */}
     <div className="text-center">
-      <h3 className="text-3xl mb-8 md:mb-10 md:text-[40px] font-semibold text-white">
+      <h1 className="text-3xl mb-8 md:mb-10 md:text-[40px] font-semibold text-white">
         Certifications &{" "}
         <span className="text-[#FF403A]">Accreditations</span>
-      </h3>
+      </h1>
     </div>
 
     {/* Desktop View */}
@@ -96,7 +96,7 @@ const certifications = [
           key={index}
           className="w-full sm:w-[320px] bg-[#111111] rounded-2xl p-6 border border-gray-800 hover:border-[#ff403a] transition-all duration-300"
         >
-          <h4 className="text-white text-[25px] font-bold mb-0">
+          <h4 className="text-white text-[20px] font-bold mb-0">
             {item.title}
           </h4>
 
@@ -122,7 +122,7 @@ const certifications = [
         {certifications.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="bg-[#111111] rounded-2xl p-6 border border-gray-800 min-h-[220px]">
-              <h4 className="text-white text-[25px] font-bold mb-0">
+              <h4 className="text-white text-[20px] font-bold mb-0">
                 {item.title}
               </h4>
 

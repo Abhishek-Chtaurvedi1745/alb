@@ -76,7 +76,7 @@ function CapabilityCard({ panel, index }) {
         <div className="absolute inset-0 bg-[#0c0c0c]" />
       )}
 
-      <h4 className="relative mb-4 text-xl font-semibold leading-snug text-white md:text-2xl">
+      <h4 className="relative mb-4 text-[20px] font-semibold leading-snug text-white">
         {panel.title}
       </h4>
 
@@ -191,7 +191,7 @@ export default function RallyPage() {
         />
 
         <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
             Rally{" "}
             <span className="text-[#FF403A]">by Broadcom</span>
           </h1>

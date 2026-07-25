@@ -57,16 +57,16 @@ function page() {
 
       {/* Content */}
       <div className="absolute inset-0 flex items-center px-6 md:px-16">
-        <h1 className="text-white text-3xl md:text-[45px] font-semibold ">
+        <h1 className="text-white text-3xl md:text-[40px] font-semibold ">
           Our <span className="text-[#FF403A]">Team</span>
         </h1>
       </div>
     </section>
      <section className="w-full pt-12 bg-black">
       <div className="max-w-7xl mx-auto px-4">      
-        <h3 className="text-3xl md:text-[45px] text-center text-white font-semibold mb-6">
+        <h1 className="text-3xl md:text-[40px] text-center text-white font-semibold mb-6">
           Our Leadership <span className="text-[#FF403A]">Team</span>
-        </h3>
+        </h1>
         <div className="flex flex-col gap-20">
 
           {leaders.map((leader, index) => (
@@ -94,7 +94,7 @@ function page() {
               {/* CONTENT */}
               <div className="flex flex-col justify-center">
                 
-                <h4 className="text-[25px] md:text-[30px] font-semibold text-white leading-tight">
+                <h4 className="text-[20px] md:text-[30px] font-semibold text-white leading-tight">
                   {leader.name}
                 </h4>
 

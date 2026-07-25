@@ -118,7 +118,7 @@ function page() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
 
         <div className="relative z-10 flex h-full flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
             Enterprise IT <span className="text-[#FF403A]">Automation</span>
           </h1>
 
@@ -243,7 +243,7 @@ function page() {
       {/* Enterprise Solutions */}
       <section>
         <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
-          <h3 className="text-center text-2xl font-semibold leading-tight md:text-[45px]">
+          <h3 className="text-center text-2xl font-semibold leading-tight md:text-[40px]">
             Enterprise Automation Solutions{" "}
             <span className="text-[#FF403A]">We Support</span>
           </h3>

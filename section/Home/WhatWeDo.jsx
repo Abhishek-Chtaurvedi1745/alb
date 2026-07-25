@@ -202,9 +202,9 @@ export default function WhatWeDo() {
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff403a]/80">
             Our Expertise
           </p>
-          <h3 className="text-3xl font-semibold text-white sm:text-4xl md:text-[40px]">
+          <h1 className="text-3xl font-semibold text-white sm:text-4xl md:text-[40px]">
             What <span className="text-[#ff403a]">We Do</span>
-          </h3>
+          </h1>
           <p className="mx-auto mt-4 max-w-2xl text-sm font-normal text-white/80 md:text-sm">
             Smart Solutions,{" "}
             <span className="text-[#ff403a]">Measurable Results</span>

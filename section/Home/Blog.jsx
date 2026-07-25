@@ -56,9 +56,9 @@ function BlogSlider() {
     <section className="w-full overflow-hidden bg-black px-4 pb-10 pt-0">
       <div className="relative mx-auto max-w-7xl">
         <div className="mb-10 text-center">
-          <h3 className="text-3xl font-bold text-white md:text-[40px]">
+          <h1 className="text-3xl font-bold text-white md:text-[40px]">
             Our <span className="text-[#ff403a]">Blogs</span>
-          </h3>
+          </h1>
         </div>
 
         <button

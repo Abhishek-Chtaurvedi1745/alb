@@ -56,14 +56,14 @@ function FAQSection() {
           {/* LEFT SIDE */}
           <div className="flex flex-col items-center lg:items-center">
 
-           <h3 className="text-white text-3xl md:text-[40px] font-semibold leading-tight mt-0 md:mt-0 mb-7">
+           <h1 className="text-white text-3xl md:text-[40px] font-semibold leading-tight mt-0 md:mt-0 mb-7">
   Frequently 
   <br className="hidden md:block" /> 
   
     Asked
   <br className="hidden md:block" />
   <span className="text-[#ff403a]"> Questions </span>
-</h3>
+</h1>
             {/* IMAGE */}
             <div className="mt-10 hidden md:block">
               <img

@@ -57,11 +57,11 @@ export default function TestimonialsSection({
               {eyebrow}
             </p>
 
-            <h2 className="text-3xl font-semibold leading-tight text-white md:text-[40px]">
+            <h1 className="text-3xl font-semibold leading-tight text-white md:text-[40px]">
               {title}
               <br />
               <span className="text-[#ff403a]">{highlight}</span>
-            </h2>
+            </h1>
 
             <div className="mt-12 flex items-center gap-4">
               {testimonials.map((_, index) => (

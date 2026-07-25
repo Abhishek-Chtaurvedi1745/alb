@@ -37,7 +37,7 @@ function SectionHeading({ titleHtml, subtitle, className = "", centered = true }
       ) : null}
       {subtitle ? (
         <p
-          className={`font-normal mt-5 max-w-3xl text-base leading-relaxed text-white/90 md:text-[18px] ${
+          className={`font-normal mt-5 max-w-3xl text-base leading-relaxed text-white/90 md:text-[16px] ${
             centered ? "mx-auto" : ""
           }`}
         >
@@ -73,7 +73,7 @@ function CapabilityCard({ panel, index }) {
         <div className="absolute inset-0 bg-[#0c0c0c]" />
       )}
 
-      <h4 className="relative mb-4 text-xl font-semibold leading-snug text-white md:text-2xl">
+      <h4 className="relative mb-4 text-[20px] font-semibold leading-snug text-white">
         {panel.title}
       </h4>
 

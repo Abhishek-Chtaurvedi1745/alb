@@ -63,7 +63,7 @@ function page() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent" />
 
         <div className="relative z-10 flex h-full flex-col items-start justify-center gap-4 px-6 md:gap-6 md:px-16">
-          <h1 className="max-w-3xl text-3xl font-bold leading-tight text-white md:text-[45px]">
+          <h1 className="max-w-3xl text-3xl font-bold leading-tight text-white md:text-[40px]">
             Project Portfolio{" "}
             <span className="text-[#FF403A]">
               secure AI into your PMO?
@@ -75,7 +75,7 @@ function page() {
             organizations manage work with structure, visibility and control.
           </p>
 
-          <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
+          <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] md:text-[18px]">
             Talk to our team
           </BookACallButton>
         </div>
@@ -85,10 +85,10 @@ function page() {
 
         {/* Header */}
         <div className="mb-8 text-center sm:mb-10 md:mb-12">
-          <h3 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[40px]">
+          <h1 className="mb-3 text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[40px]">
             Transformative Benefits of{" "}
             <span className="text-[#e02b20]">Implementing PPM</span>
-          </h3>
+          </h1>
           <p className="mx-auto max-w-3xl text-sm font-medium leading-relaxed text-white sm:text-sm md:text-[16px] lg:text-[13px]">
             Implementing modern Project and Portfolio Management (PPM) practices
             can yield several transformative benefits for organizations. Here are
@@ -117,10 +117,10 @@ function page() {
       <div className="mx-auto max-w-6xl">
 
         {/* Heading */}
-        <h3 className="mb-12 text-center text-[32px] font-bold leading-tight text-white md:text-[40px]">
+        <h1 className="mb-12 text-center text-[32px] font-bold leading-tight text-white md:text-[40px]">
           Engage with Albatroz{" "}
           <span className="text-[#FF403A]">for PPM Solutions</span>
-        </h3>
+        </h1>
 
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start">
 
@@ -199,7 +199,7 @@ function page() {
                 </div>
               </div>
 
-              <BookACallButton className="rounded-sm bg-[#FF403A] px-7 py-2.5 text-[20px] font-semibold text-white transition-colors duration-200 hover:bg-[#cc2f2a]">
+              <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-7 py-2.5 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] md:text-[18px]">
                 Request a Demo
               </BookACallButton>
             </div>
@@ -260,7 +260,7 @@ function page() {
                 and maximize the value of your PPM investments.
               </p>
 
-              <BookACallButton className="bg-[#FF403A] hover:bg-[#cc2f2a] transition-colors duration-200 text-white text-[20px] font-semibold px-7 py-2.5 rounded-sm">
+              <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-7 py-2.5 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] md:text-[18px]">
                 Book Free Consultation
               </BookACallButton>
             </div>
@@ -272,10 +272,10 @@ function page() {
 <section className="bg-black px-6 pt-10 pb-6 text-white md:pt-14">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 text-center md:mb-16">
-          <h3 className="text-3xl font-semibold md:text-[45px]">
+          <h1 className="text-3xl font-semibold md:text-[40px]">
             Modern PPM Solutions:
             <span className="text-[#FF403A]"> Comprehensive Features</span>
-          </h3>
+          </h1>
         </div>
 
         {/* Strategic Portfolio Management */}
@@ -402,7 +402,7 @@ function page() {
                 </div>
               ))}
             </div>
-            <BookACallButton className="mt-7 rounded-sm bg-[#FF403A] px-7 py-2.5 text-[18px] font-semibold text-white transition-colors duration-200 hover:bg-[#cc2f2a] md:text-[20px]">
+            <BookACallButton className="mt-7 inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-7 py-2.5 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] md:text-[18px]">
               Book Free Consultation
             </BookACallButton>
           </div>
@@ -422,7 +422,7 @@ function page() {
         
         {/* Top Section: Button aligned right */}
        <div className="flex mb-0" style={{ justifyContent: 'center' }}>
-          <BookACallButton className="bg-[#FF3B30] hover:bg-[#E03126] text-white font-semibold py-3 px-8 text-lg rounded-sm transition-colors duration-200 shadow-lg cursor-pointer">
+          <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-8 py-3 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] cursor-pointer shadow-lg md:text-lg">
             Book free Consultation
           </BookACallButton>
         </div>

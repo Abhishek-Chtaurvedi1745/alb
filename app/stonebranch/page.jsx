@@ -93,7 +93,7 @@ export default function StonebranchPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
 
         <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[45px]">
+          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
             Stonebranch
           </h1>
 
@@ -123,7 +123,7 @@ export default function StonebranchPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/90" />
                 <div className="relative flex h-full flex-col p-6 md:p-7">
-                  <h4 className="text-xl font-semibold leading-snug text-white md:text-2xl">
+                  <h4 className="text-[20px] font-semibold leading-snug text-white">
                     {section.title}{" "}
                     <span className="text-[#FF403A]">{section.titleAccent}</span>
                   </h4>

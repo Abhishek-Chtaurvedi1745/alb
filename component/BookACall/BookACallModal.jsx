@@ -104,7 +104,7 @@ export default function BookACallModal() {
               </p>
               <h2
                 id="book-a-call-title"
-                className="mb-2 pr-8 text-[22px] font-semibold leading-tight text-white sm:text-3xl md:text-[34px]"
+                className="mb-2 pr-8 text-[22px] font-semibold leading-tight text-white sm:text-3xl md:text-[40px]"
               >
                 Let&apos;s Start the{" "}
                 <span className="text-[#ff403a]">Conversation</span>
