@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
 import BookACallButton from "@/component/BookACall/BookACallButton";
-import SolutionHero from "@/section/Automation/SolutionHero";
 import { prebuiltPlugins } from "@/section/Clarity/prebuiltPluginsData";
 
 function SectionBlock({ section }) {
@@ -50,14 +49,25 @@ export default function PrebuiltPluginPage({ page }) {
 
   return (
     <div className="bg-black">
-      <SolutionHero
-        title={page.title}
-        titleAccent={page.titleAccent}
-        image={page.heroImage}
-        imageAlt={page.heroImageAlt}
-      />
+      <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
+        <img
+          src={page.heroImage}
+          alt={page.heroImageAlt}
+          className="h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/25" />
+        <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
+          <h1 className="max-w-3xl text-3xl font-semibold text-white md:text-[45px]">
+            {page.title}{" "}
+            <span className="text-[#FF403A]">{page.titleAccent}</span>
+          </h1>
+          <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
+            Request a free demo
+          </BookACallButton>
+        </div>
+      </section>
 
-      <section className="px-4 pt-4 sm:px-6">
+      <section className="px-4 pt-6 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <nav className="text-sm text-white/60">
             <Link href="/clarity" className="transition-colors hover:text-[#ff403a]">
@@ -71,11 +81,7 @@ export default function PrebuiltPluginPage({ page }) {
 
       <section className="px-6 py-14">
         <div className="mx-auto max-w-4xl text-center">
-          <h3 className="text-3xl font-semibold text-white md:text-[40px]">
-            {page.title}{" "}
-            <span className="text-[#FF403A]">{page.titleAccent}</span>
-          </h3>
-          <p className="font-normal mx-auto mt-6 max-w-3xl text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]">
+          <p className="mx-auto max-w-3xl text-sm font-normal leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]">
             {page.summary}
           </p>
         </div>

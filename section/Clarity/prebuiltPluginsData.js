@@ -5,7 +5,7 @@ export const prebuiltPlugins = [
     titleAccent: "Integration",
     tabLabel: "Jira Integration",
     tabIcon: "/images/14.svg",
-    heroImage: "/images/aa1.svg",
+    heroImage: "/images/clarity-plugin-jira-hero.png?v=1",
     heroImageAlt: "Jira Integration with Clarity PPM",
     summary:
       "Jira integration helps project managers view up-to-date Agile development status executed in Jira, directly from within Clarity PPM. Built using our integration framework, it connects Clarity PPM with Jira to import Agile execution data including Epics, User Stories, Tasks, and Time into Clarity PPM.",
@@ -69,7 +69,7 @@ export const prebuiltPlugins = [
     titleAccent: "Integration",
     tabLabel: "Resource Integration",
     tabIcon: "/images/new16.svg",
-    heroImage: "/images/iggt.svg",
+    heroImage: "/images/clarity-plugin-resource-hero.png?v=1",
     heroImageAlt: "Resource Integration with Clarity PPM",
     summary:
       "Resource Integration automates user and resource provisioning by synchronizing employee information from your HR system directly into Clarity PPM, eliminating manual administration and ensuring Clarity always reflects the latest workforce information.",
@@ -132,7 +132,7 @@ export const prebuiltPlugins = [
     titleAccent: "Integration",
     tabLabel: "Financial Integration",
     tabIcon: "/images/md1.svg",
-    heroImage: "/images/md2.svg",
+    heroImage: "/images/clarity-plugin-financial-hero.png?v=1",
     heroImageAlt: "Financial Integration with Clarity PPM",
     summary:
       "Financial Integration automates the import of labor and non-labor actual costs from enterprise financial systems into Clarity PPM, eliminating manual data entry and providing project managers with complete visibility into project costs.",
@@ -195,7 +195,7 @@ export const prebuiltPlugins = [
     titleAccent: "Migrator",
     tabLabel: "Blueprint Migrator",
     tabIcon: "/images/13.svg",
-    heroImage: "/images/aa3.svg",
+    heroImage: "/images/clarity-plugin-blueprint-hero.png?v=1",
     heroImageAlt: "Blueprint Migrator for Clarity PPM",
     summary:
       "Blueprint Migrator is an Albatroz-developed utility that automates the migration of Clarity blueprints between environments, enabling faster deployments and consistent configurations with just a few clicks.",

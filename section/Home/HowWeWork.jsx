@@ -232,12 +232,12 @@ export default function HowWeWork() {
               inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
-            <div className="absolute h-72 w-72 rounded-full bg-[#ff403a]/15 blur-3xl" />
-            <div className="absolute h-48 w-48 translate-x-16 -translate-y-8 rounded-full bg-[#ff403a]/10 blur-3xl" />
+            <div className="absolute h-48 w-48 rounded-full bg-[#ff403a]/15 blur-3xl" />
+            <div className="absolute h-36 w-36 translate-x-10 -translate-y-5 rounded-full bg-[#ff403a]/10 blur-3xl" />
             <img
               src="/images/hww.png?v=2"
               alt="How we work process illustration"
-              className="relative z-0 w-full max-w-[520px] object-contain"
+              className="relative z-0 w-full max-w-[340px] object-contain md:max-w-[360px] lg:max-w-[380px]"
             />
           </div>
         </div>

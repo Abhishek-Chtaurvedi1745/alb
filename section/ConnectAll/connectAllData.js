@@ -18,37 +18,37 @@ export const useCases = [
     title: "Modernizing Legacy Systems",
     description:
       "Connect legacy or mainframe-based applications with modern enterprise platforms, allowing organizations to continue leveraging existing technology investments without costly replacements.",
-    icon: "/images/14.svg",
+    image: "/images/connectall-case-legacy.png?v=1",
   },
   {
     title: "Faster Incident Resolution",
     description:
       "Automatically synchronize incidents, defects, and change requests across IT Service Management platforms and development tools to accelerate issue resolution.",
-    icon: "/images/12.svg",
+    image: "/images/connectall-case-incident.png?v=1",
   },
   {
     title: "Connected Delivery Teams",
     description:
       "Keep project information synchronized across development, testing, business analysis, and project management tools so every team works with consistent data.",
-    icon: "/images/11.svg",
+    image: "/images/connectall-case-teams.png?v=1",
   },
   {
     title: "Executive Portfolio Visibility",
     description:
       "Integrate execution tools with portfolio management platforms such as Clarity to provide executives with reliable reporting and end-to-end visibility.",
-    icon: "/images/md1.svg",
+    image: "/images/connectall-case-portfolio.png?v=1",
   },
   {
     title: "Simplified Platform Migrations",
     description:
       "Synchronize large volumes of data between systems to enable phased migrations with minimal disruption to business operations.",
-    icon: "/images/13.svg",
+    image: "/images/connectall-case-migration.png?v=1",
   },
   {
     title: "End-to-End Release Traceability",
     description:
       "Connect planning, development, testing, and change management tools to accelerate software releases while maintaining governance and compliance.",
-    icon: "/images/15.svg",
+    image: "/images/connectall-case-release.png?v=1",
   },
 ];
 

@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { aiServicesPageData } from "./aiServicesPageData";
 
 const SLIDE_INTERVAL = 6500;
-const HERO_IMAGE = "/images/ai.png";
+const HERO_IMAGE = "/images/ai-services-hero.png?v=2";
 
 function RichHtml({ html, className = "", as: Tag = "span" }) {
   const safe = html
@@ -54,23 +54,51 @@ function CapabilityCard({ panel, index }) {
   return (
     <article
       ref={ref}
-      className={`flex h-full flex-col rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 transition-all duration-700 hover:border-[#FF403A]/40 ${
+      className={`relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 p-6 transition-all duration-700 hover:border-[#FF403A]/50 ${
         inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
       style={{ transitionDelay: `${index * 80}ms` }}
     >
-      <h4 className="mb-4 text-xl font-semibold leading-snug text-white md:text-2xl">
+      {panel.image ? (
+        <>
+          <img
+            src={`${panel.image}?v=1`}
+            alt=""
+            aria-hidden
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90" />
+        </>
+      ) : (
+        <div className="absolute inset-0 bg-[#0c0c0c]" />
+      )}
+
+      <h4 className="relative mb-4 text-xl font-semibold leading-snug text-white md:text-2xl">
         {panel.title}
       </h4>
 
-      <p className="mb-5 text-sm leading-relaxed text-white/90 md:text-base">
+      <p className="relative mb-5 text-sm leading-relaxed text-white/90 md:text-base">
         {panel.desc}
       </p>
 
-      <ul className="mt-auto space-y-3">
+      <ul className="relative mt-auto space-y-3">
         {panel.tags.map((tag) => (
           <li key={tag} className="flex items-start gap-2.5">
-            <img src="/images/crt.svg" alt="" className="mt-1 h-4 w-4 shrink-0" />
+            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#FF403A]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-3 w-3 text-white"
+                aria-hidden
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
             <span className="text-sm leading-relaxed text-white/90 md:text-base">
               {tag}
             </span>
@@ -83,47 +111,49 @@ function CapabilityCard({ panel, index }) {
 
 function TierCard({ tier, index }) {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const layerLabels = ["Layer One", "Layer Two", "Layer Three"];
-  const frontLabel = layerLabels[index] || `Layer ${index + 1}`;
+  const layerNumber = String(index + 1).padStart(2, "0");
 
   return (
     <article
       ref={ref}
-      className={`ai-flip-card h-[360px] transition-all duration-700 sm:h-[380px] ${
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#FF403A]/35 bg-[#0a0a0a] p-6 transition-all duration-700 hover:-translate-y-1 hover:border-[#FF403A]/70 sm:p-7 ${
         inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       }`}
       style={{ transitionDelay: `${index * 120}ms` }}
     >
-      <div className="ai-flip-inner h-full w-full">
-        <div className="ai-flip-face ai-flip-front flex flex-col items-center justify-center rounded-2xl border border-[#FF403A]/40 bg-[#0a0a0a] px-6 text-center">
-          <p className="text-4xl font-bold tracking-tight text-[#FF403A] sm:text-5xl md:text-[52px]">
-            {frontLabel}
-          </p>
-        </div>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-6 -top-8 text-[7rem] font-bold leading-none text-[#FF403A]/[0.07] transition-colors duration-500 group-hover:text-[#FF403A]/15"
+      >
+        {layerNumber}
+      </div>
 
-        <div className="ai-flip-face ai-flip-back flex flex-col rounded-2xl border border-[#FF403A]/40 bg-[#0a0a0a] p-6 sm:p-7">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#FF403A]">
-            {tier.kicker}
-          </p>
-          <RichHtml
-            html={tier.titleHtml}
-            className="mb-3 text-lg font-semibold leading-snug text-white md:text-xl"
-            as="h4"
-          />
-          <p className="mb-5 flex-1 text-sm leading-relaxed text-white/90 md:text-[15px]">
-            {tier.desc}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {tier.skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-md border border-white/10 bg-[#111111] px-2.5 py-1 text-xs text-white/60"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
+      <div className="relative mb-5 flex items-center gap-3">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#FF403A]/40 bg-[#FF403A]/10 text-sm font-bold text-[#FF403A]">
+          {layerNumber}
+        </span>
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#FF403A]">
+          {tier.kicker}
+        </p>
+      </div>
+
+      <RichHtml
+        html={tier.titleHtml}
+        className="relative mb-3 text-lg font-semibold leading-snug text-white md:text-xl"
+        as="h4"
+      />
+      <p className="relative mb-6 flex-1 text-sm leading-relaxed text-white/90 md:text-[15px]">
+        {tier.desc}
+      </p>
+      <div className="relative flex flex-wrap gap-2">
+        {tier.skills.map((skill) => (
+          <span
+            key={skill}
+            className="rounded-md border border-white/10 bg-[#111111] px-2.5 py-1 text-xs text-white/70 transition-colors group-hover:border-[#FF403A]/25 group-hover:text-white/85"
+          >
+            {skill}
+          </span>
+        ))}
       </div>
     </article>
   );
@@ -165,18 +195,19 @@ export default function AIServicesPage() {
       >
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 md:flex-row">
           <div className="w-full">
-            <div className="relative min-h-[280px] md:min-h-[320px]">
+            <div className="ai-hero-slides">
               {slides.map((slide, index) => (
                 <div
                   key={slide.eyebrow}
                   className={`ai-hero-slide ${index === activeSlide ? "active" : ""}`}
+                  aria-hidden={index !== activeSlide}
                 >
                   <RichHtml
                     html={slide.titleHtml}
                     className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
                     as="h1"
                   />
-                  <p className="font-normal mt-6 max-w-2xl text-sm leading-relaxed text-white/90 md:text-[16px]">
+                  <p className="mt-6 max-w-2xl text-sm font-normal leading-relaxed text-white/90 md:text-[16px]">
                     {slide.subtitle}
                   </p>
                   <BookACallButton className="mt-7 inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
@@ -189,7 +220,7 @@ export default function AIServicesPage() {
             <div className="ai-hero-dots mt-8 flex gap-2">
               {slides.map((slide, index) => (
                 <button
-                  key={slide.eyebrow}
+                  key={`${slide.eyebrow}-${index === activeSlide ? "on" : "off"}`}
                   type="button"
                   className={`relative h-[3px] w-8 overflow-hidden rounded-sm border-0 bg-white/15 ${
                     index === activeSlide ? "active" : ""
@@ -201,11 +232,27 @@ export default function AIServicesPage() {
             </div>
           </div>
 
-          <div className="flex w-full justify-center">
+          <div className="relative w-full overflow-hidden bg-black">
             <img
               src={HERO_IMAGE}
-              alt="AI services for enterprise"
-              className="w-full rounded-xl shadow-lg"
+              alt="AI partnership for enterprise — human and intelligent systems working together"
+              className="relative z-10 w-full object-contain mix-blend-lighten [mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [mask-size:100%_100%] [-webkit-mask-size:100%_100%] [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 left-0 z-20 w-[28%] bg-gradient-to-r from-black via-black/70 to-transparent"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[28%] bg-gradient-to-l from-black via-black/70 to-transparent"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-black via-black/70 to-transparent"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-24 bg-gradient-to-t from-black via-black/75 to-transparent"
             />
           </div>
         </div>

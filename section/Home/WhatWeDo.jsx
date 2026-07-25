@@ -18,7 +18,6 @@ const services = [
   {
     icon: "/images/md2.svg",
     title: "Enterprise IT Automation",
-    featured: true,
     href: "/enterprise-it-automation",
     items: [
       "Broadcom Automic Automation",
@@ -43,35 +42,37 @@ const services = [
 
 function ServiceCard({ service, index, inView }) {
   const [hovered, setHovered] = useState(false);
-  const active = hovered || service.featured;
+  // Highlight only on hover — no default featured state
+  const active = hovered;
 
   const card = (
     <article
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={`group relative h-full transition-all duration-700 ease-out ${
+      className={`group relative h-full transition-[opacity,transform] duration-700 ease-out ${
         inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
       } ${service.href ? "cursor-pointer" : ""}`}
       style={{ transitionDelay: `${index * 150}ms` }}
     >
-      {/* Outer glow */}
+      {/* Outer glow — absolute only, no layout push */}
       <div
-        className={`pointer-events-none absolute -inset-px rounded-2xl transition-all duration-500 ${
+        aria-hidden
+        className={`pointer-events-none absolute -inset-px rounded-2xl transition-opacity duration-500 ${
           active
             ? "bg-gradient-to-b from-[#ff403a]/80 via-[#ff403a]/30 to-transparent opacity-100 blur-[1px]"
-            : "bg-gradient-to-b from-[#ff403a]/30 to-transparent opacity-40"
+            : "opacity-0"
         }`}
       />
 
       <div
-        className={`relative flex h-full min-h-full flex-col overflow-hidden rounded-2xl border bg-[#080808] p-7 transition-all duration-500 md:p-8 ${
+        className={`relative flex h-full min-h-full flex-col overflow-hidden rounded-2xl border bg-[#080808] p-7 transition-[border-color,box-shadow] duration-500 md:p-8 ${
           active
             ? "border-[#ff403a]/70 shadow-[0_0_40px_rgba(255,64,58,0.18)]"
-            : "border-[#ff403a]/20 shadow-none"
+            : "border-white/10 shadow-none"
         }`}
       >
         {/* Top accent bar */}
-        <div className="absolute inset-x-0 top-0 h-[3px] overflow-hidden bg-[#ff403a]/20">
+        <div className="absolute inset-x-0 top-0 h-[3px] overflow-hidden bg-white/5">
           <div
             className={`h-full bg-gradient-to-r from-transparent via-[#ff403a] to-transparent transition-all duration-700 ${
               active ? "w-full opacity-100" : "w-0 opacity-0"
@@ -81,30 +82,29 @@ function ServiceCard({ service, index, inView }) {
 
         {/* Ambient corner glow */}
         <div
+          aria-hidden
           className={`pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#ff403a]/10 blur-3xl transition-opacity duration-500 ${
             active ? "opacity-100" : "opacity-0"
           }`}
         />
 
-        {/* Icon */}
+        {/* Icon — scale stays inside card, no push */}
         <div className="relative mx-auto mb-7 flex h-24 w-24 shrink-0 items-center justify-center">
           <div
-            className={`absolute inset-0 rounded-full border transition-all duration-500 ${
+            className={`absolute inset-0 rounded-full border transition-[border-color,opacity] duration-500 ${
               active
-                ? "scale-110 border-[#ff403a]/50 opacity-100"
-                : "scale-100 border-[#ff403a]/20 opacity-60"
+                ? "border-[#ff403a]/50 opacity-100"
+                : "border-white/15 opacity-60"
             }`}
           />
           <div
-            className={`absolute inset-2 rounded-full border border-dashed transition-all duration-700 ${
-              active ? "rotate-180 border-[#ff403a]/40" : "rotate-0 border-[#ff403a]/15"
+            className={`absolute inset-2 rounded-full border border-dashed transition-[border-color,transform] duration-700 ${
+              active
+                ? "rotate-180 border-[#ff403a]/40"
+                : "rotate-0 border-white/10"
             }`}
           />
-          <div
-            className={`relative flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#ff403a] shadow-[0_8px_30px_rgba(255,64,58,0.35)] transition-transform duration-500 ${
-              active ? "scale-105" : "scale-100"
-            }`}
-          >
+          <div className="relative flex h-[72px] w-[72px] items-center justify-center rounded-full bg-[#ff403a] shadow-[0_8px_30px_rgba(255,64,58,0.35)]">
             <img
               src={service.icon}
               alt=""
@@ -119,7 +119,7 @@ function ServiceCard({ service, index, inView }) {
         </h4>
 
         {/* Underline */}
-        <div className="mx-auto my-5 flex h-[2px] w-16 shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#ff403a]/20">
+        <div className="mx-auto my-5 flex h-[2px] w-16 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white/10">
           <div
             className={`h-full rounded-full bg-[#ff403a] transition-all duration-500 ${
               active ? "w-full" : "w-1/2"
@@ -129,15 +129,14 @@ function ServiceCard({ service, index, inView }) {
 
         {/* List */}
         <ul className="mt-auto flex flex-1 flex-col space-y-3.5">
-          {service.items.map((item, i) => (
+          {service.items.map((item) => (
             <li
               key={item}
-              className="flex items-start gap-3 text-[14px] text-white/90 transition-all duration-300 md:text-[16px]"
-              style={{ transitionDelay: `${i * 40}ms` }}
+              className="flex items-start gap-3 text-[14px] text-white/90 md:text-[16px]"
             >
               <span
-                className={`mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full transition-all duration-300 ${
-                  active ? "bg-[#ff403a]/20 scale-100" : "bg-transparent scale-90"
+                className={`mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full transition-colors duration-300 ${
+                  active ? "bg-[#ff403a]/20" : "bg-transparent"
                 }`}
               >
                 <img src="/images/mdc.svg" alt="" className="h-4 w-4" />
@@ -155,6 +154,7 @@ function ServiceCard({ service, index, inView }) {
 
         {/* Bottom shine on hover */}
         <div
+          aria-hidden
           className={`pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#ff403a]/[0.06] to-transparent transition-opacity duration-500 ${
             active ? "opacity-100" : "opacity-0"
           }`}

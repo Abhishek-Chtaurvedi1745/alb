@@ -263,7 +263,7 @@ function FlyoutServiceRow({ label, href, onNavigate, isSectionTitle = false }) {
 function FlyoutPanel({ isOpen, left, width, zIndex, top = 0, children, className = "" }) {
   return (
     <div
-      className={`absolute border-[#e5e7eb] bg-white transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] will-change-[transform,opacity,top] ${
+      className={`absolute h-fit border-[#e5e7eb] bg-white transition-[transform,opacity] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
         isOpen
           ? "pointer-events-auto translate-x-0 opacity-100"
           : "pointer-events-none translate-x-2 opacity-0"
@@ -273,6 +273,7 @@ function FlyoutPanel({ isOpen, left, width, zIndex, top = 0, children, className
         width,
         zIndex,
         top,
+        height: "fit-content",
       }}
       aria-hidden={!isOpen}
     >
@@ -284,6 +285,7 @@ function FlyoutPanel({ isOpen, left, width, zIndex, top = 0, children, className
 export function SolutionsMegaMenuWide({ onClose }) {
   const [activeMainId, setActiveMainId] = useState(null);
   const [activeSubKey, setActiveSubKey] = useState(null);
+  const [col3Top, setCol3Top] = useState(0);
 
   const activeMain = desktopFlyoutMenu.find((item) => item.id === activeMainId);
   const activeSub = activeMain?.children?.find(
@@ -301,16 +303,25 @@ export function SolutionsMegaMenuWide({ onClose }) {
   const resetPanels = () => {
     setActiveMainId(null);
     setActiveSubKey(null);
+    setCol3Top(0);
   };
 
   const handleMainEnter = (item) => {
     setActiveMainId(item.id);
     setActiveSubKey(null);
+    setCol3Top(0);
   };
 
-  const handleSubEnter = (mainId, index, child) => {
+  const handleSubEnter = (mainId, index, child, event) => {
     setActiveMainId(mainId);
-    setActiveSubKey(child.children?.length ? `${mainId}-sub-${index}` : null);
+    if (child.children?.length) {
+      setActiveSubKey(`${mainId}-sub-${index}`);
+      // Keep 3rd panel beside the hovered row (Clarity / Rally / ConnectALL)
+      setCol3Top(event?.currentTarget?.offsetTop ?? 0);
+    } else {
+      setActiveSubKey(null);
+      setCol3Top(0);
+    }
   };
 
   return (
@@ -319,7 +330,7 @@ export function SolutionsMegaMenuWide({ onClose }) {
       style={{ width: hoverAreaWidth, minWidth: FLYOUT_COL1_WIDTH }}
       onMouseLeave={resetPanels}
     >
-      <div className="relative z-30 w-[300px] overflow-hidden rounded-sm border border-[#93c5fd]/80 bg-white py-2 shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
+      <div className="relative z-30 h-fit w-[300px] overflow-hidden rounded-sm border border-[#93c5fd]/80 bg-white py-1.5 shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
         {desktopFlyoutMenu.map((item) => (
           <FlyoutMenuRow
             key={item.id}
@@ -338,7 +349,8 @@ export function SolutionsMegaMenuWide({ onClose }) {
         left={FLYOUT_COL1_WIDTH}
         width={FLYOUT_COL2_WIDTH}
         zIndex={20}
-        className="top-0 rounded-r-sm border border-l-0 border-[#93c5fd]/80 py-2 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
+        top={0}
+        className="rounded-r-sm border border-l-0 border-[#93c5fd]/80 py-1.5 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
       >
         {activeMain?.children?.map((child, index) => (
           <FlyoutMenuRow
@@ -347,8 +359,8 @@ export function SolutionsMegaMenuWide({ onClose }) {
             href={child.href}
             isActive={activeSubKey === `${activeMain.id}-sub-${index}`}
             hasChildren={Boolean(child.children?.length)}
-            onMouseEnter={() =>
-              handleSubEnter(activeMain.id, index, child)
+            onMouseEnter={(event) =>
+              handleSubEnter(activeMain.id, index, child, event)
             }
             onNavigate={onClose}
           />
@@ -360,7 +372,8 @@ export function SolutionsMegaMenuWide({ onClose }) {
         left={FLYOUT_COL1_WIDTH + FLYOUT_COL2_WIDTH}
         width={FLYOUT_COL3_WIDTH}
         zIndex={10}
-        className="top-0 rounded-r-sm border border-l-0 border-[#93c5fd]/80 py-2 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
+        top={col3Top}
+        className="rounded-r-sm border border-l-0 border-[#93c5fd]/80 py-1.5 shadow-[0_24px_60px_rgba(0,0,0,0.18)]"
       >
         {activeSub?.children?.map((service) => (
           <FlyoutServiceRow

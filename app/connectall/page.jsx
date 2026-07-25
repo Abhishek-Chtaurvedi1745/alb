@@ -46,12 +46,14 @@ export default function ConnectAllPage() {
     <div className="bg-black text-white">
       <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
         <img
-          src="/images/connectall-hero-banner.png"
+          src="/images/connectall-hero-banner.png?v=3"
           alt="ConnectALL by Broadcom"
-          className="h-full w-full object-cover object-top"
+          className="h-full w-full object-cover object-center"
         />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent" />
 
-        <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
+        <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
           <h1 className="text-3xl font-semibold text-white md:text-[45px]">
             ConnectALL{" "}
             <span className="text-[#FF403A]">by Broadcom</span>
@@ -86,13 +88,13 @@ export default function ConnectAllPage() {
         items={useCases.map((item) => ({
           title: item.title,
           description: item.description,
-          icon: item.icon,
+          image: item.image,
         }))}
       />
 
       <section className="px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
+          <h3 className="text-center text-3xl font-semibold leading-tight md:text-[40px]">
             Why Choose <span className="text-[#FF403A]">Albatroz?</span>
           </h3>
 
@@ -113,7 +115,7 @@ export default function ConnectAllPage() {
 
       <section className="px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
+          <h3 className="text-center text-3xl font-semibold leading-tight md:text-[40px]">
             Our Delivery <span className="text-[#FF403A]">Methodology</span>
           </h3>
 
@@ -153,7 +155,7 @@ export default function ConnectAllPage() {
 
       <section className="px-6 pb-20 pt-4 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
+          <h3 className="text-center text-3xl font-semibold leading-tight md:text-[40px]">
             Enable a Truly{" "}
             <span className="text-[#FF403A]">Connected Enterprise</span>
           </h3>

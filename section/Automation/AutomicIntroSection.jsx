@@ -16,7 +16,7 @@ export default function AutomicIntroSection() {
   return (
     <section className="w-full bg-black px-6 py-16 text-white lg:px-12">
       <div className="mx-auto w-full max-w-7xl text-left">
-        <h3 className="w-full text-left text-3xl font-semibold leading-tight md:text-[40px]">
+        <h3 className="w-full text-center text-3xl font-semibold leading-tight md:text-[40px]">
           Automic Workload{" "}
           <span className="text-[#FF403A]">Automation (AWA)</span>
         </h3>

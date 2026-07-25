@@ -20,13 +20,6 @@ function page() {
       {/* About Us content */}
       <section className="w-full overflow-hidden bg-black px-4 py-10 md:py-14">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-6 text-center md:mb-8">
-            <h4 className="text-3xl font-semibold text-white md:text-[45px]">
-              About
-              <span className="text-[#FF403A]">{" "}Us</span>
-            </h4>
-          </div>
-
           <p className="mb-4 text-justify text-[13px] font-normal leading-[1.65] text-[#E5E5E5] md:mb-5 md:text-[16px]">
             Established in 2018, Albatroz Solutions is an esteemed IT services
             firm that excels in offering consultation, implementation,

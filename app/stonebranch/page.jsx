@@ -1,5 +1,4 @@
 import BookACallButton from "@/component/BookACall/BookACallButton";
-import AlternatingSection from "@/section/Automation/AlternatingSection";
 import FunctionalityGrid from "@/section/Automation/FunctionalityGrid";
 import StonebranchServicesGrid from "@/section/Automation/StonebranchServicesGrid";
 
@@ -9,27 +8,24 @@ const productSections = [
     titleAccent: "(UAC)",
     description:
       "Stonebranch Universal Automation Center (UAC) is a modern workload automation platform that orchestrates IT and business processes across hybrid environments. It provides centralized scheduling, monitoring, and control for complex workflows spanning on-premises, cloud, and containerized infrastructure.",
-    image: "/images/ea4.png",
+    image: "/images/stonebranch-uac.png?v=1",
     imageAlt: "Stonebranch Universal Automation Center",
-    imageRight: true,
   },
   {
     title: "Universal Data Mover",
     titleAccent: "Gateway (UDMG)",
     description:
       "Universal Data Mover Gateway enables secure, reliable, and high-performance file transfer and data movement across enterprise systems. It supports managed file transfer use cases with governance, encryption, and operational visibility built for demanding enterprise workloads.",
-    image: "/images/ea2.png",
+    image: "/images/stonebranch-udmg.png?v=1",
     imageAlt: "Universal Data Mover Gateway",
-    imageRight: false,
   },
   {
     title: "UDMG Secure Proxy",
     titleAccent: "(USP)",
     description:
       "UDMG Secure Proxy adds a hardened security layer for data movement and integration workflows. It helps organizations enforce policies, protect sensitive transfers, and maintain compliance while keeping automation pipelines efficient and scalable.",
-    image: "/images/ea1.png",
+    image: "/images/stonebranch-usp.png?v=1",
     imageAlt: "UDMG Secure Proxy",
-    imageRight: true,
   },
 ];
 
@@ -38,43 +34,43 @@ const capabilities = [
     title: "Workload Automation & Orchestration",
     description:
       "Centralize and automate workloads, applications, and business processes across your enterprise from a single platform. Improve efficiency, reduce manual intervention, and ensure reliable execution of critical operations.",
-    icon: "/images/md2.svg",
+    image: "/images/sb-cap-workload.png?v=1",
   },
   {
     title: "Hybrid Infrastructure Automation",
     description:
       "Manage and automate workloads across cloud, on-premises, virtualized, and containerized environments with ease. Gain the flexibility to scale operations while maintaining consistency across your hybrid IT landscape.",
-    icon: "/images/14.svg",
+    image: "/images/sb-cap-hybrid.png?v=1",
   },
   {
     title: "DevOps Automation",
     description:
       "Streamline application delivery by automating deployment workflows, release processes, and operational tasks. Accelerate innovation, improve collaboration, and deliver changes faster with greater confidence.",
-    icon: "/images/15.svg",
+    image: "/images/sb-cap-devops.png?v=1",
   },
   {
     title: "Data Pipeline Orchestration",
     description:
       "Orchestrate end-to-end data workflows across systems, platforms, and business applications. Ensure timely, accurate data availability while simplifying complex processing dependencies.",
-    icon: "/images/13.svg",
+    image: "/images/sb-cap-data.png?v=1",
   },
   {
     title: "Managed File Transfer",
     description:
       "Securely automate file exchanges across internal systems, cloud platforms, and external business partners. Enhance data security, compliance, and visibility while ensuring reliable file delivery.",
-    icon: "/images/12.svg",
+    image: "/images/sb-cap-mft.png?v=1",
   },
   {
     title: "Enterprise Integrations",
     description:
       "Connect seamlessly with enterprise applications, cloud services, databases, and IT operations tools. Eliminate silos and enable connected workflows that support business agility and digital transformation.",
-    icon: "/images/11.svg",
+    image: "/images/sb-cap-integrations.png?v=1",
   },
   {
     title: "AI-Powered Intelligence",
     description:
       "Leverage AI-driven insights and conversational assistance to simplify workflow management, troubleshooting, and operational decision-making. Reduce complexity, accelerate issue resolution, and improve productivity through intelligent automation guidance.",
-    icon: "/images/md3.svg",
+    image: "/images/sb-cap-ai.png?v=1",
   },
 ];
 
@@ -107,16 +103,39 @@ export default function StonebranchPage() {
         </div>
       </section>
 
-      <section className="bg-black px-6 pb-4 pt-2 text-white lg:px-12">
-        <div className="mx-auto max-w-7xl text-center">
-          <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
+      <section className="bg-black px-6 pb-8 pt-10 text-white lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <h3 className="mb-8 text-center text-3xl font-semibold leading-tight md:mb-10 md:text-[40px]">
             Stonebranch Workload{" "}
             <span className="text-[#FF403A]">Automation Solutions</span>
           </h3>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {productSections.map((section) => (
+              <article
+                key={section.title}
+                className="group relative flex min-h-[320px] flex-col overflow-hidden rounded-2xl border border-white/10"
+              >
+                <img
+                  src={section.image}
+                  alt={section.imageAlt}
+                  className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/90" />
+                <div className="relative flex h-full flex-col p-6 md:p-7">
+                  <h4 className="text-xl font-semibold leading-snug text-white md:text-2xl">
+                    {section.title}{" "}
+                    <span className="text-[#FF403A]">{section.titleAccent}</span>
+                  </h4>
+                  <p className="mt-4 text-sm font-normal leading-relaxed text-white/90 md:text-[15px]">
+                    {section.description}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
-
-      <AlternatingSection sections={productSections} />
 
       <FunctionalityGrid
         title="Core Capabilities of Stonebranch"

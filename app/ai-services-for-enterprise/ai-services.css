@@ -1,20 +1,24 @@
+.ai-hero-slides {
+  display: grid;
+}
+
 .ai-hero-slide {
-  position: absolute;
-  inset: 0;
+  grid-column: 1;
+  grid-row: 1;
   opacity: 0;
-  visibility: hidden;
-  transform: translateX(16px);
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+  transform: translateY(10px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
   text-align: left;
+  z-index: 0;
 }
 
 .ai-hero-slide.active {
   opacity: 1;
-  visibility: visible;
-  transform: translateX(0);
+  transform: translateY(0);
   pointer-events: auto;
-  position: relative;
+  z-index: 1;
 }
 
 .ai-hero-dots button.active::after {
@@ -36,33 +40,6 @@
   }
 }
 
-.ai-flip-card {
-  perspective: 1200px;
-}
-
-.ai-flip-inner {
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.ai-flip-card:hover .ai-flip-inner,
-.ai-flip-card:focus-within .ai-flip-inner {
-  transform: rotateY(180deg);
-}
-
-.ai-flip-face {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.ai-flip-back {
-  transform: rotateY(180deg);
-  overflow-y: auto;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .ai-hero-slide,
   .ai-hero-dots button.active::after {
@@ -70,7 +47,8 @@
     transition: none !important;
   }
 
-  .ai-flip-inner {
-    transition: none !important;
+  .ai-hero-slide.active {
+    opacity: 1;
+    transform: none;
   }
 }

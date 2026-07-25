@@ -81,8 +81,8 @@ export default function FloatingContactAction() {
               href={PHONE_HREF}
               className="float-contact-row group flex items-center gap-3 border-b border-white/10 px-4 py-3.5 transition hover:bg-white/[0.04] sm:px-5"
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FF403A]/15 text-[#FF403A] transition group-hover:scale-110">
-                <Phone size={18} />
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FF403A]/20 text-white transition group-hover:scale-110">
+                <Phone size={18} className="text-white" />
               </div>
               <div className="min-w-0 flex-1">
                 <p className="text-[12px] text-white/55">Call our team</p>
@@ -101,18 +101,18 @@ export default function FloatingContactAction() {
               rel="noopener noreferrer"
               className="float-contact-row group flex items-center gap-3 border-b border-white/10 px-4 py-3.5 transition hover:bg-white/[0.04] sm:px-5"
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#25D366]/15 text-[#25D366] transition group-hover:scale-110">
-                <FaWhatsapp size={20} />
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#FF403A]/20 text-white transition group-hover:scale-110">
+                <FaWhatsapp size={20} className="text-white" />
               </div>
               <div className="min-w-0 flex-1">
-                <p className="text-[15px] font-semibold text-[#25D366]">
+                <p className="text-[15px] font-semibold text-white">
                   Chat on WhatsApp
                 </p>
                 <p className="text-[12px] text-white/55">
                   Ask about Clarity, Automation & more
                 </p>
               </div>
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-white/50 transition group-hover:translate-x-0.5 group-hover:bg-[#25D366]/20 group-hover:text-[#25D366]">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-white/50 transition group-hover:translate-x-0.5 group-hover:bg-[#FF403A]/20 group-hover:text-[#FF403A]">
                 <ChevronRight size={16} />
               </span>
             </a>
@@ -125,8 +125,8 @@ export default function FloatingContactAction() {
               }}
               className="float-contact-row group flex w-full items-center gap-3 px-4 py-3.5 text-left transition hover:bg-white/[0.04] sm:px-5"
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#FF403A]/40 bg-[#FF403A]/10 text-[#FF403A] transition group-hover:scale-110">
-                <Headphones size={18} />
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#FF403A]/40 bg-[#FF403A]/20 text-white transition group-hover:scale-110">
+                <Headphones size={18} className="text-white" />
               </div>
               <div className="min-w-0 flex-1">
                 <p className="text-[15px] font-semibold text-white">

@@ -219,7 +219,7 @@ function Nav() {
           <div className="hidden md:block shrink-0">
             <BookACallButton className="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-7 py-2.5 text-[17px] font-bold tracking-wide text-[#c41e1e] shadow-[0_4px_20px_rgba(255,255,255,0.12)] transition-all duration-300 hover:scale-[1.04] hover:shadow-[0_8px_30px_rgba(255,64,58,0.25)] active:scale-[0.98]">
               <span className="absolute inset-0 bg-gradient-to-r from-white via-neutral-50 to-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <span className="relative">Book A Call</span>
+              <span className="relative">Book a Call</span>
             </BookACallButton>
           </div>
         </div>

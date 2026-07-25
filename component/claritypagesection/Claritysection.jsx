@@ -136,7 +136,7 @@ function Claritysection() {
   return (
     <section className="bg-black px-6 py-16 lg:px-12">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-12 text-3xl font-semibold text-white md:text-[40px]">
+        <h2 className="mb-12 text-center text-3xl font-semibold text-white md:text-[40px]">
           Clarity: <span className="text-[#FF403A]">Key Features</span>
         </h2>
 

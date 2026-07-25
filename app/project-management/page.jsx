@@ -53,35 +53,33 @@ const features2 = [
 function page() {
   return (
     <div>
-      <section className="mt-[83px] bg-black px-4 py-12 sm:px-6 sm:py-16">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-8 md:flex-row md:gap-10">
+      <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
+        <img
+          src="/images/ppm-hero.png?v=2"
+          alt="Project Portfolio Management"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
 
-        <div className="w-full">
-          <h1 className="mb-4 text-3xl font-bold text-white md:text-[45px]">
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent" />
+
+        <div className="relative z-10 flex h-full flex-col items-start justify-center gap-4 px-6 md:gap-6 md:px-16">
+          <h1 className="max-w-3xl text-3xl font-bold leading-tight text-white md:text-[45px]">
             Project Portfolio{" "}
             <span className="text-[#FF403A]">
-              <br />
               secure AI into your PMO?
             </span>
           </h1>
 
-          <p className="font-normal mb-6 text-sm text-white sm:text-sm md:text-[16px]">
+          <p className="max-w-xl text-sm font-normal text-white/90 md:text-[16px]">
             From portfolio planning to automation and analytics, we help
             organizations manage work with structure, visibility and control.
           </p>
-          <p className="text-lg text-white uppercase sm:text-[24px]">Talk to Our Team</p>
-        </div>
 
-        <div className="w-full">
-          <BlendedSectionImage
-            src="/images/ppm.png"
-            alt="Project Portfolio Management"
-            fade="all"
-          />
+          <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
+            Talk to our team
+          </BookACallButton>
         </div>
-
-      </div>
-    </section>
+      </section>
     <section className="bg-black px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-16 md:pb-20">
       <div className="mx-auto max-w-6xl">
 
@@ -127,11 +125,11 @@ function page() {
         <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start">
 
           {/* ── Left: PPM Wheel ── */}
-          <div className="relative shrink-0">
+          <div className="relative shrink-0 bg-black">
             <img
-              src="/images/nbnew2.png"
-              alt="PPM Solutions"
-              className="h-[300px] rounded-full object-contain md:h-[480px]"
+              src="/images/ppm-solution.png?v=2"
+              alt="PPM Solutions — Smarter Planning. Stronger Execution. Real Results."
+              className="h-[300px] w-auto max-w-full object-contain mix-blend-screen md:h-[480px]"
             />
           </div>
 
@@ -271,196 +269,154 @@ function page() {
         </div>
       </div>
     </section>
-<section className="bg-black text-white pt-10">
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <h3 className="text-3xl md:text-[45px] font-semibold">
+<section className="bg-black px-6 pt-10 pb-6 text-white md:pt-14">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-14 text-center md:mb-16">
+          <h3 className="text-3xl font-semibold md:text-[45px]">
             Modern PPM Solutions:
-            <span className="text-[#FF403A]">
-              {" "}Comprehensive Features
-            </span>
+            <span className="text-[#FF403A]"> Comprehensive Features</span>
           </h3>
-          <div className="w-full h-px bg-gray-800 mt-8"></div>
         </div>
 
-        {/* Content */}
-        <div className="grid lg:grid-cols-2 gap-0 items-center">
-
-          {/* Left Side */}
-          <div>
-            <h4 className="text-2xl md:text-[35px] font-semibold mb-6">
+        {/* Strategic Portfolio Management */}
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 md:p-8">
+            <h4 className="mb-4 text-2xl font-semibold md:text-[35px]">
               Strategic Portfolio{" "}
-              <span className="text-red-500">Management</span>
+              <span className="text-[#FF403A]">Management</span>
             </h4>
-
-            <p className="font-normal text-[#FFFFFF] text-[13px] leading-relaxed mb-8">
+            <p className="mb-6 text-[13px] font-normal leading-relaxed text-white md:text-sm">
               Strategic Portfolio Management involves the oversight and
-              management of an organization's portfolio of projects and
+              management of an organization&apos;s portfolio of projects and
               initiatives. Its primary focus is on aligning projects with
               strategic goals and maximizing business value.
             </p>
-
-            <div className="space-y-6">
+            <div className="grid gap-3 sm:grid-cols-2">
               {features.map((item, index) => (
-                <div key={index} className="flex gap-4">
-                  <img src="/images/crt.svg" alt="" />
-                  <p className="text-[#FFFFFF] text-[13px] font-regular leading-relaxed">
-                    {item}
-                  </p>
+                <div
+                  key={index}
+                  className="rounded-xl border border-white/10 bg-black/50 p-4 transition-colors hover:border-[#FF403A]/40"
+                >
+                  <div className="mb-2 flex items-start gap-2.5">
+                    <img src="/images/crt.svg" alt="" className="mt-0.5 h-4 w-4 shrink-0" />
+                    <p className="text-[13px] leading-relaxed text-white">{item}</p>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Right Side */}
-          <div className="relative">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10">
             <BlendedSectionImage
-              src="/images/newcrt.png"
-              alt="Strategic Portfolio"
+              src="/images/ppm-strategic-portfolio.png?v=1"
+              alt="Strategic Portfolio Management dashboard"
               fade="left"
             />
           </div>
-
         </div>
       </div>
     </section>
-    <section className="overflow-hidden bg-black px-4 pt-10 sm:px-6 md:pt-14">
-  <div className="mx-auto max-w-[1600px]">
 
-    <div className="grid items-center gap-8 lg:grid-cols-[55%_45%] lg:gap-10">
+    <section className="overflow-hidden bg-black px-6 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="relative order-1 overflow-hidden rounded-2xl border border-white/10 lg:order-1">
+            <BlendedSectionImage
+              src="/images/ppm-digital-product.png?v=1"
+              alt="Digital Product Management workspace"
+              fade="right"
+              animate
+            />
+          </div>
 
-      {/* LEFT IMAGE */}
-      <div className="relative">
-        <BlendedSectionImage
-          src="/images/crt1.png"
-          alt="Digital Product Management"
-          fade="right"
-          animate
-        />
-      </div>
-
-      {/* RIGHT CONTENT */}
-      <div className="pt-2 lg:pr-8 xl:pr-[50px]">
-
-        <h3 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
-          Digital Product{" "}
-          <span className="text-[#FF403A]">
-            Management
-          </span>
-        </h3>
-
-        <p className="font-normal text-[#FFFFFF] text-[13px] leading-relaxed mb-8">
-          Digital Product Management involves overseeing the
-          development, enhancement, and management of digital products
-          or services offered by a company. This includes:
-        </p>
-
-        <div className="space-y-5">
-
-          {features1.map((item, index) => (
-            <div
-              key={index}
-              className="
-                flex
-                items-start
-                gap-4
-              "
-            >
-              <img
-                src="/images/crt.svg"
-                alt=""
-                className="mt-1 w-5 h-5 shrink-0"
-              />
-
-              <div>
-                <h4 className="text-[#FF403A] text-[18px] font-medium inline">
-                  {item.title}
-                  <span className="text-white font-normal">
-                    : {item.desc}
-                  </span>
-                </h4>
-              </div>
+          <div className="order-2 rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 md:p-8 lg:order-2">
+            <h3 className="mb-4 text-2xl font-semibold text-white md:text-[35px]">
+              Digital Product <span className="text-[#FF403A]">Management</span>
+            </h3>
+            <p className="mb-6 text-[13px] font-normal leading-relaxed text-white md:text-sm">
+              Digital Product Management involves overseeing the development,
+              enhancement, and management of digital products or services
+              offered by a company. This includes:
+            </p>
+            <div className="space-y-3">
+              {features1.map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded-xl border border-white/10 bg-black/50 p-4 transition-colors hover:border-[#FF403A]/40"
+                >
+                  <div className="flex items-start gap-3">
+                    <img
+                      src="/images/crt.svg"
+                      alt=""
+                      className="mt-1 h-4 w-4 shrink-0"
+                    />
+                    <p className="text-[13px] leading-relaxed md:text-sm">
+                      <span className="font-medium text-[#FF403A]">
+                        {item.title}
+                      </span>
+                      <span className="font-normal text-white">
+                        : {item.desc}
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
-
+          </div>
         </div>
-
       </div>
+    </section>
 
-    </div>
-
-  </div>
-</section>
- <section className="overflow-hidden bg-black px-4 py-10 pt-16 sm:px-6 md:pt-20">
-  <div className="mx-auto max-w-[1600px]">
-
-    <div className="grid items-center gap-8 lg:grid-cols-[45%_55%] lg:gap-10">
-
-      {/* LEFT CONTENT */}
-      <div className="order-2 pt-2 lg:order-1 lg:pl-8 xl:pl-[50px]">
-
-        <h3 className="text-2xl md:text-[35px] font-semibold text-white mb-5">
-          Value Stream {" "}
-          <span className="text-[#FF403A]">
-            Management
-          </span>
-        </h3>
-
-        <p className="font-normal text-[#FFFFFF] text-[13px] leading-relaxed mb-8">
-         Value Stream Management (VSM) involves optimizing the entire flow of work
-across an organization to deliver value to customers efficiently. It encompasses
-        </p>
-
-        <div className="space-y-5">
-
-          {features2.map((item, index) => (
-            <div
-              key={index}
-              className="
-                flex
-                items-start
-                gap-4
-              "
-            >
-              <img
-                src="/images/crt.svg"
-                alt=""
-                className="mt-1 w-5 h-5 shrink-0"
-              />
-
-              <div>
-                <h4 className="text-[#FF403A] text-[18px] font-medium inline">
-                  {item.title}
-                  <span className="text-white font-normal">
-                    : {item.desc}
-                  </span>
-                </h4>
-              </div>
+    <section className="overflow-hidden bg-black px-6 py-10 md:py-14">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <div className="order-2 rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 md:p-8 lg:order-1">
+            <h3 className="mb-4 text-2xl font-semibold text-white md:text-[35px]">
+              Value Stream <span className="text-[#FF403A]">Management</span>
+            </h3>
+            <p className="mb-6 text-[13px] font-normal leading-relaxed text-white md:text-sm">
+              Value Stream Management (VSM) involves optimizing the entire flow
+              of work across an organization to deliver value to customers
+              efficiently. It encompasses
+            </p>
+            <div className="space-y-3">
+              {features2.map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded-xl border border-white/10 bg-black/50 p-4 transition-colors hover:border-[#FF403A]/40"
+                >
+                  <div className="flex items-start gap-3">
+                    <img
+                      src="/images/crt.svg"
+                      alt=""
+                      className="mt-1 h-4 w-4 shrink-0"
+                    />
+                    <p className="text-[13px] leading-relaxed md:text-sm">
+                      <span className="font-medium text-[#FF403A]">
+                        {item.title}
+                      </span>
+                      <span className="font-normal text-white">
+                        : {item.desc}
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+            <BookACallButton className="mt-7 rounded-sm bg-[#FF403A] px-7 py-2.5 text-[18px] font-semibold text-white transition-colors duration-200 hover:bg-[#cc2f2a] md:text-[20px]">
+              Book Free Consultation
+            </BookACallButton>
+          </div>
 
+          <div className="relative order-1 overflow-hidden rounded-2xl border border-white/10 lg:order-2">
+            <BlendedSectionImage
+              src="/images/ppm-value-stream.png?v=1"
+              alt="Value Stream Management analytics"
+              fade="left"
+            />
+          </div>
         </div>
-
-        <BookACallButton className="mt-8 bg-[#FF403A] hover:bg-[#cc2f2a] transition-colors duration-200 text-white text-[18px] md:text-[20px] font-semibold px-7 py-2.5 rounded-sm">
-          Book Free Consultation
-        </BookACallButton>
-
       </div>
-
-      <div className="relative order-1 lg:order-2">
-        <BlendedSectionImage
-          src="/images/newcrt1.png"
-          alt="Value Stream Management"
-          fade="left"
-        />
-      </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
   <section className="bg-black text-white py-6 pb-16 px-6 md:px-12">
       <div className="max-w-4xl mx-auto">
         

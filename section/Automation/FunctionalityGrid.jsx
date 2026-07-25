@@ -10,7 +10,7 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item, index) => {
-            const isCentered = Boolean(item.centered || (item.icon && !item.image));
+            const isCentered = Boolean(item.centered);
             const isLast = index === items.length - 1;
             const shouldCenterOrphan =
               isLast && !item.fullWidth && items.length % 3 === 1;
@@ -20,7 +20,7 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
             return (
               <article
                 key={item.title}
-                className={`group relative overflow-hidden rounded-2xl border border-[#FF403A] bg-[#0a0a0a] ${
+                className={`group relative overflow-hidden rounded-2xl border-0 bg-[#0a0a0a] ${
                   item.fullWidth ? "md:col-span-2 lg:col-span-3" : ""
                 } ${
                   shouldCenterOrphanMd
@@ -35,15 +35,15 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
                       alt=""
                       className={`pointer-events-none absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 ${
                         item.fullWidth
-                          ? "scale-105 object-[75%_center] opacity-80"
-                          : "opacity-70"
+                          ? "scale-105 object-[75%_center] opacity-90"
+                          : "opacity-85"
                       }`}
                     />
                     <div
                       className={`pointer-events-none absolute inset-0 ${
                         item.fullWidth
-                          ? "bg-gradient-to-r from-black from-15% via-black/75 via-45% to-transparent"
-                          : "bg-gradient-to-b from-black/50 via-black/45 to-black/80"
+                          ? "bg-gradient-to-r from-black/80 from-10% via-black/55 via-45% to-transparent"
+                          : "bg-gradient-to-b from-black/55 via-black/50 to-black/80"
                       }`}
                     />
                   </>
