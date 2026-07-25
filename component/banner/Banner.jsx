@@ -24,7 +24,8 @@ const banners = [
     cta: "Request a Free Demo",
     title: (
       <>
-        <span className="text-[#ff3f3a]">TrozAI</span>
+        <span className="text-white">Troz</span>
+        <span className="text-[#ff3f3a]">AI</span>
         {" – An AI Platform That Works within Your "}
         <span className="text-[#ff3f3a]">Enterprise Ecosystem</span>
       </>
