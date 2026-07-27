@@ -132,7 +132,7 @@ function PhaseCard({ phase, index }) {
       </div>
 
       <div className="relative mb-5 flex items-center gap-3">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#FF403A]/40 bg-[#FF403A]/10 text-sm font-bold text-[#FF403A]">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#FF403A]/40 bg-[#FF403A]/10 text-sm font-bold text-white">
           {phaseNumber}
         </span>
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#FF403A]">

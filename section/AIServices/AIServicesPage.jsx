@@ -129,7 +129,7 @@ function TierCard({ tier, index }) {
       </div>
 
       <div className="relative mb-5 flex items-center gap-3">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#FF403A]/40 bg-[#FF403A]/10 text-sm font-bold text-[#FF403A]">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#FF403A]/40 bg-[#FF403A]/10 text-sm font-bold text-white">
           {layerNumber}
         </span>
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#FF403A]">
@@ -183,7 +183,12 @@ export default function AIServicesPage() {
 
   const goToSlide = (index) => {
     setActiveSlide(index);
-    startSlideTimer();
+    if (timerRef.current) clearInterval(timerRef.current);
+    if (!paused) {
+      timerRef.current = setInterval(() => {
+        setActiveSlide((prev) => (prev + 1) % slides.length);
+      }, SLIDE_INTERVAL);
+    }
   };
 
   return (
@@ -222,12 +227,14 @@ export default function AIServicesPage() {
                 <button
                   key={`${slide.eyebrow}-${index === activeSlide ? "on" : "off"}`}
                   type="button"
-                  className={`relative h-[3px] w-8 overflow-hidden rounded-sm border-0 bg-white/15 ${
+                  className={`ai-hero-dot relative flex h-8 w-10 cursor-pointer items-center border-0 bg-transparent p-0 ${
                     index === activeSlide ? "active" : ""
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                   onClick={() => goToSlide(index)}
-                />
+                >
+                  <span className="relative block h-[3px] w-8 overflow-hidden rounded-sm bg-white/15" />
+                </button>
               ))}
             </div>
           </div>

@@ -1,5 +1,6 @@
 "use client";
 import React from 'react'
+import Link from "next/link";
 import BookACallButton from "@/component/BookACall/BookACallButton";
 import PPMBenefitHoverCard from "@/section/ProjectManagement/PPMBenefitHoverCard";
 import { ppmBenefits } from "@/section/ProjectManagement/ppmBenefitsData";
@@ -179,27 +180,36 @@ function page() {
 
               {/* Tool logos */}
               <div className="mb-5 flex items-end gap-6 pl-1">
-                <div>
+                <Link
+                  href="/clarity"
+                  className="transition-opacity hover:opacity-80"
+                >
                   <p className="text-[26px] font-black leading-none tracking-tight text-white">
                     Clarity<sup className="align-super text-[10px] font-normal">™</sup>
                   </p>
                   <p className="mt-0.5 text-[11px] text-white/50">by Broadcom</p>
-                </div>
-                <div>
+                </Link>
+                <Link
+                  href="/rally"
+                  className="transition-opacity hover:opacity-80"
+                >
                   <p className="text-[26px] font-black leading-none tracking-tight text-white">
                     Rally<sup className="align-super text-[10px] font-normal">®</sup>
                   </p>
                   <p className="mt-0.5 text-[11px] text-white/50">by Broadcom</p>
-                </div>
-                <div>
+                </Link>
+                <Link
+                  href="/connectall"
+                  className="transition-opacity hover:opacity-80"
+                >
                   <p className="text-[26px] font-black leading-none tracking-tight text-white">
                     ConnectALL
                   </p>
                   <p className="mt-0.5 text-[11px] text-white/50">by Broadcom</p>
-                </div>
+                </Link>
               </div>
 
-              <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-7 py-2.5 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] md:text-[18px]">
+              <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-white px-7 py-2.5 text-base font-semibold text-[#FF403A] transition-all duration-200 hover:bg-[#FF403A] hover:text-white md:text-[18px]">
                 Request a Demo
               </BookACallButton>
             </div>
@@ -260,7 +270,7 @@ function page() {
                 and maximize the value of your PPM investments.
               </p>
 
-              <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-7 py-2.5 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] md:text-[18px]">
+              <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-white px-7 py-2.5 text-base font-semibold text-[#FF403A] transition-all duration-200 hover:bg-[#FF403A] hover:text-white md:text-[18px]">
                 Book Free Consultation
               </BookACallButton>
             </div>

@@ -111,7 +111,7 @@ export default function BannerSlider() {
                 {/* Ambient blue glow — blends robot into dark theme */}
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute inset-y-0 right-0 z-[1] w-[55%]"
+                  className="pointer-events-none absolute inset-y-0 right-[10%] z-[1] w-[55%] md:right-[12%]"
                   style={{
                     background:
                       "radial-gradient(ellipse 70% 65% at 72% 50%, rgba(40,120,220,0.22) 0%, rgba(20,60,140,0.08) 40%, transparent 70%)",
@@ -120,7 +120,7 @@ export default function BannerSlider() {
 
                 {/* Robot visual — soft left fade into black */}
                 <div
-                  className="absolute inset-y-0 right-0 z-0 w-[58%] md:w-[54%]"
+                  className="absolute inset-y-0 right-[10%] z-0 w-[58%] md:right-[12%] md:w-[54%]"
                   style={{
                     WebkitMaskImage:
                       "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 18%, black 42%)",

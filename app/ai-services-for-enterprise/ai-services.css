@@ -21,7 +21,7 @@
   z-index: 1;
 }
 
-.ai-hero-dots button.active::after {
+.ai-hero-dots button.active span::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -42,7 +42,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .ai-hero-slide,
-  .ai-hero-dots button.active::after {
+  .ai-hero-dots button.active span::after {
     animation: none !important;
     transition: none !important;
   }
