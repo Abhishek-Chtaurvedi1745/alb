@@ -103,9 +103,16 @@ const benefits = [
         />
 
         <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
-            Clarity{" "}
-            <span className="text-[#FF403A]">by Broadcom</span>
+          <h1 className="m-0 leading-none text-white">
+            <span className="block text-[2.75rem] font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-[4.25rem]">
+              Clarity
+              <sup className="ml-0.5 align-super text-[0.42em] font-bold leading-none">
+                ™
+              </sup>
+            </span>
+            <span className="mt-1.5 block text-xl font-medium tracking-wide text-white sm:text-2xl md:text-[1.75rem]">
+              by Broadcom
+            </span>
           </h1>
 
           <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">

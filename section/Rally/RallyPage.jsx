@@ -191,9 +191,14 @@ export default function RallyPage() {
         />
 
         <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
-            Rally{" "}
-            <span className="text-[#FF403A]">by Broadcom</span>
+          <h1 className="m-0">
+            <img
+              src="/images/rally-logo-hd.png"
+              alt="Rally by Broadcom"
+              className="h-16 w-auto max-w-[min(100%,520px)] object-contain sm:h-20 md:h-24"
+              decoding="async"
+              style={{ imageRendering: "auto" }}
+            />
           </h1>
 
           <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">

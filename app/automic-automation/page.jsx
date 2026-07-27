@@ -27,9 +27,14 @@ export default function AutomicAutomationPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
 
         <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
-          <h1 className="text-3xl font-semibold text-white md:text-[40px]">
-            Automic{" "}
-            <span className="text-[#FF403A]">by Broadcom</span>
+          <h1 className="m-0">
+            <img
+              src="/images/automic-logo-hd.png"
+              alt="Automic by Broadcom"
+              className="h-16 w-auto max-w-[min(100%,560px)] object-contain sm:h-20 md:h-24"
+              decoding="async"
+              style={{ imageRendering: "auto" }}
+            />
           </h1>
 
           <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
