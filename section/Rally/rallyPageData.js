@@ -1,7 +1,7 @@
 export const rallyHeroSlides = [
   {
     id: "steel-thread",
-    title: "The steel thread from boardroom to backlog.",
+    title: "The steel thread from boardroom to backlog",
     titleAccent: "boardroom to backlog",
     subtitle:
       "Rally is the market-leading platform for business agility and Value Stream Management — helping enterprises plan, prioritise, manage, and measure work at every level, from team iteration to portfolio strategy, with full traceability from investment to delivery.",
@@ -10,12 +10,12 @@ export const rallyHeroSlides = [
 
 export const capabilitiesHead = {
   title: "Everything enterprise Agile needs,",
-  titleAccent: "in one connected platform.",
+  titleAccent: "in one connected platform",
 };
 
 export const capabilityPanels = [
   {
-    title: "Plan work at every level, from iteration to program increment.",
+    title: "Plan work at every level, from iteration to program increment",
     desc: "Teams pull work from the backlog into iterations on the Team Planning page, while Capacity Planning shows exactly how much a team or release train can realistically commit to — so plans stay achievable instead of aspirational.",
     tags: ["Team & PI planning", "Capacity planning", "Big Room Planning"],
     image: "/images/rally-card-planning.png",
@@ -60,7 +60,7 @@ export const capabilityPanels = [
 
 export const deliveryHead = {
   title: "From licensing to lasting adoption,",
-  titleAccent: "one delivery partner.",
+  titleAccent: "one delivery partner",
   subtitle:
     "Albatroz covers the full Rally lifecycle — procurement, implementation, ValueOps integration and ongoing support — so you are not stitching vendors together after go-live.",
 };
