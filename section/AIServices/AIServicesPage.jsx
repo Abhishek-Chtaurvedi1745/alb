@@ -194,11 +194,11 @@ export default function AIServicesPage() {
   return (
     <div className="bg-black text-white">
       <section
-        className="mt-[83px] bg-[#000000] px-6 py-16"
+        className="mt-[83px] bg-[#000000] px-6 py-16 md:px-16"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 md:flex-row">
+        <div className="flex flex-col items-center gap-10 md:flex-row">
           <div className="w-full">
             <div className="ai-hero-slides">
               {slides.map((slide, index) => (

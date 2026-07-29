@@ -48,13 +48,13 @@ function SectionBlock({ section }) {
       )}
 
       {hasBullets && (
-        <ul className="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+        <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
           {section.bullets.map((bullet, index) => (
-            <li key={index} className="flex items-center gap-2.5">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ff403a]/15">
+            <li key={index} className="flex items-start gap-2.5">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ff403a]/15">
                 <Check size={12} className="text-[#ff403a]" strokeWidth={3} />
               </span>
-              <span className="text-[12px] leading-snug tracking-tight text-white/80 sm:whitespace-nowrap sm:text-[13px] sm:leading-none lg:text-[14px]">
+              <span className="min-w-0 break-words text-[12px] leading-snug tracking-tight text-white/80 sm:text-[13px] lg:text-[14px]">
                 {bullet}
               </span>
             </li>
@@ -78,7 +78,7 @@ export default function StonebranchServiceDetailPage({ page }) {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/80 to-black" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-12 text-left sm:px-6 sm:py-16 md:py-20">
+        <div className="relative mx-auto max-w-6xl px-4 pb-8 pt-12 text-left sm:px-6 sm:pb-9 sm:pt-16 md:pb-10 md:pt-20">
           <nav className="mb-6 text-left text-sm text-white/60">
             <Link
               href="/stonebranch"
@@ -107,8 +107,8 @@ export default function StonebranchServiceDetailPage({ page }) {
         </div>
       </section>
 
-      <section className="pb-10">
-        <div className="mx-auto max-w-6xl space-y-5 px-4 text-left sm:px-6">
+      <section className="pb-8 sm:pb-10">
+        <div className="mx-auto max-w-6xl space-y-4 px-4 text-left sm:px-6">
           {page.intro.map((paragraph, index) => (
             <p
               key={index}

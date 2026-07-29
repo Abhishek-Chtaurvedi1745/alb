@@ -68,7 +68,24 @@ const ctaClassName =
   "absolute z-10 inline-flex items-center justify-center whitespace-nowrap bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90";
 
 const htmlCtaClassName =
-  "relative z-10 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[#ff3f3a] px-6 py-3 text-[14px] font-bold text-white antialiased transition-opacity hover:opacity-90 md:text-[16px]";
+  "relative z-10 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90";
+
+// The slider height is locked to an aspect ratio, so the text slide scales with
+// viewport width to stay in proportion with the image slides.
+const htmlTitleStyle = {
+  fontSize: "clamp(20px, 2.55vw, 46px)",
+  lineHeight: 1.18,
+};
+
+const htmlBodyStyle = {
+  fontSize: "clamp(11px, 1.05vw, 19px)",
+  lineHeight: 1.6,
+  marginTop: "clamp(8px, 1vw, 18px)",
+};
+
+const htmlCtaWrapStyle = {
+  marginTop: "clamp(14px, 1.9vw, 34px)",
+};
 
 export default function BannerSlider() {
   const [current, setCurrent] = useState(0);
@@ -156,15 +173,24 @@ export default function BannerSlider() {
                   />
                 </div>
 
-                <div className="relative z-10 flex w-[58%] min-w-0 flex-col justify-center py-4 pl-5 pr-4 md:w-[55%] md:pl-10 md:pr-6 lg:pl-14 lg:pr-8">
-                  <h1 className="w-full max-w-none text-[28px] font-bold leading-tight text-white md:text-[40px]">
+                <div className="relative z-10 flex w-[58%] min-w-0 flex-col justify-center py-4 pl-6 pr-4 text-left md:w-[55%] md:pl-16 md:pr-6">
+                  <h1
+                    className="w-full max-w-none font-bold text-white"
+                    style={htmlTitleStyle}
+                  >
                     {banner.title}
                   </h1>
-                  <p className="mt-3 w-full max-w-none text-[14px] leading-relaxed text-white/90 md:mt-4 md:text-[16px]">
+                  <p
+                    className="w-full max-w-none text-white/90"
+                    style={htmlBodyStyle}
+                  >
                     {banner.body}
                   </p>
-                  <div className="mt-5 md:mt-7">
-                    <BookACallButton className={htmlCtaClassName}>
+                  <div style={htmlCtaWrapStyle}>
+                    <BookACallButton
+                      className={htmlCtaClassName}
+                      style={ctaStyle}
+                    >
                       {banner.cta}
                     </BookACallButton>
                   </div>

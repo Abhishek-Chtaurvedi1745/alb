@@ -8,6 +8,7 @@ const services = [
   {
     icon: "/images/md1.svg",
     title: "Project & Portfolio Management",
+    href: "/project-management",
     items: [
       "Broadcom Clarity PPM",
       "Broadcom Rally",

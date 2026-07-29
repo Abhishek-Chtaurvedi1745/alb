@@ -29,12 +29,16 @@ function NavLink({ href, children, className = "" }) {
   );
 }
 
+const SOLUTIONS_MENU_EDGE_GAP = 16;
+
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [solutionsShift, setSolutionsShift] = useState(0);
   const solutionsRef = useRef(null);
+  const solutionsMenuRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -53,6 +57,45 @@ function Nav() {
   useEffect(() => {
     if (!isOpen) setMobileSolutionsOpen(false);
   }, [isOpen]);
+
+  // The Solutions flyout is up to 900px wide and anchored to its trigger, so on
+  // narrower desktops it would render past the viewport edge without this nudge.
+  useEffect(() => {
+    if (!showSolutions) {
+      setSolutionsShift(0);
+      return;
+    }
+
+    const menu = solutionsMenuRef.current;
+    if (!menu) return;
+
+    const clampIntoViewport = () => {
+      const rect = menu.getBoundingClientRect();
+      const overflowRight =
+        rect.right - (window.innerWidth - SOLUTIONS_MENU_EDGE_GAP);
+
+      let delta = overflowRight > 0 ? -overflowRight : 0;
+
+      const nextLeft = rect.left + delta;
+      if (nextLeft < SOLUTIONS_MENU_EDGE_GAP) {
+        delta += SOLUTIONS_MENU_EDGE_GAP - nextLeft;
+      }
+
+      if (Math.abs(delta) < 1) return;
+      setSolutionsShift((prev) => prev + delta);
+    };
+
+    clampIntoViewport();
+
+    const observer = new ResizeObserver(clampIntoViewport);
+    observer.observe(menu);
+    window.addEventListener("resize", clampIntoViewport);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", clampIntoViewport);
+    };
+  }, [showSolutions]);
 
   useEffect(() => {
     if (!showSolutions) return;
@@ -192,7 +235,9 @@ function Nav() {
                 </button>
 
                 <div
-                  className={`absolute left-0 top-full z-[1001] overflow-visible pt-4 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+                  ref={solutionsMenuRef}
+                  style={{ marginLeft: solutionsShift }}
+                  className={`absolute left-0 top-full z-[1001] w-max overflow-visible pt-4 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
                     showSolutions
                       ? "visible translate-y-0 opacity-100"
                       : "pointer-events-none invisible -translate-y-2 opacity-0"

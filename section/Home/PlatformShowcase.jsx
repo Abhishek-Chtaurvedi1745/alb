@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer";
 // href only for Solutions → Project Portfolio Management matches
 const platforms = [
   {
-    src: "/images/clarity.svg",
+    src: "/images/clarity-logo-vector.svg",
     alt: "Clarity by Broadcom",
     tag: "Portfolio",
     href: "/clarity",

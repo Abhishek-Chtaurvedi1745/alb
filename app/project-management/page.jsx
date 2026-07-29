@@ -412,9 +412,6 @@ function page() {
                 </div>
               ))}
             </div>
-            <BookACallButton className="mt-7 inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-7 py-2.5 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] md:text-[18px]">
-              Book Free Consultation
-            </BookACallButton>
           </div>
 
           <div className="relative order-1 overflow-hidden rounded-2xl border border-white/10 lg:order-2">
@@ -425,30 +422,6 @@ function page() {
             />
           </div>
         </div>
-      </div>
-    </section>
-  <section className="bg-black text-white py-6 pb-16 px-6 md:px-12">
-      <div className="max-w-4xl mx-auto">
-        
-        {/* Top Section: Button aligned right */}
-       <div className="flex mb-0" style={{ justifyContent: 'center' }}>
-          <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-8 py-3 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] cursor-pointer shadow-lg md:text-lg">
-            Book free Consultation
-          </BookACallButton>
-        </div>
-
-        {/* Line divider directly beneath the button */}
-        {/* <hr className="border-t border-gray-800 mb-10 w-full" /> */}
-
-        {/* Content Paragraph */}
-        {/* <p className="text-center text-[#FFFFFF] text-sm md:text-sm leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
-          These management areas often intersect and complement each other, especially 
-          in organizations aiming for digital transformation or seeking to enhance their 
-          agility and competitiveness in today's rapidly evolving business landscape. 
-          Integrating these practices can lead to more streamlined operations, improved 
-          decision-making, and ultimately, better outcomes for the organization.
-        </p>
-         */}
       </div>
     </section>
   

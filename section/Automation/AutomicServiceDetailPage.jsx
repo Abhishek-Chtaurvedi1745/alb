@@ -65,7 +65,7 @@ function SectionBlock({ section }) {
   );
 }
 
-export default function ConnectAllServiceDetailPage({ page }) {
+export default function AutomicServiceDetailPage({ page }) {
   return (
     <div className="bg-black">
       <section className="relative mt-[83px] overflow-hidden">
@@ -81,14 +81,14 @@ export default function ConnectAllServiceDetailPage({ page }) {
         <div className="relative mx-auto max-w-6xl px-4 pb-8 pt-12 text-left sm:px-6 sm:pb-9 sm:pt-16 md:pb-10 md:pt-20">
           <nav className="mb-6 text-left text-sm text-white/60">
             <Link
-              href="/connectall"
+              href="/automic-automation"
               className="transition-colors hover:text-[#ff403a]"
             >
-              ConnectALL
+              Automic Automation
             </Link>
             <span className="mx-2">/</span>
             <Link
-              href="/connectall/services"
+              href="/automic-automation/services"
               className="transition-colors hover:text-[#ff403a]"
             >
               Services
@@ -142,10 +142,10 @@ export default function ConnectAllServiceDetailPage({ page }) {
               Request Service
             </BookACallButton>
             <Link
-              href="/connectall/services"
+              href="/automic-automation/services"
               className="inline-flex items-center justify-center rounded-lg border border-white/30 px-7 py-3 text-base font-semibold text-white transition-colors hover:border-[#ff403a] hover:text-[#ff403a] sm:text-lg"
             >
-              View All ConnectALL Services
+              View All Automic Services
             </Link>
           </div>
         </div>
