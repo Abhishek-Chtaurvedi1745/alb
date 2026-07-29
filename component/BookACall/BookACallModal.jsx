@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { ChevronDown, X } from "lucide-react";
 import { useBookACall } from "./BookACallContext";
+import { sendContactEmail } from "@/lib/sendEmail";
 
 const inputClassName =
   "w-full rounded-xl border border-white/20 bg-black/30 px-3.5 py-3 text-base text-white outline-none transition-colors placeholder:text-white/45 focus:border-[#ff403a] sm:rounded-2xl sm:px-5 sm:py-3.5 sm:text-[15px]";
@@ -33,31 +34,43 @@ const initialForm = {
 };
 
 export default function BookACallModal() {
-  const { isOpen, closeBookACall } = useBookACall();
+  const { isOpen } = useBookACall();
+
+  return isOpen ? <BookACallModalContent /> : null;
+}
+
+function BookACallModalContent() {
+  const { closeBookACall } = useBookACall();
   const [formData, setFormData] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    if (!isOpen) {
-      setSubmitted(false);
-      setFormData(initialForm);
-    }
-  }, [isOpen]);
-
-  if (!isOpen) return null;
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
   const updateField = (field) => (event) => {
     setFormData((prev) => ({ ...prev, [field]: event.target.value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData(initialForm);
-      setSubmitted(false);
-      closeBookACall();
-    }, 1400);
+    setSending(true);
+    setError("");
+
+    try {
+      await sendContactEmail({
+        ...formData,
+        formSource: "Book a Call popup",
+      });
+      setSubmitted(true);
+      setTimeout(() => {
+        setFormData(initialForm);
+        setSubmitted(false);
+        closeBookACall();
+      }, 1400);
+    } catch (err) {
+      setError(err?.message || "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -213,11 +226,16 @@ export default function BookACallModal() {
                     className={`${inputClassName} mt-3 min-h-[88px] resize-none sm:mt-4 sm:min-h-[120px]`}
                   />
 
+                  {error ? (
+                    <p className="mt-3 text-sm text-[#ff8a80]">{error}</p>
+                  ) : null}
+
                   <button
                     type="submit"
-                    className="mt-4 w-full rounded-xl bg-[#ff403a] px-6 py-3.5 text-base font-bold text-white transition-all hover:bg-[#e63530] active:scale-[0.99] sm:mt-6 sm:w-auto sm:rounded-3xl sm:px-12 sm:py-4 sm:text-lg"
+                    disabled={sending}
+                    className="mt-4 w-full rounded-xl bg-[#ff403a] px-6 py-3.5 text-base font-bold text-white transition-all hover:bg-[#e63530] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-70 sm:mt-6 sm:w-auto sm:rounded-3xl sm:px-12 sm:py-4 sm:text-lg"
                   >
-                    SUBMIT
+                    {sending ? "SENDING..." : "SUBMIT"}
                   </button>
                 </form>
               )}

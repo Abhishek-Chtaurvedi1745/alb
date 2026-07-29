@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { sendContactEmail } from "@/lib/sendEmail";
 
 const inputClassName =
   "w-full bg-transparent border border-gray-400 rounded-2xl px-4 py-3.5 text-sm text-white outline-none transition-colors placeholder:text-white/50 focus:border-[#ff403a] sm:rounded-3xl sm:px-6 sm:py-4 sm:text-base md:px-8 md:py-5";
@@ -19,7 +22,48 @@ function ContactInfoCard({ icon, children, className = "" }) {
   );
 }
 
-function page() {
+const initialForm = {
+  firstName: "",
+  lastName: "",
+  phone: "",
+  email: "",
+  country: "India",
+  organization: "",
+  message: "",
+};
+
+function Page() {
+  const [formData, setFormData] = useState(initialForm);
+  const [sending, setSending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const updateField = (field) => (event) => {
+    setFormData((current) => ({
+      ...current,
+      [field]: event.target.value,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setSending(true);
+    setError("");
+
+    try {
+      await sendContactEmail({
+        ...formData,
+        formSource: "Contact Us page",
+      });
+      setSubmitted(true);
+      setFormData(initialForm);
+    } catch {
+      setError("We couldn't send your message. Please try again.");
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <section className="mt-20 bg-black px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:px-12">
       <h1 className="py-4 text-center text-3xl font-semibold text-white sm:py-5 sm:text-4xl md:text-[40px]">
@@ -39,37 +83,69 @@ function page() {
               with the right solution for your business needs.
             </p>
 
-            <form className="max-w-2xl">
+            {submitted ? (
+              <div className="flex min-h-[300px] max-w-2xl flex-col items-center justify-center rounded-3xl border border-[#ff403a]/40 bg-black/20 px-6 text-center">
+                <p className="text-2xl font-semibold text-white">Thank you!</p>
+                <p className="mt-2 text-sm text-white/70">
+                  We&apos;ve received your message and will reach out shortly.
+                </p>
+                <button
+                  type="button"
+                  onClick={() => setSubmitted(false)}
+                  className="mt-6 rounded-3xl bg-[#ff403a] px-8 py-3 font-semibold text-white transition hover:bg-red-600"
+                >
+                  Send another message
+                </button>
+              </div>
+            ) : (
+            <form onSubmit={handleSubmit} className="max-w-2xl">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6">
                 <input
                   type="text"
                   name="firstName"
+                  required
+                  autoComplete="given-name"
                   placeholder="Full Name*"
+                  value={formData.firstName}
+                  onChange={updateField("firstName")}
                   className={inputClassName}
                 />
                 <input
                   type="text"
                   name="lastName"
+                  required
+                  autoComplete="family-name"
                   placeholder="Last Name*"
+                  value={formData.lastName}
+                  onChange={updateField("lastName")}
                   className={inputClassName}
                 />
                 <input
                   type="tel"
                   name="phone"
+                  required
+                  autoComplete="tel"
                   placeholder="Phone Number*"
+                  value={formData.phone}
+                  onChange={updateField("phone")}
                   className={inputClassName}
                 />
                 <input
                   type="email"
                   name="email"
+                  required
+                  autoComplete="email"
                   placeholder="Business Email*"
+                  value={formData.email}
+                  onChange={updateField("email")}
                   className={inputClassName}
                 />
 
                 <div className="relative">
                   <select
                     name="country"
-                    defaultValue="India"
+                    value={formData.country}
+                    onChange={updateField("country")}
                     className={`${inputClassName} appearance-none pr-12`}
                   >
                     <option value="India" className="text-black">
@@ -91,7 +167,11 @@ function page() {
                 <input
                   type="text"
                   name="organization"
+                  required
+                  autoComplete="organization"
                   placeholder="Organization*"
+                  value={formData.organization}
+                  onChange={updateField("organization")}
                   className={inputClassName}
                 />
               </div>
@@ -100,16 +180,26 @@ function page() {
                 name="message"
                 rows={5}
                 placeholder="Message"
+                value={formData.message}
+                onChange={updateField("message")}
                 className={`${inputClassName} mt-4 resize-none sm:mt-6`}
               />
 
+              {error ? (
+                <p className="mt-4 text-sm text-[#ff8a80]" role="alert">
+                  {error}
+                </p>
+              ) : null}
+
               <button
                 type="submit"
-                className="mt-6 w-full rounded-2xl bg-[#ff403a] px-8 py-3.5 text-base font-bold text-white transition-all hover:bg-red-600 sm:mt-8 sm:w-auto sm:rounded-3xl sm:px-12 sm:py-4 sm:text-lg md:text-xl lg:px-16"
+                disabled={sending}
+                className="mt-6 w-full rounded-2xl bg-[#ff403a] px-8 py-3.5 text-base font-bold text-white transition-all hover:bg-red-600 disabled:cursor-not-allowed disabled:opacity-70 sm:mt-8 sm:w-auto sm:rounded-3xl sm:px-12 sm:py-4 sm:text-lg md:text-xl lg:px-16"
               >
-                SUBMIT
+                {sending ? "SENDING..." : "SUBMIT"}
               </button>
             </form>
+            )}
           </div>
 
           {/* Contact Card */}
@@ -158,4 +248,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
