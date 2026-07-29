@@ -207,6 +207,9 @@ export function SolutionsMegaMenuDesktop({ onClose }) {
 const FLYOUT_COL1_WIDTH = 300;
 const FLYOUT_COL2_WIDTH = 280;
 const FLYOUT_COL3_WIDTH = 320;
+// Matches the py-1.5 on each flyout panel, so a panel's first row can be lined
+// up with the row that opened it.
+const FLYOUT_PANEL_PADDING_Y = 6;
 
 function FlyoutMenuRow({ label, href, isActive, hasChildren, onMouseEnter, onNavigate }) {
   return (
@@ -242,7 +245,7 @@ function FlyoutServiceRow({ label, href, onNavigate, isSectionTitle = false }) {
       <Link
         href={href}
         onClick={onNavigate}
-        className="block px-5 py-3 text-[15px] font-semibold text-[#ef4444] transition-all duration-200 ease-out hover:bg-[#fff1f2]"
+        className="flex items-center gap-4 px-5 py-3 text-[15px] font-semibold text-[#ef4444] transition-all duration-200 ease-out hover:bg-[#fff1f2]"
       >
         {label}
       </Link>
@@ -317,7 +320,7 @@ export function SolutionsMegaMenuWide({ onClose }) {
     if (child.children?.length) {
       setActiveSubKey(`${mainId}-sub-${index}`);
       // Keep 3rd panel beside the hovered row (Clarity / Rally / ConnectALL)
-      setCol3Top(event?.currentTarget?.offsetTop ?? 0);
+      setCol3Top((event?.currentTarget?.offsetTop ?? 0) - FLYOUT_PANEL_PADDING_Y);
     } else {
       setActiveSubKey(null);
       setCol3Top(0);
