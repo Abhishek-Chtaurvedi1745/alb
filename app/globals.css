@@ -42,6 +42,25 @@ h1 {
   font-weight: 600;
   line-height: 1.2;
 }
+
+/* Home banner artwork only blends sideways once the slide is a wide, two
+   column poster. Stacked on phones and tablets it would clip the visual. */
+@media (min-width: 1024px) {
+  .banner-art-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.35) 18%,
+      black 42%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.35) 18%,
+      black 42%
+    );
+  }
+}
 @keyframes marquee {
   from {
     transform: translateX(0);

@@ -1,27 +1,62 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BookACallButton from "@/component/BookACall/BookACallButton";
 
+const RED_GLOW =
+  "radial-gradient(ellipse 70% 65% at 72% 50%, rgba(220,60,55,0.20) 0%, rgba(140,25,25,0.08) 40%, transparent 70%)";
+const BLUE_GLOW =
+  "radial-gradient(ellipse 70% 65% at 72% 50%, rgba(40,120,220,0.22) 0%, rgba(20,60,140,0.08) 40%, transparent 70%)";
+
+// The robot render is bottom-right anchored inside a mostly empty black frame,
+// so it is blended with a CSS mask. The other crops are filled edge to edge and
+// ship with their edge feathering baked into the PNG alpha instead.
+const ROBOT_LAYOUT = {
+  artClassName: "lg:right-[12%] lg:w-[54%]",
+  textClassName: "lg:w-[55%]",
+  // The robot sits right of centre inside its frame, so it is nudged left to
+  // read as centred in the stacked layout.
+  objectPosition: "object-[32%_50%] lg:object-right lg:object-bottom",
+  maskClassName: "banner-art-mask",
+  edgeFades: true,
+};
+
+const FILLED_LAYOUT = {
+  artClassName: "lg:right-[3%] lg:w-[46%]",
+  textClassName: "lg:w-[52%]",
+  objectPosition: "object-center",
+  maskClassName: "",
+  edgeFades: false,
+};
+
 const banners = [
   {
-    type: "image",
-    src: "/images/banner-1-pmo-operations.png",
+    src: "/images/banner-1-visual.png",
     alt: "Meaningful & Secure AI for Smarter PMO Operations",
-    width: 3234,
+    width: 1391,
     height: 1024,
     cta: "Get My AI Readiness Report",
-    ctaLeft: "5.63%",
-    ctaTop: "72.07%",
+    glow: RED_GLOW,
+    ...FILLED_LAYOUT,
+    title: (
+      <>
+        {"Meaningful & Secure AI for Smarter "}
+        <span className="text-[#ff3f3a] lg:whitespace-nowrap">
+          PMO Operations
+        </span>
+      </>
+    ),
+    body: "Discover how AI can help you uncover the intelligence buried in years of project history, and bring it to scope, schedule, risk, financial and staffing decisions — the moment you need it, not after the fact. We'll help assess your PMO AI readiness with a tailored AI readiness report.",
   },
   {
-    type: "html",
     src: "/images/banner-2-trozai-visual.png",
     alt: "TrozAI – An AI Platform That Works within Your Enterprise Ecosystem",
     width: 1536,
     height: 1024,
     cta: "Request a Free Demo",
+    glow: BLUE_GLOW,
+    ...ROBOT_LAYOUT,
     title: (
       <>
         <span className="text-white">Troz</span>
@@ -33,31 +68,49 @@ const banners = [
     body: "TrozAI is an AI-powered enterprise platform that integrates seamlessly with your existing systems — from PMO and PPM tools to CRM, SAP, ITSM, DevOps and legacy applications.",
   },
   {
-    type: "image",
-    src: "/images/banner-3-strategic-engine.png",
+    src: "/images/banner-3-visual.png",
     alt: "Transform Your PMO into a Strategic Engine",
-    width: 3234,
+    width: 1520,
     height: 1024,
-    cta: "Get My Trailored Roadmap",
-    ctaLeft: "6.62%",
-    ctaTop: "72.07%",
+    cta: "Get My Tailored Roadmap",
+    glow: RED_GLOW,
+    ...FILLED_LAYOUT,
+    title: (
+      <>
+        {"Transform Your PMO into a "}
+        <span className="text-[#ff3f3a] lg:whitespace-nowrap">
+          Strategic Engine
+        </span>
+      </>
+    ),
+    body: "We help you digitise your portfolio practices and improve strategic alignment by building a tailored roadmap aligned to your organization's maturity.",
   },
   {
-    type: "image",
-    src: "/images/banner-4-orchestrate.png",
+    src: "/images/banner-4-visual.png",
     alt: "Orchestrate complex enterprise workflows with intelligent automation",
-    width: 3234,
+    width: 1262,
     height: 1024,
     cta: "Book a Call",
-    ctaLeft: "6.62%",
-    ctaTop: "71.09%",
+    glow: RED_GLOW,
+    ...FILLED_LAYOUT,
+    title: (
+      <>
+        {"Orchestrate complex enterprise workflows with "}
+        <span className="text-[#ff3f3a] lg:whitespace-nowrap">
+          intelligent automation
+        </span>
+      </>
+    ),
+    body: "Leverage the native AI-enabled capabilities of Automic and Stonebranch to orchestrate complex enterprise processes with speed, reliability, and control.",
   },
 ];
 
+// Lower bounds keep the button a comfortable tap target on phones; the vw term
+// takes over on the desktop poster layout.
 const ctaStyle = {
   fontFamily: "Arial, Helvetica, sans-serif",
-  fontSize: "clamp(9px, 1.35vw, 22px)",
-  padding: "clamp(5px, 0.85vw, 13px) clamp(12px, 1.7vw, 28px)",
+  fontSize: "clamp(13px, 1.35vw, 22px)",
+  padding: "clamp(10px, 0.85vw, 13px) clamp(20px, 1.7vw, 28px)",
   borderRadius: "9999px",
   letterSpacing: "0.01em",
   lineHeight: 1.15,
@@ -65,31 +118,30 @@ const ctaStyle = {
 };
 
 const ctaClassName =
-  "absolute z-10 inline-flex items-center justify-center whitespace-nowrap bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90";
+  "relative z-10 inline-flex min-h-[44px] items-center justify-center whitespace-nowrap bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90 lg:min-h-0";
 
-const htmlCtaClassName =
-  "relative z-10 inline-flex items-center justify-center whitespace-nowrap rounded-full bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90";
-
-// The slider height is locked to an aspect ratio, so the text slide scales with
-// viewport width to stay in proportion with the image slides.
-const htmlTitleStyle = {
-  fontSize: "clamp(20px, 2.55vw, 46px)",
+// Above lg the slider height is locked to an aspect ratio, so the title scales
+// with viewport width to stay in proportion with the artwork. Body copy size is
+// owned by the sitewide `p` rule in globals.css.
+const titleStyle = {
+  fontSize: "clamp(22px, 2.55vw, 46px)",
   lineHeight: 1.18,
 };
 
-const htmlBodyStyle = {
-  fontSize: "clamp(11px, 1.05vw, 19px)",
-  lineHeight: 1.6,
+const bodyStyle = {
   marginTop: "clamp(8px, 1vw, 18px)",
 };
 
-const htmlCtaWrapStyle = {
-  marginTop: "clamp(14px, 1.9vw, 34px)",
+const ctaWrapStyle = {
+  marginTop: "clamp(16px, 1.9vw, 34px)",
 };
+
+const SWIPE_THRESHOLD = 40;
 
 export default function BannerSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const touchStartX = useRef(null);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % banners.length);
@@ -97,6 +149,19 @@ export default function BannerSlider() {
 
   const prevSlide = () => {
     setCurrent((prev) => (prev - 1 + banners.length) % banners.length);
+  };
+
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (event) => {
+    if (touchStartX.current === null) return;
+    const distance = event.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(distance) < SWIPE_THRESHOLD) return;
+    if (distance < 0) nextSlide();
+    else prevSlide();
   };
 
   useEffect(() => {
@@ -108,131 +173,103 @@ export default function BannerSlider() {
 
   return (
     <section
-      className="relative mt-20 aspect-[1617/512] w-full overflow-hidden bg-black"
+      className="relative mt-20 w-full overflow-hidden bg-black lg:aspect-[1617/512]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <div
-        className="flex h-full transition-transform duration-700 ease-in-out"
+        className="flex transition-transform duration-700 ease-in-out lg:h-full"
         style={{
           transform: `translateX(-${current * 100}%)`,
         }}
       >
         {banners.map((banner, index) => (
-          <div
-            key={banner.src}
-            className="relative h-full w-full flex-shrink-0"
-          >
-            {banner.type === "html" ? (
-              <div className="relative flex h-full w-full items-center overflow-hidden bg-black">
-                {/* Ambient blue glow — blends robot into dark theme */}
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-y-0 right-[10%] z-[1] w-[55%] md:right-[12%]"
-                  style={{
-                    background:
-                      "radial-gradient(ellipse 70% 65% at 72% 50%, rgba(40,120,220,0.22) 0%, rgba(20,60,140,0.08) 40%, transparent 70%)",
-                  }}
-                />
+          <div key={banner.src} className="relative w-full flex-shrink-0 lg:h-full">
+            {/* Stacks vertically below lg, where the wide banner ratio leaves
+                no room for the copy alongside the artwork. */}
+            <div className="relative flex h-full w-full flex-col overflow-hidden bg-black lg:flex-row lg:items-center">
+              {/* Ambient glow — blends the artwork into the dark theme */}
+              <div
+                aria-hidden
+                className={`pointer-events-none absolute inset-y-0 z-[1] hidden lg:block ${banner.artClassName}`}
+                style={{ background: banner.glow }}
+              />
 
-                {/* Robot visual — soft left fade into black */}
-                <div
-                  className="absolute inset-y-0 right-[10%] z-0 w-[58%] md:right-[12%] md:w-[54%]"
-                  style={{
-                    WebkitMaskImage:
-                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 18%, black 42%)",
-                    maskImage:
-                      "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.35) 18%, black 42%)",
-                  }}
-                >
-                  <img
-                    src={`${banner.src}?v=merge1`}
-                    alt={banner.alt}
-                    width={banner.width}
-                    height={banner.height}
-                    decoding="async"
-                    className="h-full w-full object-contain object-right object-bottom"
-                  />
-                  {/* Bottom fade into page black */}
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-x-0 bottom-0 h-[22%]"
-                    style={{
-                      background:
-                        "linear-gradient(to top, #000 0%, rgba(0,0,0,0.55) 45%, transparent 100%)",
-                    }}
-                  />
-                  {/* Top fade under nav */}
-                  <div
-                    aria-hidden
-                    className="pointer-events-none absolute inset-x-0 top-0 h-[14%]"
-                    style={{
-                      background:
-                        "linear-gradient(to bottom, #000 0%, transparent 100%)",
-                    }}
-                  />
-                </div>
-
-                <div className="relative z-10 flex w-[58%] min-w-0 flex-col justify-center py-4 pl-6 pr-4 text-left md:w-[55%] md:pl-16 md:pr-6">
-                  <h1
-                    className="w-full max-w-none font-bold text-white"
-                    style={htmlTitleStyle}
-                  >
-                    {banner.title}
-                  </h1>
-                  <p
-                    className="w-full max-w-none text-white/90"
-                    style={htmlBodyStyle}
-                  >
-                    {banner.body}
-                  </p>
-                  <div style={htmlCtaWrapStyle}>
-                    <BookACallButton
-                      className={htmlCtaClassName}
-                      style={ctaStyle}
-                    >
-                      {banner.cta}
-                    </BookACallButton>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              <>
+              {/* Artwork — feathered so it dissolves into the black stage */}
+              <div
+                className={`relative z-0 h-[42vw] max-h-[230px] w-full lg:absolute lg:inset-y-0 lg:h-auto lg:max-h-none ${banner.maskClassName} ${banner.artClassName}`}
+              >
                 <img
-                  src={`${banner.src}?v=hq2`}
+                  src={`${banner.src}?v=2`}
                   alt={banner.alt}
                   width={banner.width}
                   height={banner.height}
                   decoding="async"
                   fetchPriority={index === 0 ? "high" : "auto"}
-                  className="h-full w-full object-cover object-center"
+                  className={`h-full w-full object-contain ${banner.objectPosition}`}
                 />
-                <BookACallButton
-                  className={ctaClassName}
-                  style={{
-                    left: banner.ctaLeft,
-                    top: banner.ctaTop,
-                    ...ctaStyle,
-                  }}
+                {banner.edgeFades ? (
+                  <>
+                    {/* Bottom fade into page black */}
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute inset-x-0 bottom-0 h-[22%]"
+                      style={{
+                        background:
+                          "linear-gradient(to top, #000 0%, rgba(0,0,0,0.55) 45%, transparent 100%)",
+                      }}
+                    />
+                    {/* Top fade under nav */}
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute inset-x-0 top-0 h-[14%]"
+                      style={{
+                        background:
+                          "linear-gradient(to bottom, #000 0%, transparent 100%)",
+                      }}
+                    />
+                  </>
+                ) : null}
+              </div>
+
+              <div
+                className={`relative z-10 flex w-full min-w-0 flex-1 flex-col justify-center px-6 pb-14 pt-2 text-left lg:flex-none lg:py-4 lg:pl-16 lg:pr-6 ${banner.textClassName}`}
+              >
+                <h1
+                  className="w-full max-w-none font-bold text-white"
+                  style={titleStyle}
                 >
-                  {banner.cta}
-                </BookACallButton>
-              </>
-            )}
+                  {banner.title}
+                </h1>
+                <p
+                  className="w-full max-w-none text-white/90"
+                  style={bodyStyle}
+                >
+                  {banner.body}
+                </p>
+                <div style={ctaWrapStyle}>
+                  <BookACallButton className={ctaClassName} style={ctaStyle}>
+                    {banner.cta}
+                  </BookACallButton>
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
 
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-5 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-black/50 p-[10px] text-white md:flex"
+        className="absolute top-1/2 left-5 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-black/50 p-[10px] text-white lg:flex"
       >
         <ChevronLeft />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-5 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-black/50 p-[10px] text-white md:flex"
+        className="absolute top-1/2 right-5 z-20 hidden h-12 w-12 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-black/50 p-[10px] text-white lg:flex"
       >
         <ChevronRight />
       </button>
