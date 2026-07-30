@@ -189,7 +189,7 @@ export default function BannerSlider() {
           <div key={banner.src} className="relative w-full flex-shrink-0 lg:h-full">
             {/* Stacks vertically below lg, where the wide banner ratio leaves
                 no room for the copy alongside the artwork. */}
-            <div className="relative flex h-full w-full flex-col overflow-hidden bg-black lg:flex-row lg:items-center">
+            <div className="relative flex h-full w-full flex-col justify-center overflow-hidden bg-black lg:flex-row lg:items-center lg:justify-start">
               {/* Ambient glow — blends the artwork into the dark theme */}
               <div
                 aria-hidden
@@ -197,9 +197,10 @@ export default function BannerSlider() {
                 style={{ background: banner.glow }}
               />
 
-              {/* Artwork — feathered so it dissolves into the black stage */}
+              {/* Artwork — feathered so it dissolves into the black stage.
+                  Sits between the copy and the CTA once stacked. */}
               <div
-                className={`relative z-0 h-[42vw] max-h-[230px] w-full lg:absolute lg:inset-y-0 lg:h-auto lg:max-h-none ${banner.maskClassName} ${banner.artClassName}`}
+                className={`relative z-0 order-2 h-[42vw] max-h-[230px] w-full md:max-h-[310px] lg:absolute lg:inset-y-0 lg:order-none lg:h-auto lg:max-h-none ${banner.maskClassName} ${banner.artClassName}`}
               >
                 <img
                   src={`${banner.src}?v=2`}
@@ -234,22 +235,31 @@ export default function BannerSlider() {
                 ) : null}
               </div>
 
+              {/* `contents` lets the copy and the CTA become siblings of the
+                  artwork while stacked, so they can be ordered around it, then
+                  regroup into a single column for the desktop poster. */}
               <div
-                className={`relative z-10 flex w-full min-w-0 flex-1 flex-col justify-center px-6 pb-14 pt-2 text-left lg:flex-none lg:py-4 lg:pl-16 lg:pr-6 ${banner.textClassName}`}
+                className={`contents lg:relative lg:z-10 lg:flex lg:min-w-0 lg:flex-col lg:justify-center lg:py-4 lg:pl-16 lg:pr-6 lg:text-left ${banner.textClassName}`}
               >
-                <h1
-                  className="w-full max-w-none font-bold text-white"
-                  style={titleStyle}
+                <div className="relative z-10 order-1 w-full min-w-0 px-6 pt-6 text-left lg:order-none lg:p-0">
+                  <h1
+                    className="w-full max-w-none font-bold text-white"
+                    style={titleStyle}
+                  >
+                    {banner.title}
+                  </h1>
+                  <p
+                    className="w-full max-w-none text-white/90"
+                    style={bodyStyle}
+                  >
+                    {banner.body}
+                  </p>
+                </div>
+
+                <div
+                  className="relative z-10 order-3 w-full px-6 pb-14 text-left lg:order-none lg:p-0"
+                  style={ctaWrapStyle}
                 >
-                  {banner.title}
-                </h1>
-                <p
-                  className="w-full max-w-none text-white/90"
-                  style={bodyStyle}
-                >
-                  {banner.body}
-                </p>
-                <div style={ctaWrapStyle}>
                   <BookACallButton className={ctaClassName} style={ctaStyle}>
                     {banner.cta}
                   </BookACallButton>
