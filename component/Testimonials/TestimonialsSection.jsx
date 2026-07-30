@@ -5,29 +5,23 @@ import { ChevronUp, ChevronDown } from "lucide-react";
 
 export default function TestimonialsSection({
   testimonials,
-  eyebrow = "Testimonials",
+  eyebrow,
   title = "What Employees Say",
   highlight = "About Us.",
   autoSlideMs = 5000,
   sectionClassName = "w-full bg-black py-10 pt-0 md:pt-20 px-4 overflow-hidden",
 }) {
   const [current, setCurrent] = useState(0);
-  const [animate, setAnimate] = useState(true);
   const [paused, setPaused] = useState(false);
 
   const goToSlide = useCallback(
     (direction) => {
-      setAnimate(false);
-
-      setTimeout(() => {
-        setCurrent((prev) => {
-          if (direction === "next") {
-            return prev === testimonials.length - 1 ? 0 : prev + 1;
-          }
-          return prev === 0 ? testimonials.length - 1 : prev - 1;
-        });
-        setAnimate(true);
-      }, 200);
+      setCurrent((prev) => {
+        if (direction === "next") {
+          return prev === testimonials.length - 1 ? 0 : prev + 1;
+        }
+        return prev === 0 ? testimonials.length - 1 : prev - 1;
+      });
     },
     [testimonials.length]
   );
@@ -40,9 +34,7 @@ export default function TestimonialsSection({
     }, autoSlideMs);
 
     return () => clearInterval(interval);
-  }, [current, autoSlideMs, goToSlide, paused]);
-
-  const active = testimonials[current];
+  }, [autoSlideMs, goToSlide, paused]);
 
   return (
     <section
@@ -53,9 +45,11 @@ export default function TestimonialsSection({
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 items-center gap-12 px-[30px] lg:grid-cols-2 lg:px-0">
           <div>
-            <p className="mb-4 text-sm uppercase tracking-widest text-[#ff403a]">
-              {eyebrow}
-            </p>
+            {eyebrow ? (
+              <p className="mb-4 text-sm uppercase tracking-widest text-[#ff403a]">
+                {eyebrow}
+              </p>
+            ) : null}
 
             <h1 className="text-3xl font-semibold leading-tight text-white md:text-[40px]">
               {title}
@@ -68,13 +62,7 @@ export default function TestimonialsSection({
                 <button
                   key={index}
                   type="button"
-                  onClick={() => {
-                    setAnimate(false);
-                    setTimeout(() => {
-                      setCurrent(index);
-                      setAnimate(true);
-                    }, 200);
-                  }}
+                  onClick={() => setCurrent(index)}
                   className={`rounded-full transition-all duration-500 ${
                     current === index ? "h-3 w-8 bg-[#ff403a]" : "h-3 w-3 bg-gray-500"
                   }`}
@@ -87,38 +75,47 @@ export default function TestimonialsSection({
           <div className="relative">
             <div className="absolute top-5 left-5 h-full w-full rounded-3xl border border-[#ff403a]" />
 
-            <div
-              className={`relative z-10 min-h-[340px] rounded-3xl bg-[#151515] pt-8 transition-all duration-700 ease-in-out ${
-                animate
-                  ? "translate-y-0 scale-100 opacity-100"
-                  : "translate-y-8 scale-95 opacity-0"
-              }`}
-            >
-              <div
-                className={`absolute -top-10 -left-10 transition-all duration-700 ${
-                  animate
-                    ? "rotate-0 scale-100 opacity-100"
-                    : "-rotate-12 scale-75 opacity-0"
-                }`}
-              >
-                <img
-                  src={active.image}
-                  alt={active.name}
-                  className="h-24 w-24 rounded-full border-4 border-black object-cover shadow-2xl"
-                />
+            {/* Every quote is stacked in the same grid cell, so the card is
+                always as tall as the longest one and switching slides cannot
+                reflow the rest of the page. */}
+            <div className="relative z-10 grid min-h-[340px] rounded-3xl bg-[#151515] pt-8">
+              <div className="absolute -top-10 -left-10 h-24 w-24">
+                {testimonials.map((testimonial, index) => (
+                  <img
+                    key={`${testimonial.name}-avatar`}
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    aria-hidden={index !== current}
+                    className={`absolute inset-0 h-24 w-24 rounded-full border-4 border-black object-cover shadow-2xl transition-opacity duration-500 ease-in-out ${
+                      index === current ? "opacity-100" : "opacity-0"
+                    }`}
+                  />
+                ))}
               </div>
 
-              <div className="px-8 pb-8 pt-2 md:px-12">
-                <p className="text-sm leading-relaxed text-white transition-all duration-700 md:text-base">
-                  {active.text}
-                </p>
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={testimonial.name}
+                  aria-hidden={index !== current}
+                  className={`col-start-1 row-start-1 flex flex-col justify-center px-8 pb-8 pt-2 transition-opacity duration-500 ease-in-out md:px-12 ${
+                    index === current
+                      ? "opacity-100"
+                      : "pointer-events-none opacity-0"
+                  }`}
+                >
+                  <p className="text-sm leading-relaxed text-white md:text-base">
+                    {testimonial.text}
+                  </p>
 
-                <div className="mt-8">
-                  <h3 className="text-2xl font-bold text-white">{active.name}</h3>
-                  <p className="mt-2 text-sm text-white">{active.role}</p>
-                  <p className="text-sm text-white">{active.region}</p>
+                  <div className="mt-8">
+                    <h3 className="text-2xl font-bold text-white">
+                      {testimonial.name}
+                    </h3>
+                    <p className="mt-2 text-sm text-white">{testimonial.role}</p>
+                    <p className="text-sm text-white">{testimonial.region}</p>
+                  </div>
                 </div>
-              </div>
+              ))}
             </div>
 
             <div className="absolute top-1/2 -right-6 z-20 flex -translate-y-1/2 flex-col gap-4">

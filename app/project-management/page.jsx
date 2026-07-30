@@ -65,15 +65,17 @@ function page() {
 
         <div className="relative z-10 flex h-full flex-col items-start justify-center gap-4 px-6 md:gap-6 md:px-16">
           <h1 className="max-w-3xl text-3xl font-bold leading-tight text-white md:text-[40px]">
-            Project Portfolio{" "}
-            <span className="text-[#FF403A]">
-              secure AI into your PMO?
+            Manage Less. Govern More.{" "}
+            <span className="text-[#FF403A] md:whitespace-nowrap">
+              Deliver What Matters.
             </span>
           </h1>
 
-          <p className="max-w-xl text-sm font-normal text-white/90 md:text-[16px]">
-            From portfolio planning to automation and analytics, we help
-            organizations manage work with structure, visibility and control.
+          <p className="max-w-2xl text-sm font-normal text-white/90 md:text-[16px]">
+            The best-run portfolios aren&apos;t just organised — they&apos;re
+            aligned. Albatroz transforms your project and portfolio management
+            practices to bring maturity, discipline, and real-time strategic
+            insight to every layer of your organisation.
           </p>
 
           <BookACallButton className="inline-flex items-center justify-center rounded-lg border-2 border-[#FF403A] bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-[#FF403A] md:text-[18px]">
@@ -128,8 +130,8 @@ function page() {
           {/* ── Left: PPM Wheel ── */}
           <div className="relative shrink-0 bg-black">
             <img
-              src="/images/ppm-solution.png?v=2"
-              alt="PPM Solutions — Smarter Planning. Stronger Execution. Real Results."
+              src="/images/ppm-solution.png?v=3"
+              alt="PPM Solution — strategic alignment, resource optimization, performance management, real-time visibility, risk and issue management, and continuous improvement"
               className="h-[300px] w-auto max-w-full object-contain mix-blend-screen md:h-[480px]"
             />
           </div>

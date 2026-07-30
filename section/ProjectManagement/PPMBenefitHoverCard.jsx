@@ -5,12 +5,14 @@ import { useState } from "react";
 export default function PPMBenefitHoverCard({ benefit }) {
   const [isActive, setIsActive] = useState(false);
 
+  // Both faces share one grid cell, so the card is always as tall as the
+  // longest description and the expanded copy can never be clipped.
   return (
     <article
-      className={`group relative cursor-pointer overflow-hidden rounded-xl border bg-[#080808] transition-all duration-500 ease-out sm:rounded-2xl ${
+      className={`group relative grid min-h-[260px] cursor-pointer overflow-hidden rounded-xl border bg-[#080808] transition-colors duration-500 ease-out sm:min-h-[300px] sm:rounded-2xl ${
         isActive
-          ? "min-h-[340px] border-[#ff403a]/45 shadow-[0_0_35px_rgba(255,64,58,0.18)] sm:min-h-[320px]"
-          : "min-h-[260px] border-white/10 hover:border-[#ff403a]/45 hover:shadow-[0_0_35px_rgba(255,64,58,0.18)] sm:min-h-[300px]"
+          ? "border-[#ff403a]/45 shadow-[0_0_35px_rgba(255,64,58,0.18)]"
+          : "border-white/10 hover:border-[#ff403a]/45 hover:shadow-[0_0_35px_rgba(255,64,58,0.18)]"
       }`}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
@@ -33,7 +35,7 @@ export default function PPMBenefitHoverCard({ benefit }) {
       />
 
       <div
-        className={`relative z-10 flex h-full flex-col p-4 transition-all duration-500 ease-out sm:p-6 md:p-7 ${
+        className={`relative z-10 col-start-1 row-start-1 flex flex-col p-4 transition-all duration-500 ease-out sm:p-6 md:p-7 ${
           isActive ? "pointer-events-none opacity-0 -translate-y-3" : "opacity-100 translate-y-0"
         }`}
       >
@@ -61,7 +63,7 @@ export default function PPMBenefitHoverCard({ benefit }) {
       </div>
 
       <div
-        className={`absolute inset-0 z-20 flex flex-col justify-center overflow-y-auto p-4 transition-all duration-500 ease-out sm:p-6 md:p-7 ${
+        className={`relative z-20 col-start-1 row-start-1 flex flex-col justify-center p-4 transition-all duration-500 ease-out sm:p-6 md:p-7 ${
           isActive ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
         }`}
       >

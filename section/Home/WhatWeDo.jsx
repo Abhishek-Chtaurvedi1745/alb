@@ -200,16 +200,9 @@ export default function WhatWeDo() {
             inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff403a]/80">
-            Our Expertise
-          </p>
           <h1 className="text-3xl font-semibold text-white sm:text-4xl md:text-[40px]">
             What <span className="text-[#ff403a]">We Do</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-sm font-normal text-white/80 md:text-sm">
-            Smart Solutions,{" "}
-            <span className="text-[#ff403a]">Measurable Results</span>
-          </p>
           <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-[#ff403a] to-transparent" />
         </div>
 

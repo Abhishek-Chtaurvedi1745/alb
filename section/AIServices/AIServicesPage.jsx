@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import BookACallButton from "@/component/BookACall/BookACallButton";
-import { useInView } from "react-intersection-observer";
 import { aiServicesPageData } from "./aiServicesPageData";
 
 const SLIDE_INTERVAL = 6500;
@@ -12,158 +11,85 @@ function RichHtml({ html, className = "", as: Tag = "span" }) {
   const safe = html
     .replace(/<em>/g, '<em class="text-[#FF403A] not-italic">')
     .replace(/<span class="ai-accent">/g, '<span class="text-[#FF403A]">')
-    .replace(/<span class="accent">/g, '<span class="text-[#FF403A]">')
+    .replace(/<span class="accent">/g, '<span class="accent">')
     .replace(/<br>/g, "<br />");
 
   return <Tag className={className} dangerouslySetInnerHTML={{ __html: safe }} />;
 }
 
-function SectionHeading({ titleHtml, subtitle, className = "", centered = true }) {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
+function MockVisual({ visual }) {
+  if (!visual) return null;
+
+  if (visual.type === "chat") {
+    return (
+      <>
+        <div className="mock-chrome">
+          <span className="mock-dot" />
+          <span className="mock-dot" />
+          <span className="mock-dot" />
+        </div>
+        <div className="chat-bubble user">{visual.user}</div>
+        <div className="chat-bubble ai">{visual.ai}</div>
+      </>
+    );
+  }
 
   return (
-    <div
-      ref={ref}
-      className={`mb-0 transition-all duration-700 ${
-        inView ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-      } ${centered ? "text-center" : ""} ${className}`}
-    >
-      {titleHtml ? (
-        <RichHtml
-          html={titleHtml}
-          className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
-          as="h3"
-        />
-      ) : null}
-      {subtitle ? (
-        <p
-          className={`font-normal mt-5 max-w-3xl text-base leading-relaxed text-white/90 md:text-[16px] ${
-            centered ? "mx-auto" : ""
-          }`}
-        >
-          {subtitle}
-        </p>
-      ) : null}
-    </div>
-  );
-}
-
-function CapabilityCard({ panel, index }) {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.15 });
-
-  return (
-    <article
-      ref={ref}
-      className={`relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 p-6 transition-all duration-700 hover:border-[#FF403A]/50 ${
-        inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-      }`}
-      style={{ transitionDelay: `${index * 80}ms` }}
-    >
-      {panel.image ? (
-        <>
-          <img
-            src={`${panel.image}?v=1`}
-            alt=""
-            aria-hidden
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-black/90" />
-        </>
-      ) : (
-        <div className="absolute inset-0 bg-[#0c0c0c]" />
-      )}
-
-      <h4 className="relative mb-4 text-[20px] font-semibold leading-snug text-white">
-        {panel.title}
-      </h4>
-
-      <p className="relative mb-5 text-sm leading-relaxed text-white/90 md:text-base">
-        {panel.desc}
-      </p>
-
-      <ul className="relative mt-auto space-y-3">
-        {panel.tags.map((tag) => (
-          <li key={tag} className="flex items-start gap-2.5">
-            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#FF403A]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-3 w-3 text-white"
-                aria-hidden
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </span>
-            <span className="text-sm leading-relaxed text-white/90 md:text-base">
-              {tag}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </article>
-  );
-}
-
-function TierCard({ tier, index }) {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
-  const layerNumber = String(index + 1).padStart(2, "0");
-
-  return (
-    <article
-      ref={ref}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#FF403A]/35 bg-[#0a0a0a] p-6 transition-all duration-700 hover:-translate-y-1 hover:border-[#FF403A]/70 sm:p-7 ${
-        inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-      }`}
-      style={{ transitionDelay: `${index * 120}ms` }}
-    >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-6 -top-8 text-[7rem] font-bold leading-none text-[#FF403A]/[0.07] transition-colors duration-500 group-hover:text-[#FF403A]/15"
-      >
-        {layerNumber}
+    <>
+      <div className="mock-chrome">
+        <span className="mock-dot" />
+        <span className="mock-dot" />
+        <span className="mock-dot" />
       </div>
-
-      <div className="relative mb-5 flex items-center gap-3">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#FF403A]/40 bg-[#FF403A]/10 text-sm font-bold text-white">
-          {layerNumber}
-        </span>
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#FF403A]">
-          {tier.kicker}
-        </p>
-      </div>
-
-      <RichHtml
-        html={tier.titleHtml}
-        className="relative mb-3 text-lg font-semibold leading-snug text-white md:text-xl"
-        as="h4"
-      />
-      <p className="relative mb-6 flex-1 text-sm leading-relaxed text-white/90 md:text-[15px]">
-        {tier.desc}
-      </p>
-      <div className="relative flex flex-wrap gap-2">
-        {tier.skills.map((skill) => (
+      {visual.rows.map((row) => (
+        <div key={`${row.label}-${row.badge}`} className="mock-row">
+          <span className="mock-icon">{row.icon}</span>
+          <span>{row.label}</span>
           <span
-            key={skill}
-            className="rounded-md border border-white/10 bg-[#111111] px-2.5 py-1 text-xs text-white/70 transition-colors group-hover:border-[#FF403A]/25 group-hover:text-white/85"
+            className={`mock-badge${row.badgeVariant ? ` ${row.badgeVariant}` : ""}`}
           >
-            {skill}
+            {row.badge}
           </span>
-        ))}
-      </div>
-    </article>
+        </div>
+      ))}
+    </>
   );
+}
+
+function useInViewClass(refs, setActive) {
+  useEffect(() => {
+    const nodes = refs.current.filter(Boolean);
+    if (!nodes.length) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            if (setActive) {
+              const idx = nodes.indexOf(entry.target);
+              if (idx >= 0) setActive(idx);
+            }
+          }
+        });
+      },
+      { threshold: 0.35, rootMargin: "0px 0px -10% 0px" }
+    );
+
+    nodes.forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, [refs, setActive]);
 }
 
 export default function AIServicesPage() {
-  const { slides, flightHead, panels, skillsHead, tiers } = aiServicesPageData;
+  const { slides, flightHead, panels, skillsHead, tiers, cta } =
+    aiServicesPageData;
   const [activeSlide, setActiveSlide] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [activePanel, setActivePanel] = useState(0);
   const timerRef = useRef(null);
+  const panelRefs = useRef([]);
+  const tierRefs = useRef([]);
 
   const startSlideTimer = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -181,6 +107,9 @@ export default function AIServicesPage() {
     };
   }, [startSlideTimer]);
 
+  useInViewClass(panelRefs, setActivePanel);
+  useInViewClass(tierRefs);
+
   const goToSlide = (index) => {
     setActiveSlide(index);
     if (timerRef.current) clearInterval(timerRef.current);
@@ -189,6 +118,14 @@ export default function AIServicesPage() {
         setActiveSlide((prev) => (prev + 1) % slides.length);
       }, SLIDE_INTERVAL);
     }
+  };
+
+  const scrollToPanel = (index) => {
+    panelRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+    setActivePanel(index);
   };
 
   return (
@@ -265,38 +202,151 @@ export default function AIServicesPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 lg:px-12" id="capabilities">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading titleHtml={flightHead.titleHtml} />
+      <div className="ai-mid">
+        <section className="flight-section" id="capabilities">
+          <div className="wrap">
+            <div className="flight-label">{flightHead.label}</div>
+            <RichHtml html={flightHead.titleHtml} className="flight-heading" as="h2" />
+          </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {panels.map((panel, index) => (
-              <div
-                key={panel.title}
-                className={
-                  index === panels.length - 1
-                    ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.75rem)] lg:col-span-1 lg:col-start-2 lg:mx-0 lg:w-full"
-                    : undefined
-                }
+          <div className="flight-path-wrap">
+            <div className="flight-main">
+              <svg
+                className="flight-svg"
+                viewBox="0 0 1180 2320"
+                preserveAspectRatio="none"
+                aria-hidden
               >
-                <CapabilityCard panel={panel} index={index} />
+                <defs>
+                  <linearGradient
+                    id="flightGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="0%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#FF403A" stopOpacity="0" />
+                    <stop offset="15%" stopColor="#FF403A" stopOpacity="0.85" />
+                    <stop offset="50%" stopColor="#FF403A" stopOpacity="0.55" />
+                    <stop offset="85%" stopColor="#FF403A" stopOpacity="0.85" />
+                    <stop offset="100%" stopColor="#FF403A" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                <path
+                  className="flight-line"
+                  d="M 590 50 C 200 160, 950 280, 590 380 S 200 560, 590 660 S 950 840, 590 940 S 200 1120, 590 1220 S 950 1400, 590 1500 S 200 1680, 590 1780 S 950 1960, 590 2060"
+                />
+              </svg>
+
+              <div className="flight-panels">
+                {panels.map((panel, index) => (
+                  <div
+                    key={panel.label}
+                    className="flight-panel"
+                    ref={(el) => {
+                      panelRefs.current[index] = el;
+                    }}
+                  >
+                    <div className="panel-text">
+                      <div className="panel-num">
+                        <span className="line" />
+                        {panel.num} — {panel.label}
+                      </div>
+                      <h3 className="panel-title">{panel.title}</h3>
+                      <p className="panel-desc">{panel.desc}</p>
+                      <div className="panel-tags">
+                        {panel.tags.map((tag) => (
+                          <span key={tag} className="panel-tag">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="panel-visual">
+                      <MockVisual visual={panel.visual} />
+                    </div>
+                  </div>
+                ))}
               </div>
+            </div>
+
+            <nav className="flight-nav" aria-label="Capability sections">
+              {panels.map((panel, index) => (
+                <button
+                  key={panel.label}
+                  type="button"
+                  className={index === activePanel ? "active" : ""}
+                  aria-label={`Go to ${panel.label}`}
+                  aria-current={index === activePanel ? "true" : undefined}
+                  onClick={() => scrollToPanel(index)}
+                >
+                  {panel.num}
+                </button>
+              ))}
+            </nav>
+          </div>
+
+          <div className="flight-nav-mobile" aria-label="Capability sections">
+            {panels.map((panel, index) => (
+              <button
+                key={`m-${panel.label}`}
+                type="button"
+                className={index === activePanel ? "active" : ""}
+                aria-label={`Go to ${panel.label}`}
+                onClick={() => scrollToPanel(index)}
+              >
+                {panel.num}
+              </button>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="px-6 py-16 lg:px-12" id="skills">
-        <div className="mx-auto max-w-7xl">
-          <SectionHeading titleHtml={skillsHead.titleHtml} subtitle={skillsHead.desc} />
+        <section className="skills-section" id="skills">
+          <div className="wrap">
+            <div className="skills-head">
+              <div className="flight-label">{skillsHead.label}</div>
+              <RichHtml html={skillsHead.titleHtml} as="h2" />
+              <p>{skillsHead.desc}</p>
+            </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-7">
-            {tiers.map((tier, index) => (
-              <TierCard key={tier.kicker} tier={tier} index={index} />
-            ))}
+            <div className="tiers">
+              {tiers.map((tier, index) => (
+                <div
+                  key={tier.kicker}
+                  className="tier"
+                  ref={(el) => {
+                    tierRefs.current[index] = el;
+                  }}
+                >
+                  <div className="tier-node filled">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <div className="tier-body">
+                    <div className="tier-kicker">{tier.kicker}</div>
+                    <RichHtml html={tier.titleHtml} className="tier-title" as="h3" />
+                    <p className="tier-desc">{tier.desc}</p>
+                    <div className="tier-skills">
+                      {tier.skills.map((skill) => (
+                        <span key={skill} className="tier-skill">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        <section className="cta-strip" id="contact">
+          <div className="wrap">
+            <h2>{cta.title}</h2>
+            <p>{cta.desc}</p>
+            <BookACallButton className="btn-primary">{cta.cta}</BookACallButton>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

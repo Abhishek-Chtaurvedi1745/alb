@@ -56,11 +56,11 @@ export default function ConnectAllPage() {
         <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
           <h1 className="m-0">
             <img
-              src="/images/ca-logo-hd.png"
+              src="/images/ca-logo-white.png"
               alt="ConnectALL by Broadcom"
-              className="h-16 w-auto max-w-[min(100%,520px)] object-contain sm:h-20 md:h-24"
+              className="h-16 w-auto max-w-[min(100%,520px)] object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.65)] sm:h-20 md:h-24"
               decoding="async"
-              style={{ imageRendering: "auto" }}
+              fetchPriority="high"
             />
           </h1>
 
@@ -124,7 +124,7 @@ export default function ConnectAllPage() {
             Our Delivery <span className="text-[#FF403A]">Methodology</span>
           </h3>
 
-          <p className="font-normal mt-5 text-sm leading-relaxed text-white/90 md:text-[16px]">
+          <p className="font-normal mt-6 text-sm leading-relaxed text-white/90 md:text-[16px]">
             Every ConnectALL engagement follows a structured implementation
             framework designed to ensure successful project delivery and
             long-term sustainability. Our methodology includes:
@@ -150,7 +150,7 @@ export default function ConnectAllPage() {
             ))}
           </ul>
 
-          <p className="font-normal mt-8 text-sm leading-relaxed text-white/80 md:text-[16px]">
+          <p className="font-normal mt-8 text-sm leading-relaxed text-white/90 md:text-[16px]">
             This collaborative approach ensures every integration is aligned with
             business objectives while delivering measurable operational
             improvements.
@@ -158,7 +158,7 @@ export default function ConnectAllPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-20 pt-4 lg:px-12">
+      <section className="px-6 pb-20 pt-16 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <h3 className="text-center text-3xl font-semibold leading-tight md:text-[40px]">
             Enable a Truly{" "}

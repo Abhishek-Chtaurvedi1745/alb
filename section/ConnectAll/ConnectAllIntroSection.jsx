@@ -1,6 +1,5 @@
 "use client";
 
-import BookACallButton from "@/component/BookACall/BookACallButton";
 import { useState } from "react";
 import { overviewParagraphs } from "./connectAllData";
 
@@ -9,8 +8,8 @@ export default function ConnectAllIntroSection() {
   const hiddenParagraphs = overviewParagraphs.slice(1);
 
   return (
-    <section className="bg-black text-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
+    <section className="bg-black px-6 py-16 text-white lg:px-12">
+      <div className="mx-auto max-w-7xl">
         <h1 className="text-3xl font-semibold leading-tight md:text-[40px]">
           Connecting Your Enterprise,{" "}
           <span className="text-[#FF403A]">Simplifying Your Delivery</span>
@@ -42,10 +41,6 @@ export default function ConnectAllIntroSection() {
             {expanded ? "Read less" : "Read more"}
           </button>
         )}
-
-        <BookACallButton className="mt-10 inline-block rounded-xl bg-[#FF403A] px-8 py-4 font-semibold shadow-lg shadow-red-500/30 transition hover:opacity-90">
-          Get Free Consultation
-        </BookACallButton>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ export const aiServicesPageData = {
     {
       eyebrow: "AI CONCIERGE — BUILT FOR ENTERPRISE PPM",
       titleHtml:
-        'Troz<span class="ai-accent">AI</span> solution that lives inside your <em>project office.</em>',
+        'Troz<span class="ai-accent">AI</span> : An Ai solution that lives inside your <em>project office.</em>',
       subtitle:
         "TrozAI understands your organisation — its standards, its history, its way of working — and acts on that understanding inside your project management application. Every action stays reviewable. Every step keeps a human in the loop.",
       cta: "Request a free demo",
@@ -28,11 +28,12 @@ export const aiServicesPageData = {
   ],
   flightHead: {
     label: "PRODUCT — AI CONCIERGE",
-    titleHtml:
-      'Everything you wanted from an AI,<br><span class="text-[#FF403A]">now in one solution.</span>',
+    titleHtml: "Everything you wanted from an AI,<br>now in one solution.",
   },
   panels: [
     {
+      num: "01",
+      label: "WORKSPACE MEMORY",
       title: "Every workspace remembers everything that happens inside it.",
       desc: "A project, programme or portfolio gets its own persistent workspace — every document, conversation, decision and artifact stays contained within it. Context never leaks between engagements, and nothing has to be re-explained the next time you open the chat.",
       tags: ["Persistent context", "Project · Programme · Portfolio", "Isolated by design"],
@@ -47,6 +48,8 @@ export const aiServicesPageData = {
       },
     },
     {
+      num: "02",
+      label: "ORG CONTEXT",
       title: "Every answer is grounded in how your organisation actually works.",
       desc: "Org standards, delivery playbooks, past project history and policy documents are indexed and retrieved at query time. The AI doesn't give generic advice — it gives your advice, shaped by your own organisational knowledge.",
       tags: ["RAG-grounded", "Org knowledge base", "Policy-aware"],
@@ -58,6 +61,8 @@ export const aiServicesPageData = {
       },
     },
     {
+      num: "03",
+      label: "DOCUMENT INTELLIGENCE",
       title: "Upload almost any project document. It knows what to do with it.",
       desc: "A Statement of Work becomes a new project, scoped and structured. Meeting minutes become tasks and risks, assigned and dated. The same engine reads status reports, change requests, even scanned notes — and routes each one to the right action in your PM tool.",
       tags: ["SOW → Project", "Minutes → Tasks & Risks", "Any document type"],
@@ -72,6 +77,8 @@ export const aiServicesPageData = {
       },
     },
     {
+      num: "04",
+      label: "ACTION INTELLIGENCE",
       title: "Every extracted action comes with a confidence score — and a human checkpoint.",
       desc: "Tasks, risks, decisions and change requests are scored for confidence before anything is written. Review, adjust or approve in one click. Nothing reaches your project management application without a clear audit trail.",
       tags: ["Confidence scoring", "Human-in-the-loop", "Full audit trail"],
@@ -86,6 +93,8 @@ export const aiServicesPageData = {
       },
     },
     {
+      num: "05",
+      label: "TRUST & SAFETY",
       title: "An AI you can actually trust with your project data.",
       desc: "Every write-back is reviewable before it happens. Every response is traceable to its source. Workspace data stays isolated, access is role-based, and nothing is used to train a model outside your organisation. Trust isn't a feature here — it's the default.",
       tags: ["Source-traceable", "Role-based access", "Data stays yours"],
@@ -100,6 +109,8 @@ export const aiServicesPageData = {
       },
     },
     {
+      num: "06",
+      label: "COLLABORATION ENGINE",
       title: "It knows who to notify, and when to schedule.",
       desc: "Reading conversations and calendars together, the AI surfaces meetings to attend, sessions still waiting to be booked, and notifications that are overdue — so coordination overhead stops living in email threads.",
       tags: ["Calendar-aware", "Auto-notify", "Meeting detection"],
@@ -114,6 +125,8 @@ export const aiServicesPageData = {
       },
     },
     {
+      num: "07",
+      label: "AGENTIC WORKFLOWS",
       title: "It doesn't stop at the PM tool — it works across the systems around it.",
       desc: "The same agentic core reaches into CRM, HR and finance systems alongside your PM tool — turning a closed opportunity into a scoped project, forecasting delivery against real capacity, validating timesheets, and flagging skill gaps before they become resourcing problems.",
       tags: ["CRM → Project", "Skill & capacity matching", "Timesheet validation", "Delivery forecasting"],
@@ -130,26 +143,25 @@ export const aiServicesPageData = {
   ],
   skillsHead: {
     label: "HOW WE BUILD",
-    titleHtml:
-      'Three layers. <span class="text-[#FF403A]">Built in order.</span>',
+    titleHtml: 'Three layers. <span class="accent">Built in order.</span>',
     desc: "Agentic AI isn't one skill — it's three, stacked. You can't build the third without the first two holding underneath it. This is the order we built them in, and the order we'd recommend to anyone else.",
   },
   tiers: [
     {
       kicker: "LAYER ONE — RETRIEVAL",
-      titleHtml: 'RAG <span class="ai-accent">— giving the model your context</span>',
+      titleHtml: 'RAG <span class="accent">— giving the model your context</span>',
       desc: "Before an AI can act on your organisation, it has to know it. We index org standards, delivery policy, closed-project history and live documents into a vector store the model can search at query time — every response grounded in your context, not generic advice.",
       skills: ["Vector embeddings", "Chunking strategy", "Org Vault indexing", "Metadata filtering"],
     },
     {
       kicker: "LAYER TWO — CONNECTIVITY",
-      titleHtml: 'MCP <span class="ai-accent">— giving the model your tools</span>',
+      titleHtml: 'MCP <span class="accent">— giving the model your tools</span>',
       desc: "Knowing isn't enough — it has to act. We build on the Model Context Protocol to connect live, two-way to your project management application, CRM, HR and finance systems, so the model can read real state and write real changes, not just describe them.",
       skills: ["Tool schema design", "Scoped permissions", "Multi-app routing", "Write-back validation"],
     },
     {
       kicker: "LAYER THREE — AUTONOMY",
-      titleHtml: 'Agentic AI <span class="ai-accent">— giving the model judgement</span>',
+      titleHtml: 'Agentic AI <span class="accent">— giving the model judgement</span>',
       desc: "The final layer: multi-step reasoning that plans, calls the right tool from the right context, and checks its own work. This is where a chatbot becomes a colleague — one that drafts the report, files the risk, and tells you what it did and why.",
       skills: ["Document classification", "Confidence scoring", "Human-in-the-loop gates", "Multi-step workflows"],
     },

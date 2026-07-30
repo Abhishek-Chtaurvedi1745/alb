@@ -272,13 +272,6 @@ function page() {
                   Explore Automic Automation →
                 </span>
               </div>
-              <div className="border-t border-white/10">
-                <img
-                  src="/images/ea-automic-human.png?v=2"
-                  alt="Broadcom Automic Automation"
-                  className="aspect-video w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                />
-              </div>
             </Link>
 
             <Link
@@ -305,13 +298,6 @@ function page() {
                   Explore Stonebranch →
                 </span>
               </div>
-              <div className="border-t border-white/10">
-                <img
-                  src="/images/ea-stonebranch-human.png?v=2"
-                  alt="Stonebranch Universal Automation Center"
-                  className="aspect-video w-full object-cover transition duration-500 group-hover:scale-[1.02]"
-                />
-              </div>
             </Link>
           </div>
         </div>
@@ -333,31 +319,21 @@ function page() {
             </p>
           </div>
 
-          <div className="mt-10 grid items-start gap-8 lg:grid-cols-[38%_1fr] lg:gap-10">
-            <div className="overflow-hidden rounded-2xl border border-white/10 lg:sticky lg:top-28">
-              <img
-                src="/images/ea-benefits-landscape.png?v=2"
-                alt="Transformative benefits of enterprise automation"
-                className="aspect-video w-full object-cover"
-              />
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2">
-              {benefits1.map((item, i) => (
-                <div
-                  key={i}
-                  className="rounded-xl border border-white/10 bg-[#0c0c0c] p-4 transition-colors hover:border-[#FF403A]/40"
-                >
-                  <div className="flex items-start gap-3">
-                    <CheckIcon />
-                    <p className="text-[13px] font-normal leading-relaxed text-white md:text-sm">
-                      <span className="font-semibold">{item.title}</span>{" "}
-                      {item.desc}
-                    </p>
-                  </div>
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {benefits1.map((item, i) => (
+              <div
+                key={i}
+                className="rounded-xl border border-white/10 bg-[#0c0c0c] p-4 transition-colors hover:border-[#FF403A]/40"
+              >
+                <div className="flex items-start gap-3">
+                  <CheckIcon />
+                  <p className="text-[13px] font-normal leading-relaxed text-white md:text-sm">
+                    <span className="font-semibold">{item.title}</span>{" "}
+                    {item.desc}
+                  </p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

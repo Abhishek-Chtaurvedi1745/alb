@@ -7,7 +7,6 @@ export default function HomeTestimonials() {
   return (
     <TestimonialsSection
       testimonials={homeTestimonials}
-      eyebrow="Testimonials"
       title="What our clients say"
       highlight="About Us."
       autoSlideMs={5000}

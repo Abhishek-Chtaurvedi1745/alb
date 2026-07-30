@@ -81,7 +81,7 @@ export default function PrebuiltPluginPage({ page }) {
 
       <section className="px-6 py-14">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="mx-auto max-w-3xl text-sm font-normal leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]">
+          <p className="mx-auto max-w-3xl text-sm font-semibold leading-relaxed text-white sm:text-[13px] md:text-[16px]">
             {page.summary}
           </p>
         </div>

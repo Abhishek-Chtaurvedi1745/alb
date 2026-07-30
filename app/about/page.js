@@ -68,16 +68,12 @@ function page() {
         </div>
       </section>
 
-      {/* Our Mission & Our Approach */}
+      {/* What drives us */}
       <section className="w-full overflow-hidden bg-black px-4 pb-16 pt-6 md:pb-24 md:pt-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 md:mb-14">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#FF403A]">
-              What drives us
-            </p>
             <h1 className="max-w-3xl text-3xl font-semibold leading-[1.15] text-white md:text-[40px]">
-              Our Mission &{" "}
-              <span className="text-[#FF403A]">Our Approach</span>
+              What <span className="text-[#FF403A]">drives us</span>
             </h1>
           </div>
 
@@ -88,32 +84,39 @@ function page() {
               <div className="absolute -right-8 -top-8 h-36 w-36 rounded-full border border-[#FF403A]/15" />
               <div className="absolute -bottom-10 right-8 h-28 w-28 rounded-full border border-[#FF403A]/10" />
 
-              <div className="relative flex h-full flex-col p-7 md:p-9 lg:p-10">
-                <div className="mb-8 flex h-[88px] w-[88px] items-center justify-center rounded-full bg-white md:h-[100px] md:w-[100px]">
-                  <img
-                    src="/images/ma.svg"
-                    alt=""
-                    className="h-11 w-11 object-contain md:h-12 md:w-12"
-                  />
+              <div className="relative flex h-full flex-col">
+                <div className="border-b border-[#FF403A]/25 px-7 py-7 md:px-9 md:py-8">
+                  <div className="flex flex-wrap items-center gap-5">
+                    <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-white md:h-[84px] md:w-[84px]">
+                      <img
+                        src="/images/ma.svg"
+                        alt=""
+                        className="h-9 w-9 object-contain md:h-10 md:w-10"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-[28px] font-semibold leading-none text-white md:text-[34px]">
+                        Our <span className="text-[#FF403A]">Mission</span>
+                      </h4>
+                    </div>
+                  </div>
                 </div>
 
-                <h4 className="mb-6 text-[28px] font-semibold leading-none text-white md:text-[34px]">
-                  Our <span className="text-[#FF403A]">Mission</span>
-                </h4>
-
-                <p className="text-[14px] font-normal leading-[1.75] text-[#D8D8D8] md:text-[16px]">
-                  To deliver exceptional services and solutions that empower
-                  organizations to optimize the value extracted from their
-                  technology investments — helping them achieve business
-                  objectives faster, with a skilled team and well-defined
-                  delivery processes.
-                </p>
-
-                <div className="mt-auto pt-10">
-                  <div className="h-px w-16 bg-[#FF403A]" />
-                  <p className="mt-4 text-sm text-white/55">
-                    Value from every technology investment.
+                <div className="flex flex-1 flex-col p-6 md:p-7">
+                  <p className="text-[14px] font-normal leading-[1.75] text-[#D8D8D8] md:text-[16px]">
+                    To deliver exceptional services and solutions that empower
+                    organizations to optimize the value extracted from their
+                    technology investments — helping them achieve business
+                    objectives faster, with a skilled team and well-defined
+                    delivery processes.
                   </p>
+
+                  <div className="mt-auto pt-10">
+                    <div className="h-px w-16 bg-[#FF403A]" />
+                    <p className="mt-4 text-sm text-white/55">
+                      Value from every technology investment.
+                    </p>
+                  </div>
                 </div>
               </div>
             </article>

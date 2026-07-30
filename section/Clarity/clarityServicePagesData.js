@@ -206,9 +206,7 @@ export const clarityServicePages = {
 
     {
       title: "Agile Readiness Pack",
-      paragraphs: [
-        "Our modular approach allows organizations to begin with their highest-priority capabilities while expanding the platform over time without redesigning existing solutions."
-      ],
+      paragraphs: [],
       bullets: [
         "Rally implementation",
         "Agile process configuration",
