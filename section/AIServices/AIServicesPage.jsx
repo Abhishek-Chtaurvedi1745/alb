@@ -56,7 +56,7 @@ function MockVisual({ visual }) {
   );
 }
 
-function useInViewClass(refs, setActive) {
+function useInViewClass(refs, setActive, scrollingRef) {
   useEffect(() => {
     const nodes = refs.current.filter(Boolean);
     if (!nodes.length) return undefined;
@@ -66,7 +66,7 @@ function useInViewClass(refs, setActive) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("in-view");
-            if (setActive) {
+            if (setActive && !scrollingRef?.current) {
               const idx = nodes.indexOf(entry.target);
               if (idx >= 0) setActive(idx);
             }
@@ -76,9 +76,15 @@ function useInViewClass(refs, setActive) {
       { threshold: 0.35, rootMargin: "0px 0px -10% 0px" }
     );
 
-    nodes.forEach((node) => observer.observe(node));
+    nodes.forEach((node) => {
+      observer.observe(node);
+      const rect = node.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85 && rect.bottom > 80) {
+        node.classList.add("in-view");
+      }
+    });
     return () => observer.disconnect();
-  }, [refs, setActive]);
+  }, [refs, setActive, scrollingRef]);
 }
 
 export default function AIServicesPage() {
@@ -90,6 +96,7 @@ export default function AIServicesPage() {
   const timerRef = useRef(null);
   const panelRefs = useRef([]);
   const tierRefs = useRef([]);
+  const scrollingRef = useRef(false);
 
   const startSlideTimer = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -107,7 +114,7 @@ export default function AIServicesPage() {
     };
   }, [startSlideTimer]);
 
-  useInViewClass(panelRefs, setActivePanel);
+  useInViewClass(panelRefs, setActivePanel, scrollingRef);
   useInViewClass(tierRefs);
 
   const goToSlide = (index) => {
@@ -121,11 +128,15 @@ export default function AIServicesPage() {
   };
 
   const scrollToPanel = (index) => {
-    panelRefs.current[index]?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+    const target = panelRefs.current[index];
+    if (!target) return;
+    scrollingRef.current = true;
     setActivePanel(index);
+    target.classList.add("in-view");
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    window.setTimeout(() => {
+      scrollingRef.current = false;
+    }, 900);
   };
 
   return (
