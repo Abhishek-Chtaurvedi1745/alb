@@ -57,7 +57,7 @@ function CapabilityCard({ panel, index }) {
   return (
     <article
       ref={ref}
-      className={`relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 p-6 transition-all duration-700 hover:border-[#FF403A]/50 ${
+      className={`relative flex h-full min-h-[220px] flex-col overflow-hidden rounded-2xl border border-white/10 p-5 transition-all duration-700 hover:border-[#FF403A]/50 sm:min-h-0 sm:p-6 ${
         inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
       }`}
       style={{ transitionDelay: `${index * 80}ms` }}
@@ -76,11 +76,11 @@ function CapabilityCard({ panel, index }) {
         <div className="absolute inset-0 bg-[#0c0c0c]" />
       )}
 
-      <h4 className="relative mb-4 text-[20px] font-semibold leading-snug text-white">
+      <h4 className="relative mb-3 text-base font-semibold leading-snug text-white sm:mb-4 sm:text-[20px]">
         {panel.title}
       </h4>
 
-      <p className="relative mb-5 text-sm leading-relaxed text-white/90 md:text-base">
+      <p className="relative mb-4 text-sm leading-relaxed text-white/90 sm:mb-5 md:text-base">
         {panel.desc}
       </p>
 
@@ -164,15 +164,15 @@ function RallySliderSection() {
   const slide = rallyHeroSlides[0];
 
   return (
-    <section className="bg-black px-6 py-16 text-white lg:px-12">
+    <section className="bg-black px-4 py-8 text-white sm:px-6 sm:py-10 md:py-12 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <TitleWithAccent
           title={slide.title}
           accent={slide.titleAccent}
-          className="text-center text-3xl font-semibold leading-tight text-white md:text-[40px]"
+          className="text-center text-2xl font-semibold leading-tight text-white sm:text-3xl md:text-[40px]"
           as="h3"
         />
-        <p className="mt-6 w-full text-left text-sm font-normal leading-relaxed text-white/90 md:text-[16px]">
+        <p className="mt-4 w-full text-left text-sm font-normal leading-relaxed text-white/90 sm:mt-5 md:text-[16px]">
           {slide.subtitle}
         </p>
       </div>
@@ -209,20 +209,20 @@ export default function RallyPage() {
 
       <RallySliderSection />
 
-      <section className="px-6 py-16 lg:px-12" id="capabilities">
+      <section className="px-4 pb-14 pt-6 sm:px-6 sm:pb-16 sm:pt-8 lg:px-12 lg:py-16" id="capabilities">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             title={capabilitiesHead.title}
             titleAccent={capabilitiesHead.titleAccent}
           />
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 items-stretch gap-5 sm:mt-10 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
             {capabilityPanels.map((panel, index) => (
               <div
                 key={panel.title}
                 className={
                   index === capabilityPanels.length - 1
-                    ? "sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.75rem)] lg:col-span-1 lg:col-start-2 lg:mx-0 lg:w-full"
+                    ? "md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)] lg:col-span-1 lg:col-start-2 lg:mx-0 lg:w-full"
                     : undefined
                 }
               >
@@ -233,7 +233,7 @@ export default function RallyPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 lg:px-12" id="delivery">
+      <section className="px-4 py-14 sm:px-6 sm:py-16 lg:px-12" id="delivery">
         <div className="mx-auto max-w-7xl">
           <SectionHeading
             title={deliveryHead.title}
@@ -241,7 +241,7 @@ export default function RallyPage() {
             subtitle={deliveryHead.subtitle}
           />
 
-          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-7">
+          <div className="mt-8 grid grid-cols-1 items-stretch gap-5 sm:mt-10 md:grid-cols-3 md:gap-7">
             {deliveryPhases.map((phase, index) => (
               <PhaseCard key={phase.kicker} phase={phase} index={index} />
             ))}

@@ -12,7 +12,7 @@ function SectionBlock({ section }) {
 
   return (
     <article
-      className={`rounded-2xl border p-6 sm:p-8 ${
+      className={`flex h-full flex-col rounded-2xl border p-6 sm:p-8 ${
         isNumbered
           ? "border-[#ff403a]/30 bg-[#0d0d0d]"
           : "border-white/10 bg-[#080808]"
@@ -48,13 +48,13 @@ function SectionBlock({ section }) {
       )}
 
       {hasBullets && (
-        <ul className="mt-4 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+        <ul className="mt-3 grid grid-cols-1 gap-y-2.5 sm:mt-4 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-3">
           {section.bullets.map((bullet, index) => (
-            <li key={index} className="flex items-start gap-2.5">
+            <li key={index} className="flex items-start gap-2">
               <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ff403a]/15">
                 <Check size={12} className="text-[#ff403a]" strokeWidth={3} />
               </span>
-              <span className="min-w-0 break-words text-[12px] leading-snug tracking-tight text-white/80 sm:text-[13px] lg:text-[14px]">
+              <span className="min-w-0 text-sm leading-relaxed text-white/80 sm:text-[13px] md:text-[14px]">
                 {bullet}
               </span>
             </li>

@@ -8,7 +8,7 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
           {titleSuffix ? ` ${titleSuffix}` : null}
         </h1>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 items-stretch gap-5 sm:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
           {items.map((item, index) => {
             const isCentered = Boolean(item.centered);
             const isLast = index === items.length - 1;
@@ -50,7 +50,7 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
                 ) : null}
 
                 <div
-                  className={`relative flex h-full min-h-[240px] flex-col p-6 md:min-h-[260px] md:p-8 ${
+                  className={`relative flex h-full min-h-[200px] flex-col p-5 sm:min-h-[220px] md:min-h-[260px] md:p-8 ${
                     isCentered
                       ? "items-center justify-center text-center"
                       : "items-start justify-start text-left"
@@ -67,9 +67,11 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
                       }
                     />
                   ) : null}
-                  <h4 className="text-[20px] font-semibold">{item.title}</h4>
+                  <h4 className="text-base font-semibold sm:text-lg md:text-[20px]">
+                    {item.title}
+                  </h4>
                   {item.description ? (
-                    <p className="mt-3 text-sm font-normal leading-relaxed text-white/85">
+                    <p className="mt-2 text-sm font-normal leading-relaxed text-white/85 sm:mt-3">
                       {item.description}
                     </p>
                   ) : null}

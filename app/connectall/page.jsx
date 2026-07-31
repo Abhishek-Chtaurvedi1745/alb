@@ -79,7 +79,7 @@ export default function ConnectAllPage() {
             <span className="text-[#FF403A]">ConnectALL?</span>
           </h3>
 
-          <ul className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
             {whyImplementBenefits.map((benefit) => (
               <CheckItem key={benefit}>{benefit}</CheckItem>
             ))}
@@ -130,13 +130,13 @@ export default function ConnectAllPage() {
             long-term sustainability. Our methodology includes:
           </p>
 
-          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-8 grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
             {deliveryMethodology.map((step, index) => (
               <li
                 key={step}
                 className={`rounded-2xl border border-[#FF403A]/30 bg-[#0a0a0a] px-5 py-4${
                   index === deliveryMethodology.length - 1
-                    ? " sm:col-span-2 sm:mx-auto sm:w-[calc(50%-0.5rem)] lg:col-span-1 lg:col-start-2 lg:mx-0 lg:w-full"
+                    ? " md:col-span-2 md:mx-auto md:max-w-xl lg:col-span-1 lg:mx-0 lg:max-w-none"
                     : ""
                 }`}
               >

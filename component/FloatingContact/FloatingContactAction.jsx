@@ -163,14 +163,21 @@ export default function FloatingContactAction() {
           onClick={() => setOpen((prev) => !prev)}
           aria-expanded={open}
           aria-label={open ? "Close contact menu" : "Open Call and Chat menu"}
-          className={`float-contact-btn group relative inline-flex items-center gap-2.5 rounded-full bg-[#FF403A] py-2 pl-2 pr-4 text-white transition hover:bg-[#e63530] active:scale-[0.98] sm:gap-3 sm:py-2.5 sm:pl-2.5 sm:pr-5 ${
+          className={`float-contact-btn group relative inline-flex items-center justify-center rounded-full bg-[#FF403A] text-white transition hover:bg-[#e63530] active:scale-[0.98] max-sm:h-14 max-sm:w-14 max-sm:p-0 sm:gap-3 sm:py-2.5 sm:pl-2.5 sm:pr-5 ${
             open ? "is-open" : ""
           }`}
         >
-          <span className="float-contact-icon flex h-10 w-10 items-center justify-center rounded-full border border-white/35 bg-white/15 sm:h-11 sm:w-11">
-            {open ? <X size={18} /> : <Headphones size={18} />}
+          <span className="float-contact-icon flex items-center justify-center max-sm:h-full max-sm:w-full sm:h-11 sm:w-11 sm:rounded-full sm:border sm:border-white/35 sm:bg-white/15">
+            {open ? (
+              <X size={22} className="sm:h-[18px] sm:w-[18px]" />
+            ) : (
+              <>
+                <Phone size={22} className="sm:hidden" />
+                <Headphones size={22} className="hidden sm:block sm:h-[18px] sm:w-[18px]" />
+              </>
+            )}
           </span>
-          <span className="text-[14px] font-bold tracking-wide sm:text-[15px]">
+          <span className="hidden text-[15px] font-bold tracking-wide sm:inline">
             {open ? "Close" : "Call / Chat"}
           </span>
         </button>

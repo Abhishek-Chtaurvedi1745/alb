@@ -248,13 +248,13 @@ function page() {
             <span className="text-[#FF403A]">We Support</span>
           </h3>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 items-stretch gap-5 md:mt-12 md:grid-cols-2 md:gap-6">
             <Link
               href="/automic-automation"
               className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0c] transition hover:border-[#FF403A]/50"
             >
-              <div className="flex flex-1 flex-col p-6 md:p-8">
-                <h4 className="text-2xl font-semibold leading-snug md:text-[32px]">
+              <div className="flex flex-1 flex-col p-5 sm:p-6 md:p-8">
+                <h4 className="text-xl font-semibold leading-snug sm:text-2xl md:text-[32px]">
                   Broadcom{" "}
                   <span className="text-[#FF403A]">Automic Automation</span>
                 </h4>
@@ -278,8 +278,8 @@ function page() {
               href="/stonebranch"
               className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0c] transition hover:border-[#FF403A]/50"
             >
-              <div className="flex flex-1 flex-col p-6 md:p-8">
-                <h4 className="text-2xl font-semibold leading-snug md:text-[32px]">
+              <div className="flex flex-1 flex-col p-5 sm:p-6 md:p-8">
+                <h4 className="text-xl font-semibold leading-snug sm:text-2xl md:text-[32px]">
                   Stonebranch{" "}
                   <span className="text-[#FF403A]">
                     Universal Automation Center (UAC)
@@ -319,7 +319,7 @@ function page() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 md:grid-cols-2 lg:grid-cols-3">
             {benefits1.map((item, i) => (
               <div
                 key={i}

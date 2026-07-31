@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useLayoutEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDownIcon } from "lucide-react";
 import {
   SolutionsMegaMenuDesktop,
@@ -32,6 +33,7 @@ function NavLink({ href, children, className = "" }) {
 const SOLUTIONS_MENU_EDGE_GAP = 16;
 
 function Nav() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
@@ -39,6 +41,32 @@ function Nav() {
   const [solutionsShift, setSolutionsShift] = useState(0);
   const solutionsRef = useRef(null);
   const solutionsMenuRef = useRef(null);
+  const navRef = useRef(null);
+  const [navHeight, setNavHeight] = useState(80);
+
+  const updateNavHeight = () => {
+    if (navRef.current) {
+      setNavHeight(navRef.current.getBoundingClientRect().height);
+    }
+  };
+
+  useLayoutEffect(() => {
+    updateNavHeight();
+  }, [scrolled, isOpen]);
+
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+
+    const observer = new ResizeObserver(updateNavHeight);
+    observer.observe(nav);
+    window.addEventListener("resize", updateNavHeight);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", updateNavHeight);
+    };
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -57,6 +85,11 @@ function Nav() {
   useEffect(() => {
     if (!isOpen) setMobileSolutionsOpen(false);
   }, [isOpen]);
+
+  useEffect(() => {
+    setIsOpen(false);
+    setMobileSolutionsOpen(false);
+  }, [pathname]);
 
   // The Solutions flyout is up to 900px wide and anchored to its trigger, so on
   // narrower desktops it would render past the viewport edge without this nudge.
@@ -121,6 +154,7 @@ function Nav() {
   return (
     <header className="relative z-[999]">
       <nav
+        ref={navRef}
         className={`fixed top-0 left-0 w-full z-[999] transition-all duration-500 ease-out ${
           scrolled
             ? "bg-black/85 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.45)] border-b border-white/[0.06]"
@@ -272,16 +306,20 @@ function Nav() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 top-[80px] z-[998] bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-x-0 bottom-0 z-[998] bg-black/70 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
           isOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
+        style={{ top: navHeight }}
         onClick={() => setIsOpen(false)}
       />
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="fixed inset-x-0 top-[80px] bottom-0 z-[1000] overflow-y-auto overscroll-y-contain border-b border-white/10 bg-black/95 [-webkit-overflow-scrolling:touch] md:hidden">
-          <ul className="flex flex-col gap-1 px-5 py-6 pb-10">
+        <div
+          className="fixed inset-x-0 bottom-0 z-[1002] overflow-y-auto overscroll-y-contain bg-black [-webkit-overflow-scrolling:touch] md:hidden"
+          style={{ top: navHeight }}
+        >
+          <ul className="flex flex-col gap-0.5 px-5 py-4 pb-8">
             <li>
               <Link
                 href="/"
@@ -337,7 +375,7 @@ function Nav() {
               )}
             </li>
 
-            <li className="mt-4 px-2">
+            <li className="mt-3 px-2">
               <BookACallButton
                 onClick={() => setIsOpen(false)}
                 className="flex w-full items-center justify-center rounded-full bg-white py-3.5 text-[17px] font-bold text-[#c41e1e] shadow-lg transition-transform active:scale-[0.98]"

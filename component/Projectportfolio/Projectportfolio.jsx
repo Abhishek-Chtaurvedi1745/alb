@@ -132,7 +132,7 @@ export default function PPMBenefits() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-14">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-10 sm:gap-y-14 lg:grid-cols-3">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex flex-col gap-4">
               {/* Icon */}

@@ -140,7 +140,7 @@ function page() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3">
+              <div className="grid grid-cols-2 md:grid-cols-3">
                 <div className="border-b border-white/10 p-6 md:border-b-0 md:border-r md:p-7">
                   <span className="mb-4 block text-[28px] font-semibold leading-none text-[#FF403A]/80">
                     01
@@ -169,7 +169,7 @@ function page() {
                   </p>
                 </div>
 
-                <div className="p-6 md:p-7">
+                <div className="col-span-2 border-t border-white/10 p-6 md:col-span-1 md:border-t-0 md:p-7">
                   <span className="mb-4 block text-[28px] font-semibold leading-none text-[#FF403A]/80">
                     03
                   </span>

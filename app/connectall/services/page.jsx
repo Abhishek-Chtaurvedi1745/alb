@@ -24,7 +24,7 @@ export default function ConnectAllServicesPage() {
       </section>
 
       <section className="px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-8">
           {connectAllServices.map((service) => (
             <ConnectAllServiceCard key={service.slug} service={service} />
           ))}

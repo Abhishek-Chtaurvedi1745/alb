@@ -4,13 +4,25 @@ import Link from "next/link";
 import BookACallButton from "@/component/BookACall/BookACallButton";
 import PPMBenefitHoverCard from "@/section/ProjectManagement/PPMBenefitHoverCard";
 import { ppmBenefits } from "@/section/ProjectManagement/ppmBenefitsData";
-import BlendedSectionImage from "@/component/Media/BlendedSectionImage";
+import PPMComprehensiveFeatureBlock from "@/section/ProjectManagement/PPMComprehensiveFeatureBlock";
 
 const features = [
-  "Alignment with Objectives: Ensuring that projects align with strategic goals and priorities.",
-  "Resource Allocation: Optimizing resources across projects to maximize value.",
-  "Risk Management: Assessing and managing risks associated with the portfolio.",
-  "Performance Measurement: Tracking project performance and outcomes.",
+  {
+    title: "Alignment with Objectives",
+    desc: "Ensuring that projects align with strategic goals and priorities.",
+  },
+  {
+    title: "Resource Allocation",
+    desc: "Optimizing resources across projects to maximize value.",
+  },
+  {
+    title: "Risk Management",
+    desc: "Assessing and managing risks associated with the portfolio.",
+  },
+  {
+    title: "Performance Measurement",
+    desc: "Tracking project performance and outcomes.",
+  },
 ];
 
 const features1 = [
@@ -100,7 +112,7 @@ function page() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
+        <div className="grid grid-cols-2 items-start gap-3 sm:gap-5 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
           {ppmBenefits.map((benefit, index) => (
             <div
               key={benefit.title}
@@ -281,148 +293,54 @@ function page() {
         </div>
       </div>
     </section>
-<section className="bg-black px-6 pt-10 pb-6 text-white md:pt-14">
+<section className="bg-black px-4 pt-10 pb-12 text-white sm:px-6 md:pt-14 md:pb-6">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 text-center md:mb-16">
-          <h1 className="text-3xl font-semibold md:text-[40px]">
+        <div className="mb-8 text-center max-md:mb-10 md:mb-16">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff403a]/80 md:hidden">
+            PPM Features
+          </p>
+          <h2 className="text-2xl font-semibold leading-tight sm:text-3xl md:text-[40px]">
             Modern PPM Solutions:
             <span className="text-[#FF403A]"> Comprehensive Features</span>
-          </h1>
+          </h2>
+          <div className="mx-auto mt-4 h-px w-20 bg-gradient-to-r from-transparent via-[#ff403a] to-transparent md:hidden" />
         </div>
 
-        {/* Strategic Portfolio Management */}
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-          <div className="rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 md:p-8">
-            <h4 className="mb-4 text-2xl font-semibold md:text-[35px]">
-              Strategic Portfolio{" "}
-              <span className="text-[#FF403A]">Management</span>
-            </h4>
-            <p className="mb-6 text-[13px] font-normal leading-relaxed text-white md:text-sm">
-              Strategic Portfolio Management involves the oversight and
-              management of an organization&apos;s portfolio of projects and
-              initiatives. Its primary focus is on aligning projects with
-              strategic goals and maximizing business value.
-            </p>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {features.map((item, index) => (
-                <div
-                  key={index}
-                  className="rounded-xl border border-white/10 bg-black/50 p-4 transition-colors hover:border-[#FF403A]/40"
-                >
-                  <div className="mb-2 flex items-start gap-2.5">
-                    <img src="/images/crt.svg" alt="" className="mt-0.5 h-4 w-4 shrink-0" />
-                    <p className="text-[13px] leading-relaxed text-white">{item}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative overflow-hidden rounded-2xl border border-white/10">
-            <BlendedSectionImage
-              src="/images/ppm-strategic-portfolio.png?v=1"
-              alt="Strategic Portfolio Management dashboard"
-              fade="left"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+        <div className="flex flex-col gap-8 max-md:gap-10 md:gap-14">
+          <PPMComprehensiveFeatureBlock
+            title="Strategic Portfolio"
+            accent="Management"
+            intro="Strategic Portfolio Management involves the oversight and management of an organization&apos;s portfolio of projects and initiatives. Its primary focus is on aligning projects with strategic goals and maximizing business value."
+            items={features}
+            imageSrc="/images/ppm-strategic-portfolio.png?v=1"
+            imageAlt="Strategic Portfolio Management dashboard"
+            fade="left"
+            mobileImageFirst
+          />
 
-    <section className="overflow-hidden bg-black px-6 py-10 md:py-14">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-          <div className="relative order-1 overflow-hidden rounded-2xl border border-white/10 lg:order-1">
-            <BlendedSectionImage
-              src="/images/ppm-digital-product.png?v=1"
-              alt="Digital Product Management workspace"
-              fade="right"
-              animate
-            />
-          </div>
+          <PPMComprehensiveFeatureBlock
+            title="Digital Product"
+            accent="Management"
+            intro="Digital Product Management involves overseeing the development, enhancement, and management of digital products or services offered by a company. This includes:"
+            items={features1}
+            imageSrc="/images/ppm-digital-product.png?v=1"
+            imageAlt="Digital Product Management workspace"
+            fade="right"
+            animate
+            mobileImageFirst
+            desktopImageFirst
+          />
 
-          <div className="order-2 rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 md:p-8 lg:order-2">
-            <h3 className="mb-4 text-2xl font-semibold text-white md:text-[35px]">
-              Digital Product <span className="text-[#FF403A]">Management</span>
-            </h3>
-            <p className="mb-6 text-[13px] font-normal leading-relaxed text-white md:text-sm">
-              Digital Product Management involves overseeing the development,
-              enhancement, and management of digital products or services
-              offered by a company. This includes:
-            </p>
-            <div className="space-y-3">
-              {features1.map((item, index) => (
-                <div
-                  key={index}
-                  className="rounded-xl border border-white/10 bg-black/50 p-4 transition-colors hover:border-[#FF403A]/40"
-                >
-                  <div className="flex items-start gap-3">
-                    <img
-                      src="/images/crt.svg"
-                      alt=""
-                      className="mt-1 h-4 w-4 shrink-0"
-                    />
-                    <p className="text-[13px] leading-relaxed md:text-sm">
-                      <span className="font-medium text-[#FF403A]">
-                        {item.title}
-                      </span>
-                      <span className="font-normal text-white">
-                        : {item.desc}
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section className="overflow-hidden bg-black px-6 py-10 md:py-14">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-          <div className="order-2 rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 md:p-8 lg:order-1">
-            <h3 className="mb-4 text-2xl font-semibold text-white md:text-[35px]">
-              Value Stream <span className="text-[#FF403A]">Management</span>
-            </h3>
-            <p className="mb-6 text-[13px] font-normal leading-relaxed text-white md:text-sm">
-              Value Stream Management (VSM) involves optimizing the entire flow
-              of work across an organization to deliver value to customers
-              efficiently. It encompasses
-            </p>
-            <div className="space-y-3">
-              {features2.map((item, index) => (
-                <div
-                  key={index}
-                  className="rounded-xl border border-white/10 bg-black/50 p-4 transition-colors hover:border-[#FF403A]/40"
-                >
-                  <div className="flex items-start gap-3">
-                    <img
-                      src="/images/crt.svg"
-                      alt=""
-                      className="mt-1 h-4 w-4 shrink-0"
-                    />
-                    <p className="text-[13px] leading-relaxed md:text-sm">
-                      <span className="font-medium text-[#FF403A]">
-                        {item.title}
-                      </span>
-                      <span className="font-normal text-white">
-                        : {item.desc}
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="relative order-1 overflow-hidden rounded-2xl border border-white/10 lg:order-2">
-            <BlendedSectionImage
-              src="/images/ppm-value-stream.png?v=1"
-              alt="Value Stream Management analytics"
-              fade="left"
-            />
-          </div>
+          <PPMComprehensiveFeatureBlock
+            title="Value Stream"
+            accent="Management"
+            intro="Value Stream Management (VSM) involves optimizing the entire flow of work across an organization to deliver value to customers efficiently. It encompasses"
+            items={features2}
+            imageSrc="/images/ppm-value-stream.png?v=1"
+            imageAlt="Value Stream Management analytics"
+            fade="left"
+            mobileImageFirst
+          />
         </div>
       </div>
     </section>

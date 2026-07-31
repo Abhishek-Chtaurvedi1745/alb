@@ -116,11 +116,11 @@ export default function StonebranchPage() {
             <span className="text-[#FF403A]">Automation Solutions</span>
           </h3>
 
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-3 md:gap-5">
             {productSections.map((section) => (
               <article
                 key={section.title}
-                className="group relative flex min-h-[320px] flex-col overflow-hidden rounded-2xl border border-white/10"
+                className="group relative flex min-h-[260px] flex-col overflow-hidden rounded-2xl border border-white/10 sm:min-h-[320px]"
               >
                 <img
                   src={section.image}
@@ -128,8 +128,8 @@ export default function StonebranchPage() {
                   className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/90" />
-                <div className="relative flex h-full flex-col p-6 md:p-7">
-                  <h4 className="text-[20px] font-semibold leading-snug text-white">
+                <div className="relative flex h-full flex-col p-5 sm:p-6 md:p-7">
+                  <h4 className="text-lg font-semibold leading-snug text-white sm:text-[20px]">
                     {section.title}{" "}
                     <span className="text-[#FF403A]">{section.titleAccent}</span>
                   </h4>

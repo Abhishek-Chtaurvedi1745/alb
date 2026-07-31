@@ -3,6 +3,52 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { ChevronUp, ChevronDown } from "lucide-react";
 
+const MOBILE_TEXT_LIMIT = 130;
+
+function truncateAtWord(text, limit) {
+  if (text.length <= limit) return text;
+  const slice = text.slice(0, limit);
+  const lastSpace = slice.lastIndexOf(" ");
+  return `${(lastSpace > 0 ? slice.slice(0, lastSpace) : slice).trim()}…`;
+}
+
+function TestimonialQuote({ text, isActive, onExpandChange }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = text.length > MOBILE_TEXT_LIMIT;
+
+  useEffect(() => {
+    if (!isActive) {
+      setExpanded(false);
+    }
+  }, [isActive]);
+
+  useEffect(() => {
+    onExpandChange?.(expanded);
+  }, [expanded, onExpandChange]);
+
+  return (
+    <div>
+      <p className="text-sm leading-relaxed text-white/90 md:text-base">
+        <span className="md:hidden">
+          {expanded || !isLong ? text : truncateAtWord(text, MOBILE_TEXT_LIMIT)}
+        </span>
+        <span className="hidden md:inline">{text}</span>
+      </p>
+
+      {isLong ? (
+        <button
+          type="button"
+          onClick={() => setExpanded((prev) => !prev)}
+          className="mt-2 text-sm font-semibold text-[#ff403a] transition-colors hover:text-[#ff6b66] md:hidden"
+          aria-expanded={expanded}
+        >
+          {expanded ? "Read less" : "Read more"}
+        </button>
+      ) : null}
+    </div>
+  );
+}
+
 export default function TestimonialsSection({
   testimonials,
   eyebrow,
@@ -13,9 +59,11 @@ export default function TestimonialsSection({
 }) {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [quoteExpanded, setQuoteExpanded] = useState(false);
 
   const goToSlide = useCallback(
     (direction) => {
+      setQuoteExpanded(false);
       setCurrent((prev) => {
         if (direction === "next") {
           return prev === testimonials.length - 1 ? 0 : prev + 1;
@@ -27,14 +75,14 @@ export default function TestimonialsSection({
   );
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || quoteExpanded) return;
 
     const interval = setInterval(() => {
       goToSlide("next");
     }, autoSlideMs);
 
     return () => clearInterval(interval);
-  }, [autoSlideMs, goToSlide, paused]);
+  }, [autoSlideMs, goToSlide, paused, quoteExpanded]);
 
   return (
     <section
@@ -43,7 +91,7 @@ export default function TestimonialsSection({
       onMouseLeave={() => setPaused(false)}
     >
       <div className="mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 items-center gap-12 px-[30px] lg:grid-cols-2 lg:px-0">
+        <div className="grid grid-cols-1 items-center gap-8 px-2 sm:px-4 lg:grid-cols-2 lg:gap-12 lg:px-0">
           <div>
             {eyebrow ? (
               <p className="mb-4 text-sm uppercase tracking-widest text-[#ff403a]">
@@ -57,12 +105,15 @@ export default function TestimonialsSection({
               <span className="text-[#ff403a]">{highlight}</span>
             </h1>
 
-            <div className="mt-12 flex items-center gap-4">
+            <div className="mt-8 flex items-center gap-3 md:mt-12 md:gap-4">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   type="button"
-                  onClick={() => setCurrent(index)}
+                  onClick={() => {
+                    setQuoteExpanded(false);
+                    setCurrent(index);
+                  }}
                   className={`rounded-full transition-all duration-500 ${
                     current === index ? "h-3 w-8 bg-[#ff403a]" : "h-3 w-3 bg-gray-500"
                   }`}
@@ -72,14 +123,21 @@ export default function TestimonialsSection({
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute top-5 left-5 h-full w-full rounded-3xl border border-[#ff403a]" />
+          <div className="relative mt-2 max-md:px-1 md:mt-0">
+            <div className="pointer-events-none absolute top-3 left-3 h-full w-full rounded-2xl border border-[#ff403a] max-md:top-2 max-md:left-2 md:top-5 md:left-5 md:rounded-3xl" />
 
-            {/* Every quote is stacked in the same grid cell, so the card is
-                always as tall as the longest one and switching slides cannot
-                reflow the rest of the page. */}
-            <div className="relative z-10 grid min-h-[340px] rounded-3xl bg-[#151515] pt-8">
-              <div className="absolute -top-10 -left-10 h-24 w-24">
+            <div className="relative z-10 grid rounded-2xl bg-[#151515] md:min-h-[340px] md:rounded-3xl">
+              {/* Mobile avatar — in flow */}
+              <div className="flex px-5 pt-5 md:hidden">
+                <img
+                  src={testimonials[current].image}
+                  alt={testimonials[current].name}
+                  className="h-16 w-16 rounded-full border-[3px] border-black object-cover shadow-xl"
+                />
+              </div>
+
+              {/* Desktop avatars — stacked */}
+              <div className="absolute -top-10 -left-10 hidden h-24 w-24 md:block">
                 {testimonials.map((testimonial, index) => (
                   <img
                     key={`${testimonial.name}-avatar`}
@@ -97,22 +155,33 @@ export default function TestimonialsSection({
                 <div
                   key={testimonial.name}
                   aria-hidden={index !== current}
-                  className={`col-start-1 row-start-1 flex flex-col justify-center px-8 pb-8 pt-2 transition-opacity duration-500 ease-in-out md:px-12 ${
+                  className={`col-start-1 row-start-1 flex flex-col justify-center px-5 pb-6 pt-3 transition-opacity duration-500 ease-in-out max-md:pt-4 md:px-12 md:pb-8 md:pt-2 ${
                     index === current
                       ? "opacity-100"
                       : "pointer-events-none opacity-0"
                   }`}
                 >
-                  <p className="text-sm leading-relaxed text-white md:text-base">
-                    {testimonial.text}
-                  </p>
+                  <TestimonialQuote
+                    text={testimonial.text}
+                    isActive={index === current}
+                    onExpandChange={
+                      index === current ? setQuoteExpanded : undefined
+                    }
+                  />
 
-                  <div className="mt-8">
-                    <h3 className="text-2xl font-bold text-white">
+                  <div className="mt-5 md:mt-8">
+                    <h3 className="text-xl font-bold text-white md:text-2xl">
                       {testimonial.name}
                     </h3>
-                    <p className="mt-2 text-sm text-white">{testimonial.role}</p>
-                    <p className="text-sm text-white">{testimonial.region}</p>
+                    <p className="mt-1.5 text-sm leading-snug text-white/90">
+                      {testimonial.role}
+                    </p>
+                    {testimonial.region &&
+                    testimonial.region !== testimonial.role ? (
+                      <p className="mt-1 text-sm text-white/70">
+                        {testimonial.region}
+                      </p>
+                    ) : null}
                   </div>
                 </div>
               ))}

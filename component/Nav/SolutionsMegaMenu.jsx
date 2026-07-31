@@ -2,8 +2,29 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { desktopFlyoutMenu, getResponsiveSolutionsMenu } from "./solutionsMenuData";
+
+function MobileNavLink({ href, onClose, className = "", style, children }) {
+  const router = useRouter();
+
+  return (
+    <Link
+      href={href}
+      style={style}
+      onClick={(event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        onClose();
+        router.push(href);
+      }}
+      className={className}
+    >
+      {children}
+    </Link>
+  );
+}
 
 const responsiveSolutionsMenu = getResponsiveSolutionsMenu();
 
@@ -211,7 +232,15 @@ const FLYOUT_COL3_WIDTH = 320;
 // up with the row that opened it.
 const FLYOUT_PANEL_PADDING_Y = 6;
 
-function FlyoutMenuRow({ label, href, isActive, hasChildren, onMouseEnter, onNavigate }) {
+function FlyoutMenuRow({
+  label,
+  href,
+  isActive,
+  hasChildren,
+  onMouseEnter,
+  onNavigate,
+  highlightRed = false,
+}) {
   return (
     <Link
       href={href}
@@ -220,7 +249,9 @@ function FlyoutMenuRow({ label, href, isActive, hasChildren, onMouseEnter, onNav
       className={`group flex items-center justify-between gap-4 px-5 py-3 text-[15px] font-semibold transition-all duration-200 ease-out ${
         isActive
           ? "bg-[#fff1f2] text-[#ef4444]"
-          : "text-[#374151] hover:bg-[#f9fafb] hover:text-[#ef4444]"
+          : highlightRed
+            ? "text-[#ef4444] hover:bg-[#fff1f2] hover:text-[#dc2626]"
+            : "text-[#374151] hover:bg-[#f9fafb] hover:text-[#ef4444]"
       }`}
     >
       <span className="transition-colors duration-200">{label}</span>
@@ -362,6 +393,7 @@ export function SolutionsMegaMenuWide({ onClose }) {
             href={child.href}
             isActive={activeSubKey === `${activeMain.id}-sub-${index}`}
             hasChildren={Boolean(child.children?.length)}
+            highlightRed={Boolean(child.highlightRed)}
             onMouseEnter={(event) =>
               handleSubEnter(activeMain.id, index, child, event)
             }
@@ -392,109 +424,168 @@ export function SolutionsMegaMenuWide({ onClose }) {
   );
 }
 
-export function SolutionsMegaMenuMobile({ onClose }) {
-  const [openSection, setOpenSection] = useState(null);
+const MOBILE_FLYOUT_MENU = desktopFlyoutMenu;
+
+function MobileFlyoutSubRow({ item, depth, onClose }) {
+  const paddingLeft = 16 + depth * 14;
+  const isRed = Boolean(item.highlightRed);
 
   return (
-    <div className="mt-2 rounded-xl border border-[#93c5fd]/50 bg-white">
-      {responsiveSolutionsMenu.map((section) => {
+  <MobileNavLink
+    href={item.href}
+    onClose={onClose}
+    className={`flex min-h-[44px] items-center py-2.5 text-[13px] font-semibold transition-colors hover:text-[#ef4444] ${
+      isRed ? "text-[#ef4444]" : "text-[#374151]"
+    }`}
+    style={{ paddingLeft }}
+  >
+    {item.title || item.label}
+  </MobileNavLink>
+  );
+}
+
+function MobileFlyoutBranch({ item, depth, openKey, setOpenKey, onClose, keyPrefix }) {
+  const branchKey = `${keyPrefix}-${item.title || item.label}`;
+  const isOpen = openKey === branchKey;
+  const hasChildren = item.children?.length > 0;
+  const paddingLeft = 16 + depth * 14;
+  const isRed = Boolean(item.highlightRed) || hasChildren;
+
+  if (!hasChildren) {
+    return (
+      <MobileFlyoutSubRow
+        item={item}
+        depth={depth}
+        onClose={onClose}
+      />
+    );
+  }
+
+  return (
+    <div className="border-t border-[#f3f4f6] first:border-t-0">
+      <div className="flex min-h-[44px] items-stretch">
+        <MobileNavLink
+          href={item.href}
+          onClose={onClose}
+          className={`flex flex-1 items-center py-2.5 pr-2 text-[13px] font-semibold ${
+            isRed ? "text-[#ef4444]" : "text-[#374151]"
+          }`}
+          style={{ paddingLeft }}
+        >
+          {item.title || item.label}
+        </MobileNavLink>
+        <button
+          type="button"
+          aria-expanded={isOpen}
+          aria-label={`Expand ${item.title || item.label}`}
+          onClick={(event) => {
+            event.stopPropagation();
+            setOpenKey(isOpen ? null : branchKey);
+          }}
+          className="flex w-12 shrink-0 items-center justify-center text-[#9ca3af]"
+        >
+          <ChevronRight
+            size={16}
+            className={`transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
+          />
+        </button>
+      </div>
+
+      {isOpen && (
+        <div className="pb-2">
+          {item.children.map((child, index) => {
+            if (child.children?.length) {
+              return (
+                <MobileFlyoutBranch
+                  key={`${branchKey}-${child.title || child.label}-${index}`}
+                  item={child}
+                  depth={depth + 1}
+                  openKey={openKey}
+                  setOpenKey={setOpenKey}
+                  onClose={onClose}
+                  keyPrefix={branchKey}
+                />
+              );
+            }
+
+            const childPadding = 16 + (depth + 1) * 14;
+
+            return (
+              <MobileNavLink
+                key={`${branchKey}-${child.label || child.title}-${index}`}
+                href={child.href}
+                onClose={onClose}
+                className={`flex min-h-[40px] items-center py-2 text-[12px] transition-colors hover:text-[#ef4444] ${
+                  child.isSectionTitle
+                    ? "font-bold tracking-[0.08em] text-[#ef4444] uppercase"
+                    : "font-medium tracking-[0.08em] text-[#6b7280] uppercase"
+                }`}
+                style={{ paddingLeft: childPadding }}
+              >
+                {child.label || child.title}
+              </MobileNavLink>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+export function SolutionsMegaMenuMobile({ onClose }) {
+  const [openSection, setOpenSection] = useState(null);
+  const [openBranch, setOpenBranch] = useState(null);
+
+  return (
+    <div className="relative z-[1] mt-2 rounded-xl border border-[#93c5fd]/50 bg-white">
+      {MOBILE_FLYOUT_MENU.map((section) => {
         const isOpen = openSection === section.id;
-        const hasProducts = section.products?.length > 0;
-        const hasServices = section.services?.items?.length > 0;
+        const hasChildren = section.children?.length > 0;
 
         return (
           <div key={section.id} className="border-b border-[#e5e7eb] last:border-b-0">
-            <button
-              type="button"
-              onClick={() => setOpenSection(isOpen ? null : section.id)}
-              className="flex w-full items-center justify-between px-4 py-3.5 text-left"
-            >
-              <span className="text-[15px] font-bold text-[#ef4444]">{section.title}</span>
-              <ChevronRight
-                size={18}
-                className={`text-[#9ca3af] transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
-              />
-            </button>
+            <div className="flex min-h-[48px] items-stretch">
+              <MobileNavLink
+                href={section.href}
+                onClose={onClose}
+                className="flex flex-1 items-center px-4 py-3.5 text-left text-[15px] font-bold text-[#ef4444]"
+              >
+                {section.title}
+              </MobileNavLink>
 
-            {isOpen && (
-              <div className="space-y-4 px-4 pb-6">
-                <Description text={section.description} className="text-[13px] leading-relaxed text-[#6b7280]" />
+              {hasChildren && (
+                <button
+                  type="button"
+                  aria-expanded={isOpen}
+                  aria-label={`Expand ${section.title}`}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setOpenSection(isOpen ? null : section.id);
+                    setOpenBranch(null);
+                  }}
+                  className="flex w-12 shrink-0 items-center justify-center text-[#9ca3af]"
+                >
+                  <ChevronRight
+                    size={18}
+                    className={`transition-transform duration-300 ${isOpen ? "rotate-90" : ""}`}
+                  />
+                </button>
+              )}
+            </div>
 
-                {hasProducts &&
-                  section.products.map((product) => (
-                    <div key={product.title}>
-                      <Link href={product.href} onClick={onClose} className="block">
-                        <p className="text-[13px] font-bold text-[#ef4444]">{product.title}</p>
-                      </Link>
-                      <p className="mt-1 text-[13px] text-[#6b7280]">
-                        {product.description}
-                        {product.servicesLink && (
-                          <>
-                            {" "}
-                            (+
-                            <Link
-                              href={product.servicesLink.href}
-                              onClick={onClose}
-                              className="text-[#ef4444] hover:underline"
-                            >
-                              {product.servicesLink.label}
-                            </Link>
-                            )
-                          </>
-                        )}
-                      </p>
-                    </div>
-                  ))}
-
-                {hasServices && (
-                  <div>
-                    {section.services.href ? (
-                      <Link href={section.services.href} onClick={onClose}>
-                        <p className="text-[13px] font-bold text-[#ef4444]">{section.services.title}</p>
-                      </Link>
-                    ) : (
-                      <p className="text-[13px] font-bold text-[#ef4444]">{section.services.title}</p>
-                    )}
-                    <ul className="mt-2 space-y-2">
-                      {section.services.items.map((item) => (
-                        <li key={item.label}>
-                          <Link
-                            href={item.href}
-                            onClick={onClose}
-                            className="text-[11px] font-medium tracking-[0.1em] text-[#6b7280] uppercase hover:text-[#ef4444]"
-                          >
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {section.trailingProduct && (
-                  <div>
-                    <Link href={section.trailingProduct.href} onClick={onClose} className="block">
-                      <p className="text-[13px] font-bold text-[#ef4444]">{section.trailingProduct.title}</p>
-                    </Link>
-                    <p className="mt-1 text-[13px] text-[#6b7280]">
-                      {section.trailingProduct.description}
-                      {section.trailingProduct.servicesLink && (
-                        <>
-                          {" "}
-                          (+
-                          <Link
-                            href={section.trailingProduct.servicesLink.href}
-                            onClick={onClose}
-                            className="text-[#ef4444] hover:underline"
-                          >
-                            {section.trailingProduct.servicesLink.label}
-                          </Link>
-                          )
-                        </>
-                      )}
-                    </p>
-                  </div>
-                )}
+            {isOpen && hasChildren && (
+              <div className="border-t border-[#f3f4f6] bg-[#fafafa] pb-2">
+                {section.children.map((child, index) => (
+                  <MobileFlyoutBranch
+                    key={`${section.id}-${child.title}-${index}`}
+                    item={child}
+                    depth={0}
+                    openKey={openBranch}
+                    setOpenKey={setOpenBranch}
+                    onClose={onClose}
+                    keyPrefix={section.id}
+                  />
+                ))}
               </div>
             )}
           </div>

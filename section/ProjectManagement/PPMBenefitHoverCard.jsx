@@ -5,11 +5,9 @@ import { useState } from "react";
 export default function PPMBenefitHoverCard({ benefit }) {
   const [isActive, setIsActive] = useState(false);
 
-  // Both faces share one grid cell, so the card is always as tall as the
-  // longest description and the expanded copy can never be clipped.
   return (
     <article
-      className={`group relative grid min-h-[260px] cursor-pointer overflow-hidden rounded-xl border bg-[#080808] transition-colors duration-500 ease-out sm:min-h-[300px] sm:rounded-2xl ${
+      className={`group relative cursor-pointer overflow-hidden rounded-xl border bg-[#080808] transition-colors duration-500 ease-out sm:rounded-2xl ${
         isActive
           ? "border-[#ff403a]/45 shadow-[0_0_35px_rgba(255,64,58,0.18)]"
           : "border-white/10 hover:border-[#ff403a]/45 hover:shadow-[0_0_35px_rgba(255,64,58,0.18)]"
@@ -29,55 +27,59 @@ export default function PPMBenefitHoverCard({ benefit }) {
       aria-label={benefit.title}
     >
       <div
-        className={`pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-[#ff403a]/10 blur-2xl transition-opacity duration-500 sm:-right-8 sm:-top-8 sm:h-28 sm:w-28 ${
+        className={`pointer-events-none absolute -right-4 -top-4 h-16 w-16 rounded-full bg-[#ff403a]/10 blur-2xl transition-opacity duration-500 sm:-right-8 sm:-top-8 sm:h-28 sm:w-28 ${
           isActive ? "opacity-100" : "opacity-0"
         }`}
       />
 
       <div
-        className={`relative z-10 col-start-1 row-start-1 flex flex-col p-4 transition-all duration-500 ease-out sm:p-6 md:p-7 ${
-          isActive ? "pointer-events-none opacity-0 -translate-y-3" : "opacity-100 translate-y-0"
+        className={`p-3 transition-all duration-500 ease-out sm:p-6 md:p-7 ${
+          isActive
+            ? "pointer-events-none absolute inset-0 flex flex-col opacity-0"
+            : "relative flex flex-col opacity-100"
         }`}
       >
-        <div className="mb-3 sm:mb-4">
+        <div className="mb-2 sm:mb-4">
           <img
             src={benefit.icon}
             alt=""
-            className="h-11 w-11 object-contain sm:h-14 sm:w-14 md:h-16 md:w-16"
+            className="h-8 w-8 object-contain sm:h-14 sm:w-14 md:h-16 md:w-16"
           />
         </div>
 
-        <h4 className="text-lg font-medium leading-snug text-white sm:text-xl md:text-[20px]">
+        <h4 className="text-[13px] font-medium leading-snug text-white sm:text-xl md:text-[20px]">
           {benefit.title}
         </h4>
 
-        <div className="mt-3 flex items-center gap-1 sm:mt-4">
-          <div className="h-px w-12 bg-white sm:w-16" />
-          <div className="h-px w-3 bg-[#ff403a] sm:w-4" />
+        <div className="mt-2 flex items-center gap-1 sm:mt-4">
+          <div className="h-px w-8 bg-white sm:w-16" />
+          <div className="h-px w-2 bg-[#ff403a] sm:w-4" />
         </div>
 
-        <p className="mt-4 text-xs font-medium text-[#ff403a]/80 sm:mt-5 sm:text-sm">
+        <p className="mt-2 text-[10px] font-medium text-[#ff403a]/80 sm:mt-5 sm:text-sm">
           <span className="hidden md:inline">Hover to explore</span>
           <span className="md:hidden">Tap to explore</span>
         </p>
       </div>
 
       <div
-        className={`relative z-20 col-start-1 row-start-1 flex flex-col justify-center p-4 transition-all duration-500 ease-out sm:p-6 md:p-7 ${
-          isActive ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
+        className={`p-3 transition-all duration-500 ease-out sm:p-6 md:p-7 ${
+          isActive
+            ? "relative flex flex-col opacity-100"
+            : "pointer-events-none absolute inset-0 flex flex-col justify-center opacity-0"
         }`}
       >
-        <h4 className="mb-3 text-base font-semibold leading-snug text-white sm:mb-4 sm:text-lg md:text-xl">
+        <h4 className="mb-2 text-[13px] font-semibold leading-snug text-white sm:mb-4 sm:text-lg md:text-xl">
           {benefit.title}
         </h4>
 
-        <p className="font-normal text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px] lg:text-[13px]">
+        <p className="text-[11px] font-normal leading-relaxed text-white/85 sm:text-[13px] md:text-[16px] lg:text-[13px]">
           {benefit.description}
         </p>
 
-        <div className="mt-4 flex items-center gap-1 sm:mt-5">
-          <div className="h-px w-8 bg-[#ff403a] sm:w-10" />
-          <div className="h-px w-12 bg-white/40 sm:w-16" />
+        <div className="mt-3 flex items-center gap-1 sm:mt-5">
+          <div className="h-px w-6 bg-[#ff403a] sm:w-10" />
+          <div className="h-px w-8 bg-white/40 sm:w-16" />
         </div>
       </div>
     </article>

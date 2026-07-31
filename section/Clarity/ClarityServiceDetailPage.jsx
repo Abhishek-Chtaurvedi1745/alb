@@ -13,17 +13,21 @@ function SectionBlock({ section, compact = false }) {
 
   return (
     <article
-      className={`flex h-full flex-col rounded-2xl border p-6 sm:p-8 ${
+      className={`flex h-full flex-col rounded-2xl border ${
+        compact ? "p-4 sm:p-6" : "p-6 sm:p-8"
+      } ${
         isNumbered
           ? "border-[#ff403a]/30 bg-[#0d0d0d]"
           : "border-white/10 bg-[#080808]"
       }`}
     >
       <h4
-        className={`font-semibold text-white ${
+        className={`font-semibold leading-snug text-white ${
           isNumbered
             ? "text-xl text-[#ff403a] sm:text-2xl"
-            : "text-xl sm:text-[26px]"
+            : compact
+              ? "text-base sm:text-lg md:text-xl"
+              : "text-xl sm:text-[26px]"
         }`}
       >
         {section.title}
@@ -50,12 +54,12 @@ function SectionBlock({ section, compact = false }) {
 
       {hasBullets && (
         <ul
-          className={`mt-4 grid gap-x-6 gap-y-3 ${
-            compact ? "" : "sm:grid-cols-2"
+          className={`mt-3 grid gap-y-2.5 sm:mt-4 sm:gap-y-3 ${
+            compact ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2"
           }`}
         >
           {section.bullets.map((bullet, index) => (
-            <li key={index} className="flex items-start gap-2.5">
+            <li key={index} className="flex items-start gap-2">
               <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ff403a]/15">
                 <Check
                   size={12}
@@ -64,7 +68,7 @@ function SectionBlock({ section, compact = false }) {
                 />
               </span>
 
-              <span className="min-w-0 break-words text-[12px] leading-snug tracking-tight text-white/80 sm:text-[13px] lg:text-[14px]">
+              <span className="min-w-0 text-sm leading-relaxed text-white/80 sm:text-[13px] md:text-[14px]">
                 {bullet}
               </span>
             </li>
@@ -155,7 +159,7 @@ export default function ClarityServiceDetailPage({ page }) {
       ))}
 
       {/* Service Packs Grid */}
-      <div className="grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
         {packSections.map((section, index) => (
           <SectionBlock key={`pack-${index}`} section={section} compact />
         ))}

@@ -13,7 +13,7 @@ export default function ConnectAllServicesGrid({
           <span className="text-[#FF403A]">Services</span>
         </h1>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
           {connectAllServices.map((service, index) => {
             const isLastInRow5 = (index + 1) % 5 === 0;
             const isLastOverall = index === connectAllServices.length - 1;

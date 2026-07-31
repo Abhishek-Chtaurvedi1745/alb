@@ -220,19 +220,7 @@ function Middle() {
       {/* Feature Box */}
       <div className="relative border border-[#ff3b30] rounded-2xl overflow-hidden">
 
-        {/* Mobile Background Image */}
-        <div className="absolute inset-0 lg:hidden">
-          <img
-            src="/images/asd.png"
-            alt=""
-            className="w-full h-full object-cover object-center"
-          />
-
-          <div className="absolute inset-0 bg-black/65"></div>
-        </div>
-
-        {/* Desktop Background */}
-        <div className="absolute inset-0 hidden lg:block bg-gradient-to-b from-neutral-900/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 to-transparent"></div>
 
         {/* Content */}
         <div className="relative z-10">
@@ -273,7 +261,7 @@ function Middle() {
           
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-4 lg:gap-8">
           {data.map((item, index) => (
             <div
               key={index}
@@ -372,7 +360,7 @@ the focus of everything.
             </p>
 
             <div className="border border-[#ff403a] rounded-2xl overflow-hidden">
-              <div className="grid grid-cols-1 sm:grid-cols-2">
+              <div className="grid grid-cols-2">
                 {features.map((item, index) => (
                   <div
                     key={index}

@@ -24,18 +24,9 @@ export default function AutomicAutomationServicesPage() {
       </section>
 
       <section className="px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-          {automicServices.map((service, index) => (
-            <div
-              key={service.slug}
-              className={
-                index === automicServices.length - 1
-                  ? "md:col-start-1 md:col-end-3 md:mx-auto md:w-[calc(50%-1rem)]"
-                  : undefined
-              }
-            >
-              <AutomicServiceCard service={service} />
-            </div>
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-8">
+          {automicServices.map((service) => (
+            <AutomicServiceCard key={service.slug} service={service} />
           ))}
         </div>
       </section>

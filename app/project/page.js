@@ -263,7 +263,7 @@ using the power of these enterprise solutions.
         </div>
 
         {/* GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-14 gap-x-10 max-w-7xl">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-x-10 lg:grid-cols-3 max-w-7xl">
 
           {benefits.map((item, index) => (
             <div

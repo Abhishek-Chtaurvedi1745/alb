@@ -27,7 +27,7 @@ function SectionBlock({ section }) {
       )}
 
       {hasBullets && (
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        <ul className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {section.bullets.map((bullet, index) => (
             <li key={index} className="flex items-start gap-3">
               <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#ff403a]/15">
@@ -133,7 +133,7 @@ export default function PrebuiltPluginPage({ page }) {
             <h4 className="text-lg font-semibold text-white sm:text-xl">
               Other <span className="text-[#ff403a]">Prebuilt Plugins</span>
             </h4>
-            <div className="mt-4 grid gap-3 sm:grid-cols-3">
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
               {otherPlugins.map((plugin) => (
                 <Link
                   key={plugin.slug}

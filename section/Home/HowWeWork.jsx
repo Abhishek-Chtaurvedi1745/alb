@@ -226,9 +226,9 @@ export default function HowWeWork() {
             ))}
           </div>
 
-          {/* Illustration */}
+          {/* Illustration — desktop only */}
           <div
-            className={`relative z-0 flex justify-center transition-all duration-1000 ${
+            className={`relative z-0 hidden justify-center transition-all duration-1000 lg:flex ${
               inView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >

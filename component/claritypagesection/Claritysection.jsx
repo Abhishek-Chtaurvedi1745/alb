@@ -106,41 +106,50 @@ function Claritysection() {
   const renderCard = (feature, i) => (
     <article
       key={i}
-      className="flex h-full flex-col rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 transition-colors duration-300 hover:border-[#FF403A]/40"
+      className="flex h-full flex-col rounded-xl border border-white/10 bg-[#0c0c0c] p-3.5 transition-colors duration-300 hover:border-[#FF403A]/40 sm:rounded-2xl sm:p-5 md:p-6"
     >
-      <h3 className="mb-4 text-[20px] font-semibold leading-snug text-white">
+      <h3 className="mb-3 min-h-[2.75rem] text-[13px] font-semibold leading-snug text-white sm:mb-4 sm:min-h-0 sm:text-base md:text-[20px]">
         {feature.titleWhite}{" "}
         <span className="text-[#FF403A]">{feature.titleRed}</span>
       </h3>
 
-      <ul className="mb-6 flex-1 space-y-3">
+      <ul className="mb-4 flex-1 space-y-2 sm:mb-6 sm:space-y-3">
         {feature.points.map((point, j) => (
-          <li key={j} className="flex items-start gap-2.5">
-            <img src="/images/crt.svg" alt="" className="mt-1 h-4 w-4 shrink-0" />
-            <span className="text-sm leading-relaxed text-white/90 md:text-base">
+          <li key={j} className="flex items-start gap-2">
+            <img
+              src="/images/crt.svg"
+              alt=""
+              className="mt-0.5 h-3.5 w-3.5 shrink-0 sm:mt-1 sm:h-4 sm:w-4"
+            />
+            <span className="text-[11px] leading-relaxed text-white/85 sm:text-sm md:text-base">
               {point}
             </span>
           </li>
         ))}
       </ul>
 
-      <button className="mt-auto flex w-fit items-center gap-2 rounded border border-gray-600 px-4 py-2 transition-colors hover:border-[#FF403A] cursor-pointer">
-        <span className="flex items-center justify-center rounded-sm bg-[#FF403A] p-1">
-          <Play className="h-3 w-3 fill-white text-white" />
+      <button
+        type="button"
+        className="mt-auto flex w-full items-center justify-center gap-1.5 rounded border border-gray-600 px-2.5 py-1.5 transition-colors hover:border-[#FF403A] sm:w-fit sm:justify-start sm:gap-2 sm:px-4 sm:py-2"
+      >
+        <span className="flex items-center justify-center rounded-sm bg-[#FF403A] p-0.5 sm:p-1">
+          <Play className="h-2.5 w-2.5 fill-white text-white sm:h-3 sm:w-3" />
         </span>
-        <span className="text-sm font-medium text-white">Watch video</span>
+        <span className="text-[11px] font-medium text-white sm:text-sm">
+          Watch video
+        </span>
       </button>
     </article>
   );
 
   return (
-    <section className="bg-black px-6 py-16 lg:px-12">
+    <section className="bg-black px-4 py-14 sm:px-6 sm:py-16 lg:px-12">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-12 text-center text-3xl font-semibold text-white md:text-[40px]">
+        <h2 className="mb-8 text-center text-2xl font-semibold text-white sm:mb-12 sm:text-3xl md:text-[40px]">
           Clarity: <span className="text-[#FF403A]">Key Features</span>
         </h2>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 items-stretch gap-3 sm:gap-5 lg:grid-cols-3 lg:gap-6">
           {features.map((feature, i) => renderCard(feature, i))}
         </div>
       </div>

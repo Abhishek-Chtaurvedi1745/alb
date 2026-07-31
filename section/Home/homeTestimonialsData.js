@@ -10,7 +10,6 @@ export const homeTestimonials = [
     text: `Ignite considers Albatroz as a trusted Services Partner for Clarity. Albatroz provide a valuable extension to Ignite's capacity for remote Technical Services and Support.`,
     name: "Jamie Wallace",
     role: "VP & GM, Middle East & Africa, Ignite Technology",
-    region: "Middle East & Africa, Ignite Technology",
   },
   {
     image: "/images/paulo_naddeo.png",

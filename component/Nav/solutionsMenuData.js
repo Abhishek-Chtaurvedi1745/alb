@@ -1,4 +1,7 @@
 import { clarityServices } from "@/section/Clarity/clarityServicesData";
+import { connectAllServices } from "@/section/ConnectAll/connectAllServicesData";
+import { automicServices } from "@/section/Automation/automicServicesData";
+import { stonebranchServices } from "@/section/Automation/stonebranchServicesData";
 
 export const aiServicesSection = {
   id: "ai",
@@ -15,6 +18,24 @@ function mapServiceItems(services) {
     href: service.href,
   }));
 }
+
+function buildServicesChildren(servicesLink, services) {
+  return [
+    {
+      label: servicesLink.label,
+      href: servicesLink.href,
+      isSectionTitle: true,
+    },
+    ...mapServiceItems(services),
+  ];
+}
+
+const productServicesMap = {
+  Clarity: clarityServices,
+  ConnectALL: connectAllServices,
+  "Automic Automation": automicServices,
+  Stonebranch: stonebranchServices,
+};
 
 export const desktopSolutionsColumns = [
   {
@@ -90,19 +111,17 @@ export const desktopFlyoutMenu = desktopSolutionsColumns.map((column) => {
       children: column.products.map((product) => {
         let children;
 
-        if (product.servicesLink) {
-          children = [
-            {
-              label: product.servicesLink.label,
-              href: product.servicesLink.href,
-              isSectionTitle: true,
-            },
-          ];
+        if (product.servicesLink && productServicesMap[product.title]) {
+          children = buildServicesChildren(
+            product.servicesLink,
+            productServicesMap[product.title]
+          );
         }
 
         return {
           title: product.title,
           href: product.href,
+          highlightRed: product.title === "Rally",
           ...(children ? { children } : {}),
         };
       }),
