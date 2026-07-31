@@ -95,7 +95,7 @@ function page() {
           </BookACallButton>
         </div>
       </section>
-    <section className="bg-black px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-16 md:pb-20">
+    <section className="overflow-x-hidden bg-black px-4 pt-8 pb-12 sm:px-6 sm:pt-10 sm:pb-16 md:pb-20">
       <div className="mx-auto max-w-6xl">
 
         {/* Header */}
@@ -112,13 +112,13 @@ function page() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 items-start gap-3 sm:gap-5 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
+        <div className="grid grid-cols-2 items-stretch gap-3 sm:gap-5 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
           {ppmBenefits.map((benefit, index) => (
             <div
               key={benefit.title}
-              className={
+              className={`min-w-0 ${
                 index === ppmBenefits.length - 1 ? "lg:col-start-2" : undefined
-              }
+              }`}
             >
               <PPMBenefitHoverCard benefit={benefit} />
             </div>

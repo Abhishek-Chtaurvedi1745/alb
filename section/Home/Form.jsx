@@ -5,6 +5,7 @@ import { PhoneCall, User, Phone, Mail, ChevronDown } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { sendContactEmail } from "@/lib/sendEmail";
 import { useBookACall } from "@/component/BookACall/BookACallContext";
+import TermsAgreementCheckbox from "@/component/Form/TermsAgreementCheckbox";
 
 const initialForm = {
   name: "",
@@ -192,31 +193,13 @@ export default function ContactSection() {
                   />
                 </div>
 
-                <div className="flex items-start gap-3 pt-1">
-                  <input
-                    type="checkbox"
-                    id="terms"
-                    required
-                    className="mt-1 w-4 h-4 rounded bg-black border-gray-700 accent-[#ff3b30] cursor-pointer"
-                    checked={formData.agreed}
-                    onChange={(e) =>
-                      setFormData({ ...formData, agreed: e.target.checked })
-                    }
-                  />
-                  <label
-                    htmlFor="terms"
-                    className="text-xs text-[#FFFFFF] select-none leading-normal"
-                  >
-                    I agree to the Terms of Service and{" "}
-                    <a
-                      href="#privacy"
-                      className="text-[#FFFFFF] underline hover:text-[#ff3b30]"
-                    >
-                      Privacy Policy
-                    </a>
-                    .
-                  </label>
-                </div>
+                <TermsAgreementCheckbox
+                  id="terms"
+                  checked={formData.agreed}
+                  onChange={(e) =>
+                    setFormData({ ...formData, agreed: e.target.checked })
+                  }
+                />
 
                 {error ? (
                   <p className="text-sm text-[#ff8a80]">{error}</p>

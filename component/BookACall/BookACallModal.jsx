@@ -1,21 +1,23 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, X } from "lucide-react";
+import { X } from "lucide-react";
 import { useBookACall } from "./BookACallContext";
 import { sendContactEmail } from "@/lib/sendEmail";
+import CountrySelect from "@/component/Form/CountrySelect";
+import TermsAgreementCheckbox from "@/component/Form/TermsAgreementCheckbox";
 
 const inputClassName =
   "w-full rounded-xl border border-white/20 bg-black/30 px-3.5 py-3 text-base text-white outline-none transition-colors placeholder:text-white/45 focus:border-[#ff403a] sm:rounded-2xl sm:px-5 sm:py-3.5 sm:text-[15px]";
 
 const initialForm = {
   firstName: "",
-  lastName: "",
   phone: "",
   email: "",
   country: "India",
   organization: "",
   message: "",
+  agreed: true,
 };
 
 export default function BookACallModal() {
@@ -114,21 +116,11 @@ function BookACallModalContent() {
                   type="text"
                   name="firstName"
                   required
-                  autoComplete="given-name"
+                  autoComplete="name"
                   placeholder="Full Name*"
                   value={formData.firstName}
                   onChange={updateField("firstName")}
-                  className={inputClassName}
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  required
-                  autoComplete="family-name"
-                  placeholder="Last Name*"
-                  value={formData.lastName}
-                  onChange={updateField("lastName")}
-                  className={inputClassName}
+                  className={`${inputClassName} sm:col-span-2`}
                 />
                 <input
                   type="tel"
@@ -153,28 +145,11 @@ function BookACallModalContent() {
                   className={inputClassName}
                 />
 
-                <div className="relative">
-                  <select
-                    name="country"
-                    value={formData.country}
-                    onChange={updateField("country")}
-                    className={`${inputClassName} appearance-none pr-11`}
-                  >
-                    <option value="India" className="text-black">
-                      India
-                    </option>
-                    <option value="USA" className="text-black">
-                      USA
-                    </option>
-                    <option value="UK" className="text-black">
-                      UK
-                    </option>
-                  </select>
-                  <ChevronDown
-                    size={18}
-                    className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-white/70 sm:right-4"
-                  />
-                </div>
+                <CountrySelect
+                  value={formData.country}
+                  onChange={updateField("country")}
+                  className={inputClassName}
+                />
 
                 <input
                   type="text"
@@ -195,6 +170,18 @@ function BookACallModalContent() {
                 value={formData.message}
                 onChange={updateField("message")}
                 className={`${inputClassName} mt-3 min-h-[88px] resize-none sm:mt-4 sm:min-h-[110px]`}
+              />
+
+              <TermsAgreementCheckbox
+                id="book-a-call-terms"
+                checked={formData.agreed}
+                onChange={(event) =>
+                  setFormData((prev) => ({
+                    ...prev,
+                    agreed: event.target.checked,
+                  }))
+                }
+                className="mt-4"
               />
 
               {error ? (

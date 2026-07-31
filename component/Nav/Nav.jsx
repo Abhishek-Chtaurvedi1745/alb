@@ -10,6 +10,7 @@ import {
   SolutionsMegaMenuMobile,
 } from "./SolutionsMegaMenu";
 import BookACallButton from "@/component/BookACall/BookACallButton";
+import ContactActionMenu from "@/component/FloatingContact/ContactActionMenu";
 
 const navLinks = [
   { href: "/about", label: "About Us" },
@@ -180,32 +181,42 @@ function Nav() {
             />
           </Link>
 
-          {/* Mobile Toggle */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="relative z-[1001] flex h-10 w-10 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10 md:hidden"
-            aria-label="Toggle menu"
-            aria-expanded={isOpen}
-          >
-            <span className="sr-only">Menu</span>
-            <div className="flex w-6 flex-col items-end gap-[5px]">
-              <span
-                className={`block h-[2px] rounded-full bg-white transition-all duration-300 ${
-                  isOpen ? "w-6 translate-y-[7px] rotate-45" : "w-6"
-                }`}
-              />
-              <span
-                className={`block h-[2px] rounded-full bg-white transition-all duration-300 ${
-                  isOpen ? "w-0 opacity-0" : "w-4"
-                }`}
-              />
-              <span
-                className={`block h-[2px] rounded-full bg-white transition-all duration-300 ${
-                  isOpen ? "w-6 -translate-y-[7px] -rotate-45" : "w-5"
-                }`}
-              />
-            </div>
-          </button>
+          {/* Mobile: sidebar (☰) then call (📞), left to right */}
+          <div className="flex shrink-0 flex-row items-center gap-2.5 md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="relative z-[1001] flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10"
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
+            >
+              <span className="sr-only">Menu</span>
+              <div className="flex w-[22px] flex-col items-end gap-[6px]">
+                <span
+                  className={`block h-[2px] rounded-full bg-white transition-all duration-300 ${
+                    isOpen ? "w-[22px] translate-y-[8px] rotate-45" : "w-[22px]"
+                  }`}
+                />
+                <span
+                  className={`block h-[2px] rounded-full bg-white transition-all duration-300 ${
+                    isOpen ? "w-0 opacity-0" : "w-[15px]"
+                  }`}
+                />
+                <span
+                  className={`block h-[2px] rounded-full bg-white transition-all duration-300 ${
+                    isOpen ? "w-[22px] -translate-y-[8px] -rotate-45" : "w-[18px]"
+                  }`}
+                />
+              </div>
+            </button>
+            <ContactActionMenu
+              variant="navbar"
+              panelTop={navHeight + 8}
+              dismissWhen={isOpen}
+              onOpenChange={(next) => {
+                if (next) setIsOpen(false);
+              }}
+            />
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex flex-1 items-center justify-center overflow-visible">

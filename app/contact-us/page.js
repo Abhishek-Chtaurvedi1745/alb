@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
 import { sendContactEmail } from "@/lib/sendEmail";
+import CountrySelect from "@/component/Form/CountrySelect";
+import TermsAgreementCheckbox from "@/component/Form/TermsAgreementCheckbox";
 
 const inputClassName =
   "w-full bg-transparent border border-gray-400 rounded-2xl px-4 py-3.5 text-sm text-white outline-none transition-colors placeholder:text-white/50 focus:border-[#ff403a] sm:rounded-3xl sm:px-6 sm:py-4 sm:text-base md:px-8 md:py-5";
@@ -24,12 +25,12 @@ function ContactInfoCard({ icon, children, className = "" }) {
 
 const initialForm = {
   firstName: "",
-  lastName: "",
   phone: "",
   email: "",
   country: "India",
   organization: "",
   message: "",
+  agreed: true,
 };
 
 function Page() {
@@ -104,21 +105,11 @@ function Page() {
                   type="text"
                   name="firstName"
                   required
-                  autoComplete="given-name"
+                  autoComplete="name"
                   placeholder="Full Name*"
                   value={formData.firstName}
                   onChange={updateField("firstName")}
-                  className={inputClassName}
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  required
-                  autoComplete="family-name"
-                  placeholder="Last Name*"
-                  value={formData.lastName}
-                  onChange={updateField("lastName")}
-                  className={inputClassName}
+                  className={`${inputClassName} sm:col-span-2`}
                 />
                 <input
                   type="tel"
@@ -141,28 +132,12 @@ function Page() {
                   className={inputClassName}
                 />
 
-                <div className="relative">
-                  <select
-                    name="country"
-                    value={formData.country}
-                    onChange={updateField("country")}
-                    className={`${inputClassName} appearance-none pr-12`}
-                  >
-                    <option value="India" className="text-black">
-                      India
-                    </option>
-                    <option value="USA" className="text-black">
-                      USA
-                    </option>
-                    <option value="UK" className="text-black">
-                      UK
-                    </option>
-                  </select>
-                  <ChevronDown
-                    size={20}
-                    className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white sm:right-6 md:right-8"
-                  />
-                </div>
+                <CountrySelect
+                  value={formData.country}
+                  onChange={updateField("country")}
+                  className={inputClassName}
+                  chevronClassName="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white sm:right-6 md:right-8"
+                />
 
                 <input
                   type="text"
@@ -183,6 +158,18 @@ function Page() {
                 value={formData.message}
                 onChange={updateField("message")}
                 className={`${inputClassName} mt-4 resize-none sm:mt-6`}
+              />
+
+              <TermsAgreementCheckbox
+                id="contact-us-terms"
+                checked={formData.agreed}
+                onChange={(event) =>
+                  setFormData((current) => ({
+                    ...current,
+                    agreed: event.target.checked,
+                  }))
+                }
+                className="mt-4"
               />
 
               {error ? (

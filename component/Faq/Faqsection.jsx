@@ -3,44 +3,41 @@
 import React, { useState } from "react";
 import { Plus, X } from "lucide-react";
 
-const faqData = [
+const defaultFaqData = [
   {
     question:
       "What is Project Portfolio Management (PPM) and how does Albatroz help?",
     answer:
       "Project Portfolio Management (PPM) helps organizations manage multiple projects efficiently by aligning them with business goals. Albatroz provides structured PPM solutions to improve visibility, prioritize the right projects, and optimize resource allocation.",
   },
-
   {
-    question:
-      "What kind of automation solutions does Albatroz offer?",
+    question: "What kind of automation solutions does Albatroz offer?",
     answer:
       "Albatroz provides enterprise automation solutions including workflow automation, IT process automation, cloud automation, and operational efficiency tools tailored for businesses.",
   },
-
   {
-    question:
-      "What is Project Management as a Service (PMaaS)?",
+    question: "What is Project Management as a Service (PMaaS)?",
     answer:
       "PMaaS allows organizations to outsource project management expertise and processes, helping businesses improve delivery timelines and project success rates.",
   },
-
   {
-    question:
-      "How does Business Intelligence (BI) benefit my organization?",
+    question: "How does Business Intelligence (BI) benefit my organization?",
     answer:
       "Business Intelligence helps organizations make data-driven decisions using dashboards, analytics, reporting tools, and predictive insights.",
   },
-
   {
-    question:
-      "Can Albatroz customize these solutions for my business?",
+    question: "Can Albatroz customize these solutions for my business?",
     answer:
       "Yes, Albatroz provides customized enterprise solutions tailored according to business size, goals, industry requirements, and operational workflows.",
   },
 ];
 
-function FAQSection({ faqs = faqData }) {
+function FAQSection({
+  faqs = defaultFaqData,
+  showImage = false,
+  imageSrc = "images/faqs.png",
+  imageAlt = "Frequently asked questions",
+}) {
   const [active, setActive] = useState(0);
 
   const toggleFAQ = (index) => {
@@ -48,89 +45,82 @@ function FAQSection({ faqs = faqData }) {
   };
 
   return (
-    <section className="w-full bg-black py-20 px-4 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-start">
-
-          {/* LEFT SIDE */}
+    <section className="w-full overflow-hidden bg-black px-4 py-3 pb-13 md:py-13">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 items-start gap-2 lg:grid-cols-2">
           <div className="flex flex-col items-center lg:items-center">
-
-            <h1 className="text-white text-[40px] font-semibold leading-tight">
+            <h1 className="mb-7 mt-0 text-3xl font-semibold leading-tight text-white md:mt-0 md:text-[40px]">
               Frequently
-              <br />
+              <br className="hidden md:block" />
               Asked
-              <br />
-              <span className="text-[#ff403a]">Questions</span>
+              <br className="hidden md:block" />
+              <span className="text-[#ff403a]"> Questions </span>
             </h1>
 
+            {showImage ? (
+              <div className="mt-10 hidden md:block">
+                <img
+                  src={imageSrc}
+                  alt={imageAlt}
+                  className="h-[400px] w-full object-contain"
+                />
+              </div>
+            ) : null}
           </div>
 
-          {/* RIGHT SIDE */}
           <div className="space-y-5">
-
             {faqs.map((item, index) => (
               <div
                 key={index}
-                className={`border rounded-2xl overflow-hidden transition-all duration-500
-                ${
+                className={`overflow-hidden rounded-2xl border transition-all duration-500 ${
                   active === index
                     ? "border-[#ff403a] bg-[#111111]"
                     : "border-gray-700 bg-black"
                 }`}
               >
-
-                {/* QUESTION */}
                 <button
+                  type="button"
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between text-left p-6"
+                  className="flex w-full items-center justify-between p-6 text-left"
                 >
-
-                  <h3 className="text-white text-lg md:text-xl font-medium pr-5">
+                  <h4 className="pr-5 text-[16px] font-medium text-white md:text-xl">
                     {item.question}
-                  </h3>
+                  </h4>
 
-                  <span className="text-white flex-shrink-0">
+                  <span className="shrink-0 text-white">
                     {active === index ? (
                       <X size={24} className="text-[#ff403a]" />
                     ) : (
                       <Plus size={24} />
                     )}
                   </span>
-
                 </button>
 
-                {/* ANSWER */}
                 <div
-                  className={`grid transition-all duration-500 ease-in-out
-                  ${
+                  className={`grid transition-all duration-500 ease-in-out ${
                     active === index
                       ? "grid-rows-[1fr] opacity-100"
                       : "grid-rows-[0fr] opacity-0"
                   }`}
                 >
-                  <div className="overflow-hidden px-6 pb-6">
+                  <div className="overflow-hidden">
                     {item.bullets ? (
-                      <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[#FFFFFF] md:text-base">
+                      <ul className="list-disc space-y-2 px-6 pb-6 pl-11 text-[12px] font-normal leading-relaxed text-[#FFFFFF] md:text-[16px]">
                         {item.bullets.map((bullet) => (
                           <li key={bullet}>{bullet}</li>
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-sm leading-relaxed text-[#FFFFFF] md:text-base">
+                      <p className="px-6 pb-6 text-[12px] font-normal leading-relaxed text-[#FFFFFF] md:text-[16px]">
                         {item.answer}
                       </p>
                     )}
                   </div>
                 </div>
-
               </div>
             ))}
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

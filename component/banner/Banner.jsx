@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BookACallButton from "@/component/BookACall/BookACallButton";
 
@@ -9,14 +9,9 @@ const RED_GLOW =
 const BLUE_GLOW =
   "radial-gradient(ellipse 70% 65% at 72% 50%, rgba(40,120,220,0.22) 0%, rgba(20,60,140,0.08) 40%, transparent 70%)";
 
-// The robot render is bottom-right anchored inside a mostly empty black frame,
-// so it is blended with a CSS mask. The other crops are filled edge to edge and
-// ship with their edge feathering baked into the PNG alpha instead.
 const ROBOT_LAYOUT = {
   artClassName: "lg:right-[12%] lg:w-[54%]",
   textClassName: "lg:w-[55%]",
-  // The robot sits right of centre inside its frame, so it is nudged left to
-  // read as centred in the stacked layout.
   objectPosition: "object-[32%_50%] lg:object-right lg:object-bottom",
   maskClassName: "banner-art-mask",
   edgeFades: true,
@@ -105,8 +100,6 @@ const banners = [
   },
 ];
 
-// Lower bounds keep the button a comfortable tap target on phones; the vw term
-// takes over on the desktop poster layout.
 const ctaStyle = {
   fontFamily: "Arial, Helvetica, sans-serif",
   fontSize: "clamp(13px, 1.35vw, 22px)",
@@ -120,9 +113,6 @@ const ctaStyle = {
 const ctaClassName =
   "relative z-10 inline-flex min-h-[44px] items-center justify-center whitespace-nowrap bg-[#ff3f3a] font-bold text-white antialiased transition-opacity hover:opacity-90 lg:min-h-0";
 
-// Above lg the slider height is locked to an aspect ratio, so the title scales
-// with viewport width to stay in proportion with the artwork. Body copy size is
-// owned by the sitewide `p` rule in globals.css.
 const titleStyle = {
   fontSize: "clamp(22px, 2.55vw, 46px)",
   lineHeight: 1.18,
@@ -138,10 +128,87 @@ const ctaWrapStyle = {
 
 const SWIPE_THRESHOLD = 40;
 
+function BannerSlide({ banner, index }) {
+  return (
+    <div className="relative flex h-full w-full flex-col justify-center overflow-hidden bg-black lg:flex-row lg:items-center lg:justify-start">
+      <div
+        aria-hidden
+        className={`pointer-events-none absolute inset-y-0 z-[1] hidden lg:block ${banner.artClassName}`}
+        style={{ background: banner.glow }}
+      />
+
+      <div
+        className={`relative z-0 order-2 h-[200px] w-full shrink-0 md:h-[240px] lg:absolute lg:inset-y-0 lg:order-none lg:h-auto lg:max-h-none ${banner.maskClassName} ${banner.artClassName}`}
+      >
+        <img
+          src={`${banner.src}?v=2`}
+          alt={banner.alt}
+          width={banner.width}
+          height={banner.height}
+          decoding="async"
+          fetchPriority={index === 0 ? "high" : "auto"}
+          className={`h-full w-full object-contain ${banner.objectPosition}`}
+        />
+        {banner.edgeFades ? (
+          <>
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 bottom-0 h-[22%]"
+              style={{
+                background:
+                  "linear-gradient(to top, #000 0%, rgba(0,0,0,0.55) 45%, transparent 100%)",
+              }}
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 top-0 h-[14%]"
+              style={{
+                background:
+                  "linear-gradient(to bottom, #000 0%, transparent 100%)",
+              }}
+            />
+          </>
+        ) : null}
+      </div>
+
+      <div
+        className={`contents lg:relative lg:z-10 lg:flex lg:min-w-0 lg:flex-col lg:justify-center lg:py-4 lg:pl-16 lg:pr-6 lg:text-left ${banner.textClassName}`}
+      >
+        <div className="relative z-10 order-1 w-full min-w-0 px-6 pt-6 text-left max-lg:min-h-[11.5rem] lg:order-none lg:min-h-0 lg:p-0">
+          <h1
+            className="w-full max-w-none font-bold text-white"
+            style={titleStyle}
+          >
+            {banner.title}
+          </h1>
+          <p
+            className="w-full max-w-none text-white/90 max-lg:min-h-[7.25rem]"
+            style={bodyStyle}
+          >
+            {banner.body}
+          </p>
+        </div>
+
+        <div
+          className="relative z-10 order-3 flex w-full justify-center px-6 pb-14 max-lg:min-h-[7.25rem] lg:order-none lg:min-h-0 lg:justify-start lg:p-0"
+          style={ctaWrapStyle}
+        >
+          <BookACallButton className={ctaClassName} style={ctaStyle}>
+            {banner.cta}
+          </BookACallButton>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function BannerSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [mobileHeight, setMobileHeight] = useState(null);
   const touchStartX = useRef(null);
+  const measureRefs = useRef([]);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % banners.length);
@@ -171,6 +238,41 @@ export default function BannerSlider() {
     return () => clearInterval(interval);
   }, [paused]);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+    const syncViewport = () => setIsDesktop(mediaQuery.matches);
+
+    syncViewport();
+    mediaQuery.addEventListener("change", syncViewport);
+    return () => mediaQuery.removeEventListener("change", syncViewport);
+  }, []);
+
+  useLayoutEffect(() => {
+    if (isDesktop) {
+      setMobileHeight(null);
+      return;
+    }
+
+    const measureSlides = () => {
+      const heights = measureRefs.current.map((node) => node?.offsetHeight ?? 0);
+      const tallest = Math.max(...heights, 0);
+      if (tallest > 0) setMobileHeight(tallest);
+    };
+
+    measureSlides();
+
+    const observer = new ResizeObserver(measureSlides);
+    measureRefs.current.forEach((node) => {
+      if (node) observer.observe(node);
+    });
+
+    window.addEventListener("resize", measureSlides);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", measureSlides);
+    };
+  }, [isDesktop]);
+
   return (
     <section
       className="relative mt-20 w-full overflow-hidden bg-black lg:aspect-[1617/512]"
@@ -179,93 +281,54 @@ export default function BannerSlider() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
+      {/* Off-screen measurement keeps every mobile slide the same height. */}
       <div
-        className="flex transition-transform duration-700 ease-in-out lg:h-full"
+        className="pointer-events-none invisible absolute top-0 left-[-10000px] w-full lg:hidden"
+        aria-hidden
+      >
+        {banners.map((banner, index) => (
+          <div
+            key={`measure-${banner.src}`}
+            ref={(node) => {
+              measureRefs.current[index] = node;
+            }}
+            className="w-full"
+          >
+            <BannerSlide banner={banner} index={index} />
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile: equal-height stack with smooth crossfade */}
+      <div
+        className="relative min-h-[32rem] lg:hidden"
+        style={mobileHeight ? { height: mobileHeight } : undefined}
+      >
+        {banners.map((banner, index) => (
+          <div
+            key={banner.src}
+            className={`absolute inset-x-0 top-0 transition-opacity duration-700 ease-in-out ${
+              index === current
+                ? "z-10 opacity-100"
+                : "pointer-events-none z-0 opacity-0"
+            }`}
+            aria-hidden={index !== current}
+          >
+            <BannerSlide banner={banner} index={index} />
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop: horizontal slide track */}
+      <div
+        className="hidden transition-transform duration-700 ease-in-out lg:flex lg:h-full"
         style={{
           transform: `translateX(-${current * 100}%)`,
         }}
       >
         {banners.map((banner, index) => (
-          <div key={banner.src} className="relative w-full flex-shrink-0 lg:h-full">
-            {/* Stacks vertically below lg, where the wide banner ratio leaves
-                no room for the copy alongside the artwork. */}
-            <div className="relative flex h-full w-full flex-col justify-center overflow-hidden bg-black lg:flex-row lg:items-center lg:justify-start">
-              {/* Ambient glow — blends the artwork into the dark theme */}
-              <div
-                aria-hidden
-                className={`pointer-events-none absolute inset-y-0 z-[1] hidden lg:block ${banner.artClassName}`}
-                style={{ background: banner.glow }}
-              />
-
-              {/* Artwork — feathered so it dissolves into the black stage.
-                  Sits between the copy and the CTA once stacked. */}
-              <div
-                className={`relative z-0 order-2 h-[42vw] max-h-[230px] w-full md:max-h-[310px] lg:absolute lg:inset-y-0 lg:order-none lg:h-auto lg:max-h-none ${banner.maskClassName} ${banner.artClassName}`}
-              >
-                <img
-                  src={`${banner.src}?v=2`}
-                  alt={banner.alt}
-                  width={banner.width}
-                  height={banner.height}
-                  decoding="async"
-                  fetchPriority={index === 0 ? "high" : "auto"}
-                  className={`h-full w-full object-contain ${banner.objectPosition}`}
-                />
-                {banner.edgeFades ? (
-                  <>
-                    {/* Bottom fade into page black */}
-                    <div
-                      aria-hidden
-                      className="pointer-events-none absolute inset-x-0 bottom-0 h-[22%]"
-                      style={{
-                        background:
-                          "linear-gradient(to top, #000 0%, rgba(0,0,0,0.55) 45%, transparent 100%)",
-                      }}
-                    />
-                    {/* Top fade under nav */}
-                    <div
-                      aria-hidden
-                      className="pointer-events-none absolute inset-x-0 top-0 h-[14%]"
-                      style={{
-                        background:
-                          "linear-gradient(to bottom, #000 0%, transparent 100%)",
-                      }}
-                    />
-                  </>
-                ) : null}
-              </div>
-
-              {/* `contents` lets the copy and the CTA become siblings of the
-                  artwork while stacked, so they can be ordered around it, then
-                  regroup into a single column for the desktop poster. */}
-              <div
-                className={`contents lg:relative lg:z-10 lg:flex lg:min-w-0 lg:flex-col lg:justify-center lg:py-4 lg:pl-16 lg:pr-6 lg:text-left ${banner.textClassName}`}
-              >
-                <div className="relative z-10 order-1 w-full min-w-0 px-6 pt-6 text-left lg:order-none lg:p-0">
-                  <h1
-                    className="w-full max-w-none font-bold text-white"
-                    style={titleStyle}
-                  >
-                    {banner.title}
-                  </h1>
-                  <p
-                    className="w-full max-w-none text-white/90"
-                    style={bodyStyle}
-                  >
-                    {banner.body}
-                  </p>
-                </div>
-
-                <div
-                  className="relative z-10 order-3 w-full px-6 pb-14 text-left lg:order-none lg:p-0"
-                  style={ctaWrapStyle}
-                >
-                  <BookACallButton className={ctaClassName} style={ctaStyle}>
-                    {banner.cta}
-                  </BookACallButton>
-                </div>
-              </div>
-            </div>
+          <div key={`desktop-${banner.src}`} className="relative w-full shrink-0 lg:h-full">
+            <BannerSlide banner={banner} index={index} />
           </div>
         ))}
       </div>
@@ -289,7 +352,7 @@ export default function BannerSlider() {
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`h-3 w-3 rounded-full transition-all ${
+            className={`h-3 w-3 rounded-full transition-all duration-300 ${
               current === index ? "bg-[#ff403a]" : "bg-white/50"
             }`}
           />
