@@ -53,7 +53,7 @@ export default function ConnectAllPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent" />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent" />
 
-        <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
+        <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-4 px-6 md:gap-5 md:px-16">
           <h1 className="m-0">
             <img
               src="/images/ca-logo-white.png"
@@ -72,14 +72,14 @@ export default function ConnectAllPage() {
 
       <ConnectAllIntroSection />
 
-      <section className="bg-black px-6 py-16 text-white lg:px-12">
+      <section className="bg-black px-6 py-8 text-white md:py-12 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
             Why Implement{" "}
             <span className="text-[#FF403A]">ConnectALL?</span>
           </h3>
 
-          <ul className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
+          <ul className="mt-5 grid grid-cols-1 gap-3 md:mt-6 md:grid-cols-2 md:gap-4 lg:grid-cols-3">
             {whyImplementBenefits.map((benefit) => (
               <CheckItem key={benefit}>{benefit}</CheckItem>
             ))}
@@ -88,6 +88,7 @@ export default function ConnectAllPage() {
       </section>
 
       <FunctionalityGrid
+        compact
         title="Common Enterprise Integration"
         titleAccent="Use Cases"
         items={useCases.map((item) => ({
@@ -97,13 +98,13 @@ export default function ConnectAllPage() {
         }))}
       />
 
-      <section className="px-6 py-16 lg:px-12">
+      <section className="px-6 py-8 lg:px-12 md:py-12">
         <div className="mx-auto max-w-7xl">
           <h3 className="text-center text-3xl font-semibold leading-tight md:text-[40px]">
             Why Choose <span className="text-[#FF403A]">Albatroz?</span>
           </h3>
 
-          <div className="mt-6 space-y-5">
+          <div className="mt-4 space-y-4 md:mt-5">
             {whyChooseAlbatrozParagraphs.map((paragraph) => (
               <p
                 key={paragraph.slice(0, 48)}
@@ -118,19 +119,19 @@ export default function ConnectAllPage() {
 
       <ConnectAllServicesGrid />
 
-      <section className="px-6 py-16 lg:px-12">
+      <section className="px-6 py-8 lg:px-12 md:py-12">
         <div className="mx-auto max-w-7xl">
           <h3 className="text-center text-3xl font-semibold leading-tight md:text-[40px]">
             Our Delivery <span className="text-[#FF403A]">Methodology</span>
           </h3>
 
-          <p className="font-normal mt-6 text-sm leading-relaxed text-white/90 md:text-[16px]">
+          <p className="mt-4 font-normal text-sm leading-relaxed text-white/90 md:mt-5 md:text-[16px]">
             Every ConnectALL engagement follows a structured implementation
             framework designed to ensure successful project delivery and
             long-term sustainability. Our methodology includes:
           </p>
 
-          <ul className="mt-8 grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-5 grid grid-cols-1 gap-3 sm:gap-4 md:mt-6 md:grid-cols-2 lg:grid-cols-3">
             {deliveryMethodology.map((step, index) => (
               <li
                 key={step}
@@ -150,7 +151,7 @@ export default function ConnectAllPage() {
             ))}
           </ul>
 
-          <p className="font-normal mt-8 text-sm leading-relaxed text-white/90 md:text-[16px]">
+          <p className="mt-5 font-normal text-sm leading-relaxed text-white/90 md:mt-6 md:text-[16px]">
             This collaborative approach ensures every integration is aligned with
             business objectives while delivering measurable operational
             improvements.
@@ -158,18 +159,18 @@ export default function ConnectAllPage() {
         </div>
       </section>
 
-      <section className="px-6 pb-20 pt-16 lg:px-12">
+      <section className="px-6 pb-12 pt-8 lg:px-12 md:pb-16">
         <div className="mx-auto max-w-7xl">
           <h3 className="text-center text-3xl font-semibold leading-tight md:text-[40px]">
             Enable a Truly{" "}
             <span className="text-[#FF403A]">Connected Enterprise</span>
           </h3>
 
-          <p className="font-normal mt-6 text-sm leading-relaxed text-white/90 md:text-[16px]">
+          <p className="mt-4 font-normal text-sm leading-relaxed text-white/90 md:mt-5 md:text-[16px]">
             {closingParagraph}
           </p>
 
-          <p className="font-normal mt-5 text-sm leading-relaxed text-white/90 md:text-[16px]">
+          <p className="mt-4 font-normal text-sm leading-relaxed text-white/90 md:mt-5 md:text-[16px]">
             {closingParagraph2}
           </p>
         </div>

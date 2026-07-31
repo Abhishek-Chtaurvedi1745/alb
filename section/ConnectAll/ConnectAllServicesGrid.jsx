@@ -6,9 +6,9 @@ export default function ConnectAllServicesGrid({
   className = "",
 }) {
   return (
-    <section className={`bg-black py-16 px-6 ${className}`}>
+    <section className={`bg-black px-6 py-8 md:py-12 ${className}`}>
       <div className="mx-auto max-w-6xl">
-        <h1 className="mb-8 text-center text-3xl font-semibold text-white md:text-[40px]">
+        <h1 className="mb-5 text-center text-3xl font-semibold text-white md:mb-6 md:text-[40px]">
           Comprehensive ConnectALL{" "}
           <span className="text-[#FF403A]">Services</span>
         </h1>
@@ -22,7 +22,7 @@ export default function ConnectAllServicesGrid({
               <Link
                 key={service.slug}
                 href={service.href}
-                className={`group flex flex-col items-center gap-3 px-4 py-8 text-center transition-colors hover:bg-white/[0.04]
+                className={`group flex flex-col items-center gap-2 px-3 py-5 text-center transition-colors hover:bg-white/[0.04] sm:gap-3 sm:px-4 sm:py-6
                   ${!isLastInRow5 && !isLastOverall ? "sm:border-r border-white/10" : ""}
                   ${index < 5 ? "border-b border-white/10 sm:border-b md:border-b" : ""}
                 `}
@@ -41,7 +41,7 @@ export default function ConnectAllServicesGrid({
         </div>
 
         {showViewAllLink && (
-          <div className="mt-10 text-center">
+          <div className="mt-6 text-center md:mt-8">
             <Link
               href="/connectall/services"
               className="inline-block rounded-lg border border-[#FF403A]/40 bg-[#111111] px-8 py-3 text-lg font-semibold text-white transition hover:border-[#FF403A] hover:text-[#FF403A]"

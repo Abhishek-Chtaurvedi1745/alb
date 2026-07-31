@@ -181,8 +181,16 @@ function Nav() {
             />
           </Link>
 
-          {/* Mobile: sidebar (☰) then call (📞), left to right */}
+          {/* Mobile: call where sidebar was, sidebar where call was */}
           <div className="flex shrink-0 flex-row items-center gap-2.5 md:hidden">
+            <ContactActionMenu
+              variant="navbar"
+              panelTop={navHeight + 8}
+              dismissWhen={isOpen}
+              onOpenChange={(next) => {
+                if (next) setIsOpen(false);
+              }}
+            />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="relative z-[1001] flex h-11 w-11 shrink-0 items-center justify-center rounded-lg text-white transition-colors hover:bg-white/10"
@@ -208,14 +216,6 @@ function Nav() {
                 />
               </div>
             </button>
-            <ContactActionMenu
-              variant="navbar"
-              panelTop={navHeight + 8}
-              dismissWhen={isOpen}
-              onOpenChange={(next) => {
-                if (next) setIsOpen(false);
-              }}
-            />
           </div>
 
           {/* Desktop Navigation */}

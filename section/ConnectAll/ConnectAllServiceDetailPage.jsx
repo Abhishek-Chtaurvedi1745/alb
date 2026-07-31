@@ -12,7 +12,7 @@ function SectionBlock({ section }) {
 
   return (
     <article
-      className={`flex h-full flex-col rounded-2xl border p-6 sm:p-8 ${
+      className={`flex h-full flex-col rounded-2xl border p-5 sm:p-6 md:p-7 ${
         isNumbered
           ? "border-[#ff403a]/30 bg-[#0d0d0d]"
           : "border-white/10 bg-[#080808]"
@@ -78,8 +78,8 @@ export default function ConnectAllServiceDetailPage({ page }) {
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/80 to-black" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 pb-8 pt-12 text-left sm:px-6 sm:pb-9 sm:pt-16 md:pb-10 md:pt-20">
-          <nav className="mb-6 text-left text-sm text-white/60">
+        <div className="relative mx-auto max-w-6xl px-4 pb-6 pt-10 text-left sm:px-6 sm:pb-8 sm:pt-12 md:pb-9 md:pt-16">
+          <nav className="mb-4 text-left text-sm text-white/60 sm:mb-5">
             <Link
               href="/connectall"
               className="transition-colors hover:text-[#ff403a]"
@@ -107,8 +107,8 @@ export default function ConnectAllServiceDetailPage({ page }) {
         </div>
       </section>
 
-      <section className="pb-8 sm:pb-10">
-        <div className="mx-auto max-w-6xl space-y-4 px-4 text-left sm:px-6">
+      <section className="pb-6 sm:pb-8">
+        <div className="mx-auto max-w-6xl space-y-3 px-4 text-left sm:space-y-4 sm:px-6">
           {page.intro.map((paragraph, index) => (
             <p
               key={index}
@@ -120,8 +120,8 @@ export default function ConnectAllServiceDetailPage({ page }) {
         </div>
       </section>
 
-      <section className="pb-16 sm:pb-20 md:pb-24">
-        <div className="mx-auto max-w-6xl space-y-6 px-4 text-left sm:px-6">
+      <section className="pb-12 sm:pb-14 md:pb-16">
+        <div className="mx-auto max-w-6xl space-y-4 px-4 text-left sm:space-y-5 sm:px-6">
           {page.sections.map((section, index) => (
             <SectionBlock key={index} section={section} />
           ))}

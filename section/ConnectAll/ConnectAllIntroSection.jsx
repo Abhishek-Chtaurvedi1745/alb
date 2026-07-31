@@ -8,14 +8,14 @@ export default function ConnectAllIntroSection() {
   const hiddenParagraphs = overviewParagraphs.slice(1);
 
   return (
-    <section className="bg-black px-6 py-16 text-white lg:px-12">
+    <section className="bg-black px-6 py-8 text-white md:py-12 lg:px-12">
       <div className="mx-auto max-w-7xl">
         <h1 className="text-3xl font-semibold leading-tight md:text-[40px]">
           Connecting Your Enterprise,{" "}
           <span className="text-[#FF403A]">Simplifying Your Delivery</span>
         </h1>
 
-        <p className="font-normal mt-6 text-sm leading-relaxed text-white/90 md:text-[16px]">
+        <p className="mt-4 font-normal text-sm leading-relaxed text-white/90 md:mt-5 md:text-[16px]">
           {overviewParagraphs[0]}
         </p>
 

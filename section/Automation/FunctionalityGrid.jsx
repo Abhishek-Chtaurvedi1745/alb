@@ -1,6 +1,16 @@
-export default function FunctionalityGrid({ title, titleAccent, titleSuffix, items }) {
+export default function FunctionalityGrid({
+  title,
+  titleAccent,
+  titleSuffix,
+  items,
+  compact = false,
+}) {
   return (
-    <section className="bg-black px-6 py-16 text-white lg:px-12">
+    <section
+      className={`bg-black px-6 text-white lg:px-12 ${
+        compact ? "py-8 md:py-12" : "py-16"
+      }`}
+    >
       <div className="mx-auto max-w-7xl">
         <h1 className="text-center text-3xl font-semibold md:text-[40px]">
           {title}{" "}
@@ -8,7 +18,11 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
           {titleSuffix ? ` ${titleSuffix}` : null}
         </h1>
 
-        <div className="mt-8 grid grid-cols-1 items-stretch gap-5 sm:mt-10 md:grid-cols-2 md:gap-5 lg:grid-cols-3">
+        <div
+          className={`grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-5 lg:grid-cols-3 ${
+            compact ? "mt-6 md:mt-8" : "mt-8 sm:mt-10"
+          }`}
+        >
           {items.map((item, index) => {
             const isCentered = Boolean(item.centered);
             const isLast = index === items.length - 1;
@@ -50,7 +64,11 @@ export default function FunctionalityGrid({ title, titleAccent, titleSuffix, ite
                 ) : null}
 
                 <div
-                  className={`relative flex h-full min-h-[200px] flex-col p-5 sm:min-h-[220px] md:min-h-[260px] md:p-8 ${
+                  className={`relative flex h-full flex-col p-5 md:p-8 ${
+                    compact
+                      ? "min-h-[180px] sm:min-h-[200px] md:min-h-[220px]"
+                      : "min-h-[200px] sm:min-h-[220px] md:min-h-[260px]"
+                  } ${
                     isCentered
                       ? "items-center justify-center text-center"
                       : "items-start justify-start text-left"

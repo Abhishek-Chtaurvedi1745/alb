@@ -10,7 +10,7 @@ export const metadata = {
 export default function ConnectAllServicesPage() {
   return (
     <div className="bg-black">
-      <section className="mt-[83px] px-4 py-12 sm:px-6 sm:py-16 md:py-20">
+      <section className="mt-[83px] px-4 py-8 sm:px-6 sm:py-10 md:py-12">
         <div className="mx-auto max-w-6xl">
           <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[40px]">
             ConnectALL <span className="text-[#ff403a]">Services</span>
@@ -23,8 +23,8 @@ export default function ConnectAllServicesPage() {
         </div>
       </section>
 
-      <section className="px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-8">
+      <section className="px-4 pb-12 sm:px-6 sm:pb-14 md:pb-16">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-stretch gap-4 md:grid-cols-2 md:gap-6">
           {connectAllServices.map((service) => (
             <ConnectAllServiceCard key={service.slug} service={service} />
           ))}

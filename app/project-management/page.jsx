@@ -112,11 +112,11 @@ function page() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 items-stretch gap-3 sm:gap-5 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
+        <div className="grid grid-cols-2 items-stretch gap-3 pb-2 sm:gap-5 sm:pb-0 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-8">
           {ppmBenefits.map((benefit, index) => (
             <div
               key={benefit.title}
-              className={`min-w-0 ${
+              className={`flex min-w-0 ${
                 index === ppmBenefits.length - 1 ? "lg:col-start-2" : undefined
               }`}
             >

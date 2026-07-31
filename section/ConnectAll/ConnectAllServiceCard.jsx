@@ -5,7 +5,7 @@ import BookACallButton from "@/component/BookACall/BookACallButton";
 
 export default function ConnectAllServiceCard({ service }) {
   return (
-    <article className="group relative min-h-[240px] overflow-hidden rounded-2xl border border-white/10 sm:min-h-[320px] md:min-h-[360px]">
+    <article className="group relative min-h-[220px] overflow-hidden rounded-2xl border border-white/10 sm:min-h-[280px] md:min-h-[320px]">
       <img
         src={service.image}
         alt={service.title}
@@ -14,7 +14,7 @@ export default function ConnectAllServiceCard({ service }) {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/25" />
 
-      <div className="relative z-10 flex h-full min-h-[240px] flex-col p-5 sm:min-h-[320px] sm:p-8 md:min-h-[360px]">
+      <div className="relative z-10 flex h-full min-h-[220px] flex-col p-5 sm:min-h-[280px] sm:p-6 md:min-h-[320px]">
         <div className="flex flex-1 items-center justify-center px-2">
           <h4 className="text-center text-xl font-semibold leading-tight text-white sm:text-[28px] md:text-[32px]">
             {service.title}
