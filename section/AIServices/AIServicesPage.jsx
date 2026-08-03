@@ -142,35 +142,70 @@ export default function AIServicesPage() {
   return (
     <div className="bg-black text-white">
       <section
-        className="mt-[83px] bg-[#000000] px-6 py-16 md:px-16"
+        className="mt-[83px] bg-[#000000] px-5 py-8 sm:px-8 md:px-16 md:py-14"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div className="flex flex-col items-center gap-10 md:flex-row">
-          <div className="w-full">
-            <div className="ai-hero-slides">
-              {slides.map((slide, index) => (
-                <div
-                  key={slide.eyebrow}
-                  className={`ai-hero-slide ${index === activeSlide ? "active" : ""}`}
-                  aria-hidden={index !== activeSlide}
-                >
-                  <RichHtml
-                    html={slide.titleHtml}
-                    className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
-                    as="h1"
-                  />
-                  <p className="mt-6 max-w-2xl text-sm font-normal leading-relaxed text-white/90 md:text-[16px]">
-                    {slide.subtitle}
-                  </p>
-                  <BookACallButton className="mt-7 inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
-                    {slide.cta}
-                  </BookACallButton>
-                </div>
-              ))}
-            </div>
+        <div className="mx-auto flex max-w-7xl flex-col items-center">
+          {/* 1. Text */}
+          <div className="ai-hero-slides w-full text-center md:text-left">
+            {slides.map((slide, index) => (
+              <div
+                key={slide.eyebrow}
+                className={`ai-hero-slide ${index === activeSlide ? "active" : ""}`}
+                aria-hidden={index !== activeSlide}
+              >
+                <RichHtml
+                  html={slide.titleHtml}
+                  className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
+                  as="h1"
+                />
+                <p className="mx-auto mt-4 max-w-3xl text-sm font-normal leading-relaxed text-white/90 md:mx-0 md:mt-5 md:text-[16px]">
+                  {slide.subtitle}
+                </p>
+              </div>
+            ))}
+          </div>
 
-            <div className="ai-hero-dots mt-8 flex gap-2">
+          {/* 2. Banner / image */}
+          <div className="relative mt-6 w-full max-w-4xl overflow-hidden bg-black md:mt-8">
+            <img
+              src={HERO_IMAGE}
+              alt="AI partnership for enterprise — human and intelligent systems working together"
+              className="relative z-10 mx-auto w-full object-contain mix-blend-lighten [mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [mask-size:100%_100%] [-webkit-mask-size:100%_100%] [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 left-0 z-20 w-[22%] bg-gradient-to-r from-black via-black/70 to-transparent"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[22%] bg-gradient-to-l from-black via-black/70 to-transparent"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 top-0 z-20 h-14 bg-gradient-to-b from-black via-black/70 to-transparent md:h-20"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-16 bg-gradient-to-t from-black via-black/75 to-transparent md:h-24"
+            />
+          </div>
+
+          {/* 3. Button + slide dots */}
+          <div className="mt-5 flex w-full flex-col items-center gap-5 md:mt-7">
+            {slides.map((slide, index) => (
+              <div
+                key={`cta-${slide.eyebrow}`}
+                className={`${index === activeSlide ? "block" : "hidden"}`}
+              >
+                <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
+                  {slide.cta}
+                </BookACallButton>
+              </div>
+            ))}
+
+            <div className="ai-hero-dots flex gap-2">
               {slides.map((slide, index) => (
                 <button
                   key={`${slide.eyebrow}-${index === activeSlide ? "on" : "off"}`}
@@ -185,30 +220,6 @@ export default function AIServicesPage() {
                 </button>
               ))}
             </div>
-          </div>
-
-          <div className="relative w-full overflow-hidden bg-black">
-            <img
-              src={HERO_IMAGE}
-              alt="AI partnership for enterprise — human and intelligent systems working together"
-              className="relative z-10 w-full object-contain mix-blend-lighten [mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [mask-size:100%_100%] [-webkit-mask-size:100%_100%] [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]"
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-y-0 left-0 z-20 w-[28%] bg-gradient-to-r from-black via-black/70 to-transparent"
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[28%] bg-gradient-to-l from-black via-black/70 to-transparent"
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-x-0 top-0 z-20 h-20 bg-gradient-to-b from-black via-black/70 to-transparent"
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-24 bg-gradient-to-t from-black via-black/75 to-transparent"
-            />
           </div>
         </div>
       </section>
