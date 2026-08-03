@@ -158,10 +158,10 @@ export default function AIServicesPage() {
                 >
                   <RichHtml
                     html={slide.titleHtml}
-                    className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
+                    className="text-left text-3xl font-semibold leading-tight text-white md:text-[40px]"
                     as="h1"
                   />
-                  <p className="mt-4 max-w-2xl text-sm font-normal leading-relaxed text-white/90 md:mt-6 md:text-[16px]">
+                  <p className="mt-4 max-w-2xl text-left text-sm font-normal leading-relaxed text-white/90 md:mt-6 md:text-[16px]">
                     {slide.subtitle}
                   </p>
                   <div className="mt-7 hidden md:block">

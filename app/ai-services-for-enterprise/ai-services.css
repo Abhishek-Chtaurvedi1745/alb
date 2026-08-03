@@ -10,7 +10,7 @@
   transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
-  text-align: left;
+  text-align: left !important;
   z-index: 0;
 }
 
@@ -124,6 +124,13 @@
   line-height: 1.2;
   margin: 0 0 40px;
   color: var(--ink);
+}
+
+@media (max-width: 767px) {
+  .ai-mid .flight-label,
+  .ai-mid .flight-heading {
+    text-align: left;
+  }
 }
 
 @media (min-width: 768px) {
@@ -497,6 +504,7 @@
     gap: 20px;
     padding: 0 4px 32px;
     border-bottom: 1px solid var(--line-soft);
+    align-items: stretch;
   }
 
   .ai-mid .flight-panel:last-child {
@@ -507,10 +515,14 @@
   .ai-mid .flight-panel .panel-text {
     order: 1;
     text-align: left;
+    width: 100%;
+    justify-self: stretch;
   }
 
   .ai-mid .flight-panel .panel-visual {
     order: 2;
+    width: 100%;
+    justify-self: stretch;
   }
 
   .ai-mid .flight-panel:nth-child(even) .panel-visual {
@@ -522,10 +534,12 @@
     text-align: left;
   }
 
+  .ai-mid .flight-panel .panel-num,
   .ai-mid .flight-panel:nth-child(even) .panel-num {
     justify-content: flex-start;
   }
 
+  .ai-mid .flight-panel .panel-tags,
   .ai-mid .flight-panel:nth-child(even) .panel-tags {
     justify-content: flex-start;
   }
