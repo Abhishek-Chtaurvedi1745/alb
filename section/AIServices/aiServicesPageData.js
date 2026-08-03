@@ -3,7 +3,7 @@ export const aiServicesPageData = {
     {
       eyebrow: "AI CONCIERGE — BUILT FOR ENTERPRISE PPM",
       titleHtml:
-        'Troz<span class="ai-accent">AI</span> : An Ai ~solution that lives inside your <em>project office.</em>',
+        'Troz<span class="ai-accent">AI</span> : An AI solution that lives inside your <em>project office.</em>',
       subtitle:
         "TrozAI understands your organisation — its standards, its history, its way of working — and acts on that understanding inside your project management application. Every action stays reviewable. Every step keeps a human in the loop.",
       cta: "Request a free demo",

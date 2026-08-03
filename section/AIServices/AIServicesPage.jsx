@@ -142,45 +142,68 @@ export default function AIServicesPage() {
   return (
     <div className="bg-black text-white">
       <section
-        className="mt-[83px] bg-[#000000] px-5 py-8 sm:px-8 md:px-16 md:py-14"
+        className="mt-[83px] bg-[#000000] px-5 py-8 sm:px-8 md:px-16 md:py-16"
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div className="mx-auto flex max-w-7xl flex-col items-center">
-          {/* 1. Text */}
-          <div className="ai-hero-slides w-full text-center md:text-left">
-            {slides.map((slide, index) => (
-              <div
-                key={slide.eyebrow}
-                className={`ai-hero-slide ${index === activeSlide ? "active" : ""}`}
-                aria-hidden={index !== activeSlide}
-              >
-                <RichHtml
-                  html={slide.titleHtml}
-                  className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
-                  as="h1"
-                />
-                <p className="mx-auto mt-4 max-w-3xl text-sm font-normal leading-relaxed text-white/90 md:mx-0 md:mt-5 md:text-[16px]">
-                  {slide.subtitle}
-                </p>
-              </div>
-            ))}
+        <div className="flex flex-col items-center gap-6 md:flex-row md:gap-10">
+          {/* Text (+ desktop CTA) */}
+          <div className="w-full">
+            <div className="ai-hero-slides">
+              {slides.map((slide, index) => (
+                <div
+                  key={slide.eyebrow}
+                  className={`ai-hero-slide ${index === activeSlide ? "active" : ""}`}
+                  aria-hidden={index !== activeSlide}
+                >
+                  <RichHtml
+                    html={slide.titleHtml}
+                    className="text-3xl font-semibold leading-tight text-white md:text-[40px]"
+                    as="h1"
+                  />
+                  <p className="mt-4 max-w-2xl text-sm font-normal leading-relaxed text-white/90 md:mt-6 md:text-[16px]">
+                    {slide.subtitle}
+                  </p>
+                  <div className="mt-7 hidden md:block">
+                    <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
+                      {slide.cta}
+                    </BookACallButton>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="ai-hero-dots mt-8 hidden gap-2 md:flex">
+              {slides.map((slide, index) => (
+                <button
+                  key={`d-${slide.eyebrow}-${index === activeSlide ? "on" : "off"}`}
+                  type="button"
+                  className={`ai-hero-dot relative flex h-8 w-10 cursor-pointer items-center border-0 bg-transparent p-0 ${
+                    index === activeSlide ? "active" : ""
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                  onClick={() => goToSlide(index)}
+                >
+                  <span className="relative block h-[3px] w-8 overflow-hidden rounded-sm bg-white/15" />
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* 2. Banner / image */}
-          <div className="relative mt-6 w-full max-w-4xl overflow-hidden bg-black md:mt-8">
+          {/* Banner / image */}
+          <div className="relative w-full overflow-hidden bg-black">
             <img
               src={HERO_IMAGE}
               alt="AI partnership for enterprise — human and intelligent systems working together"
-              className="relative z-10 mx-auto w-full object-contain mix-blend-lighten [mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [mask-size:100%_100%] [-webkit-mask-size:100%_100%] [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]"
+              className="relative z-10 w-full object-contain mix-blend-lighten [mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [mask-size:100%_100%] [-webkit-mask-size:100%_100%] [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-y-0 left-0 z-20 w-[22%] bg-gradient-to-r from-black via-black/70 to-transparent"
+              className="pointer-events-none absolute inset-y-0 left-0 z-20 w-[28%] bg-gradient-to-r from-black via-black/70 to-transparent"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[22%] bg-gradient-to-l from-black via-black/70 to-transparent"
+              className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[28%] bg-gradient-to-l from-black via-black/70 to-transparent"
             />
             <div
               aria-hidden
@@ -192,14 +215,14 @@ export default function AIServicesPage() {
             />
           </div>
 
-          {/* 3. Button + slide dots */}
-          <div className="mt-5 flex w-full flex-col items-center gap-5 md:mt-7">
+          {/* Mobile-only: button after banner */}
+          <div className="flex w-full flex-col items-center gap-4 md:hidden">
             {slides.map((slide, index) => (
               <div
-                key={`cta-${slide.eyebrow}`}
-                className={`${index === activeSlide ? "block" : "hidden"}`}
+                key={`m-cta-${slide.eyebrow}`}
+                className={index === activeSlide ? "block" : "hidden"}
               >
-                <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90 md:text-[20px]">
+                <BookACallButton className="inline-block rounded-lg bg-[#FF403A] px-6 py-3 text-base font-semibold text-white transition hover:opacity-90">
                   {slide.cta}
                 </BookACallButton>
               </div>
@@ -208,7 +231,7 @@ export default function AIServicesPage() {
             <div className="ai-hero-dots flex gap-2">
               {slides.map((slide, index) => (
                 <button
-                  key={`${slide.eyebrow}-${index === activeSlide ? "on" : "off"}`}
+                  key={`m-${slide.eyebrow}-${index === activeSlide ? "on" : "off"}`}
                   type="button"
                   className={`ai-hero-dot relative flex h-8 w-10 cursor-pointer items-center border-0 bg-transparent p-0 ${
                     index === activeSlide ? "active" : ""

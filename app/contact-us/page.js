@@ -80,8 +80,7 @@ function Page() {
               <span className="text-[#ff403a]">Conversation</span>
             </h1>
             <p className="font-normal mb-6 max-w-2xl text-sm leading-relaxed text-white sm:mb-8 sm:text-sm md:mb-10 md:text-sm lg:text-[13px]">
-              Share your requirements with us and our team will get back to you
-              with the right solution for your business needs.
+              Share your requirements with us and our team will get back to you soon.
             </p>
 
             {submitted ? (

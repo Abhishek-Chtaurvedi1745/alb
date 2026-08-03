@@ -90,14 +90,13 @@ function BookACallModalContent() {
         <div className="overflow-y-auto overscroll-contain px-5 py-6 sm:px-8 sm:py-8 [-webkit-overflow-scrolling:touch]">
           <h2
             id="book-a-call-title"
-            className="mb-2 pr-10 text-[22px] font-semibold leading-tight text-white sm:text-3xl"
+            className="mb-2 pr-10 text-[17px] font-semibold leading-tight whitespace-nowrap text-white sm:text-3xl sm:whitespace-normal"
           >
             Let&apos;s Start the{" "}
             <span className="text-[#ff403a]">Conversation</span>
           </h2>
           <p className="mb-5 text-[13px] leading-relaxed text-white/80 sm:mb-6 sm:text-sm">
-            Share your requirements with us and our team will get back to you
-            with the right solution for your business needs.
+            Share your requirements with us and our team will get back to you soon.
           </p>
 
           {submitted ? (
