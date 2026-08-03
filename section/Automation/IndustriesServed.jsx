@@ -77,12 +77,12 @@ export default function IndustriesServed() {
 
   return (
     <section className="bg-black text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 text-center sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl px-5 py-8 text-center sm:px-8 md:py-16 lg:px-12">
         <h1 className="text-3xl font-semibold tracking-tight md:text-[40px]">
           Industries <span className="text-[#FF403A]">Served</span>
         </h1>
 
-        <div className="mx-auto mt-8 grid max-w-5xl grid-cols-2 gap-4 sm:gap-5 md:mt-10 md:grid-cols-4 md:gap-6">
+        <div className="mx-auto mt-5 grid max-w-5xl grid-cols-2 gap-3 sm:gap-5 md:mt-10 md:grid-cols-4 md:gap-6">
           {industries.map((industry, index) => {
             const isActive = activeIndex === index;
 
@@ -122,22 +122,22 @@ export default function IndustriesServed() {
 
         <div
           id="industry-content-panel"
-          className={`mt-8 overflow-hidden text-left transition-all duration-500 ease-in-out ${
+          className={`mt-5 overflow-hidden text-left transition-all duration-500 ease-in-out md:mt-8 ${
             activeIndustry && activeIndustry.items.length > 0
               ? "max-h-[2000px] opacity-100"
               : "max-h-0 opacity-0"
           }`}
         >
           {activeIndustry && activeIndustry.items.length > 0 && (
-            <div className="rounded-2xl border border-[#FF403A]/40 bg-[#111111] p-6 md:p-8">
-              <h4 className="mb-6 text-xl font-semibold text-white md:text-2xl">
+            <div className="rounded-2xl border border-[#FF403A]/40 bg-[#111111] p-4 md:p-8">
+              <h4 className="mb-4 text-xl font-semibold text-white md:mb-6 md:text-2xl">
                 {activeIndustry.name}{" "}
                 <span className="text-[#FF403A]">Automation</span>
               </h4>
 
-              <ul className="space-y-5">
+              <ul className="space-y-3.5 md:space-y-5">
                 {activeIndustry.items.map((item, i) => (
-                  <li key={i} className="group flex items-start gap-4">
+                  <li key={i} className="group flex items-start gap-3 md:gap-4">
                     <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#FF403A] shadow-lg shadow-red-500/20 transition duration-200 group-hover:scale-110">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

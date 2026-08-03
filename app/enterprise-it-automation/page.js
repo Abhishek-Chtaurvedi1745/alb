@@ -130,16 +130,16 @@ function page() {
 
       {/* Workload Automation */}
       <section>
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 md:py-16 lg:px-12">
           <h3 className="text-center text-3xl font-semibold leading-tight md:text-[40px]">
             Workload Automation
           </h3>
 
-          <h4 className="mt-3 text-center text-2xl font-semibold text-[#FF403A] md:text-[40px]">
+          <h4 className="mt-2 text-center text-2xl font-semibold text-[#FF403A] md:mt-3 md:text-[40px]">
             Bridging IT Operations with Business Goals
           </h4>
 
-          <p className="mt-5 w-full text-left text-[13px] font-normal leading-7 text-gray-300 md:text-[16px]">
+          <p className="mt-3 w-full text-left text-[13px] font-normal leading-6 text-gray-300 md:mt-5 md:leading-7 md:text-[16px]">
             Workload Automation (WA) redefines business operations by automating,
             scheduling, and executing workflows, processes, and transactions without
             human intervention. This powerful automation platform aligns IT operations
@@ -148,7 +148,7 @@ function page() {
             hybrid environments.
           </p>
 
-          <div className="mt-12 grid items-start gap-8 lg:grid-cols-[38%_1fr] lg:gap-10">
+          <div className="mt-6 grid items-start gap-5 md:mt-12 md:gap-8 lg:grid-cols-[38%_1fr] lg:gap-10">
             <div className="overflow-hidden rounded-2xl border border-white/10 lg:sticky lg:top-28">
               <img
                 src="/images/ea-workload-human.png?v=2"
@@ -163,11 +163,11 @@ function page() {
                 <span className="text-[#FF403A]">Your Business</span>
               </h3>
 
-              <div className="mt-6 space-y-3">
+              <div className="mt-4 space-y-2.5 md:mt-6 md:space-y-3">
                 {workloadBenefits.map((item, index) => (
                   <div
                     key={index}
-                    className="rounded-xl border border-white/10 bg-[#0c0c0c] p-4 transition-colors hover:border-[#FF403A]/40"
+                    className="rounded-xl border border-white/10 bg-[#0c0c0c] p-3.5 transition-colors hover:border-[#FF403A]/40 md:p-4"
                   >
                     <div className="flex items-start gap-3">
                       <CheckIcon />
@@ -182,7 +182,7 @@ function page() {
             </div>
           </div>
 
-          <div className="mt-12 rounded-2xl border border-white/10 bg-[#0c0c0c] p-6 md:p-10">
+          <div className="mt-6 rounded-2xl border border-white/10 bg-[#0c0c0c] p-4 md:mt-12 md:p-10">
             <h3 className="text-center text-2xl font-semibold leading-tight md:text-[40px]">
               Simplify Your IT Operations with Service Orchestration and{" "}
               <span className="text-[#FF403A]">
@@ -190,7 +190,7 @@ function page() {
               </span>
             </h3>
 
-            <p className="mt-6 w-full text-left text-sm font-normal leading-relaxed text-white md:text-[16px]">
+            <p className="mt-3 w-full text-left text-sm font-normal leading-relaxed text-white md:mt-6 md:text-[16px]">
               Service Orchestration simplifies the coordination of complex IT
               workflows across multiple domains with minimal manual intervention.
               Built on advanced IT Orchestration Software, SOAPs unify workflows
@@ -203,8 +203,8 @@ function page() {
 
       {/* Service Orchestration Benefits */}
       <section>
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
-          <div className="grid items-start gap-8 lg:grid-cols-[38%_1fr] lg:gap-10">
+        <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 md:py-16 lg:px-12">
+          <div className="grid items-start gap-5 md:gap-8 lg:grid-cols-[38%_1fr] lg:gap-10">
             <div className="overflow-hidden rounded-2xl border border-white/10 lg:sticky lg:top-28">
               <img
                 src="/images/ea-soap-human.png?v=2"
@@ -219,11 +219,11 @@ function page() {
                 <span className="text-[#FF403A]">Brings to Your Business</span>
               </h3>
 
-              <div className="mt-6 space-y-3">
+              <div className="mt-4 space-y-2.5 md:mt-6 md:space-y-3">
                 {benefits.map((item, i) => (
                   <div
                     key={i}
-                    className="rounded-xl border border-white/10 bg-[#0c0c0c] p-4 transition-colors hover:border-[#FF403A]/40"
+                    className="rounded-xl border border-white/10 bg-[#0c0c0c] p-3.5 transition-colors hover:border-[#FF403A]/40 md:p-4"
                   >
                     <div className="flex items-start gap-3">
                       <CheckIcon />
@@ -242,23 +242,23 @@ function page() {
 
       {/* Enterprise Solutions */}
       <section>
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 md:py-16 lg:px-12">
           <h3 className="text-center text-2xl font-semibold leading-tight md:text-[40px]">
             Enterprise Automation Solutions{" "}
             <span className="text-[#FF403A]">We Support</span>
           </h3>
 
-          <div className="mt-8 grid grid-cols-1 items-stretch gap-5 md:mt-12 md:grid-cols-2 md:gap-6">
+          <div className="mt-5 grid grid-cols-1 items-stretch gap-4 md:mt-12 md:grid-cols-2 md:gap-6">
             <Link
               href="/automic-automation"
               className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0c] transition hover:border-[#FF403A]/50"
             >
-              <div className="flex flex-1 flex-col p-5 sm:p-6 md:p-8">
+              <div className="flex flex-1 flex-col p-4 sm:p-6 md:p-8">
                 <h4 className="text-xl font-semibold leading-snug sm:text-2xl md:text-[32px]">
                   Broadcom{" "}
                   <span className="text-[#FF403A]">Automic Automation</span>
                 </h4>
-                <p className="mt-4 text-[13px] font-normal leading-relaxed text-white/90 md:text-sm">
+                <p className="mt-3 text-[13px] font-normal leading-relaxed text-white/90 md:mt-4 md:text-sm">
                   Broadcom Automic Automation offers cutting-edge solutions for
                   Workload Automation, Automated Job Scheduling, and Enterprise
                   Automation. With features like Automic Job Scheduling, Automic
@@ -268,7 +268,7 @@ function page() {
                   striving for compliance and growth in today&apos;s dynamic IT
                   landscape.
                 </p>
-                <span className="mt-5 text-sm font-semibold text-[#FF403A] transition group-hover:underline">
+                <span className="mt-4 text-sm font-semibold text-[#FF403A] transition group-hover:underline md:mt-5">
                   Explore Automic Automation →
                 </span>
               </div>
@@ -278,14 +278,14 @@ function page() {
               href="/stonebranch"
               className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c0c] transition hover:border-[#FF403A]/50"
             >
-              <div className="flex flex-1 flex-col p-5 sm:p-6 md:p-8">
+              <div className="flex flex-1 flex-col p-4 sm:p-6 md:p-8">
                 <h4 className="text-xl font-semibold leading-snug sm:text-2xl md:text-[32px]">
                   Stonebranch{" "}
                   <span className="text-[#FF403A]">
                     Universal Automation Center (UAC)
                   </span>
                 </h4>
-                <p className="mt-4 text-[13px] font-normal leading-relaxed text-white/90 md:text-sm">
+                <p className="mt-3 text-[13px] font-normal leading-relaxed text-white/90 md:mt-4 md:text-sm">
                   Stonebranch UAC is a versatile tool for Job Scheduling Software
                   and IT workflow automation. It supports Stonebranch Workflow
                   Orchestration, Stonebranch Managed File Transfer, and
@@ -294,7 +294,7 @@ function page() {
                   visibility and ensures efficient workflow execution, simplifying
                   IT operations for hybrid environments.
                 </p>
-                <span className="mt-5 text-sm font-semibold text-[#FF403A] transition group-hover:underline">
+                <span className="mt-4 text-sm font-semibold text-[#FF403A] transition group-hover:underline md:mt-5">
                   Explore Stonebranch →
                 </span>
               </div>
@@ -305,25 +305,25 @@ function page() {
 
       {/* Transformative Benefits */}
       <section>
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl px-5 py-8 sm:px-8 md:py-16 lg:px-12">
           <div className="text-center">
             <h3 className="text-3xl font-semibold leading-tight md:text-[40px]">
               Transformative Benefits of Implementing{" "}
               <span className="text-[#FF403A]">Automation</span>
             </h3>
 
-            <p className="mt-6 w-full text-left text-sm font-normal leading-relaxed text-white/80 md:text-center md:text-[16px]">
+            <p className="mt-3 w-full text-left text-sm font-normal leading-relaxed text-white/80 md:mt-6 md:text-center md:text-[16px]">
               Implementing tools like Broadcom Automic Automation and Stonebranch
               UAC enables organizations to optimize IT processes while aligning
               them with business objectives. Key benefits include:
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-5 grid grid-cols-1 gap-2.5 sm:mt-10 md:grid-cols-2 md:gap-3 lg:grid-cols-3">
             {benefits1.map((item, i) => (
               <div
                 key={i}
-                className="rounded-xl border border-white/10 bg-[#0c0c0c] p-4 transition-colors hover:border-[#FF403A]/40"
+                className="rounded-xl border border-white/10 bg-[#0c0c0c] p-3.5 transition-colors hover:border-[#FF403A]/40 md:p-4"
               >
                 <div className="flex items-start gap-3">
                   <CheckIcon />
