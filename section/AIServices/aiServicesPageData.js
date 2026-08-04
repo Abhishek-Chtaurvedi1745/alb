@@ -13,7 +13,7 @@ export const aiServicesPageData = {
       eyebrow: "CUSTOM AI BUILDS",
       titleHtml: "Bespoke AI <em>build, from Ground Up.</em>",
       subtitle:
-        "If your organisation needs its own AI Concierge, not ours, we build that too — on RAG, MCP and agentic architectures, grounded in your own data and your own systems.",
+        "If your organisation needs its own TrozAI, not ours, we build that too — on RAG, MCP and agentic architectures, grounded in your own data and your own systems.",
       cta: "Get Free Consultation",
       href: "/contact-us",
     },
@@ -27,7 +27,6 @@ export const aiServicesPageData = {
     },
   ],
   flightHead: {
-    label: "PRODUCT — AI CONCIERGE",
     titleHtml: "Everything you wanted from an AI,<br>now in one solution.",
   },
   panels: [

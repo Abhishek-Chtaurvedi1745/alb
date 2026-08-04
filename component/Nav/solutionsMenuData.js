@@ -121,7 +121,6 @@ export const desktopFlyoutMenu = desktopSolutionsColumns.map((column) => {
         return {
           title: product.title,
           href: product.href,
-          highlightRed: product.title === "Rally",
           ...(children ? { children } : {}),
         };
       }),

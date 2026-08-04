@@ -250,7 +250,6 @@ export default function AIServicesPage() {
       <div className="ai-mid">
         <section className="flight-section" id="capabilities">
           <div className="wrap">
-            <div className="flight-label">{flightHead.label}</div>
             <RichHtml html={flightHead.titleHtml} className="flight-heading" as="h2" />
           </div>
 

@@ -96,18 +96,6 @@ function page() {
                   </li>
                 ))}
               </ul>
-
-              <div className="flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-                <p className="text-sm text-white/55">
-                  Explore open roles and find the one that fits you.
-                </p>
-                <a
-                  href="#open-roles"
-                  className="inline-flex w-fit items-center justify-center rounded-full border border-white/30 px-8 py-3 text-base font-medium text-white transition hover:border-[#FF403A] hover:text-[#FF403A]"
-                >
-                  View jobs
-                </a>
-              </div>
             </div>
           </div>
         </div>
