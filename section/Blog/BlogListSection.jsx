@@ -8,7 +8,7 @@ export default function BlogListSection({
   posts,
   categories,
   activeCategory = "all",
-  title = "Articles",
+  title = "Blog",
   subtitle = "Expert insights on project management, Clarity PPM, and enterprise automation.",
 }) {
   const [visibleCount, setVisibleCount] = useState(9);

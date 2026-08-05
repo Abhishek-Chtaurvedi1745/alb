@@ -93,7 +93,7 @@ function ServicesBlock({ services, onNavigate }) {
             <Link
               href={item.href}
               onClick={onNavigate}
-              className="group flex items-center gap-2 text-[12px] font-medium tracking-[0.12em] text-[#6b7280] uppercase transition-colors hover:text-[#ef4444]"
+              className="group flex items-center gap-2 text-[12px] font-medium tracking-[0.02em] text-[#6b7280] transition-colors hover:text-[#ef4444]"
             >
               {index === 0 && (
                 <ChevronRight
@@ -287,7 +287,7 @@ function FlyoutServiceRow({ label, href, onNavigate, isSectionTitle = false }) {
     <Link
       href={href}
       onClick={onNavigate}
-      className="block px-5 py-2.5 text-[12px] font-medium tracking-[0.1em] text-[#6b7280] uppercase transition-all duration-200 ease-out hover:bg-[#f9fafb] hover:text-[#ef4444]"
+      className="block px-5 py-2.5 text-[12px] font-medium tracking-[0.02em] text-[#6b7280] transition-all duration-200 ease-out hover:bg-[#f9fafb] hover:text-[#ef4444]"
     >
       {label}
     </Link>
@@ -517,8 +517,8 @@ function MobileFlyoutBranch({ item, depth, openKey, setOpenKey, onClose, keyPref
                 onClose={onClose}
                 className={`flex min-h-[40px] items-center py-2 text-[12px] transition-colors hover:text-[#ef4444] ${
                   child.isSectionTitle
-                    ? "font-bold tracking-[0.08em] text-[#ef4444] uppercase"
-                    : "font-medium tracking-[0.08em] text-[#6b7280] uppercase"
+                    ? "font-bold tracking-[0.02em] text-[#ef4444]"
+                    : "font-medium tracking-[0.02em] text-[#6b7280]"
                 }`}
                 style={{ paddingLeft: childPadding }}
               >

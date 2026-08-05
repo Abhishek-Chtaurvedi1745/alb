@@ -232,7 +232,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--red);
   margin-bottom: 12px;
@@ -247,31 +247,20 @@
 }
 
 .ai-mid .panel-title {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 700;
   line-height: 1.25;
   margin: 0 0 12px;
   color: var(--ink);
 }
 
-@media (min-width: 768px) {
-  .ai-mid .panel-title {
-    font-size: 28px;
-  }
-}
-
 .ai-mid .panel-desc {
-  font-size: 14px !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
   line-height: 1.65 !important;
   color: var(--ink-soft) !important;
   margin: 0 0 18px;
   max-width: 440px;
-}
-
-@media (min-width: 768px) {
-  .ai-mid .panel-desc {
-    font-size: 16px !important;
-  }
 }
 
 .ai-mid .flight-panel:nth-child(even) .panel-desc {

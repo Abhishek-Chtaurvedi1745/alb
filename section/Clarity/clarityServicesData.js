@@ -16,14 +16,6 @@ export const clarityServices = [
       "Seamless Clarity installation, version upgrades, and environment hardening with minimal disruption to business operations.",
   },
   {
-    slug: "migration-to-modern-ux",
-    title: "Migration to Modern UX",
-    image: "/images/clarity-services/migration-modern-ux.webp",
-    href: "/clarity/services/migration-to-modern-ux",
-    description:
-      "Migrate legacy Clarity experiences to the modern UX with improved usability, adoption, and user productivity.",
-  },
-  {
     slug: "integration",
     title: "Integration",
     image: "/images/clarity-services/integration.webp",
@@ -33,19 +25,11 @@ export const clarityServices = [
   },
   {
     slug: "clarity-reporting-dashboard-services",
-    title: "Clarity Reporting & Dashboard Services",
+    title: "Reporting & Dashboard",
     image: "/images/clarity-services/jaspersoft-reports.webp",
     href: "/clarity/services/clarity-reporting-dashboard-services",
     description:
       "Design, customize, and optimize Clarity reporting and dashboards for actionable portfolio insights.",
-  },
-  {
-    slug: "business-intelligence",
-    title: "Business Intelligence",
-    image: "/images/clarity-services/business-intelligence.webp",
-    href: "/clarity/services/business-intelligence",
-    description:
-      "Turn Clarity data into executive-ready analytics with BI dashboards, KPIs, and portfolio performance visibility.",
   },
   {
     slug: "technical-development",
@@ -78,13 +62,5 @@ export const clarityServices = [
     href: "/clarity/services/user-tranings",
     description:
       "Role-based Clarity training programs that improve adoption, governance discipline, and day-to-day user confidence.",
-  },
-  {
-    slug: "quality-assurance",
-    title: "Quality Assurance",
-    image: "/images/clarity-services/quality-assurance.webp",
-    href: "/clarity/services/quality-assurance",
-    description:
-      "Structured QA for Clarity configurations, integrations, and releases to ensure reliable enterprise delivery.",
   },
 ];

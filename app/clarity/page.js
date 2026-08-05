@@ -23,11 +23,6 @@ const services = [
     href: "/clarity/services/installations-upgrades",
   },
   {
-    label: "Migration to Modern UX",
-    image: "/images/13.svg",
-    href: "/clarity/services/migration-to-modern-ux",
-  },
-  {
     label: "Integration Services",
     image: "/images/14.svg",
     href: "/clarity/services/integration",
@@ -51,16 +46,12 @@ const services = [
     label: "User Trainings",
     image: "/images/18.svg",
     href: "/clarity/services/user-tranings",
+    breakLabel: true,
   },
   {
     label: "Reports & Dashboards",
     image: "/images/19.svg",
     href: "/clarity/services/clarity-reporting-dashboard-services",
-  },
-  {
-    label: "Business Intelligence",
-    image: "/images/md1.svg",
-    href: "/clarity/services/business-intelligence",
   },
 ];
 
@@ -182,9 +173,9 @@ const benefits = [
 
         {/* Icon grid with dividers */}
         {activeTab === "services" && (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4">
           {services.map((service, index) => {
-            const isLastInRow5 = (index + 1) % 5 === 0;
+            const isLastInRow4 = (index + 1) % 4 === 0;
             const isLastOverall = index === services.length - 1;
 
             return (
@@ -192,8 +183,8 @@ const benefits = [
                 key={service.label}
                 href={service.href}
                 className={`group flex flex-col items-center text-center gap-3 px-4 py-8 border-white/10 transition-colors hover:bg-white/[0.04]
-                  ${!isLastInRow5 && !isLastOverall ? "sm:border-r" : ""}
-                  ${index < 5 ? "border-b sm:border-b md:border-b" : ""}
+                  ${!isLastInRow4 && !isLastOverall ? "md:border-r" : ""}
+                  ${index < 4 ? "border-b" : ""}
                 `}
               >
                 <img
@@ -202,7 +193,15 @@ const benefits = [
                   className="transition-transform duration-300 group-hover:scale-110"
                 />
                 <p className="text-[22px] text-[#FFFFFF] leading-snug max-w-[120px] transition-colors group-hover:text-[#FF403A]">
-                  {service.label}
+                  {service.breakLabel ? (
+                    <>
+                      User
+                      <br />
+                      Trainings
+                    </>
+                  ) : (
+                    service.label
+                  )}
                 </p>
               </Link>
             );

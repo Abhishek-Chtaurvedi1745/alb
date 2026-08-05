@@ -92,11 +92,9 @@ export default function AIServicesPage() {
     aiServicesPageData;
   const [activeSlide, setActiveSlide] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [activePanel, setActivePanel] = useState(0);
   const timerRef = useRef(null);
   const panelRefs = useRef([]);
   const tierRefs = useRef([]);
-  const scrollingRef = useRef(false);
 
   const startSlideTimer = useCallback(() => {
     if (timerRef.current) clearInterval(timerRef.current);
@@ -114,7 +112,7 @@ export default function AIServicesPage() {
     };
   }, [startSlideTimer]);
 
-  useInViewClass(panelRefs, setActivePanel, scrollingRef);
+  useInViewClass(panelRefs);
   useInViewClass(tierRefs);
 
   const goToSlide = (index) => {
@@ -125,18 +123,6 @@ export default function AIServicesPage() {
         setActiveSlide((prev) => (prev + 1) % slides.length);
       }, SLIDE_INTERVAL);
     }
-  };
-
-  const scrollToPanel = (index) => {
-    const target = panelRefs.current[index];
-    if (!target) return;
-    scrollingRef.current = true;
-    setActivePanel(index);
-    target.classList.add("in-view");
-    target.scrollIntoView({ behavior: "smooth", block: "center" });
-    window.setTimeout(() => {
-      scrollingRef.current = false;
-    }, 900);
   };
 
   return (
@@ -313,35 +299,6 @@ export default function AIServicesPage() {
                 ))}
               </div>
             </div>
-
-            <nav className="flight-nav" aria-label="Capability sections">
-              {panels.map((panel, index) => (
-                <button
-                  key={panel.label}
-                  type="button"
-                  className={index === activePanel ? "active" : ""}
-                  aria-label={`Go to ${panel.label}`}
-                  aria-current={index === activePanel ? "true" : undefined}
-                  onClick={() => scrollToPanel(index)}
-                >
-                  {panel.num}
-                </button>
-              ))}
-            </nav>
-          </div>
-
-          <div className="flight-nav-mobile" aria-label="Capability sections">
-            {panels.map((panel, index) => (
-              <button
-                key={`m-${panel.label}`}
-                type="button"
-                className={index === activePanel ? "active" : ""}
-                aria-label={`Go to ${panel.label}`}
-                onClick={() => scrollToPanel(index)}
-              >
-                {panel.num}
-              </button>
-            ))}
           </div>
         </section>
 
