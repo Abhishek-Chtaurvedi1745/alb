@@ -42,8 +42,29 @@ function Nav() {
   const [solutionsShift, setSolutionsShift] = useState(0);
   const solutionsRef = useRef(null);
   const solutionsMenuRef = useRef(null);
+  const solutionsCloseTimerRef = useRef(null);
   const navRef = useRef(null);
   const [navHeight, setNavHeight] = useState(80);
+
+  const clearSolutionsCloseTimer = () => {
+    if (solutionsCloseTimerRef.current) {
+      clearTimeout(solutionsCloseTimerRef.current);
+      solutionsCloseTimerRef.current = null;
+    }
+  };
+
+  const openSolutions = () => {
+    clearSolutionsCloseTimer();
+    setShowSolutions(true);
+  };
+
+  const closeSolutionsDeferred = () => {
+    clearSolutionsCloseTimer();
+    solutionsCloseTimerRef.current = setTimeout(() => {
+      setShowSolutions(false);
+      solutionsCloseTimerRef.current = null;
+    }, 180);
+  };
 
   const updateNavHeight = () => {
     if (navRef.current) {
@@ -92,6 +113,10 @@ function Nav() {
     setMobileSolutionsOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    return () => clearSolutionsCloseTimer();
+  }, []);
+
   // The Solutions flyout is up to 900px wide and anchored to its trigger, so on
   // narrower desktops it would render past the viewport edge without this nudge.
   useEffect(() => {
@@ -136,12 +161,16 @@ function Nav() {
 
     const handleClickOutside = (event) => {
       if (solutionsRef.current && !solutionsRef.current.contains(event.target)) {
+        clearSolutionsCloseTimer();
         setShowSolutions(false);
       }
     };
 
     const handleEscape = (event) => {
-      if (event.key === "Escape") setShowSolutions(false);
+      if (event.key === "Escape") {
+        clearSolutionsCloseTimer();
+        setShowSolutions(false);
+      }
     };
 
     document.addEventListener("click", handleClickOutside);
@@ -251,8 +280,8 @@ function Nav() {
               <li
                 ref={solutionsRef}
                 className="relative px-2 lg:px-3"
-                onMouseEnter={() => setShowSolutions(true)}
-                onMouseLeave={() => setShowSolutions(false)}
+                onMouseEnter={openSolutions}
+                onMouseLeave={closeSolutionsDeferred}
               >
                 <button
                   type="button"
@@ -260,6 +289,7 @@ function Nav() {
                   aria-haspopup="true"
                   onClick={(e) => {
                     e.stopPropagation();
+                    clearSolutionsCloseTimer();
                     setShowSolutions((prev) => !prev);
                   }}
                   className="relative flex items-center gap-1.5 py-1 text-[17px] font-medium tracking-wide text-white/90 transition-colors duration-300 hover:text-white"
@@ -289,10 +319,20 @@ function Nav() {
                   }`}
                 >
                   <div className="hidden lg:block">
-                    <SolutionsMegaMenuWide onClose={() => setShowSolutions(false)} />
+                    <SolutionsMegaMenuWide
+                      onClose={() => {
+                        clearSolutionsCloseTimer();
+                        setShowSolutions(false);
+                      }}
+                    />
                   </div>
                   <div className="lg:hidden">
-                    <SolutionsMegaMenuDesktop onClose={() => setShowSolutions(false)} />
+                    <SolutionsMegaMenuDesktop
+                      onClose={() => {
+                        clearSolutionsCloseTimer();
+                        setShowSolutions(false);
+                      }}
+                    />
                   </div>
                 </div>
               </li>
