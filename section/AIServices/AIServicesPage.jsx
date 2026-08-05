@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import BookACallButton from "@/component/BookACall/BookACallButton";
 import { aiServicesPageData } from "./aiServicesPageData";
 
-const SLIDE_INTERVAL = 6500;
+const SLIDE_INTERVAL = 6000;
 const HERO_IMAGE = "/images/ai-services-hero.png?v=2";
 
 function RichHtml({ html, className = "", as: Tag = "span" }) {

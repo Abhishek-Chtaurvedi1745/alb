@@ -26,7 +26,7 @@
   position: absolute;
   inset: 0;
   background: #ff403a;
-  animation: ai-dot-progress 6.5s linear forwards;
+  animation: ai-dot-progress 6s linear forwards;
 }
 
 @keyframes ai-dot-progress {

@@ -19,7 +19,7 @@
   position: absolute;
   inset: 0;
   background: #ff403a;
-  animation: rally-dot-progress 6.5s linear forwards;
+  animation: rally-dot-progress 6s linear forwards;
 }
 
 @keyframes rally-dot-progress {

@@ -127,6 +127,7 @@ const ctaWrapStyle = {
 };
 
 const SWIPE_THRESHOLD = 40;
+const BANNER_INTERVAL = 6000;
 
 function BannerSlide({ banner, index }) {
   return (
@@ -234,7 +235,7 @@ export default function BannerSlider() {
   useEffect(() => {
     if (paused) return;
 
-    const interval = setInterval(nextSlide, 5000);
+    const interval = setInterval(nextSlide, BANNER_INTERVAL);
     return () => clearInterval(interval);
   }, [paused]);
 
