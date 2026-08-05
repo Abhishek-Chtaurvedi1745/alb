@@ -165,9 +165,4 @@ export const aiServicesPageData = {
       skills: ["Document classification", "Confidence scoring", "Human-in-the-loop gates", "Multi-step workflows"],
     },
   ],
-  cta: {
-    title: "See AI Concierge inside your own workspace.",
-    desc: "Book a walkthrough with your own project data — no generic demo, no slideware.",
-    cta: "Get in touch →",
-  },
 };

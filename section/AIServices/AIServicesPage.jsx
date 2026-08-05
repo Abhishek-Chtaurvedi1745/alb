@@ -88,7 +88,7 @@ function useInViewClass(refs, setActive, scrollingRef) {
 }
 
 export default function AIServicesPage() {
-  const { slides, flightHead, panels, skillsHead, tiers, cta } =
+  const { slides, flightHead, panels, skillsHead, tiers } =
     aiServicesPageData;
   const [activeSlide, setActiveSlide] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -380,14 +380,6 @@ export default function AIServicesPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section className="cta-strip" id="contact">
-          <div className="wrap">
-            <h2>{cta.title}</h2>
-            <p>{cta.desc}</p>
-            <BookACallButton className="btn-primary">{cta.cta}</BookACallButton>
           </div>
         </section>
       </div>
