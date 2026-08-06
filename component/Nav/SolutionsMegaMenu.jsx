@@ -228,6 +228,10 @@ export function SolutionsMegaMenuDesktop({ onClose }) {
 const FLYOUT_COL1_WIDTH = 300;
 const FLYOUT_COL2_WIDTH = 280;
 const FLYOUT_COL3_WIDTH = 320;
+// Keep the hover shell at full width so opening Clarity/etc. does not resize
+// the menu and shift it out from under the cursor (which closes the dropdown).
+const FLYOUT_MAX_WIDTH =
+  FLYOUT_COL1_WIDTH + FLYOUT_COL2_WIDTH + FLYOUT_COL3_WIDTH;
 // Matches the py-1.5 on each flyout panel, so a panel's first row can be lined
 // up with the row that opened it.
 const FLYOUT_PANEL_PADDING_Y = 6;
@@ -329,11 +333,6 @@ export function SolutionsMegaMenuWide({ onClose }) {
   const showCol2 = Boolean(activeMain?.children?.length);
   const showCol3 = Boolean(activeSub?.children?.length);
 
-  const hoverAreaWidth =
-    FLYOUT_COL1_WIDTH +
-    (showCol2 ? FLYOUT_COL2_WIDTH : 0) +
-    (showCol3 ? FLYOUT_COL3_WIDTH : 0);
-
   const resetPanels = () => {
     setActiveMainId(null);
     setActiveSubKey(null);
@@ -360,8 +359,8 @@ export function SolutionsMegaMenuWide({ onClose }) {
 
   return (
     <div
-      className="relative overflow-visible transition-[width] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]"
-      style={{ width: hoverAreaWidth, minWidth: FLYOUT_COL1_WIDTH }}
+      className="relative overflow-visible"
+      style={{ width: FLYOUT_MAX_WIDTH, minWidth: FLYOUT_COL1_WIDTH }}
       onMouseLeave={resetPanels}
     >
       <div className="relative z-30 h-fit w-[300px] overflow-hidden rounded-sm border border-[#93c5fd]/80 bg-white py-1.5 shadow-[0_24px_60px_rgba(0,0,0,0.18)]">
