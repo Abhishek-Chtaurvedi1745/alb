@@ -1,5 +1,6 @@
 import { clarityServices } from "@/section/Clarity/clarityServicesData";
 import { connectAllServices } from "@/section/ConnectAll/connectAllServicesData";
+import { rallyServices } from "@/section/Rally/rallyServicesData";
 import { automicServices } from "@/section/Automation/automicServicesData";
 import { stonebranchServices } from "@/section/Automation/stonebranchServicesData";
 
@@ -32,6 +33,7 @@ function buildServicesChildren(servicesLink, services) {
 
 const productServicesMap = {
   Clarity: clarityServices,
+  Rally: rallyServices,
   ConnectALL: connectAllServices,
   "Automic Automation": automicServices,
   Stonebranch: stonebranchServices,
@@ -57,6 +59,10 @@ export const desktopSolutionsColumns = [
       {
         title: "Rally",
         href: "/rally",
+        servicesLink: {
+          label: "Rally Services",
+          href: "/rally/services",
+        },
       },
       {
         title: "ConnectALL",
@@ -173,6 +179,10 @@ export const solutionsMegaMenu = [
         description:
           "Enterprise Agile management and Value Stream Management — from team iteration to portfolio strategy.",
         href: "/rally",
+        servicesLink: {
+          label: "Rally Services",
+          href: "/rally/services",
+        },
       },
       {
         title: "ConnectALL",

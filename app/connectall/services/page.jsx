@@ -4,7 +4,7 @@ import { connectAllServices } from "@/section/ConnectAll/connectAllServicesData"
 export const metadata = {
   title: "ConnectALL Services | Albatroz Solutions",
   description:
-    "Explore expert ConnectALL integration services from Albatroz Solutions — assessment, implementation, workflow design, enterprise use cases, and platform maintenance.",
+    "Explore expert ConnectALL services from Albatroz Solutions — Assessment & Advisory, Implementation & Setup, Workflow & Use-Case Development, and Upgrades & Version Management.",
 };
 
 export default function ConnectAllServicesPage() {

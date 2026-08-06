@@ -13,9 +13,9 @@ export default function ConnectAllServicesGrid({
           <span className="text-[#FF403A]">Services</span>
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
           {connectAllServices.map((service, index) => {
-            const isLastInRow5 = (index + 1) % 5 === 0;
+            const isLastInRow4 = (index + 1) % 4 === 0;
             const isLastOverall = index === connectAllServices.length - 1;
 
             return (
@@ -23,8 +23,8 @@ export default function ConnectAllServicesGrid({
                 key={service.slug}
                 href={service.href}
                 className={`group flex flex-col items-center gap-2 px-3 py-5 text-center transition-colors hover:bg-white/[0.04] sm:gap-3 sm:px-4 sm:py-6
-                  ${!isLastInRow5 && !isLastOverall ? "sm:border-r border-white/10" : ""}
-                  ${index < 5 ? "border-b border-white/10 sm:border-b md:border-b" : ""}
+                  ${!isLastInRow4 && !isLastOverall ? "sm:border-r border-white/10" : ""}
+                  ${index < 4 ? "border-b border-white/10" : ""}
                 `}
               >
                 <img
