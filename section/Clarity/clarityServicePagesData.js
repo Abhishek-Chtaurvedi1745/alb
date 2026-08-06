@@ -7,14 +7,14 @@ export const clarityServicePages = {
     "Transform Your Project Portfolio Management with Expert Implementation Services",
 
   intro: [
-    "Implementing Broadcom Clarity PPM or Rally is more than deploying software—it's about establishing a modern Project Portfolio Management ecosystem that aligns strategy, execution, governance, and business outcomes.",
-    "As India's Broadcom Tier-1 Expert Advantage Partner, Albatroz Solutions delivers end-to-end implementation services that help organizations successfully adopt, configure, and optimize Clarity PPM and Rally. Our consultants combine deep product expertise with industry best practices to deliver scalable solutions tailored to your business processes, governance model, and delivery methodology.",
-    "From initial discovery and solution design to implementation, integration, reporting, and user enablement, we ensure your Clarity or Rally platform delivers measurable business value from day one."
+    "Implementing Broadcom Clarity PPM is more than deploying software—it's about establishing a modern Project Portfolio Management ecosystem that aligns strategy, execution, governance, and business outcomes.",
+    "As India's Broadcom Tier-1 Expert Advantage Partner, Albatroz Solutions delivers end-to-end implementation services that help organizations successfully adopt, configure, and optimize Clarity PPM. Our consultants combine deep product expertise with industry best practices to deliver scalable solutions tailored to your business processes, governance model, and delivery methodology.",
+    "From initial discovery and solution design to implementation, integration, reporting, and user enablement, we ensure your Clarity PPM platform delivers measurable business value from day one."
   ],
 
   sections: [
     {
-      title: "Why Choose Clarity & Rally Implementation?",
+      title: "Why Choose Clarity Implementation?",
       subtitle: "A successful implementation enables organizations to:",
       paragraphs: [],
       bullets: [
@@ -25,131 +25,6 @@ export const clarityServicePages = {
         "Standardize project delivery processes",
         "Improve executive reporting and decision-making",
         "Accelerate user adoption and organizational maturity."
-      ]
-    },
-
-    {
-      title: "Why Choose Albatroz?",
-      paragraphs: [
-        "Every organization operates differently. Rather than implementing generic templates, we design solutions that reflect your business processes, governance standards, financial controls, and delivery methodology.",
-        "Our implementation consultants have successfully delivered Clarity and Rally solutions across industries including pharmaceuticals, biotechnology, banking, financial services, manufacturing, retail, telecommunications, and public sector organizations. Using proven implementation methodologies, we minimize project risk while accelerating business value and user adoption."
-      ],
-      bullets: []
-    },
-{
-  title: "Our Implementation Services",
-  paragraphs: [],
-  bullets: []
-},
-    {
-      title: "1. Discovery & Solution Design",
-      subtitle: "Our consultants work closely with stakeholders to:",
-      paragraphs: [
-        "Every implementation begins with a detailed assessment of your business objectives and operating model.",
-        "This ensures the solution is aligned with your organization's current needs and future growth."
-      ],
-      bullets: [
-        "Understand business requirements",
-        "Analyze existing processes",
-        "Define governance models",
-        "Design scalable solution architecture",
-        "Prepare implementation roadmaps",
-        "Develop deployment strategies"
-      ]
-    },
-
-    {
-      title: "2. Clarity PPM Implementation",
-      subtitle: "Our services include:",
-      paragraphs: [
-        "We provide end-to-end implementation services across all major Clarity capabilities.",
-        "Every implementation is configured to align with your business processes and governance standards."
-      ],
-      bullets: [
-        "Platform installation and environment setup",
-        "Project and investment management",
-        "Resource management",
-        "Demand management",
-        "Financial planning and budgeting",
-        "Cost and capitalization management",
-        "Strategic portfolio management",
-        "Roadmaps and portfolio prioritization",
-        "Modern UX configuration",
-        "Reporting and analytics",
-        "Security and access management"
-      ]
-    },
-
-    {
-      title: "3. Rally Implementation",
-      subtitle: "Our Rally implementation services include:",
-      paragraphs: [
-        "For organizations adopting Agile delivery, we implement Rally to support enterprise-scale Agile execution.",
-        "We help organizations establish a scalable Agile delivery platform that supports continuous planning and execution."
-      ],
-      bullets: [
-        "Agile readiness assessment",
-        "Scrum and SAFe configuration",
-        "Team and workspace setup",
-        "Backlog and iteration management",
-        "Release planning",
-        "Workflow configuration",
-        "User onboarding and enablement",
-        "Agile governance and reporting"
-      ]
-    },
-
-    {
-      title: "4. Enterprise Integrations",
-      subtitle: "Typical integrations include:",
-      paragraphs: [
-        "We integrate Clarity and Rally with enterprise applications to enable seamless information flow across your business.",
-        "These integrations eliminate manual effort while improving data consistency and operational efficiency."
-      ],
-      bullets: [
-        "HR systems",
-        "ERP and Financial applications",
-        "ITSM platforms",
-        "ALM and DevOps tools",
-        "Identity management systems",
-        "REST and SOAP APIs",
-        "Custom enterprise applications"
-      ]
-    },
-
-    {
-      title: "5. Reporting & Analytics",
-      subtitle: "Our services include:",
-      paragraphs: [
-        "We implement modern reporting solutions that provide real-time visibility into project and portfolio performance."
-      ],
-      bullets: [
-        "Executive dashboards",
-        "Portfolio reporting",
-        "Resource analytics",
-        "Financial reporting",
-        "KPI scorecards",
-        "Clarity Reporting Workspace implementation",
-        "Power BI integration",
-        "Custom operational dashboards"
-      ]
-    },
-
-    {
-      title: "6. User Adoption & Go-Live Support",
-      subtitle: "We provide:",
-      paragraphs: [
-        "A successful implementation depends on user adoption as much as technical delivery.",
-        "This ensures a smooth transition and long-term platform success."
-      ],
-      bullets: [
-        "End-user training",
-        "Administrator training",
-        "Knowledge transfer",
-        "User Acceptance Testing (UAT) support",
-        "Go-live planning",
-        "Hypercare support",
-        "Post-implementation optimization"
       ]
     },
 
@@ -205,36 +80,127 @@ export const clarityServicePages = {
     },
 
     {
-      title: "Agile Readiness Pack",
+      title: "Why Choose Albatroz?",
+      paragraphs: [
+        "Every organization operates differently. Rather than implementing generic templates, we design solutions that reflect your business processes, governance standards, financial controls, and delivery methodology.",
+        "Our implementation consultants have successfully delivered Clarity PPM solutions across industries including pharmaceuticals, biotechnology, banking, financial services, manufacturing, retail, telecommunications, and public sector organizations. Using proven implementation methodologies, we minimize project risk while accelerating business value and user adoption."
+      ],
+      bullets: []
+    },
+
+    {
+      title: "Our Implementation Services",
       paragraphs: [],
+      bullets: []
+    },
+
+    {
+      title: "1. Discovery & Solution Design",
+      subtitle: "Our consultants work closely with stakeholders to:",
+      paragraphs: [
+        "Every implementation begins with a detailed assessment of your business objectives and operating model.",
+        "This ensures the solution is aligned with your organization's current needs and future growth."
+      ],
       bullets: [
-        "Rally implementation",
-        "Agile process configuration",
-        "Team onboarding",
-        "Agile governance"
+        "Understand business requirements",
+        "Analyze existing processes",
+        "Define governance models",
+        "Design scalable solution architecture",
+        "Prepare implementation roadmaps",
+        "Develop deployment strategies"
+      ]
+    },
+
+    {
+      title: "2. Clarity PPM Implementation",
+      subtitle: "Our services include:",
+      paragraphs: [
+        "We provide end-to-end implementation services across all major Clarity capabilities.",
+        "Every implementation is configured to align with your business processes and governance standards."
+      ],
+      bullets: [
+        "Platform installation and environment setup",
+        "Project and investment management",
+        "Resource management",
+        "Demand management",
+        "Financial planning and budgeting",
+        "Cost and capitalization management",
+        "Strategic portfolio management",
+        "Roadmaps and portfolio prioritization",
+        "Modern UX configuration",
+        "Reporting and analytics",
+        "Security and access management"
+      ]
+    },
+
+    {
+      title: "3. Enterprise Integrations",
+      subtitle: "Typical integrations include:",
+      paragraphs: [
+        "We integrate Clarity PPM with enterprise applications to enable seamless information flow across your business.",
+        "These integrations eliminate manual effort while improving data consistency and operational efficiency."
+      ],
+      bullets: [
+        "HR systems",
+        "ERP and Financial applications",
+        "ITSM platforms",
+        "ALM and DevOps tools",
+        "Identity management systems",
+        "REST and SOAP APIs",
+        "Custom enterprise applications"
+      ]
+    },
+
+    {
+      title: "4. Reporting & Analytics",
+      subtitle: "Our services include:",
+      paragraphs: [
+        "We implement modern reporting solutions that provide real-time visibility into project and portfolio performance."
+      ],
+      bullets: [
+        "Executive dashboards",
+        "Portfolio reporting",
+        "Resource analytics",
+        "Financial reporting",
+        "KPI scorecards",
+        "Clarity Reporting Workspace implementation",
+        "Power BI integration",
+        "Custom operational dashboards"
+      ]
+    },
+
+    {
+      title: "5. User Adoption & Go-Live Support",
+      subtitle: "We provide:",
+      paragraphs: [
+        "A successful implementation depends on user adoption as much as technical delivery.",
+        "This ensures a smooth transition and long-term platform success."
+      ],
+      bullets: [
+        "End-user training",
+        "Administrator training",
+        "Knowledge transfer",
+        "User Acceptance Testing (UAT) support",
+        "Go-live planning",
+        "Hypercare support",
+        "Post-implementation optimization"
       ]
     },
 
     {
       title: "Our Implementation Methodology",
-      subtitle: "Every implementation follows a proven delivery framework that includes:",
+      subtitle:
+        "Every implementation follows a proven delivery framework that includes:",
       paragraphs: [],
-      bullets: [
-        "Discovery and business assessment",
-        "Solution architecture and design",
-        "Platform configuration and development",
-        "Integration and data migration",
-        "Testing and quality assurance",
-        "User training and adoption",
-        "Production deployment",
-        "Hypercare and continuous improvement"
-      ]
-    }
+      bullets: [],
+      image: "/images/clarity-services/implementation-methodology.webp",
+      imageAlt: "Clarity implementation methodology flowchart",
+    },
   ],
 
   closing: {
-    title: "Delivering Successful Digital Transformation with Clarity & Rally",
-    text: "Albatroz helps organizations successfully implement Broadcom Clarity PPM and Rally through a structured, business-focused approach that combines deep product expertise, industry best practices, and proven delivery methodologies. Our implementations enable organizations to improve governance, optimize resource utilization, strengthen financial control, and accelerate strategic decision-making while maximizing the long-term value of their Project Portfolio Management investment."
+    title: "Delivering Successful Digital Transformation with Clarity PPM",
+    text: "Albatroz helps organizations successfully implement Broadcom Clarity PPM through a structured, business-focused approach that combines deep product expertise, industry best practices, and proven delivery methodologies. Our implementations enable organizations to improve governance, optimize resource utilization, strengthen financial control, and accelerate strategic decision-making while maximizing the long-term value of their Project Portfolio Management investment."
   }
 },
  "installations-upgrades": {
@@ -856,32 +822,34 @@ export const clarityServicePages = {
     "slug": "staff-augmentation",
     "title": "Staff Augmentation",
     "image": "/images/clarity-services/staff-augmentation.webp",
-    "subtitle": "Extend Your Clarity Team with Experienced Consultants",
+    "subtitle": "Extend Your Clarity Team with Broadcom Certified Technical Consultants",
     "intro": [
       "Organizations often require additional expertise to accelerate implementations, support business-critical initiatives, execute upgrades, manage production support, or deliver strategic transformation programs. Finding experienced Clarity professionals with the right functional and technical skills can be both challenging and time-consuming.",
-      "Albatroz provides highly skilled Broadcom Clarity PPM consultants who seamlessly integrate with your existing team, delivering immediate value with minimal onboarding. Whether you need a single specialist or an entire project team, our consultants bring deep functional knowledge, technical expertise, and industry best practices to support every phase of your Clarity journey."
+      "Albatroz provides Broadcom Certified Clarity PPM Technical Consultants who seamlessly integrate with your existing team, delivering immediate value with minimal onboarding. All our consultants are Broadcom Technical Certified and bring extensive hands-on experience in Clarity implementation, configuration, customization, integrations, reporting, data migration, and platform support. Whether you need a single specialist or a complete project team, our consultants combine deep technical expertise, functional knowledge, and industry best practices to support every phase of your Clarity journey."
     ],
     "sections": [
       {
         "title": "Why Choose Staff Augmentation?",
-        "subtitle": "Our staff augmentation services help organizations",
+        "subtitle": "Our staff augmentation services enable organizations to:",
         "paragraphs": [],
         "bullets": [
-          "Quickly scale Clarity delivery teams",
-          "Fill functional and technical skill gaps",
-          "Accelerate project implementation timelines",
-          "Support upgrades and migration initiatives",
-          "Strengthen production support capabilities",
-          "Reduce hiring and onboarding costs",
-          "Access experienced Clarity professionals on demand"
+          "Deploy Broadcom Certified Clarity PPM Technical Consultants",
+          "Rapidly scale Clarity delivery teams",
+          "Fill critical functional and technical skill gaps",
+          "Accelerate implementation and project delivery timelines",
+          "Support Clarity upgrades, migrations, and modernization initiatives",
+          "Strengthen production support and ongoing platform maintenance",
+          "Reduce recruitment, training, and onboarding costs",
+          "Access experienced Clarity professionals on demand",
+          "Integrate seamlessly with in-house teams and delivery models",
+          "Leverage industry best practices for successful project execution"
         ]
       },
       {
         "title": "Why Choose Albatroz?",
-        "subtitle": "Our Staff Augmentation Services",
         "paragraphs": [
-          "Albatroz offers a flexible staffing model that enables organizations to augment their internal teams with experienced Clarity professionals for short-term assignments, long-term engagements, managed services, and strategic transformation initiatives.",
-          "Our consultants have hands-on experience across Clarity implementations, technical development, integrations, reporting, upgrades, Modern UX migration, and Application Maintenance & Support (AMS), allowing them to contribute effectively from day one."
+          "Albatroz offers a flexible staffing model that enables organizations to augment their internal teams with Broadcom Certified Clarity PPM Technical Consultants for short-term assignments, long-term engagements, managed services, and strategic transformation initiatives.",
+          "Our Broadcom Certified consultants possess extensive hands-on experience across Clarity implementations, technical development, integrations, reporting, upgrades, Modern UX migration, and Application Maintenance & Support (AMS). Combining validated technical expertise with real-world project experience, they seamlessly integrate into your teams, adapt quickly to your processes, and deliver measurable value from day one."
         ],
         "bullets": []
       },
@@ -1027,7 +995,7 @@ export const clarityServicePages = {
       },
       {
         "title": "Our Engagement Model",
-        "subtitle": "Albatroz offers flexible staffing models to meet your business requirements, including",
+        "subtitle": "Albatroz offers flexible certified staffing models to meet your business requirements, including",
         "paragraphs": [
           "Whether you're implementing Clarity, modernizing your platform, executing a strategic initiative, or expanding your support capabilities, Albatroz provides experienced consultants who integrate seamlessly with your organization. Our flexible staff augmentation services help you accelerate delivery, reduce operational risk, and maximize the value of your Clarity investment."
         ],

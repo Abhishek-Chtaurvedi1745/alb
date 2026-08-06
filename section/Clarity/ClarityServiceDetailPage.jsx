@@ -8,6 +8,7 @@ function SectionBlock({ section, compact = false }) {
   const hasBullets = section.bullets?.length > 0;
   const hasParagraphs = section.paragraphs?.length > 0;
   const hasSubtitle = Boolean(section.subtitle);
+  const hasImage = Boolean(section.image);
 
   const isNumbered = /^\d+\./.test(section.title);
 
@@ -49,6 +50,16 @@ function SectionBlock({ section, compact = false }) {
               {paragraph}
             </p>
           ))}
+        </div>
+      )}
+
+      {hasImage && (
+        <div className="mt-4 -mx-2 overflow-hidden sm:mt-5 sm:-mx-1">
+          <img
+            src={section.image}
+            alt={section.imageAlt || section.title}
+            className="h-auto w-full object-contain mix-blend-lighten"
+          />
         </div>
       )}
 
@@ -142,30 +153,30 @@ export default function ClarityServiceDetailPage({ page }) {
     ));
   }
 
+  let packEnd = servicePackIndex + 1;
+  while (
+    packEnd < page.sections.length &&
+    /Pack$/i.test(page.sections[packEnd].title)
+  ) {
+    packEnd += 1;
+  }
+
   const beforePacks = page.sections.slice(0, servicePackIndex + 1);
-
-  const packSections = page.sections.slice(
-    servicePackIndex + 1,
-    servicePackIndex + 6
-  );
-
-  const remainingSections = page.sections.slice(servicePackIndex + 6);
+  const packSections = page.sections.slice(servicePackIndex + 1, packEnd);
+  const remainingSections = page.sections.slice(packEnd);
 
   return (
     <>
-      {/* Normal sections */}
       {beforePacks.map((section, index) => (
         <SectionBlock key={`before-${index}`} section={section} />
       ))}
 
-      {/* Service Packs Grid */}
-      <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-6 xl:grid-cols-3">
+      <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 md:gap-6 xl:grid-cols-4">
         {packSections.map((section, index) => (
           <SectionBlock key={`pack-${index}`} section={section} compact />
         ))}
       </div>
 
-      {/* Remaining sections */}
       {remainingSections.map((section, index) => (
         <SectionBlock key={`after-${index}`} section={section} />
       ))}
