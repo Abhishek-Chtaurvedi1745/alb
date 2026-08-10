@@ -1,8 +1,3 @@
-const sharedClosing = {
-  title: "Enable a Truly Connected Enterprise",
-  text: "Albatroz helps organizations unlock the full potential of ConnectALL by connecting enterprise applications, automating business processes, and eliminating information silos through secure, scalable, and business-aligned integrations.",
-};
-
 function buildServicePage({ slug, title, subtitle, image, intro, bullets, extraSections = [] }) {
   return {
     slug,
@@ -19,7 +14,6 @@ function buildServicePage({ slug, title, subtitle, image, intro, bullets, extraS
       },
       ...extraSections,
     ],
-    closing: sharedClosing,
   };
 }
 
@@ -40,15 +34,6 @@ export const connectAllServicePages = {
       "Priority sequencing aligned to business outcomes",
       "Business case development for manual handoff automation",
     ],
-    extraSections: [
-      {
-        title: "Why Choose Albatroz?",
-        paragraphs: [
-          "Albatroz combines deep ConnectALL expertise with real-world enterprise integration delivery. We help teams establish governance and technical direction early, reducing rework and accelerating time-to-value.",
-        ],
-        bullets: [],
-      },
-    ],
   }),
 
   "implementation-setup": buildServicePage({
@@ -66,15 +51,6 @@ export const connectAllServicePages = {
       "Field mapping and data transformation design",
       "Workflow trigger and success-rule definition",
       "Configuration validation and production readiness checks",
-    ],
-    extraSections: [
-      {
-        title: "Why Choose Albatroz?",
-        paragraphs: [
-          "We use proven implementation playbooks to balance delivery speed with operational reliability, ensuring your ConnectALL foundation is robust from day one.",
-        ],
-        bullets: [],
-      },
     ],
   }),
 
@@ -95,15 +71,6 @@ export const connectAllServicePages = {
       "Bi-directional synchronization for multi-tool ecosystems",
       "Data quality checks and exception handling",
     ],
-    extraSections: [
-      {
-        title: "Why Choose Albatroz?",
-        paragraphs: [
-          "Our workflow architects build integrations that are maintainable, auditable, and aligned with real business operations—not just technically connected.",
-        ],
-        bullets: [],
-      },
-    ],
   }),
 
   "upgrades-version-management": buildServicePage({
@@ -121,15 +88,6 @@ export const connectAllServicePages = {
       "Post-upgrade regression testing for active workflows",
       "Stability verification and issue remediation support",
       "Ongoing version governance and maintenance guidance",
-    ],
-    extraSections: [
-      {
-        title: "Why Choose Albatroz?",
-        paragraphs: [
-          "Our upgrade methodology minimizes disruption while preserving integration continuity, helping enterprises stay secure and up-to-date without operational risk.",
-        ],
-        bullets: [],
-      },
     ],
   }),
 };
