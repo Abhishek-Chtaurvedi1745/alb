@@ -54,11 +54,11 @@ function SectionBlock({ section, compact = false }) {
       )}
 
       {hasImage && (
-        <div className="mt-4 -mx-2 overflow-hidden sm:mt-5 sm:-mx-1">
+        <div className="mt-4 flex justify-center overflow-hidden sm:mt-5">
           <img
             src={section.image}
             alt={section.imageAlt || section.title}
-            className="h-auto w-full object-contain mix-blend-lighten"
+            className="h-auto w-full max-w-4xl object-contain mix-blend-lighten"
           />
         </div>
       )}

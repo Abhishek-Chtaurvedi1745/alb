@@ -1,8 +1,3 @@
-const sharedClosing = {
-  title: "Drive Agile Outcomes with Confidence",
-  text: "Albatroz helps organizations realize stronger Rally outcomes through implementation, integration, and sustained support services that align teams, improve visibility, and strengthen delivery execution.",
-};
-
 function buildRallyServicePage({
   slug,
   title,
@@ -10,7 +5,6 @@ function buildRallyServicePage({
   image,
   intro,
   bullets,
-  extraSections = [],
 }) {
   return {
     slug,
@@ -25,9 +19,7 @@ function buildRallyServicePage({
         paragraphs: [],
         bullets,
       },
-      ...extraSections,
     ],
-    closing: sharedClosing,
   };
 }
 
@@ -48,15 +40,6 @@ export const rallyServicePages = {
       "Dashboard configuration for operational and leadership visibility",
       "User onboarding, training, and go-live support",
     ],
-    extraSections: [
-      {
-        title: "Why Choose Albatroz?",
-        paragraphs: [
-          "We combine practical Agile delivery experience with deep Rally expertise to implement solutions that are usable, scalable, and aligned to business outcomes from day one.",
-        ],
-        bullets: [],
-      },
-    ],
   }),
 
   integration: buildRallyServicePage({
@@ -74,15 +57,6 @@ export const rallyServicePages = {
       "Secure, scalable, and resilient integration patterns",
       "Integration design aligned to business process needs",
       "Ongoing validation for data consistency and reliability",
-    ],
-    extraSections: [
-      {
-        title: "Why Choose Albatroz?",
-        paragraphs: [
-          "Our team designs integrations that are both technically robust and operationally meaningful, ensuring that leadership and delivery teams work from the same trusted data.",
-        ],
-        bullets: [],
-      },
     ],
   }),
 
@@ -102,15 +76,6 @@ export const rallyServicePages = {
       "Enhancement delivery and configuration changes",
       "User administration and access support",
       "Ongoing maintenance, upgrades, and proactive monitoring",
-    ],
-    extraSections: [
-      {
-        title: "Why Choose Albatroz?",
-        paragraphs: [
-          "We operate as an extension of your team, balancing responsiveness with long-term platform health so Rally remains trusted across engineering and business stakeholders.",
-        ],
-        bullets: [],
-      },
     ],
   }),
 };
