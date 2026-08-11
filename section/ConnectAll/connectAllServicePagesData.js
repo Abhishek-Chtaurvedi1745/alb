@@ -1,18 +1,22 @@
-function buildServicePage({ slug, title, subtitle, image, intro, bullets, extraSections = [] }) {
+function buildServicePage({
+  slug,
+  title,
+  image,
+  bullets,
+}) {
   return {
     slug,
     title,
     image,
-    subtitle,
-    intro,
+    subtitle: "",
+    intro: [],
     sections: [
       {
-        title: `Our ${title} Services`,
-        subtitle: "Our consultants help organizations:",
+        title: "",
+        subtitle: "",
         paragraphs: [],
-        bullets,
+        bullets: bullets.slice(0, 5),
       },
-      ...extraSections,
     ],
   };
 }
@@ -21,12 +25,7 @@ export const connectAllServicePages = {
   "assessment-advisory": buildServicePage({
     slug: "assessment-advisory",
     title: "Assessment & Advisory",
-    subtitle: "Plan the Right Integration Journey Before You Build",
     image: "/images/connectall-services/assessment-advisory.webp",
-    intro: [
-      "Successful enterprise integration starts with clarity on systems, dependencies, and business priorities. Albatroz performs structured toolchain discovery across Jira, ServiceNow, Clarity, GitHub, and other platforms to identify what should connect and why.",
-      "We convert this analysis into a phased integration roadmap so organizations can prioritize high-impact automation first and avoid fragmented, one-off integrations.",
-    ],
     bullets: [
       "Toolchain discovery and integration landscape assessment",
       "System-to-system dependency mapping across business functions",
@@ -39,12 +38,7 @@ export const connectAllServicePages = {
   "implementation-setup": buildServicePage({
     slug: "implementation-setup",
     title: "Implementation & Setup",
-    subtitle: "Deploy ConnectALL for Secure, Production-Ready Integration",
     image: "/images/connectall-services/implementation-setup.webp",
-    intro: [
-      "Albatroz provides end-to-end ConnectALL implementation across on-prem, cloud, and hybrid environments. We configure platform components, connectors, and security controls to match enterprise standards.",
-      "Our approach ensures the platform is stable, scalable, and ready for repeatable integration delivery across multiple toolchains.",
-    ],
     bullets: [
       "ConnectALL installation and environment setup",
       "Connector and adapter configuration for target tool pairs",
@@ -57,12 +51,7 @@ export const connectAllServicePages = {
   "workflow-use-case-development": buildServicePage({
     slug: "workflow-use-case-development",
     title: "Workflow & Use-Case Development",
-    subtitle: "Build Practical Integrations That Solve Real Operational Gaps",
     image: "/images/connectall-services/workflow-use-case-development.webp",
-    intro: [
-      "Integration value is realized through targeted workflows. Albatroz designs and implements use-case-specific syncs such as incident management, portfolio-to-execution, test management, and source-control coordination.",
-      "We implement conditional logic and quality controls so integrations remain accurate and trustworthy across complex, multi-team environments.",
-    ],
     bullets: [
       "Use-case workflow design and build-out",
       "Incident, portfolio, test, and source-control sync patterns",
@@ -76,12 +65,7 @@ export const connectAllServicePages = {
   "upgrades-version-management": buildServicePage({
     slug: "upgrades-version-management",
     title: "Upgrades & Version Management",
-    subtitle: "Keep ConnectALL Current, Compatible, and Reliable",
     image: "/images/connectall-services/upgrades-version-management.webp",
-    intro: [
-      "Albatroz helps organizations safely evolve ConnectALL environments through planned upgrades, compatibility verification, and post-upgrade validation.",
-      "We ensure platform changes do not break active integrations by combining controlled rollout practices with targeted regression testing.",
-    ],
     bullets: [
       "ConnectALL version upgrade planning and execution",
       "Compatibility checks with connected tools and adapters",

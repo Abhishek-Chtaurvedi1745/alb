@@ -1,14 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import { Check } from "lucide-react";
-import BookACallButton from "@/component/BookACall/BookACallButton";
 
 function SectionBlock({ section }) {
   const hasBullets = section.bullets?.length > 0;
   const hasParagraphs = section.paragraphs?.length > 0;
   const hasSubtitle = Boolean(section.subtitle);
-  const isNumbered = /^\d+\./.test(section.title);
+  const hasTitle = Boolean(section.title);
+  const isNumbered = /^\d+\./.test(section.title ?? "");
 
   return (
     <article
@@ -18,15 +17,17 @@ function SectionBlock({ section }) {
           : "border-white/10 bg-[#080808]"
       }`}
     >
-      <h4
-        className={`font-semibold text-white ${
-          isNumbered
-            ? "text-xl text-[#ff403a] sm:text-2xl"
-            : "text-xl sm:text-[26px]"
-        }`}
-      >
-        {section.title}
-      </h4>
+      {hasTitle && (
+        <h4
+          className={`font-semibold text-white ${
+            isNumbered
+              ? "text-xl text-[#ff403a] sm:text-2xl"
+              : "text-xl sm:text-[26px]"
+          }`}
+        >
+          {section.title}
+        </h4>
+      )}
 
       {hasSubtitle && (
         <h4 className="mt-2 text-base font-semibold text-white/90 sm:text-lg">
@@ -79,44 +80,9 @@ export default function ConnectAllServiceDetailPage({ page }) {
         </div>
 
         <div className="relative mx-auto max-w-6xl px-4 pb-6 pt-10 text-left sm:px-6 sm:pb-8 sm:pt-12 md:pb-9 md:pt-16">
-          <nav className="mb-4 text-left text-sm text-white/60 sm:mb-5">
-            <Link
-              href="/connectall"
-              className="transition-colors hover:text-[#ff403a]"
-            >
-              ConnectALL
-            </Link>
-            <span className="mx-2">/</span>
-            <Link
-              href="/connectall/services"
-              className="transition-colors hover:text-[#ff403a]"
-            >
-              Services
-            </Link>
-            <span className="mx-2">/</span>
-            <span className="text-white/90">{page.title}</span>
-          </nav>
-
           <h1 className="text-left text-3xl font-semibold leading-tight text-white sm:text-4xl md:text-[40px]">
             {page.title}
           </h1>
-
-          <p className="mt-4 text-left text-sm font-medium leading-relaxed text-white sm:text-xl md:text-[24px]">
-            {page.subtitle}
-          </p>
-        </div>
-      </section>
-
-      <section className="pb-6 sm:pb-8">
-        <div className="mx-auto max-w-6xl space-y-3 px-4 text-left sm:space-y-4 sm:px-6">
-          {page.intro.map((paragraph, index) => (
-            <p
-              key={index}
-              className="text-left font-normal text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]"
-            >
-              {paragraph}
-            </p>
-          ))}
         </div>
       </section>
 
@@ -125,29 +91,6 @@ export default function ConnectAllServiceDetailPage({ page }) {
           {page.sections.map((section, index) => (
             <SectionBlock key={index} section={section} />
           ))}
-
-          {page.closing && (
-            <div className="rounded-2xl border border-[#ff403a]/35 bg-gradient-to-br from-[#ff403a]/10 to-transparent p-6 sm:p-8">
-              <h4 className="text-xl font-semibold text-white sm:text-2xl">
-                {page.closing.title}
-              </h4>
-              <p className="font-normal mt-4 text-sm leading-relaxed text-white/85 sm:text-[13px] md:text-[16px]">
-                {page.closing.text}
-              </p>
-            </div>
-          )}
-
-          <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:items-center">
-            <BookACallButton className="inline-flex items-center justify-center rounded-lg bg-[#ff403a] px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-[#cc2f2a] sm:text-lg">
-              Request Service
-            </BookACallButton>
-            <Link
-              href="/connectall/services"
-              className="inline-flex items-center justify-center rounded-lg border border-white/30 px-7 py-3 text-base font-semibold text-white transition-colors hover:border-[#ff403a] hover:text-[#ff403a] sm:text-lg"
-            >
-              View All ConnectALL Services
-            </Link>
-          </div>
         </div>
       </section>
     </div>
