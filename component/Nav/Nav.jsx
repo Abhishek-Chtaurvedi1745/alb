@@ -389,7 +389,7 @@ function Nav() {
               </Link>
             </li>
 
-            {navLinks.map((link) => (
+            {navLinks.slice(0, 1).map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
@@ -425,6 +425,18 @@ function Nav() {
                 />
               )}
             </li>
+
+            {navLinks.slice(1).map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="block rounded-xl px-4 py-3 text-[17px] font-medium text-white/90 transition-colors hover:bg-white/5 hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
 
             <li className="mt-3 px-2">
               <BookACallButton

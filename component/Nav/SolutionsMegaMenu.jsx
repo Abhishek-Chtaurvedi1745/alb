@@ -427,19 +427,16 @@ const MOBILE_FLYOUT_MENU = desktopFlyoutMenu;
 
 function MobileFlyoutSubRow({ item, depth, onClose }) {
   const paddingLeft = 16 + depth * 14;
-  const isRed = Boolean(item.highlightRed);
 
   return (
-  <MobileNavLink
-    href={item.href}
-    onClose={onClose}
-    className={`flex min-h-[44px] items-center py-2.5 text-[13px] font-semibold transition-colors hover:text-[#ef4444] ${
-      isRed ? "text-[#ef4444]" : "text-[#374151]"
-    }`}
-    style={{ paddingLeft }}
-  >
-    {item.title || item.label}
-  </MobileNavLink>
+    <MobileNavLink
+      href={item.href}
+      onClose={onClose}
+      className="flex min-h-[44px] items-center py-2.5 text-[13px] font-semibold text-white/80 transition-colors hover:text-white"
+      style={{ paddingLeft }}
+    >
+      {item.title || item.label}
+    </MobileNavLink>
   );
 }
 
@@ -448,7 +445,6 @@ function MobileFlyoutBranch({ item, depth, openKey, setOpenKey, onClose, keyPref
   const isOpen = openKey === branchKey;
   const hasChildren = item.children?.length > 0;
   const paddingLeft = 16 + depth * 14;
-  const isRed = Boolean(item.highlightRed) || hasChildren;
 
   if (!hasChildren) {
     return (
@@ -461,14 +457,12 @@ function MobileFlyoutBranch({ item, depth, openKey, setOpenKey, onClose, keyPref
   }
 
   return (
-    <div className="border-t border-[#f3f4f6] first:border-t-0">
+    <div className="border-t border-white/10 first:border-t-0">
       <div className="flex min-h-[44px] items-stretch">
         <MobileNavLink
           href={item.href}
           onClose={onClose}
-          className={`flex flex-1 items-center py-2.5 pr-2 text-[13px] font-semibold ${
-            isRed ? "text-[#ef4444]" : "text-[#374151]"
-          }`}
+          className="flex flex-1 items-center py-2.5 pr-2 text-[13px] font-semibold text-white/90 transition-colors hover:text-white"
           style={{ paddingLeft }}
         >
           {item.title || item.label}
@@ -481,7 +475,7 @@ function MobileFlyoutBranch({ item, depth, openKey, setOpenKey, onClose, keyPref
             event.stopPropagation();
             setOpenKey(isOpen ? null : branchKey);
           }}
-          className="flex w-12 shrink-0 items-center justify-center text-[#9ca3af]"
+          className="flex w-12 shrink-0 items-center justify-center text-white/55 transition-colors hover:text-white"
         >
           <ChevronRight
             size={16}
@@ -514,10 +508,10 @@ function MobileFlyoutBranch({ item, depth, openKey, setOpenKey, onClose, keyPref
                 key={`${branchKey}-${child.label || child.title}-${index}`}
                 href={child.href}
                 onClose={onClose}
-                className={`flex min-h-[40px] items-center py-2 transition-colors hover:text-[#ef4444] ${
+                className={`flex min-h-[40px] items-center py-2 transition-colors hover:text-white ${
                   child.isSectionTitle
-                    ? "text-[12px] font-bold tracking-[0.02em] text-[#ef4444]"
-                    : "text-[14px] font-medium tracking-[0.02em] text-[#6b7280]"
+                    ? "text-[12px] font-bold tracking-[0.02em] text-white"
+                    : "text-[14px] font-medium tracking-[0.02em] text-white/70"
                 }`}
                 style={{ paddingLeft: childPadding }}
               >
@@ -536,18 +530,18 @@ export function SolutionsMegaMenuMobile({ onClose }) {
   const [openBranch, setOpenBranch] = useState(null);
 
   return (
-    <div className="relative z-[1] mt-2 rounded-xl border border-[#93c5fd]/50 bg-white">
+    <div className="relative z-[1] mt-2 overflow-hidden rounded-xl border border-white/10 bg-white/[0.04] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
       {MOBILE_FLYOUT_MENU.map((section) => {
         const isOpen = openSection === section.id;
         const hasChildren = section.children?.length > 0;
 
         return (
-          <div key={section.id} className="border-b border-[#e5e7eb] last:border-b-0">
+          <div key={section.id} className="border-b border-white/10 last:border-b-0">
             <div className="flex min-h-[48px] items-stretch">
               <MobileNavLink
                 href={section.href}
                 onClose={onClose}
-                className="flex flex-1 items-center px-4 py-3.5 text-left text-[15px] font-bold text-[#ef4444]"
+                className="flex flex-1 items-center px-4 py-3.5 text-left text-[15px] font-bold text-white transition-colors hover:bg-white/5"
               >
                 {section.title}
               </MobileNavLink>
@@ -562,7 +556,7 @@ export function SolutionsMegaMenuMobile({ onClose }) {
                     setOpenSection(isOpen ? null : section.id);
                     setOpenBranch(null);
                   }}
-                  className="flex w-12 shrink-0 items-center justify-center text-[#9ca3af]"
+                  className="flex w-12 shrink-0 items-center justify-center text-white/60 transition-colors hover:bg-white/5 hover:text-white"
                 >
                   <ChevronRight
                     size={18}
@@ -573,7 +567,7 @@ export function SolutionsMegaMenuMobile({ onClose }) {
             </div>
 
             {isOpen && hasChildren && (
-              <div className="border-t border-[#f3f4f6] bg-[#fafafa] pb-2">
+              <div className="border-t border-white/10 bg-black/20 pb-2">
                 {section.children.map((child, index) => (
                   <MobileFlyoutBranch
                     key={`${section.id}-${child.title}-${index}`}
