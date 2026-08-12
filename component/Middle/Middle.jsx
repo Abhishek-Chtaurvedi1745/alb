@@ -197,12 +197,6 @@ function Middle() {
         Is Our Superpower
       </h4>
 
-      <button className="-mb-4 inline-flex items-center gap-2 px-5 py-4 rounded-full border border-[#ff3b30] bg-transparent text-[20px] cursor-pointer hover:bg-[#ff3b30]/10 transition">
-        <span className="text-[#ff3b30]">★</span>
-        <span className="font-medium whitespace-nowrap">
-          Smart Solutions. <span className="text-[#ff3b30]">Real Impact</span>
-        </span>
-      </button>
     </div>
 
     {/* Right Side */}
@@ -339,12 +333,6 @@ the focus of everything.
             <p className="text-[13px] font-regular text-[#FFFFFF]">QUESTIONS ARE NORMAL</p>
             <h4 className="text-[30px] text-[#FFFFFF] font-semibold mt-2">DELIVERING SOLUTIONS</h4>
             <p className="text-[30px] text-[#FF403A] font-semibold">IS OUR SUPERPOWER</p>
-            <div className="flex justify-center">
-           <button className="mt-5 px-6 py-3 rounded-full border border-[#ff403a] text-white hover:bg-red-600 transition rounded-full p-4 cursor-pointer">
-                ✦ Smart Solutions. <span className="text-red-600"> Real Impact </span>
-              </button>
-            </div>
-
           </div>
 
        

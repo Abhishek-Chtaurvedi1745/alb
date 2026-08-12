@@ -331,9 +331,9 @@ individual projects, influencing the organization’s overall efficiency, compet
 
           {/* LEFT BUTTON */}
           <div className="flex justify-center lg:justify-start">
-            <button className="bg-[#ff403a] hover:bg-[#ff2c24] transition-all duration-300 text-white px-10 py-4 rounded-md flex items-center gap-2 text-xl font-semibold shadow-lg">
+            <button className="bg-[#ff403a] hover:bg-[#ff2c24] transition-all duration-300 text-white px-7 py-3 rounded-md flex items-center gap-2 text-base font-semibold shadow-lg md:px-10 md:py-4 md:text-xl">
               SERVICES
-              <ChevronRight size={22} />
+              <ChevronRight className="h-5 w-5 md:h-[22px] md:w-[22px]" />
             </button>
           </div>
 

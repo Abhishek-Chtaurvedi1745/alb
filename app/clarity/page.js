@@ -151,7 +151,7 @@ const benefits = [
         <div className="flex justify-center gap-0 mb-12">
           <button
             onClick={() => setActiveTab("services")}
-            className={`px-8 py-3 text-[20px] font-semibold tracking-wide  cursor-pointer transition-colors ${
+            className={`px-5 py-2.5 text-[14px] font-semibold tracking-wide cursor-pointer transition-colors md:px-8 md:py-3 md:text-[20px] ${
               activeTab === "services"
                 ? "bg-[#FF403A] text-white"
                 : "bg-[#1a1a1d] text-gray-300 hover:bg-[#222226]"
@@ -161,7 +161,7 @@ const benefits = [
           </button>
           <button
             onClick={() => setActiveTab("plugins")}
-            className={`px-8 py-3 text-[20px] font-semibold tracking-wide transition-colors cursor-pointer ${
+            className={`px-5 py-2.5 text-[14px] font-semibold tracking-wide transition-colors cursor-pointer md:px-8 md:py-3 md:text-[20px] ${
               activeTab === "plugins"
                 ? "bg-[#FF403A] text-white"
                 : "bg-[#1a1a1d] text-gray-300 hover:bg-[#222226]"
