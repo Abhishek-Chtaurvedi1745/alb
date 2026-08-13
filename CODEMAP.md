@@ -25,7 +25,7 @@ Next.js app. Routes in `app/`, UI sections in `section/`, shared UI in `componen
 | `/privacy-policy` | `app/privacy-policy/page.js` | — |
 | `/blog` (+ slug/category) | `app/blog/**` | `section/Blog/*`, `lib/blog.js`, `data/blogs/` |
 | `/project` | `app/project/page.js` | — |
-| `/project-management` | `app/project-management/page.jsx` | `section/ProjectManagement/*` |
+| `/project-portfolio-management` | `app/project-portfolio-management/page.jsx` | `section/ProjectManagement/*` |
 | `/enterprise-it-automation` | `app/enterprise-it-automation/page.js` | — |
 | `/ai-services-for-enterprise` | `app/ai-services-for-enterprise/page.jsx` | `section/AIServices/*`, `ai-services.css` |
 | `/clarity` | `app/clarity/page.js` | `section/Clarity/*` |

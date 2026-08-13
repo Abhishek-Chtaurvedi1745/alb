@@ -43,10 +43,10 @@ const quickLinks = [
 ];
 
 const otherLinks = [
-  { label: "Project Prortfolio Management", href: "/project-management" },
+  { label: "Project Prortfolio Management", href: "/project-portfolio-management" },
   { label: "Enterprise IT Automation", href: "/enterprise-it-automation" },
   { label: "AI Services for Enterprise", href: "/ai-services-for-enterprise" },
-  // { label: "Project Management as a Service", href: "/project-management" },
+  // { label: "Project Management as a Service", href: "/project-portfolio-management" },
   { label: "Clarity", href: "/clarity" },
   { label: "Rally", href: "/rally" },
   { label: "ConnectALL", href: "/connectall" },

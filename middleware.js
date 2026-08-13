@@ -9,9 +9,26 @@ export function middleware(request) {
     return NextResponse.redirect(url, 308);
   }
 
+  if (
+    pathname === "/project-management" ||
+    pathname.startsWith("/project-management/")
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.replace(
+      /^\/project-management/,
+      "/project-portfolio-management",
+    );
+    return NextResponse.redirect(url, 308);
+  }
+
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/Blog", "/Blog/:path*"],
+  matcher: [
+    "/Blog",
+    "/Blog/:path*",
+    "/project-management",
+    "/project-management/:path*",
+  ],
 };

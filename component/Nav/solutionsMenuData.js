@@ -46,7 +46,7 @@ export const desktopSolutionsColumns = [
     underlineWord: "Project",
     description:
       "Optimize project planning, execution and portfolio decisions with enterprise-grade PPM solutions.",
-    href: "/project-management",
+    href: "/project-portfolio-management",
     products: [
       {
         title: "Clarity",
@@ -162,7 +162,7 @@ export const solutionsMegaMenu = [
     underlineWord: "Project",
     description:
       "Optimize project planning, execution and portfolio decisions with enterprise-grade PPM solutions.",
-    href: "/project-management",
+    href: "/project-portfolio-management",
     products: [
       {
         title: "Clarity",
