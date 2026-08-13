@@ -10,9 +10,10 @@ const BLUE_GLOW =
   "radial-gradient(ellipse 70% 65% at 72% 50%, rgba(40,120,220,0.22) 0%, rgba(20,60,140,0.08) 40%, transparent 70%)";
 
 const ROBOT_LAYOUT = {
-  artClassName: "lg:right-[12%] lg:w-[54%]",
-  textClassName: "lg:w-[55%]",
-  objectPosition: "object-[32%_50%] lg:object-right lg:object-bottom",
+  artClassName: "lg:right-[1%] lg:w-[50%]",
+  textClassName: "lg:w-[52%]",
+  objectPosition: "object-center",
+  imageClassName: "mx-auto max-w-[560px] lg:max-w-none",
   maskClassName: "banner-art-mask",
   edgeFades: true,
 };
@@ -21,6 +22,7 @@ const FILLED_LAYOUT = {
   artClassName: "lg:right-[3%] lg:w-[46%]",
   textClassName: "lg:w-[52%]",
   objectPosition: "object-center",
+  imageClassName: "",
   maskClassName: "",
   edgeFades: false,
 };
@@ -46,21 +48,21 @@ const banners = [
   },
   {
     src: "/images/banner-2-trozai-visual.png",
-    alt: "TrozAI – An AI Platform That Works within Your Enterprise Ecosystem",
-    width: 1536,
-    height: 1024,
+    alt: "troz.ai – An AI Platform That Works within Your Enterprise Ecosystem",
+    width: 1024,
+    height: 768,
     cta: "Request a Free Demo",
     glow: BLUE_GLOW,
     ...ROBOT_LAYOUT,
     title: (
       <>
-        <span className="text-white">Troz</span>
-        <span className="text-[#ff3f3a]">AI</span>
+        <span className="text-white">troz</span>
+        <span className="text-[#ff3f3a]">.ai</span>
         {" – An AI Platform That Works within Your "}
         <span className="text-[#ff3f3a]">Enterprise Ecosystem</span>
       </>
     ),
-    body: "TrozAI is an AI-powered enterprise platform that integrates seamlessly with your existing systems — from PMO and PPM tools to CRM, SAP, ITSM, DevOps and legacy applications.",
+    body: "troz.ai is an AI-powered enterprise platform that integrates seamlessly with your existing systems — from PMO and PPM tools to CRM, SAP, ITSM, DevOps and legacy applications.",
   },
   {
     src: "/images/banner-3-visual.png",
@@ -139,19 +141,27 @@ function BannerSlide({ banner, index }) {
       />
 
       <div
-        className={`relative z-0 order-2 h-[200px] w-full shrink-0 md:h-[240px] lg:absolute lg:inset-y-0 lg:order-none lg:h-auto lg:max-h-none ${banner.maskClassName} ${banner.artClassName}`}
+        className={`relative z-0 order-2 flex h-[220px] w-full shrink-0 items-center justify-center overflow-hidden md:h-[280px] lg:absolute lg:inset-y-0 lg:order-none lg:block lg:h-auto lg:max-h-none ${banner.maskClassName} ${banner.artClassName}`}
       >
         <img
-          src={`${banner.src}?v=2`}
+          src={`${banner.src}?v=3`}
           alt={banner.alt}
           width={banner.width}
           height={banner.height}
           decoding="async"
           fetchPriority={index === 0 ? "high" : "auto"}
-          className={`h-full w-full object-contain ${banner.objectPosition}`}
+          className={`h-full w-full object-contain ${banner.objectPosition} ${banner.imageClassName ?? ""}`}
         />
         {banner.edgeFades ? (
           <>
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 left-0 w-[18%] max-lg:hidden"
+              style={{
+                background:
+                  "linear-gradient(to right, #000 0%, rgba(0,0,0,0.65) 40%, transparent 100%)",
+              }}
+            />
             <div
               aria-hidden
               className="pointer-events-none absolute inset-x-0 bottom-0 h-[22%]"
@@ -168,12 +178,28 @@ function BannerSlide({ banner, index }) {
                   "linear-gradient(to bottom, #000 0%, transparent 100%)",
               }}
             />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 left-0 w-[12%] lg:hidden"
+              style={{
+                background:
+                  "linear-gradient(to right, #000 0%, transparent 100%)",
+              }}
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 right-0 w-[12%] lg:hidden"
+              style={{
+                background:
+                  "linear-gradient(to left, #000 0%, transparent 100%)",
+              }}
+            />
           </>
         ) : null}
       </div>
 
       <div
-        className={`contents lg:relative lg:z-10 lg:flex lg:min-w-0 lg:flex-col lg:justify-center lg:py-4 lg:pl-16 lg:pr-6 lg:text-left ${banner.textClassName}`}
+        className={`contents lg:relative lg:z-10 lg:flex lg:min-w-0 lg:flex-col lg:justify-center lg:py-4 lg:pl-20 lg:pr-6 lg:text-left ${banner.textClassName}`}
       >
         <div className="relative z-10 order-1 w-full min-w-0 px-6 pt-6 text-left max-lg:min-h-[11.5rem] lg:order-none lg:min-h-0 lg:p-0">
           <h1

@@ -5,7 +5,7 @@ import BookACallButton from "@/component/BookACall/BookACallButton";
 import { aiServicesPageData } from "./aiServicesPageData";
 
 const SLIDE_INTERVAL = 6000;
-const HERO_IMAGE = "/images/ai-services-hero.png?v=2";
+const HERO_IMAGE = "/images/ai-services-hero.png?v=3";
 
 function RichHtml({ html, className = "", as: Tag = "span" }) {
   const safe = html
@@ -177,27 +177,29 @@ export default function AIServicesPage() {
           </div>
 
           {/* Banner / image */}
-          <div className="relative w-full overflow-hidden bg-black">
+          <div className="relative mx-auto flex w-full max-w-[560px] items-center justify-center overflow-hidden bg-black md:mx-0 md:max-w-none">
             <img
               src={HERO_IMAGE}
-              alt="AI partnership for enterprise — human and intelligent systems working together"
-              className="relative z-10 w-full object-contain mix-blend-lighten [mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_42%,rgba(0,0,0,0.85)_68%,transparent_100%)] [mask-size:100%_100%] [-webkit-mask-size:100%_100%] [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]"
+              alt="troz.ai — AI partnership for enterprise"
+              width={1024}
+              height={764}
+              className="relative z-10 mx-auto h-auto w-full max-w-full object-contain object-center mix-blend-lighten [mask-image:radial-gradient(ellipse_at_center,black_55%,rgba(0,0,0,0.9)_78%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_at_center,black_55%,rgba(0,0,0,0.9)_78%,transparent_100%)] [mask-size:100%_100%] [-webkit-mask-size:100%_100%] [mask-repeat:no-repeat] [-webkit-mask-repeat:no-repeat]"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-y-0 left-0 z-20 w-[28%] bg-gradient-to-r from-black via-black/70 to-transparent"
+              className="pointer-events-none absolute inset-y-0 left-0 z-20 w-[18%] bg-gradient-to-r from-black via-black/65 to-transparent md:w-[22%]"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[28%] bg-gradient-to-l from-black via-black/70 to-transparent"
+              className="pointer-events-none absolute inset-y-0 right-0 z-20 w-[18%] bg-gradient-to-l from-black via-black/65 to-transparent md:w-[22%]"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-x-0 top-0 z-20 h-14 bg-gradient-to-b from-black via-black/70 to-transparent md:h-20"
+              className="pointer-events-none absolute inset-x-0 top-0 z-20 h-12 bg-gradient-to-b from-black via-black/65 to-transparent md:h-16"
             />
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-16 bg-gradient-to-t from-black via-black/75 to-transparent md:h-24"
+              className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-14 bg-gradient-to-t from-black via-black/70 to-transparent md:h-20"
             />
           </div>
 

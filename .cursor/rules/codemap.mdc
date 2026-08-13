@@ -1,0 +1,11 @@
+---
+description: Use and maintain CODEMAP.md as the project file index
+alwaysApply: true
+---
+
+# CODEMAP first
+
+1. Before searching the whole repo, read `CODEMAP.md` to find the right files.
+2. Prefer opening only the files listed there for the task.
+3. If you **add, move, rename, or delete** routes, section folders, key data files, or shared components — update `CODEMAP.md` in the **same change** (keep it short; no fluff).
+4. Do not duplicate CODEMAP into other docs; keep one source of truth.

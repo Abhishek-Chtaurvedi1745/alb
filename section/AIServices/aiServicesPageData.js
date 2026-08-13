@@ -3,9 +3,9 @@ export const aiServicesPageData = {
     {
       eyebrow: "AI CONCIERGE — BUILT FOR ENTERPRISE PPM",
       titleHtml:
-        'Troz<span class="ai-accent">AI</span> : An AI solution that lives inside your <em>project office.</em>',
+        'troz<span class="ai-accent">.ai</span> : An AI solution that lives inside your <em>project office.</em>',
       subtitle:
-        "TrozAI understands your organisation — its standards, its history, its way of working — and acts on that understanding inside your project management application. Every action stays reviewable. Every step keeps a human in the loop.",
+        "troz.ai understands your organisation — its standards, its history, its way of working — and acts on that understanding inside your project management application. Every action stays reviewable. Every step keeps a human in the loop.",
       cta: "Request a free demo",
       href: "/contact-us",
     },
@@ -13,7 +13,7 @@ export const aiServicesPageData = {
       eyebrow: "CUSTOM AI BUILDS",
       titleHtml: "Bespoke AI <em>build, from Ground Up.</em>",
       subtitle:
-        "If your organisation needs its own TrozAI, not ours, we build that too — on RAG, MCP and agentic architectures, grounded in your own data and your own systems.",
+        "If your organisation needs its own troz.ai, not ours, we build that too — on RAG, MCP and agentic architectures, grounded in your own data and your own systems.",
       cta: "Get Free Consultation",
       href: "/contact-us",
     },
