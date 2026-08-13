@@ -27,7 +27,7 @@ export default function BookACallModal() {
 }
 
 function BookACallModalContent() {
-  const { closeBookACall } = useBookACall();
+  const { closeBookACall, leadSource } = useBookACall();
   const [formData, setFormData] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
@@ -45,7 +45,8 @@ function BookACallModalContent() {
     try {
       await sendContactEmail({
         ...formData,
-        formSource: "Book a Call popup",
+        formType: leadSource?.formType || "Popup form",
+        buttonLabel: leadSource?.buttonLabel || "Book a Call",
       });
       setSubmitted(true);
       setTimeout(() => {

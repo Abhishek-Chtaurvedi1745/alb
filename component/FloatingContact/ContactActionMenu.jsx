@@ -60,7 +60,12 @@ export default function ContactActionMenu({
         <div className="w-[min(100vw-2rem,340px)]">
           <ContactActionPanel
             onClose={() => setOpenState(false)}
-            onBookACall={openBookACall}
+            onBookACall={() =>
+              openBookACall({
+                buttonLabel: "Call / Chat › Book a Call",
+                formType: "Popup form",
+              })
+            }
           />
         </div>
       ) : null}
@@ -118,7 +123,12 @@ export default function ContactActionMenu({
         >
           <ContactActionPanel
             onClose={() => setOpenState(false)}
-            onBookACall={openBookACall}
+            onBookACall={() =>
+              openBookACall({
+                buttonLabel: "Call / Chat › Book a Call",
+                formType: "Popup form",
+              })
+            }
           />
         </div>
       ) : null}

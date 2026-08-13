@@ -31,7 +31,8 @@ export default function ContactSection() {
     try {
       await sendContactEmail({
         ...formData,
-        formSource: "Home Let's Connect form",
+        formType: "Home Let's Connect form",
+        buttonLabel: "Submit",
       });
       setSubmitted(true);
       setFormData(initialForm);
@@ -62,7 +63,12 @@ export default function ContactSection() {
             <div className="flex items-center gap-4">
               <button
                 type="button"
-                onClick={openBookACall}
+                onClick={() =>
+                  openBookACall({
+                    buttonLabel: "Call Us",
+                    formType: "Popup form",
+                  })
+                }
                 className="inline-flex items-center gap-3 bg-white text-[#ff3b30] font-bold px-6 py-3 rounded-xl transition-all duration-200 whitespace-nowrap hover:bg-neutral-100 shadow-md text-[12px] md:text-sm md:text-base"
               >
                 <PhoneCall className="w-5 h-5 fill-[#ff3b30] " />

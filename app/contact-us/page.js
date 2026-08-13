@@ -54,7 +54,8 @@ function Page() {
     try {
       await sendContactEmail({
         ...formData,
-        formSource: "Contact Us page",
+        formType: "Contact Us inline form",
+        buttonLabel: "Submit",
       });
       setSubmitted(true);
       setFormData(initialForm);

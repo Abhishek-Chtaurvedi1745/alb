@@ -11,7 +11,7 @@ Next.js app. Routes in `app/`, UI sections in `section/`, shared UI in `componen
 | `component/` | Shared UI (nav, footer, forms, book-a-call…) |
 | `public/images/` | Static assets (product heroes, service covers…) |
 | `data/blogs/` | Blog JSON (`index.json` + `posts/`) |
-| `lib/` | Helpers (`blog.js`, `sendEmail.js`) |
+| `lib/` | Helpers (`blog.js`, `sendEmail.js`, `formSource.js` — page/button lead attribution) |
 | `middleware.js` | Next middleware |
 
 ## Routes → entry → content/data

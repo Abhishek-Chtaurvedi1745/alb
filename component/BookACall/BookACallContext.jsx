@@ -4,11 +4,26 @@ import { createContext, useCallback, useContext, useEffect, useState } from "rea
 
 const BookACallContext = createContext(null);
 
+const defaultSource = {
+  buttonLabel: "Book a Call",
+  formType: "Popup form",
+};
+
 export function BookACallProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [leadSource, setLeadSource] = useState(defaultSource);
 
-  const openBookACall = useCallback(() => setIsOpen(true), []);
-  const closeBookACall = useCallback(() => setIsOpen(false), []);
+  const openBookACall = useCallback((meta = {}) => {
+    setLeadSource({
+      buttonLabel: meta.buttonLabel || defaultSource.buttonLabel,
+      formType: meta.formType || defaultSource.formType,
+    });
+    setIsOpen(true);
+  }, []);
+
+  const closeBookACall = useCallback(() => {
+    setIsOpen(false);
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -29,7 +44,9 @@ export function BookACallProvider({ children }) {
   }, [isOpen, closeBookACall]);
 
   return (
-    <BookACallContext.Provider value={{ isOpen, openBookACall, closeBookACall }}>
+    <BookACallContext.Provider
+      value={{ isOpen, openBookACall, closeBookACall, leadSource }}
+    >
       {children}
     </BookACallContext.Provider>
   );
