@@ -5,6 +5,7 @@ const features = [
   {
     titleWhite: "Top Down Planning with",
     titleRed: "Roadmaps",
+    videoUrl: "https://youtu.be/fuMAzW0-Oxg?si=4D0gsmzCMTToMBPJ",
     points: [
       "Create, Visualize and Communicate Product, Strategy plans to stakeholders.",
       "Helps align the investments to strategic objectives, prioritize, rank & include/exclude investments from roadmap with just drag and drop.",
@@ -13,6 +14,7 @@ const features = [
   {
     titleWhite: "Project",
     titleRed: "Management",
+    videoUrl: "https://youtu.be/pDscCTpH0p0?si=rVOaLr-jhftf3UBl",
     points: [
       "Create, Visualize and Communicate Product, Strategy plans to stakeholders.",
       "Helps align the investments to strategic objectives, prioritize, rank & include/exclude investments from roadmap with just drag and drop.",
@@ -21,6 +23,7 @@ const features = [
   {
     titleWhite: "Resource",
     titleRed: "Management",
+    videoUrl: "https://youtu.be/OtN4vFlTsa8?si=VXWHn-pQXpNImlJU",
     points: [
       "Optimizes resource allocation and capacity planning.",
       "Helps in managing and balancing workloads across teams.",
@@ -29,6 +32,7 @@ const features = [
   {
     titleWhite: "Financial",
     titleRed: "Management",
+    videoUrl: "https://youtu.be/-7xDUBU7710?si=jJerctCW1UazIy2H",
     points: [
       "Budgeting and cost tracking features for effective financial management.",
       "Supports forecasting and tracking of project expenses.",
@@ -37,6 +41,7 @@ const features = [
   {
     titleWhite: "Time and",
     titleRed: "Expense Tracking",
+    videoUrl: "https://youtu.be/PJGrHlqMFDE?si=ADnnBtm5ueay9mtZ",
     points: [
       "Allows for accurate tracking of time spent on tasks and project-related expenses.",
     ],
@@ -44,6 +49,7 @@ const features = [
   {
     titleWhite: "Risk and Issue",
     titleRed: "Management",
+    videoUrl: "https://youtu.be/zeoDfvzLHd4?si=Z-Ege-rLSBpaWBs7",
     points: [
       "Identifies, assesses, and manages risks and issues throughout the project lifecycle.",
       "Facilitates proactive risk mitigation strategies.",
@@ -52,6 +58,7 @@ const features = [
   {
     titleWhite: "Collaboration and",
     titleRed: "Communication",
+    videoUrl: "https://youtu.be/VKDOd7ndf5o?si=KgGN3X85FmiE_dG-",
     points: [
       "Provides tools for centralized document sharing and collaboration.",
       "Enables communication among team members and stakeholders.",
@@ -60,6 +67,7 @@ const features = [
   {
     titleWhite: "Reporting and",
     titleRed: "Analytics",
+    videoUrl: "https://youtu.be/m2RhTUPQgDI?si=INpDXmiCMZyC1r6C",
     points: [
       "Offers robust reporting capabilities for real-time project and portfolio insights.",
       "Supports customizable dashboards and analytics to aid decision-making.",
@@ -68,6 +76,7 @@ const features = [
   {
     titleWhite: "Agile and Hybrid",
     titleRed: "Methodology Support",
+    videoUrl: "https://youtu.be/kibHJqIpexg?si=XnKdi0SgHSUUsly3",
     points: [
       "Accommodates Agile and hybrid project management methodologies.",
       "Facilitates flexibility in project execution by integrating with Rally.",
@@ -128,17 +137,21 @@ function Claritysection() {
         ))}
       </ul>
 
-      <button
-        type="button"
-        className="mt-auto flex w-full items-center justify-center gap-1.5 rounded border border-gray-600 px-2.5 py-1.5 transition-colors hover:border-[#FF403A] sm:w-fit sm:justify-start sm:gap-2 sm:px-4 sm:py-2"
-      >
-        <span className="flex items-center justify-center rounded-sm bg-[#FF403A] p-0.5 sm:p-1">
-          <Play className="h-2.5 w-2.5 fill-white text-white sm:h-3 sm:w-3" />
-        </span>
-        <span className="text-[11px] font-medium text-white sm:text-sm">
-          Watch video
-        </span>
-      </button>
+      {feature.videoUrl ? (
+        <a
+          href={feature.videoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-auto flex w-full items-center justify-center gap-1.5 rounded border border-gray-600 px-2.5 py-1.5 transition-colors hover:border-[#FF403A] sm:w-fit sm:justify-start sm:gap-2 sm:px-4 sm:py-2"
+        >
+          <span className="flex items-center justify-center rounded-sm bg-[#FF403A] p-0.5 sm:p-1">
+            <Play className="h-2.5 w-2.5 fill-white text-white sm:h-3 sm:w-3" />
+          </span>
+          <span className="text-[11px] font-medium text-white sm:text-sm">
+            Watch video
+          </span>
+        </a>
+      ) : null}
     </article>
   );
 
