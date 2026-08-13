@@ -87,7 +87,7 @@ const banners = [
     alt: "Robotic assembly line running intelligent workload orchestration",
     width: 1024,
     height: 764,
-    cta: "Book a Call",
+    cta: "Connect With Our Experts",
     glow: RED_GLOW,
     ...FILLED_LAYOUT,
     title: (
