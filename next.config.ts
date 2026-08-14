@@ -1,5 +1,17 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {};
+const isCpanelBuild = process.env.CPANEL_BUILD === "1";
+
+const nextConfig: NextConfig = {
+  // Used only when running `npm run build:cpanel`.
+  // Default / Vercel builds stay unchanged (no static export).
+  ...(isCpanelBuild
+    ? {
+        output: "export" as const,
+        images: { unoptimized: true },
+        trailingSlash: true,
+      }
+    : {}),
+};
 
 export default nextConfig;

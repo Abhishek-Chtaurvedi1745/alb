@@ -12,6 +12,7 @@ Next.js app. Routes in `app/`, UI sections in `section/`, shared UI in `componen
 | `public/images/` | Static assets (product heroes, service covers…) |
 | `data/blogs/` | Blog JSON (`index.json` + `posts/`) |
 | `lib/` | Helpers (`blog.js`, `sendEmail.js`, `formSource.js` — page/button lead attribution) |
+| `scripts/build-cpanel.mjs` | Static `out/` + `cpanel-upload.zip` for cPanel (`npm run build:cpanel`) |
 | `middleware.js` | Next middleware |
 
 ## Routes → entry → content/data
