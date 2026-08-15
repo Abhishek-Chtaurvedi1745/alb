@@ -63,14 +63,14 @@ const certifications = [
         <div className="w-full flex justify-center gap-10">
             <div>
           <img
-            src="images/ar1.png"
+            src="/images/ar1.png"
             alt="Contact"
             className="rounded-xl shadow-lg w-full  object-cover"
           />
           </div>
            <div>
           <img
-            src="images/ar2.png"
+            src="/images/ar2.png"
             alt="Contact"
             className="rounded-xl shadow-lg w-full  object-cover"
           />

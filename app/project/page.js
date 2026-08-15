@@ -274,7 +274,7 @@ using the power of these enterprise solutions.
               {/* IMAGE */}
               <div className="relative overflow-hidden rounded-xl mb-5">
                 <img
-                  src="images/lk.svg"
+                  src="/images/lk.svg"
                   alt=""
                   className="group-hover:scale-110 transition-all duration-500"
                 />

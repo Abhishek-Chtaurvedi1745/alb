@@ -306,7 +306,7 @@ the focus of everything.
        
         <div className="w-full flex justify-center">
           <img
-            src="images/dh.png"
+            src="/images/dh.png"
             alt="Contact"
             className="rounded-xl shadow-lg w-full  object-cover"
           />
@@ -325,7 +325,7 @@ the focus of everything.
              
              
               <img
-                src="images/as.png"
+                src="/images/as.png"
                 alt="hand"
                 className=" w-[520px]"
               />

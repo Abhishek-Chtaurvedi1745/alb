@@ -7,6 +7,10 @@ on:
 
   workflow_dispatch:
 
+concurrency:
+  group: deploy-cpanel
+  cancel-in-progress: true
+
 permissions:
   contents: read
 
@@ -14,11 +18,13 @@ jobs:
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -27,22 +33,21 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --prefer-offline --no-audit --no-fund
 
       - name: Build cPanel static site
+        env:
+          CI: true
+          NEXT_TELEMETRY_DISABLED: "1"
+          SKIP_CPANEL_ZIP: "1"
         run: npm run build:cpanel
 
       - name: Verify static build
         run: |
-          echo "Checking out directory..."
           test -d out
           test -f out/index.html
-
-          echo ""
-          echo "Build contents:"
-          find out -maxdepth 2 -type f | head -100
-
-          echo ""
+          test -f out/images/imm.png
+          test -f out/about/index.html
           echo "Build verification successful."
 
       - name: Deploy to cPanel via FTP
@@ -54,4 +59,13 @@ jobs:
           protocol: ftps
           local-dir: ./out/
           server-dir: /
-          log-level: standard
+          log-level: minimal
+          timeout: 120000
+          security: loose
+          # Keep defaults + skip zip if ever present; state file enables incremental sync
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/cpanel-upload.zip
+            **/.DS_Store

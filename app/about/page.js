@@ -58,7 +58,7 @@ function page() {
               <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-[20px] border-r-[4px] border-b-[4px] border-[#FF403A] md:translate-x-2.5 md:translate-y-2.5 md:rounded-[24px]" />
               <div className="relative z-10 overflow-hidden rounded-[20px] md:rounded-[24px]">
                 <img
-                  src="images/imm.png"
+                  src="/images/imm.png"
                   alt="Albatroz team collaboration"
                   className="aspect-[5/4] h-auto w-full object-cover transition-transform duration-700 hover:scale-105"
                 />

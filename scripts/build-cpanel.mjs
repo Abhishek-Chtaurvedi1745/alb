@@ -100,16 +100,24 @@ try {
   console.log("→ Wrote out/.htaccess");
 
   if (exists(zipPath)) fs.unlinkSync(zipPath);
-  execSync(`cd "${outDir}" && zip -r -q "${zipPath}" .`, {
-    stdio: "inherit",
-    shell: true,
-  });
+
+  // Zip is for manual upload only — skip in GitHub Actions (saves minutes).
+  if (process.env.CI === "true" || process.env.SKIP_CPANEL_ZIP === "1") {
+    console.log("→ Skipping zip (CI / SKIP_CPANEL_ZIP)");
+  } else {
+    execSync(`cd "${outDir}" && zip -r -q "${zipPath}" .`, {
+      stdio: "inherit",
+      shell: true,
+    });
+  }
 
   restore();
 
   console.log("\n✅ cPanel build ready");
   console.log(`   Folder: ${outDir}`);
-  console.log(`   Zip:    ${zipPath}`);
+  if (exists(zipPath)) {
+    console.log(`   Zip:    ${zipPath}`);
+  }
   console.log("\nUpload either:");
   console.log("  1) Extract cpanel-upload.zip into public_html, OR");
   console.log("  2) Upload everything inside the `out/` folder to public_html");
