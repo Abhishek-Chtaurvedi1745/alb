@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Builds a static site into `out/` for cPanel (public_html) upload.
- * Does NOT change Vercel / normal `npm run build` behavior.
+ * Does not change normal `npm run build` behavior.
  *
  * Usage: npm run build:cpanel
  * Upload: unzip cpanel-upload.zip into public_html (or copy `out/` contents).
@@ -113,7 +113,7 @@ try {
   console.log("\nUpload either:");
   console.log("  1) Extract cpanel-upload.zip into public_html, OR");
   console.log("  2) Upload everything inside the `out/` folder to public_html");
-  console.log("\nVercel / `npm run build` unchanged.");
+  console.log("\n`npm run build` / local Node deploy unchanged.");
 } catch (err) {
   restore();
   console.error("\n❌ cPanel build failed:", err.message || err);
