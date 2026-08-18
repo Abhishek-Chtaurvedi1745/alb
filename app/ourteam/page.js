@@ -13,7 +13,7 @@ import Footer from "@/component/Footer/Footer"
       role: "Creative Solutions For Your Business",
       description:
         "A PPM and Clarity SME with vast experience over 22 years helping customers with best practice solutions in implementing Clarity. Responsible for Strategy, Sales & Marketing & Operations. Financial Markets enthusiast, musicophile & a Tennis buff.",
-      image: "images/lt1.png",
+      image: "/images/lt1.png",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ import Footer from "@/component/Footer/Footer"
       role: "Delivering Smart Business Solutions",
       description:
         "Experienced leader focused on driving digital transformation and helping organizations scale with innovative technologies and customer-focused strategies.",
-      image: "images/lt2.png",
+      image: "/images/lt2.png",
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ import Footer from "@/component/Footer/Footer"
       role: "Practice Lead – PPM",
       description:
         "A highly motivated Clarity guru backed by versatile skillset & 12 years of bimplementing & customizing Clarity for global customers. Leads the PPM Practice & Albatroz and a great mentor for budding consultants. Certified SAFe Agilist & Clarity PPM Professional. Traveller, foodie and loves music.",
-      image: "images/lt3.png",
+      image: "/images/lt3.png",
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ import Footer from "@/component/Footer/Footer"
       role: "Practice Lead – Automation",
       description:
         "Over 24 years of experience in IT services business with a technology mindset. Being a Subject Matter Expert on Automation & Devops, is responsible for leading the Automation practice & mentors the budding consultants.",
-      image: "images/lt4.png",
+      image: "/images/lt4.png",
     },
   ];
 
