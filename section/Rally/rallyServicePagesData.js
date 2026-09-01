@@ -20,7 +20,7 @@ export const rallyServicePages = {
   implementation: buildRallyServicePage({
     slug: "implementation",
     title: "Implementation",
-    image: "/images/rally-services/implementation.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263171/albatroz/rally-services/implementation.webp",
     bullets: [
       "End-to-end Rally implementation aligned to Agile delivery processes",
       "Workspace, project, team, role, and permission configuration",
@@ -33,7 +33,7 @@ export const rallyServicePages = {
   integration: buildRallyServicePage({
     slug: "integration",
     title: "Integration",
-    image: "/images/rally-services/integration.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263172/albatroz/rally-services/integration.webp",
     bullets: [
       "Clarity and Rally synchronization for portfolio visibility",
       "Automated data synchronization to reduce manual effort",
@@ -46,7 +46,7 @@ export const rallyServicePages = {
   support: buildRallyServicePage({
     slug: "support",
     title: "Support",
-    image: "/images/rally-services/support.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263173/albatroz/rally-services/support.webp",
     bullets: [
       "Functional and technical support for Rally operations",
       "Incident resolution and root-cause troubleshooting",

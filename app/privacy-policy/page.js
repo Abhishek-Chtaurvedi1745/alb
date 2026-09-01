@@ -4,7 +4,7 @@ function PolicyItem({ children }) {
   return (
     <li className="flex items-start gap-3 text-sm leading-relaxed text-white sm:text-base md:text-[16px] md:leading-8">
       <img
-        src="/images/check.png"
+        src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262995/albatroz/check.png"
         alt=""
         className="mt-1 h-4 w-4 shrink-0 sm:h-5 sm:w-5"
       />

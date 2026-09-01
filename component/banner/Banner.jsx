@@ -29,7 +29,7 @@ const FILLED_LAYOUT = {
 
 const banners = [
   {
-    src: "/images/banner-1-visual.png",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262803/albatroz/banner-1-visual.png",
     alt: "Meaningful & Secure AI for Smarter PMO Operations",
     width: 1391,
     height: 1024,
@@ -47,7 +47,7 @@ const banners = [
     body: "Discover how AI can help you uncover the intelligence buried in years of project history, and bring it to scope, schedule, risk, financial and staffing decisions — the moment you need it, not after the fact. We'll help assess your PMO AI readiness with a tailored AI readiness report.",
   },
   {
-    src: "/images/banner-2-trozai-visual.png",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262804/albatroz/banner-2-trozai-visual.jpg",
     alt: "troz.ai – An AI Platform That Works within Your Enterprise Ecosystem",
     width: 1024,
     height: 768,
@@ -65,7 +65,7 @@ const banners = [
     body: "troz.ai is an AI-powered enterprise platform that integrates seamlessly with your existing systems — from PMO and PPM tools to CRM, SAP, ITSM, DevOps and legacy applications.",
   },
   {
-    src: "/images/banner-3-visual.png",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262810/albatroz/banner-3-visual.png",
     alt: "Transform Your PMO into a Strategic Engine",
     width: 1520,
     height: 1024,
@@ -83,7 +83,7 @@ const banners = [
     body: "We help you digitise your portfolio practices and improve strategic alignment by building a tailored roadmap aligned to your organization's maturity.",
   },
   {
-    src: "/images/banner-4-orchestration.png",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262813/albatroz/banner-4-orchestration.png",
     alt: "Robotic assembly line running intelligent workload orchestration",
     width: 1024,
     height: 764,

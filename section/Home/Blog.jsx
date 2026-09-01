@@ -13,7 +13,7 @@ const blogs = [
   {
     slug: "value-stream-management",
     image:
-      "/images/blog/uploads/2024/06/Value-Stream-Management-Its-Importance-Albatroz.webp",
+      "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262970/albatroz/blog/uploads/2024/06/Value-Stream-Management-Its-Importance-Albatroz.webp",
     title: "Value Stream Management",
     description:
       "Value Stream Management (VSM) optimizes the flow of value to customers by mapping, analyzing, and improving workflows.",
@@ -21,7 +21,7 @@ const blogs = [
   {
     slug: "project-management-best-practices",
     image:
-      "/images/blog/uploads/2024/06/Project-Management-Best-Practices-Albatroz.webp",
+      "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262969/albatroz/blog/uploads/2024/06/Project-Management-Best-Practices-Albatroz.webp",
     title: "Project Management Best Practices",
     description:
       "Projects are crucial for an organization's success, especially in competitive industries where rapid execution matters.",
@@ -29,7 +29,7 @@ const blogs = [
   {
     slug: "what-is-project-portfolio-management",
     image:
-      "/images/blog/uploads/2024/02/What-is-Project-Portfolio-Managemnt.webp",
+      "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262963/albatroz/blog/uploads/2024/02/What-is-Project-Portfolio-Managemnt.webp",
     title: "What is Project Portfolio Management",
     description:
       "Project portfolio management centrally manages an organization's projects to optimize resource allocation and address conflicts.",
@@ -37,14 +37,14 @@ const blogs = [
   {
     slug: "clarity-16-1-3-key-user-experience-enhancements",
     image:
-      "/images/blog/uploads/2023/08/banner2-ezgif.com-jpg-to-webp-converter.webp",
+      "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262959/albatroz/blog/uploads/2023/08/banner2-ezgif.com-jpg-to-webp-converter.webp",
     title: "Clarity 16.1.3 – Key User Experience Enhancements",
     description:
       "Broadcom Clarity 16.1.3 introduces new features around blueprints, visualizations, roadmaps, hierarchies, and OKR management.",
   },
   {
     slug: "running-jasper-report-in-an-html-portlet-with-dynamic-filter-values",
-    image: "/images/blog/uploads/2023/06/reports.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262884/albatroz/blog/uploads/2023/06/reports.webp",
     title: "Jasper Report in an HTML Portlet with Dynamic Filters",
     description:
       "Learn how a Jasper report can be run from a PPM dashboard with dynamically set filter parameters.",

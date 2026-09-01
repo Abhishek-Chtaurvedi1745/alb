@@ -29,7 +29,7 @@ export default function PPMComprehensiveFeatureBlock({
             >
               <div className="flex items-start gap-2.5">
                 <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-[#ff403a]/15">
-                  <img src="/images/crt.svg" alt="" className="h-3.5 w-3.5" />
+                  <img src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263038/albatroz/crt.svg" alt="" className="h-3.5 w-3.5" />
                 </span>
                 <div className="min-w-0">
                   <p className="text-sm font-semibold leading-snug text-[#FF403A]">

@@ -202,7 +202,7 @@ function Nav() {
             className="group flex shrink-0 items-center gap-3 select-none"
           >
             <img
-              src="/images/nla.svg"
+              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263135/albatroz/nla.svg"
               alt="Albatroz Solutions"
               className={`transition-transform duration-300 group-hover:scale-[1.03] ${
                 scrolled ? "h-[36px] md:h-[44px]" : "h-[30px] md:h-[50px]"

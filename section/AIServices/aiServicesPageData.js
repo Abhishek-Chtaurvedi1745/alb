@@ -36,7 +36,7 @@ export const aiServicesPageData = {
       title: "Every workspace remembers everything that happens inside it.",
       desc: "A project, programme or portfolio gets its own persistent workspace — every document, conversation, decision and artifact stays contained within it. Context never leaks between engagements, and nothing has to be re-explained the next time you open the chat.",
       tags: ["Persistent context", "Project · Programme · Portfolio", "Isolated by design"],
-      image: "/images/ai-panel-workspace.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262761/albatroz/ai-panel-workspace.png",
       visual: {
         type: "rows",
         rows: [
@@ -52,7 +52,7 @@ export const aiServicesPageData = {
       title: "Every answer is grounded in how your organisation actually works.",
       desc: "Org standards, delivery playbooks, past project history and policy documents are indexed and retrieved at query time. The AI doesn't give generic advice — it gives your advice, shaped by your own organisational knowledge.",
       tags: ["RAG-grounded", "Org knowledge base", "Policy-aware"],
-      image: "/images/ai-panel-knowledge.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262758/albatroz/ai-panel-knowledge.png",
       visual: {
         type: "chat",
         user: "What's our standard approach to vendor risk escalation?",
@@ -65,7 +65,7 @@ export const aiServicesPageData = {
       title: "Upload almost any project document. It knows what to do with it.",
       desc: "A Statement of Work becomes a new project, scoped and structured. Meeting minutes become tasks and risks, assigned and dated. The same engine reads status reports, change requests, even scanned notes — and routes each one to the right action in your PM tool.",
       tags: ["SOW → Project", "Minutes → Tasks & Risks", "Any document type"],
-      image: "/images/ai-panel-documents.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262757/albatroz/ai-panel-documents.png",
       visual: {
         type: "rows",
         rows: [
@@ -81,7 +81,7 @@ export const aiServicesPageData = {
       title: "Every extracted action comes with a confidence score — and a human checkpoint.",
       desc: "Tasks, risks, decisions and change requests are scored for confidence before anything is written. Review, adjust or approve in one click. Nothing reaches your project management application without a clear audit trail.",
       tags: ["Confidence scoring", "Human-in-the-loop", "Full audit trail"],
-      image: "/images/ai-panel-confidence.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262755/albatroz/ai-panel-confidence.png",
       visual: {
         type: "rows",
         rows: [
@@ -97,7 +97,7 @@ export const aiServicesPageData = {
       title: "An AI you can actually trust with your project data.",
       desc: "Every write-back is reviewable before it happens. Every response is traceable to its source. Workspace data stays isolated, access is role-based, and nothing is used to train a model outside your organisation. Trust isn't a feature here — it's the default.",
       tags: ["Source-traceable", "Role-based access", "Data stays yours"],
-      image: "/images/ai-panel-trust.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262760/albatroz/ai-panel-trust.png",
       visual: {
         type: "rows",
         rows: [
@@ -113,7 +113,7 @@ export const aiServicesPageData = {
       title: "It knows who to notify, and when to schedule.",
       desc: "Reading conversations and calendars together, the AI surfaces meetings to attend, sessions still waiting to be booked, and notifications that are overdue — so coordination overhead stops living in email threads.",
       tags: ["Calendar-aware", "Auto-notify", "Meeting detection"],
-      image: "/images/ai-panel-calendar.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262754/albatroz/ai-panel-calendar.png",
       visual: {
         type: "rows",
         rows: [
@@ -129,7 +129,7 @@ export const aiServicesPageData = {
       title: "It doesn't stop at the PM tool — it works across the systems around it.",
       desc: "The same agentic core reaches into CRM, HR and finance systems alongside your PM tool — turning a closed opportunity into a scoped project, forecasting delivery against real capacity, validating timesheets, and flagging skill gaps before they become resourcing problems.",
       tags: ["CRM → Project", "Skill & capacity matching", "Timesheet validation", "Delivery forecasting"],
-      image: "/images/ai-panel-systems.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262759/albatroz/ai-panel-systems.png",
       visual: {
         type: "rows",
         rows: [

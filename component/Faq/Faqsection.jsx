@@ -35,7 +35,7 @@ const defaultFaqData = [
 function FAQSection({
   faqs = defaultFaqData,
   showImage = false,
-  imageSrc = "images/faqs.png",
+  imageSrc = "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263079/albatroz/faqs.png",
   imageAlt = "Frequently asked questions",
 }) {
   const [active, setActive] = useState(0);

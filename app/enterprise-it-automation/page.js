@@ -110,7 +110,7 @@ function page() {
       {/* Hero */}
       <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
         <img
-          src="/images/enterprise-it-automation-hero.png?v=7"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263073/albatroz/enterprise-it-automation-hero.png?v=7"
           alt="Enterprise IT Automation"
           className="absolute inset-0 h-full w-full object-cover object-[center_68%]"
         />
@@ -151,7 +151,7 @@ function page() {
           <div className="mt-6 grid items-start gap-5 md:mt-12 md:gap-8 lg:grid-cols-[38%_1fr] lg:gap-10">
             <div className="overflow-hidden rounded-2xl border border-white/10 lg:sticky lg:top-28">
               <img
-                src="/images/ea-workload-human.png?v=2"
+                src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263057/albatroz/ea-workload-human.png?v=2"
                 alt="IT professionals managing workload automation dashboards"
                 className="aspect-video w-full object-cover"
               />
@@ -207,7 +207,7 @@ function page() {
           <div className="grid items-start gap-5 md:gap-8 lg:grid-cols-[38%_1fr] lg:gap-10">
             <div className="overflow-hidden rounded-2xl border border-white/10 lg:sticky lg:top-28">
               <img
-                src="/images/ea-soap-human.png?v=2"
+                src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263054/albatroz/ea-soap-human.png?v=2"
                 alt="Team collaborating on service orchestration"
                 className="aspect-video w-full object-cover"
               />

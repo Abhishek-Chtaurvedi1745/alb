@@ -46,11 +46,11 @@ const features1 = [
   ];
 
 const logos = [
-    { src: "/images/brd.svg", alt: 'Broadcom' },
-    { src: "/images/stb.svg", alt: 'Stonebranch', preserveColors: true },
-    { src: "/images/hcl.svg", alt: 'HCLTech' },
-    { src: "/images/ibm.svg", alt: 'IBM' },
-    { src: "/images/iggt.svg", alt: 'Ignite Technology' },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262976/albatroz/brd.svg", alt: 'Broadcom' },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263187/albatroz/stb.svg", alt: 'Stonebranch', preserveColors: true },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263080/albatroz/hcl.svg", alt: 'HCLTech' },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263084/albatroz/ibm.svg", alt: 'IBM' },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263091/albatroz/iggt.svg", alt: 'Ignite Technology' },
   ];
 
 function getPartnerLogoClassName(logo) {
@@ -66,44 +66,44 @@ function getPartnerLogoClassName(logo) {
 
 const features = [
   {
-    icon: "images/sa.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263176/albatroz/sa.svg",
     title: "Strategy Approach",
   },
   {
-    icon: "images/ce.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262992/albatroz/ce.svg",
     title: "Certified Experts",
   },
   {
-    icon: "images/mi.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263116/albatroz/mi.svg",
     title: "Measurable Impact",
   },
   {
-    icon: "images/de.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263045/albatroz/de.svg",
     title: "Domain Expertise",
   },
   {
-    icon: "images/cs.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263043/albatroz/cs.svg",
     title: "Custom Solutions",
   },
    {
-    icon: "images/be.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262819/albatroz/be.svg",
     title: "Businness Experienced",
   },
  
   {
-    icon: "images/di.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263048/albatroz/di.svg",
     title: "Data Intelligence",
   },
    {
-    icon: "images/ep.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263075/albatroz/ep.svg",
     title: "Experienced Professionals",
   },
   {
-    icon: "images/eep.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263071/albatroz/eep.svg",
     title: "End-to-End Partnership",
   },
   {
-    icon: "images/tp.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263196/albatroz/tp.svg",
     title: "Trusted Partnership",
   },
 ];
@@ -111,22 +111,22 @@ const features = [
 function Middle() {
     const data = [
     {
-      image:"/images/ic1.png",
+      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263086/albatroz/ic1.png",
       title: "Improve Visibility",
       text: "Gain real-time insights across your portfolio and projects.",
     },
     {
-      image:"/images/ic2.png",
+      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263087/albatroz/ic2.png",
       title: "Optimize Resources",
       text: "Allocate the right resources to the right projects.",
     },
     {
-      image:"/images/ic3.png",
+      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263089/albatroz/ic3.png",
       title: "Increase Efficiency",
       text: "DStreamline processes & deliver projects on time.",
     },
     {
-      image:"/images/ic4.png",
+      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263090/albatroz/ic4.png",
       title: "Maximize ROI",
       text: "Make smarter decisions & drive better business outcomes.",
     },
@@ -178,7 +178,7 @@ function Middle() {
       {/* Image only on Desktop */}
       <div className="relative w-full rounded-lg overflow-hidden mb-6 group hidden lg:block">
         <img
-          src="/images/asd.png"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262778/albatroz/asd.png"
           alt="People looking at neon question mark"
           className="w-full h-[350px] object-cover rounded-lg brightness-90 contrast-125"
         />
@@ -306,7 +306,7 @@ the focus of everything.
        
         <div className="w-full flex justify-center">
           <img
-            src="/images/dh.png"
+            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263047/albatroz/dh.png"
             alt="Contact"
             className="rounded-xl shadow-lg w-full  object-cover"
           />
@@ -325,7 +325,7 @@ the focus of everything.
              
              
               <img
-                src="/images/as.png"
+                src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262777/albatroz/as.png"
                 alt="hand"
                 className=" w-[520px]"
               />

@@ -90,7 +90,7 @@ export default function Footer() {
           <div className="col-span-2 flex items-start justify-center lg:col-span-3 lg:justify-start">
             <Link href="/" className="inline-flex transition-opacity hover:opacity-90">
               <img
-                src="/images/albatroz-logo-tagline.png"
+                src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262766/albatroz/albatroz-logo-tagline.png"
                 alt="Albatroz Solutions — Business Outcomes. Delivered"
                 className="h-[64px] w-auto sm:h-[76px] md:h-[92px]"
               />

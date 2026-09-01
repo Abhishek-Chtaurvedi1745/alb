@@ -5,7 +5,7 @@ function page() {
     <div>
       <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
         <img
-          src="/images/abtt.png"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262753/albatroz/abtt.png"
           alt="About Us"
           className="h-full w-full object-cover"
         />
@@ -58,7 +58,7 @@ function page() {
               <div className="absolute inset-0 translate-x-2 translate-y-2 rounded-[20px] border-r-[4px] border-b-[4px] border-[#FF403A] md:translate-x-2.5 md:translate-y-2.5 md:rounded-[24px]" />
               <div className="relative z-10 overflow-hidden rounded-[20px] md:rounded-[24px]">
                 <img
-                  src="/images/imm.png"
+                  src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263095/albatroz/imm.png"
                   alt="Albatroz team collaboration"
                   className="aspect-[5/4] h-auto w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
@@ -89,7 +89,7 @@ function page() {
                   <div className="flex flex-wrap items-center gap-5">
                     <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-white md:h-[84px] md:w-[84px]">
                       <img
-                        src="/images/ma.svg"
+                        src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263105/albatroz/ma.svg"
                         alt=""
                         className="h-9 w-9 object-contain md:h-10 md:w-10"
                       />
@@ -127,7 +127,7 @@ function page() {
                 <div className="flex flex-wrap items-center gap-5">
                   <div className="flex h-[72px] w-[72px] items-center justify-center rounded-full bg-white md:h-[84px] md:w-[84px]">
                     <img
-                      src="/images/ma1.svg"
+                      src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263107/albatroz/ma1.svg"
                       alt=""
                       className="h-9 w-9 object-contain md:h-10 md:w-10"
                     />

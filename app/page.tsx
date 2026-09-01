@@ -152,7 +152,7 @@ Get my AI readiness report
       
         <div className="w-full flex justify-center">
           <img
-            src="/images/ai.png"
+            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262764/albatroz/ai.png"
             alt="Contact"
             className="rounded-xl shadow-lg w-full "
           />
@@ -183,7 +183,7 @@ visibility and control.
        
         <div className="w-full flex justify-center">
           <img
-            src="/images/ald.png"
+            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262769/albatroz/ald.png"
             alt="Contact"
             className="rounded-xl shadow-lg w-full  object-cover"
           />
@@ -201,7 +201,7 @@ visibility and control.
     {/* Desktop Image */}
     <div className="absolute right-[-120px] top-1/2 hidden -translate-y-1/2 lg:block">
       <img
-        src="/images/nsimg.png"
+        src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263137/albatroz/nsimg.png"
         alt="Strategic Growth"
         className="w-[750px] max-w-none h-auto object-contain"
       />
@@ -266,7 +266,7 @@ visibility and control.
     {/* Mobile Image */}
     <div className="-mt-10 md:mt-12  block lg:hidden">
       <img
-        src="/images/nsimg.png"
+        src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263137/albatroz/nsimg.png"
         alt="Strategic Growth"
         className="mx-auto w-full max-w-[500px] object-contain"
       />

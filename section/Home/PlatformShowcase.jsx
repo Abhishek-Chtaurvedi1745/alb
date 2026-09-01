@@ -7,31 +7,31 @@ import { useInView } from "react-intersection-observer";
 // href only for Solutions → Project Portfolio Management matches
 const platforms = [
   {
-    src: "/images/clarity-logo-vector.svg",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262998/albatroz/clarity-logo-vector.svg",
     alt: "Clarity by Broadcom",
     tag: "Portfolio",
     href: "/clarity",
   },
   {
-    src: "/images/Automic-by-broadcom.webp",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262734/albatroz/Automic-by-broadcom.png",
     alt: "Automic by Broadcom",
     tag: "Service Orchestration",
     href: "/automic-automation",
   },
   {
-    src: "/images/rally.svg",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263174/albatroz/rally.svg",
     alt: "Rally by Broadcom",
     tag: "Agile",
     href: "/rally",
   },
   {
-    src: "/images/ca.svg",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262981/albatroz/ca.svg",
     alt: "ConnectALL by Broadcom",
     tag: "Integration",
     href: "/connectall",
   },
   {
-    src: "/images/stb.svg",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263187/albatroz/stb.svg",
     alt: "Stonebranch",
     tag: "Automation",
     href: "/stonebranch",

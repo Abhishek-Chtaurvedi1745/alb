@@ -185,7 +185,7 @@ export default function RallyPage() {
     <div className="bg-black text-white">
       <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
         <img
-          src="/images/rally-hero.png"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263168/albatroz/rally-hero.png"
           alt="Rally by Broadcom"
           className="h-full w-full object-cover"
         />
@@ -193,7 +193,7 @@ export default function RallyPage() {
         <div className="absolute inset-0 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
           <h1 className="m-0">
             <img
-              src="/images/rally-logo-hd.png"
+              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263169/albatroz/rally-logo-hd.png"
               alt="Rally by Broadcom"
               className="h-16 w-auto max-w-[min(100%,520px)] object-contain sm:h-20 md:h-24"
               decoding="async"

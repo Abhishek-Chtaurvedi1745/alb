@@ -7,7 +7,7 @@ function buildServicePage(slug, title, subtitle, intro, bullets, extraSections =
   return {
     slug,
     title,
-    image: "/images/ea10.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263061/albatroz/ea10.png",
     subtitle,
     intro,
     sections: [

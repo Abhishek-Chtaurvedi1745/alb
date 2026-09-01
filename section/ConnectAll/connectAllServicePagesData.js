@@ -25,7 +25,7 @@ export const connectAllServicePages = {
   "assessment-advisory": buildServicePage({
     slug: "assessment-advisory",
     title: "Assessment & Advisory",
-    image: "/images/connectall-services/assessment-advisory.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263033/albatroz/connectall-services/assessment-advisory.webp",
     bullets: [
       "Toolchain discovery and integration landscape assessment",
       "System-to-system dependency mapping across business functions",
@@ -38,7 +38,7 @@ export const connectAllServicePages = {
   "implementation-setup": buildServicePage({
     slug: "implementation-setup",
     title: "Implementation & Setup",
-    image: "/images/connectall-services/implementation-setup.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263034/albatroz/connectall-services/implementation-setup.webp",
     bullets: [
       "ConnectALL installation and environment setup",
       "Connector and adapter configuration for target tool pairs",
@@ -51,7 +51,7 @@ export const connectAllServicePages = {
   "workflow-use-case-development": buildServicePage({
     slug: "workflow-use-case-development",
     title: "Workflow & Use-Case Development",
-    image: "/images/connectall-services/workflow-use-case-development.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263036/albatroz/connectall-services/workflow-use-case-development.webp",
     bullets: [
       "Use-case workflow design and build-out",
       "Incident, portfolio, test, and source-control sync patterns",
@@ -65,7 +65,7 @@ export const connectAllServicePages = {
   "upgrades-version-management": buildServicePage({
     slug: "upgrades-version-management",
     title: "Upgrades & Version Management",
-    image: "/images/connectall-services/upgrades-version-management.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263035/albatroz/connectall-services/upgrades-version-management.webp",
     bullets: [
       "ConnectALL version upgrade planning and execution",
       "Compatibility checks with connected tools and adapters",

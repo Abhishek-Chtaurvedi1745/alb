@@ -5,7 +5,7 @@ import { useState } from "react";
 const industries = [
   {
     name: "BFSI",
-    image: "/images/ea5.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263065/albatroz/ea5.png",
     items: [
       {
         title: "End-of-Day Batch Processing",
@@ -23,7 +23,7 @@ const industries = [
   },
   {
     name: "Retail",
-    image: "/images/ea6.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263067/albatroz/ea6.png",
     items: [
       {
         title: "Order-to-Fulfilment Orchestration",
@@ -37,7 +37,7 @@ const industries = [
   },
   {
     name: "Manufacturing",
-    image: "/images/ea8.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263069/albatroz/ea8.png",
     items: [
       {
         title: "Production Planning & Scheduling",
@@ -51,7 +51,7 @@ const industries = [
   },
   {
     name: "Telecom",
-    image: "/images/ea9.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263070/albatroz/ea9.png",
     items: [
       {
         title: "Billing & Revenue Assurance",

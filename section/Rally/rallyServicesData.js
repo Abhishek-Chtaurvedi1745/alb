@@ -3,8 +3,8 @@ export const rallyServices = [
     slug: "implementation",
     title: "Implementation",
     label: "Implementation",
-    image: "/images/rally-services/implementation.webp",
-    icon: "/images/11.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263171/albatroz/rally-services/implementation.webp",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262692/albatroz/11.svg",
     href: "/rally/services/implementation",
     description:
       "End-to-end Rally implementation tailored to enterprise Agile delivery processes, team structures, and governance needs.",
@@ -13,8 +13,8 @@ export const rallyServices = [
     slug: "integration",
     title: "Integration",
     label: "Integration",
-    image: "/images/rally-services/integration.webp",
-    icon: "/images/14.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263172/albatroz/rally-services/integration.webp",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262698/albatroz/14.svg",
     href: "/rally/services/integration",
     description:
       "Connect Rally with Clarity and enterprise tools to automate data synchronization and improve portfolio-level visibility.",
@@ -23,8 +23,8 @@ export const rallyServices = [
     slug: "support",
     title: "Support",
     label: "Support",
-    image: "/images/rally-services/support.webp",
-    icon: "/images/17.webp",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263173/albatroz/rally-services/support.webp",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262705/albatroz/17.svg",
     href: "/rally/services/support",
     description:
       "Functional and technical support for Rally operations including troubleshooting, enhancements, upgrades, and monitoring.",

@@ -2,7 +2,7 @@ export const clarityServicePages = {
   "implementation": {
   slug: "implementation",
   title: "Implementation",
-  image: "/images/clarity-services/implementation.webp",
+  image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263006/albatroz/clarity-services/implementation.webp",
   subtitle:
     "Transform Your Project Portfolio Management with Expert Implementation Services",
 
@@ -193,7 +193,7 @@ export const clarityServicePages = {
         "Every implementation follows a proven delivery framework that includes:",
       paragraphs: [],
       bullets: [],
-      image: "/images/clarity-services/implementation-methodology.webp",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263005/albatroz/clarity-services/implementation-methodology.webp",
       imageAlt: "Clarity implementation methodology flowchart",
     },
   ],
@@ -206,7 +206,7 @@ export const clarityServicePages = {
  "installations-upgrades": {
   slug: "installations-upgrades",
   title: "Installations & Upgrades",
-  image: "/images/clarity-services/installation-upgrade.webp",
+  image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263007/albatroz/clarity-services/installation-upgrade.webp",
   subtitle: "Upgrade to the Latest Version of Clarity with Confidence",
 
   intro: [
@@ -348,7 +348,7 @@ export const clarityServicePages = {
  "integration": {
     "slug": "integration",
     "title": "Integration",
-    "image": "/images/clarity-services/integration.webp",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263008/albatroz/clarity-services/integration.webp",
     "subtitle": "Connect Clarity with Your Enterprise Ecosystem",
     "intro": [
       "As organizations mature their Project Portfolio Management (PPM) processes and expand Clarity adoption across multiple business units, seamless integration with enterprise applications becomes essential.",
@@ -503,7 +503,7 @@ export const clarityServicePages = {
   "clarity-reporting-dashboard-services": {
     "slug": "clarity-reporting-dashboard-services",
     "title": "Reporting & Dashboard",
-    "image": "/images/clarity-services/jaspersoft-reports.webp",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263010/albatroz/clarity-services/jaspersoft-reports.webp",
     "subtitle": "Modern Reporting & Analytics Solutions for Clarity",
     "intro": [
       "Data-driven decision-making is at the heart of successful Project Portfolio Management. As organizations adopt the latest Clarity capabilities, modern reporting and analytics become essential for delivering real-time visibility into projects, portfolios, resources, finances, and strategic initiatives.",
@@ -660,7 +660,7 @@ export const clarityServicePages = {
  "technical-development": {
     "slug": "technical-development",
     "title": "Technical Development",
-    "image": "/images/clarity-services/technical-development.webp",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263015/albatroz/clarity-services/technical-development.webp",
     "subtitle": "Extend, Automate, and Optimize Your Clarity Platform",
     "intro": [
       "Every organization has unique business processes, governance models, and reporting requirements. While Broadcom Clarity provides a powerful Project Portfolio Management platform, organizations often require custom development to align the solution with their operational needs.",
@@ -821,7 +821,7 @@ export const clarityServicePages = {
   "staff-augmentation": {
     "slug": "staff-augmentation",
     "title": "Staff Augmentation",
-    "image": "/images/clarity-services/staff-augmentation.webp",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263013/albatroz/clarity-services/staff-augmentation.webp",
     "subtitle": "Extend Your Clarity Team with Broadcom Certified Technical Consultants",
     "intro": [
       "Organizations often require additional expertise to accelerate implementations, support business-critical initiatives, execute upgrades, manage production support, or deliver strategic transformation programs. Finding experienced Clarity professionals with the right functional and technical skills can be both challenging and time-consuming.",
@@ -1020,7 +1020,7 @@ export const clarityServicePages = {
   "support-maintenance": {
     "slug": "support-maintenance",
     "title": "Support & Maintenance",
-    "image": "/images/clarity-services/support-maintenance.webp",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263014/albatroz/clarity-services/support-maintenance.webp",
     "subtitle": "Keep Your Clarity Environment Stable, Secure, and Continuously Optimized",
     "intro": [
       "A successful Clarity implementation extends far beyond deployment. Organizations require ongoing support, proactive monitoring, continuous maintenance, and timely enhancements to ensure long-term platform stability, business continuity, and user adoption.",
@@ -1175,7 +1175,7 @@ export const clarityServicePages = {
   "user-tranings": {
     "slug": "user-tranings",
     "title": "User Trainings",
-    "image": "/images/clarity-services/user-trainings.webp",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263016/albatroz/clarity-services/user-trainings.webp",
     "subtitle": "Empower Your Teams to Maximize the Value of Clarity",
     "intro": [
       "Successful Clarity implementations depend not only on technology but also on user adoption and organizational readiness. Effective training enables users to confidently leverage the platform, improve operational efficiency, and maximize the return on your Clarity investment.",

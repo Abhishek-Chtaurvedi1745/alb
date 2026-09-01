@@ -14,43 +14,43 @@ import { prebuiltPlugins } from '@/section/Clarity/prebuiltPluginsData';
 const services = [
   {
     label: "Implementation Services",
-    image: "/images/11.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262692/albatroz/11.svg",
     href: "/clarity/services/implementation",
   },
   {
     label: "Installation & Upgrades",
-    image: "/images/12.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262694/albatroz/12.svg",
     href: "/clarity/services/installations-upgrades",
   },
   {
     label: "Integration Services",
-    image: "/images/14.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262698/albatroz/14.svg",
     href: "/clarity/services/integration",
   },
   {
     label: "Technical Development",
-    image: "/images/15.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262700/albatroz/15.svg",
     href: "/clarity/services/technical-development",
   },
   {
     label: "Staff Augmentation",
-    image: "/images/new16.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263126/albatroz/new16.svg",
     href: "/clarity/services/staff-augmentation",
   },
   {
     label: "Support & Maintenance",
-    image: "/images/17.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262705/albatroz/17.svg",
     href: "/clarity/services/support-maintenance",
   },
   {
     label: "User Trainings",
-    image: "/images/18.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262707/albatroz/18.svg",
     href: "/clarity/services/user-tranings",
     breakLabel: true,
   },
   {
     label: "Reports & Dashboards",
-    image: "/images/19.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262709/albatroz/19.svg",
     href: "/clarity/services/clarity-reporting-dashboard-services",
   },
 ];
@@ -59,25 +59,25 @@ const benefits = [
   {
     title: "Improve Visibility",
     description: "Gain real-time insights across your portfolio and projects.",
-    icon: "/images/20.png",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262714/albatroz/20.png",
     gradient: "from-cyan-500/30 via-blue-900/40 to-black",
   },
   {
     title: "Optimize Resources",
     description: "Allocate the right resources to the right projects.",
-    icon: "/images/21.png",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262715/albatroz/21.png",
     gradient: "from-slate-500/30 via-slate-800/40 to-black",
   },
   {
     title: "Increase Efficiency",
     description: "Streamline processes & deliver projects on time.",
-    icon: "/images/22.png",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262716/albatroz/22.png",
     gradient: "from-orange-500/30 via-zinc-800/40 to-black",
   },
   {
     title: "Maximize ROI",
     description: "Make smarter decisions & drive better business outcomes.",
-    icon: "/images/23.png",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262717/albatroz/23.png",
     gradient: "from-amber-500/30 via-yellow-900/40 to-black",
   },
 ];
@@ -88,7 +88,7 @@ const benefits = [
     <div>
       <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
         <img
-          src="/images/clarity-hero.png"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262996/albatroz/clarity-hero.png"
           alt="Clarity by Broadcom"
           className="h-full w-full object-cover"
         />

@@ -5,7 +5,7 @@ import BookACallButton from "@/component/BookACall/BookACallButton";
 import { aiServicesPageData } from "./aiServicesPageData";
 
 const SLIDE_INTERVAL = 6000;
-const HERO_IMAGE = "/images/ai-services-hero.png?v=3";
+const HERO_IMAGE = "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262763/albatroz/ai-services-hero.jpg?v=3";
 
 function RichHtml({ html, className = "", as: Tag = "span" }) {
   const safe = html

@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "build:cpanel": "node scripts/build-cpanel.mjs",
+    "images:cloudinary": "node --env-file=.env.local scripts/cloudinary-migrate.mjs",
+    "images:cloudinary:dry": "node --env-file=.env.local scripts/cloudinary-migrate.mjs --dry-run",
     "start": "next start",
     "lint": "eslint"
   },
@@ -24,6 +26,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cloudinary": "^2.11.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "^4",

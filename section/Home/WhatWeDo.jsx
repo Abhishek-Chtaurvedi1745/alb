@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 const services = [
   {
-    icon: "/images/md1.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263109/albatroz/md1.svg",
     title: "Project & Portfolio Management",
     href: "/project-portfolio-management",
     items: [
@@ -17,7 +17,7 @@ const services = [
     ],
   },
   {
-    icon: "/images/md2.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263111/albatroz/md2.svg",
     title: "Enterprise IT Automation",
     href: "/enterprise-it-automation",
     items: [
@@ -28,7 +28,7 @@ const services = [
     ],
   },
   {
-    icon: "/images/md3.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263113/albatroz/md3.svg",
     title: "AI Services for Enterprise",
     href: "/ai-services-for-enterprise",
     items: [
@@ -140,7 +140,7 @@ function ServiceCard({ service, index, inView }) {
                   active ? "bg-[#ff403a]/20" : "bg-transparent"
                 }`}
               >
-                <img src="/images/mdc.svg" alt="" className="h-4 w-4" />
+                <img src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263114/albatroz/mdc.svg" alt="" className="h-4 w-4" />
               </span>
               <span
                 className={`leading-snug transition-colors duration-300 ${

@@ -3,11 +3,24 @@ const sharedClosing = {
   text: "Albatroz helps organizations get the most from Broadcom Automic Automation through expert implementation, upgrades, integration, and managed support — delivering scalable, secure, and future-ready enterprise workload automation.",
 };
 
+const automicServiceImages = {
+  implementation:
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262792/albatroz/automic-services/implementation.png",
+  "installation-upgrade":
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262793/albatroz/automic-services/installation-upgrade.png",
+  "education-training":
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262790/albatroz/automic-services/education-training.png",
+  "staff-augmentation":
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262794/albatroz/automic-services/staff-augmentation.png",
+  "support-maintenance":
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262796/albatroz/automic-services/support-maintenance.png",
+};
+
 function buildServicePage(slug, title, subtitle, intro, bullets, extraSections = []) {
   return {
     slug,
     title,
-    image: `/images/automic-services/${slug}.png`,
+    image: automicServiceImages[slug],
     subtitle,
     intro,
     sections: [

@@ -28,7 +28,7 @@ function Number() {
    <div
   className="grid grid-cols-2 md:grid-cols-4 gap-6 rounded-2xl   p-8 relative"
   style={{
-    backgroundImage: "url('/images/alc.png')",
+    backgroundImage: "url('https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262768/albatroz/alc.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}

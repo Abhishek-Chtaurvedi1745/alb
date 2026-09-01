@@ -17,7 +17,7 @@ const vacancies = [
 function page() {
   return (
     <div>
-      <CommonBanner image="/images/crr.png" title="Career" highlight="" />
+      <CommonBanner image="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263037/albatroz/crr.png" title="Career" highlight="" />
 
       <section className="w-full bg-black py-10">
         <div className="mx-auto max-w-5xl px-4 text-center">

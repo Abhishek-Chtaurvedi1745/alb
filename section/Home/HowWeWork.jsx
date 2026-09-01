@@ -14,8 +14,8 @@ const steps = [
     glowClass: "shadow-[0_0_30px_rgba(255,64,58,0.12)]",
     textClass: "text-[#ff403a]",
     bgClass: "bg-[#ff403a]",
-    icon: "/images/ww1.svg?v=red",
-    checkIcon: "/images/aa1.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263199/albatroz/ww1.svg?v=red",
+    checkIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262742/albatroz/aa1.svg",
     list: [
       "Product Installation",
       "Implementation & Initial Rollout",
@@ -33,8 +33,8 @@ const steps = [
     glowClass: "shadow-[0_0_30px_rgba(255,64,58,0.12)]",
     textClass: "text-[#ff403a]",
     bgClass: "bg-[#ff403a]",
-    icon: "/images/ww2.svg?v=red",
-    checkIcon: "/images/aa1.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263202/albatroz/ww2.svg?v=red",
+    checkIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262742/albatroz/aa1.svg",
     list: [
       "Rollout to Other Business Units",
       "Product Upgrades",
@@ -54,8 +54,8 @@ const steps = [
     glowClass: "shadow-[0_0_30px_rgba(255,64,58,0.12)]",
     textClass: "text-[#ff403a]",
     bgClass: "bg-[#ff403a]",
-    icon: "/images/ww3.svg?v=red",
-    checkIcon: "/images/aa1.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263204/albatroz/ww3.svg?v=red",
+    checkIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262742/albatroz/aa1.svg",
     list: [
       "L2/L3 Solution Support",
       "Managed Support Services",
@@ -235,7 +235,7 @@ export default function HowWeWork() {
             <div className="absolute h-48 w-48 rounded-full bg-[#ff403a]/15 blur-3xl" />
             <div className="absolute h-36 w-36 translate-x-10 -translate-y-5 rounded-full bg-[#ff403a]/10 blur-3xl" />
             <img
-              src="/images/hww.png?v=2"
+              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263083/albatroz/hww.jpg?v=2"
               alt="How we work process illustration"
               className="relative z-0 w-full max-w-[340px] object-contain md:max-w-[360px] lg:max-w-[380px]"
             />
