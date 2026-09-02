@@ -38,7 +38,6 @@ const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Our Teams", href: "/ourteam" },
   { label: "Careers", href: "/career" },
-  { label: "News & Events", href: "/blog" },
   { label: "Blogs", href: "/blog" },
 ];
 
@@ -180,10 +179,22 @@ export default function Footer() {
               Follow on Us
             </h4>
             <div className="flex flex-wrap items-center gap-4 text-[#e53935]">
-              <a href="/" aria-label="YouTube" className="transition-opacity hover:opacity-75">
+              <a
+                href="https://www.youtube.com/@albatrozsolutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="transition-opacity hover:opacity-75"
+              >
                 <YouTubeIcon />
               </a>
-              <a href="/" aria-label="LinkedIn" className="transition-opacity hover:opacity-75">
+              <a
+                href="https://in.linkedin.com/company/albatrozsolutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="transition-opacity hover:opacity-75"
+              >
                 <LinkedInIcon />
               </a>
             </div>
@@ -199,13 +210,6 @@ export default function Footer() {
             className="text-center text-[12px] text-[#bbbbbb] transition-colors hover:text-[#ff403a] sm:text-[13px]"
           >
             Privacy Policy
-          </Link>
-          <span className="text-[#555555]">|</span>
-          <Link
-            href="/privacy-policy"
-            className="text-center text-[12px] text-[#bbbbbb] transition-colors hover:text-[#ff403a] sm:text-[13px]"
-          >
-            Terms & Conditions
           </Link>
         </div>
 

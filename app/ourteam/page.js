@@ -28,7 +28,7 @@ import Footer from "@/component/Footer/Footer"
       name: "Gayathri Gupta Shatavelli",
       role: "Practice Lead – PPM",
       description:
-        "A highly motivated Clarity guru backed by versatile skillset & 12 years of bimplementing & customizing Clarity for global customers. Leads the PPM Practice & Albatroz and a great mentor for budding consultants. Certified SAFe Agilist & Clarity PPM Professional. Traveller, foodie and loves music.",
+        "A highly motivated Clarity guru backed by versatile skillset & 12 years of implementing & customizing Clarity for global customers. Leads the PPM Practice & Albatroz and a great mentor for budding consultants. Certified SAFe Agilist & Clarity PPM Professional. Traveller, foodie and loves music.",
       image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263103/albatroz/lt3.png",
     },
     {
