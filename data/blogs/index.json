@@ -1,5 +1,16 @@
 [
   {
+    "slug": "migrating-from-jaspersoft-to-clarity-native-reporting-workspace",
+    "title": "Migrating from Jaspersoft to Clarity's Native Reporting Workspace",
+    "category": "Clarity",
+    "categorySlug": "clarity",
+    "date": "Sep 3, 2026",
+    "author": "admin",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788424593/albatroz/blog/uploads/2026/09/migrating-jaspersoft-to-clarity-native-reporting.webp",
+    "excerpt": "Everything Clarity administrators and PMO teams need to know before September 2026 — timelines, Native Reporting Workspace capabilities, and a practical five-phase migration approach.",
+    "readTime": 8
+  },
+  {
     "slug": "value-stream-management",
     "title": "Value Stream Management",
     "category": "Project Portfolio Management",

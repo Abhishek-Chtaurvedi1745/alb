@@ -7,11 +7,11 @@ export default function BlogCard({ post }) {
         href={`/blog/${post.slug}`}
         className="block overflow-hidden bg-[#111111]"
       >
-        <div className="relative aspect-[16/10] w-full">
+        <div className="relative flex aspect-[16/10] w-full items-center justify-center">
           <img
             src={post.image}
             alt={post.title}
-            className="h-full w-full object-contain object-center p-1 transition-transform duration-500 group-hover:scale-[1.02] md:p-0 md:object-cover"
+            className="h-full w-full object-contain object-center p-2 transition-transform duration-500 group-hover:scale-[1.02]"
           />
         </div>
       </Link>

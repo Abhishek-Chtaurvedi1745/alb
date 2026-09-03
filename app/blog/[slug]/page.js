@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import BlogContent from "@/section/Blog/BlogContent";
+import BlogShare from "@/section/Blog/BlogShare";
 import {
   getAllBlogPosts,
   getBlogPostBySlug,
@@ -65,11 +66,13 @@ export default async function BlogDetailPage({ params }) {
 
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
           <article className="overflow-hidden rounded-[30px] border border-white/10 bg-[#0c0c0c]">
-            <img
-              src={post.image}
-              alt={post.title}
-              className="h-[320px] w-full object-cover md:h-[400px]"
-            />
+            <div className="flex w-full items-center justify-center bg-[#111111]">
+              <img
+                src={post.image}
+                alt={post.title}
+                className="max-h-[420px] w-full object-contain md:max-h-[480px]"
+              />
+            </div>
 
             <div className="p-6 md:p-10">
               <div className="mb-6 flex flex-wrap items-center gap-4">
@@ -103,6 +106,7 @@ export default async function BlogDetailPage({ params }) {
               </div>
 
               <BlogContent html={post.content} />
+              <BlogShare title={post.title} slug={post.slug} />
             </div>
           </article>
 
@@ -124,7 +128,7 @@ export default async function BlogDetailPage({ params }) {
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="h-20 w-20 shrink-0 rounded-xl object-cover"
+                          className="h-20 w-20 shrink-0 rounded-xl bg-[#111111] object-contain p-1"
                         />
                         <div>
                           <h4 className="line-clamp-2 font-semibold text-white transition group-hover:text-[#FF403A]">
@@ -151,7 +155,7 @@ export default async function BlogDetailPage({ params }) {
                           <img
                             src={item.image}
                             alt={item.title}
-                            className="h-20 w-20 shrink-0 rounded-xl object-cover"
+                            className="h-20 w-20 shrink-0 rounded-xl bg-[#111111] object-contain p-1"
                           />
                           <div>
                             <h4 className="line-clamp-2 font-semibold text-white transition group-hover:text-[#FF403A]">

@@ -55,7 +55,7 @@ Next.js app. Routes in `app/`, UI sections in `section/`, shared UI in `componen
 | `ConnectAll/` | Product + services; `connectAllData`, `connectAllServicesData`, `connectAllServicePagesData` |
 | `Automation/` | Shared Automic + Stonebranch UI; `*ServicesData`, `*ServicePagesData`, FAQ/functionalities/stories |
 | `AIServices/` | `AIServicesPage.jsx` + `aiServicesPageData.js` |
-| `Blog/` | List/card/content/filter |
+| `Blog/` | List/card/content/filter/share (`BlogShare.jsx`) |
 | `Career/` | Testimonials + data |
 | `ProjectManagement/` | PPM blocks + `ppmBenefitsData.js` |
 
