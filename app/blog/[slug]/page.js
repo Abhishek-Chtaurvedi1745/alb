@@ -83,23 +83,6 @@ export default async function BlogDetailPage({ params }) {
 
             <div className="p-6 md:p-10">
               <div className="mb-6 flex flex-wrap items-center gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF403A] text-lg font-bold text-white">
-                    {(post.author || "Admin").charAt(0).toUpperCase()}
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-white">
-                      {post.author || "Admin"}
-                    </h4>
-                    {post.authorRole ? (
-                      <p className="text-sm text-white/70">{post.authorRole}</p>
-                    ) : null}
-                    <p className="text-sm text-white/70">{post.date}</p>
-                  </div>
-                </div>
-
-                <div className="hidden h-8 w-px bg-gray-700 md:block" />
-
                 {categoryTags.map((tag) => (
                   <Link
                     key={tag.slug}
