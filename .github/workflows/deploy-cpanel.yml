@@ -18,7 +18,7 @@ jobs:
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
@@ -26,36 +26,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: 22
-          cache: npm
-
-      - name: Install dependencies
-        run: npm install --no-audit --no-fund
-
-      - name: Build cPanel static site
-        env:
-          CI: true
-          NEXT_TELEMETRY_DISABLED: "1"
-          SKIP_CPANEL_ZIP: "1"
-        run: npm run build:cpanel
-
-      - name: Verify static build
+      - name: Stop live FTPS upload
         run: |
-          test -d out
-          test -f out/index.html
-          test -f out/images/imm.png
-          test -f out/about/index.html
-          echo "Build verification successful."
-
-      - name: Install lftp
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
-
-      - name: Deploy to cPanel via FTPS
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        run: node scripts/deploy-cpanel-ftp.mjs
+          echo "Skipping cPanel FTP so the in-progress lftp upload is cancelled"
+          echo "and Apache can come back up. Do not upload while the site is down."
