@@ -90,6 +90,7 @@ set ssl:verify-certificate no
 set ssl:check-hostname no
 set ftp:ssl-allow yes
 set ftp:ssl-force true
+set ftp:ssl-auth TLS
 set ftp:ssl-protect-data true
 set ftp:passive-mode true
 set net:max-retries 6
@@ -98,7 +99,9 @@ set net:reconnect-interval-max 30
 set net:timeout 60
 set xfer:clobber yes
 set cmd:fail-exit yes
-open ftps://${server}
+# Explicit FTPS (AUTH TLS) on port 21. The ftps:// scheme would mean implicit
+# TLS on 990, which cPanel does not listen on.
+open -p 21 ftp://${server}
 user ${quote(username)} ${quote(password)}
 lcd ${quote(localDir)}
 cd ${quote(remoteDir)}
@@ -111,7 +114,7 @@ const scriptPath = path.join(os.tmpdir(), "albatroz-lftp-deploy.txt");
 fs.writeFileSync(scriptPath, script, { mode: 0o600 });
 
 console.log(
-  `Uploading ${localDir} -> ftps://${server}${remoteDir} ` +
+  `Uploading ${localDir} -> ${server}:21${remoteDir} over explicit FTPS ` +
     `(${PARALLEL_TRANSFERS} parallel transfers, assets first)`
 );
 
