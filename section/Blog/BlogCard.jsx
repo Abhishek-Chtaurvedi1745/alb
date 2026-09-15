@@ -1,6 +1,30 @@
 import Link from "next/link";
 
+const CATEGORY_NAMES = {
+  "project-portfolio-management": "Project Portfolio Management",
+  clarity: "Clarity",
+  configuration: "Configuration",
+  reporting: "Reporting",
+};
+
+function getPostTags(post) {
+  const slugs = [
+    ...new Set(
+      [post.categorySlug, ...(post.categorySlugs || [])].filter(Boolean)
+    ),
+  ];
+
+  return slugs.map((slug) => ({
+    slug,
+    name:
+      CATEGORY_NAMES[slug] ||
+      (slug === post.categorySlug ? post.category : slug),
+  }));
+}
+
 export default function BlogCard({ post }) {
+  const tags = getPostTags(post);
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-xl border border-white/10 bg-[#0c0c0c] transition-all duration-300 hover:border-[#FF403A]/45 hover:shadow-[0_0_30px_rgba(255,64,58,0.1)] md:rounded-2xl">
       <Link
@@ -18,12 +42,17 @@ export default function BlogCard({ post }) {
 
       <div className="flex flex-1 flex-col p-3 md:p-6">
         <div className="mb-2 flex flex-col gap-1.5 md:mb-3 md:flex-row md:flex-wrap md:items-center md:gap-2">
-          <Link
-            href={`/blog/category/${post.categorySlug}`}
-            className="w-fit rounded-full border border-[#FF403A]/40 bg-[#FF403A]/10 px-2 py-0.5 text-[10px] font-medium text-white transition hover:bg-[#FF403A]/20 md:px-3 md:py-1 md:text-xs"
-          >
-            {post.category}
-          </Link>
+          <div className="flex flex-wrap items-center gap-1.5">
+            {tags.map((tag) => (
+              <Link
+                key={tag.slug}
+                href={`/blog/category/${tag.slug}`}
+                className="w-fit rounded-full border border-[#FF403A]/40 bg-[#FF403A]/10 px-2 py-0.5 text-[10px] font-medium text-white transition hover:bg-[#FF403A]/20 md:px-3 md:py-1 md:text-xs"
+              >
+                {tag.name}
+              </Link>
+            ))}
+          </div>
           <span className="text-[10px] text-white/60 md:text-xs">{post.date}</span>
         </div>
 

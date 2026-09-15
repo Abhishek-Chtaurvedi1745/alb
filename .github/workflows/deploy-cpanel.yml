@@ -18,7 +18,7 @@ jobs:
   build-and-deploy:
     name: Build and Deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 40
 
     steps:
       - name: Checkout repository
@@ -51,6 +51,8 @@ jobs:
           echo "Build verification successful."
 
       - name: Deploy to cPanel via FTP
+        id: ftp_deploy
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -60,7 +62,7 @@ jobs:
           local-dir: ./out/
           server-dir: /
           log-level: minimal
-          timeout: 120000
+          timeout: 600000
           security: loose
           # Keep defaults + skip zip if ever present; state file enables incremental sync
           exclude: |
@@ -69,3 +71,30 @@ jobs:
             **/node_modules/**
             **/cpanel-upload.zip
             **/.DS_Store
+
+      - name: Retry FTP deploy
+        id: ftp_retry
+        if: steps.ftp_deploy.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./out/
+          server-dir: /
+          log-level: minimal
+          timeout: 600000
+          security: loose
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/cpanel-upload.zip
+            **/.DS_Store
+
+      - name: Fail if FTP deploy did not succeed
+        if: always() && steps.ftp_deploy.outcome == 'failure' && steps.ftp_retry.outcome != 'success'
+        run: |
+          echo "FTP deploy failed after retry."
+          exit 1

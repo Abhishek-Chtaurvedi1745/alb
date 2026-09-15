@@ -5,6 +5,7 @@ import BlogShare from "@/section/Blog/BlogShare";
 import {
   getAllBlogPosts,
   getBlogPostBySlug,
+  getPostCategoryTags,
   getRelatedPosts,
 } from "@/lib/blog";
 
@@ -45,6 +46,7 @@ export default async function BlogDetailPage({ params }) {
   }
 
   const relatedPosts = getRelatedPosts(slug, 4);
+  const categoryTags = getPostCategoryTags(post);
 
   return (
     <section className="bg-black pb-20 pt-[110px]">
@@ -54,12 +56,17 @@ export default async function BlogDetailPage({ params }) {
             Blog
           </Link>
           <span>/</span>
-          <Link
-            href={`/blog/category/${post.categorySlug}`}
-            className="transition hover:text-[#FF403A]"
-          >
-            {post.category}
-          </Link>
+          {categoryTags.map((tag, index) => (
+            <span key={tag.slug} className="contents">
+              {index > 0 ? <span className="text-white/30">·</span> : null}
+              <Link
+                href={`/blog/category/${tag.slug}`}
+                className="transition hover:text-[#FF403A]"
+              >
+                {tag.name}
+              </Link>
+            </span>
+          ))}
           <span>/</span>
           <span className="text-white/80">{post.title}</span>
         </div>
@@ -78,19 +85,30 @@ export default async function BlogDetailPage({ params }) {
               <div className="mb-6 flex flex-wrap items-center gap-4">
                 <div className="flex items-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF403A] text-lg font-bold text-white">
-                    A
+                    {(post.author || "Admin").charAt(0).toUpperCase()}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-white">Admin</h4>
+                    <h4 className="font-semibold text-white">
+                      {post.author || "Admin"}
+                    </h4>
+                    {post.authorRole ? (
+                      <p className="text-sm text-white/70">{post.authorRole}</p>
+                    ) : null}
                     <p className="text-sm text-white/70">{post.date}</p>
                   </div>
                 </div>
 
                 <div className="hidden h-8 w-px bg-gray-700 md:block" />
 
-                <span className="rounded-full border border-[#FF403A]/40 bg-[#FF403A]/10 px-3 py-1 text-xs font-medium text-[#FF403A]">
-                  {post.category}
-                </span>
+                {categoryTags.map((tag) => (
+                  <Link
+                    key={tag.slug}
+                    href={`/blog/category/${tag.slug}`}
+                    className="rounded-full border border-[#FF403A]/40 bg-[#FF403A]/10 px-3 py-1 text-xs font-medium text-[#FF403A] transition hover:bg-[#FF403A]/20"
+                  >
+                    {tag.name}
+                  </Link>
+                ))}
 
                 <span className="text-sm text-white/70">
                   {post.readTime} min read
