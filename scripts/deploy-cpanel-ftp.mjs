@@ -1,16 +1,22 @@
 #!/usr/bin/env node
 /**
- * Uploads `out/` to cPanel over FTPS using lftp.
+ * Uploads the static `out/` build to cPanel over FTPS using lftp.
  *
- * cPanel drops long single-threaded sessions mid-sync, so this uses a few
- * parallel transfers with bounded reconnects and refuses to start when the
- * FTP port is unreachable (the host is down) instead of hanging.
+ * Two things this guards against, both of which have taken the site down before:
+ *
+ * 1. A single-threaded sync of ~700 files runs long enough that cPanel drops the
+ *    session and starves the account, so transfers run in parallel and the whole
+ *    upload is bounded.
+ * 2. Uploading HTML before its hashed `_next` assets leaves visitors on pages
+ *    referencing chunks that do not exist yet, so assets are mirrored first.
  */
 import { spawnSync } from "child_process";
 import fs from "fs";
 import net from "net";
 import os from "os";
 import path from "path";
+
+const PARALLEL_TRANSFERS = 4;
 
 function requiredEnv(name) {
   const value = process.env[name];
@@ -32,18 +38,18 @@ function parseHost(raw) {
     .split(":")[0];
 }
 
-function checkPort(host, port, timeoutMs) {
+function canConnect(host, port, timeoutMs) {
   return new Promise((resolve) => {
     const socket = new net.Socket();
-    const done = (ok) => {
+    const finish = (ok) => {
       socket.destroy();
       resolve(ok);
     };
 
     socket.setTimeout(timeoutMs);
-    socket.once("connect", () => done(true));
-    socket.once("timeout", () => done(false));
-    socket.once("error", () => done(false));
+    socket.once("connect", () => finish(true));
+    socket.once("timeout", () => finish(false));
+    socket.once("error", () => finish(false));
     socket.connect(port, host);
   });
 }
@@ -58,15 +64,26 @@ if (!fs.existsSync(path.join(localDir, "index.html"))) {
   throw new Error(`No static build found at ${localDir}/index.html`);
 }
 
-const reachable = await checkPort(server, 21, 15000);
-
-if (!reachable) {
+if (!(await canConnect(server, 21, 15000))) {
   console.error(
-    `FTP port 21 on ${server} is not reachable. The hosting account is likely ` +
-      `down or blocking this runner, so nothing was uploaded.`
+    `FTP port 21 on ${server} is not accepting connections. The hosting ` +
+      `account is down or blocking this runner — nothing was uploaded, so the ` +
+      `live site is untouched. Bring the host back up and re-run this job.`
   );
   process.exit(1);
 }
+
+const mirrorFlags = [
+  "-R",
+  "--continue",
+  `--parallel=${PARALLEL_TRANSFERS}`,
+  "--no-perms",
+  "--no-umask",
+  "--exclude-glob .DS_Store",
+  "--exclude-glob cpanel-upload.zip",
+].join(" ");
+
+const hasNextAssets = fs.existsSync(path.join(localDir, "_next"));
 
 const script = `
 set ssl:verify-certificate no
@@ -85,15 +102,18 @@ open ftps://${server}
 user ${quote(username)} ${quote(password)}
 lcd ${quote(localDir)}
 cd ${quote(remoteDir)}
-mirror -R --continue --parallel=3 --no-perms --no-umask \
-  --exclude-glob .DS_Store --exclude-glob cpanel-upload.zip
+${hasNextAssets ? `mirror ${mirrorFlags} _next _next` : ""}
+mirror ${mirrorFlags} --exclude '^_next/' . .
 bye
 `;
 
 const scriptPath = path.join(os.tmpdir(), "albatroz-lftp-deploy.txt");
 fs.writeFileSync(scriptPath, script, { mode: 0o600 });
 
-console.log(`Uploading ${localDir} -> ftps://${server}${remoteDir}`);
+console.log(
+  `Uploading ${localDir} -> ftps://${server}${remoteDir} ` +
+    `(${PARALLEL_TRANSFERS} parallel transfers, assets first)`
+);
 
 const result = spawnSync("lftp", ["-f", scriptPath], {
   stdio: "inherit",
