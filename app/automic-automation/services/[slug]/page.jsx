@@ -4,6 +4,7 @@ import {
   getAutomicServicePage,
   automicServiceSlugs,
 } from "@/section/Automation/automicServicePagesData";
+import { pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return automicServiceSlugs.map((slug) => ({ slug }));
@@ -17,10 +18,13 @@ export async function generateMetadata({ params }) {
     return { title: "Automic Service | Albatroz Solutions" };
   }
 
-  return {
+  return pageMeta({
     title: `${page.title} | Automic Automation Services | Albatroz Solutions`,
-    description: page.subtitle,
-  };
+    description:
+      page.subtitle ||
+      `${page.title} from Albatroz Solutions — Broadcom Automic Automation services.`,
+    path: `/automic-automation/services/${slug}`,
+  });
 }
 
 export default async function AutomicServiceSlugPage({ params }) {

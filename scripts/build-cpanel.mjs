@@ -31,6 +31,10 @@ RewriteRule ^Blog/(.*)$ /blog/$1 [R=308,L]
 RewriteRule ^project-management/?$ /project-portfolio-management/ [R=308,L]
 RewriteRule ^project-management/(.*)$ /project-portfolio-management/$1 [R=308,L]
 
+# Canonical host: non-www
+RewriteCond %{HTTP_HOST} ^www\\.albatrozsolutions\\.com$ [NC]
+RewriteRule ^(.*)$ https://albatrozsolutions.com/$1 [R=301,L]
+
 # Serve trailing-slash folders correctly
 DirectoryIndex index.html
 

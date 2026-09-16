@@ -11,11 +11,9 @@ import {
   whyImplementBenefits,
 } from "@/section/ConnectAll/connectAllData";
 
-export const metadata = {
-  title: "ConnectALL | Albatroz Solutions",
-  description:
-    "ConnectALL by Broadcom — enterprise integration platform services from Albatroz Solutions. Connect Clarity, Rally, Jira, ServiceNow, and more.",
-};
+import { seoForPath } from "@/lib/seo";
+
+export const metadata = seoForPath("/connectall");
 
 function CheckItem({ children }) {
   return (

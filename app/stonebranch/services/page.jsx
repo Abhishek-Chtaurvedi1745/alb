@@ -1,11 +1,13 @@
 import ClarityServiceCard from "@/section/Clarity/ClarityServiceCard";
 import { stonebranchServices } from "@/section/Automation/stonebranchServicesData";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Stonebranch Services | Albatroz Solutions",
   description:
     "Explore expert Stonebranch Automation services from Albatroz Solutions — implementation, installation, staff augmentation, and support.",
-};
+  path: "/stonebranch/services",
+});
 
 export default function StonebranchServicesPage() {
   return (

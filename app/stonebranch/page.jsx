@@ -1,6 +1,7 @@
 import BookACallButton from "@/component/BookACall/BookACallButton";
 import FunctionalityGrid from "@/section/Automation/FunctionalityGrid";
 import StonebranchServicesGrid from "@/section/Automation/StonebranchServicesGrid";
+import { seoForPath } from "@/lib/seo";
 
 const productSections = [
   {
@@ -74,11 +75,7 @@ const capabilities = [
   },
 ];
 
-export const metadata = {
-  title: "Stonebranch | Albatroz Solutions",
-  description:
-    "Stonebranch workload automation solutions including UAC, UDMG, and Secure Proxy for enterprise IT orchestration.",
-};
+export const metadata = seoForPath("/stonebranch");
 
 export default function StonebranchPage() {
   return (

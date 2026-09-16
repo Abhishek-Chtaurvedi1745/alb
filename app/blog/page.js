@@ -1,11 +1,8 @@
 import BlogListSection from "@/section/Blog/BlogListSection";
 import { BLOG_CATEGORIES, getAllBlogPosts } from "@/lib/blog";
+import { seoForPath } from "@/lib/seo";
 
-export const metadata = {
-  title: "Blog | Albatroz Solutions",
-  description:
-    "Expert insights and updates on project portfolio management, Clarity PPM, reporting, and enterprise automation.",
-};
+export const metadata = seoForPath("/blog");
 
 export default function BlogPage() {
   const posts = getAllBlogPosts();

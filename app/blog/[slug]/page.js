@@ -8,6 +8,7 @@ import {
   getPostCategoryTags,
   getRelatedPosts,
 } from "@/lib/blog";
+import { seoForBlog, SITE_URL } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return getAllBlogPosts().map((post) => ({ slug: post.slug }));
@@ -21,10 +22,7 @@ export async function generateMetadata({ params }) {
     return { title: "Blog Not Found | Albatroz Solutions" };
   }
 
-  return {
-    title: `${post.title} | Albatroz Solutions`,
-    description: post.excerpt,
-  };
+  return seoForBlog(post);
 }
 
 export default async function BlogDetailPage({ params }) {
@@ -47,9 +45,31 @@ export default async function BlogDetailPage({ params }) {
 
   const relatedPosts = getRelatedPosts(slug, 4);
   const categoryTags = getPostCategoryTags(post);
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author || "Albatroz Solutions",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Albatroz Solutions",
+      url: SITE_URL,
+    },
+    mainEntityOfPage: `${SITE_URL}/blog/${post.slug}/`,
+  };
 
   return (
     <section className="bg-black pb-20 pt-[110px]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8 flex flex-wrap items-center gap-2 text-sm text-white/60">
           <Link href="/blog" className="transition hover:text-[#FF403A]">

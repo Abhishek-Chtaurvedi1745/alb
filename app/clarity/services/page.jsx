@@ -1,11 +1,8 @@
 import ClarityServiceCard from "@/section/Clarity/ClarityServiceCard";
 import { clarityServices } from "@/section/Clarity/clarityServicesData";
+import { seoForPath } from "@/lib/seo";
 
-export const metadata = {
-  title: "Clarity Services | Albatroz Solutions",
-  description:
-    "Transform complexity into clarity and confidence. Explore expert-driven Broadcom Clarity PPM services from Albatroz Solutions.",
-};
+export const metadata = seoForPath("/clarity/services");
 
 export default function ClarityServicesPage() {
   return (

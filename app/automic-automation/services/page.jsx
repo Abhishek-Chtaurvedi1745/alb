@@ -1,11 +1,13 @@
 import AutomicServiceCard from "@/section/Automation/AutomicServiceCard";
 import { automicServices } from "@/section/Automation/automicServicesData";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Automic Automation Services | Albatroz Solutions",
   description:
-    "Transform complexity into clarity and confidence. Explore expert-driven Automic Automation services from Albatroz Solutions.",
-};
+    "Albatroz delivers Broadcom Automic Automation implementation, upgrades, training and support for enterprise job scheduling and workload automation.",
+  path: "/automic-automation/services",
+});
 
 export default function AutomicAutomationServicesPage() {
   return (

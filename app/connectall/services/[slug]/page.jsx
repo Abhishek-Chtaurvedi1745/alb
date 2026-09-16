@@ -4,6 +4,7 @@ import {
   connectAllServiceSlugs,
   getConnectAllServicePage,
 } from "@/section/ConnectAll/connectAllServicePagesData";
+import { pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return connectAllServiceSlugs.map((slug) => ({ slug }));
@@ -17,10 +18,13 @@ export async function generateMetadata({ params }) {
     return { title: "ConnectALL Service | Albatroz Solutions" };
   }
 
-  return {
+  return pageMeta({
     title: `${page.title} | ConnectALL Services | Albatroz Solutions`,
-    description: page.subtitle,
-  };
+    description:
+      page.subtitle ||
+      `${page.title} from Albatroz Solutions — ConnectALL enterprise integration services.`,
+    path: `/connectall/services/${slug}`,
+  });
 }
 
 export default async function ConnectAllServiceSlugPage({ params }) {

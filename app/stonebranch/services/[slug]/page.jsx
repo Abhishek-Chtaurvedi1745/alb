@@ -4,6 +4,7 @@ import {
   getStonebranchServicePage,
   stonebranchServiceSlugs,
 } from "@/section/Automation/stonebranchServicePagesData";
+import { pageMeta } from "@/lib/seo";
 
 export function generateStaticParams() {
   return stonebranchServiceSlugs.map((slug) => ({ slug }));
@@ -17,10 +18,13 @@ export async function generateMetadata({ params }) {
     return { title: "Stonebranch Service | Albatroz Solutions" };
   }
 
-  return {
+  return pageMeta({
     title: `${page.title} | Stonebranch Services | Albatroz Solutions`,
-    description: page.subtitle,
-  };
+    description:
+      page.subtitle ||
+      `${page.title} from Albatroz Solutions — Stonebranch UAC automation services.`,
+    path: `/stonebranch/services/${slug}`,
+  });
 }
 
 export default async function StonebranchServiceSlugPage({ params }) {

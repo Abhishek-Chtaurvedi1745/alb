@@ -1,11 +1,8 @@
 import RallyServiceCard from "@/section/Rally/RallyServiceCard";
 import { rallyServices } from "@/section/Rally/rallyServicesData";
+import { seoForPath } from "@/lib/seo";
 
-export const metadata = {
-  title: "Rally Services | Albatroz Solutions",
-  description:
-    "Explore Rally implementation, integration, and support services from Albatroz Solutions.",
-};
+export const metadata = seoForPath("/rally/services");
 
 export default function RallyServicesPage() {
   return (

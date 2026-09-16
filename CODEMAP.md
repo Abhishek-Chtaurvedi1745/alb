@@ -11,7 +11,8 @@ Next.js app. Routes in `app/`, UI sections in `section/`, shared UI in `componen
 | `component/` | Shared UI (nav, footer, forms, book-a-call…) |
 | `public/images/` | Static assets (product heroes, service covers…) |
 | `data/blogs/` | Blog JSON (`index.json` + `posts/`) |
-| `lib/` | Helpers (`blog.js`, `sendEmail.js`, `formSource.js` — page/button lead attribution) |
+| `lib/` | Helpers (`blog.js`, `seo.js`, `sendEmail.js`, `formSource.js`) |
+| `app/sitemap.js` + `app/robots.js` | Production sitemap.xml + robots.txt |
 | `scripts/build-cpanel.mjs` | Static `out/` + `cpanel-upload.zip` for cPanel (`npm run build:cpanel`) |
 | `scripts/deploy-cpanel-ftp.mjs` | GitHub Actions FTPS upload of `out/` via lftp (reconnects on drop) |
 | `scripts/cloudinary-migrate.mjs` | Upload `public/images` → Cloudinary + rewrite paths (`npm run images:cloudinary`) |

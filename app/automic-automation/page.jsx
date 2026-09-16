@@ -7,12 +7,9 @@ import AutomicServicesGrid from "@/section/Automation/AutomicServicesGrid";
 import { automicFaqData } from "@/section/Automation/automicFaqData";
 import { automicFunctionalities } from "@/section/Automation/automicFunctionalitiesData";
 import { automicSuccessStories } from "@/section/Automation/automicSuccessStoriesData";
+import { seoForPath } from "@/lib/seo";
 
-export const metadata = {
-  title: "Automic Automation | Albatroz Solutions",
-  description:
-    "Automic Workload Automation (AWA) by Broadcom — enterprise-grade workload automation and orchestration for hybrid IT environments.",
-};
+export const metadata = seoForPath("/automic-automation");
 
 export default function AutomicAutomationPage() {
   return (

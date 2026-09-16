@@ -1,11 +1,8 @@
 import ConnectAllServiceCard from "@/section/ConnectAll/ConnectAllServiceCard";
 import { connectAllServices } from "@/section/ConnectAll/connectAllServicesData";
+import { seoForPath } from "@/lib/seo";
 
-export const metadata = {
-  title: "ConnectALL Services | Albatroz Solutions",
-  description:
-    "Explore expert ConnectALL services from Albatroz Solutions — Assessment & Advisory, Implementation & Setup, Workflow & Use-Case Development, and Upgrades & Version Management.",
-};
+export const metadata = seoForPath("/connectall/services");
 
 export default function ConnectAllServicesPage() {
   return (

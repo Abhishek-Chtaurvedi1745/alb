@@ -5,6 +5,7 @@ import {
   getBlogPostsByCategory,
   getCategoryBySlug,
 } from "@/lib/blog";
+import { pageMeta } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return BLOG_CATEGORIES.filter((category) => category.slug !== "all").map(
@@ -20,10 +21,11 @@ export async function generateMetadata({ params }) {
     return { title: "Blog Category | Albatroz Solutions" };
   }
 
-  return {
+  return pageMeta({
     title: `${category.name} Blogs | Albatroz Solutions`,
     description: `Read ${category.name} articles from Albatroz Solutions.`,
-  };
+    path: `/blog/category/${slug}`,
+  });
 }
 
 export default async function BlogCategoryPage({ params }) {
