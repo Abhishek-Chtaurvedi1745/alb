@@ -7,6 +7,8 @@ import { connectAllServiceSlugs } from "@/section/ConnectAll/connectAllServicePa
 import { automicServiceSlugs } from "@/section/Automation/automicServicePagesData";
 import { stonebranchServiceSlugs } from "@/section/Automation/stonebranchServicePagesData";
 
+export const dynamic = "force-static";
+
 function loc(path) {
   if (!path || path === "/") {
     return `${SITE_URL}/`;
