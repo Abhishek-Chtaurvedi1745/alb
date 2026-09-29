@@ -5,15 +5,15 @@ const sharedClosing = {
 
 const automicServiceImages = {
   implementation:
-    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262792/albatroz/automic-services/implementation.png",
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680005/albatroz/lite/automic-services/implementation.webp",
   "installation-upgrade":
-    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262793/albatroz/automic-services/installation-upgrade.png",
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680006/albatroz/lite/automic-services/installation-upgrade.webp",
   "education-training":
-    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262790/albatroz/automic-services/education-training.png",
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680004/albatroz/lite/automic-services/education-training.webp",
   "staff-augmentation":
-    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262794/albatroz/automic-services/staff-augmentation.png",
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680008/albatroz/lite/automic-services/staff-augmentation.webp",
   "support-maintenance":
-    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262796/albatroz/automic-services/support-maintenance.png",
+    "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680010/albatroz/lite/automic-services/support-maintenance.webp",
 };
 
 function buildServicePage(slug, title, subtitle, intro, bullets, extraSections = []) {

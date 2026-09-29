@@ -1,0 +1,503 @@
+{
+  "createdAt": "2026-09-29T11:07:58.905Z",
+  "note": "Replace newUrl with oldUrl to restore the previous Cloudinary assets.",
+  "items": [
+    {
+      "local": "/images/ai-panel-calendar.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262754/albatroz/ai-panel-calendar.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679976/albatroz/lite/ai-panel-calendar.webp",
+      "bytes": 52354,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ai-panel-confidence.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262755/albatroz/ai-panel-confidence.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679977/albatroz/lite/ai-panel-confidence.webp",
+      "bytes": 41464,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ai-panel-documents.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262757/albatroz/ai-panel-documents.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679978/albatroz/lite/ai-panel-documents.webp",
+      "bytes": 52798,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ai-panel-knowledge.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262758/albatroz/ai-panel-knowledge.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679980/albatroz/lite/ai-panel-knowledge.webp",
+      "bytes": 139360,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ai-panel-systems.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262759/albatroz/ai-panel-systems.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679981/albatroz/lite/ai-panel-systems.webp",
+      "bytes": 130490,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ai-panel-trust.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262760/albatroz/ai-panel-trust.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679983/albatroz/lite/ai-panel-trust.webp",
+      "bytes": 84316,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ai-panel-workspace.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262761/albatroz/ai-panel-workspace.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679984/albatroz/lite/ai-panel-workspace.webp",
+      "bytes": 24330,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ale.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262770/albatroz/ale.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679986/albatroz/lite/ale.webp",
+      "bytes": 107226,
+      "replacements": 0
+    },
+    {
+      "local": "/images/allogo.svg",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262771/albatroz/allogo.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679994/albatroz/lite/allogo.webp",
+      "bytes": 177776,
+      "replacements": 0
+    },
+    {
+      "local": "/images/automic-functionalities/ai-operations.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262779/albatroz/automic-functionalities/ai-operations.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679995/albatroz/lite/automic-functionalities/ai-operations.webp",
+      "bytes": 20036,
+      "replacements": 1
+    },
+    {
+      "local": "/images/automic-functionalities/devops-api.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262782/albatroz/automic-functionalities/devops-api.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679996/albatroz/lite/automic-functionalities/devops-api.webp",
+      "bytes": 20784,
+      "replacements": 1
+    },
+    {
+      "local": "/images/automic-functionalities/enterprise-apps.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262783/albatroz/automic-functionalities/enterprise-apps.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679998/albatroz/lite/automic-functionalities/enterprise-apps.webp",
+      "bytes": 26154,
+      "replacements": 1
+    },
+    {
+      "local": "/images/automic-functionalities/governance-visibility.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262784/albatroz/automic-functionalities/governance-visibility.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790679999/albatroz/lite/automic-functionalities/governance-visibility.webp",
+      "bytes": 31096,
+      "replacements": 1
+    },
+    {
+      "local": "/images/automic-functionalities/hybrid-cloud.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262785/albatroz/automic-functionalities/hybrid-cloud.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680000/albatroz/lite/automic-functionalities/hybrid-cloud.webp",
+      "bytes": 18504,
+      "replacements": 1
+    },
+    {
+      "local": "/images/automic-functionalities/workload-orchestration.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262787/albatroz/automic-functionalities/workload-orchestration.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680001/albatroz/lite/automic-functionalities/workload-orchestration.webp",
+      "bytes": 23604,
+      "replacements": 1
+    },
+    {
+      "local": "/images/automic-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262788/albatroz/automic-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680003/albatroz/lite/automic-hero.webp",
+      "bytes": 42608,
+      "replacements": 1
+    },
+    {
+      "local": "/images/automic-services/education-training.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262790/albatroz/automic-services/education-training.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680004/albatroz/lite/automic-services/education-training.webp",
+      "bytes": 57636,
+      "replacements": 2
+    },
+    {
+      "local": "/images/automic-services/implementation.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262792/albatroz/automic-services/implementation.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680005/albatroz/lite/automic-services/implementation.webp",
+      "bytes": 57748,
+      "replacements": 2
+    },
+    {
+      "local": "/images/automic-services/installation-upgrade.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262793/albatroz/automic-services/installation-upgrade.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680006/albatroz/lite/automic-services/installation-upgrade.webp",
+      "bytes": 79252,
+      "replacements": 2
+    },
+    {
+      "local": "/images/automic-services/staff-augmentation.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262794/albatroz/automic-services/staff-augmentation.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680008/albatroz/lite/automic-services/staff-augmentation.webp",
+      "bytes": 46904,
+      "replacements": 2
+    },
+    {
+      "local": "/images/automic-services/support-maintenance.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262796/albatroz/automic-services/support-maintenance.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680010/albatroz/lite/automic-services/support-maintenance.webp",
+      "bytes": 44548,
+      "replacements": 2
+    },
+    {
+      "local": "/images/banner-1-pmo-operations.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262801/albatroz/banner-1-pmo-operations.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680011/albatroz/lite/banner-1-pmo-operations.webp",
+      "bytes": 138162,
+      "replacements": 0
+    },
+    {
+      "local": "/images/banner-3-strategic-engine.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262809/albatroz/banner-3-strategic-engine.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680013/albatroz/lite/banner-3-strategic-engine.webp",
+      "bytes": 192154,
+      "replacements": 0
+    },
+    {
+      "local": "/images/banner-4-orchestrate.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262811/albatroz/banner-4-orchestrate.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680014/albatroz/lite/banner-4-orchestrate.webp",
+      "bytes": 144152,
+      "replacements": 0
+    },
+    {
+      "local": "/images/clarity-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262996/albatroz/clarity-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680015/albatroz/lite/clarity-hero.webp",
+      "bytes": 50464,
+      "replacements": 1
+    },
+    {
+      "local": "/images/clarity-plugin-blueprint-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262999/albatroz/clarity-plugin-blueprint-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680017/albatroz/lite/clarity-plugin-blueprint-hero.webp",
+      "bytes": 64302,
+      "replacements": 1
+    },
+    {
+      "local": "/images/clarity-plugin-financial-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263001/albatroz/clarity-plugin-financial-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680018/albatroz/lite/clarity-plugin-financial-hero.webp",
+      "bytes": 100120,
+      "replacements": 1
+    },
+    {
+      "local": "/images/clarity-plugin-jira-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263002/albatroz/clarity-plugin-jira-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680021/albatroz/lite/clarity-plugin-jira-hero.webp",
+      "bytes": 66226,
+      "replacements": 1
+    },
+    {
+      "local": "/images/clarity-plugin-resource-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263003/albatroz/clarity-plugin-resource-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680022/albatroz/lite/clarity-plugin-resource-hero.webp",
+      "bytes": 97562,
+      "replacements": 1
+    },
+    {
+      "local": "/images/connectall-case-incident.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263023/albatroz/connectall-case-incident.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680024/albatroz/lite/connectall-case-incident.webp",
+      "bytes": 54176,
+      "replacements": 1
+    },
+    {
+      "local": "/images/connectall-case-legacy.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263024/albatroz/connectall-case-legacy.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680025/albatroz/lite/connectall-case-legacy.webp",
+      "bytes": 90712,
+      "replacements": 1
+    },
+    {
+      "local": "/images/connectall-case-migration.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263025/albatroz/connectall-case-migration.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680026/albatroz/lite/connectall-case-migration.webp",
+      "bytes": 62266,
+      "replacements": 1
+    },
+    {
+      "local": "/images/connectall-case-portfolio.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263027/albatroz/connectall-case-portfolio.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680027/albatroz/lite/connectall-case-portfolio.webp",
+      "bytes": 51714,
+      "replacements": 1
+    },
+    {
+      "local": "/images/connectall-case-release.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263028/albatroz/connectall-case-release.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680029/albatroz/lite/connectall-case-release.webp",
+      "bytes": 86478,
+      "replacements": 1
+    },
+    {
+      "local": "/images/connectall-case-teams.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263029/albatroz/connectall-case-teams.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680030/albatroz/lite/connectall-case-teams.webp",
+      "bytes": 68654,
+      "replacements": 1
+    },
+    {
+      "local": "/images/connectall-hero-banner.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263031/albatroz/connectall-hero-banner.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680031/albatroz/lite/connectall-hero-banner.webp",
+      "bytes": 59666,
+      "replacements": 1
+    },
+    {
+      "local": "/images/connectall-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263032/albatroz/connectall-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680033/albatroz/lite/connectall-hero.webp",
+      "bytes": 120718,
+      "replacements": 0
+    },
+    {
+      "local": "/images/ea-automic-human.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263052/albatroz/ea-automic-human.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680034/albatroz/lite/ea-automic-human.webp",
+      "bytes": 73756,
+      "replacements": 0
+    },
+    {
+      "local": "/images/ea-benefits-landscape.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263053/albatroz/ea-benefits-landscape.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680035/albatroz/lite/ea-benefits-landscape.webp",
+      "bytes": 105092,
+      "replacements": 0
+    },
+    {
+      "local": "/images/ea-soap-human.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263054/albatroz/ea-soap-human.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680037/albatroz/lite/ea-soap-human.webp",
+      "bytes": 81204,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ea-stonebranch-human.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263056/albatroz/ea-stonebranch-human.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680038/albatroz/lite/ea-stonebranch-human.webp",
+      "bytes": 77278,
+      "replacements": 0
+    },
+    {
+      "local": "/images/ea-workload-human.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263057/albatroz/ea-workload-human.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680039/albatroz/lite/ea-workload-human.webp",
+      "bytes": 62008,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ea10.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263061/albatroz/ea10.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680040/albatroz/lite/ea10.webp",
+      "bytes": 195066,
+      "replacements": 1
+    },
+    {
+      "local": "/images/enterprise-it-automation-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263073/albatroz/enterprise-it-automation-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680041/albatroz/lite/enterprise-it-automation-hero.webp",
+      "bytes": 45000,
+      "replacements": 1
+    },
+    {
+      "local": "/images/faqs.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263079/albatroz/faqs.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680043/albatroz/lite/faqs.webp",
+      "bytes": 161256,
+      "replacements": 1
+    },
+    {
+      "local": "/images/nbimg.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263122/albatroz/nbimg.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680044/albatroz/lite/nbimg.webp",
+      "bytes": 73888,
+      "replacements": 0
+    },
+    {
+      "local": "/images/nbnew.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263123/albatroz/nbnew.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680047/albatroz/lite/nbnew.webp",
+      "bytes": 47930,
+      "replacements": 0
+    },
+    {
+      "local": "/images/newimg.svg",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263131/albatroz/newimg.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680049/albatroz/lite/newimg.webp",
+      "bytes": 77992,
+      "replacements": 0
+    },
+    {
+      "local": "/images/ppm-digital-product.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263151/albatroz/ppm-digital-product.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680050/albatroz/lite/ppm-digital-product.webp",
+      "bytes": 60796,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ppm-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263152/albatroz/ppm-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680051/albatroz/lite/ppm-hero.webp",
+      "bytes": 41674,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ppm-strategic-portfolio.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263154/albatroz/ppm-strategic-portfolio.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680053/albatroz/lite/ppm-strategic-portfolio.webp",
+      "bytes": 63396,
+      "replacements": 1
+    },
+    {
+      "local": "/images/ppm-value-stream.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263155/albatroz/ppm-value-stream.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680054/albatroz/lite/ppm-value-stream.webp",
+      "bytes": 66220,
+      "replacements": 1
+    },
+    {
+      "local": "/images/rally-card-connected.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263158/albatroz/rally-card-connected.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680055/albatroz/lite/rally-card-connected.webp",
+      "bytes": 80768,
+      "replacements": 1
+    },
+    {
+      "local": "/images/rally-card-goals.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263159/albatroz/rally-card-goals.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680056/albatroz/lite/rally-card-goals.webp",
+      "bytes": 48060,
+      "replacements": 1
+    },
+    {
+      "local": "/images/rally-card-insights.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263160/albatroz/rally-card-insights.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680058/albatroz/lite/rally-card-insights.webp",
+      "bytes": 59408,
+      "replacements": 1
+    },
+    {
+      "local": "/images/rally-card-planning.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263162/albatroz/rally-card-planning.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680059/albatroz/lite/rally-card-planning.webp",
+      "bytes": 37010,
+      "replacements": 1
+    },
+    {
+      "local": "/images/rally-card-portfolio.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263164/albatroz/rally-card-portfolio.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680060/albatroz/lite/rally-card-portfolio.webp",
+      "bytes": 76254,
+      "replacements": 1
+    },
+    {
+      "local": "/images/rally-card-quality.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263165/albatroz/rally-card-quality.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680062/albatroz/lite/rally-card-quality.webp",
+      "bytes": 38568,
+      "replacements": 1
+    },
+    {
+      "local": "/images/rally-card-status.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263167/albatroz/rally-card-status.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680063/albatroz/lite/rally-card-status.webp",
+      "bytes": 41398,
+      "replacements": 1
+    },
+    {
+      "local": "/images/rally-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263168/albatroz/rally-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680064/albatroz/lite/rally-hero.webp",
+      "bytes": 49014,
+      "replacements": 1
+    },
+    {
+      "local": "/images/sb-cap-ai.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263178/albatroz/sb-cap-ai.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680065/albatroz/lite/sb-cap-ai.webp",
+      "bytes": 51306,
+      "replacements": 1
+    },
+    {
+      "local": "/images/sb-cap-data.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263179/albatroz/sb-cap-data.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680066/albatroz/lite/sb-cap-data.webp",
+      "bytes": 49608,
+      "replacements": 1
+    },
+    {
+      "local": "/images/sb-cap-devops.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263180/albatroz/sb-cap-devops.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680068/albatroz/lite/sb-cap-devops.webp",
+      "bytes": 56098,
+      "replacements": 1
+    },
+    {
+      "local": "/images/sb-cap-hybrid.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263181/albatroz/sb-cap-hybrid.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680069/albatroz/lite/sb-cap-hybrid.webp",
+      "bytes": 59806,
+      "replacements": 1
+    },
+    {
+      "local": "/images/sb-cap-integrations.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263182/albatroz/sb-cap-integrations.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680070/albatroz/lite/sb-cap-integrations.webp",
+      "bytes": 44746,
+      "replacements": 1
+    },
+    {
+      "local": "/images/sb-cap-mft.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263184/albatroz/sb-cap-mft.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680071/albatroz/lite/sb-cap-mft.webp",
+      "bytes": 38144,
+      "replacements": 1
+    },
+    {
+      "local": "/images/sb-cap-workload.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263185/albatroz/sb-cap-workload.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680072/albatroz/lite/sb-cap-workload.webp",
+      "bytes": 51346,
+      "replacements": 1
+    },
+    {
+      "local": "/images/stonebranch-hero.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263189/albatroz/stonebranch-hero.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680074/albatroz/lite/stonebranch-hero.webp",
+      "bytes": 44906,
+      "replacements": 1
+    },
+    {
+      "local": "/images/stonebranch-uac.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263191/albatroz/stonebranch-uac.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680075/albatroz/lite/stonebranch-uac.webp",
+      "bytes": 61660,
+      "replacements": 1
+    },
+    {
+      "local": "/images/stonebranch-udmg.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263192/albatroz/stonebranch-udmg.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680076/albatroz/lite/stonebranch-udmg.webp",
+      "bytes": 73648,
+      "replacements": 1
+    },
+    {
+      "local": "/images/stonebranch-usp.png",
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263194/albatroz/stonebranch-usp.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680078/albatroz/lite/stonebranch-usp.webp",
+      "bytes": 152922,
+      "replacements": 1
+    }
+  ]
+}

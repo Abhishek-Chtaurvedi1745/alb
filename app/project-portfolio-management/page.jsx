@@ -68,7 +68,7 @@ function page() {
     <div>
       <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
         <img
-          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263152/albatroz/ppm-hero.png?v=2"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680051/albatroz/lite/ppm-hero.webp?v=2"
           alt="Project Portfolio Management"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
@@ -312,7 +312,7 @@ function page() {
             accent="Management"
             intro="Strategic Portfolio Management involves the oversight and management of an organization&apos;s portfolio of projects and initiatives. Its primary focus is on aligning projects with strategic goals and maximizing business value."
             items={features}
-            imageSrc="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263154/albatroz/ppm-strategic-portfolio.png?v=1"
+            imageSrc="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680053/albatroz/lite/ppm-strategic-portfolio.webp?v=1"
             imageAlt="Strategic Portfolio Management dashboard"
             fade="left"
             mobileImageFirst
@@ -323,7 +323,7 @@ function page() {
             accent="Management"
             intro="Digital Product Management involves overseeing the development, enhancement, and management of digital products or services offered by a company. This includes:"
             items={features1}
-            imageSrc="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263151/albatroz/ppm-digital-product.png?v=1"
+            imageSrc="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680050/albatroz/lite/ppm-digital-product.webp?v=1"
             imageAlt="Digital Product Management workspace"
             fade="right"
             animate
@@ -336,7 +336,7 @@ function page() {
             accent="Management"
             intro="Value Stream Management (VSM) involves optimizing the entire flow of work across an organization to deliver value to customers efficiently. It encompasses"
             items={features2}
-            imageSrc="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263155/albatroz/ppm-value-stream.png?v=1"
+            imageSrc="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680054/albatroz/lite/ppm-value-stream.webp?v=1"
             imageAlt="Value Stream Management analytics"
             fade="left"
             mobileImageFirst

@@ -3,7 +3,7 @@ export const automicServices = [
     slug: "implementation",
     title: "Implementation",
     label: "Implementation",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262792/albatroz/automic-services/implementation.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680005/albatroz/lite/automic-services/implementation.webp",
     icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262692/albatroz/11.svg",
     href: "/automic-automation/services/implementation",
     description:
@@ -13,7 +13,7 @@ export const automicServices = [
     slug: "installation-upgrade",
     title: "Installation & Upgrade",
     label: "Installation & Upgrades",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262793/albatroz/automic-services/installation-upgrade.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680006/albatroz/lite/automic-services/installation-upgrade.webp",
     icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262694/albatroz/12.svg",
     href: "/automic-automation/services/installation-upgrade",
     description:
@@ -23,7 +23,7 @@ export const automicServices = [
     slug: "education-training",
     title: "Education / Training",
     label: "User Trainings",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262790/albatroz/automic-services/education-training.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680004/albatroz/lite/automic-services/education-training.webp",
     icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262707/albatroz/18.svg",
     href: "/automic-automation/services/education-training",
     description:
@@ -33,7 +33,7 @@ export const automicServices = [
     slug: "staff-augmentation",
     title: "Staff Augmentation",
     label: "Staff Augmentation",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262794/albatroz/automic-services/staff-augmentation.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680008/albatroz/lite/automic-services/staff-augmentation.webp",
     icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263126/albatroz/new16.svg",
     href: "/automic-automation/services/staff-augmentation",
     description:
@@ -43,7 +43,7 @@ export const automicServices = [
     slug: "support-maintenance",
     title: "Support & Maintenance",
     label: "Support & Maintenance",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262796/albatroz/automic-services/support-maintenance.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680010/albatroz/lite/automic-services/support-maintenance.webp",
     icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262705/albatroz/17.svg",
     href: "/automic-automation/services/support-maintenance",
     description:

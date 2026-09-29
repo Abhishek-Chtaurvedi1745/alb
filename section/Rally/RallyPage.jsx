@@ -185,7 +185,7 @@ export default function RallyPage() {
     <div className="bg-black text-white">
       <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
         <img
-          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263168/albatroz/rally-hero.png"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680064/albatroz/lite/rally-hero.webp"
           alt="Rally by Broadcom"
           className="h-full w-full object-cover"
         />

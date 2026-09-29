@@ -16,7 +16,7 @@ export default function AutomicAutomationPage() {
     <div className="bg-black">
       <section className="relative mt-20 h-[300px] overflow-hidden bg-black md:h-[450px]">
         <img
-          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262788/albatroz/automic-hero.png"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680003/albatroz/lite/automic-hero.webp"
           alt="Automic by Broadcom"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />

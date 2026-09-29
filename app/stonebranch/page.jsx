@@ -9,7 +9,7 @@ const productSections = [
     titleAccent: "(UAC)",
     description:
       "Stonebranch Universal Automation Center (UAC) is a modern workload automation platform that orchestrates IT and business processes across hybrid environments. It provides centralized scheduling, monitoring, and control for complex workflows spanning on-premises, cloud, and containerized infrastructure.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263191/albatroz/stonebranch-uac.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680075/albatroz/lite/stonebranch-uac.webp?v=1",
     imageAlt: "Stonebranch Universal Automation Center",
   },
   {
@@ -17,7 +17,7 @@ const productSections = [
     titleAccent: "Gateway (UDMG)",
     description:
       "Universal Data Mover Gateway enables secure, reliable, and high-performance file transfer and data movement across enterprise systems. It supports managed file transfer use cases with governance, encryption, and operational visibility built for demanding enterprise workloads.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263192/albatroz/stonebranch-udmg.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680076/albatroz/lite/stonebranch-udmg.webp?v=1",
     imageAlt: "Universal Data Mover Gateway",
   },
   {
@@ -25,7 +25,7 @@ const productSections = [
     titleAccent: "(USP)",
     description:
       "UDMG Secure Proxy adds a hardened security layer for data movement and integration workflows. It helps organizations enforce policies, protect sensitive transfers, and maintain compliance while keeping automation pipelines efficient and scalable.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263194/albatroz/stonebranch-usp.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680078/albatroz/lite/stonebranch-usp.webp?v=1",
     imageAlt: "UDMG Secure Proxy",
   },
 ];
@@ -35,43 +35,43 @@ const capabilities = [
     title: "Workload Automation & Orchestration",
     description:
       "Centralize and automate workloads, applications, and business processes across your enterprise from a single platform. Improve efficiency, reduce manual intervention, and ensure reliable execution of critical operations.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263185/albatroz/sb-cap-workload.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680072/albatroz/lite/sb-cap-workload.webp?v=1",
   },
   {
     title: "Hybrid Infrastructure Automation",
     description:
       "Manage and automate workloads across cloud, on-premises, virtualized, and containerized environments with ease. Gain the flexibility to scale operations while maintaining consistency across your hybrid IT landscape.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263181/albatroz/sb-cap-hybrid.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680069/albatroz/lite/sb-cap-hybrid.webp?v=1",
   },
   {
     title: "DevOps Automation",
     description:
       "Streamline application delivery by automating deployment workflows, release processes, and operational tasks. Accelerate innovation, improve collaboration, and deliver changes faster with greater confidence.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263180/albatroz/sb-cap-devops.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680068/albatroz/lite/sb-cap-devops.webp?v=1",
   },
   {
     title: "Data Pipeline Orchestration",
     description:
       "Orchestrate end-to-end data workflows across systems, platforms, and business applications. Ensure timely, accurate data availability while simplifying complex processing dependencies.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263179/albatroz/sb-cap-data.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680066/albatroz/lite/sb-cap-data.webp?v=1",
   },
   {
     title: "Managed File Transfer",
     description:
       "Securely automate file exchanges across internal systems, cloud platforms, and external business partners. Enhance data security, compliance, and visibility while ensuring reliable file delivery.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263184/albatroz/sb-cap-mft.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680071/albatroz/lite/sb-cap-mft.webp?v=1",
   },
   {
     title: "Enterprise Integrations",
     description:
       "Connect seamlessly with enterprise applications, cloud services, databases, and IT operations tools. Eliminate silos and enable connected workflows that support business agility and digital transformation.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263182/albatroz/sb-cap-integrations.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680070/albatroz/lite/sb-cap-integrations.webp?v=1",
   },
   {
     title: "AI-Powered Intelligence",
     description:
       "Leverage AI-driven insights and conversational assistance to simplify workflow management, troubleshooting, and operational decision-making. Reduce complexity, accelerate issue resolution, and improve productivity through intelligent automation guidance.",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263178/albatroz/sb-cap-ai.png?v=1",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680065/albatroz/lite/sb-cap-ai.webp?v=1",
   },
 ];
 
@@ -82,7 +82,7 @@ export default function StonebranchPage() {
     <div className="bg-black">
       <section className="relative mt-20 h-[300px] overflow-hidden bg-black md:h-[450px]">
         <img
-          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263189/albatroz/stonebranch-hero.png"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680074/albatroz/lite/stonebranch-hero.webp"
           alt="Stonebranch"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />

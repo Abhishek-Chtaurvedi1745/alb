@@ -88,7 +88,7 @@ const benefits = [
     <div>
       <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
         <img
-          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262996/albatroz/clarity-hero.png"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680015/albatroz/lite/clarity-hero.webp"
           alt="Clarity by Broadcom"
           className="h-full w-full object-cover"
         />

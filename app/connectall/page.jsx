@@ -44,7 +44,7 @@ export default function ConnectAllPage() {
     <div className="bg-black text-white">
       <section className="relative mt-20 h-[300px] overflow-hidden md:h-[450px]">
         <img
-          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263031/albatroz/connectall-hero-banner.png?v=3"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680031/albatroz/lite/connectall-hero-banner.webp?v=3"
           alt="ConnectALL by Broadcom"
           className="h-full w-full object-cover object-center"
         />
