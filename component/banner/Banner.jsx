@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useLayoutEffect, useRef } from "react";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BookACallButton from "@/component/BookACall/BookACallButton";
 
@@ -62,7 +63,19 @@ const banners = [
         <span className="text-[#ff3f3a]">Enterprise Ecosystem</span>
       </>
     ),
-    body: "troz.ai is an AI-powered enterprise platform that integrates seamlessly with your existing systems — from PMO and PPM tools to CRM, SAP, ITSM, DevOps and legacy applications.",
+    body: (
+      <>
+        troz.ai is an AI-powered enterprise platform that integrates seamlessly
+        with your existing systems — from PMO and PPM tools to CRM, SAP, ITSM,
+        DevOps and legacy applications.{" "}
+        <Link
+          href="/ai-services-for-enterprise"
+          className="text-[#ff3f3a] underline decoration-[#ff3f3a] underline-offset-2 hover:opacity-80"
+        >
+          Learn more
+        </Link>
+      </>
+    ),
   },
   {
     src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262810/albatroz/banner-3-visual.png",
