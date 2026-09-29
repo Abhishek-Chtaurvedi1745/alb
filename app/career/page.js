@@ -7,11 +7,6 @@ const vacancies = [
     title: "Clarity PPM Consultant",
     type: "Full-time · Remote / Hybrid",
   },
-  {
-    id: 2,
-    title: "Clarity PPM Consultant",
-    type: "Full-time · Remote / Hybrid",
-  },
 ];
 
 function page() {
