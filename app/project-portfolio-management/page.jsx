@@ -142,7 +142,7 @@ function page() {
           {/* ── Left: PPM Wheel ── */}
           <div className="relative shrink-0 bg-black">
             <img
-              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263153/albatroz/ppm-solution.png?v=3"
+              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769569/albatroz/webp/albatroz/ppm-solution.webp?v=3"
               alt="PPM Solution — strategic alignment, resource optimization, performance management, real-time visibility, risk and issue management, and continuous improvement"
               className="h-[300px] w-auto max-w-full object-contain mix-blend-screen md:h-[480px]"
             />

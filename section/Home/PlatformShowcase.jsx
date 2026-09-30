@@ -7,31 +7,31 @@ import { useInView } from "react-intersection-observer";
 // href only for Solutions → Project Portfolio Management matches
 const platforms = [
   {
-    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262998/albatroz/clarity-logo-vector.svg",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769362/albatroz/webp/albatroz/clarity-logo-vector.webp",
     alt: "Clarity by Broadcom",
     tag: "Portfolio",
     href: "/clarity",
   },
   {
-    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262734/albatroz/Automic-by-broadcom.png",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769247/albatroz/webp/albatroz/Automic-by-broadcom.webp",
     alt: "Automic by Broadcom",
     tag: "Service Orchestration",
     href: "/automic-automation",
   },
   {
-    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263174/albatroz/rally.svg",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769579/albatroz/webp/albatroz/rally.webp",
     alt: "Rally by Broadcom",
     tag: "Agile",
     href: "/rally",
   },
   {
-    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262981/albatroz/ca.svg",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769339/albatroz/webp/albatroz/ca.webp",
     alt: "ConnectALL by Broadcom",
     tag: "Integration",
     href: "/connectall",
   },
   {
-    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263187/albatroz/stb.svg",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769597/albatroz/webp/albatroz/stb.webp",
     alt: "Stonebranch",
     tag: "Automation",
     href: "/stonebranch",

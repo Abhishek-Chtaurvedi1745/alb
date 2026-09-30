@@ -1,0 +1,797 @@
+{
+  "createdAt": "2026-09-30T12:00:28.361Z",
+  "note": "node scripts/image-webp-rollback.mjs restores these old URLs. --apply puts the WebP URLs back. Original Cloudinary files were not overwritten.",
+  "items": [
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262690/albatroz/1.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769114/albatroz/webp/albatroz/1.webp",
+      "bytes": 32546,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/1.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262692/albatroz/11.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769122/albatroz/webp/albatroz/11.webp",
+      "bytes": 35006,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/11.svg",
+      "replacements": 6
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262694/albatroz/12.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769130/albatroz/webp/albatroz/12.webp",
+      "bytes": 26120,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/12.svg",
+      "replacements": 5
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262696/albatroz/13.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769135/albatroz/webp/albatroz/13.webp",
+      "bytes": 19522,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/13.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262698/albatroz/14.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769145/albatroz/webp/albatroz/14.webp",
+      "bytes": 41654,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/14.svg",
+      "replacements": 5
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262700/albatroz/15.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769152/albatroz/webp/albatroz/15.webp",
+      "bytes": 26110,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/15.svg",
+      "replacements": 3
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262705/albatroz/17.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769161/albatroz/webp/albatroz/17.webp",
+      "bytes": 38408,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/17.svg",
+      "replacements": 5
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262707/albatroz/18.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769168/albatroz/webp/albatroz/18.webp",
+      "bytes": 20910,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/18.svg",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262709/albatroz/19.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769175/albatroz/webp/albatroz/19.webp",
+      "bytes": 13872,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/19.svg",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262711/albatroz/2.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769181/albatroz/webp/albatroz/2.webp",
+      "bytes": 20586,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/2.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262714/albatroz/20.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769185/albatroz/webp/albatroz/20.webp",
+      "bytes": 15278,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/20.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262715/albatroz/21.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769187/albatroz/webp/albatroz/21.webp",
+      "bytes": 14876,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/21.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262716/albatroz/22.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769189/albatroz/webp/albatroz/22.webp",
+      "bytes": 8960,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/22.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262717/albatroz/23.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769191/albatroz/webp/albatroz/23.webp",
+      "bytes": 10592,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/23.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262718/albatroz/3.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769199/albatroz/webp/albatroz/3.webp",
+      "bytes": 34724,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/3.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262720/albatroz/4.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769207/albatroz/webp/albatroz/4.webp",
+      "bytes": 30428,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/4.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262723/albatroz/5.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769214/albatroz/webp/albatroz/5.webp",
+      "bytes": 27762,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/5.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262725/albatroz/6.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769221/albatroz/webp/albatroz/6.webp",
+      "bytes": 21298,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/6.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262727/albatroz/7.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769228/albatroz/webp/albatroz/7.webp",
+      "bytes": 22442,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/7.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262729/albatroz/8.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769235/albatroz/webp/albatroz/8.webp",
+      "bytes": 28474,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/8.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262732/albatroz/9.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769241/albatroz/webp/albatroz/9.webp",
+      "bytes": 13242,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/9.svg",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262734/albatroz/Automic-by-broadcom.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769247/albatroz/webp/albatroz/Automic-by-broadcom.webp",
+      "bytes": 43378,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/Automic-by-broadcom.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262742/albatroz/aa1.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769254/albatroz/webp/albatroz/aa1.webp",
+      "bytes": 29116,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/aa1.svg",
+      "replacements": 3
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262751/albatroz/abt.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769258/albatroz/webp/albatroz/abt.webp",
+      "bytes": 46196,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/abt.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262753/albatroz/abtt.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769260/albatroz/webp/albatroz/abtt.webp",
+      "bytes": 58724,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/abtt.png",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262763/albatroz/ai-services-hero.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769261/albatroz/webp/albatroz/ai-services-hero.webp",
+      "bytes": 68298,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ai-services-hero.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262764/albatroz/ai.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769264/albatroz/webp/albatroz/ai.webp",
+      "bytes": 52082,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ai.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262766/albatroz/albatroz-logo-tagline.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769267/albatroz/webp/albatroz/albatroz-logo-tagline.webp",
+      "bytes": 47304,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/albatroz-logo-tagline.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262768/albatroz/alc.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769272/albatroz/webp/albatroz/alc.webp",
+      "bytes": 12426,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/alc.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262769/albatroz/ald.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769279/albatroz/webp/albatroz/ald.webp",
+      "bytes": 103528,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ald.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262774/albatroz/ar1.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769282/albatroz/webp/albatroz/ar1.webp",
+      "bytes": 18710,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ar1.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262775/albatroz/ar2.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769286/albatroz/webp/albatroz/ar2.webp",
+      "bytes": 21232,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ar2.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262777/albatroz/as.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769288/albatroz/webp/albatroz/as.webp",
+      "bytes": 20218,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/as.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262778/albatroz/asd.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769289/albatroz/webp/albatroz/asd.webp",
+      "bytes": 31084,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/asd.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262780/albatroz/automic-functionalities/business-process.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769290/albatroz/webp/albatroz/automic-functionalities/business-process.webp",
+      "bytes": 15848,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/automic-functionalities/business-process.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262789/albatroz/automic-logo-hd.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769295/albatroz/webp/albatroz/automic-logo-hd.webp",
+      "bytes": 42456,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/automic-logo-hd.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262803/albatroz/banner-1-visual.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769299/albatroz/webp/albatroz/banner-1-visual.webp",
+      "bytes": 72854,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/banner-1-visual.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262804/albatroz/banner-2-trozai-visual.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769300/albatroz/webp/albatroz/banner-2-trozai-visual.webp",
+      "bytes": 62536,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/banner-2-trozai-visual.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262810/albatroz/banner-3-visual.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769304/albatroz/webp/albatroz/banner-3-visual.webp",
+      "bytes": 144966,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/banner-3-visual.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262813/albatroz/banner-4-orchestration.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769308/albatroz/webp/albatroz/banner-4-orchestration.webp",
+      "bytes": 88306,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/banner-4-orchestration.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262819/albatroz/be.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769316/albatroz/webp/albatroz/be.webp",
+      "bytes": 20992,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/be.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262862/albatroz/blog/uploads/2019/11/prj_base.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769317/albatroz/webp/albatroz/blog/uploads/2019/11/prj_base.webp",
+      "bytes": 458,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/blog/uploads/2019/11/prj_base.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262863/albatroz/blog/uploads/2019/11/prj_gate.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769319/albatroz/webp/albatroz/blog/uploads/2019/11/prj_gate.webp",
+      "bytes": 602,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/blog/uploads/2019/11/prj_gate.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262864/albatroz/blog/uploads/2019/11/prj_task.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769320/albatroz/webp/albatroz/blog/uploads/2019/11/prj_task.webp",
+      "bytes": 138,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/blog/uploads/2019/11/prj_task.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262865/albatroz/blog/uploads/2019/11/prj_timeline.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769321/albatroz/webp/albatroz/blog/uploads/2019/11/prj_timeline.webp",
+      "bytes": 120,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/blog/uploads/2019/11/prj_timeline.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262875/albatroz/blog/uploads/2020/01/ldap06.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769323/albatroz/webp/albatroz/blog/uploads/2020/01/ldap06.webp",
+      "bytes": 49694,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/blog/uploads/2020/01/ldap06.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262877/albatroz/blog/uploads/2020/02/ldap04-1.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769325/albatroz/webp/albatroz/blog/uploads/2020/02/ldap04-1.webp",
+      "bytes": 15686,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/blog/uploads/2020/02/ldap04-1.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262976/albatroz/brd.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769330/albatroz/webp/albatroz/brd.webp",
+      "bytes": 16884,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/brd.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262980/albatroz/ca-logo-white.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769335/albatroz/webp/albatroz/ca-logo-white.webp",
+      "bytes": 25454,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ca-logo-white.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262981/albatroz/ca.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769339/albatroz/webp/albatroz/ca.webp",
+      "bytes": 6570,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ca.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262983/albatroz/career/image1.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769340/albatroz/webp/albatroz/career/image1.webp",
+      "bytes": 38546,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/career/image1.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262985/albatroz/career/image2.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769342/albatroz/webp/albatroz/career/image2.webp",
+      "bytes": 11662,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/career/image2.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262986/albatroz/career/image3.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769343/albatroz/webp/albatroz/career/image3.webp",
+      "bytes": 11160,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/career/image3.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262987/albatroz/career/image4.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769344/albatroz/webp/albatroz/career/image4.webp",
+      "bytes": 8652,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/career/image4.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262988/albatroz/career/image5.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769345/albatroz/webp/albatroz/career/image5.webp",
+      "bytes": 8170,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/career/image5.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262989/albatroz/career/image6.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769346/albatroz/webp/albatroz/career/image6.webp",
+      "bytes": 16684,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/career/image6.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262990/albatroz/career/image7.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769347/albatroz/webp/albatroz/career/image7.webp",
+      "bytes": 7832,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/career/image7.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262991/albatroz/career/image8.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769348/albatroz/webp/albatroz/career/image8.webp",
+      "bytes": 7444,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/career/image8.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262992/albatroz/ce.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769356/albatroz/webp/albatroz/ce.webp",
+      "bytes": 22534,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ce.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262995/albatroz/check.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769357/albatroz/webp/albatroz/check.webp",
+      "bytes": 444,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/check.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262998/albatroz/clarity-logo-vector.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769362/albatroz/webp/albatroz/clarity-logo-vector.webp",
+      "bytes": 16800,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/clarity-logo-vector.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263037/albatroz/crr.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769364/albatroz/webp/albatroz/crr.webp",
+      "bytes": 67360,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/crr.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263038/albatroz/crt.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769370/albatroz/webp/albatroz/crt.webp",
+      "bytes": 14936,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/crt.svg",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263043/albatroz/cs.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769378/albatroz/webp/albatroz/cs.webp",
+      "bytes": 23812,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/cs.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263045/albatroz/de.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769387/albatroz/webp/albatroz/de.webp",
+      "bytes": 28532,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/de.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263047/albatroz/dh.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769392/albatroz/webp/albatroz/dh.webp",
+      "bytes": 60496,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/dh.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263048/albatroz/di.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769400/albatroz/webp/albatroz/di.webp",
+      "bytes": 23016,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/di.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263065/albatroz/ea5.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769401/albatroz/webp/albatroz/ea5.webp",
+      "bytes": 1136,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ea5.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263067/albatroz/ea6.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769403/albatroz/webp/albatroz/ea6.webp",
+      "bytes": 2032,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ea6.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263069/albatroz/ea8.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769404/albatroz/webp/albatroz/ea8.webp",
+      "bytes": 1892,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ea8.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263070/albatroz/ea9.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769405/albatroz/webp/albatroz/ea9.webp",
+      "bytes": 1346,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ea9.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263071/albatroz/eep.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769413/albatroz/webp/albatroz/eep.webp",
+      "bytes": 19676,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/eep.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263075/albatroz/ep.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769421/albatroz/webp/albatroz/ep.webp",
+      "bytes": 23922,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ep.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263080/albatroz/hcl.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769428/albatroz/webp/albatroz/hcl.webp",
+      "bytes": 27046,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/hcl.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263083/albatroz/hww.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769429/albatroz/webp/albatroz/hww.webp",
+      "bytes": 40530,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/hww.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263084/albatroz/ibm.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769436/albatroz/webp/albatroz/ibm.webp",
+      "bytes": 27222,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ibm.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263086/albatroz/ic1.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769438/albatroz/webp/albatroz/ic1.webp",
+      "bytes": 15288,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ic1.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263087/albatroz/ic2.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769441/albatroz/webp/albatroz/ic2.webp",
+      "bytes": 14920,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ic2.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263089/albatroz/ic3.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769443/albatroz/webp/albatroz/ic3.webp",
+      "bytes": 9024,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ic3.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263090/albatroz/ic4.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769445/albatroz/webp/albatroz/ic4.webp",
+      "bytes": 10566,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ic4.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263091/albatroz/iggt.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769451/albatroz/webp/albatroz/iggt.webp",
+      "bytes": 45502,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/iggt.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263095/albatroz/imm.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769455/albatroz/webp/albatroz/imm.webp",
+      "bytes": 22826,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/imm.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263096/albatroz/lc.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769462/albatroz/webp/albatroz/lc.webp",
+      "bytes": 25704,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/lc.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263098/albatroz/lk.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769469/albatroz/webp/albatroz/lk.webp",
+      "bytes": 41966,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/lk.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263100/albatroz/lt1.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769471/albatroz/webp/albatroz/lt1.webp",
+      "bytes": 6900,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/lt1.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263101/albatroz/lt2.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769474/albatroz/webp/albatroz/lt2.webp",
+      "bytes": 10652,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/lt2.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263103/albatroz/lt3.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769476/albatroz/webp/albatroz/lt3.webp",
+      "bytes": 10690,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/lt3.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263104/albatroz/lt4.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769479/albatroz/webp/albatroz/lt4.webp",
+      "bytes": 6638,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/lt4.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263105/albatroz/ma.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769486/albatroz/webp/albatroz/ma.webp",
+      "bytes": 23254,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ma.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263107/albatroz/ma1.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769493/albatroz/webp/albatroz/ma1.webp",
+      "bytes": 27428,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ma1.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263109/albatroz/md1.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769500/albatroz/webp/albatroz/md1.webp",
+      "bytes": 15994,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/md1.svg",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263111/albatroz/md2.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769507/albatroz/webp/albatroz/md2.webp",
+      "bytes": 17318,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/md2.svg",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263113/albatroz/md3.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769515/albatroz/webp/albatroz/md3.webp",
+      "bytes": 30010,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/md3.svg",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263114/albatroz/mdc.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769525/albatroz/webp/albatroz/mdc.webp",
+      "bytes": 30430,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/mdc.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263116/albatroz/mi.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769533/albatroz/webp/albatroz/mi.webp",
+      "bytes": 12224,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/mi.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263118/albatroz/msg.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769539/albatroz/webp/albatroz/msg.webp",
+      "bytes": 26932,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/msg.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263121/albatroz/nagesh_jaiswal.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769541/albatroz/webp/albatroz/nagesh_jaiswal.webp",
+      "bytes": 27974,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/nagesh_jaiswal.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263126/albatroz/new16.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769549/albatroz/webp/albatroz/new16.webp",
+      "bytes": 23732,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/new16.svg",
+      "replacements": 3
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263135/albatroz/nla.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769554/albatroz/webp/albatroz/nla.webp",
+      "bytes": 27734,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/nla.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263137/albatroz/nsimg.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769558/albatroz/webp/albatroz/nsimg.webp",
+      "bytes": 70752,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/nsimg.png",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263144/albatroz/ot.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769560/albatroz/webp/albatroz/ot.webp",
+      "bytes": 47052,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ot.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263146/albatroz/paulo_naddeo.jpg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769561/albatroz/webp/albatroz/paulo_naddeo.webp",
+      "bytes": 74950,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/paulo_naddeo.jpg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263147/albatroz/phn.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769567/albatroz/webp/albatroz/phn.webp",
+      "bytes": 13238,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/phn.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263153/albatroz/ppm-solution.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769569/albatroz/webp/albatroz/ppm-solution.webp",
+      "bytes": 61668,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ppm-solution.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263169/albatroz/rally-logo-hd.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769574/albatroz/webp/albatroz/rally-logo-hd.webp",
+      "bytes": 27790,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/rally-logo-hd.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263174/albatroz/rally.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769579/albatroz/webp/albatroz/rally.webp",
+      "bytes": 17348,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/rally.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263176/albatroz/sa.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769588/albatroz/webp/albatroz/sa.webp",
+      "bytes": 29314,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/sa.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263186/albatroz/stb-logo-hd.png",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769591/albatroz/webp/albatroz/stb-logo-hd.webp",
+      "bytes": 12554,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/stb-logo-hd.png",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263187/albatroz/stb.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769597/albatroz/webp/albatroz/stb.webp",
+      "bytes": 13060,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/stb.svg",
+      "replacements": 2
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263196/albatroz/tp.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769605/albatroz/webp/albatroz/tp.webp",
+      "bytes": 28136,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/tp.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263199/albatroz/ww1.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769612/albatroz/webp/albatroz/ww1.webp",
+      "bytes": 30130,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ww1.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263202/albatroz/ww2.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769620/albatroz/webp/albatroz/ww2.webp",
+      "bytes": 29662,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ww2.svg",
+      "replacements": 1
+    },
+    {
+      "oldUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263204/albatroz/ww3.svg",
+      "newUrl": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769627/albatroz/webp/albatroz/ww3.webp",
+      "bytes": 37416,
+      "local": "/Users/aryan/Downloads/alb-images-not-webp/albatroz/ww3.svg",
+      "replacements": 1
+    }
+  ]
+}

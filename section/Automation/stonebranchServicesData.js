@@ -4,7 +4,7 @@ export const stonebranchServices = [
     title: "Implementation",
     label: "Implementation",
     image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263006/albatroz/clarity-services/implementation.webp",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262692/albatroz/11.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769122/albatroz/webp/albatroz/11.webp",
     href: "/stonebranch/services/implementation",
     contactSlug: "stonebranch-implementation",
     description:
@@ -15,7 +15,7 @@ export const stonebranchServices = [
     title: "Installation & Upgrade",
     label: "Installation & Upgrade",
     image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263007/albatroz/clarity-services/installation-upgrade.webp",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262694/albatroz/12.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769130/albatroz/webp/albatroz/12.webp",
     href: "/stonebranch/services/installation-upgrade",
     contactSlug: "stonebranch-installation-upgrade",
     description:
@@ -26,7 +26,7 @@ export const stonebranchServices = [
     title: "Staff Augmentation",
     label: "Staff Augmentation",
     image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263013/albatroz/clarity-services/staff-augmentation.webp",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262700/albatroz/15.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769152/albatroz/webp/albatroz/15.webp",
     href: "/stonebranch/services/staff-augmentation",
     contactSlug: "stonebranch-staff-augmentation",
     description:
@@ -37,7 +37,7 @@ export const stonebranchServices = [
     title: "Support & Maintenance",
     label: "Support & Maintenance",
     image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263014/albatroz/clarity-services/support-maintenance.webp",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262705/albatroz/17.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769161/albatroz/webp/albatroz/17.webp",
     href: "/stonebranch/services/support-maintenance",
     contactSlug: "stonebranch-support-maintenance",
     description:

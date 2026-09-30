@@ -63,14 +63,14 @@ const certifications = [
         <div className="w-full flex justify-center gap-10">
             <div>
           <img
-            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262774/albatroz/ar1.png"
+            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769282/albatroz/webp/albatroz/ar1.webp"
             alt="Contact"
             className="rounded-xl shadow-lg w-full  object-cover"
           />
           </div>
            <div>
           <img
-            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262775/albatroz/ar2.png"
+            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769286/albatroz/webp/albatroz/ar2.webp"
             alt="Contact"
             className="rounded-xl shadow-lg w-full  object-cover"
           />

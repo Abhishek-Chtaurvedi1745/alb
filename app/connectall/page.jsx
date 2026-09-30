@@ -54,7 +54,7 @@ export default function ConnectAllPage() {
         <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-4 px-6 md:gap-5 md:px-16">
           <h1 className="m-0">
             <img
-              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262980/albatroz/ca-logo-white.png"
+              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769335/albatroz/webp/albatroz/ca-logo-white.webp"
               alt="ConnectALL by Broadcom"
               className="h-16 w-auto max-w-[min(100%,520px)] object-contain drop-shadow-[0_2px_12px_rgba(0,0,0,0.65)] sm:h-20 md:h-24"
               decoding="async"

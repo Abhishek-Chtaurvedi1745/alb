@@ -17,6 +17,7 @@ Next.js app. Routes in `app/`, UI sections in `section/`, shared UI in `componen
 | `scripts/deploy-cpanel-ftp.mjs` | GitHub Actions FTPS upload of `out/` via lftp (reconnects on drop) |
 | `scripts/cloudinary-migrate.mjs` | Upload `public/images` → Cloudinary + rewrite paths (`npm run images:cloudinary`) |
 | `scripts/image-lite-rollback.mjs` | Swap lite WebP URLs back to the previous Cloudinary URLs (`scripts/image-lite-rollback.json`) |
+| `scripts/image-webp-rollback.mjs` | Swap remaining PNG/JPG/SVG WebP URLs back (`scripts/image-webp-rollback.json`) |
 | `middleware.js` | Next middleware |
 
 ## Routes → entry → content/data

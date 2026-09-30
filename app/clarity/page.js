@@ -14,43 +14,43 @@ import { prebuiltPlugins } from '@/section/Clarity/prebuiltPluginsData';
 const services = [
   {
     label: "Implementation Services",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262692/albatroz/11.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769122/albatroz/webp/albatroz/11.webp",
     href: "/clarity/services/implementation",
   },
   {
     label: "Installation & Upgrades",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262694/albatroz/12.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769130/albatroz/webp/albatroz/12.webp",
     href: "/clarity/services/installations-upgrades",
   },
   {
     label: "Integration Services",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262698/albatroz/14.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769145/albatroz/webp/albatroz/14.webp",
     href: "/clarity/services/integration",
   },
   {
     label: "Technical Development",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262700/albatroz/15.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769152/albatroz/webp/albatroz/15.webp",
     href: "/clarity/services/technical-development",
   },
   {
     label: "Staff Augmentation",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263126/albatroz/new16.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769549/albatroz/webp/albatroz/new16.webp",
     href: "/clarity/services/staff-augmentation",
   },
   {
     label: "Support & Maintenance",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262705/albatroz/17.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769161/albatroz/webp/albatroz/17.webp",
     href: "/clarity/services/support-maintenance",
   },
   {
     label: "User Trainings",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262707/albatroz/18.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769168/albatroz/webp/albatroz/18.webp",
     href: "/clarity/services/user-tranings",
     breakLabel: true,
   },
   {
     label: "Reports & Dashboards",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262709/albatroz/19.svg",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769175/albatroz/webp/albatroz/19.webp",
     href: "/clarity/services/clarity-reporting-dashboard-services",
   },
 ];
@@ -59,25 +59,25 @@ const benefits = [
   {
     title: "Improve Visibility",
     description: "Gain real-time insights across your portfolio and projects.",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262714/albatroz/20.png",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769185/albatroz/webp/albatroz/20.webp",
     gradient: "from-cyan-500/30 via-blue-900/40 to-black",
   },
   {
     title: "Optimize Resources",
     description: "Allocate the right resources to the right projects.",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262715/albatroz/21.png",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769187/albatroz/webp/albatroz/21.webp",
     gradient: "from-slate-500/30 via-slate-800/40 to-black",
   },
   {
     title: "Increase Efficiency",
     description: "Streamline processes & deliver projects on time.",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262716/albatroz/22.png",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769189/albatroz/webp/albatroz/22.webp",
     gradient: "from-orange-500/30 via-zinc-800/40 to-black",
   },
   {
     title: "Maximize ROI",
     description: "Make smarter decisions & drive better business outcomes.",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262717/albatroz/23.png",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769191/albatroz/webp/albatroz/23.webp",
     gradient: "from-amber-500/30 via-yellow-900/40 to-black",
   },
 ];

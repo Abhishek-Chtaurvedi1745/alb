@@ -4,7 +4,7 @@ export const prebuiltPlugins = [
     title: "Jira",
     titleAccent: "Integration",
     tabLabel: "Jira Integration",
-    tabIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262698/albatroz/14.svg",
+    tabIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769145/albatroz/webp/albatroz/14.webp",
     heroImage: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680021/albatroz/lite/clarity-plugin-jira-hero.webp?v=1",
     heroImageAlt: "Jira Integration with Clarity PPM",
     summary:
@@ -68,7 +68,7 @@ export const prebuiltPlugins = [
     title: "Resource",
     titleAccent: "Integration",
     tabLabel: "Resource Integration",
-    tabIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263126/albatroz/new16.svg",
+    tabIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769549/albatroz/webp/albatroz/new16.webp",
     heroImage: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680022/albatroz/lite/clarity-plugin-resource-hero.webp?v=1",
     heroImageAlt: "Resource Integration with Clarity PPM",
     summary:
@@ -131,7 +131,7 @@ export const prebuiltPlugins = [
     title: "Financial",
     titleAccent: "Integration",
     tabLabel: "Financial Integration",
-    tabIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263109/albatroz/md1.svg",
+    tabIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769500/albatroz/webp/albatroz/md1.webp",
     heroImage: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680018/albatroz/lite/clarity-plugin-financial-hero.webp?v=1",
     heroImageAlt: "Financial Integration with Clarity PPM",
     summary:
@@ -194,7 +194,7 @@ export const prebuiltPlugins = [
     title: "Blueprint",
     titleAccent: "Migrator",
     tabLabel: "Blueprint Migrator",
-    tabIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262696/albatroz/13.svg",
+    tabIcon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769135/albatroz/webp/albatroz/13.webp",
     heroImage: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790680017/albatroz/lite/clarity-plugin-blueprint-hero.webp?v=1",
     heroImageAlt: "Blueprint Migrator for Clarity PPM",
     summary:

@@ -4,7 +4,7 @@ export const connectAllServices = [
     title: "Assessment & Advisory",
     label: "Assessment & Advisory",
     image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263033/albatroz/connectall-services/assessment-advisory.webp",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262692/albatroz/11.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769122/albatroz/webp/albatroz/11.webp",
     href: "/connectall/services/assessment-advisory",
     description:
       "Assess enterprise toolchains, map integration dependencies, and define a phased roadmap aligned with business priorities.",
@@ -14,7 +14,7 @@ export const connectAllServices = [
     title: "Implementation & Setup",
     label: "Implementation & Setup",
     image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263034/albatroz/connectall-services/implementation-setup.webp",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262694/albatroz/12.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769130/albatroz/webp/albatroz/12.webp",
     href: "/connectall/services/implementation-setup",
     description:
       "Deploy ConnectALL, configure connectors, map fields, and define trigger-based workflows for reliable sync operations.",
@@ -24,7 +24,7 @@ export const connectAllServices = [
     title: "Workflow & Use-Case Development",
     label: "Workflow & Use-Case Development",
     image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263036/albatroz/connectall-services/workflow-use-case-development.webp",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262698/albatroz/14.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769145/albatroz/webp/albatroz/14.webp",
     href: "/connectall/services/workflow-use-case-development",
     description:
       "Build use-case-driven workflows with rules, logic gates, and bi-directional synchronization across multiple tools and teams.",
@@ -34,7 +34,7 @@ export const connectAllServices = [
     title: "Upgrades & Version Management",
     label: "Upgrades & Version Management",
     image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263035/albatroz/connectall-services/upgrades-version-management.webp",
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262705/albatroz/17.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769161/albatroz/webp/albatroz/17.webp",
     href: "/connectall/services/upgrades-version-management",
     description:
       "Plan and execute version upgrades with compatibility checks and regression testing for existing integration workflows.",

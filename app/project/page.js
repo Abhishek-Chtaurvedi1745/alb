@@ -110,7 +110,7 @@ Get Started
         {/* Right Side */}
         <div className="w-full flex justify-center">
           <img
-            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262751/albatroz/abt.png"
+            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769258/albatroz/webp/albatroz/abt.webp"
             alt="Contact"
             className="rounded-xl shadow-lg w-full  object-cover"
           />
@@ -274,7 +274,7 @@ using the power of these enterprise solutions.
               {/* IMAGE */}
               <div className="relative overflow-hidden rounded-xl mb-5">
                 <img
-                  src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263098/albatroz/lk.svg"
+                  src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769469/albatroz/webp/albatroz/lk.webp"
                   alt=""
                   className="group-hover:scale-110 transition-all duration-500"
                 />

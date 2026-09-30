@@ -198,7 +198,7 @@ function Page() {
             </h4>
 
             <div className="space-y-4 sm:space-y-5">
-              <ContactInfoCard icon="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263147/albatroz/phn.svg" className="bg-[#CF2721]">
+              <ContactInfoCard icon="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769567/albatroz/webp/albatroz/phn.webp" className="bg-[#CF2721]">
                 <a href="tel:+919384812035" className="block hover:underline">
                   +91 93848 12035
                 </a>
@@ -207,7 +207,7 @@ function Page() {
                 </a>
               </ContactInfoCard>
 
-              <ContactInfoCard icon="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263118/albatroz/msg.svg" className="bg-[#d92020]">
+              <ContactInfoCard icon="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769539/albatroz/webp/albatroz/msg.webp" className="bg-[#d92020]">
                 <a
                   href="mailto:info@albatrozsolutions.com"
                   className="break-all hover:underline"
@@ -216,7 +216,7 @@ function Page() {
                 </a>
               </ContactInfoCard>
 
-              <ContactInfoCard icon="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263096/albatroz/lc.svg" className="bg-[#d92020]">
+              <ContactInfoCard icon="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769462/albatroz/webp/albatroz/lc.webp" className="bg-[#d92020]">
                 <p className="font-normal">
                   DC-43, Development Center,
                   <br />

@@ -26,7 +26,7 @@ export default function AutomicAutomationPage() {
         <div className="absolute inset-0 z-10 flex flex-col items-start justify-center gap-5 px-6 md:gap-7 md:px-16">
           <h1 className="m-0">
             <img
-              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262789/albatroz/automic-logo-hd.png"
+              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769295/albatroz/webp/albatroz/automic-logo-hd.webp"
               alt="Automic by Broadcom"
               className="h-16 w-auto max-w-[min(100%,560px)] object-contain sm:h-20 md:h-24"
               decoding="async"

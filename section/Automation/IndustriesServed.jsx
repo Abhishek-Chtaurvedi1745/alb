@@ -5,7 +5,7 @@ import { useState } from "react";
 const industries = [
   {
     name: "BFSI",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263065/albatroz/ea5.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769401/albatroz/webp/albatroz/ea5.webp",
     items: [
       {
         title: "End-of-Day Batch Processing",
@@ -23,7 +23,7 @@ const industries = [
   },
   {
     name: "Retail",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263067/albatroz/ea6.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769403/albatroz/webp/albatroz/ea6.webp",
     items: [
       {
         title: "Order-to-Fulfilment Orchestration",
@@ -37,7 +37,7 @@ const industries = [
   },
   {
     name: "Manufacturing",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263069/albatroz/ea8.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769404/albatroz/webp/albatroz/ea8.webp",
     items: [
       {
         title: "Production Planning & Scheduling",
@@ -51,7 +51,7 @@ const industries = [
   },
   {
     name: "Telecom",
-    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263070/albatroz/ea9.png",
+    image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769405/albatroz/webp/albatroz/ea9.webp",
     items: [
       {
         title: "Billing & Revenue Assurance",

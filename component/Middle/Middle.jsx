@@ -46,11 +46,11 @@ const features1 = [
   ];
 
 const logos = [
-    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262976/albatroz/brd.svg", alt: 'Broadcom' },
-    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263187/albatroz/stb.svg", alt: 'Stonebranch', preserveColors: true },
-    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263080/albatroz/hcl.svg", alt: 'HCLTech' },
-    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263084/albatroz/ibm.svg", alt: 'IBM' },
-    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263091/albatroz/iggt.svg", alt: 'Ignite Technology' },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769330/albatroz/webp/albatroz/brd.webp", alt: 'Broadcom' },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769597/albatroz/webp/albatroz/stb.webp", alt: 'Stonebranch', preserveColors: true },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769428/albatroz/webp/albatroz/hcl.webp", alt: 'HCLTech' },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769436/albatroz/webp/albatroz/ibm.webp", alt: 'IBM' },
+    { src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769451/albatroz/webp/albatroz/iggt.webp", alt: 'Ignite Technology' },
   ];
 
 function getPartnerLogoClassName(logo) {
@@ -66,44 +66,44 @@ function getPartnerLogoClassName(logo) {
 
 const features = [
   {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263176/albatroz/sa.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769588/albatroz/webp/albatroz/sa.webp",
     title: "Strategy Approach",
   },
   {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262992/albatroz/ce.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769356/albatroz/webp/albatroz/ce.webp",
     title: "Certified Experts",
   },
   {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263116/albatroz/mi.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769533/albatroz/webp/albatroz/mi.webp",
     title: "Measurable Impact",
   },
   {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263045/albatroz/de.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769387/albatroz/webp/albatroz/de.webp",
     title: "Domain Expertise",
   },
   {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263043/albatroz/cs.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769378/albatroz/webp/albatroz/cs.webp",
     title: "Custom Solutions",
   },
    {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262819/albatroz/be.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769316/albatroz/webp/albatroz/be.webp",
     title: "Businness Experienced",
   },
  
   {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263048/albatroz/di.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769400/albatroz/webp/albatroz/di.webp",
     title: "Data Intelligence",
   },
    {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263075/albatroz/ep.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769421/albatroz/webp/albatroz/ep.webp",
     title: "Experienced Professionals",
   },
   {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263071/albatroz/eep.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769413/albatroz/webp/albatroz/eep.webp",
     title: "End-to-End Partnership",
   },
   {
-    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263196/albatroz/tp.svg",
+    icon: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769605/albatroz/webp/albatroz/tp.webp",
     title: "Trusted Partnership",
   },
 ];
@@ -111,22 +111,22 @@ const features = [
 function Middle() {
     const data = [
     {
-      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263086/albatroz/ic1.png",
+      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769438/albatroz/webp/albatroz/ic1.webp",
       title: "Improve Visibility",
       text: "Gain real-time insights across your portfolio and projects.",
     },
     {
-      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263087/albatroz/ic2.png",
+      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769441/albatroz/webp/albatroz/ic2.webp",
       title: "Optimize Resources",
       text: "Allocate the right resources to the right projects.",
     },
     {
-      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263089/albatroz/ic3.png",
+      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769443/albatroz/webp/albatroz/ic3.webp",
       title: "Increase Efficiency",
       text: "DStreamline processes & deliver projects on time.",
     },
     {
-      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263090/albatroz/ic4.png",
+      image:"https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769445/albatroz/webp/albatroz/ic4.webp",
       title: "Maximize ROI",
       text: "Make smarter decisions & drive better business outcomes.",
     },
@@ -178,7 +178,7 @@ function Middle() {
       {/* Image only on Desktop */}
       <div className="relative w-full rounded-lg overflow-hidden mb-6 group hidden lg:block">
         <img
-          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262778/albatroz/asd.png"
+          src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769289/albatroz/webp/albatroz/asd.webp"
           alt="People looking at neon question mark"
           className="w-full h-[350px] object-cover rounded-lg brightness-90 contrast-125"
         />
@@ -306,7 +306,7 @@ the focus of everything.
        
         <div className="w-full flex justify-center">
           <img
-            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263047/albatroz/dh.png"
+            src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769392/albatroz/webp/albatroz/dh.webp"
             alt="Contact"
             className="rounded-xl shadow-lg w-full  object-cover"
           />
@@ -325,7 +325,7 @@ the focus of everything.
              
              
               <img
-                src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788262777/albatroz/as.png"
+                src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769288/albatroz/webp/albatroz/as.webp"
                 alt="hand"
                 className=" w-[520px]"
               />

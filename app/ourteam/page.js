@@ -13,7 +13,7 @@ import Footer from "@/component/Footer/Footer"
       role: "Creative Solutions For Your Business",
       description:
         "A PPM and Clarity SME with vast experience over 22 years helping customers with best practice solutions in implementing Clarity. Responsible for Strategy, Sales & Marketing & Operations. Financial Markets enthusiast, musicophile & a Tennis buff.",
-      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263100/albatroz/lt1.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769471/albatroz/webp/albatroz/lt1.webp",
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ import Footer from "@/component/Footer/Footer"
       role: "Delivering Smart Business Solutions",
       description:
         "Experienced leader focused on driving digital transformation and helping organizations scale with innovative technologies and customer-focused strategies.",
-      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263101/albatroz/lt2.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769474/albatroz/webp/albatroz/lt2.webp",
     },
     {
       id: 3,
@@ -29,7 +29,7 @@ import Footer from "@/component/Footer/Footer"
       role: "Practice Lead – PPM",
       description:
         "A highly motivated Clarity guru backed by versatile skillset & 12 years of implementing & customizing Clarity for global customers. Leads the PPM Practice & Albatroz and a great mentor for budding consultants. Certified SAFe Agilist & Clarity PPM Professional. Traveller, foodie and loves music.",
-      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263103/albatroz/lt3.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769476/albatroz/webp/albatroz/lt3.webp",
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ import Footer from "@/component/Footer/Footer"
       role: "Practice Lead – Automation",
       description:
         "Over 24 years of experience in IT services business with a technology mindset. Being a Subject Matter Expert on Automation & Devops, is responsible for leading the Automation practice & mentors the budding consultants.",
-      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263104/albatroz/lt4.png",
+      image: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769479/albatroz/webp/albatroz/lt4.webp",
     },
   ];
 
@@ -47,7 +47,7 @@ function page() {
        <section className="relative h-[300px] md:h-[450px] overflow-hidden mt-20">
       {/* Background Image */}
       <img
-        src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263144/albatroz/ot.png"
+        src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769560/albatroz/webp/albatroz/ot.webp"
         alt="About Us"
         className="w-full h-full object-cover"
       />

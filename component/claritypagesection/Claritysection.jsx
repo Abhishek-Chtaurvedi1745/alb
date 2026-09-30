@@ -126,7 +126,7 @@ function Claritysection() {
         {feature.points.map((point, j) => (
           <li key={j} className="flex items-start gap-2">
             <img
-              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1788263038/albatroz/crt.svg"
+              src="https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769370/albatroz/webp/albatroz/crt.webp"
               alt=""
               className="mt-0.5 h-3.5 w-3.5 shrink-0 sm:mt-1 sm:h-4 sm:w-4"
             />
