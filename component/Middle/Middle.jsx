@@ -55,7 +55,7 @@ const logos = [
 
 function getPartnerLogoClassName(logo) {
   const base =
-    "h-[20px] md:h-auto w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-200 w-24 md:w-auto";
+    "h-7 w-auto max-h-8 max-w-[120px] object-contain opacity-80 transition-opacity duration-200 hover:opacity-100 sm:h-8 sm:max-w-[150px] md:h-10 md:max-w-[170px]";
 
   if (logo.preserveColors) {
     return base;
@@ -146,15 +146,15 @@ function Middle() {
     </h1>
 
     {/* Infinite Slider */}
-    <div className="relative mt-4 overflow-hidden">
+    <div className="relative mt-4 h-12 overflow-hidden md:h-14">
       <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-black to-transparent sm:w-16 md:w-20" />
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-black to-transparent sm:w-16 md:w-20" />
 
-      <div className="partner-marquee flex w-max items-center">
+      <div className="partner-marquee flex h-full w-max items-center">
         {[...logos, ...logos].map((logo, index) => (
           <div
             key={`${logo.alt}-${index}`}
-            className="flex shrink-0 items-center justify-center px-8 md:px-12 lg:px-16"
+            className="flex h-full shrink-0 items-center justify-center px-8 md:px-12 lg:px-16"
           >
             <img
               src={logo.src}
