@@ -190,7 +190,7 @@ const benefits = [
                 <img
                   src={service.image}
                   alt={service.label}
-                  className="transition-transform duration-300 group-hover:scale-110"
+                  className="h-[88px] w-[88px] object-contain transition-transform duration-300 group-hover:scale-110 md:h-[120px] md:w-[120px]"
                 />
                 <p className="text-[22px] text-[#FFFFFF] leading-snug max-w-[120px] transition-colors group-hover:text-[#FF403A]">
                   {service.breakLabel ? (
@@ -226,7 +226,7 @@ const benefits = [
                 <img
                   src={plugin.tabIcon}
                   alt={plugin.tabLabel}
-                  className="transition-transform duration-300 group-hover:scale-110"
+                  className="h-[88px] w-[88px] object-contain transition-transform duration-300 group-hover:scale-110 md:h-[120px] md:w-[120px]"
                 />
                 <p className="max-w-[160px] text-[17px] leading-snug text-[#FFFFFF] transition-colors group-hover:text-[#FF403A] md:text-[22px]">
                   {plugin.tabLabel}
@@ -252,7 +252,7 @@ const benefits = [
             return (
               <div key={benefit.title} className="flex flex-col">
               
-                <img src={benefit.icon} />
+                <img src={benefit.icon} alt="" />
                 {/* Text */}
                 <h4 className="text-[#FF403A] font-semibold text-[14px] md:text-[20px] mt-2 mb-0">
                   {benefit.title}
