@@ -25,7 +25,7 @@ const platforms = [
     href: "/rally",
   },
   {
-    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769339/albatroz/webp/albatroz/ca.webp",
+    src: "https://res.cloudinary.com/ddcx08e0s/image/upload/v1790769335/albatroz/webp/albatroz/ca-logo-white.webp",
     alt: "ConnectALL by Broadcom",
     tag: "Integration",
     href: "/connectall",
