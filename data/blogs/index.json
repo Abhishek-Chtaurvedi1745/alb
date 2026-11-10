@@ -1,5 +1,65 @@
 [
   {
+    "slug": "clarity-ppm-solutions-services",
+    "title": "Transform Project Portfolio Management with Clarity PPM",
+    "category": "Clarity",
+    "categorySlug": "clarity",
+    "categorySlugs": [
+      "clarity",
+      "project-portfolio-management"
+    ],
+    "date": "Nov 10, 2026",
+    "author": "Albatroz Solutions",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1794300807/albatroz/blog/uploads/2026/11/clarity-ppm-solutions-services.webp",
+    "excerpt": "Explore Clarity PPM services by Albatroz Solutions, including implementation, customization, integration, resource management, upgrades, and technical support.",
+    "readTime": 5
+  },
+  {
+    "slug": "ca-clarity-ppm-solutions-for-enterprise-project-portfolio-management",
+    "title": "CA Clarity PPM Solutions for Enterprise Project Portfolio Management",
+    "category": "Clarity",
+    "categorySlug": "clarity",
+    "categorySlugs": [
+      "clarity",
+      "project-portfolio-management"
+    ],
+    "date": "Nov 10, 2026",
+    "author": "Albatroz Solutions",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1794300808/albatroz/blog/uploads/2026/11/ca-clarity-ppm-solutions-enterprise.webp",
+    "excerpt": "Explore CA Clarity PPM services by Albatroz Solutions, including implementation, customization, integration, resource management, upgrades, and support.",
+    "readTime": 4
+  },
+  {
+    "slug": "ca-clarity-ppm-solutions-optimize-projects-maximize-resources",
+    "title": "CA Clarity PPM Solutions: Optimize Projects, Maximize Resources, Align Business Strategy",
+    "category": "Clarity",
+    "categorySlug": "clarity",
+    "categorySlugs": [
+      "clarity",
+      "project-portfolio-management"
+    ],
+    "date": "Nov 10, 2026",
+    "author": "Albatroz Solutions",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1794300810/albatroz/blog/uploads/2026/11/ca-clarity-ppm-optimize-projects.webp",
+    "excerpt": "Explore CA Clarity PPM solutions by Albatroz Solutions, including implementation, customization, integration, resource management, upgrades, and support.",
+    "readTime": 5
+  },
+  {
+    "slug": "broadcom-clarity-ppm-solutions-services",
+    "title": "Broadcom Clarity PPM Solutions: Align Strategy, Optimize Resources, Drive Project Success",
+    "category": "Clarity",
+    "categorySlug": "clarity",
+    "categorySlugs": [
+      "clarity",
+      "project-portfolio-management"
+    ],
+    "date": "Nov 10, 2026",
+    "author": "Albatroz Solutions",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1794300812/albatroz/blog/uploads/2026/11/broadcom-clarity-ppm-solutions-services.webp",
+    "excerpt": "Discover Broadcom Clarity PPM services by Albatroz Solutions, including implementation, customization, integration, resource management, upgrades, and support.",
+    "readTime": 5
+  },
+  {
     "slug": "migrating-from-jaspersoft-to-clarity-native-reporting-workspace",
     "title": "Migrating from Jaspersoft to Clarity's Native Reporting Workspace",
     "category": "Clarity",
