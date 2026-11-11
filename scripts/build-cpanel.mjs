@@ -25,15 +25,20 @@ const htaccess = `# Albatroz — cPanel / Apache
 Options -MultiViews
 RewriteEngine On
 
+# Force HTTPS (X-Forwarded-Proto check avoids a loop behind a TLS proxy/CDN)
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^(.*)$ https://albatrozsolutions.com/$1 [R=301,L]
+
+# Canonical host: non-www
+RewriteCond %{HTTP_HOST} ^www\\.albatrozsolutions\\.com$ [NC]
+RewriteRule ^(.*)$ https://albatrozsolutions.com/$1 [R=301,L]
+
 # Keep old URLs working (middleware is not available on static hosting)
 RewriteRule ^Blog/?$ /blog/ [R=308,L]
 RewriteRule ^Blog/(.*)$ /blog/$1 [R=308,L]
 RewriteRule ^project-management/?$ /project-portfolio-management/ [R=308,L]
 RewriteRule ^project-management/(.*)$ /project-portfolio-management/$1 [R=308,L]
-
-# Canonical host: non-www
-RewriteCond %{HTTP_HOST} ^www\\.albatrozsolutions\\.com$ [NC]
-RewriteRule ^(.*)$ https://albatrozsolutions.com/$1 [R=301,L]
 
 # Serve trailing-slash folders correctly
 DirectoryIndex index.html
@@ -41,6 +46,10 @@ DirectoryIndex index.html
 # Security / cache helpers (safe defaults)
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
+  Header always set Strict-Transport-Security "max-age=31536000" env=HTTPS
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
 `;
 
