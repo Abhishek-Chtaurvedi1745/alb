@@ -9,10 +9,11 @@
       "configuration"
     ],
     "date": "Nov 24, 2026",
-    "author": "Albatroz Solutions",
+    "author": "Georgy N Joseph",
     "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1795499212/albatroz/blog/uploads/2026/11/clarity-16-5-0-cover.webp",
     "excerpt": "Broadcom Clarity 16.5.0 brings blueprint export/import, undo/rollback, Sankey hierarchies, Draw Down Funding, OAuth for AI, and major reporting upgrades.",
-    "readTime": 8
+    "readTime": 8,
+    "authorRole": "Services Architect – PPM"
   },
   {
     "slug": "clarity-ppm-solutions-services",
