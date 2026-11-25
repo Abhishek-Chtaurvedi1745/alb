@@ -1,5 +1,21 @@
 [
   {
+    "slug": "clarity-ppm-microsoft-sharepoint-integration",
+    "title": "Clarity PPM + Microsoft SharePoint Integration",
+    "category": "Clarity",
+    "categorySlug": "clarity",
+    "categorySlugs": [
+      "clarity",
+      "configuration"
+    ],
+    "date": "Nov 25, 2026",
+    "author": "Georgy N Joseph",
+    "authorRole": "Services Architect – PPM",
+    "image": "https://res.cloudinary.com/ddcx08e0s/image/upload/v1795587568/albatroz/blog/uploads/2026/11/clarity-sharepoint-integration-cover.webp",
+    "excerpt": "Connect Clarity PPM projects to Microsoft SharePoint with native GEL workflows - auto-create sites, sync access, manage files inside Clarity, and track document status.",
+    "readTime": 7
+  },
+  {
     "slug": "new-capabilities-introduced-in-clarity-16-5-0",
     "title": "New Capabilities Introduced In Clarity 16.5.0",
     "category": "Clarity",
